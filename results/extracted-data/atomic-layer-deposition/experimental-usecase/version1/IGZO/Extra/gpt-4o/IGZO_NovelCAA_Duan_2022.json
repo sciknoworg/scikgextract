@@ -1,0 +1,202 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "GaO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InO",
+                        "precursor": "[3-(Dimethylamino)-propyl] dimethyl indium (DADI)"
+                    },
+                    {
+                        "compound": "GaO",
+                        "precursor": "Trimethyl gallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethyl zinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "IGZO",
+                        "coReactant": "O2 plasma"
+                    }
+                ]
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "TFS200"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 38.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "IGZO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.21,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": false
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "InO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "GaO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "InO",
+                        "GaO",
+                        "ZnO"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 1.26,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1:1:1"
+                    }
+                }
+            },
+            "deviceProperties": {
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -3.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 230.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                }
+            }
+        }
+    ]
+}

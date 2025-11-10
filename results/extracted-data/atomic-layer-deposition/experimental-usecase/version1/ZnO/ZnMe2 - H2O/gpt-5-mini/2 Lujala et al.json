@@ -1,0 +1,261 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO:Al",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO:Al"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "dimethyl zinc (DMZn)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethyl zinc (DEZn)"
+                    },
+                    {
+                        "compound": "Al",
+                        "precursor": "trimethylaluminum (TMAl)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O"
+                    },
+                    {
+                        "compound": "Al",
+                        "coReactant": "H2O"
+                    }
+                ],
+                "carrierGas": "nitrogen",
+                "purgingGas": "nitrogen"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "travelling wave F-120 ALE reactor",
+                    "manufacturer": "Microchemistry Ltd."
+                },
+                "substrate": "soda lime glass (50 x 50 mm)",
+                "temperature": {
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 750.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": false,
+                    "nucleationPeriod": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "Al",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 400.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 400.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "Al",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 400.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 400.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "process",
+                            "precursorFlow": {
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 700.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 750.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                }
+            },
+            "materialProperties": {
+                "electricalProperties": {
+                    "characterizationMethod": "Hall measurements (Van der Pauw)"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        }
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "Al",
+                            "O"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO:Al",
+                "crystallinity": {
+                    "phase": "textured (orientation changes from 100 at low T to 002 at high T)",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "CIS solar cell: ALE-deposited ZnO:Al (800 nm) on top of CIS absorber (device-level metrics reported in text)"
+            }
+        }
+    ]
+}

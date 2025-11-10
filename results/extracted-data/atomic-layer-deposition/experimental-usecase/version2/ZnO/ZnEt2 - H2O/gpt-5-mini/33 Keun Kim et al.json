@@ -1,0 +1,152 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnO",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "Zn(C2H5)2 (DEZ)",
+                            "sameAs": []
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "None (for DEZ delivery); O2/10 sccm N2 used for O3 generation",
+                    "sameAs": []
+                },
+                "purgingGas": {
+                    "value": "Ar (900 sccm)",
+                    "sameAs": []
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Plus-100 traveling wave-type ALD reactor",
+                    "manufacturer": "Ever-tek"
+                },
+                "substrate": {
+                    "value": "4-inch Si wafers with 200-nm-thick SiO2 layer",
+                    "sameAs": []
+                },
+                "deliveryMethod": "Vapor-phase DEZ injection (no carrier gas); O3 from ozone generator",
+                "temperature": {
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "AES"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "O",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "AES"
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "c-axis preferred orientation (002)",
+                    "characterizationMethod": "XRD and TEM"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    }
+                }
+            }
+        }
+    ]
+}

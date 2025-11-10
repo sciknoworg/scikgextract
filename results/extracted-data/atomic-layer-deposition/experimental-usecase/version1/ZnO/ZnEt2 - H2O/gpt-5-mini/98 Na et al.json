@@ -1,0 +1,374 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ, Zn(C2H5)2)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "deionized water (H2O)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "home-built hot-wall stainless steel tube reactor"
+                },
+                "substrate": "Si substrate with 100 nm thermally grown SiO2 (electrodes evaporated on top)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 125.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO"
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 240.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        }
+                    },
+                    "saturation": true,
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 1000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 1000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 20000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 20000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "process",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 10.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "Dynamic secondary ion mass spectrometry (SIMS, CAMECA IMS-6F)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "SIMS depth profiling"
+                    }
+                },
+                "chemicalComposition": "ZnO"
+            },
+            "deviceProperties": {
+                "deviceStructure": "Evaporated Cr (13 nm) / Au (100 nm) electrodes on Si substrate with 100 nm SiO2; electrode length 1.0 cm, spacing 0.3 cm (used for in situ conductance measurements)"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO:Al"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ, Zn(C2H5)2)"
+                    },
+                    {
+                        "compound": "Al",
+                        "precursor": "trimethylaluminum (TMA, Al(CH3)3)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "deionized water (H2O)"
+                    },
+                    {
+                        "compound": "Al",
+                        "coReactant": "deionized water (H2O)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "home-built hot-wall stainless steel tube reactor"
+                },
+                "substrate": "Si substrate with 100 nm thermally grown SiO2 (electrodes evaporated on top)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 125.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO"
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 240.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        }
+                    },
+                    "saturation": true,
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO / Al",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 1000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 1000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO / Al",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 20000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 20000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "process",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 10.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "Dynamic secondary ion mass spectrometry (SIMS, CAMECA IMS-6F)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "SIMS depth profiling"
+                    }
+                },
+                "chemicalComposition": "ZnO:Al"
+            },
+            "deviceProperties": {
+                "deviceStructure": "Evaporated Cr (13 nm) / Au (100 nm) electrodes on Si substrate with 100 nm SiO2; electrode length 1.0 cm, spacing 0.3 cm (used for in situ conductance measurements)"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

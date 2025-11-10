@@ -1,0 +1,321 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "TeO2",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Te",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "TeO2/Te heterostructure"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "TeO2",
+                        "precursor": "Te(OEt)4"
+                    },
+                    {
+                        "compound": "Te",
+                        "precursor": "Te(SiMe3)2 (BTMS-Te)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "TeO2",
+                        "coReactant": "H2O"
+                    },
+                    {
+                        "compound": "Te",
+                        "coReactant": "MeOH"
+                    }
+                ],
+                "carrierGas": "Ar",
+                "purgingGas": "Ar"
+            },
+            "processParameters": {
+                "substrate": "Four-inch SiO2/Si wafer (90 nm SiO2/p-Si described in text)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 80.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 500.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "TeO2",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.6,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            },
+                            {
+                                "compound": "Te",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.0,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 20.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "Te",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 2000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 500.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "TeO2",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 1000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "Te/TeO2",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 10000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 10000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "Te/TeO2",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 20.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "BTMS-Te (m cycles)",
+                        "Te(OEt)4 + H2O (n cycles)"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 0.3,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Te",
+                            "O"
+                        ],
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "TeO2/Te",
+                "crystallinity": {
+                    "phase": "TeO2: amorphous; Te: polycrystalline",
+                    "characterizationMethod": "Raman, TEM, XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 1.1,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 2.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 58.1,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 1000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "Back-gate (bottom-gate) top-contact FETs; also globally-gated top-gate devices with HfO2 dielectric (stacked TeO2/Te on SiO2/Si described)"
+            },
+            "otherAspects": {
+                "safety": "Precursors and byproducts require standard ALD handling and ventilation. MeOH has high vapor pressure (raised chamber pressure during Te deposition). BTMS-Te and Te alkoxides require appropriate handling and exhaust treatment.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

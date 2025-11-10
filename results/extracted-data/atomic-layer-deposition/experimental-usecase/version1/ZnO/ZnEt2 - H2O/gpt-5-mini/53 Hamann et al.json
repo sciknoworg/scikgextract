@@ -1,0 +1,72 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethyl zinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O (water)"
+                    }
+                ],
+                "carrierGas": "nitrogen (N2)",
+                "purgingGas": "nitrogen (N2)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Savannah 100",
+                    "manufacturer": "Cambridge Nanotech Inc."
+                },
+                "substrate": "FTO (fluorine-doped tin oxide) substrates",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO"
+            },
+            "deviceProperties": {
+                "deviceStructure": "Dye-sensitized solar cell (photoanode: ZnO-coated aerogel on FTO)"
+            }
+        }
+    ]
+}

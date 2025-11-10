@@ -1,0 +1,73 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Al2O3",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "ZnO; Al2O3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "Trimethylaluminum (TMA)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethylzinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "CO2"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "N2O"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "300 mm silicon wafers",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "crystallinity": {
+                    "phase": "c-axis oriented wurtzite",
+                    "characterizationMethod": "XRD (2\u0003)"
+                }
+            },
+            "deviceProperties": {
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -5.4,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "deviceStructure": "Bottom Pt gate / 15 nm Al0.88B0.12N ferroelectric / 3 nm Al2O3 interlayer / 11 nm ZnO channel; Ti (or Mo) source-drain contacts"
+            }
+        }
+    ]
+}

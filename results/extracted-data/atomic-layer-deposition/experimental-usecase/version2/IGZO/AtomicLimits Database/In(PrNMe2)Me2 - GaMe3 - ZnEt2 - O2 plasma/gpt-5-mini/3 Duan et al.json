@@ -1,0 +1,204 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "IGZO (In-Ga-Zn-O)",
+                            "sameAs": []
+                        },
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "Al2O3 (gate insulator)",
+                            "sameAs": []
+                        },
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "InZnO (gate electrode / IZO)",
+                            "sameAs": []
+                        },
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "In-Ga-Zn-O (IGZO)",
+                    "sameAs": []
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "InOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/135400916"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "DADI (3-(Dimethylamino)-propyl dimethyl indium)",
+                            "sameAs": []
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "GaOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/175760063"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "TMGa (trimethyl gallium)",
+                            "sameAs": []
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "DEZ (diethyl zinc)",
+                            "sameAs": []
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "InOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/135400916"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O2 plasma",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "GaOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/175760063"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O2 plasma",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O2 plasma",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "",
+                    "sameAs": []
+                },
+                "purgingGas": {
+                    "value": "",
+                    "sameAs": []
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "TFS200"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 38.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": {
+                    "value": "8-in wafer",
+                    "sameAs": []
+                },
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 1.26,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1:1:1"
+                    }
+                },
+                "chemicalComposition": "InGaZnO (IGZO)"
+            },
+            "deviceProperties": {
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -3.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 230.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "Vertical channel-all-around (CAA) IGZO FET (examples: CD = 4 \u00b5m, L = 50 nm; also CD = 130 nm devices reported)"
+            }
+        }
+    ]
+}

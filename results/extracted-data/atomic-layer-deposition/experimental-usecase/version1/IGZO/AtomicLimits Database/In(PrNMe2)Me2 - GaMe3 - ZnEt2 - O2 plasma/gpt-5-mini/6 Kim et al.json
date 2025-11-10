@@ -1,0 +1,651 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In2O3",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "In0.52Ga0.18Zn0.30O (a-IGZO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2O3",
+                        "precursor": "(3-dimethylaminopropyl)dimethylindium (DADI)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "precursor": "trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O2 plasma"
+                    }
+                ],
+                "carrierGas": "Argon (Ar, 99.999%)",
+                "purgingGas": "Argon (Ar)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "lateral-flow-type plasma-enhanced ALD (PEALD) with RF (13.56 MHz) direct capacitance-coupled plasma (CCP) source",
+                    "manufacturer": "ISAC Research Inc."
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "thermally grown SiO2-buffered substrate (100 nm)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "In2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 6.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "Ga2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "In2O3",
+                        "In2O3",
+                        "In2O3",
+                        "In2O3",
+                        "In2O3",
+                        "In2O3",
+                        "Ga2O3",
+                        "ZnO"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XRF"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "0.52:0.18:0.30",
+                        "characterizationMethod": "XRF"
+                    }
+                },
+                "chemicalComposition": "In0.52Ga0.18Zn0.30O",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "GI-XRD; TEM (FFT)"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 27.6,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.05,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 61.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "top-gate bottom-contact (TG-BC)"
+            },
+            "otherAspects": {
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Al2O3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminium (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3 (ozone, 200 g/m3)"
+                    }
+                ],
+                "carrierGas": "Argon (Ar)",
+                "purgingGas": "Argon (Ar)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "vertical-flow-type ALD chamber",
+                    "manufacturer": "ISAC Research Inc."
+                },
+                "substrate": "thermally grown SiO2-buffered substrate (100 nm)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.35,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "O"
+                        ],
+                        "value": "2:3",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "Al2O3",
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 2.96,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "GI-XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 17.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.01,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 68.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "top-gate bottom-contact (TG-BC)"
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Al2O3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminium (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3 (ozone, 200 g/m3)"
+                    }
+                ],
+                "carrierGas": "Argon (Ar)",
+                "purgingGas": "Argon (Ar)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "vertical-flow-type ALD chamber",
+                    "manufacturer": "ISAC Research Inc."
+                },
+                "substrate": "thermally grown SiO2-buffered substrate (100 nm)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 300.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.35,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "O"
+                        ],
+                        "value": "2:3",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "Al2O3",
+                "filmDensity": {
+                    "characterizationMethod": "GI-XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 22.1,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -0.02,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 63.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "top-gate bottom-contact (TG-BC)"
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Al2O3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminium (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3 (ozone, 200 g/m3)"
+                    }
+                ],
+                "carrierGas": "Argon (Ar)",
+                "purgingGas": "Argon (Ar)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "vertical-flow-type ALD chamber",
+                    "manufacturer": "ISAC Research Inc."
+                },
+                "substrate": "thermally grown SiO2-buffered substrate (100 nm)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 350.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.35,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "O"
+                        ],
+                        "value": "2:3",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "Al2O3",
+                "filmDensity": {
+                    "characterizationMethod": "GI-XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 25.6,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -0.06,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 63.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "top-gate bottom-contact (TG-BC)"
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Al2O3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminium (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3 (ozone, 200 g/m3)"
+                    }
+                ],
+                "carrierGas": "Argon (Ar)",
+                "purgingGas": "Argon (Ar)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "vertical-flow-type ALD chamber",
+                    "manufacturer": "ISAC Research Inc."
+                },
+                "substrate": "thermally grown SiO2-buffered substrate (100 nm)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 400.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.35,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "O"
+                        ],
+                        "value": "2:3",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "Al2O3",
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 3.12,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "GI-XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 27.6,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.05,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 61.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "top-gate bottom-contact (TG-BC)"
+            },
+            "otherAspects": {
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

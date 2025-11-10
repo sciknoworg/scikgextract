@@ -1,0 +1,105 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In-Ga-Zn-O (IGZO)",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "In-Ga-Zn-O (IGZO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In-Ga-Zn-O (IGZO)"
+                    },
+                    {
+                        "compound": "Al2O3"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "In-Ga-Zn-O (IGZO)"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "SiO2 spacer sidewall",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "0.22:0.25:0.53"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 25.3,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 95.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "Vertical-channel thin-film transistor (VTFT), LCH = 150 nm (SiO2 spacer)"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        }
+    ]
+}

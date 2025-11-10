@@ -1,0 +1,430 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "In2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/150905",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5150906"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "Ga2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/158605",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5139834"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "InGaZnO",
+                    "sameAs": []
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "In",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5359967"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "trimethylindium",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/76919"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Ga",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5360835"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "trimethylgallium",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/15051"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Zn",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/23994"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "diethylzinc",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/101667988"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "O",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "ozone",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "Ar",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/23968"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "Ar",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/23968"
+                    ]
+                }
+            },
+            "processParameters": {
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": {
+                    "value": "Si/SiO2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/24261",
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/5461123"
+                    ]
+                },
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 300.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.33,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 100.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 7.4,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "dosingTime": [
+                        {
+                            "compound": "In"
+                        },
+                        {
+                            "compound": "Ga"
+                        },
+                        {
+                            "compound": "Zn"
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "In",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "Ga",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "Zn",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "In",
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 250.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        },
+                        {
+                            "compound": "Ga",
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 250.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        },
+                        {
+                            "compound": "Zn",
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 250.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 7.4,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "In2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "Ga2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 3.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "In2O3",
+                        "ZnO",
+                        "Ga2O3"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "electricalProperties": {
+                    "mobility": {
+                        "quantityValue": {
+                            "numericValue": 30.24,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "0.25:0.26:0.49",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "GIXRD"
+                },
+                "roughness": {
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 30.24,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 0.09,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "bottom-gate top-contact"
+            },
+            "otherAspects": {
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

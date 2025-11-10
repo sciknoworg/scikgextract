@@ -1,0 +1,74 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "FEBALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "concentrated H2O2 (50% in H2O)"
+                    }
+                ],
+                "carrierGas": "N2",
+                "purgingGas": "N2"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "fluidized bed reactor (FBR)"
+                },
+                "substrate": "SiO2 spheres (100, 250, 550 nm)",
+                "deliveryMethod": "vapor delivery from room-temperature precursor vapor pressure (manual flow adjustment using needle valves)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "characterizationMethod": "Diffuse transmittance UV-1000S (Tauc-plot / UV-Vis diffuse reflectance)"
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "ICP-AES"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Not Found"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "characterizationMethod": "SEM / STEM"
+                }
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

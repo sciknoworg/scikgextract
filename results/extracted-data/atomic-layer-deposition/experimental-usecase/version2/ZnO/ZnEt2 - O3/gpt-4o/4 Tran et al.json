@@ -1,0 +1,150 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnO",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "trimethylaluminum (TMA)",
+                            "sameAs": []
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "diethylzinc (DEZ)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/101667988"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "CO2",
+                            "sameAs": []
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "N2O",
+                            "sameAs": []
+                        }
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": {
+                    "value": "300 mm silicon wafers",
+                    "sameAs": []
+                },
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 11.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": false,
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 11.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "B"
+                        ],
+                        "value": "0.88:0.12"
+                    }
+                },
+                "chemicalComposition": "Al0.88B0.12N",
+                "crystallinity": {
+                    "phase": "c-axis orientation",
+                    "characterizationMethod": "XRD"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "ZnO/Al2O3/Al0.88B0.12N FeFET"
+            }
+        }
+    ]
+}

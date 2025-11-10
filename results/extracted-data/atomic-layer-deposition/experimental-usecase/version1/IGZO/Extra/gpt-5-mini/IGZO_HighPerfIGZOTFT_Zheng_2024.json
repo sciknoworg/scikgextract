@@ -1,0 +1,144 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "InGaZnOx (a-IGZO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In",
+                        "precursor": "[3-(dimethylamino)propyl]dimethyl indium (DADI)"
+                    },
+                    {
+                        "compound": "Ga",
+                        "precursor": "trimethyl gallium (TMGa)"
+                    },
+                    {
+                        "compound": "Zn",
+                        "precursor": "diethyl zinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In",
+                        "coReactant": "Ar/O2 plasma"
+                    },
+                    {
+                        "compound": "Ga",
+                        "coReactant": "Ar/O2 plasma"
+                    },
+                    {
+                        "compound": "Zn",
+                        "coReactant": "Ar/O2 plasma"
+                    }
+                ]
+            },
+            "processParameters": {
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 1200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "300 nm SiO2 / p++ Si",
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 8.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "Not Found"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1:1:1",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "InGaZnOx",
+                "crystallinity": {
+                    "phase": "amorphous"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 74.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 5.02,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 530.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 980000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "bottom-gate"
+            }
+        }
+    ]
+}

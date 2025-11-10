@@ -1,0 +1,173 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "IGZO (In-Ga-Zn-O)",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "HfO2",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "Al2O3 (interfacial layer)",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "IGZO (In-Ga-Zn-O), HfO2, Al2O3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2O3 (for IGZO)",
+                        "precursor": "[3-(Dimethylamino)-propyl] dimethyl indium (DADI)"
+                    },
+                    {
+                        "compound": "Ga2O3 (for IGZO)",
+                        "precursor": "Trimethyl gallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO (for IGZO)",
+                        "precursor": "Diethyl zinc (DEZ)"
+                    },
+                    {
+                        "compound": "HfO2",
+                        "precursor": "Tetrakis(dimethylamino)hafnium (TEMAHf)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "Trimethyl aluminum (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2O3 / Ga2O3 / ZnO (IGZO subcycles)",
+                        "coReactant": "O3 (ozone)"
+                    },
+                    {
+                        "compound": "HfO2",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3 (ozone)"
+                    }
+                ]
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "CN1 (thermal ALD for IGZO); iSAC Research PEALD system (HfO2)"
+                },
+                "substrate": "p-type Si wafer with 100 nm thermal SiO2 (SiO2/Si)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "bandGap": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "Spectroscopic ellipsometry (Tauc plot / extrapolation described)"
+                },
+                "electricalProperties": {
+                    "characterizationMethod": "Hall measurements (where applicable)"
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XRF (atomic percentages calculated from XRF)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "60:21:19",
+                        "characterizationMethod": "XRF (Table 1, bilayer average: In 60 at%, Ga 21 at%, Zn 19 at%)"
+                    }
+                },
+                "chemicalComposition": "In0.60Ga0.21Zn0.19O",
+                "crystallinity": {
+                    "phase": "Amorphous (base layer and bilayer stack); polycrystalline (boost layer \u2014 cubic bixbyite In2O3)",
+                    "characterizationMethod": "GIXRD, HRTEM (SADP)"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.67,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM (root-mean-square roughness, Rq). Bilayer Rq = 0.67 nm (base 0.21 nm, boost 1.12 nm)."
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 74.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 130.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 320000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "Top-gate staggered structure"
+            },
+            "otherAspects": {
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

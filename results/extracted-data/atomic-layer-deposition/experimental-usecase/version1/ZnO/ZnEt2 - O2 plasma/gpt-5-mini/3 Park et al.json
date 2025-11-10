@@ -1,0 +1,161 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminium (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "oxygen plasma (O2 plasma)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "water (H2O)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "oxygen plasma (O2 plasma)"
+                    }
+                ],
+                "carrierGas": "Ar",
+                "purgingGas": "Ar"
+            },
+            "processParameters": {
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 130.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "corning glass",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 3.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.3,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "UV-Vis"
+                },
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "columnar (002) crystalline orientation",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.55,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 4.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 8.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 10000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "top-gate"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        }
+    ]
+}

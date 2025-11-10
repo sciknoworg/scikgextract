@@ -1,0 +1,304 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "IGZO",
+                            "sameAs": []
+                        },
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "IGZO",
+                    "sameAs": []
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "In",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5359967"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "[3-(Dimethylamino)-propyl] dimethyl indium (DADI)",
+                            "sameAs": []
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Ga",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5360835"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "trimethyl gallium (TMGa)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/15051"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Zn",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/23994"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "diethyl zinc (DEZ)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/101667988"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "IGZO",
+                            "sameAs": []
+                        },
+                        "coReactant": {
+                            "value": "O2 plasma",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        }
+                    }
+                ],
+                "purgingGas": {
+                    "value": "O2 plasma",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                },
+                "carrierGas": {
+                    "value": "",
+                    "sameAs": []
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "TFS200"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 38.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "IGZO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 2.1,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": false,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "InOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "GaOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "InOx",
+                        "GaOx",
+                        "ZnOx"
+                    ]
+                },
+                "substrate": {
+                    "value": "",
+                    "sameAs": []
+                }
+            },
+            "materialProperties": {
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 1.26,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        }
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1:1:1"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    }
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    }
+                }
+            },
+            "deviceProperties": {
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -3.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 230.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                }
+            }
+        }
+    ]
+}

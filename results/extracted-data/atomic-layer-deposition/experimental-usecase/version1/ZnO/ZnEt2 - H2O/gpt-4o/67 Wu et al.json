@@ -1,0 +1,169 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethylzinc (DEZn)"
+                    },
+                    {
+                        "compound": "Al",
+                        "precursor": "Trimethylaluminum (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O"
+                    }
+                ],
+                "carrierGas": "N2",
+                "purgingGas": "N2"
+            },
+            "processParameters": {
+                "substrate": "p-GaN",
+                "deliveryMethod": "spin-on coating",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 180.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.18,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 3000.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        }
+                    },
+                    "saturation": false,
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 0.02,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.1,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 10.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 10.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ]
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": {
+                        "quantityValue": {
+                            "numericValue": 1.52,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex"
+                    }
+                },
+                "electricalProperties": {
+                    "characterizationMethod": "Hall measurements"
+                },
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O"
+                        ],
+                        "value": "1:1",
+                        "characterizationMethod": "TEM"
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "crystalline",
+                    "characterizationMethod": "TEM"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "n-ZnO-SiO-ZnO nanocomposite/p-GaN heterojunction"
+            },
+            "otherAspects": {
+                "safety": "Standard safety protocols for handling chemicals like DEZn and TMA.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

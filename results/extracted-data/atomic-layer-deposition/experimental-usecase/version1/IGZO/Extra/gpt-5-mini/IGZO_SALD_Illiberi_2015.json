@@ -1,0 +1,184 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "SALD"
+                    },
+                    {
+                        "compound": "InZnO",
+                        "method": "SALD"
+                    },
+                    {
+                        "compound": "InGaZnO",
+                        "method": "SALD"
+                    }
+                ],
+                "materialDeposited": "InGaZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethyl zinc (DEZ)"
+                    },
+                    {
+                        "compound": "InOx",
+                        "precursor": "Trimethyl indium (TMIn)"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "precursor": "Triethyl gallium (TEGa)"
+                    },
+                    {
+                        "compound": "Oxygen",
+                        "precursor": "Water (H2O)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O"
+                    },
+                    {
+                        "compound": "InOx",
+                        "coReactant": "H2O"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "coReactant": "H2O"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "substrate": "Heavily doped p-type Si wafers coated by 300 nm thermally grown SiO2",
+                "deliveryMethod": "Coinjection of evaporated metal precursors (DEZ, TMIn, TEGa) through the same inlet, diluted by argon",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.8,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ]
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 200.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "DEZ/TMIn/TEGa and H2O (metal and oxygen precursors)",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 15.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 23.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "EDX"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "EDX"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "XRD"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 3.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "deviceStructure": "bottom-gate, top-contact"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        }
+    ]
+}

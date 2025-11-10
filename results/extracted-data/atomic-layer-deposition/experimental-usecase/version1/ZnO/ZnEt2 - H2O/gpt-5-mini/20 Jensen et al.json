@@ -1,0 +1,102 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO/Al2O3 multilayers"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Zn(C2H5)2"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "Al(CH3)3"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "H2O"
+                    }
+                ],
+                "carrierGas": "Nitrogen",
+                "purgingGas": "Nitrogen"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "custom-built hot-wall viscous flow reactor"
+                },
+                "substrate": "n-doped Si(100)",
+                "deliveryMethod": "viscous flow",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 177.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "crystallinity": {
+                    "phase": "ZnO: polycrystalline above ~10 \u00c5; Al2O3: amorphous",
+                    "characterizationMethod": "XRD, GIXRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 3.6,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 3.1,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            }
+        }
+    ]
+}

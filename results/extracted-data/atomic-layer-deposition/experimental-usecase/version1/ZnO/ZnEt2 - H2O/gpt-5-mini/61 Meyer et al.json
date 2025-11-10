@@ -1,0 +1,74 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Al doped ZnO (AZO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "dethylzinc"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminum (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "water"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "water"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "glass substrates",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 4.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        }
+                    }
+                },
+                "chemicalComposition": "Al doped ZnO (AZO)"
+            },
+            "deviceProperties": {
+                "deviceStructure": "inverted transparent OLED with AZO electrodes"
+            }
+        }
+    ]
+}

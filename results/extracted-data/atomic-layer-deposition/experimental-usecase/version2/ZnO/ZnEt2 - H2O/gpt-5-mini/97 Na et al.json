@@ -1,0 +1,150 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnO:Al",
+                    "sameAs": []
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "Diethylzinc (DEZ, Zn(C2H5)2)",
+                            "sameAs": []
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "Trimethylaluminum (TMA, Al(CH3)3)",
+                            "sameAs": []
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "H2O (water)",
+                            "sameAs": []
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "H2O (water)",
+                            "sameAs": []
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "Argon",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/23968"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "Argon",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/23968"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "custom-made hot-wall stainless tube reactor (1.5 in. diameter)"
+                },
+                "substrate": {
+                    "value": "planar silicon substrate (Si, some samples with thermally grown 100 nm SiO2)",
+                    "sameAs": []
+                },
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 125.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "AES; SIMS depth profiling"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "AES; SIMS depth profiling"
+                    }
+                },
+                "crystallinity": {
+                    "characterizationMethod": "FTIR (transmission FTIR)"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "Two evaporated metal electrodes (Au/Cr) on Si/SiO2; measurements with Keithley 2602 and four-point-probe"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

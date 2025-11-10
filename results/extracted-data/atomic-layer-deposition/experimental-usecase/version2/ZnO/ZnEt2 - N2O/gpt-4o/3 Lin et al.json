@@ -1,0 +1,169 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnO",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "diethyl-zinc (DEZn)",
+                            "sameAs": []
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "nitrous oxide (N2O)",
+                            "sameAs": [
+								"https://pubchem.ncbi.nlm.nih.gov/compound/948"
+							]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "nitrogen (N2)",
+                    "sameAs": [
+						"https://pubchem.ncbi.nlm.nih.gov/compound/947"
+					]
+                },
+                "purgingGas": {
+                    "value": "nitrogen (N2)",
+                    "sameAs": [
+						"https://pubchem.ncbi.nlm.nih.gov/compound/947"
+					]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "inductively heated quartz reactor"
+                },
+                "substrate": {
+                    "value": "(0 0 0 1) sapphire",
+                    "sameAs": []
+                },
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 300.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 760.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.0,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 1200.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        }
+                    },
+                    "saturation": true,
+                    "flowRates": [
+                        {
+                            "compound": "ZnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 7.63,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 55.7,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ]
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.26,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "Tauc plot"
+                },
+                "chemicalComposition": "ZnO"
+            }
+        }
+    ]
+}

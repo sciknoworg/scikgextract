@@ -1,0 +1,207 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "InOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/135400916"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "GaOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/175760063"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "InGaZnO",
+                    "sameAs": []
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "InOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/135400916"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "Triethyl-indium",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/101912"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "GaOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/175760063"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "Triethyl-gallium",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/66198"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "Diethyl-zinc",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/101667988"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "InOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/135400916"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "GaOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/175760063"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnOx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    }
+                ],
+                "purgingGas": {
+                    "value": "N2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "carrierGas": {
+                    "value": "",
+                    "sameAs": []
+                }
+            },
+            "processParameters": {
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "InOx"
+                            },
+                            {
+                                "compound": "GaOx"
+                            },
+                            {
+                                "compound": "ZnOx"
+                            }
+                        ]
+                    },
+                    "saturation": false
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "InOx"
+                        },
+                        {
+                            "compound": "GaOx"
+                        },
+                        {
+                            "compound": "ZnOx"
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "InOx",
+                        "GaOx",
+                        "ZnOx"
+                    ]
+                },
+                "substrate": {
+                    "value": "",
+                    "sameAs": []
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "3:2:1"
+                    }
+                },
+                "chemicalComposition": "InGaZnO"
+            },
+            "deviceProperties": {
+                "deviceStructure": "bottom gate"
+            }
+        }
+    ]
+}

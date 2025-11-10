@@ -1,0 +1,92 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO:Al"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethylzinc (DEZ, Zn(C2H5)2)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "Trimethylaluminum (TMA, Al(CH3)3)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O (water)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "H2O (water)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "custom-made hot-wall stainless tube reactor (1.5 in. diameter)"
+                },
+                "substrate": "planar silicon substrate (Si, some samples with thermally grown 100 nm SiO2)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 125.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "AES; SIMS depth profiling"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "AES; SIMS depth profiling"
+                    }
+                },
+                "crystallinity": {
+                    "characterizationMethod": "FTIR (transmission FTIR)"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "Two evaporated metal electrodes (Au/Cr) on Si/SiO2; measurements with Keithley 2602 and four-point-probe"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InOx",
+                        "precursor": "In precursor"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "precursor": "Ga precursor"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "precursor": "Zn precursor"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "coReactant": "O2 plasma"
+                    }
+                ]
+            },
+            "processParameters": {
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "saturation": false
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "InOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 3.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "GaOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "InOx",
+                        "GaOx",
+                        "ZnOx"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "3:1:1"
+                    }
+                }
+            },
+            "deviceProperties": {
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 25.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 109.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                }
+            },
+            "otherAspects": {
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

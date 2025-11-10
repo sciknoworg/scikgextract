@@ -1,0 +1,133 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InGaZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "InGaZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InGaZnO",
+                        "precursor": "TEIn/In-Ga/DEZn"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InGaZnO",
+                        "coReactant": "O3"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "thermally grown SiO2/Si",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "saturation": false,
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 20.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "InGaZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "TEIn",
+                        "In-Ga",
+                        "DEZn"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "electricalProperties": {
+                    "mobility": {
+                        "quantityValue": {
+                            "numericValue": 27.6,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1.4:1:1.6",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "InGaZnO"
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 27.6,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 280.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "bottom-gate bottom-contact"
+            },
+            "otherAspects": {
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

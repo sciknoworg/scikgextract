@@ -1,0 +1,262 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "Indium Gallium Zinc Oxide (IGZO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InOx",
+                        "precursor": "Trimethylindium (TMIn)"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "precursor": "Trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "precursor": "Diethylzinc (DEZn)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "coReactant": "O2 plasma"
+                    }
+                ],
+                "carrierGas": "N2 (99.9999%)",
+                "purgingGas": "N2 (99.9999%)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "PEALD reactor with capacitively coupled plasma source and in situ ellipsometer (SENTECH AL-RTM)",
+                    "manufacturer": "SENTECH Instruments GmbH"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "4-in. n-type Si(100) wafers with native SiO2 (native oxide) layer",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS; EDX"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1:1:1",
+                        "characterizationMethod": "EDX and XPS (In 4d, Ga 3d, Zn 3d)"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "phase": "Nearly amorphous, nanocrystalline",
+                    "characterizationMethod": "GIXRD"
+                },
+                "roughness": {
+                    "characterizationMethod": "FE-SEM"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "MIS stacks: IGZO / SiO2 / Si with thermally evaporated Al top electrodes (circular pads)"
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Indium Gallium Zinc Oxide (IGZO) - mixed PEALD/TALD supercycle (example: T(1/1/1))"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InOx",
+                        "precursor": "Trimethylindium (TMIn)"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "precursor": "Trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "precursor": "Diethylzinc (DEZn)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "coReactant": "H2O (thermal ALD)"
+                    }
+                ],
+                "carrierGas": "N2 (99.9999%)",
+                "purgingGas": "N2 (99.9999%)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "PEALD reactor with capacitively coupled plasma source and in situ ellipsometer (SENTECH AL-RTM)",
+                    "manufacturer": "SENTECH Instruments GmbH"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "4-in. n-type Si(100) wafers with native SiO2 (native oxide) layer",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "InOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 3.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "GaOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 3.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnOx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 12.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "InOx",
+                        "GaOx",
+                        "ZnOx"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS; EDX"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1:1:1",
+                        "characterizationMethod": "EDX and XPS (In 4d, Ga 3d, Zn 3d); note: measured actual ratios deviate (see Table 2)"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "phase": "Nearly amorphous, nanocrystalline",
+                    "characterizationMethod": "GIXRD"
+                },
+                "roughness": {
+                    "characterizationMethod": "FE-SEM"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "MIS stacks: IGZO / SiO2 / Si with thermally evaporated Al top electrodes (circular pads)"
+            }
+        }
+    ]
+}

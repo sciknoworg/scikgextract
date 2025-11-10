@@ -1,0 +1,162 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "GaZnO",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "AO-IGZO (InGaZnO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In",
+                        "precursor": "(3-Dimethylaminopropyl) dimethyl indium (DADI)"
+                    },
+                    {
+                        "compound": "Ga",
+                        "precursor": "trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "Zn",
+                        "precursor": "diethylzinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In",
+                        "coReactant": "O2 plasma (Ar/O2 mixed gas)"
+                    },
+                    {
+                        "compound": "Ga",
+                        "coReactant": "O2 plasma (Ar/O2 mixed gas)"
+                    },
+                    {
+                        "compound": "Zn",
+                        "coReactant": "O2 plasma (Ar/O2 mixed gas)"
+                    }
+                ],
+                "carrierGas": "O2 / Ar (200 sccm)",
+                "purgingGas": "Ar"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Temporal wafer-type capacitively-coupled plasma reactor (direct plasma), chamber size 15 cm x 15 cm"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "Si/SiO2 thermal oxide wafer (100 nm SiO2)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "InO",
+                        "GaO",
+                        "ZnO"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XRF"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "12:1:1",
+                        "characterizationMethod": "XRF"
+                    }
+                },
+                "chemicalComposition": "InGaZnO (AO-IGZO)",
+                "crystallinity": {
+                    "phase": "Atomically-ordered InO / GaZnO layers within an amorphous matrix",
+                    "characterizationMethod": "STEM (HAADF), FFT/inverse-FFT, GIWAXS, TEM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 245.06,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.17,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 74.05,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 1430000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "Top-gate bottom-contact transistor (top-gate, bottom-contact); channel W=40 \u00b5m, L=20 \u00b5m"
+            },
+            "otherAspects": {
+                "filmStability": false,
+                "reproducibility": true
+            }
+        }
+    ]
+}

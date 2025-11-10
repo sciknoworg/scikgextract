@@ -1,0 +1,76 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethylzinc (DEZn)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O"
+                    }
+                ],
+                "purgingGas": "Ar"
+            },
+            "processParameters": {
+                "substrate": "Au-coated (3 nm) Si substrates",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.3,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "EDX (TEM-EDX)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Mg",
+                            "Zn",
+                            "O"
+                        ],
+                        "characterizationMethod": "EDX / TEM-EDX"
+                    }
+                },
+                "chemicalComposition": "ZnO on MgO",
+                "crystallinity": {
+                    "phase": "hexagonal ZnO",
+                    "characterizationMethod": "XRD, SAED, lattice-resolved TEM"
+                },
+                "roughness": {
+                    "characterizationMethod": "TEM/SEM"
+                }
+            }
+        }
+    ]
+}

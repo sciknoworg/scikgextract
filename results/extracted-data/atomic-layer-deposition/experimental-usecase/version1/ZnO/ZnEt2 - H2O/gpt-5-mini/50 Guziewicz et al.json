@@ -1,0 +1,100 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZn)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "water (H2O)"
+                    }
+                ],
+                "purgingGas": "high purity nitrogen"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Savannah-100",
+                    "manufacturer": "Cambridge NanoTech"
+                },
+                "substrate": "glass and Si(100)",
+                "deliveryMethod": "sequential pulsed precursor dosing with nitrogen purging",
+                "temperature": {
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.4,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "Reported in text as ~3.4 eV at room temperature"
+                },
+                "electricalProperties": {
+                    "carrierDensity": {
+                        "quantityValue": {
+                            "numericValue": 2e+23,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/PER-M3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity"
+                    },
+                    "mobility": {
+                        "quantityValue": {
+                            "numericValue": 15.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility"
+                    },
+                    "characterizationMethod": "Hall effect (dc four-probe, up to 1.3 T)"
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "Secondary ion mass spectrometry (SIMS)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Not Found"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "polycrystalline",
+                    "characterizationMethod": "XRD (X'Pert MPD diffractometer)"
+                },
+                "roughness": {
+                    "characterizationMethod": "AFM"
+                }
+            }
+        }
+    ]
+}

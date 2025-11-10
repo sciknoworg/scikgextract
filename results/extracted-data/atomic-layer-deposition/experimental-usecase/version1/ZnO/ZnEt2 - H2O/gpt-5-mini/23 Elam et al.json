@@ -1,0 +1,91 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO/Al2O3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethyl zinc (DEZ)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethyl aluminum (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "H2O"
+                    }
+                ],
+                "carrierGas": "nitrogen",
+                "purgingGas": "nitrogen"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "viscous flow reactor"
+                },
+                "substrate": "1 in. Si(100) (HF-etched)",
+                "deliveryMethod": "Pulses of the reactive precursors are injected into the nitrogen carrier gas flow using computer-controlled solenoid valves.",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 177.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "Inductively coupled plasma atomic emission spectroscopy (ICP-AES)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "Al"
+                        ],
+                        "characterizationMethod": "Inductively coupled plasma atomic emission spectroscopy (ICP-AES)"
+                    }
+                },
+                "chemicalComposition": "ZnO/Al2O3 alloy",
+                "crystallinity": {
+                    "phase": "ZnO: crystalline; Al2O3: amorphous"
+                },
+                "filmDensity": {
+                    "characterizationMethod": "QCM mass measurements combined with film thickness measurements (ellipsometry and stylus profilometry)"
+                }
+            }
+        }
+    ]
+}

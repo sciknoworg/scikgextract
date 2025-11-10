@@ -1,0 +1,184 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "In2O3",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ITO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "SiO2",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "precursor": "trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "In2O3",
+                        "precursor": "cyclopentadienyl indium (InCp)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "O2 plasma"
+                    }
+                ]
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "R200 advanced",
+                    "manufacturer": "Picosun"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 2500.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "glass, 1.5 \u00d7 2.5 cm^2",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "super-cycle total",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 39.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "1 cycle of ZnO and Ga2O3 followed by 3 cycles of ZnO and In2O3 (super-cycle for IGZO35%)"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "electricalProperties": {
+                    "characterizationMethod": "Hall-effect measurement"
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 12.4,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "XRD, HRTEM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 8.8,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 1.7,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 220000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "glass/ITO/SiO2/IGZO/ITO"
+            }
+        }
+    ]
+}

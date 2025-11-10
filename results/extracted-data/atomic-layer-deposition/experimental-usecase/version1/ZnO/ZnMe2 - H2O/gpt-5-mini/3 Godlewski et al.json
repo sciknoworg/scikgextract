@@ -1,0 +1,78 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "zinc acetate"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZn, Zn(C2H5)2)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "dimethylzinc (DMZn, Zn(CH3)2)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "deionized water (H2O)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "solution of water and ammonia (NH4OH) for N-doping"
+                    }
+                ],
+                "carrierGas": "nitrogen (N2)",
+                "purgingGas": "nitrogen (N2)"
+            },
+            "processParameters": {
+                "substrate": "silicon (Si), silicon with silver (back contact), glass, sapphire",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "saturation": true
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "SIMS; XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Not Found"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "polycrystalline"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "Pt/ZnO(p)/ZnO(n)/Ti/Au"
+            }
+        }
+    ]
+}

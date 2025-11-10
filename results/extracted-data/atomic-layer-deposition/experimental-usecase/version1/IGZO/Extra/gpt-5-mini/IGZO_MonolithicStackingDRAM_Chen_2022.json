@@ -1,0 +1,105 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "IGZO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "HfOx",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "IZO",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "IGZO/HfOx/IZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InOx"
+                    },
+                    {
+                        "compound": "GaOx"
+                    },
+                    {
+                        "compound": "ZnOx"
+                    },
+                    {
+                        "compound": "HfOx"
+                    },
+                    {
+                        "compound": "IZO"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "HfOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "IZO",
+                        "coReactant": "O2 plasma"
+                    }
+                ]
+            },
+            "processParameters": {
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "3:1:1"
+                    }
+                },
+                "chemicalComposition": "InGaZnO"
+            },
+            "deviceProperties": {
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 109.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "CAA (4F 2)"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "HfO2",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "InGaZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "InGaZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "HfO2",
+                        "precursor": "TEMAHf"
+                    },
+                    {
+                        "compound": "InGaZnO",
+                        "precursor": "TEIn, In-Ga bimetallic, DEZn"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "TMA"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "HfO2",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "InGaZnO",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "SiO2/Si substrate",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "saturation": false,
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 5.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "EDS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "1:2.1:3.9"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "characterizationMethod": "TEM"
+                }
+            },
+            "deviceProperties": {
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 460000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                }
+            }
+        }
+    ]
+}
