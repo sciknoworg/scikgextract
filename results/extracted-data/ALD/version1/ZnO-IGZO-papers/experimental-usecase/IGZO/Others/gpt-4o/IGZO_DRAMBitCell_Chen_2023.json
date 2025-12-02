@@ -1,0 +1,97 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InOx",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InOx",
+                        "precursor": "3-(dimethylamino)propyl)dimethylindium (DADI)"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "precursor": "trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InOx",
+                        "coReactant": "O2"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "coReactant": "O2"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O2"
+                    }
+                ]
+            },
+            "processParameters": {
+                "temperature": {
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "uniformity": {
+                    "variation": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        }
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ]
+                    }
+                },
+                "roughness": {
+                    "value": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    }
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    }
+                }
+            }
+        }
+    ]
+}

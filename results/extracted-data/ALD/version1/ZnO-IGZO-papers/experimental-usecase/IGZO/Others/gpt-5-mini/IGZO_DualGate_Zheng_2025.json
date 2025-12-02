@@ -1,0 +1,336 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "In0.24Ga0.58Zn0.18O (IGZO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2O3",
+                        "precursor": "Trimethylindium (TMIn)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "precursor": "Trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethylzinc (DEZn)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O3"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "Heavily p-doped silicon wafer (used as bottom-gate substrate)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "In2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "Ga2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "In2O3",
+                        "Ga2O3",
+                        "ZnO"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "0.24:0.58:0.18",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "In0.24Ga0.58Zn0.18O",
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.326,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 11.68,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 102.4,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "Dual-gate IGZO transistor (bottom-gate on heavily p-doped Si with 9 nm HfO2; top-gate with 12 nm Al2O3)"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "In0.24Ga0.58Zn0.18O (IGZO)"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2O3",
+                        "precursor": "Trimethylindium (TMIn)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "precursor": "Trimethylgallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethylzinc (DEZn)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O3"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "Heavily p-doped silicon wafer (used as bottom-gate substrate)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "In2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "Ga2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "In2O3",
+                        "Ga2O3",
+                        "ZnO"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "0.24:0.58:0.18",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "In0.24Ga0.58Zn0.18O",
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.326,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 22.46,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 94.8,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "Dual-gate IGZO transistor (bottom-gate on heavily p-doped Si with 9 nm HfO2; top-gate with 12 nm Al2O3)"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

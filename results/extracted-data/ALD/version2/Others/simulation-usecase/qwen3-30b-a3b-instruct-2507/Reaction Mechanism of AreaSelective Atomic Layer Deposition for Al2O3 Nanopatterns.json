@@ -1,0 +1,324 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT",
+                    "MD"
+                ],
+                "methodDetails": {
+                    "timestep": {
+                        "quantityValue": {
+                            "numericValue": 1.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/FemtoSEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "functional": "B3LYP",
+                    "basisSet": "6-311G**",
+                    "clusterModel": "CH3CH2CH3 cluster model"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "TMA"
+                ],
+                "coReactants": [
+                    "H2O"
+                ],
+                "substrates": [
+                    "Ti"
+                ],
+                "encapsulationMaterials": [
+                    "ODPA"
+                ],
+                "ligandModification": {
+                    "originalLigand": "CH3",
+                    "modifiedLigand": "CH3"
+                }
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 1.6,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "http://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "propertySource": "observed"
+            },
+            "surfaceProperties": {
+                "desorptionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.23,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/HZ"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "diffusionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.00176,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/HZ"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "reactionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.0113,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/MOL-PER-SEC"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "stickingCoefficient": {
+                    "quantityValue": {
+                        "numericValue": 0.8,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Dimensionless",
+                            "sameAs": "http://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Dimensionless"
+                },
+                "bindingAffinity": {
+                    "quantityValue": {
+                        "numericValue": -15.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ChemicalAffinity",
+                            "sameAs": "https://qudt.org/vocab/unit/KiloJ-PER-MOL"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ChemicalAffinity"
+                },
+                "surfaceCoverage": {
+                    "coverage": {
+                        "quantityValue": {
+                            "numericValue": 96.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    },
+                    "timeDependent": false
+                },
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": {
+                        "quantityValue": {
+                            "numericValue": 0.0113,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/NUM-PER-M2"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ParticleFluence"
+                    },
+                    "stericHindrance": "High packing density of ODPA SAM prevents precursor penetration.",
+                    "surfaceHydroxylConcentration": {
+                        "quantityValue": {
+                            "numericValue": 3.6,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/AmountOfSubstanceConcentration",
+                                "sameAs": "http://qudt.org/vocab/unit/PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/AmountOfSubstanceConcentration"
+                    }
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "TMA",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Physisorbed TMA on CH3-terminated SAM",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 59.3,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -15.2,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "CH3-terminated SAMs prevent chemical reaction with TMA but allow physisorption, acting as nucleation sites.",
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": {
+                    "quantityValue": {
+                        "numericValue": 96.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "http://qudt.org/vocab/unit/PERCENT"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "roughness": {
+                    "quantityValue": {
+                        "numericValue": 62.5,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/NanoM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "density": {
+                    "quantityValue": {
+                        "numericValue": 3.6,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/MassDensity",
+                            "sameAs": "http://qudt.org/vocab/unit/GM-PER-CentiM3"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/MassDensity"
+                },
+                "temperatureProfile": [
+                    {
+                        "quantityValue": {
+                            "numericValue": 150.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                                "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                    }
+                ],
+                "chemicalComposition": [
+                    "Al",
+                    "O"
+                ],
+                "propertySource": "observed"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 9.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                },
+                "carrierGasType": "Ar",
+                "precursorFlow": {
+                    "flowRate": {
+                        "quantityValue": {
+                            "numericValue": 8.9,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                    },
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 100.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 12.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": {
+                    "quantityValue": {
+                        "numericValue": 45.52,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/MilliM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "propertySource": "observed"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": "Ti(100)",
+                "substituentEffects": "CH3-terminated SAMs block nucleation via physisorption control.",
+                "blockingMechanisms": {
+                    "stericBlocking": "Dense packing of ODPA SAM prevents precursor penetration.",
+                    "chemicalPassivation": "CH3-terminated SAMs are chemically inert and do not react with TMA."
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": {
+                    "quantityValue": {
+                        "numericValue": 370.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                            "sameAs": "https://qudt.org/vocab/unit/NUM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                },
+                "selfCleaningEffect": false
+            }
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "PBE",
+                    "basisSet": null,
+                    "clusterModel": null
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "(3-(dimethylamino)propyl)dimethylindium (DADI)",
+                    "trimethylgallium (TMGa)",
+                    "diethylzinc (DEZ)"
+                ],
+                "coReactants": [
+                    "O2",
+                    "N2O"
+                ],
+                "substrates": [
+                    "low-boron-doped polished silicon (Si) wafer"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": null
+            },
+            "growthRate": null,
+            "surfaceProperties": null,
+            "filmProperties": null,
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.2,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": null,
+                "carrierGasType": "argon (Ar)",
+                "precursorFlow": {
+                    "flowRate": null,
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 1.5,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 25.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": null,
+                "propertySource": "observed"
+            },
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

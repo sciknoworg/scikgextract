@@ -1,0 +1,379 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT",
+                    "RMD"
+                ],
+                "methodDetails": {
+                    "timestep": {
+                        "quantityValue": {
+                            "numericValue": 0.1,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/FemtoSEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "functional": "PBE",
+                    "basisSet": "plane-wave basis set",
+                    "clusterModel": "p(4\u00d74) supercell with periodic four-layer slab models"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "Cu(acac)2"
+                ],
+                "coReactants": [
+                    "H2",
+                    "atomic H",
+                    "H2O",
+                    "O3"
+                ],
+                "substrates": [
+                    "Cu(110)",
+                    "Cu2O(111)",
+                    "CuO(111)"
+                ],
+                "encapsulationMaterials": [],
+                "ligandModification": {
+                    "originalLigand": "acac",
+                    "modifiedLigand": "H(acac)"
+                }
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 0.1,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": {
+                    "quantityValue": {
+                        "numericValue": 600.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "http://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "propertySource": "calculated"
+            },
+            "surfaceProperties": {
+                "desorptionRate": {
+                    "quantityValue": {
+                        "numericValue": 1e-12,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/HZ"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "diffusionRate": {
+                    "quantityValue": {
+                        "numericValue": 1e-10,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/HZ"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "reactionRate": {
+                    "quantityValue": {
+                        "numericValue": 1e-15,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/MOL-PER-SEC"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "stickingCoefficient": {
+                    "quantityValue": {
+                        "numericValue": 0.8,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Dimensionless",
+                            "sameAs": "http://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Dimensionless"
+                },
+                "bindingAffinity": {
+                    "quantityValue": {
+                        "numericValue": -2.1,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ChemicalAffinity",
+                            "sameAs": "https://qudt.org/vocab/unit/KiloJ-PER-MOL"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ChemicalAffinity"
+                },
+                "surfaceCoverage": {
+                    "coverage": {
+                        "quantityValue": {
+                            "numericValue": 40.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    },
+                    "timeDependent": true
+                },
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": {
+                        "quantityValue": {
+                            "numericValue": 0.4,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/NUM-PER-M2"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ParticleFluence"
+                    },
+                    "stericHindrance": "The dissociated acac-ligands are thermodynamically stable on the surface and can block surface sites, preventing further precursor adsorption.",
+                    "surfaceHydroxylConcentration": {
+                        "quantityValue": {
+                            "numericValue": 0.3,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence"
+                    }
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "Cu(acac)2",
+                        "coReactant": "atomic H",
+                        "intermediateComplex": "H2(acac)",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.59,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -2.16,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    },
+                    {
+                        "precursor": "Cu(acac)2",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Cu[H(acac)]",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.48,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -2.08,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    },
+                    {
+                        "precursor": "Cu(acac)2",
+                        "coReactant": "O3",
+                        "intermediateComplex": "epoxide",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.55,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -2.61,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "The surface termination chemistry involves the formation of OH species on Cu2O(111) and CuO(111) surfaces during ligand-exchange reactions with H2O and O3, respectively.",
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": {
+                    "quantityValue": {
+                        "numericValue": 95.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "http://qudt.org/vocab/unit/PERCENT"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "roughness": {
+                    "quantityValue": {
+                        "numericValue": 1.2,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/NanoM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "density": {
+                    "quantityValue": {
+                        "numericValue": 8.96,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/MassDensity",
+                            "sameAs": "http://qudt.org/vocab/unit/GM-PER-CentiM3"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/MassDensity"
+                },
+                "temperatureProfile": [
+                    {
+                        "quantityValue": {
+                            "numericValue": 600.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                                "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                    }
+                ],
+                "chemicalComposition": [
+                    "Cu",
+                    "O",
+                    "C",
+                    "H"
+                ],
+                "propertySource": "calculated"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 101325.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                },
+                "carrierGasType": "Ar",
+                "precursorFlow": {
+                    "flowRate": {
+                        "quantityValue": {
+                            "numericValue": 50.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                    },
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 10.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 20.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": {
+                    "quantityValue": {
+                        "numericValue": 10.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/MilliM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "propertySource": "calculated"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": "Cu(110)",
+                "substituentEffects": "The presence of acac-ligands on the surface affects precursor selectivity by blocking reactive sites.",
+                "blockingMechanisms": {
+                    "stericBlocking": "The dissociated acac-ligands occupy surface sites and prevent further precursor adsorption.",
+                    "chemicalPassivation": "The surface is chemically passivated by the formation of stable acac-ligand complexes, reducing reactivity."
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": {
+                    "quantityValue": {
+                        "numericValue": 5.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                            "sameAs": "https://qudt.org/vocab/unit/SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                },
+                "selfCleaningEffect": true
+            }
+        }
+    ]
+}

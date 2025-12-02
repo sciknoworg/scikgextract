@@ -1,0 +1,144 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO:Al",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO:Al"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "dimethyl zinc (DMZn)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethyl zinc (DEZn)"
+                    },
+                    {
+                        "compound": "ZnO:Al",
+                        "precursor": "trimethyl aluminum (TMAl)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O (water)"
+                    },
+                    {
+                        "compound": "ZnO:Al",
+                        "coReactant": "H2O (water)"
+                    }
+                ],
+                "carrierGas": "N2 (nitrogen)",
+                "purgingGas": "N2 (nitrogen)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "travelling wave F-120 ALE reactor",
+                    "manufacturer": "Microchemistry Ltd."
+                },
+                "substrate": "soda lime glass (50 x 50 mm)",
+                "temperature": {
+                    "quantityValue": {
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        }
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O",
+                            "Al"
+                        ],
+                        "characterizationMethod": "XRD"
+                    }
+                },
+                "chemicalComposition": "ZnO:Al",
+                "crystallinity": {
+                    "phase": "Polycrystalline; preferred orientations: 100 at low temperature, 002 at high temperature",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    }
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "CIS photovoltaic cell with ALE-deposited ZnO:Al top layer (800 nm ZnO:Al + 50 nm ZnO); reported device metrics: efficiency 14.3%, fill factor 73.2%, Voc 598 mV, Isc 32.6 mA/cm2 (measured area 0.1 cm2)"
+            }
+        }
+    ]
+}

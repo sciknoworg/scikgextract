@@ -10,7 +10,7 @@ from data.models.api.pubchem_synonyms import PubChemSynonymsResponse
 
 from scikg_extract.services.pubchem_cid_mapping import open_env_for_read, lookup_by_synonym
 from scikg_extract.utils.rest_client import RestClient
-from scikg_extract.config.normalizationConfig import NormalizationConfig
+from scikg_extract.config.normalization.normalizationConfig import NormalizationConfig
 from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.dict_utils import get_value_by_path, set_value_by_path
 from scikg_extract.utils.file_utils import read_json_file, save_json_file

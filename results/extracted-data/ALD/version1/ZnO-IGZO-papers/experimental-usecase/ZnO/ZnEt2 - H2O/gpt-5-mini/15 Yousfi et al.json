@@ -1,0 +1,80 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In2S3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "In2S3"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2S3",
+                        "precursor": "Indium acetyl acetonate (Indium acac)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2S3",
+                        "coReactant": "H2S"
+                    }
+                ],
+                "carrierGas": "Nitrogen (99.999%)",
+                "purgingGas": "Nitrogen (99.999%)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "F120 ALE reactor",
+                    "manufacturer": "Microchemistry"
+                },
+                "substrate": "glass/Mo (5\u00d75 cm samples)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 160.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.25,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "Optical transmittance / absorption onset"
+                },
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "S"
+                        ],
+                        "value": "2:3"
+                    }
+                },
+                "chemicalComposition": "In2S3",
+                "crystallinity": {
+                    "phase": "poorly crystallized",
+                    "characterizationMethod": "XRD"
+                }
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

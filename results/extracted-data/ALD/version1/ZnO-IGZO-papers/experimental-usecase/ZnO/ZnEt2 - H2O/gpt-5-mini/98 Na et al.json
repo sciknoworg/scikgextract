@@ -1,0 +1,155 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ, Zn(C2H5)2)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "deionized water (H2O)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "home-built hot-wall stainless steel tube reactor"
+                },
+                "substrate": "Si substrate coated with 100 nm thermally grown SiO2",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 125.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "Dynamic secondary ion mass spectrometry (SIMS)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Not Found"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO:Al",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO:Al"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ, Zn(C2H5)2)"
+                    },
+                    {
+                        "compound": "Al dopant",
+                        "precursor": "trimethylaluminum (TMA, Al(CH3)3)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO:Al",
+                        "coReactant": "deionized water (H2O)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "home-built hot-wall stainless steel tube reactor"
+                },
+                "substrate": "Si substrate coated with 100 nm thermally grown SiO2",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 125.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "TMA/H2O and DEZ/H2O macrocycles (e.g., 1 TMA/H2O per 19 DEZ/H2O as R_D/Z = 1/19)"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "Dynamic secondary ion mass spectrometry (SIMS)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Not Found"
+                        ],
+                        "characterizationMethod": "SIMS"
+                    }
+                },
+                "chemicalComposition": "ZnO:Al"
+            },
+            "deviceProperties": {
+                "deviceStructure": "Patterned Cr/Au electrodes on Si/100 nm SiO2 used for in situ conductance measurements"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

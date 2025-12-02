@@ -22,7 +22,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Initialize logger
-    logger = LogHandler.setup_module_logging("scikg_extract")
+    logger = LogHandler.setup_module_logging("compare_extracted_data_with_atomiclimits")
     logger.info("Starting comparison of extracted data with AtomicLimits database...")
 
     # Input Path

@@ -6,6 +6,8 @@ class PropertyItem(BaseModel):
     CID: int
     MolecularFormula: str
     IUPACName: str
+    ConnectivitySMILES: str
+    InChIKey: str
 
 class PropertyTable(BaseModel):
     Properties: List[PropertyItem]

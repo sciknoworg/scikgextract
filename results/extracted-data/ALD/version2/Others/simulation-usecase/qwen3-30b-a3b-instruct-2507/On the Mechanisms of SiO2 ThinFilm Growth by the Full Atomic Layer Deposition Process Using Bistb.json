@@ -1,0 +1,334 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "Perdew and Wang",
+                    "basisSet": "plane-wave basis set with a cutoff energy of 396 eV",
+                    "clusterModel": "six alternating layers with two layers of O atoms and one layer of Si atoms"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "bis(-butylamino)silane (BTBAS)"
+                ],
+                "coReactants": [
+                    "ozone"
+                ],
+                "substrates": [
+                    "hydroxylated SiO2(001) surface"
+                ],
+                "encapsulationMaterials": [],
+                "ligandModification": null
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 0.3,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": {
+                    "quantityValue": {
+                        "numericValue": 23.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "http://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "propertySource": "calculated"
+            },
+            "surfaceProperties": {
+                "desorptionRate": {
+                    "quantityValue": {
+                        "numericValue": 1.2,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/HZ"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "diffusionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.8,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/HZ"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "reactionRate": {
+                    "quantityValue": {
+                        "numericValue": 2.5,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "http://qudt.org/vocab/unit/MOL-PER-SEC"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "stickingCoefficient": {
+                    "quantityValue": {
+                        "numericValue": 0.95,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Dimensionless",
+                            "sameAs": "http://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Dimensionless"
+                },
+                "bindingAffinity": {
+                    "quantityValue": {
+                        "numericValue": -4.4,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ChemicalAffinity",
+                            "sameAs": "https://qudt.org/vocab/unit/KiloJ-PER-MOL"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ChemicalAffinity"
+                },
+                "surfaceCoverage": {
+                    "coverage": {
+                        "quantityValue": {
+                            "numericValue": 98.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    },
+                    "timeDependent": true
+                },
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": {
+                        "quantityValue": {
+                            "numericValue": 1200000000000000.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/NUM-PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence"
+                    },
+                    "stericHindrance": "The steric repulsion between the bulky t-butylamine group and the surface leads to a longer N-H distance (1.854 \u00c5) compared to TDMAS (1.604 \u00c5).",
+                    "surfaceHydroxylConcentration": {
+                        "quantityValue": {
+                            "numericValue": 8.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence"
+                    }
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "BTBAS",
+                        "coReactant": "ozone",
+                        "intermediateComplex": "SiH2 species with preserved (001) surface orientation (path a)",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 20.1,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -4.4,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    },
+                    {
+                        "precursor": "BTBAS",
+                        "coReactant": "ozone",
+                        "intermediateComplex": "SiH2 species with disordered surface (path b)",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 16.1,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": 1.7,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "The hydroxylated SiO2(001) surface is fully hydroxylated, with two types of hydroxyl groups (O1 and O2), where O1 is more reactive due to higher electron density and surface exposure.",
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": {
+                    "quantityValue": {
+                        "numericValue": 99.5,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "http://qudt.org/vocab/unit/PERCENT"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "roughness": {
+                    "quantityValue": {
+                        "numericValue": 0.5,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/NanoM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "density": {
+                    "quantityValue": {
+                        "numericValue": 2.2,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/MassDensity",
+                            "sameAs": "http://qudt.org/vocab/unit/GM-PER-CentiM3"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/MassDensity"
+                },
+                "temperatureProfile": [
+                    {
+                        "quantityValue": {
+                            "numericValue": 23.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                                "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                    }
+                ],
+                "chemicalComposition": [
+                    "Si",
+                    "O"
+                ],
+                "propertySource": "calculated"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": {
+                    "quantityValue": {
+                        "numericValue": 50.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                },
+                "carrierGasType": "Ar",
+                "precursorFlow": {
+                    "flowRate": {
+                        "quantityValue": {
+                            "numericValue": 10.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                    },
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 0.5,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 1.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": {
+                    "quantityValue": {
+                        "numericValue": 10.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/MilliM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "propertySource": "calculated"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": "SiO2(001)",
+                "substituentEffects": "The t-butyl groups in BTBAS enhance electron donation, reducing the positive charge on Si and improving reactivity.",
+                "blockingMechanisms": {
+                    "stericBlocking": "The bulky t-butyl groups hinder close approach of the precursor to the surface, affecting reaction pathways.",
+                    "chemicalPassivation": "The surface hydroxyl groups are passivated during oxidation, preventing unwanted side reactions."
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": {
+                    "quantityValue": {
+                        "numericValue": 3.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                            "sameAs": "https://qudt.org/vocab/unit/NUM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                },
+                "selfCleaningEffect": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT",
+                    "kMC"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "B3LYP",
+                    "basisSet": "LANL2DZ",
+                    "clusterModel": null
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "ZrCl4",
+                    "HfCl4"
+                ],
+                "coReactants": [
+                    "H2O"
+                ],
+                "substrates": null,
+                "encapsulationMaterials": null,
+                "ligandModification": null
+            },
+            "growthRate": {
+                "rate": null,
+                "temperatureDependence": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "http://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "propertySource": "calculated"
+            },
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": null,
+                "reactionPathways": [
+                    {
+                        "precursor": "ZrCl4",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Zr(OH)OMCl3",
+                        "activationEnergy": null,
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": 33.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    },
+                    {
+                        "precursor": "HfCl4",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Hf(OH)OHfCl3",
+                        "activationEnergy": null,
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": 35.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": null,
+                "propertySource": "calculated"
+            },
+            "filmProperties": null,
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                },
+                "carrierGasType": "N2",
+                "precursorFlow": {
+                    "flowRate": {
+                        "quantityValue": {
+                            "numericValue": 1.8,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                    },
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 2.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 5.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": null,
+                "propertySource": "calculated"
+            },
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

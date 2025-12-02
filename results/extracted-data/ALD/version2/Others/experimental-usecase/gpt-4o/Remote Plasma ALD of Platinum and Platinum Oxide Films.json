@@ -1,0 +1,405 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Pt",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "PtO2",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "Pt, PtO2"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Pt",
+                        "precursor": "MeCpPtMe3"
+                    },
+                    {
+                        "compound": "PtO2",
+                        "precursor": "MeCpPtMe3"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Pt",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "PtO2",
+                        "coReactant": "O2 plasma"
+                    }
+                ],
+                "carrierGas": "Not Found",
+                "purgingGas": "Not Found"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "ALD-I",
+                    "manufacturer": "Not Found"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "Si 100 with native oxide or with 400 nm thermally grown SiO2",
+                "deliveryMethod": "Not Found",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 300.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.01,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "Pt",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.47,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            },
+                            {
+                                "compound": "PtO2",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.47,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 150.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 29.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 50.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "Pt",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 3.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "PtO2",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 3.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "Pt",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            }
+                        },
+                        {
+                            "compound": "PtO2",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "Pt",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            }
+                        },
+                        {
+                            "compound": "PtO2",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": null
+                                },
+                                "quantityKind": null
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 29.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 1.5,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "Tauc-Lorentz"
+                },
+                "electricalProperties": {
+                    "resistivity": {
+                        "quantityValue": {
+                            "numericValue": 15.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity",
+                                "sameAs": "https://qudt.org/vocab/unit/OHM-M"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity"
+                    },
+                    "carrierDensity": null,
+                    "mobility": null,
+                    "characterizationMethod": "four-point probe"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": null
+                        },
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": null
+                        },
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 100.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "RBS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Pt",
+                            "O"
+                        ],
+                        "value": "31:69",
+                        "characterizationMethod": "RBS"
+                    }
+                },
+                "chemicalComposition": "PtO2",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.4,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 21.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": null
+            },
+            "otherAspects": {
+                "safety": "Not Found",
+                "filmStability": null,
+                "reproducibility": null
+            }
+        }
+    ]
+}

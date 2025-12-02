@@ -1,0 +1,144 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "PBE-D3",
+                    "basisSet": null,
+                    "clusterModel": "H-terminated c-Si clusters"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "diethylzinc (DEZ)"
+                ],
+                "coReactants": [
+                    "H2O"
+                ],
+                "substrates": [
+                    "SiO2 seed layer patterns on H-terminated silicon substrates"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": null
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 1.6,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": null,
+                "propertySource": "observed"
+            },
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": null,
+                "reactionPathways": [
+                    {
+                        "precursor": "diethylzinc (DEZ)",
+                        "coReactant": "H2O",
+                        "intermediateComplex": null,
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 1.16,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -0.37,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": null,
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": null,
+                "roughness": null,
+                "density": null,
+                "temperatureProfile": null,
+                "chemicalComposition": null,
+                "propertySource": "observed"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 170.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": null,
+                "carrierGasType": null,
+                "precursorFlow": {
+                    "flowRate": null,
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 0.05,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": null
+                },
+                "gapDistance": null,
+                "propertySource": "observed"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": null,
+                "substituentEffects": null,
+                "blockingMechanisms": {
+                    "stericBlocking": "Kinetically hindered proton transfer reaction from the H-terminated Si",
+                    "chemicalPassivation": "Physisorption of DEZ or H2O on H-terminated Si"
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": {
+                    "quantityValue": {
+                        "numericValue": 80.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                            "sameAs": "https://qudt.org/vocab/unit/NUM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                },
+                "selfCleaningEffect": null
+            }
+        }
+    ]
+}

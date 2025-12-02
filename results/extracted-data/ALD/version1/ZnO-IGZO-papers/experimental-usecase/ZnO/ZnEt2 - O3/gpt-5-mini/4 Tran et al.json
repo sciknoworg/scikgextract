@@ -1,0 +1,73 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminum (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "N2O"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "CO2"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "300 mm silicon wafer",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "saturation": false
+                }
+            },
+            "materialProperties": {
+                "chemicalComposition": "ZnO"
+            },
+            "deviceProperties": {
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -5.4,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "deviceStructure": "Pt bottom gate; Al0.88B0.12N ferroelectric; Al2O3 interlayer; ZnO semiconductor channel"
+            }
+        }
+    ]
+}

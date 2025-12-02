@@ -1,8 +1,10 @@
+# Python imports
+import zlib
 import logging
 from typing import List, Tuple
 
+# External imports
 import lmdb
-import zlib
 from rapidfuzz import fuzz
 
 def build_lmdb_from_file(input_file: str, lmdb_path: str, map_size: int = 15 * 1024**3, compression: bool = True) -> None:

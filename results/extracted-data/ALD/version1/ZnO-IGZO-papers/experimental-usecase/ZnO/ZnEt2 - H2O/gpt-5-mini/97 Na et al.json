@@ -1,0 +1,103 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO:Al"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ, Zn(C2H5)2)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminum (TMA, Al(CH3)3)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "deionized water (H2O)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "deionized water (H2O)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "custom-made hot-wall stainless tube reactor (1.5 in. diameter)"
+                },
+                "substrate": "Si (planar silicon substrate)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 125.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "AES, SIMS"
+                    },
+                    "atomicRatio": {
+                        "characterizationMethod": "AES"
+                    }
+                },
+                "chemicalComposition": "ZnO:Al",
+                "crystallinity": {
+                    "phase": "amorphous (ZnAl2O4 bonding units observed in heavily Al-doped films)",
+                    "characterizationMethod": "FTIR (transmission FTIR)"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 5.675,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "assumed bulk ZnO density (used for QCM/ellipsometry comparison)"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "Two-terminal Au/Cr (13 nm/100 nm) electrodes on Si/SiO2 substrate; I-V measurements in air at room temperature (reported conductivity values from I-V)"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

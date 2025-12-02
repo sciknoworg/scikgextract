@@ -1,0 +1,69 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO:Al",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO:Al"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "dimethyl zinc (DMZn)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethyl zinc (DEZn)"
+                    },
+                    {
+                        "compound": "ZnO:Al",
+                        "precursor": "trimethyl aluminum (TMAl)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "water (H2O)"
+                    }
+                ],
+                "carrierGas": "nitrogen",
+                "purgingGas": "nitrogen"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "travelling wave F-120 ALE reactor",
+                    "manufacturer": "Microchemistry Ltd."
+                },
+                "substrate": "soda lime glass (50 x 50 mm)"
+            },
+            "materialProperties": {
+                "electricalProperties": {
+                    "resistivity": {
+                        "quantityValue": {
+                            "numericValue": 2.5e-05,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity",
+                                "sameAs": "https://qudt.org/vocab/unit/OHM-M"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity"
+                    },
+                    "characterizationMethod": "Van der Pauw (Hall) measurements"
+                },
+                "chemicalComposition": "ZnO:Al",
+                "crystallinity": {
+                    "phase": "polycrystalline",
+                    "characterizationMethod": "X-ray diffractometry (XRD)"
+                },
+                "roughness": {
+                    "characterizationMethod": "AFM"
+                }
+            }
+        }
+    ]
+}

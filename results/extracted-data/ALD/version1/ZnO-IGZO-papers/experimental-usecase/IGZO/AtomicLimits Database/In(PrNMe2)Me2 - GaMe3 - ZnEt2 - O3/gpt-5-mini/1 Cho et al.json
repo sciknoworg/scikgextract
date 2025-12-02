@@ -1,0 +1,167 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "HfO2",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "InGaZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2O3",
+                        "precursor": "[3-(Dimethylamino)-propyl] dimethyl indium (DADI)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "precursor": "Trimethyl gallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethyl zinc (DEZ)"
+                    },
+                    {
+                        "compound": "HfO2",
+                        "precursor": "Tetrakis(dimethylamino)hafnium (TEMAHf)"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "Trimethyl aluminum (TMA)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "O3 (ozone)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "O3 (ozone)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O3 (ozone)"
+                    },
+                    {
+                        "compound": "HfO2",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "O3 (ozone)"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "Thermal SiO2 on p-type Si (SiO2/Si)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XRF (calibrated by proton-induced X-ray emission)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "60:21:19",
+                        "characterizationMethod": "XRF (calibrated by proton-induced X-ray emission)"
+                    }
+                },
+                "chemicalComposition": "In0.60Ga0.21Zn0.19 (bilayer average)",
+                "crystallinity": {
+                    "phase": "Amorphous (base layer and bilayer); boost layer shows polycrystalline bixbyite In2O3 features",
+                    "characterizationMethod": "GIXRD, HRTEM (SADP)"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.67,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 74.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 130.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 320000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "Top-gate staggered"
+            }
+        }
+    ]
+}

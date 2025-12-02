@@ -1,0 +1,135 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "PBE",
+                    "basisSet": "TZ2P",
+                    "clusterModel": "A.1, A.2"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "Trimethylaluminum (TMA)",
+                    "Triethylaluminum (TEA)"
+                ],
+                "coReactants": [
+                    "H2O"
+                ],
+                "substrates": [
+                    "a-SiO2"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": {
+                    "originalLigand": "methoxy",
+                    "modifiedLigand": "hydroxyl"
+                }
+            },
+            "growthRate": null,
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": null,
+                    "stericHindrance": "The SMI layer prevents the precursor from reaching the surface, but the SMI layer limits further reactivity.",
+                    "surfaceHydroxylConcentration": null
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "Trimethylaluminum (TMA)",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Not Found",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 142.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -64.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    },
+                    {
+                        "precursor": "Triethylaluminum (TEA)",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Not Found",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 105.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -113.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "The SMI layer is not inert but subject to many modifications by both the Al precursors and the co-reactant water during the ALD process.",
+                "propertySource": "calculated"
+            },
+            "filmProperties": null,
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.0001333,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": null,
+                "carrierGasType": null,
+                "precursorFlow": null,
+                "gapDistance": null,
+                "propertySource": "calculated"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": null,
+                "substituentEffects": "The bulkiness of the Al precursors affects the selectivity.",
+                "blockingMechanisms": {
+                    "stericBlocking": "The SMI layer prevents the precursor from reaching the surface, but the SMI layer limits further reactivity.",
+                    "chemicalPassivation": "The SMI layer chemically passivates the surface by blocking reactive sites."
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": null,
+                "selfCleaningEffect": null
+            }
+        }
+    ]
+}

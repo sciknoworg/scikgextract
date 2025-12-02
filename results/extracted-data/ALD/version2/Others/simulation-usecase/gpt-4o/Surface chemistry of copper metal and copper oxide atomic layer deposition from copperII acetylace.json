@@ -1,0 +1,57 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT",
+                    "RMD"
+                ],
+                "methodDetails": {
+                    "timestep": {
+                        "quantityValue": {
+                            "numericValue": 0.1,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/FemtoSEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "functional": "PBE",
+                    "basisSet": "Plane-wave",
+                    "clusterModel": "p(4x4) supercell"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "Cu(acac)2"
+                ],
+                "coReactants": [
+                    "H2",
+                    "H",
+                    "H2O",
+                    "O3"
+                ],
+                "substrates": [
+                    "Cu(110)",
+                    "Cu2O(111)",
+                    "CuO(111)"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": {
+                    "originalLigand": "acetylacetonate",
+                    "modifiedLigand": "Not Found"
+                }
+            },
+            "growthRate": null,
+            "surfaceProperties": null,
+            "filmProperties": null,
+            "reactorConditions": null,
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

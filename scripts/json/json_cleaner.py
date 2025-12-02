@@ -1,7 +1,16 @@
+"""
+JSON cleaning script removes all null and empty values from the provided JSON files.
+
+Author: Sameer Sadruddin
+Date: November 21, 2025
+Last Modified: November 21, 2025
+"""
+# Python imports
 import os
-import logging
 import argparse
 
+# Scikg_Extract Imports
+from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.dict_utils import remove_null_values
 from scikg_extract.utils.file_utils import read_json_file, save_json_file
     
@@ -11,17 +20,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Clean JSON files.")
     parser.add_argument("--input", type=str, required=False, help="Path to the input JSON file.")
     parser.add_argument("--output", type=str, required=False, help="Path to the output cleaned JSON file.")
-    parser.add_argument("--verbose", action="store_true", default=True, help="Enable verbose")
 
     # Parse the arguments
     args = parser.parse_args()
 
-    # Configure the logger
-    log_level = logging.DEBUG if args.verbose else logging.INFO
-    logging.basicConfig(level=log_level, format='%(asctime)s - %(levelname)s - %(message)s')
-
-    # Initialize the logger
-    logger = logging.getLogger(__name__)
+    # Configure and Initialize the logger
+    logger = LogHandler.setup_module_logging("json_cleaner")
     logger.info("Starting JSON cleaning process...")
 
     # Input file path

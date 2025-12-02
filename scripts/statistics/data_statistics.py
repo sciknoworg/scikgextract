@@ -1,13 +1,23 @@
+"""
+Compute data statistics from extracted JSON files showing property occurrences, distinct values, and numeric ranges.
+
+Author: Sameer Sadruddin
+Date: November 21, 2025
+Last Modified: November 21, 2025
+"""
+# Python imports
 import os
 import argparse
 from pathlib import Path
 from collections import defaultdict
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Optional, Set, Tuple
 
-import pandas as pd
-
+# Scikg_Extract imports
 from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.file_utils import load_json_input
+
+# Pandas import
+import pandas as pd
 
 def is_primitive(val: Any) -> bool:
     """
@@ -50,7 +60,7 @@ def parse_number(val: Any) -> Optional[float]:
     # If not a number or string, return None
     return None
 
-def samples_from_document(obj: Any) -> List[Dict]:
+def samples_from_document(obj: Any) -> list[dict]:
     """
     Extract samples from a loaded JSON document.
     Args:
@@ -59,7 +69,7 @@ def samples_from_document(obj: Any) -> List[Dict]:
         List[Dict]: A list of samples (dictionaries) extracted from the document.
     """
     # Extract samples from the loaded JSON document.
-    samples: List[Dict] = []
+    samples: list[dict] = []
 
     # If the document is a list of dicts, treat each dict as a sample
     if isinstance(obj, list):
@@ -71,7 +81,7 @@ def samples_from_document(obj: Any) -> List[Dict]:
     # Return the list of samples
     return samples
 
-def flatten_record(rec: Any, prefix: str = "") -> List[Tuple[str, Any]]:
+def flatten_record(rec: Any, prefix: str = "") -> list[Tuple[str, Any]]:
     """
     Flatten a nested record (dicts/lists) into (property_path, value) pairs.
     Args:
@@ -81,7 +91,7 @@ def flatten_record(rec: Any, prefix: str = "") -> List[Tuple[str, Any]]:
         List[Tuple[str, Any]]: A list of (property_path, value) pairs.
     """
     # Initialize output list
-    out: List[Tuple[str, Any]] = []
+    out: list[Tuple[str, Any]] = []
     
     # Flatten a nested record (dicts/lists) into (property_path, value) pairs.
     if is_primitive(rec):
@@ -113,7 +123,7 @@ def flatten_record(rec: Any, prefix: str = "") -> List[Tuple[str, Any]]:
     # Return empty if not handled
     return out
 
-def compute_stats_for_folder(input_dir: str, skip_keys: List[str] = [], key: str = None) -> pd.DataFrame:
+def compute_stats_for_folder(input_dir: str, skip_keys: list[str] = [], key: str = None) -> pd.DataFrame:
     """
     Compute data statistics from extracted JSON files in a specified directory.
     Args:
@@ -125,14 +135,14 @@ def compute_stats_for_folder(input_dir: str, skip_keys: List[str] = [], key: str
     """
 
     # Initialize the logger
-    logger = LogHandler.get_logger("scikg_extract")
+    logger = LogHandler.get_logger("data_statistics.compute_stats_for_folder")
     logger.info(f"Computing data statistics for folder: {input_dir}")
 
     # Stats accumulators
-    papers_with_property: Dict[str, Set[str]] = defaultdict(set)
-    occurrences: Dict[str, int] = defaultdict(int)
-    distinct_strings: Dict[str, Set[str]] = defaultdict(set)
-    numeric_values: Dict[str, List[float]] = defaultdict(list)
+    papers_with_property: dict[str, Set[str]] = defaultdict(set)
+    occurrences: dict[str, int] = defaultdict(int)
+    distinct_strings: dict[str, Set[str]] = defaultdict(set)
+    numeric_values: dict[str, list[float]] = defaultdict(list)
 
     # Process each JSON file in the input directory
     for root, _, filenames in os.walk(input_dir):
@@ -238,7 +248,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Configure the logger
-    logger = LogHandler.setup_module_logging("scikg_extract")
+    logger = LogHandler.setup_module_logging("data_statistics")
     logger.info("Starting computing data statistics...")
 
     # Input directory containing JSON files

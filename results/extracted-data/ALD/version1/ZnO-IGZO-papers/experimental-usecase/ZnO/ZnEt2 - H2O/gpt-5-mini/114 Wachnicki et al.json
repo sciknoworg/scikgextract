@@ -1,0 +1,54 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZn, Zn(C2H6)2)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "deionized water (H2O)"
+                    }
+                ],
+                "purgingGas": "inert gas"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Savannah-100",
+                    "manufacturer": "Cambridge Nanotech"
+                },
+                "substrate": "GaN/Al2O3 template",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 300.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "monocrystalline, wurtzite",
+                    "characterizationMethod": "XRD (HRXRD)"
+                }
+            }
+        }
+    ]
+}

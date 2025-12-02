@@ -1,0 +1,134 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT",
+                    "Monte Carlo",
+                    "Lattice Boltzmann Method (LBM)"
+                ],
+                "methodDetails": null,
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "trimethylaluminum (TMA)"
+                ],
+                "coReactants": [
+                    "water"
+                ],
+                "substrates": [
+                    "crystal silicon 100"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": {
+                    "originalLigand": "methoxy",
+                    "modifiedLigand": "hydroxyl"
+                }
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 1.18,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "http://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "propertySource": "observed"
+            },
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": null,
+                "reactionPathways": [
+                    {
+                        "precursor": "trimethylaluminum (TMA)",
+                        "coReactant": "water",
+                        "intermediateComplex": "Not Found",
+                        "activationEnergy": null,
+                        "adsorptionEnergy": null
+                    }
+                ],
+                "surfaceTerminationChemistry": "Not Found",
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": null,
+                "roughness": null,
+                "density": null,
+                "temperatureProfile": null,
+                "chemicalComposition": null,
+                "propertySource": "observed"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.3,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": {
+                    "quantityValue": {
+                        "numericValue": 20.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM3-PER-MIN"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/VolumeFlowRate"
+                },
+                "carrierGasType": "Nitrogen",
+                "precursorFlow": {
+                    "flowRate": null,
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 0.015,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 8.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": null,
+                "propertySource": "observed"
+            },
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

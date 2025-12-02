@@ -1,0 +1,122 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In2O3",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2O3",
+                        "precursor": "[3-(Dimethylamino)propyl]dimethyl indium (DADI)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "precursor": "Trimethyl gallium (TMGa)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethyl zinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "Ar/O2 plasma (oxygen radicals)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "Ar/O2 plasma (oxygen radicals)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "Ar/O2 plasma (oxygen radicals)"
+                    }
+                ],
+                "carrierGas": "Ar/O2"
+            },
+            "processParameters": {
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 300.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "Si(100) and soda-lime glass",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "Not Found"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "0.56-0.63:0.13-0.17:0.17-0.34",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "InGaZnO (IGZO)",
+                "crystallinity": {
+                    "phase": "Composition-dependent: amorphous (Ga-rich), hexagonal ZnO (Zn-rich), cubic In2O3 (In-rich); nanocrystalline/polycrystalline in some regions",
+                    "characterizationMethod": "XRD, TEM"
+                },
+                "filmDensity": {
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "Staggered bottom-gate top-contact; W/L = 40/20 \u00b5m; 20 nm IGZO channel. Representative optimal devices reported \u00b5FE = 41.4-43.7 cm2 V-1 s-1, SS = 0.24-0.25 V decade-1, Vth = -0.9 to -1.0 V."
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

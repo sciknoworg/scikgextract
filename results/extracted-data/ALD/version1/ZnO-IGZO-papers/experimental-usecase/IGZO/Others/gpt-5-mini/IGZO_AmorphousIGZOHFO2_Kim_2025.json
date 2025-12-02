@@ -1,0 +1,186 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "a-IGZO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "a-IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In",
+                        "precursor": "[3-(dimethylamino)propyl]dimethyl indium (DADI)"
+                    },
+                    {
+                        "compound": "Ga",
+                        "precursor": "trimethyl gallium (TMGa)"
+                    },
+                    {
+                        "compound": "Zn",
+                        "precursor": "diethyl zinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In"
+                    },
+                    {
+                        "compound": "Ga"
+                    },
+                    {
+                        "compound": "Zn"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "SiO2/Si (300 nm SiO2 on Si)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ]
+                    }
+                },
+                "crystallinity": {
+                    "phase": "amorphous"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 38.9,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.19,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 70.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 100000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "bottom-gate"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "HfO2",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "HfO2"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "HfO2",
+                        "precursor": "tetrakis-ethylmethylamino hafnium (TEMAHf)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "HfO2"
+                    }
+                ]
+            },
+            "processParameters": {
+                "substrate": "SiO2/Si (300 nm SiO2 on Si)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 280.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Hf",
+                            "O"
+                        ],
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "HfO2",
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.067,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "bottom-gate"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        }
+    ]
+}

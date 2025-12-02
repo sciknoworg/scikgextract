@@ -1,0 +1,347 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "PbTe",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "PbSe",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "PbTe/PbSe"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "PbTe",
+                        "precursor": "Pb(C11H19O2)2"
+                    },
+                    {
+                        "compound": "PbTe",
+                        "precursor": "(Me3Si)2Te"
+                    },
+                    {
+                        "compound": "PbSe",
+                        "precursor": "Pb(C11H19O2)2"
+                    },
+                    {
+                        "compound": "PbSe",
+                        "precursor": "(Et3Si)2Se"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "PbTe",
+                        "coReactant": "Not Found"
+                    },
+                    {
+                        "compound": "PbSe",
+                        "coReactant": "Not Found"
+                    }
+                ],
+                "carrierGas": "N2",
+                "purgingGas": "Not Found"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "cross-flow reactor",
+                    "manufacturer": "Cambridge Nanotech"
+                },
+                "plasmaPower": null,
+                "substrate": "Si wafer with native oxide",
+                "deliveryMethod": "Not Found",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 170.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 40.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "PbTe",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.25,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            },
+                            {
+                                "compound": "PbSe",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.25,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 5000.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": null
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 500.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "PbTe",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": null
+                        },
+                        {
+                            "compound": "PbSe",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "PbTe",
+                            "precursor": null,
+                            "coReactant": null
+                        },
+                        {
+                            "compound": "PbSe",
+                            "precursor": null,
+                            "coReactant": null
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "PbTe",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": null,
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": null
+                        },
+                        {
+                            "compound": "PbSe",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": null,
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": null
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "PbTe",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 5000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "PbSe",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 4000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "PbTe",
+                        "PbSe"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": null,
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 5.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": 1.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 50.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "EDS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Pb",
+                            "Te",
+                            "Se"
+                        ],
+                        "value": "1:1:1",
+                        "characterizationMethod": "EDS"
+                    }
+                },
+                "chemicalComposition": "PbTe/PbSe",
+                "crystallinity": {
+                    "phase": "polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 5.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 8.1,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": "Not Found"
+            },
+            "otherAspects": {
+                "safety": "Standard safety protocols for handling lead and selenium compounds.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

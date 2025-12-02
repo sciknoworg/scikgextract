@@ -1,0 +1,126 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "PW91",
+                    "basisSet": null,
+                    "clusterModel": null
+                },
+                "source": {
+                    "method": "calculated"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "trimethylaluminium (TMA)"
+                ],
+                "coReactants": [
+                    "H2O"
+                ],
+                "substrates": null,
+                "encapsulationMaterials": null,
+                "ligandModification": null
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 1.6,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": null,
+                "propertySource": "calculated"
+            },
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": {
+                        "quantityValue": {
+                            "numericValue": 13.3,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/NUM-PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence"
+                    },
+                    "stericHindrance": "Steric hindrance between adsorbed CH3 groups limits further adsorption of TMA, and so limits the deposition rate.",
+                    "surfaceHydroxylConcentration": {
+                        "quantityValue": {
+                            "numericValue": 26.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence"
+                    }
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "trimethylaluminium (TMA)",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Al(CH3)2 and Al(CH3)",
+                        "activationEnergy": null,
+                        "adsorptionEnergy": null
+                    }
+                ],
+                "surfaceTerminationChemistry": "gibbsite-like Al(OH)3 termination",
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": null,
+                "roughness": null,
+                "density": null,
+                "temperatureProfile": null,
+                "chemicalComposition": [
+                    "Al2O3"
+                ],
+                "propertySource": "calculated"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.5,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": null,
+                "carrierGasType": "inert gas",
+                "precursorFlow": null,
+                "gapDistance": null,
+                "propertySource": "calculated"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": null,
+                "substituentEffects": null,
+                "blockingMechanisms": {
+                    "stericBlocking": "Steric hindrance between adsorbed CH3 groups limits further adsorption of TMA, and so limits the deposition rate.",
+                    "chemicalPassivation": null
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": null,
+                "selfCleaningEffect": null
+            }
+        }
+    ]
+}

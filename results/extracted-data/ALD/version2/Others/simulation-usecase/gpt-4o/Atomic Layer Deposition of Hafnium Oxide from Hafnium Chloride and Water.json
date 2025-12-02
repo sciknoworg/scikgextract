@@ -1,0 +1,117 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT",
+                    "MD"
+                ],
+                "methodDetails": {
+                    "timestep": {
+                        "quantityValue": {
+                            "numericValue": 2.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/FemtoSEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "functional": "PW91",
+                    "basisSet": "plane wave basis set with an energy cutoff of 450 eV",
+                    "clusterModel": "Not Found"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "HfCl4"
+                ],
+                "coReactants": [
+                    "H2O"
+                ],
+                "substrates": [
+                    "HfO2"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": {
+                    "originalLigand": "Cl",
+                    "modifiedLigand": "OH"
+                }
+            },
+            "growthRate": null,
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": {
+                    "coverage": {
+                        "quantityValue": {
+                            "numericValue": 75.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    },
+                    "timeDependent": null
+                },
+                "chemisorptionCharacteristics": null,
+                "reactionPathways": [
+                    {
+                        "precursor": "HfCl4",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Hf -(OH).HfCl4(s)",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 30.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": 32.4,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "Hf -OH terminated surface",
+                "propertySource": "calculated"
+            },
+            "filmProperties": null,
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 10.1,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "http://qudt.org/vocab/unit/PA"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": null,
+                "carrierGasType": "N2",
+                "precursorFlow": null,
+                "gapDistance": null,
+                "propertySource": "Not Found"
+            },
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

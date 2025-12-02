@@ -1,0 +1,113 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "IGZO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In",
+                        "precursor": "trimethylindium"
+                    },
+                    {
+                        "compound": "Ga",
+                        "precursor": "trimethylgallium"
+                    },
+                    {
+                        "compound": "Zn",
+                        "precursor": "diethylzinc"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In"
+                    },
+                    {
+                        "compound": "Ga"
+                    },
+                    {
+                        "compound": "Zn"
+                    }
+                ]
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "MNT-D"
+                },
+                "substrate": "Heavily doped p-type silicon with thermally grown 100 nm SiO2",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.53,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "UV-Vis spectrophotometry"
+                },
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "10:4:5"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "roughness": {
+                    "characterizationMethod": "AFM (Bruker Dimension Icon)"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 20.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 2000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "deviceStructure": "Bilayer IGZO (ALD front-channel + sputtered back-channel) on p+-Si/100 nm SiO2, Pt and Mo source/drain electrodes"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        }
+    ]
+}

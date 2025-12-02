@@ -1,0 +1,246 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "IGZO",
+                        "method": "PEALD"
+                    },
+                    {
+                        "compound": "AZO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InOx",
+                        "precursor": "dimethylbutylamino(trimethylindium)"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "precursor": "trimethylgallium"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ)"
+                    },
+                    {
+                        "compound": "AlOx",
+                        "precursor": "trimethylaluminum"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O2 plasma"
+                    },
+                    {
+                        "compound": "AlOx",
+                        "coReactant": "O3"
+                    }
+                ],
+                "carrierGas": "Not Found",
+                "purgingGas": "Not Found"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": null,
+                    "manufacturer": null
+                },
+                "plasmaPower": null,
+                "substrate": "SiO2/Si substrates",
+                "deliveryMethod": "Not Found",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "thicknessControl": {
+                    "growthPerCycle": null,
+                    "saturation": false,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [],
+                    "purgeTime": [],
+                    "flowRates": [],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 15.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "Al2O3",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "ZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 8.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "Al2O3",
+                        "ZnO"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": null,
+                "electricalProperties": {
+                    "resistivity": null,
+                    "carrierDensity": {
+                        "quantityValue": {
+                            "numericValue": 1.9e+18,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/PER-M3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity"
+                    },
+                    "mobility": {
+                        "quantityValue": {
+                            "numericValue": 45.3,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility"
+                    },
+                    "characterizationMethod": "Not Found"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        },
+                        "characterizationMethod": "Not Found"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "5:1:3",
+                        "characterizationMethod": "Not Found"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "Not Found"
+                },
+                "roughness": {
+                    "value": null,
+                    "characterizationMethod": "Not Found"
+                },
+                "filmDensity": {
+                    "value": null,
+                    "characterizationMethod": "Not Found"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 45.3,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -0.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 0.1,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": null,
+                "deviceStructure": "bottom-gate top-contact"
+            },
+            "otherAspects": {
+                "safety": "Not Found",
+                "filmStability": null,
+                "reproducibility": null
+            }
+        }
+    ]
+}

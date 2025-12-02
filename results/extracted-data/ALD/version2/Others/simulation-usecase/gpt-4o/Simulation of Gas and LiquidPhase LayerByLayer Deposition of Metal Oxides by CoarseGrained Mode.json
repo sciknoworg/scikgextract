@@ -1,0 +1,131 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "MD",
+                    "kMC",
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": {
+                        "quantityValue": {
+                            "numericValue": 0.5,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/FemtoSEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "functional": null,
+                    "basisSet": null,
+                    "clusterModel": null
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "trimethylaluminum (TMA)"
+                ],
+                "coReactants": [
+                    "H2O"
+                ],
+                "substrates": [
+                    "Al2O3",
+                    "SiO2"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": null
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 1.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": null,
+                "propertySource": "calculated"
+            },
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": null,
+                    "stericHindrance": null,
+                    "surfaceHydroxylConcentration": {
+                        "quantityValue": {
+                            "numericValue": 4.5,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/AmountOfSubstanceConcentration",
+                                "sameAs": "http://qudt.org/vocab/unit/PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/AmountOfSubstanceConcentration"
+                    }
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "TMA",
+                        "coReactant": "H2O",
+                        "intermediateComplex": null,
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 1.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": null
+                    }
+                ],
+                "surfaceTerminationChemistry": null,
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": null,
+                "roughness": {
+                    "quantityValue": {
+                        "numericValue": 1.0,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/NanoM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "density": null,
+                "temperatureProfile": null,
+                "chemicalComposition": [
+                    "Al",
+                    "O"
+                ],
+                "propertySource": "calculated"
+            },
+            "reactorConditions": {
+                "pressure": null,
+                "carrierGasFlow": null,
+                "carrierGasType": null,
+                "precursorFlow": null,
+                "gapDistance": null,
+                "propertySource": "calculated"
+            },
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

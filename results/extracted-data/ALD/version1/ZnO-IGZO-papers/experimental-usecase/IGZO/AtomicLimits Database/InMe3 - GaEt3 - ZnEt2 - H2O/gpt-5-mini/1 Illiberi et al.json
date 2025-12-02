@@ -1,0 +1,143 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "SALD"
+                    },
+                    {
+                        "compound": "InZnO",
+                        "method": "SALD"
+                    },
+                    {
+                        "compound": "InGaZnO",
+                        "method": "SALD"
+                    }
+                ],
+                "materialDeposited": "InGaZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethyl zinc (DEZ)"
+                    },
+                    {
+                        "compound": "In2O3",
+                        "precursor": "Trimethyl indium (TMIn)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "precursor": "Triethyl gallium (TEGa)"
+                    },
+                    {
+                        "compound": "Oxygen (H2O)",
+                        "precursor": "Water (H2O)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O (water)"
+                    },
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "H2O (water)"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "H2O (water)"
+                    },
+                    {
+                        "compound": "InGaZnO",
+                        "coReactant": "H2O (water)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Argon"
+            },
+            "processParameters": {
+                "substrate": "Highly doped p-type Si wafers coated with 300 nm thermally grown SiO2",
+                "deliveryMethod": "Coinjection of vaporized metal precursors into spatial ALD reactor (S-ALD)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 760.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 20.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "EDX"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "20:8:72",
+                        "characterizationMethod": "EDX"
+                    }
+                },
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "XRD"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 3.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -25.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "deviceStructure": "Bottom-gate, top-contact"
+            },
+            "otherAspects": {
+                "filmStability": true
+            }
+        }
+    ]
+}

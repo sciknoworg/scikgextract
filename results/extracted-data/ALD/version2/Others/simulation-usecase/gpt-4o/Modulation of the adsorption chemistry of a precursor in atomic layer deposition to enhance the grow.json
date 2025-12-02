@@ -1,0 +1,145 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "B3LYP",
+                    "basisSet": "cc-pVTZ",
+                    "clusterModel": "rutile TiO2(110) slab"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "Ti(CpMe5)(OMe)3"
+                ],
+                "coReactants": [
+                    "O3",
+                    "H2O"
+                ],
+                "substrates": [
+                    "Ru (40 nm)/ SiO2 (100 nm)/Si"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": {
+                    "originalLigand": "OCH3",
+                    "modifiedLigand": "OH"
+                }
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 0.34,
+                        "unit": {
+                            "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "http://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "http://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": null,
+                "propertySource": "observed"
+            },
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": {
+                        "quantityValue": {
+                            "numericValue": 1.15,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence",
+                                "sameAs": "http://qudt.org/vocab/unit/NUM-PER-M2"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/ParticleFluence"
+                    },
+                    "stericHindrance": "The steric hindrance of p chem has also been experimentally and theoretically estimated.",
+                    "surfaceHydroxylConcentration": null
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "Ti(CpMe5)(OMe)3",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "methanol molecule is released",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.39,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": null
+                    }
+                ],
+                "surfaceTerminationChemistry": "The chemistry of surface termination characterizes the density of the active site, where the precursor can be adsorbed chemically.",
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": null,
+                "roughness": null,
+                "density": null,
+                "temperatureProfile": null,
+                "chemicalComposition": [
+                    "TiO2"
+                ],
+                "propertySource": "observed"
+            },
+            "reactorConditions": {
+                "pressure": null,
+                "carrierGasFlow": null,
+                "carrierGasType": "Ar",
+                "precursorFlow": {
+                    "flowRate": null,
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 12.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 15.0,
+                            "unit": {
+                                "hasQuantityKind": "http://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "http://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "http://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": null,
+                "propertySource": "observed"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": null,
+                "substituentEffects": null,
+                "blockingMechanisms": {
+                    "stericBlocking": "The steric hindrance of p chem has also been experimentally and theoretically estimated.",
+                    "chemicalPassivation": null
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": null,
+                "selfCleaningEffect": null
+            }
+        }
+    ]
+}

@@ -58,6 +58,10 @@ USE OF EXAMPLES:
 - Match property names exactly to the SCHEMA keys.
 - If multiple candidate values exist for a property in a paper, return multiple process objects as in the examples.
 
+Specific Constraints related to the process properties:
+Please follow the following constraints while extracting the properties defined in the schema:
+{process_property_constraints}
+
 Input Format:
 - `DOCUMENT`: a markdown string containing the full paper.
 - `SCHEMA`: the JSON schema object (defines a "process") (or human-readable schema description) that defines property names and types.

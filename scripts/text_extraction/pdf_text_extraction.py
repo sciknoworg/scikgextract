@@ -1,14 +1,23 @@
+"""
+PDF Text Extraction Script using Docling.
+
+Author: Sameer Sadruddin
+Date: November 21, 2025
+Last Modified: November 21, 2025
+"""
+# Python imports
 import os
-import logging
+import argparse
 from pathlib import Path
 
+# Scikg_Extract Imports
+from scikg_extract.utils.log_handler import LogHandler
+
+# Docling Imports
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import AcceleratorDevice, AcceleratorOptions, PdfPipelineOptions, TableFormerMode, TableStructureOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling_core.types.doc import ImageRefMode, DoclingDocument
-
-# Configure logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
 def parse_pdf(file_path: str) -> tuple[str, DoclingDocument]:
     """
@@ -70,12 +79,26 @@ def export_as_markdown(document: DoclingDocument, filename: str, output_dir: str
         md_file.write(document.export_to_markdown(image_mode=ImageRefMode.PLACEHOLDER))
 
 if __name__ == "__main__":
+
+    # Argument Parser
+    parser = argparse.ArgumentParser(description="Extract text and tables from PDF files using Docling and export to Markdown.")
+    parser.add_argument("--pdf_file_path", type=str, help="Directory containing PDF files to be processed.")
+    parser.add_argument("--output_dir", type=str, help="Directory to save the extracted Markdown files.")
+
+    # Parse the arguments
+    args = parser.parse_args()
+
+    # Configure and Initialize Logging
+    logger = LogHandler.setup_module_logging("pdf_text_extraction")
+    logger.info("Starting PDF text extraction script...")
     
     # PDF file path
-    pdf_file_path = "data/research-papers/Atomic-layer-deposition/pdf/IGZO/Extra"
+    pdf_file_path = args.pdf_file_path if args.pdf_file_path else "data/research-papers/Atomic-layer-deposition/pdf/IGZO/Extra"
+    logger.info(f"PDF files directory: {pdf_file_path}")
 
     # Output directory for Markdown files
-    output_dir = "data/research-papers/Atomic-layer-deposition/markdown/IGZO/Extra"
+    output_dir = args.output_dir if args.output_dir else "data/research-papers/Atomic-layer-deposition/markdown/IGZO/Extra"
+    logger.info(f"Output Markdown directory: {output_dir}")
 
     # Process each PDF file in the specified directory
     for filename in os.listdir(pdf_file_path):
@@ -83,13 +106,15 @@ if __name__ == "__main__":
         if not filename.lower().endswith(".pdf"): continue
 
         # Log the file being processed
-        logging.info(f"Processing file: {filename}")
+        logger.info(f"Processing file: {filename}")
         
         # Full path to the PDF file
         file_path = os.path.join(pdf_file_path, filename)
         
         # Parse the PDF and extract content
         base_filename, extracted_document = parse_pdf(file_path)
+        logger.debug(f"Extracted document for {filename}: {extracted_document}")
 
         # Export the extracted content to Markdown
         export_as_markdown(extracted_document, base_filename, output_dir)
+        logger.info(f"Exported Markdown for {filename} to {output_dir}/{base_filename}.md")

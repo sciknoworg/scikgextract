@@ -5,7 +5,7 @@ from typing import Any
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.prompt_values import PromptValue
 
-from scikg_extract.config.envConfig import EnvConfig
+from scikg_extract.config.llm.envConfig import EnvConfig
 
 
 class ModelAdapter(ABC):

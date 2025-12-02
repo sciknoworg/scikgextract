@@ -1,0 +1,83 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "Diethylzinc (DEZn)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O3"
+                    }
+                ]
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Beneq TFS-200",
+                    "manufacturer": "Beneq"
+                },
+                "substrate": "Si3N4 membrane (500 x 500 \u00b5m, 200 nm); films for characterization on Si substrates",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.2,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "UV-Vis (referenced band gap value in text)"
+                },
+                "filmComposition": {
+                    "atomicRatio": {
+                        "elements": [
+                            "Not Found"
+                        ]
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "002-textured (preferred orientation along 002)",
+                    "characterizationMethod": "XRD (Bruker D8 Discover)"
+                },
+                "filmDensity": {
+                    "characterizationMethod": "Ellipsometry (Sentech)"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "Piezoelectric ZnO (100 nm) stripe (400 x 1500 \u00b5m) on 200 nm Si3N4 membrane with indium contacts; lateral conduction sensing"
+            }
+        }
+    ]
+}

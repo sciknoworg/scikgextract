@@ -1,0 +1,74 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "zinc acetate"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZn, Zn(C2H5)2)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "dimethylzinc (DMZn, Zn(CH3)2)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O (deionized water)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "H2O + NH4OH (water/ammonia solution)"
+                    }
+                ],
+                "purgingGas": "nitrogen"
+            },
+            "processParameters": {
+                "substrate": "silicon (100); silicon with metal (Ag); glass; sapphire",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                }
+            },
+            "materialProperties": {
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "polycrystalline"
+                }
+            },
+            "deviceProperties": {
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 100000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "Pt/ZnO(p)/ZnO(n)/Ti/Au homojunction"
+            }
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "Not Found",
+                    "basisSet": "Not Found",
+                    "clusterModel": "Not Found"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "Trimethylaluminium (TMA)",
+                    "AlCl3",
+                    "Et2Zn",
+                    "TDMASn"
+                ],
+                "coReactants": [
+                    "H2O",
+                    "O2",
+                    "NH4OH"
+                ],
+                "substrates": [
+                    "Si(100)",
+                    "OH-terminated ZnO",
+                    "OH-terminated Si"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": {
+                    "originalLigand": "methoxy",
+                    "modifiedLigand": "hydroxyl"
+                }
+            },
+            "growthRate": {
+                "rate": null,
+                "temperatureDependence": null,
+                "propertySource": "Not Found"
+            },
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": null,
+                "reactionPathways": [
+                    {
+                        "precursor": "Trimethylaluminium (TMA)",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Lewis acid-base Al-O adducts",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 1.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": null
+                    },
+                    {
+                        "precursor": "Et2Zn",
+                        "coReactant": "H2O",
+                        "intermediateComplex": "Not Found",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.5,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": null
+                    }
+                ],
+                "surfaceTerminationChemistry": "Not Found",
+                "propertySource": "calculated"
+            },
+            "filmProperties": {
+                "uniformity": null,
+                "roughness": null,
+                "density": null,
+                "temperatureProfile": null,
+                "chemicalComposition": [
+                    "Al2O3",
+                    "ZnO"
+                ],
+                "propertySource": "Not Found"
+            },
+            "reactorConditions": {
+                "pressure": null,
+                "carrierGasFlow": null,
+                "carrierGasType": "Not Found",
+                "precursorFlow": null,
+                "gapDistance": null,
+                "propertySource": "Not Found"
+            },
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

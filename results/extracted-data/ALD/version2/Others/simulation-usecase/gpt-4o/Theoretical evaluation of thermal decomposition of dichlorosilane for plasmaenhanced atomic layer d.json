@@ -1,0 +1,76 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "PBE",
+                    "basisSet": null,
+                    "clusterModel": null
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "Dichlorosilane (DCS)"
+                ],
+                "coReactants": [
+                    "NH3 plasma"
+                ],
+                "substrates": [
+                    "N-rich b-Si3N4(0001) surface"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": null
+            },
+            "growthRate": null,
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": null,
+                "chemisorptionCharacteristics": null,
+                "reactionPathways": [
+                    {
+                        "precursor": "Dichlorosilane (DCS)",
+                        "coReactant": "NH3 plasma",
+                        "intermediateComplex": "DCS-amine adduct",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.3,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.6,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "H/NH2-terminated N-rich surface",
+                "propertySource": "calculated"
+            },
+            "filmProperties": null,
+            "reactorConditions": null,
+            "selectiveGrowthMechanism": null,
+            "nucleationProcess": null
+        }
+    ]
+}

@@ -1,0 +1,362 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Al2O3/ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminum (TMA, Al(CH3)3)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ, Zn(CH2CH3)2)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "water (H2O)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "water (H2O)"
+                    }
+                ],
+                "carrierGas": "ultrahigh purity nitrogen (N2)",
+                "purgingGas": "ultrahigh purity nitrogen (N2)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "viscous flow reactor"
+                },
+                "substrate": "r-plane sapphire (0 1 1 2) for devices; HF-etched Si(100) for material characterization",
+                "deliveryMethod": "viscous flow reactor (viscous flow delivery)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "Al2O3",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.1,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            },
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.9,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 600.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 63.5,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": false,
+                    "flowRates": [
+                        {
+                            "compound": "Al2O3"
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 63.5,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "Not Found"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "Auger electron spectroscopy (AES). Reported Zn atomic concentration at 100 \u00b0C: ~11% for alloy with 50% DEZ exposures and ~20% for alloy with 67% DEZ exposures."
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "AES"
+                    }
+                },
+                "chemicalComposition": "Al2O3/ZnO",
+                "crystallinity": {
+                    "phase": "Al2O3 and Al2O3/ZnO alloys: amorphous; ZnO: crystalline"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.27,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM (tapping-mode), 1 \u00b5m \u00d7 1 \u00b5m scans"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 2.7,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "Reported in text (density for Al2O3 ALD at 100 \u00b0C stated as ~2.7 g/cm3)"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "rf MEMS capacitive shunt switch: gold bridge top electrode on r-plane sapphire substrate; dielectric ALD coating conformally on bridge underside and substrate electrode"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "Al2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Al2O3/ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Al2O3",
+                        "precursor": "trimethylaluminum (TMA, Al(CH3)3)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethylzinc (DEZ, Zn(CH2CH3)2)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Al2O3",
+                        "coReactant": "water (H2O)"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "water (H2O)"
+                    }
+                ],
+                "carrierGas": "ultrahigh purity nitrogen (N2)",
+                "purgingGas": "ultrahigh purity nitrogen (N2)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "viscous flow reactor"
+                },
+                "substrate": "r-plane sapphire (0 1 1 2) for devices; HF-etched Si(100) for material characterization",
+                "deliveryMethod": "viscous flow reactor (viscous flow delivery)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 177.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "Al2O3",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.2,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            },
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 2.0,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 600.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 72.5,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": false,
+                    "flowRates": [
+                        {
+                            "compound": "Al2O3"
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 72.5,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "Not Found"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "AES. Note: Elam et al. reported higher Zn concentrations at 177 \u00b0C; AES here showed lower Zn at 100 \u00b0C (~11% for 50% DEZ, ~20% for 67% DEZ)."
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "Zn"
+                        ],
+                        "characterizationMethod": "AES"
+                    }
+                },
+                "chemicalComposition": "Al2O3/ZnO",
+                "crystallinity": {
+                    "phase": "Al2O3 and Al2O3/ZnO alloys: amorphous; ZnO: crystalline"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.27,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM (tapping-mode), 1 \u00b5m \u00d7 1 \u00b5m scans"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 3.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "Reported in text (density for Al2O3 ALD at 177 \u00b0C stated as ~3.0 g/cm3)"
+                }
+            },
+            "deviceProperties": {
+                "deviceStructure": "rf MEMS capacitive shunt switch: gold bridge top electrode on r-plane sapphire substrate; dielectric ALD coating conformally on bridge underside and substrate electrode"
+            },
+            "otherAspects": {
+                "reproducibility": true
+            }
+        }
+    ]
+}

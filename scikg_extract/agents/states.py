@@ -1,10 +1,17 @@
+# Python Imports
 from typing import TypedDict
+
+# Pydantic Imports
 from pydantic import BaseModel
 
 class ExtractionState(TypedDict):
     """
     State for the knowledge extraction agent workflow. It holds the updated structured knowledge and relevant metadata at each step of the extraction process.
     """
+
+    ##############################
+    # Extraction Agent properties #
+    ##############################
 
     # Largest Language Model Name
     llm_model: str
@@ -14,6 +21,9 @@ class ExtractionState(TypedDict):
 
     # Process Description
     process_description: str
+
+    # Process Property Constraints
+    process_property_constraints: str
 
     # Process Schema
     process_schema: dict
@@ -47,3 +57,23 @@ class ExtractionState(TypedDict):
 
     # Normalization Properties to Exclude
     normalization_properties_to_exclude: list[str]
+
+    ##############################
+    # Reflection Agent properties #
+    ##############################
+
+    # Validation LLM Model
+    validation_llm_model: str
+
+    # Evaluation Results from LLM-as-a-Judge
+    evaluation_results: dict[str, dict[str, str]]
+
+    ###############################
+    # Feedback Agent properties #
+    ###############################
+
+    # Feedback LLM Model
+    feedback_llm_model: str
+
+    # User prompt with feedback
+    user_feedback_prompt: str

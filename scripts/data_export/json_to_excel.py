@@ -1,6 +1,5 @@
 import os
 import argparse
-from typing import List, Dict
 
 import pandas as pd
 
@@ -8,24 +7,24 @@ from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.dict_utils import flatten_record
 from scikg_extract.utils.file_utils import read_json_file
 
-def read_data_category(filename: str, json_data: List[dict], category: str, skip_properties: List[str] = []) -> List[Dict[str, str]]:
+def read_data_category(filename: str, json_data: list[dict], category: str, skip_properties: list[str] = []) -> list[dict[str, str]]:
     """
     Reads a specific data category from the JSON data and converts it to a list of rows for DataFrame construction.
     Args:
         filename (str): The source JSON filename.
-        json_data (List[dict]): The extracted JSON data.
+        json_data (list[dict]): The extracted JSON data.
         category (str): The data category to read (e.g., "synthesis_conditions").
-        skip_properties (List[str], optional): List of properties to skip. Defaults to [].
+        skip_properties (list[str], optional): List of properties to skip. Defaults to [].
     Returns:
-        List[Dict[str, str]]: A list of rows representing the data for the specified category.
+        list[dict[str, str]]: A list of rows representing the data for the specified category.
     """
     
     # Initialize the logger
-    logger = LogHandler.get_logger("scikg_extract.data_export.json_to_excel.read_data_category")
+    logger = LogHandler.get_logger("json_to_excel.read_data_category")
     logger.debug(f"Reading data category: {category} from file: {filename}")
 
     # Initialize list to hold rows
-    rows = []
+    rows: list[dict[str, str]] = []
 
     # Iterate over multiple process entries if present
     for index, entry in enumerate(json_data):
@@ -59,17 +58,17 @@ def read_data_category(filename: str, json_data: List[dict], category: str, skip
     # Return the list of rows for the category
     return rows
 
-def format_rows_with_same_columns(rows: List[Dict[str, str]]) -> pd.DataFrame:
+def format_rows_with_same_columns(rows: list[dict[str, str]]) -> pd.DataFrame:
     """
     Formats rows ensuring they all have the same columns, filling missing values with empty strings.
     Args:
-        rows (List[Dict[str, str]]): The list of row dictionaries.
+        rows (list[dict[str, str]]): The list of row dictionaries.
     Returns:
         pd.DataFrame: The formatted DataFrame with consistent columns.
     """
 
     # Initialize the logger
-    logger = LogHandler.get_logger("scikg_extract.data_export.json_to_excel.format_rows_with_same_columns")
+    logger = LogHandler.get_logger("json_to_excel.format_rows_with_same_columns")
     logger.debug("Formatting rows to ensure consistent columns...")
 
     # Find distinct property names across all rows
@@ -113,7 +112,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Initialize logger
-    logger = LogHandler.setup_module_logging("scikg_extract")
+    logger = LogHandler.setup_module_logging("json_to_excel")
     logger.info("Starting JSON to Excel conversion...")
 
     # Input Path
@@ -121,7 +120,7 @@ if __name__ == "__main__":
     logger.info(f"Input Path: {input_path}")
 
     # Output Excel Path
-    output_path = args.output if args.output else "results/extracted-data/atomic-layer-deposition/experimental-usecase/version1/IGZO/AtomicLimits Database/extracted_data_IGZO_gpt5mini.xlsx"
+    output_path = args.output if args.output else "results/extracted-data/atomic-layer-deposition/experimental-usecase/version1/IGZO/AtomicLimits Database/extracted_data_IGZO_gpt5mini1.xlsx"
     logger.info(f"Output Excel Path: {output_path}")
 
     # LLM Model used in extraction

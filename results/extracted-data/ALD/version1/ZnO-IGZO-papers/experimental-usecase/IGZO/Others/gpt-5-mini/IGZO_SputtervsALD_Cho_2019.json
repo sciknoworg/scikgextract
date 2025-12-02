@@ -1,0 +1,135 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "In2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "a-IGZO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "In2O3"
+                    },
+                    {
+                        "compound": "Ga2O3"
+                    },
+                    {
+                        "compound": "ZnO"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "In2O3",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "Ga2O3",
+                        "coReactant": "O3"
+                    },
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "O3"
+                    }
+                ],
+                "carrierGas": "N2 (50 sccm)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "traveling-wave-type ALD apparatus",
+                    "manufacturer": "CN1 Co., Ltd."
+                },
+                "substrate": "heavily doped p-type Si wafer with 100 nm thermal SiO2",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 250.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "supercycleDesign": {
+                    "subcycleSequence": [
+                        "In-O",
+                        "Ga-O",
+                        "Zn-O"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "XRF (Quan'X EDXRF, Spectrace Co.)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "50:34:16",
+                        "characterizationMethod": "XRF (Quan'X EDXRF, Spectrace Co.)"
+                    }
+                },
+                "chemicalComposition": "In0.50Ga0.34Zn0.16O",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "GIXRD, TEM"
+                },
+                "roughness": {
+                    "characterizationMethod": "XRR"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 5.6,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 36.6,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 10000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "bottom-gate staggered structure"
+            }
+        }
+    ]
+}

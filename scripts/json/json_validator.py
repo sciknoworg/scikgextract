@@ -4,6 +4,7 @@ import argparse
 
 from jsonschema import Draft7Validator
 
+from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.file_utils import read_json_file
 
 def json_schema_validate(schema: dict) -> bool:
@@ -16,7 +17,7 @@ def json_schema_validate(schema: dict) -> bool:
     """
     
     # Initialize the logger
-    logger = logging.getLogger(__name__)
+    logger = LogHandler.get_logger("json_validator.json_schema_validate")
 
     try:
         Draft7Validator.check_schema(schema)
@@ -35,7 +36,7 @@ def validate_json_instance(instance: dict, schema: dict) -> bool:
         bool: True if the instance is valid, False otherwise.
     """
     # Initialize the logger
-    logger = logging.getLogger(__name__)
+    logger = LogHandler.get_logger("json_validator.validate_json_instance")
 
     try:
         validator = Draft7Validator(schema)
@@ -51,17 +52,12 @@ if __name__ == "__main__":
     parser.add_argument("--schema", type=str, required=False, help="Path to the JSON schema file.")
     parser.add_argument("--instance", type=str, required=False, help="Path to the JSON instance file.")
     parser.add_argument("--key", type=str, default="processes", help="Key containing nested JSON objects to validate")
-    parser.add_argument("--verbose", action="store_true", default=False, help="Enable verbose logging.")
 
     # Parse the arguments
     args = parser.parse_args()
 
-    # Configure the logger
-    log_level = logging.DEBUG if args.verbose else logging.INFO
-    logging.basicConfig(level=log_level, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-
-    # Initialize the logger
-    logger = logging.getLogger(__name__)
+    # Configure and Initialize the logger
+    logger = LogHandler.setup_module_logging("json_validator")
     logger.info("Starting JSON schema and instance validation...")
     
     # JSON schema file path

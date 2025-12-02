@@ -1,0 +1,92 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "DFT",
+                    "Monte Carlo"
+                ],
+                "methodDetails": {
+                    "timestep": null,
+                    "functional": "PBE",
+                    "basisSet": "PAW",
+                    "clusterModel": "Ru(0001), Co(0001) surface slabs"
+                },
+                "source": {
+                    "method": "simulation"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "tetrakis(dimethylamino)titanium"
+                ],
+                "coReactants": [
+                    "Ar-H2 plasma"
+                ],
+                "substrates": [
+                    "SiO2",
+                    "Ru(0001)",
+                    "Co(0001)"
+                ],
+                "encapsulationMaterials": null,
+                "ligandModification": {
+                    "originalLigand": "aniline",
+                    "modifiedLigand": "benzene"
+                }
+            },
+            "growthRate": null,
+            "surfaceProperties": {
+                "desorptionRate": null,
+                "diffusionRate": null,
+                "reactionRate": null,
+                "stickingCoefficient": null,
+                "bindingAffinity": null,
+                "surfaceCoverage": {
+                    "coverage": {
+                        "quantityValue": {
+                            "numericValue": 60.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    },
+                    "timeDependent": null
+                },
+                "chemisorptionCharacteristics": null,
+                "reactionPathways": [
+                    {
+                        "precursor": "tetrakis(dimethylamino)titanium",
+                        "coReactant": "aniline",
+                        "intermediateComplex": null,
+                        "activationEnergy": null,
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -0.87,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": null,
+                "propertySource": "calculated"
+            },
+            "filmProperties": null,
+            "reactorConditions": null,
+            "selectiveGrowthMechanism": {
+                "facetPreference": null,
+                "substituentEffects": null,
+                "blockingMechanisms": {
+                    "stericBlocking": "Aniline adsorbs in horizontal and vertical configurations, blocking precursor adsorption.",
+                    "chemicalPassivation": "Aniline undergoes hydrogenolysis to form benzene, increasing surface coverage."
+                }
+            },
+            "nucleationProcess": null
+        }
+    ]
+}

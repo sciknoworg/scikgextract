@@ -1,0 +1,75 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "ZnO",
+                        "precursor": "diethyl zinc (Sigma Aldrich)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "water (H2O)"
+                    }
+                ],
+                "carrierGas": "ultrahigh purity nitrogen (99.999%), 360 s.c.c.m.",
+                "purgingGas": "nitrogen (99.999%)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "custom viscous flow atomic layer deposition reactor (inside diameter = 5 cm)"
+                },
+                "substrate": "100 nm pore size nanoporous alumina membranes (Whatman), outside diameter 13 mm, thickness 60 \u00b5m",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                }
+            },
+            "materialProperties": {
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "characterizationMethod": "X-ray photoelectron spectroscopy (XPS)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Not Found"
+                        ],
+                        "characterizationMethod": "X-ray photoelectron spectroscopy (XPS)"
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "polycrystalline (hexagonal zincite)",
+                    "characterizationMethod": "X-ray diffraction (peaks match hexagonal zincite)"
+                }
+            }
+        }
+    ]
+}

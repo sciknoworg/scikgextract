@@ -1,0 +1,260 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "SiNx",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "SiNx"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "SiNx",
+                        "precursor": "SiH2(NHBu)2"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "SiNx",
+                        "coReactant": "N2 plasma"
+                    }
+                ],
+                "carrierGas": "Ar",
+                "purgingGas": "Not Found"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "FlexAL",
+                    "manufacturer": "Oxford Instruments"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 600.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "Not Found",
+                "deliveryMethod": "Not Found",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 40.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "SiNx",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.32,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": null,
+                        "filmThickness": null
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "SiNx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 150.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 10000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "SiNx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 1000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 1000.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "SiNx",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 0.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": null
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": {
+                        "quantityValue": {
+                            "numericValue": 1.83,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex"
+                    },
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 9.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "N",
+                            "Si"
+                        ],
+                        "value": "1.7:1",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "SiNx",
+                "crystallinity": {
+                    "phase": null,
+                    "characterizationMethod": null
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": null
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": null
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": null
+            },
+            "otherAspects": {
+                "safety": null,
+                "filmStability": null,
+                "reproducibility": null
+            }
+        }
+    ]
+}

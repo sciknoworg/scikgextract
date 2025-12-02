@@ -1,6 +1,7 @@
-import logging
 import argparse
 
+from scikg_extract.utils.log_handler import LogHandler
+from scikg_extract.utils.string_utils import normalize_string
 from scikg_extract.services.pubchem_cid_mapping import open_env_for_read, lookup_by_synonym
 
 if __name__ == "__main__":
@@ -10,17 +11,12 @@ if __name__ == "__main__":
     parser.add_argument("--lmdb_path", type=str, help="Path to the PubChem LMDB database.")
     parser.add_argument("--synonym", type=str, help="Synonym to lookup in PubChem LMDB.")
     parser.add_argument("--compression", action="store_true", default=True, help="Enable compression for LMDB values.")
-    parser.add_argument("--verbose", action="store_true", default=False, help="Enable verbose logging.")
     
     # Parse the arguments
     args = parser.parse_args()
 
-    # Configure the logger
-    log_level = logging.DEBUG if args.verbose else logging.INFO
-    logging.basicConfig(level=log_level, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-
-    # Initialize the logger
-    logger = logging.getLogger(__name__)
+    # Configure and Initialize the logger
+    logger = LogHandler.setup_module_logging("pubchem_lmdb_lookup")
     logger.info(f"Starting PubChem LMDB lookup...")
 
     # PubChem LMDB path
@@ -31,11 +27,15 @@ if __name__ == "__main__":
     env = open_env_for_read(lmdb_path, readonly=True)
 
     # Synonym to lookup
-    synonym = args.synonym if args.synonym else "Zinc"
+    synonym = args.synonym if args.synonym else "Al2O3"
     logger.info(f"Looking up synonym: {synonym}")
 
+    # Normalize the synonym
+    synonym = normalize_string(synonym)
+    logger.info(f"Normalized synonym: {synonym}")
+
     # Perform the lookup
-    result = lookup_by_synonym(env, synonym, compression=args.compression, enable_substring_match=True)
+    result = lookup_by_synonym(env, synonym, compression=args.compression, enable_substring_match=False, enable_fuzzy=False)
     logger.info(f"Lookup result for '{synonym}': {result}")
 
     # Close the LMDB environment
