@@ -19,6 +19,7 @@ from scikg_extract.config.agents.orchestrator import OrchestratorConfig
 from scikg_extract.config.agents.workflow import WorkflowConfig
 from scikg_extract.config.agents.extraction import ExtractionConfig
 from scikg_extract.config.agents.reflection import ReflectionConfig
+from scikg_extract.config.agents.feedback import FeedbackConfig
 from scikg_extract.config.process.processConfig import ProcessConfig
 from scikg_extract.config.normalization.normalizationConfig import NormalizationConfig
 from scikg_extract.config.llm.llmConfig import LLM_REGISTRY
@@ -26,6 +27,7 @@ from scikg_extract.config.llm.llmConfig import LLM_REGISTRY
 # Scikg_Extract Agent Imports
 from scikg_extract.agents.extraction_agent import extract_knowledge
 from scikg_extract.agents.reflection_agent import validate_extracted_processes
+from scikg_extract.agents.feedback_agent import provide_feedback
 from scikg_extract.agents.states import ExtractionState
 
 def validate_orchestrator_config_params(orchestrator_config: OrchestratorConfig, workflowConfig: WorkflowConfig) -> bool:
@@ -68,11 +70,11 @@ def validate_orchestrator_config_params(orchestrator_config: OrchestratorConfig,
         logger.debug("At least one rubric is provided for LLM-as-a-Judge validation.")
 
     # Step 4: Check if all Rubrics are of type Rubric from yescieval if validation is enabled
-    if workflowConfig.validate_extracted_data:
-        valid_rubrics = all(isinstance(rubric, Rubric) for rubric in orchestrator_config.rubrics)
-        if not valid_rubrics:
-            raise ValueError("All provided rubrics must be instances of the Rubric class from yescieval.")
-        logger.debug("All provided rubrics are valid instances of the Rubric class.")
+    # if workflowConfig.validate_extracted_data:
+    #     valid_rubrics = all(isinstance(rubric, Rubric) for rubric in orchestrator_config.rubrics)
+    #     if not valid_rubrics:
+    #         raise ValueError("All provided rubrics must be instances of the Rubric class from yescieval.")
+    #     logger.debug("All provided rubrics are valid instances of the Rubric class.")
 
     # Return True if all validations pass
     return True
@@ -136,12 +138,34 @@ def orchestrate_extraction_workflow(orchestrator_config: OrchestratorConfig, wor
         # Setup Reflection Config
         reflectionConfig = ReflectionConfig(
             llm_name=orchestrator_config.reflection_llm_name,
-            rubrics=orchestrator_config.rubrics
+            rubric_names=orchestrator_config.rubrics
         )
 
         # Invoke the reflection agent for validation
         state = validate_extracted_processes(reflectionConfig, state)
         logger.debug("LLM-as-a-Judge validation completed.")
+        logger.debug(state["evaluation_results"])
+        logger.info(f"Correctness Score: {state['evaluation_results']['correctness']['rating']}")
+        logger.info(f"Completeness Score: {state['evaluation_results']['completeness']['rating']}")
+
+        # Invoking feedback agent
+        feedback_config = FeedbackConfig(
+            llm_name=orchestrator_config.feedback_llm_name
+        )
+        state = provide_feedback(feedback_config, state)
+        logger.debug("Feedback processing completed.")
+        logger.debug(state["user_feedback_prompt"])
+
+        # Invoking refinement of extracted knowledge based on feedback if any
+        state = extract_knowledge(extractionConfig, state, workflow_config)
+        logger.debug("Refinement of extracted knowledge based on feedback completed.")
+
+        # Invoke the reflection agent for validation
+        state = validate_extracted_processes(reflectionConfig, state)
+        logger.debug("LLM-as-a-Judge validation completed.")
+        logger.debug(state["evaluation_results"])
+        logger.info(f"Correctness Score: {state['evaluation_results']['correctness']['rating']}")
+        logger.info(f"Completeness Score: {state['evaluation_results']['completeness']['rating']}")
 
     # Step 5: Return the final extracted and validated structured knowledge
     return state["extracted_json"]

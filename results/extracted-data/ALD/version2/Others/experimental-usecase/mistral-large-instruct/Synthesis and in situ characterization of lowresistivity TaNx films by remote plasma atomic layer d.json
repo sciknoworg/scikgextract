@@ -1,0 +1,437 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "TaNx",
+                        "method": "PEALD"
+                    }
+                ],
+                "materialDeposited": "TaNx"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "TaNx",
+                        "precursor": "PDMAT"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "TaNx",
+                        "coReactant": "H2 plasma"
+                    },
+                    {
+                        "compound": "TaNx",
+                        "coReactant": "H2-N2 plasma"
+                    },
+                    {
+                        "compound": "TaNx",
+                        "coReactant": "NH3 plasma"
+                    }
+                ],
+                "carrierGas": "Ar",
+                "purgingGas": "Ar"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Remote plasma ALD reactor",
+                    "manufacturer": "Eindhoven University of Technology"
+                },
+                "plasmaPower": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Power",
+                            "sameAs": "https://qudt.org/vocab/unit/W"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
+                },
+                "substrate": "p-type Si (10-30 \u03a9 cm) with native oxide layer",
+                "deliveryMethod": "Bubbler with carrier gas",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 225.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 7.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "TaNx",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.048,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 1400.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 36.9,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "TaNx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 4.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 10.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "TaNx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 30.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 30.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "TaNx",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 30.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 30.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 30.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 36.9,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "TaNx",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "PDMAT",
+                        "H2 plasma"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": {
+                        "quantityValue": {
+                            "numericValue": 2.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex"
+                    },
+                    "absorptionCoefficient": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/TransmittanceDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/TransmittanceDensity"
+                    },
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 2.5,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                "sameAs": "https://qudt.org/vocab/unit/EV"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "Tauc plot from UV-Vis spectroscopy"
+                },
+                "electricalProperties": {
+                    "resistivity": {
+                        "quantityValue": {
+                            "numericValue": 380.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity",
+                                "sameAs": "https://qudt.org/vocab/unit/OHM-M"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity"
+                    },
+                    "carrierDensity": {
+                        "quantityValue": {
+                            "numericValue": 1e+22,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/C-PER-M3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity"
+                    },
+                    "mobility": {
+                        "quantityValue": {
+                            "numericValue": 100.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility",
+                                "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectronMobility"
+                    },
+                    "characterizationMethod": "Four-point probe and Drude-Lorentz model from SE"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 2.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": 10.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 55.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "RBS and ERD"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Ta",
+                            "N"
+                        ],
+                        "value": "0.45:1.0",
+                        "characterizationMethod": "RBS analysis"
+                    }
+                },
+                "chemicalComposition": "TaNx",
+                "crystallinity": {
+                    "phase": "cubic",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 0.3,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 12.1,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "RBS and XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": 0.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": 120.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": 1000000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "Bottom-gate top-contact"
+            },
+            "otherAspects": {
+                "safety": "Use of high-purity gases and proper handling of metal-organic precursors to prevent contamination and ensure safety.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

@@ -34,6 +34,7 @@ def evaluate_extraction_correctness(state: ExtractionState) -> ExtractionState:
     correctness_result = judge.evaluate(correctness_rubric)
 
     # Update the state with the correctness evaluation results
+    if not state["evaluation_results"]: state["evaluation_results"] = {}
     if "evaluation_results" not in state: state["evaluation_results"] = {}
     state["evaluation_results"].update({
         "correctness": correctness_result.model_dump()
@@ -68,8 +69,9 @@ def evaluate_extraction_completeness(state: ExtractionState) -> ExtractionState:
 
     # Evaluate completeness
     completeness_result = judge.evaluate(completness_rubric)
-
+    
     # Update the state with the completeness evaluation results
+    if not state["evaluation_results"]: state["evaluation_results"] = {}
     if "evaluation_results" not in state: state["evaluation_results"] = {}
     state["evaluation_results"].update({
         "completeness": completeness_result.model_dump()

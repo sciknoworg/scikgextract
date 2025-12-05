@@ -1,0 +1,333 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "Monte Carlo",
+                    "Monte Carlo"
+                ],
+                "methodDetails": {
+                    "timestep": {
+                        "quantityValue": {
+                            "numericValue": 0.001,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "functional": "DFT",
+                    "basisSet": "PBE",
+                    "clusterModel": "TiN(100)"
+                },
+                "source": {
+                    "method": "VASP"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "TDMAT"
+                ],
+                "coReactants": [
+                    "N2"
+                ],
+                "substrates": [
+                    "SiO2"
+                ],
+                "encapsulationMaterials": [
+                    "TiN"
+                ],
+                "ligandModification": {
+                    "originalLigand": "dimethyl-amino",
+                    "modifiedLigand": "broken bond between Ti and the ligand"
+                }
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 0.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                },
+                "temperatureDependence": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "propertySource": "Fig. 1"
+            },
+            "surfaceProperties": {
+                "desorptionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.1,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Rate",
+                            "sameAs": "https://qudt.org/vocab/unit/PER-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Rate"
+                },
+                "diffusionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.05,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Rate",
+                            "sameAs": "https://qudt.org/vocab/unit/PER-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Rate"
+                },
+                "reactionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Rate",
+                            "sameAs": "https://qudt.org/vocab/unit/PER-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Rate"
+                },
+                "stickingCoefficient": {
+                    "quantityValue": {
+                        "numericValue": 0.8,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "bindingAffinity": {
+                    "quantityValue": {
+                        "numericValue": -2.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                            "sameAs": "https://qudt.org/vocab/unit/EV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                },
+                "surfaceCoverage": {
+                    "coverage": {
+                        "quantityValue": {
+                            "numericValue": 0.9,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    },
+                    "timeDependent": true
+                },
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": {
+                        "quantityValue": {
+                            "numericValue": 1.2,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/NumberDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/PER-NanoM2"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/NumberDensity"
+                    },
+                    "stericHindrance": "moderate",
+                    "surfaceHydroxylConcentration": {
+                        "quantityValue": {
+                            "numericValue": 5.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/NumberDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/PER-NanoM2"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/NumberDensity"
+                    }
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "TDMAT",
+                        "coReactant": "N2",
+                        "intermediateComplex": "Ti-N",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.5,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -1.2,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "N-terminated",
+                "propertySource": "Fig. 2"
+            },
+            "filmProperties": {
+                "uniformity": {
+                    "quantityValue": {
+                        "numericValue": 0.95,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "roughness": {
+                    "quantityValue": {
+                        "numericValue": 0.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                },
+                "density": {
+                    "quantityValue": {
+                        "numericValue": 5.2,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                            "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                },
+                "temperatureProfile": [
+                    {
+                        "quantityValue": {
+                            "numericValue": 200.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                                "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                    },
+                    {
+                        "quantityValue": {
+                            "numericValue": 300.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                                "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                    }
+                ],
+                "chemicalComposition": [
+                    "TiN"
+                ],
+                "propertySource": "Fig. 4"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.1,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": {
+                    "quantityValue": {
+                        "numericValue": 20.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                            "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                },
+                "carrierGasType": "Ar",
+                "precursorFlow": {
+                    "flowRate": {
+                        "quantityValue": {
+                            "numericValue": 20.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                    },
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 5.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 5.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": {
+                    "quantityValue": {
+                        "numericValue": 0.25,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "https://qudt.org/vocab/unit/MicroM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                },
+                "propertySource": "Experimental Section"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": "N-terminated",
+                "substituentEffects": "dimethyl-amino",
+                "blockingMechanisms": {
+                    "stericBlocking": "moderate",
+                    "chemicalPassivation": "N radicals"
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": {
+                    "quantityValue": {
+                        "numericValue": 2.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                },
+                "selfCleaningEffect": true
+            }
+        }
+    ]
+}

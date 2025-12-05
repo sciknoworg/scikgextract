@@ -45,7 +45,7 @@ if __name__ == "__main__":
     logger.info("Starting LLM-as-a-Judge evaluation script...")
 
     # Extracted Information path
-    extracted_data_path = args.extracted_data_path if args.extracted_data_path else "results/extracted-data/ALD/version2/ZnO-IGZO-papers/experimental-usecase/ZnO"
+    extracted_data_path = args.extracted_data_path if args.extracted_data_path else "results/extracted-data/ALD/version2/ZnO-IGZO-papers/experimental-usecase/IGZO"
     logger.info(f"Extracted data path: {extracted_data_path}")
 
     # Scientific document path
@@ -69,7 +69,9 @@ if __name__ == "__main__":
     ProcessConfig.Process_description = """
     Atomic layer deposition (ALD) is a surface-controlled thin film deposition technique that can enable ultimate control over the film thickness, uniformity on large-area substrates and conformality on 3D (nano)structures. Each ALD cycle consists at least two half-cycles (but can be more complex), containing a precursor dose step and a co-reactant exposure step, separated by purge or pump steps. Ideally the same amount of material is deposited in each cycle, due to the self-limiting nature of the reactions of the precursor and co-reactant with the surface groups on the substrate. By carrying out a certain number of ALD cycles, the targeted film thickness can be obtained.
 
-    In this extraction task, we are focusing on ZnO (Zinc Oxide) thin film deposition via ALD. A ZnO ALD (Zinc Oxide Atomic Layer Deposition) process deposits thin ZnO films through sequential, self-limiting surface reactions between a zinc precursor and an oxidant. The process typically consists of repeating ALD cycles, each containing a precursor pulse (e.g., diethylzinc (DEZ), Zn(acac)₂, or Zn(thd)₂), a purge step, an oxidant pulse (commonly H₂O, O₃, or O₂ plasma), followed by another purge. These reactions form a conformal zinc-oxygen layer per cycle with precise thickness control. The aim of a ZnO ALD process is to produce high-quality, uniform, conformal ZnO films with controlled thickness, crystallinity (amorphous or polycrystalline depending on temperature), and stoichiometry.
+    In this extraction task, we are focusing on IGZO (Indium Gallium Zinc Oxide) thin film deposition via ALD. An IGZO ALD process is a supercycle-based thin-film deposition method used to form multicomponent oxide layers composed of indium oxide (In2O3), gallium oxide (Ga2O3), and zinc oxide (ZnO). The process deposits IGZO by sequentially repeating ALD sub-cycles of the individual metal oxides in a defined ratio. Each sub-cycle typically consists of a metal precursor pulse, a purge, an oxidant pulse (such as H2O, O3, or O2 plasma), and a second purge. A single IGZO supercycle is composed of a cycles of In2O3, b cycles of Ga2O3, and c cycles of ZnO, where the a:b:c ratio controls the IGZO film composition, electrical properties, and oxygen-vacancy concentration.
+
+    Different precursors are used for each element. For example, diethylzinc (DEZ) and trimethylgallium (TMGa) are common for zinc and gallium, respectively, while a precursor like 3-(dimethylamino)propyl)dimethylindium (DADI) is used for indium. The goal of an IGZO ALD process is to produce a conformal, composition-controlled, amorphous IGZO film suitable for applications such as thin-film transistors (TFTs).
     """
 
     # Iterate over each extracted data file for evaluation

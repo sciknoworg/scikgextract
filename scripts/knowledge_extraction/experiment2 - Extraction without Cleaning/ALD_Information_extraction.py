@@ -44,7 +44,7 @@ if __name__ == "__main__":
     logger.info("Starting ALD information extraction script...")
 
     # Initialize the LLM model
-    llm_model = args.llm_model if args.llm_model else "qwen3-30b-a3b-instruct-2507"
+    llm_model = args.llm_model if args.llm_model else "mistral-large-instruct"
     logger.info(f"Using LLM model: {llm_model}")
 
     # Updating the process description for ALD
@@ -58,11 +58,11 @@ if __name__ == "__main__":
     logger.debug(f"Process Contraints:\n{ProcessConfig.Process_property_constraints}")
 
     # Results directory
-    results_dir = args.results_dir if args.results_dir else "results/extracted-data/ALD/version2/Others/simulation-usecase"
+    results_dir = args.results_dir if args.results_dir else "results/extracted-data/ALD/version2/Others/experimental-usecase"
     logger.info(f"Results Directory to save extracted data: {results_dir}")
 
     # Read the process schema from the JSON file
-    process_schema_path = args.process_schema if args.process_schema else "data/schemas/ALD-simulation/ALD-simulation-schema.json"
+    process_schema_path = args.process_schema if args.process_schema else "data/schemas/ALD-experimental/ALD-experimental-schema.json"
     process_schema = read_json_file(process_schema_path)
     logger.info(f"Loaded process schema from: {process_schema_path}")
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     logger.info(f"Loaded process examples from: {examples_path}")
 
     # Directory containing scientific documents
-    scientific_docs_dir = args.scientific_docs_dir if args.scientific_docs_dir else "data/research-papers/ALD/markdown/Others/simulation-usecase"
+    scientific_docs_dir = args.scientific_docs_dir if args.scientific_docs_dir else "data/research-papers/ALD/markdown/Others/experimental-usecase"
     logger.info(f"Scientific Documents Directory: {scientific_docs_dir}")
 
     # Process each scientific document in the specified directory

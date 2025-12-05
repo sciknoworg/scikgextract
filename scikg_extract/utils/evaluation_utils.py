@@ -4,6 +4,9 @@ import evaluate
 from transformers import AutoTokenizer, PreTrainedTokenizer
 from sentence_transformers import SentenceTransformer, util
 
+import numpy as np
+from scipy.optimize import linear_sum_assignment
+
 
 def rouge_score(references: list, predictions: list) -> dict:
     """
@@ -48,7 +51,7 @@ def split_into_chunks(text: str, tokenizer: PreTrainedTokenizer, max_length: int
     return [tokenizer.decode(chunk, skip_special_tokens=False) for chunk in chunks]
 
 
-def bert_score(references: list, predictions: list, embedding_model: str, embedding_model_revision: str, max_length: int = 512) -> dict:
+def bert_score(references: list, predictions: list, embedding_model: str, embedding_model_revision: str, max_length: int = 256) -> dict:
     """
     Calculate the BERT scores between the reference output and the predicted output
     Args:
@@ -80,7 +83,7 @@ def bert_score(references: list, predictions: list, embedding_model: str, embedd
                 predictions=[p_chunk],
                 references=[r_chunk],
                 model_type=embedding_model,
-                lang="en",
+                lang="en"
             )
             scores["precision"].append(result["precision"][0])
             scores["recall"].append(result["recall"][0])
@@ -126,3 +129,37 @@ def cosine_similarity_score(references: list, predictions: list, embedding_model
     # Aggregating the scores - average across chunks
     average_similarity = sum(similarity_scores) / len(similarity_scores) if similarity_scores else 0.0
     return average_similarity
+
+def hungarian_similarity(sent1: str, sent2: str, embedding_model: str = "allenai/scibert_scivocab_uncased") -> float:
+    
+    # Load the embedding model
+    model = SentenceTransformer(embedding_model)
+    
+    # Tokenize sentences
+    tokens1 = sent1.split()
+    tokens2 = sent2.split()
+    
+    # Get token embeddings
+    emb1 = model.encode(tokens1)
+    emb2 = model.encode(tokens2)
+    
+    # Build a cost matrix using cosine distance
+    cost_matrix = np.zeros((len(tokens1), len(tokens2)))
+    for i in range(len(tokens1)):
+        for j in range(len(tokens2)):
+            v1 = emb1[i]
+            v2 = emb2[j]
+            # Cosine distance = 1 - cosine similarity
+            cost_matrix[i, j] = 1 - np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+    
+    # Solve the assignment problem (minimize total cost)
+    row_ind, col_ind = linear_sum_assignment(cost_matrix)
+    
+    # Compute average similarity (convert distance back to similarity)
+    total_similarity = 0
+    for r, c in zip(row_ind, col_ind):
+        total_similarity += 1 - cost_matrix[r, c]
+    
+    # Normalize by max number of tokens
+    score = total_similarity / max(len(tokens1), len(tokens2))
+    return score

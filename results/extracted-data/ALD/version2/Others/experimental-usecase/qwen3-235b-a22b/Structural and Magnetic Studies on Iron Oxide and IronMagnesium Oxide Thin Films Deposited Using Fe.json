@@ -1,0 +1,336 @@
+{
+    "processes": [
+        {
+            "simulationParameters": {
+                "methods": [
+                    "Monte Carlo",
+                    "MD"
+                ],
+                "methodDetails": {
+                    "timestep": {
+                        "quantityValue": {
+                            "numericValue": 0.5,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "https://qudt.org/vocab/unit/FemtoSEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "functional": "PBE",
+                    "basisSet": "DZP",
+                    "clusterModel": "Fe3O4(111) surface with 3 layers"
+                },
+                "source": {
+                    "method": "DFT"
+                }
+            },
+            "materials": {
+                "precursors": [
+                    "FeCp2",
+                    "O3"
+                ],
+                "coReactants": [
+                    "O3"
+                ],
+                "substrates": [
+                    "SiO2/Si"
+                ],
+                "encapsulationMaterials": [
+                    "MgO"
+                ],
+                "ligandModification": {
+                    "originalLigand": "Cp",
+                    "modifiedLigand": "CpFeC5H4CHN(CH3)2"
+                }
+            },
+            "growthRate": {
+                "rate": {
+                    "quantityValue": {
+                        "numericValue": 0.14,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/LengthPerTime",
+                            "sameAs": "https://qudt.org/vocab/unit/NanoM-PER-Cycle"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/LengthPerTime"
+                },
+                "temperatureDependence": {
+                    "quantityValue": {
+                        "numericValue": 0.7,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/LengthPerTime",
+                            "sameAs": "https://qudt.org/vocab/unit/NanoM-PER-Cycle"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/LengthPerTime"
+                },
+                "propertySource": "Experimental"
+            },
+            "surfaceProperties": {
+                "desorptionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.001,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "https://qudt.org/vocab/unit/PER-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "diffusionRate": {
+                    "quantityValue": {
+                        "numericValue": 1e-10,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/AreaPerTime",
+                            "sameAs": "https://qudt.org/vocab/unit/M2-PER-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/AreaPerTime"
+                },
+                "reactionRate": {
+                    "quantityValue": {
+                        "numericValue": 0.01,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Frequency",
+                            "sameAs": "https://qudt.org/vocab/unit/PER-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Frequency"
+                },
+                "stickingCoefficient": {
+                    "quantityValue": {
+                        "numericValue": 0.8,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "bindingAffinity": {
+                    "quantityValue": {
+                        "numericValue": -2.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                            "sameAs": "https://qudt.org/vocab/unit/EV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                },
+                "surfaceCoverage": {
+                    "coverage": {
+                        "quantityValue": {
+                            "numericValue": 0.9,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    },
+                    "timeDependent": true
+                },
+                "chemisorptionCharacteristics": {
+                    "chemisorbedPrecursorDensity": {
+                        "quantityValue": {
+                            "numericValue": 500000000000000.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/AreaDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/PER-CentiM2"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/AreaDensity"
+                    },
+                    "stericHindrance": "Moderate",
+                    "surfaceHydroxylConcentration": {
+                        "quantityValue": {
+                            "numericValue": 500000000000000.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/AreaDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/PER-CentiM2"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/AreaDensity"
+                    }
+                },
+                "reactionPathways": [
+                    {
+                        "precursor": "FeCp2",
+                        "coReactant": "O3",
+                        "intermediateComplex": "FeCp2-O3",
+                        "activationEnergy": {
+                            "quantityValue": {
+                                "numericValue": 0.5,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        },
+                        "adsorptionEnergy": {
+                            "quantityValue": {
+                                "numericValue": -1.2,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Energy",
+                                    "sameAs": "https://qudt.org/vocab/unit/EV"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                        }
+                    }
+                ],
+                "surfaceTerminationChemistry": "O-terminated",
+                "propertySource": "Experimental"
+            },
+            "filmProperties": {
+                "uniformity": {
+                    "quantityValue": {
+                        "numericValue": 0.95,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "roughness": {
+                    "quantityValue": {
+                        "numericValue": 2.5,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                },
+                "density": {
+                    "quantityValue": {
+                        "numericValue": 5.25,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                            "sameAs": "https://qudt.org/vocab/unit/GM-PER-CentiM3"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                },
+                "temperatureProfile": [
+                    {
+                        "quantityValue": {
+                            "numericValue": 350.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                                "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                    },
+                    {
+                        "quantityValue": {
+                            "numericValue": 500.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                                "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                    }
+                ],
+                "chemicalComposition": [
+                    "Fe2O3",
+                    "Fe3O4",
+                    "MgO"
+                ],
+                "propertySource": "Experimental"
+            },
+            "reactorConditions": {
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1000.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "carrierGasFlow": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                            "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                },
+                "carrierGasType": "N2",
+                "precursorFlow": {
+                    "flowRate": {
+                        "quantityValue": {
+                            "numericValue": 10.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                    },
+                    "pulseDuration": {
+                        "quantityValue": {
+                            "numericValue": 2.5,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "https://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                    },
+                    "purgeDuration": {
+                        "quantityValue": {
+                            "numericValue": 0.5,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                "sameAs": "https://qudt.org/vocab/unit/SEC"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                    }
+                },
+                "gapDistance": {
+                    "quantityValue": {
+                        "numericValue": 10.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                },
+                "propertySource": "Experimental"
+            },
+            "selectiveGrowthMechanism": {
+                "facetPreference": "Fe3O4(111)",
+                "substituentEffects": "MgO doping",
+                "blockingMechanisms": {
+                    "stericBlocking": "Cp ligands",
+                    "chemicalPassivation": "O3"
+                }
+            },
+            "nucleationProcess": {
+                "nucleationDelay": {
+                    "quantityValue": {
+                        "numericValue": 5.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                },
+                "selfCleaningEffect": true
+            }
+        }
+    ]
+}

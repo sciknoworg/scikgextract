@@ -1,0 +1,536 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "MnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/172996681",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173122002",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173170851",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173449020"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnMnO",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/172996681",
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/173122002",
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/173170851",
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/173449020"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "zinc acetate [Zn(CH3COO)2]",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/11192"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "MnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/172996681",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173122002",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173170851",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173449020"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "tris(2,4-pentanedionato)manganese(III) [Mn(acac)3]",
+                            "sameAs": []
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "water vapor",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/962"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "MnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/172996681",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173122002",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173170851",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/173449020"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "water vapor",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/962"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "nitrogen",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "nitrogen",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Microchemistry F-120 ALE reactor",
+                    "manufacturer": "Microchemistry"
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "sapphire, GaAs, Si, or lime glass",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/24261"
+                    ]
+                },
+                "deliveryMethod": "ALD (precursors are alternatively introduced into a growth chamber separated by purging periods with a neutral gas)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 300.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 3.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.0,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            },
+                            {
+                                "compound": "MnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.0,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 1000.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 1000.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                    "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "MnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        },
+                        {
+                            "compound": "MnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.5,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Time",
+                                        "sameAs": "https://qudt.org/vocab/unit/MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        },
+                        {
+                            "compound": "MnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 1000.0,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Thickness",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [
+                        {
+                            "compound": "ZnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 10.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        },
+                        {
+                            "compound": "MnO",
+                            "count": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                        "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                            }
+                        }
+                    ],
+                    "subcycleSequence": [
+                        "ZnO",
+                        "MnO"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": "optical absorption study"
+                },
+                "electricalProperties": {
+                    "resistivity": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity",
+                                "sameAs": "https://qudt.org/vocab/unit/OHM-M"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricResistivity"
+                    },
+                    "carrierDensity": null,
+                    "mobility": null,
+                    "characterizationMethod": "not specified"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 5.0,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "SIMS, XRD, SQUID, and electron probe microanalysis"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "Mn"
+                        ],
+                        "value": "95:5",
+                        "characterizationMethod": "SIMS, XRD, SQUID, and electron probe microanalysis"
+                    }
+                },
+                "chemicalComposition": "ZnMnO",
+                "crystallinity": {
+                    "phase": "polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                "sameAs": "https://qudt.org/vocab/unit/NanoM"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "atomic force microscopy"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "not specified"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": "not specified"
+            },
+            "otherAspects": {
+                "safety": "not specified",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}
