@@ -53,9 +53,8 @@ scikg_extract/
 
 # 👥 Contact and Collaboration
 
-For questions, suggestions, or collaboration opportunities, please reach out to the project maintainers:
+For questions, suggestions, or collaboration opportunities, please reach out to the project maintainers.
 
-- **Contact**: Sadruddin Sadruddin at sameer.sadruddin [at] tib.eu
 - **Issues or Bug Reports**: Please use the GitHub Issues section of this repository to report bugs or request features.
 
 # 📃 License
