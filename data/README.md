@@ -27,3 +27,16 @@ The resources in this directory are utilized by various components of the SciKG-
 4. **Research Papers**: Save research papers in the `research-papers/` directory in both PDF and Markdown formats for to be processed during extraction process.
 5. **Resources**: Utilize the `resources/` directory for any additional resources required by the extraction process.
 6. **Schemas**: Define JSON schema representations in the `schemas/` directory to outline the structure of the scientific knowledge to be extracted.
+
+## 📄 ZnO and IGZO ALD Processes - Scientific Papers
+The sub-directory `research-papers/ALD/pdf/ZnO-IGZO-papers/experimental-usecase/` contains details of scientific papers related to Atomic Layer Deposition (ALD) processes for Zinc Oxide (ZnO) and Indium Gallium Zinc Oxide (IGZO) from the AtomicLimits Database used during the experimentation phase of the SciKG-Extract Framework. These papers serve as the primary source of information for extracting structured scientific knowledge about the ALD processes of ZnO and IGZO materials.
+
+Due to the closed-source nature of these papers, they are not included directly in the repository. For each category in ZnO and IGZO, a CSV file (papers_details.csv) is provided that contains metadata for each paper, including the title, authors and the DOI link. Users can access the full papers through the provided DOI links for their own analysis and extraction tasks.
+
+The sub-directory is organized as follows:
+1. `ZnO/`: Contains scientific papers related to the ALD process of Zinc Oxide (ZnO) from the AtomicLimits Database.
+2. `IGZO/AtomicLimits Database/`: Contains scientific papers related to the ALD process of Indium Gallium Zinc Oxide (IGZO) from the AtomicLimits Database.
+3. `IGZO/Others/`: Contains additional scientific papers related to IGZO that was provided by the domain experts.
+
+> [!NOTE]
+> The sub-directories containing the AtomicLimits Database papers are further organized/divided into folders based on the material, precursor and co-reactant used in the ALD process as per the AtomicLimits Database annotations.
