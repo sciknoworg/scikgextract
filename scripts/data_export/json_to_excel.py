@@ -1,8 +1,19 @@
+"""
+Script to convert extracted JSON data into Excel format with multiple sheets for different data categories. Each sheet corresponds to a specific data category such as ALD system, reactant selection etc.
+
+Authors: Sameer Sadruddin
+Created: 10th December 2025
+Last Modified: 10th December 2025
+"""
+
+# Python Imports
 import os
 import argparse
 
+# External Imports
 import pandas as pd
 
+# SciKG-Extract Utils Imports
 from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.dict_utils import flatten_record
 from scikg_extract.utils.file_utils import read_json_file
@@ -100,6 +111,7 @@ def format_rows_with_same_columns(rows: list[dict[str, str]]) -> pd.DataFrame:
     return df
 
 if __name__ == "__main__":
+    """Main function to convert extracted JSON data to Excel format"""
 
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Convert extracted JSON data to Excel format.")

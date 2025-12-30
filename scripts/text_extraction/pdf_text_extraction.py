@@ -79,6 +79,7 @@ def export_as_markdown(document: DoclingDocument, filename: str, output_dir: str
         md_file.write(document.export_to_markdown(image_mode=ImageRefMode.PLACEHOLDER))
 
 if __name__ == "__main__":
+    """Main function to execute the PDF text extraction and export to Markdown."""
 
     # Argument Parser
     parser = argparse.ArgumentParser(description="Extract text and tables from PDF files using Docling and export to Markdown.")

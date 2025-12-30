@@ -1,10 +1,19 @@
-import asyncio
+"""
+The script to interact with the PubChem API to fetch compound properties and synonyms. Currently supports fetching data by compound name and CID.
 
+Author: Sameer Sadruddin
+Created: 10th December 2025
+Last Modified: 10th December 2025
+"""
+# External Imports
+import asyncio
 from httpx import HTTPStatusError
 
+# SciKG-Extract Data Models Imports
 from data.models.api.pubchem_property import PubChemPropertyResponse
 from data.models.api.pubchem_synonyms import PubChemSynonymsResponse
 
+# SciKG-Extract Utility Imports
 from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.rest_client import RestClient
 

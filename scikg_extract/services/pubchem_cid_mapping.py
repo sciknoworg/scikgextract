@@ -97,7 +97,7 @@ def lookup_by_synonym(env: lmdb.Environment, synonym: str, compression: bool = T
 
     # Initialize the logger
     logger = logging.getLogger(__name__)
-    logger.info(f"Looking up synonym: {synonym} (Fuzzy: {enable_fuzzy}, Substring: {enable_substring_match})")
+    logger.debug(f"Looking up synonym: {synonym} (Fuzzy: {enable_fuzzy}, Substring: {enable_substring_match})")
 
     # Initialize list to hold matching CIDs
     matching_cids: List[Tuple[str, str]] = []
@@ -111,13 +111,13 @@ def lookup_by_synonym(env: lmdb.Environment, synonym: str, compression: bool = T
         # Try exact match first
         raw = txn.get(syn_key_c)
         if raw:
-            logger.info(f"Exact match found for synonym: {synonym} with CID: {raw.decode('utf-8')}")
+            logger.debug(f"Exact match found for synonym: {synonym} with CID: {raw.decode('utf-8')}")
             matching_cids.append((synonym, raw.decode('utf-8')))
             return matching_cids
 
         # If not found, use substring to find the closest matches among all keys
         if enable_substring_match:
-            logger.info(f"Attempting substring match for synonym: {synonym}")
+            logger.debug(f"Attempting substring match for synonym: {synonym}")
             
             with txn.cursor() as cursor:
                 for key, value in cursor:
@@ -134,7 +134,7 @@ def lookup_by_synonym(env: lmdb.Environment, synonym: str, compression: bool = T
     
         # Filter list further with fuzzy matching and remove candidates below threshold
         if enable_fuzzy:
-            logger.info(f"Attempting fuzzy match for synonym: {synonym} in the list of matching candidates having {len(matching_cids)} entries")
+            logger.debug(f"Attempting fuzzy match for synonym: {synonym} in the list of matching candidates having {len(matching_cids)} entries")
 
             # Iterate over the matching CIDs and calculate fuzzy scores
             for key_str, cid in matching_cids.copy():

@@ -1,10 +1,9 @@
-# Python Imports
-from typing import TypedDict
-
 # Pydantic Imports
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
-class ExtractionState(TypedDict):
+from yescieval.base.rubric import Rubric
+
+class ExtractionState(BaseModel):
     """
     State for the knowledge extraction agent workflow. It holds the updated structured knowledge and relevant metadata at each step of the extraction process.
     """
@@ -38,42 +37,60 @@ class ExtractionState(TypedDict):
     examples: str
 
     # Pydantic Data Model
-    data_model: BaseModel
+    data_model: type[BaseModel]
 
     # Extracted JSON
-    extracted_json: dict
+    extracted_json: dict = Field(default_factory=dict)
+
+    # Normalized JSON
+    normalized_json: dict = Field(default_factory=dict)
 
     # Extracted JSOn Valid
-    extraction_json_valid: bool
+    extraction_json_valid: bool = False
+
+    # Normalize Extracted JSON
+    normalize_extracted_json: bool = False
+
+    # Clean Extracted JSON
+    cleaned_extracted_json: bool = False
+
+    # LLM for Normalization Disambiguation
+    normalization_llm_model: str = ""
 
     # PubChem LMDB Path
-    pubchem_lmdb_path: str
+    pubchem_lmdb_path: str = ""
 
     # Synonym to CID Mapping
-    synonym_to_cid_mapping: dict
+    synonym_to_cid_mapping: dict = Field(default_factory=dict)
 
     # Normalization Properties to Include
-    normalization_properties_to_include: list[str]
+    normalization_properties_to_include: list[str] = Field(default_factory=list)
 
     # Normalization Properties to Exclude
-    normalization_properties_to_exclude: list[str]
+    normalization_properties_to_exclude: list[str] = Field(default_factory=list)
 
     ##############################
     # Reflection Agent properties #
     ##############################
 
     # Validation LLM Model
-    validation_llm_model: str
+    validation_llm_model: str = ""
+
+    # Validation Rubrics
+    rubric_names: list[type[Rubric]] = Field(default_factory=list)
 
     # Evaluation Results from LLM-as-a-Judge
-    evaluation_results: dict[str, dict[str, str]]
+    evaluation_results: dict[str, dict[str, str]] | None = None
+
+    # Total retries for validation failures
+    total_validation_retries: int = 3
 
     ###############################
     # Feedback Agent properties #
     ###############################
 
     # Feedback LLM Model
-    feedback_llm_model: str
+    feedback_llm_model: str = ""
 
     # User prompt with feedback
-    user_feedback_prompt: str
+    user_feedback_prompt: str | None = ""

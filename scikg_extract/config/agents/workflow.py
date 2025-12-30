@@ -17,4 +17,4 @@ class WorkflowConfig:
     validate_extracted_data: bool
 
     # Total retries for validation failures
-    total_validation_retries: int = 3
+    total_validation_retries: int = 2

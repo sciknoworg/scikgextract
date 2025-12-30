@@ -13,6 +13,9 @@ class ExtractionConfig:
     # LLM model name to be used by extraction agent
     llm_name: str
 
+    # LLM model name for Normalization disambiguation
+    normalization_llm_name: str
+
     # Pydantic data model for the extracted knowledge
     extraction_data_model: BaseModel
 

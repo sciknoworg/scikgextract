@@ -1,7 +1,15 @@
-from sentence_transformers import SentenceTransformer
+"""
+Clustering utility functions to group similar values based on their semantic embeddings calculated using sentence transformers.
+"""
+# Numpy import
+import numpy as np
+
+# Sklearn imports
 from sklearn.cluster import DBSCAN
 from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
+
+# Sentence Transformer import
+from sentence_transformers import SentenceTransformer
 
 def cluster_similar_values_dbscan(values: list[str], embedding_model: str, eps: float = 0.2, min_samples: int = 2) -> dict[int, list[str]]:
     """

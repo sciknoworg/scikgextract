@@ -21,22 +21,23 @@ def evaluate_extraction_correctness(state: ExtractionState) -> ExtractionState:
 
     # Initialize the Correctness rubric
     correctness_rubric = Correctness(
-        scientific_article=state["scientific_document"],
-        process_schema=state["process_schema"],
-        extracted_data=state["extracted_json"]
+        scientific_article=state.scientific_document,
+        process_schema=state.process_schema,
+        extracted_data=state.extracted_json
     )
 
     # Initialize the Judge based on the LLM model
-    judge_adapter = LLM_REGISTRY.get(state["validation_llm_model"]).evaluation_judge
-    judge = judge_adapter(model=state["validation_llm_model"], data_model=EvaluationRating)
+    judge_adapter = LLM_REGISTRY.get(state.validation_llm_model).evaluation_judge
+    judge = judge_adapter(model=state.validation_llm_model, data_model=EvaluationRating)
 
     # Evaluate correctness
     correctness_result = judge.evaluate(correctness_rubric)
+    logger.debug(f"Correctness evaluation result: {correctness_result}")
 
     # Update the state with the correctness evaluation results
-    if not state["evaluation_results"]: state["evaluation_results"] = {}
-    if "evaluation_results" not in state: state["evaluation_results"] = {}
-    state["evaluation_results"].update({
+    if not state.evaluation_results: state.evaluation_results = {}
+    if "evaluation_results" not in state: state.evaluation_results = {}
+    state.evaluation_results.update({
         "correctness": correctness_result.model_dump()
     })
 
@@ -58,22 +59,23 @@ def evaluate_extraction_completeness(state: ExtractionState) -> ExtractionState:
 
     # Initialize the Completeness rubric
     completness_rubric = Completeness(
-        scientific_article=state["scientific_document"],
-        process_schema=state["process_schema"],
-        extracted_data=state["extracted_json"]
+        scientific_article=state.scientific_document,
+        process_schema=state.process_schema,
+        extracted_data=state.extracted_json
     )
 
     # Initialize the Judge based on the LLM model
-    judge_adapter = LLM_REGISTRY.get(state["validation_llm_model"]).evaluation_judge
-    judge = judge_adapter(model=state["validation_llm_model"], data_model=EvaluationRating)
+    judge_adapter = LLM_REGISTRY.get(state.validation_llm_model).evaluation_judge
+    judge = judge_adapter(model=state.validation_llm_model, data_model=EvaluationRating)
 
     # Evaluate completeness
     completeness_result = judge.evaluate(completness_rubric)
+    logger.debug(f"Completeness evaluation result: {completeness_result}")
     
     # Update the state with the completeness evaluation results
-    if not state["evaluation_results"]: state["evaluation_results"] = {}
-    if "evaluation_results" not in state: state["evaluation_results"] = {}
-    state["evaluation_results"].update({
+    if not state.evaluation_results: state.evaluation_results = {}
+    if "evaluation_results" not in state: state.evaluation_results = {}
+    state.evaluation_results.update({
         "completeness": completeness_result.model_dump()
     })
 

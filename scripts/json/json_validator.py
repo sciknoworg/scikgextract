@@ -46,6 +46,7 @@ def validate_json_instance(instance: dict, schema: dict) -> bool:
         return False
     
 if __name__ == "__main__":
+    """Main function to validate JSON schema and instances."""
 
     # Add argument parser for schema and instance files
     parser = argparse.ArgumentParser(description="Validate JSON schema and instances.")

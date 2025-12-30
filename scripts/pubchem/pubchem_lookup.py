@@ -1,10 +1,22 @@
+"""
+Script to lookup PubChem CID by Synonym from LMDB database. The lookup function supports exact match, substring match, and fuzzy match options.
+
+Author: Sameer Sadruddin
+Created: 15th December 2025
+Modified: 15th December 2025
+"""
+# Python Imports
 import argparse
 
+# SciKG-Extract Utility Imports
 from scikg_extract.utils.log_handler import LogHandler
 from scikg_extract.utils.string_utils import normalize_string
+
+# SciKG-Extract Service Imports
 from scikg_extract.services.pubchem_cid_mapping import open_env_for_read, lookup_by_synonym
 
 if __name__ == "__main__":
+    """Script to lookup PubChem CID by Synonym from LMDB database."""
 
     # Add argument parser for PubChem LMDB lookup
     parser = argparse.ArgumentParser(description="Lookup PubChem CID by Synonym in LMDB database.")

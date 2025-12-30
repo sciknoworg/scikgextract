@@ -18,23 +18,23 @@ def prompt_with_feedback(state: ExtractionState) -> ExtractionState:
     logger.info("Starting updating prompt with evaluation feedback...")
 
     # Initialize the LLM model for feedback generation
-    inference_adapter = LLM_REGISTRY.get(state["feedback_llm_model"]).inference_adapter
-    model_adapter = inference_adapter(model_name=state["feedback_llm_model"], temperature=0.1, response_format="text")
+    inference_adapter = LLM_REGISTRY.get(state.feedback_llm_model).inference_adapter
+    model_adapter = inference_adapter(model_name=state.feedback_llm_model, temperature=0.1, response_format="text")
     logger.debug(f"Initialized Model adapter for feedback: {model_adapter}")
 
     # Retrieve and format the feedbacks from the state
-    feedbacks = state["evaluation_results"]
+    feedbacks = state.evaluation_results
 
     # Format the variables for the prompt
-    var_dict = {"process_name": state["process_name"], "process_description": state["process_description"], "original_user_prompt": structure_knowledge_extraction.user_prompt, "raw_feedbacks": feedbacks}
+    var_dict = {"process_name": state.process_name, "process_description": state.process_description, "original_user_prompt": structure_knowledge_extraction.user_prompt, "raw_feedbacks": feedbacks}
 
     # Format and structure the user prompt for refined extraction
     formatted_prompt = model_adapter.completion(format_feedback, var_dict)
-    logger.debug(f"Generated formatted prompt with feedback: {formatted_prompt}")
+    logger.debug(f"Generated formatted prompt with feedback:\n{formatted_prompt}\n")
     logger.info("Prompt updated with feedback successfully.")
 
     # Update the state with the new user prompt
-    state["user_feedback_prompt"] = formatted_prompt
+    state.user_feedback_prompt = formatted_prompt
 
     # Return the updated state with the user feedback prompt
     return state

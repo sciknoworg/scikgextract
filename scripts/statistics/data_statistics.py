@@ -236,6 +236,7 @@ def compute_stats_for_folder(input_dir: str, skip_keys: list[str] = [], key: str
     return pd.DataFrame(rows)
  
 if __name__ == "__main__":
+    """Main function to compute data statistics from extracted JSON files."""
 
     # Initialize argument parser
     parser = argparse.ArgumentParser(description="Compute data statistics from extracted JSON files.")

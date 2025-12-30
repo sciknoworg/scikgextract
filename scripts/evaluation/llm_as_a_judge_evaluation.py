@@ -7,7 +7,6 @@ Last Modified: November 27, 2025
 """
 # Python packages
 import os
-import json
 import argparse
 
 # SciKG-Extract Utility Imports

@@ -1,213 +1,78 @@
+# Python Imports
+import os
 import sys
-import asyncio
 import argparse
 
+# External Imports
 import lmdb
-from httpx import HTTPStatusError
-from rapidfuzz import fuzz
 
-from data.models.api.pubchem_synonyms import PubChemSynonymsResponse
+# SciKG_Extract Service Imports
+from scikg_extract.services.pubchem_cid_mapping import open_env_for_read
 
-from scikg_extract.services.pubchem_cid_mapping import open_env_for_read, lookup_by_synonym
-from scikg_extract.utils.rest_client import RestClient
+# SciKG_Extract Config Imports
 from scikg_extract.config.normalization.normalizationConfig import NormalizationConfig
+
+# SciKG_Extract Tools Imports
+from scikg_extract.tools.extraction.pubchem_normalization import normalize_value_with_pubchem_api
+from scikg_extract.tools.extraction.pubchem_normalization import normalize_with_lookup_dict
+from scikg_extract.tools.extraction.pubchem_normalization import normalize_value_with_pubchem_cid_mapping
+from scikg_extract.tools.extraction.pubchem_normalization import perform_llm_disambiguation
+from scikg_extract.tools.extraction.pubchem_normalization import update_process_json_with_normalized_value
+
+# SciKG_Extract Utils Imports
 from scikg_extract.utils.log_handler import LogHandler
-from scikg_extract.utils.dict_utils import get_value_by_path, set_value_by_path
+from scikg_extract.utils.dict_utils import get_value_by_path
 from scikg_extract.utils.file_utils import read_json_file, save_json_file
 from scikg_extract.utils.string_utils import normalize_string
 
-def pubchem_get_request(base_url: str, endpoint: str, timeout: int = 10, params: dict = None) -> dict:
+def update_synonym_to_cid_mapping(synonym_to_cid_mapping: dict[str, str], value: str, cids: list[str]) -> dict[str, str]:
     """
-    Makes a GET request to the specified PubChem API endpoint and returns the JSON response.
+    Updates the synonym to CID mapping dictionary with new entries.
     Args:
-        base_url (str): The base URL for the PubChem API.
-        endpoint (str): The specific API endpoint to query.
-        timeout (int, optional): The timeout for the request in seconds. Defaults to 10.
+        synonym_to_cid_mapping (dict[str, str]): The existing synonym to CID mapping dictionary.
+        value (str): The synonym value.
+        cids (list[str]): The list of PubChem CIDs corresponding to the synonym.
     Returns:
-        dict: The JSON response from the PubChem API.
-    Raises:
-        httpx.HTTPError: If an error occurs during the request.
+        dict[str, str]: The updated synonym to CID mapping dictionary.
     """
-
-    # Initialize the Logger
-    logger = LogHandler.get_logger("pubchem_normalization.pubchem_get_request")
-    logger.debug(f"Making PubChem GET request to endpoint: {base_url}/{endpoint} with params: {params}")
-
-    # Initialize the RestClient
-    restclient = RestClient(base_url=base_url, timeout=timeout)
     
-    # Make the GET request asynchronously
-    response = asyncio.run(restclient.get(endpoint, params=params))
-    logger.debug(f"Received response from PubChem API: {response}")
-    
-    # Return the JSON response
-    return response
+    # Create comma-separated string of CIDs
+    cid_string = ",".join([cid.split("/")[-1] for cid in cids])
 
-def fetch_cid_from_pubchem_api(pubchem_base_url: str, pubchem_endpoint: str, pubchem_timeout: int, value: str) -> list[str] | None:
+    # Update the mapping dictionary
+    if value.lower() not in synonym_to_cid_mapping or value not in synonym_to_cid_mapping:
+        synonym_to_cid_mapping[value] = cid_string
+
+    # Return the updated mapping dictionary
+    return synonym_to_cid_mapping
+
+def run_normalizers(value: str, lmdb_env: lmdb.Environment, synonym_to_cid_mapping: dict[str, str] = {}) -> list[str]:
     """
-    Fetches PubChem CIDs for a given chemical name using the PubChem API.
+    Runs normalizers (Manual Created synonym CID Lookup, PubChem API and PubChem dump Lookup) to obtain PubChem CIDs for a given value.
     Args:
-        pubchem_base_url (str): The base URL for the PubChem API.
-        pubchem_endpoint (str): The specific API endpoint to query.
-        pubchem_timeout (int): The timeout for the request in seconds.
-        value (str): The chemical name to look up.
+        value (str): The value to normalize.
+        lmdb_env (lmdb.Environment): The LMDB environment for PubChem CID mapping.
+        synonym_to_cid_mapping (dict[str, str], optional): A dictionary mapping synonyms to PubChem CIDs. Defaults to {}.
     Returns:
-        list[str] | None: A list of PubChem CIDs or None if not found.
+        list[str]: A list of normalized PubChem CID URIs.
     """
 
-    # Initialize the logger
-    logger = LogHandler.get_logger("pubchem_normalization.fetch_cid_from_pubchem_api")
-    logger.debug(f"Fetching CIDs for {value} from PubChem using endpoint: {pubchem_base_url}/{pubchem_endpoint}")
+    # Normalize the value with CIDs lookup dictionary if provided
+    normalized_uris = normalize_with_lookup_dict(synonym_to_cid_mapping, value)
+    if normalized_uris: return normalized_uris
 
-    try:
-        # Make the GET request to PubChem API
-        response = pubchem_get_request(pubchem_base_url, pubchem_endpoint, timeout=pubchem_timeout)
-        
-        # Parse the response to Pydantic model
-        response = PubChemSynonymsResponse.model_validate(response)
-        logger.debug(f"Parsed PubChem response for {value}: {response}")
-        
-        # Extract CIDs from the response
-        cids = [info.CID for info in response.InformationList.Information]
+    # Normalize the value using PubChem API
+    normalized_uris = normalize_value_with_pubchem_api(value)
+    if normalized_uris: return normalized_uris
 
-        # Create normalized PubChem URIs
-        normalized_uris = [f"https://pubchem.ncbi.nlm.nih.gov/compound/{cid}" for cid in cids]
-        logger.debug(f"Normalized URIs for {value}: {normalized_uris}")
-        
-        # Return the normalized URIs
-        return normalized_uris
-    except HTTPStatusError as e:
-        logger.debug(f"HTTP error occurred: {e}")
-    except Exception as e:
-        logger.debug(f"Exception occurred while normalizing value {value} using the name endpoint: {e}")
+    # Normalize the value using PubChem CID mapping LMDB
+    normalized_uris = normalize_value_with_pubchem_cid_mapping(lmdb_env, value)
+    if normalized_uris: return normalized_uris
 
-def normalize_with_lookup_dict(synonym_to_cid_mapping: dict[str, str], value: str) -> list | None:
-    """
-    Normalize a chemical name using a synonym to PubChem CID mapping created while normalizing earlier values.
-    Args:
-        synonym_to_cid_mapping (dict[str, str]): A dictionary mapping synonyms to PubChem CIDs.
-        value (str): The chemical name to normalize.
-    Returns:
-        list | None: A list of normalized URIs or None if not found.
-    """
+    # If no normalization found, return empty list
+    return []
 
-    # Initialize the logger
-    logger = LogHandler.get_logger("pubchem_normalization.normalize_with_lookup_dict")
-    logger.debug(f"Normalizing value: {value} using Lookup CID mapping...")
-
-    # Initialize list to hold normalized URIs
-    normalized_uris = []
-
-    # Check if the value exists in the synonym to CID mapping
-    cid = synonym_to_cid_mapping.get(value, "")
-
-    # Check using fuzzy matching if exact match not found
-    if not cid:
-        logger.debug(f"No exact match found for {value} in lookup dict. Attempting fuzzy matching...")
-        for syn, c in synonym_to_cid_mapping.items():
-            score = fuzz.ratio(value, syn.lower())
-            if score >= 85:
-                cid = f"{cid},{c}" if cid else c
-
-    # If not found, return None
-    if not cid: return None
-
-    # If found, create normalized URIs
-    normalized_uris.extend([f"https://pubchem.ncbi.nlm.nih.gov/compound/{c.strip()}" for c in cid.split(",")])
-    logger.debug(f"Normalized URIs for {value} from lookup dict: {normalized_uris}")
-
-    # Return the list of normalized URIs
-    return normalized_uris
-
-def normalize_value_with_pubchem_api(value: str) -> list | None:
-    """
-    Normalizes a chemical name using PubChem API to retrieve its CID and properties.
-    Args:
-        value (str): The chemical name to normalize.
-    Returns:
-        list | None: A list of normalized URIs or None if not found.
-    """
-
-    # Initialize the logger
-    logger = LogHandler.get_logger("pubchem_normalization.normalize_value_with_pubchem_api")
-    logger.debug(f"Normalizing value: {value} using PubChem API...")
-
-    # PubChem API Base URL and Timeout
-    pubchem_base_url = "https://pubchem.ncbi.nlm.nih.gov/rest/pug"
-    pubchem_timeout = 10
-
-    # Initialize list to hold normalized URIs
-    normalized_uris = []
-
-    # Step 1: Fetching CID and Synonyms for the value using the name endpoint
-    endpoint = f"compound/name/{value}/synonyms/JSON"
-    cids = fetch_cid_from_pubchem_api(pubchem_base_url, endpoint, pubchem_timeout, value)
-    normalized_uris.extend(cids if cids else [])
-
-    # Step 2: Fetching CID and Synonyms for the value using the molecular formula endpoint
-    endpoint = f"compound/fastformula/{value}/synonyms/JSON"
-    cids = fetch_cid_from_pubchem_api(pubchem_base_url, endpoint, pubchem_timeout, value)
-    normalized_uris.extend(cids if cids else [])
-
-    # Remove duplicates URIs
-    normalized_uris = list(set(normalized_uris))
-    logger.debug(f"Final normalized URIs for {value} using PubChem API: {normalized_uris}")
-
-    # Return the list of normalized URIs or None if empty
-    return normalized_uris if normalized_uris else None
-
-def normalize_value_with_pubchem_cid_mapping(env: lmdb.Environment, value: str) -> list | None:
-    """
-    Normalize a chemical name using a predefined PubChem CID to synonym mapping.
-    Args:
-        env (lmdb.Environment): The LMDB environment containing the CID mapping.
-        value (str): The chemical name to normalize.
-    Returns:
-        list | None: A list of normalized URIs or None if not found.
-    """
-
-    # Initialize the logger
-    logger = LogHandler.get_logger("pubchem_normalization.normalize_value_with_pubchem_cid_mapping")
-    logger.debug(f"Normalizing value: {value} using PubChem CID mapping...")
-
-    # Lookup CIDs by synonym in the LMDB database
-    matching_cids = lookup_by_synonym(env, value)
-
-    # If no matching CIDs found, return None
-    if not matching_cids: 
-        logger.debug(f"No matching CIDs found for value: {value} in LMDB PubChem CID mapping.")
-        return None
-    
-    # Create normalized URIs from the matching CIDs
-    normalized_uris = [f"https://pubchem.ncbi.nlm.nih.gov/compound/{cid}" for _, _, cid in matching_cids]
-    logger.debug(f"Normalized URIs for {value} from LMDB CID mapping: {normalized_uris}")
-
-    # Return the list of normalized URIs
-    return normalized_uris
-
-def update_process_json_with_normalized_value(data: dict, full_path: str, value: str, normalized_uris: list) -> None:
-    """
-    Updates the process JSON data at the specified path with the normalized URIs.
-    Args:
-        data (dict): The extracted process JSON data.
-        full_path (str): The dot-notation path to the property to update.
-        value (str): The original value being normalized.
-        normalized_uris (list): The list of normalized URIs to set at the specified path.
-    """
-
-    # Initialize the logger
-    logger = LogHandler.get_logger("pubchem_normalization.update_process_json_with_normalized_value")
-    logger.debug(f"Updating JSON at path: {full_path} with normalized URIs: {normalized_uris}")
-
-    # Format the normalized URIs as a dictionary containing the original value and normalized URIs
-    normalized_value = {"value": value, "sameAs": normalized_uris}
-
-    # Set the normalized value at the specified path in the JSON data
-    success = set_value_by_path(data, full_path, normalized_value)
-    if not success: raise Exception(f"Error updating JSON data at path: {full_path} with normalized URIs: {normalized_uris}")
-    logger.debug(f"Successfully updated JSON data at path: {full_path} with normalized URIs.")
-
-def normalize_process_json(data: dict, lmdb_env: lmdb.Environment, properties_to_normalize: list, properties_to_exclude: list, synonym_to_cid_mapping: dict[str, str] = {}) -> None:
+def normalize_process_json(data: dict, lmdb_env: lmdb.Environment, properties_to_normalize: list, properties_to_exclude: list, synonym_to_cid_mapping: dict[str, str] = {}) -> dict[str, str]:
     """
     Normalizes specified properties in the process JSON data using PubChem CIDs.
     Args:
@@ -216,10 +81,12 @@ def normalize_process_json(data: dict, lmdb_env: lmdb.Environment, properties_to
         properties_to_normalize (list): List of dot-notation paths to properties to normalize.
         properties_to_exclude (list): List of dot-notation paths to properties to exclude from normalization.
         synonym_to_cid_mapping (dict[str, str], optional): A dictionary mapping synonyms to PubChem CIDs. Defaults to {}.
+    Returns:
+        dict[str, str]: New synonym to CID mapping found during normalization.
     """
 
     # Initialize the logger
-    logger = LogHandler.get_logger("pubchem_normalization.normalize_process_json")
+    logger = LogHandler.get_logger("scikg_extract.normalize_process_json")
     logger.debug("Starting normalization of process JSON data...")
 
     # Normalize each specified property
@@ -245,33 +112,43 @@ def normalize_process_json(data: dict, lmdb_env: lmdb.Environment, properties_to
             value = normalize_string(value)
             logger.debug(f"Normalized string value: {value}")
 
-            # Normalize the value with CIDs lookup dictionary if provided
-            normalized_uris = normalize_with_lookup_dict(synonym_to_cid_mapping, value)
+            # Execute normalizers to get normalized URIs
+            normalized_uris = run_normalizers(value, lmdb_env, synonym_to_cid_mapping)
 
-            if normalized_uris:
-                logger.debug(f"Path: {full_path}, Original Value: {value}, Normalized URIs from lookup dict: {normalized_uris}")
-                update_process_json_with_normalized_value(data, full_path, original_value, normalized_uris)
-                logger.debug(f"Updated JSON data at path: {full_path} with normalized URIs from lookup dict.")
-                continue
-
-            # Normalize the value using PubChem API
-            normalized_uris = normalize_value_with_pubchem_api(value)
             if normalized_uris:
                 logger.debug(f"Path: {full_path}, Original Value: {value}, Normalized URIs: {normalized_uris}")
                 update_process_json_with_normalized_value(data, full_path, original_value, normalized_uris)
-                logger.debug(f"Updated JSON data at path: {full_path} with normalized URIs from PubChem API.")
+                synonym_to_cid_mapping = update_synonym_to_cid_mapping(synonym_to_cid_mapping, original_value, normalized_uris)
+                logger.debug(f"Updated JSON data at path: {full_path} with normalized URIs")
                 continue
 
-            # Normalize the value using PubChem CID mapping LMDB
-            normalized_uris = normalize_value_with_pubchem_cid_mapping(lmdb_env, value)
-            if normalized_uris:
-                logger.debug(f"Path: {full_path}, Original Value: {value}, Normalized URIs from LMDB: {normalized_uris}")
-                update_process_json_with_normalized_value(data, full_path, original_value, normalized_uris)
-                logger.debug(f"Updated JSON data at path: {full_path} with normalized URIs from LMDB.")
+            # Normalize the value using LLM disambiguation
+            disambiguted_details = perform_llm_disambiguation([value], "gpt-5")
+            logger.debug(f"LLM Disambiguation result for value {value}: {disambiguted_details}")
+
+            # Excecute the normalizers again on the disambiguated name/molecular formaula
+            if disambiguted_details and disambiguted_details.Molecular_Formula:
+                normalized_uris = run_normalizers(disambiguted_details.Molecular_Formula, lmdb_env, synonym_to_cid_mapping)
+
+                if normalized_uris:
+                    logger.debug(f"Path: {full_path}, Original Value: {value}, Normalized URIs after LLM disambiguation: {normalized_uris}")
+                    update_process_json_with_normalized_value(data, full_path, original_value, normalized_uris)
+                    synonym_to_cid_mapping = update_synonym_to_cid_mapping(synonym_to_cid_mapping, original_value, normalized_uris)
+                    logger.debug(f"Updated JSON data at path: {full_path} with normalized URIs after LLM disambiguation")
+                    continue
+
+            # If NO normalization found, update the value with empty SameAs list
+            if not normalized_uris:
+                logger.debug(f"No normalization found for value: {value} at path: {full_path}. Updating with empty SameAs list.")
+                update_process_json_with_normalized_value(data, full_path, original_value, [])
+
+    # Return the updated synonym to CID mapping
+    logger.debug("Completed normalization of process JSON data.")
+    return synonym_to_cid_mapping
 
 if __name__ == "__main__":
 
-    # Set up argument parser
+    # Configure argument parser
     parser = argparse.ArgumentParser(description="Normalize values with PubChem CIDs from extracted Process JSON data.")
     parser.add_argument("--input_json", type=str, help="Path to the extracted process JSON file.")
     parser.add_argument("--output_json", type=str, help="Path to save the normalized JSON file.")
@@ -283,8 +160,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Initialize logger
-    logger = LogHandler.setup_module_logging("pubchem_normalization")
-    logger.info("Starting PubChem normalization...")
+    logger = LogHandler.setup_module_logging("scikg_extract")
+    logger.info("Starting PubChem normalization procedure...")
 
     # Load manual curated PubChem CID mapping lookup dictionary
     pubchem_lookup_dict_path = args.pubchem_lookup_dict_path if args.pubchem_lookup_dict_path else "data/resources/PubChem-Synonym-CID.json"
@@ -303,11 +180,15 @@ if __name__ == "__main__":
     logger.info(f"Total properties to exclude from normalization: {len(properties_to_exclude)}, Properties: {properties_to_exclude}")
 
     # Input JSON file path
-    input_json = args.input_json if args.input_json else "results/extracted-data/atomic-layer-deposition/experimental-usecase/version1/ZnO/ZnEt2 - H2O/gpt-5-mini/2 Lujala et al.json"
+    input_json = args.input_json if args.input_json else "results/extracted-data/ALD/version2/ZnO-IGZO-papers/experimental-usecase/ZnO/ZnEt2 - H2O/gpt-4o/2 Lujala et al.json"
     logger.info(f"Input JSON file: {input_json}")
 
+    # Extract Input JSON file name with extension
+    input_filename = input_json.split("/")[-1]
+    logger.debug(f"Input JSON file name: {input_filename}")
+
     # Output JSON file path
-    output_json = args.output_json if args.output_json else "results/extracted-data/atomic-layer-deposition/experimental-usecase/version3/ZnO/ZnEt2 - H2O/gpt-5-mini"
+    output_json = args.output_json if args.output_json else "results/extracted-data/ALD/version5/ZnO-IGZO-papers/experimental-usecase/ZnO/ZnEt2 - H2O/gpt-4o"
     logger.info(f"Output JSON file: {output_json}")
 
     # Open LMDB PubChem CID mapping environment
@@ -322,13 +203,20 @@ if __name__ == "__main__":
 
     # Normalize the process JSON data
     for index, process in enumerate(data):
+        # Normalize the process JSON data
         logger.info(f"Normalizing process {index + 1}/{len(data)}...")
-        normalize_process_json(process, env, properties_to_normalize, properties_to_exclude, synonym_to_cid_mapping)
+        synonym_to_cid_mapping = normalize_process_json(process, env, properties_to_normalize, properties_to_exclude, synonym_to_cid_mapping)
         logger.info(f"Completed normalization for process {index + 1}/{len(data)}.")
+
+        # Sort the synonym to CID mapping dictionary by keys
+        synonym_to_cid_mapping = dict(sorted(synonym_to_cid_mapping.items()))
+
+        # Save the updated synonym to CID mapping file
+        file_saved = save_json_file(os.path.dirname(pubchem_lookup_dict_path), "PubChem-Synonym-CID.json", synonym_to_cid_mapping)
+        if not file_saved: raise Exception("Error saving PubChem synonym to CID mapping JSON file.")
+        logger.info(f"Updated PubChem synonym to CID mapping saved to: {pubchem_lookup_dict_path}")
     
     # Save the normalized JSON data to output file
-    filename = f"{output_json.split("/")[-1]}.json"
-    output_path = "/".join(output_json.split("/")[:-1])
-    file_saved = save_json_file(output_path, filename, data)
+    file_saved = save_json_file(output_json, input_filename, data)
     if not file_saved: raise Exception("Error saving normalized JSON file.")
     logger.info(f"Normalized JSON data saved to: {output_json}")

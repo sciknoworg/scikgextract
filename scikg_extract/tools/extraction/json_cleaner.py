@@ -16,7 +16,7 @@ def json_cleaner(state: ExtractionState) -> ExtractionState:
     logger.info("Starting JSON cleaning tool...")
 
     # Step 1: Remove all NULL values
-    cleaned_data = remove_null_values(state["extracted_json"])
+    cleaned_data = remove_null_values(state.extracted_json)
     logger.debug(f"Cleaned JSON data after removing NULL values: {cleaned_data}")
 
     # # Step 2: Remove empty QUDT structures
@@ -26,7 +26,7 @@ def json_cleaner(state: ExtractionState) -> ExtractionState:
     # logger.debug(f"Cleaned JSON data after removing empty QUDT structures: {cleaned_data}")
 
     # Update the state with the cleaned JSON
-    state["extracted_json"] = cleaned_data
+    state.extracted_json = cleaned_data
 
     # Return the updated state with cleaned JSON
     return state

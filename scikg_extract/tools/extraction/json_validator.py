@@ -18,13 +18,13 @@ def json_validator(state: ExtractionState) -> ExtractionState:
     logger.info("Starting JSON validation tool...")
 
     # Extract schema and instance from the state
-    schema = state["process_schema"]
-    instance = state["extracted_json"]
+    schema = state.process_schema
+    instance = state.extracted_json
     logger.debug(f"Schema for validation: {json.dumps(schema)}")
     logger.debug(f"Instance to validate: {json.dumps(instance)}")
 
     # Get the key containing nested JSON objects to validate
-    process_instances_key = state.get("process_instances_key", "processes")
+    process_instances_key = state.process_instances_key
 
     # Extract the list of process instances
     process_instances = instance.get(process_instances_key, [])
@@ -43,7 +43,7 @@ def json_validator(state: ExtractionState) -> ExtractionState:
         valid_json = valid_json and is_valid
     
     # Update the state with the validation result
-    state["extraction_json_valid"] = valid_json
+    state.extraction_json_valid = valid_json
 
     # Return the state
     return state

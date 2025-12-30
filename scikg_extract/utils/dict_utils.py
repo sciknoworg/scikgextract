@@ -12,11 +12,12 @@ def is_primitive(val: Any) -> bool:
     """
     return isinstance(val, (str, int, float, bool)) or val is None
 
-def remove_null_values(data: dict) -> dict:
+def remove_null_values(data: dict, skip_keys: list = []) -> dict:
     """
     Recursively remove keys with null values from a JSON-like dictionary.
     Args:
         data (dict): The input JSON-like dictionary.
+        skip_keys (list): List of keys to skip from removal even if they have null or empty values.
     Returns:
         dict: The cleaned dictionary with null values removed.
     """
@@ -24,8 +25,13 @@ def remove_null_values(data: dict) -> dict:
         cleaned = {}
         for key, value in data.items():
             
+            # Skip keys that are in the skip_keys list
+            if key in skip_keys:
+                cleaned[key] = value
+                continue
+            
             # Recursively clean the value
-            cleaned_value = remove_null_values(value)
+            cleaned_value = remove_null_values(value, skip_keys=skip_keys)
             
             # Keep it only if it's not None, not empty dict, not empty list
             if cleaned_value not in ("Not Found", None, {}, []):
@@ -36,7 +42,7 @@ def remove_null_values(data: dict) -> dict:
     elif isinstance(data, list):
 
         # Recursively clean each item in the list
-        cleaned_list = [remove_null_values(item) for item in data]
+        cleaned_list = [remove_null_values(item, skip_keys=skip_keys) for item in data]
 
         # Filter out empty items (None, {}, [])
         cleaned_list = [item for item in cleaned_list if item not in (None, {}, [])]
@@ -44,7 +50,7 @@ def remove_null_values(data: dict) -> dict:
     else:
         # Base case: return the value unchanged
         return data
-    
+
 def is_empty_qudt_structure(obj):
     """
     Determines if an object only contains QUDT metadata without actual measurement values.
@@ -106,7 +112,7 @@ def remove_empty_qudt_structures(data):
     if isinstance(data, list):
         cleaned_list = [remove_empty_qudt_structures(item) for item in data]
         cleaned_list = [item for item in cleaned_list if item is not None]
-        return cleaned_list if cleaned_list else None
+        return cleaned_list if cleaned_list else []
     
     # Handle non-dict primitives (str, int, float, bool, etc.)
     if not isinstance(data, dict):

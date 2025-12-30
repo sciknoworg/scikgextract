@@ -8,8 +8,8 @@ Context:
 - The standardized formats include: InChI, InChIKey, SMILES, and molecular formula.
 
 Task Description:
-- Given a list of chemical compounds, expressed as a molecular formula, textual description, or other extracted form. you must return their most formal, standardized representations suitable for PubChem lookup.
-- For each compound, provide the following standardized representations:
+- Given a chemical compounds, expressed as a molecular formula, textual description, or other extracted form. you must return their most formal, standardized representations suitable for PubChem lookup.
+- For the provided compound, provide the following standardized representations:
     1. InChI (IUPAC International Chemical Identifier)
     2. InChIKey (hashed version of InChI)
     3. SMILES (Simplified Molecular Input Line Entry System)
@@ -21,14 +21,16 @@ Process Definition:
 - Process Description: {process_description}
 
 Instructions:
-1. For each compound in the input list, attempt to normalize it to the four standardized formats listed above.
+1. For the compound, attempt to normalize it to the four standardized formats listed above.
 2. Use established chemical informatics libraries and databases to perform the normalization.
+3. Remove any measurement text, units, or extraneous information that does not pertain to the chemical identity.
+4. If normalization is successful, return the standardized representations.
 
 Input Format:
-- A list of chemical compounds, each represented as a string.
+- A chemical compound, represented as a string.
 
 Output Format:
-- A JSON array where each entry corresponds to an input compound and contains the following fields:
+- A JSON for the input compound and contains the following fields:
 {{
     "original_value": "<original compound representation>",
     "InChI": "<standardized InChI or original value if not found>",
@@ -39,10 +41,10 @@ Output Format:
 """
 
 user_prompt = """
-You are provided with a list of chemical compounds extracted from scientific documents. Your task is to normalize each compound into standardized chemical representations suitable for PubChem alignment.
+You are provided with a chemical compound extracted from scientific documents. Your task is to normalize this compound into standardized chemical representations suitable for PubChem alignment.
 
-Chemical Compounds to Normalize:
-{compound_list}
+Chemical Compound to Normalize:
+{compound}
 
 Please provide the normalized representations in the specified JSON format. Remember to return the original value unchanged if normalization is not possible.
 """

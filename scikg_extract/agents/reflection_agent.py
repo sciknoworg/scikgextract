@@ -2,16 +2,11 @@
 Reflection Agent for validating extracted structured processes using LLM-as-a-Judge paradigm.
 
 This module defines a reflection agent that validates the extracted structured knowledge from the scientific documents using the provided rubrics like Correctness, Completeness, etc. The agent is implemented using langgraph's StateGraph to create a workflow that evaluates the extracted data against each rubric.
-
-Author: Sameer Sadruddin
-Created: November 21, 2025
-Last Modified: November 21, 2025
 """
 # External imports
 from langgraph.graph import StateGraph, START, END
 
 # Scikg_Extract Config Imports
-from scikg_extract.config.agents.reflection import ReflectionConfig
 from scikg_extract.config.evaluation.rubricConfig import get_rubric_config
 
 # Scikg_Extract Utility Imports
@@ -20,11 +15,10 @@ from scikg_extract.utils.log_handler import LogHandler
 # Scikg_Extract Agent Imports
 from scikg_extract.agents.states import ExtractionState
 
-def validate_extracted_processes(reflectionConfig: ReflectionConfig, state: ExtractionState) -> ExtractionState:
+def validate_extracted_processes(state: ExtractionState) -> ExtractionState:
     """
     Validates the extracted structured knowledge using the validation agent designed with langgraph StateGraph.
     Args:
-        reflectionConfig (ReflectionConfig): Configuration for the Reflection Agent.
         state (ExtractionState): The current state of the extraction process containing necessary data.
     Returns:
         ExtractionState: The final state containing the evaluation results.
@@ -34,15 +28,12 @@ def validate_extracted_processes(reflectionConfig: ReflectionConfig, state: Extr
     logger = LogHandler.get_logger(__name__)
     logger.info("Starting Validation Agent...")
 
-    # Adding the LLM model to be used for validation
-    state["validation_llm_model"] = reflectionConfig.llm_name
-
     # Create the state graph
     graph = StateGraph(ExtractionState)
     logger.debug("Created StateGraph for validation workflow.")
 
     # Adding nodes for each rubric evaluation
-    for rubric in reflectionConfig.rubric_names:
+    for rubric in state.rubric_names:
         # Get the rubric name
         rubric_name = rubric.get_rubric_name()
 
@@ -58,7 +49,7 @@ def validate_extracted_processes(reflectionConfig: ReflectionConfig, state: Extr
 
     # Define the edges of the graph
     previous_node = START
-    for rubric in reflectionConfig.rubric_names:
+    for rubric in state.rubric_names:
         # Get the name of the rubric
         rubric_name = rubric.get_rubric_name()
 

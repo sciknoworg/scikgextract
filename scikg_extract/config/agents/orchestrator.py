@@ -1,5 +1,5 @@
 # Python imports
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 # External imports
 from pydantic import BaseModel
@@ -30,25 +30,28 @@ class OrchestratorConfig:
     # Pydantic data model for the extracted knowledge
     extraction_data_model: BaseModel
 
+    # LLM model name to be used for normalization within extraction agent
+    normalization_llm_name: str = ""
+
     # PubChem LMDB Path
-    pubchem_lmdb_path: str
+    pubchem_lmdb_path: str = ""
 
     # Synonym to CID Mapping
-    synonym_to_cid_mapping: dict
+    synonym_to_cid_mapping: dict = field(default_factory=dict)
 
     #######################################
     # Configurations for Reflection Agent #
     #######################################
 
     # LLM model name to be used by reflection agent
-    reflection_llm_name: str
+    reflection_llm_name: str = ""
 
     # List of rubrics to be evaluated during reflection
-    rubrics: list[Rubric]
+    rubrics: list[Rubric] = field(default_factory=list)
 
     #####################################
     # Configurations for Feedback Agent #
     #####################################
 
     # LLM model name to be used by feedback agent
-    feedback_llm_name: str
+    feedback_llm_name: str = ""
