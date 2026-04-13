@@ -1,0 +1,341 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline Sample Synthesis.
+1-1	0-15	Polycrystalline	_	_	_	
+1-2	16-22	Sample	_	_	_	
+1-3	23-32	Synthesis	_	_	_	
+1-4	32-33	.	_	_	_	
+
+#Text=Polycrystalline forms of the
+#Text=materials were synthesized through solvent evaporation: DMF was
+#Text=used for the dppz complexes, while NMP was required for preparation
+#Text=of the larger dppn-containing species.
+2-1	34-49	Polycrystalline	Descriptor	_	_	
+2-2	50-55	forms	_	_	_	
+2-3	56-58	of	_	_	_	
+2-4	59-62	the	_	_	_	
+2-5	63-72	materials	Material-target	Descriptor-of	2-1	
+2-6	73-77	were	_	_	_	
+2-7	78-89	synthesized	Operation	Participant-material	2-5	
+2-8	90-97	through	_	_	_	
+2-9	98-105	solvent	Operation[1]	Coreference	2-7[0_1]	
+2-10	106-117	evaporation	Operation[1]	_	_	
+2-11	117-118	:	_	_	_	
+2-12	119-122	DMF	Material-intermedium	_	_	
+2-13	123-126	was	_	_	_	
+2-14	127-131	used	_	_	_	
+2-15	132-135	for	_	_	_	
+2-16	136-139	the	_	_	_	
+2-17	140-144	dppz	Material-intermedium[2]	_	_	
+2-18	145-154	complexes	Material-intermedium[2]	_	_	
+2-19	154-155	,	_	_	_	
+2-20	156-161	while	_	_	_	
+2-21	162-165	NMP	Material-intermedium	_	_	
+2-22	166-169	was	_	_	_	
+2-23	170-178	required	_	_	_	
+2-24	179-182	for	_	_	_	
+2-25	183-194	preparation	_	_	_	
+2-26	195-197	of	_	_	_	
+2-27	198-201	the	_	_	_	
+2-28	202-208	larger	_	_	_	
+2-29	209-224	dppn-containing	Material-intermedium[3]	_	_	
+2-30	225-232	species	Material-intermedium[3]	_	_	
+2-31	232-233	.	_	_	_	
+
+#Text=PbI2-dppz (1).
+3-1	234-238	PbI2	_	_	_	
+3-2	238-239	-	_	_	_	
+3-3	239-243	dppz	_	_	_	
+3-4	244-245	(	_	_	_	
+3-5	245-246	1	_	_	_	
+3-6	246-247	)	_	_	_	
+3-7	247-248	.	_	_	_	
+
+#Text=Dppz (0.050 g, 0.177 mmol) was dissolved in a
+#Text=minimum amount of methanol by heating.
+4-1	249-253	Dppz	Material-recipe	Value-of|Value-of	4-3[4_0]|4-6[5_0]	
+4-2	254-255	(	_	_	_	
+4-3	255-260	0.050	Value[4]	_	_	
+4-4	261-262	g	Value[4]	_	_	
+4-5	262-263	,	_	_	_	
+4-6	264-269	0.177	Value[5]	_	_	
+4-7	270-274	mmol	Value[5]	_	_	
+4-8	274-275	)	_	_	_	
+4-9	276-279	was	_	_	_	
+4-10	280-289	dissolved	Operation	Participant-material|Participant-material|Condition-of	4-1|4-16|4-18	
+4-11	290-292	in	_	_	_	
+4-12	293-294	a	_	_	_	
+4-13	295-302	minimum	Value[6]	_	_	
+4-14	303-309	amount	Value[6]	_	_	
+4-15	310-312	of	_	_	_	
+4-16	313-321	methanol	Material-others	Value-of	4-13[6_0]	
+4-17	322-324	by	_	_	_	
+4-18	325-332	heating	Property-temperature	_	_	
+4-19	332-333	.	_	_	_	
+
+#Text=In addition, concentrated
+#Text=methanolic solutions of sodium iodide (0.053 g, 0.355 mmol) and
+#Text=lead(II) acetate trihydrate (0.132 g, 0.177 mmol) were prepared.
+5-1	334-336	In	_	_	_	
+5-2	337-345	addition	_	_	_	
+5-3	345-346	,	_	_	_	
+5-4	347-359	concentrated	Descriptor	_	_	
+5-5	360-370	methanolic	Material-intermedium[7]	Descriptor-of	5-4[0_7]	
+5-6	371-380	solutions	Material-intermedium[7]	_	_	
+5-7	381-383	of	_	_	_	
+5-8	384-390	sodium	Material-recipe[8]	Value-of|Value-of	5-11[9_8]|5-14[10_8]	
+5-9	391-397	iodide	Material-recipe[8]	_	_	
+5-10	398-399	(	_	_	_	
+5-11	399-404	0.053	Value[9]	_	_	
+5-12	405-406	g	Value[9]	_	_	
+5-13	406-407	,	_	_	_	
+5-14	408-413	0.355	Value[10]	_	_	
+5-15	414-418	mmol	Value[10]	_	_	
+5-16	418-419	)	_	_	_	
+5-17	420-423	and	_	_	_	
+5-18	424-428	lead	Material-recipe[11]	Value-of|Value-of	5-25[12_11]|5-28[13_11]	
+5-19	428-429	(	Material-recipe[11]	_	_	
+5-20	429-431	II	Material-recipe[11]	_	_	
+5-21	431-432	)	Material-recipe[11]	_	_	
+5-22	433-440	acetate	Material-recipe[11]	_	_	
+5-23	441-451	trihydrate	Material-recipe[11]	_	_	
+5-24	452-453	(	_	_	_	
+5-25	453-458	0.132	Value[12]	_	_	
+5-26	459-460	g	Value[12]	_	_	
+5-27	460-461	,	_	_	_	
+5-28	462-467	0.177	Value[13]	_	_	
+5-29	468-472	mmol	Value[13]	_	_	
+5-30	472-473	)	_	_	_	
+5-31	474-478	were	_	_	_	
+5-32	479-487	prepared	_	_	_	
+5-33	487-488	.	_	_	_	
+
+#Text=Upon
+#Text=addition of the three solutions together, a yellow precipitate was
+#Text=formed, which was separated by filtration.
+6-1	489-493	Upon	_	_	_	
+6-2	494-502	addition	_	_	_	
+6-3	503-505	of	_	_	_	
+6-4	506-509	the	_	_	_	
+6-5	510-515	three	_	_	_	
+6-6	516-525	solutions	_	_	_	
+6-7	526-534	together	_	_	_	
+6-8	534-535	,	_	_	_	
+6-9	536-537	a	_	_	_	
+6-10	538-544	yellow	Descriptor	_	_	
+6-11	545-556	precipitate	Material-intermedium	Descriptor-of	6-10	
+6-12	557-560	was	_	_	_	
+6-13	561-567	formed	_	_	_	
+6-14	567-568	,	_	_	_	
+6-15	569-574	which	_	_	_	
+6-16	575-578	was	_	_	_	
+6-17	579-588	separated	Operation	_	_	
+6-18	589-591	by	_	_	_	
+6-19	592-602	filtration	Operation	Next-operation|Participant-material	6-17|6-11	
+6-20	602-603	.	_	_	_	
+
+#Text=PbI2-dppn (2).
+7-1	604-608	PbI2	_	_	_	
+7-2	608-609	-	_	_	_	
+7-3	609-613	dppn	_	_	_	
+7-4	614-615	(	_	_	_	
+7-5	615-616	2	_	_	_	
+7-6	616-617	)	_	_	_	
+7-7	617-618	.	_	_	_	
+
+#Text=Dppn (0.050 g, 0.150 mmol) and lead(II) iodide
+#Text=(0.069 g, 0.150 mmol) were separately dissolved in minimum amounts
+#Text=of NMP.
+8-1	619-623	Dppn	Material-recipe	Value-of|Value-of	8-3[14_0]|8-6[15_0]	
+8-2	624-625	(	_	_	_	
+8-3	625-630	0.050	Value[14]	_	_	
+8-4	631-632	g	Value[14]	_	_	
+8-5	632-633	,	_	_	_	
+8-6	634-639	0.150	Value[15]	_	_	
+8-7	640-644	mmol	Value[15]	_	_	
+8-8	644-645	)	_	_	_	
+8-9	646-649	and	_	_	_	
+8-10	650-654	lead	Material-recipe[16]	Value-of|Value-of	8-16[17_16]|8-19[18_16]	
+8-11	654-655	(	Material-recipe[16]	_	_	
+8-12	655-657	II	Material-recipe[16]	_	_	
+8-13	657-658	)	Material-recipe[16]	_	_	
+8-14	659-665	iodide	Material-recipe[16]	_	_	
+8-15	666-667	(	_	_	_	
+8-16	667-672	0.069	Value[17]	_	_	
+8-17	673-674	g	Value[17]	_	_	
+8-18	674-675	,	_	_	_	
+8-19	676-681	0.150	Value[18]	_	_	
+8-20	682-686	mmol	Value[18]	_	_	
+8-21	686-687	)	_	_	_	
+8-22	688-692	were	_	_	_	
+8-23	693-703	separately	Descriptor	_	_	
+8-24	704-713	dissolved	Operation	Participant-material|Participant-material|Descriptor-of	8-10[16_0]|8-1|8-23	
+8-25	714-716	in	_	_	_	
+8-26	717-724	minimum	Value[19]	_	_	
+8-27	725-732	amounts	Value[19]	_	_	
+8-28	733-735	of	_	_	_	
+8-29	736-739	NMP	Material-intermedium	Value-of	8-26[19_0]	
+8-30	739-740	.	_	_	_	
+
+#Text=The solutions were combined and left under continuous air
+#Text=flow for several days before being dried in air at 170 °C.
+9-1	741-744	The	_	_	_	
+9-2	745-754	solutions	Material-intermedium	_	_	
+9-3	755-759	were	_	_	_	
+9-4	760-768	combined	Operation	Participant-material|Next-operation	9-2|9-6	
+9-5	769-772	and	_	_	_	
+9-6	773-777	left	Operation	Next-operation|Condition-of|Condition-of	9-16|9-9[20_0]|9-12[21_0]	
+9-7	778-783	under	_	_	_	
+9-8	784-794	continuous	Descriptor	_	_	
+9-9	795-798	air	Property-pressure[20]	Descriptor-of	9-8[0_20]	
+9-10	799-803	flow	Property-pressure[20]	_	_	
+9-11	804-807	for	_	_	_	
+9-12	808-815	several	Property-time[21]	_	_	
+9-13	816-820	days	Property-time[21]	_	_	
+9-14	821-827	before	_	_	_	
+9-15	828-833	being	_	_	_	
+9-16	834-839	dried	Operation	Condition-of|Condition-of	9-18|9-20[22_0]	
+9-17	840-842	in	_	_	_	
+9-18	843-846	air	Property-pressure	_	_	
+9-19	847-849	at	_	_	_	
+9-20	850-853	170	Property-temperature[22]	_	_	
+9-21	854-855	°	Property-temperature[22]	_	_	
+9-22	855-856	C	Property-temperature[22]	_	_	
+9-23	856-857	.	_	_	_	
+
+#Text=BiI3-dppz (3).
+10-1	858-862	BiI3	_	_	_	
+10-2	862-863	-	_	_	_	
+10-3	863-867	dppz	_	_	_	
+10-4	868-869	(	_	_	_	
+10-5	869-870	3	_	_	_	
+10-6	870-871	)	_	_	_	
+10-7	871-872	.	_	_	_	
+
+#Text=Dppz (0.050 g, 0.177 mmol) was dissolved in
+#Text=anhydrous DMF (1 mL) by heating and then added cold to a solution
+#Text=of bismuth(III) iodide (0.104 g, 0.177 mmol) in DMF (1 mL).
+11-1	873-877	Dppz	Material-recipe	Value-of|Value-of	11-6[24_0]|11-3[23_0]	
+11-2	878-879	(	_	_	_	
+11-3	879-884	0.050	Value[23]	_	_	
+11-4	885-886	g	Value[23]	_	_	
+11-5	886-887	,	_	_	_	
+11-6	888-893	0.177	Value[24]	_	_	
+11-7	894-898	mmol	Value[24]	_	_	
+11-8	898-899	)	_	_	_	
+11-9	900-903	was	_	_	_	
+11-10	904-913	dissolved	Operation	Descriptor-of|Participant-material|Participant-material|Next-operation	11-19|11-1|11-13|11-22	
+11-11	914-916	in	_	_	_	
+11-12	917-926	anhydrous	Descriptor	_	_	
+11-13	927-930	DMF	Material-intermedium	Value-of|Descriptor-of	11-15[25_0]|11-12	
+11-14	931-932	(	_	_	_	
+11-15	932-933	1	Value[25]	_	_	
+11-16	934-936	mL	Value[25]	_	_	
+11-17	936-937	)	_	_	_	
+11-18	938-940	by	_	_	_	
+11-19	941-948	heating	Descriptor	_	_	
+11-20	949-952	and	_	_	_	
+11-21	953-957	then	_	_	_	
+11-22	958-963	added	Operation	Descriptor-of	11-23	
+11-23	964-968	cold	Descriptor	_	_	
+11-24	969-971	to	_	_	_	
+11-25	972-973	a	Value	_	_	
+11-26	974-982	solution	Material-intermedium	Value-of	11-25	
+11-27	983-985	of	_	_	_	
+11-28	986-993	bismuth	Material-recipe[26]	Value-of|Value-of	11-37[28_26]|11-34[27_26]	
+11-29	993-994	(	Material-recipe[26]	_	_	
+11-30	994-997	III	Material-recipe[26]	_	_	
+11-31	997-998	)	Material-recipe[26]	_	_	
+11-32	999-1005	iodide	Material-recipe[26]	_	_	
+11-33	1006-1007	(	_	_	_	
+11-34	1007-1012	0.104	Value[27]	_	_	
+11-35	1013-1014	g	Value[27]	_	_	
+11-36	1014-1015	,	_	_	_	
+11-37	1016-1021	0.177	Value[28]	_	_	
+11-38	1022-1026	mmol	Value[28]	_	_	
+11-39	1026-1027	)	_	_	_	
+11-40	1028-1030	in	_	_	_	
+11-41	1031-1034	DMF	Material-intermedium	Value-of	11-43[29_0]	
+11-42	1035-1036	(	_	_	_	
+11-43	1036-1037	1	Value[29]	_	_	
+11-44	1038-1040	mL	Value[29]	_	_	
+11-45	1040-1041	)	_	_	_	
+11-46	1041-1042	.	_	_	_	
+
+#Text=The
+#Text=resultant orange/brown solution was heated under continuous air flow
+#Text=at 125 °C until a dry solid was obtained.
+12-1	1043-1046	The	_	_	_	
+12-2	1047-1056	resultant	Descriptor	_	_	
+12-3	1057-1063	orange	Descriptor[30]	_	_	
+12-4	1063-1064	/	Descriptor[30]	_	_	
+12-5	1064-1069	brown	Descriptor[30]	_	_	
+12-6	1070-1078	solution	Material-intermedium	Descriptor-of|Descriptor-of	12-3[30_0]|12-2	
+12-7	1079-1082	was	_	_	_	
+12-8	1083-1089	heated	Operation	Participant-material|Condition-of|Condition-of|Next-operation	12-6|12-11[31_0]|12-14[32_0]|12-22	
+12-9	1090-1095	under	_	_	_	
+12-10	1096-1106	continuous	Descriptor	_	_	
+12-11	1107-1110	air	Property-pressure[31]	Descriptor-of	12-10[0_31]	
+12-12	1111-1115	flow	Property-pressure[31]	_	_	
+12-13	1116-1118	at	_	_	_	
+12-14	1119-1122	125	Property-temperature[32]	_	_	
+12-15	1123-1124	°	Property-temperature[32]	_	_	
+12-16	1124-1125	C	_	_	_	
+12-17	1126-1131	until	_	_	_	
+12-18	1132-1133	a	Value	_	_	
+12-19	1134-1137	dry	Descriptor	_	_	
+12-20	1138-1143	solid	Material-intermedium	Value-of|Descriptor-of	12-18|12-19	
+12-21	1144-1147	was	_	_	_	
+12-22	1148-1156	obtained	Operation	Participant-material	12-20	
+12-23	1156-1157	.	_	_	_	
+
+#Text=BiI3-dppn (4).
+13-1	1158-1162	BiI3	_	_	_	
+13-2	1162-1163	-	_	_	_	
+13-3	1163-1167	dppn	_	_	_	
+13-4	1168-1169	(	_	_	_	
+13-5	1169-1170	4	_	_	_	
+13-6	1170-1171	)	_	_	_	
+13-7	1171-1172	.	_	_	_	
+
+#Text=Dppn (0.050 g, 0.150 mmol) and bismuth(III) iodide
+#Text=(0.089 g, 0.150 mmol) were separately dissolved in minimum amounts
+#Text=of NMP and prepared as for 2.
+14-1	1173-1177	Dppn	Material-recipe	Value-of|Value-of	14-3[33_0]|14-6[34_0]	
+14-2	1178-1179	(	_	_	_	
+14-3	1179-1184	0.050	Value[33]	_	_	
+14-4	1185-1186	g	Value[33]	_	_	
+14-5	1186-1187	,	_	_	_	
+14-6	1188-1193	0.150	Value[34]	_	_	
+14-7	1194-1198	mmol	Value[34]	_	_	
+14-8	1198-1199	)	_	_	_	
+14-9	1200-1203	and	_	_	_	
+14-10	1204-1211	bismuth	Material-recipe[35]	Value-of|Value-of	14-16[36_35]|14-19[37_35]	
+14-11	1211-1212	(	Material-recipe[35]	_	_	
+14-12	1212-1215	III	Material-recipe[35]	_	_	
+14-13	1215-1216	)	Material-recipe[35]	_	_	
+14-14	1217-1223	iodide	Material-recipe[35]	_	_	
+14-15	1224-1225	(	_	_	_	
+14-16	1225-1230	0.089	Value[36]	_	_	
+14-17	1231-1232	g	Value[36]	_	_	
+14-18	1232-1233	,	_	_	_	
+14-19	1234-1239	0.150	Value[37]	_	_	
+14-20	1240-1244	mmol	Value[37]	_	_	
+14-21	1244-1245	)	_	_	_	
+14-22	1246-1250	were	_	_	_	
+14-23	1251-1261	separately	Descriptor	_	_	
+14-24	1262-1271	dissolved	Operation	Descriptor-of|Participant-material|Participant-material|Next-operation	14-23|14-10[35_0]|14-1|14-31	
+14-25	1272-1274	in	_	_	_	
+14-26	1275-1282	minimum	Value[38]	_	_	
+14-27	1283-1290	amounts	Value[38]	_	_	
+14-28	1291-1293	of	_	_	_	
+14-29	1294-1297	NMP	Material-intermedium	_	_	
+14-30	1298-1301	and	_	_	_	
+14-31	1302-1310	prepared	Operation	_	_	
+14-32	1311-1313	as	_	_	_	
+14-33	1314-1317	for	_	_	_	
+14-34	1318-1319	2	_	_	_	
+14-35	1319-1320	.	_	_	_	

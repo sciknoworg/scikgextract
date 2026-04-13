@@ -1,0 +1,226 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of CaAl2Si2 were synthesized via an argon arc-melt method19,22,32.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-35	CaAl2Si2	Material-target	Descriptor-of	1-1	
+1-5	36-40	were	_	_	_	
+1-6	41-52	synthesized	Operation	Coreference|Participant-material	1-9[1_0]|1-4	
+1-7	53-56	via	_	_	_	
+1-8	57-59	an	_	_	_	
+1-9	60-65	argon	Operation[1]	_	_	
+1-10	66-74	arc-melt	Operation[1]	_	_	
+1-11	75-89	method19,22,32	Operation[1]	_	_	
+1-12	89-90	.	_	_	_	
+
+#Text=For compensation of possible loss of Ca, the starting weight of Ca was augmented by an excess of approximately 10 percent.
+2-1	91-94	For	_	_	_	
+2-2	95-107	compensation	_	_	_	
+2-3	108-110	of	_	_	_	
+2-4	111-119	possible	_	_	_	
+2-5	120-124	loss	_	_	_	
+2-6	125-127	of	_	_	_	
+2-7	128-130	Ca	_	_	_	
+2-8	130-131	,	_	_	_	
+2-9	132-135	the	_	_	_	
+2-10	136-144	starting	Descriptor[2]	_	_	
+2-11	145-151	weight	Descriptor[2]	_	_	
+2-12	152-154	of	_	_	_	
+2-13	155-157	Ca	Material-recipe	Descriptor-of|Value-of	2-10[2_0]|2-20[4_0]	
+2-14	158-161	was	_	_	_	
+2-15	162-171	augmented	Operation	Participant-material	2-13	
+2-16	172-174	by	_	_	_	
+2-17	175-177	an	Descriptor[3]	_	_	
+2-18	178-184	excess	Descriptor[3]	_	_	
+2-19	185-187	of	_	_	_	
+2-20	188-201	approximately	Value[4]	Descriptor-of	2-17[3_4]	
+2-21	202-204	10	Value[4]	_	_	
+2-22	205-212	percent	Value[4]	_	_	
+2-23	212-213	.	_	_	_	
+
+#Text=Samples, once synthesized, are stable in air over at least one year.
+3-1	214-221	Samples	_	_	_	
+3-2	221-222	,	_	_	_	
+3-3	223-227	once	_	_	_	
+3-4	228-239	synthesized	_	_	_	
+3-5	239-240	,	_	_	_	
+3-6	241-244	are	_	_	_	
+3-7	245-251	stable	_	_	_	
+3-8	252-254	in	_	_	_	
+3-9	255-258	air	_	_	_	
+3-10	259-263	over	_	_	_	
+3-11	264-266	at	_	_	_	
+3-12	267-272	least	_	_	_	
+3-13	273-276	one	_	_	_	
+3-14	277-281	year	_	_	_	
+3-15	281-282	.	_	_	_	
+
+#Text=X-ray and neutron powder diffraction analyses (see SM) confirmed the stoichiometry as well as the single-phase structure with lattice parameters which are in excellent agreement with earlier reports19,22,32,33.
+4-1	283-288	X-ray	_	_	_	
+4-2	289-292	and	_	_	_	
+4-3	293-300	neutron	_	_	_	
+4-4	301-307	powder	_	_	_	
+4-5	308-319	diffraction	_	_	_	
+4-6	320-328	analyses	_	_	_	
+4-7	329-330	(	_	_	_	
+4-8	330-333	see	_	_	_	
+4-9	334-336	SM	_	_	_	
+4-10	336-337	)	_	_	_	
+4-11	338-347	confirmed	_	_	_	
+4-12	348-351	the	_	_	_	
+4-13	352-365	stoichiometry	_	_	_	
+4-14	366-368	as	_	_	_	
+4-15	369-373	well	_	_	_	
+4-16	374-376	as	_	_	_	
+4-17	377-380	the	_	_	_	
+4-18	381-393	single-phase	_	_	_	
+4-19	394-403	structure	_	_	_	
+4-20	404-408	with	_	_	_	
+4-21	409-416	lattice	_	_	_	
+4-22	417-427	parameters	_	_	_	
+4-23	428-433	which	_	_	_	
+4-24	434-437	are	_	_	_	
+4-25	438-440	in	_	_	_	
+4-26	441-450	excellent	_	_	_	
+4-27	451-460	agreement	_	_	_	
+4-28	461-465	with	_	_	_	
+4-29	466-473	earlier	_	_	_	
+4-30	474-492	reports19,22,32,33	_	_	_	
+4-31	492-493	.	_	_	_	
+
+#Text=Two pressure cells were used for measuring a four-point DC magnetoresistance within 2 ≤ T ≤ 300 K and H ≤ 90 K.
+5-1	494-497	Two	_	_	_	
+5-2	498-506	pressure	_	_	_	
+5-3	507-512	cells	_	_	_	
+5-4	513-517	were	_	_	_	
+5-5	518-522	used	_	_	_	
+5-6	523-526	for	_	_	_	
+5-7	527-536	measuring	_	_	_	
+5-8	537-538	a	_	_	_	
+5-9	539-549	four-point	_	_	_	
+5-10	550-552	DC	_	_	_	
+5-11	553-570	magnetoresistance	_	_	_	
+5-12	571-577	within	_	_	_	
+5-13	578-579	2	_	_	_	
+5-14	580-581	≤	_	_	_	
+5-15	582-583	T	_	_	_	
+5-16	584-585	≤	_	_	_	
+5-17	586-589	300	_	_	_	
+5-18	590-591	K	_	_	_	
+5-19	592-595	and	_	_	_	
+5-20	596-597	H	_	_	_	
+5-21	598-599	≤	_	_	_	
+5-22	600-602	90	_	_	_	
+5-23	603-604	K	_	_	_	
+5-24	604-605	.	_	_	_	
+
+#Text=One cell (up to 10 kbar) uses extraction naphtha as a pressure-transmitting fluid and a heavily doped bulk n-InSb single crystal as a pressure gauge.
+6-1	606-609	One	_	_	_	
+6-2	610-614	cell	_	_	_	
+6-3	615-616	(	_	_	_	
+6-4	616-618	up	_	_	_	
+6-5	619-621	to	_	_	_	
+6-6	622-624	10	_	_	_	
+6-7	625-629	kbar	_	_	_	
+6-8	629-630	)	_	_	_	
+6-9	631-635	uses	_	_	_	
+6-10	636-646	extraction	_	_	_	
+6-11	647-654	naphtha	_	_	_	
+6-12	655-657	as	_	_	_	
+6-13	658-659	a	_	_	_	
+6-14	660-681	pressure-transmitting	_	_	_	
+6-15	682-687	fluid	_	_	_	
+6-16	688-691	and	_	_	_	
+6-17	692-693	a	_	_	_	
+6-18	694-701	heavily	_	_	_	
+6-19	702-707	doped	_	_	_	
+6-20	708-712	bulk	_	_	_	
+6-21	713-719	n-InSb	_	_	_	
+6-22	720-726	single	_	_	_	
+6-23	727-734	crystal	_	_	_	
+6-24	735-737	as	_	_	_	
+6-25	738-739	a	_	_	_	
+6-26	740-748	pressure	_	_	_	
+6-27	749-754	gauge	_	_	_	
+6-28	754-755	.	_	_	_	
+
+#Text=On this cell, both transverse and longitudinal resistances were studied and, in addition, Hall voltage was measured under the same experimental conditions.
+7-1	756-758	On	_	_	_	
+7-2	759-763	this	_	_	_	
+7-3	764-768	cell	_	_	_	
+7-4	768-769	,	_	_	_	
+7-5	770-774	both	_	_	_	
+7-6	775-785	transverse	_	_	_	
+7-7	786-789	and	_	_	_	
+7-8	790-802	longitudinal	_	_	_	
+7-9	803-814	resistances	_	_	_	
+7-10	815-819	were	_	_	_	
+7-11	820-827	studied	_	_	_	
+7-12	828-831	and	_	_	_	
+7-13	831-832	,	_	_	_	
+7-14	833-835	in	_	_	_	
+7-15	836-844	addition	_	_	_	
+7-16	844-845	,	_	_	_	
+7-17	846-850	Hall	_	_	_	
+7-18	851-858	voltage	_	_	_	
+7-19	859-862	was	_	_	_	
+7-20	863-871	measured	_	_	_	
+7-21	872-877	under	_	_	_	
+7-22	878-881	the	_	_	_	
+7-23	882-886	same	_	_	_	
+7-24	887-899	experimental	_	_	_	
+7-25	900-910	conditions	_	_	_	
+7-26	910-911	.	_	_	_	
+
+#Text=The second pressure cell (<30 kbar) uses Fluorinert and an extrapolated curve for pressure calibration; with this cell, only transverse resistivity was studied.
+8-1	912-915	The	_	_	_	
+8-2	916-922	second	_	_	_	
+8-3	923-931	pressure	_	_	_	
+8-4	932-936	cell	_	_	_	
+8-5	937-938	(	_	_	_	
+8-6	938-939	<	_	_	_	
+8-7	939-941	30	_	_	_	
+8-8	942-946	kbar	_	_	_	
+8-9	946-947	)	_	_	_	
+8-10	948-952	uses	_	_	_	
+8-11	953-963	Fluorinert	_	_	_	
+8-12	964-967	and	_	_	_	
+8-13	968-970	an	_	_	_	
+8-14	971-983	extrapolated	_	_	_	
+8-15	984-989	curve	_	_	_	
+8-16	990-993	for	_	_	_	
+8-17	994-1002	pressure	_	_	_	
+8-18	1003-1014	calibration	_	_	_	
+8-19	1014-1015	;	_	_	_	
+8-20	1016-1020	with	_	_	_	
+8-21	1021-1025	this	_	_	_	
+8-22	1026-1030	cell	_	_	_	
+8-23	1030-1031	,	_	_	_	
+8-24	1032-1036	only	_	_	_	
+8-25	1037-1047	transverse	_	_	_	
+8-26	1048-1059	resistivity	_	_	_	
+8-27	1060-1063	was	_	_	_	
+8-28	1064-1071	studied	_	_	_	
+8-29	1071-1072	.	_	_	_	
+
+#Text=In all cases, phonon contribution to ρT,P is taken to be H-independent.
+9-1	1073-1075	In	_	_	_	
+9-2	1076-1079	all	_	_	_	
+9-3	1080-1085	cases	_	_	_	
+9-4	1085-1086	,	_	_	_	
+9-5	1087-1093	phonon	_	_	_	
+9-6	1094-1106	contribution	_	_	_	
+9-7	1107-1109	to	_	_	_	
+9-8	1110-1112	ρT	_	_	_	
+9-9	1112-1113	,	_	_	_	
+9-10	1113-1114	P	_	_	_	
+9-11	1115-1117	is	_	_	_	
+9-12	1118-1123	taken	_	_	_	
+9-13	1124-1126	to	_	_	_	
+9-14	1127-1129	be	_	_	_	
+9-15	1130-1143	H-independent	_	_	_	
+9-16	1143-1144	.	_	_	_	

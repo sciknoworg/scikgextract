@@ -1,0 +1,250 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The single crystals of LiMn6Sn6 were grown by the self-
+#Text=ﬂux method.
+1-1	0-3	The	_	_	_	
+1-2	4-10	single	_	_	_	
+1-3	11-19	crystals	_	_	_	
+1-4	20-22	of	_	_	_	
+1-5	23-31	LiMn6Sn6	_	_	_	
+1-6	32-36	were	_	_	_	
+1-7	37-42	grown	_	_	_	
+1-8	43-45	by	_	_	_	
+1-9	46-49	the	_	_	_	
+1-10	50-54	self	_	_	_	
+1-11	54-55	-	_	_	_	
+1-12	56-59	ﬂux	_	_	_	
+1-13	60-66	method	_	_	_	
+1-14	66-67	.	_	_	_	
+
+#Text=Li, Mn, and Sn with atomic ratio of Li : Mn : Sn
+#Text== 3 : 3 : 10 were loaded in a Ta crucible, and a Ta ﬁlter with
+#Text=drilled holes was then knocked into the crucible.
+2-1	68-70	Li	Material-recipe	Value-of	2-8[1_0]	
+2-2	70-71	,	_	_	_	
+2-3	72-74	Mn	Material-recipe	Value-of	2-8[1_0]	
+2-4	74-75	,	_	_	_	
+2-5	76-79	and	_	_	_	
+2-6	80-82	Sn	Material-recipe	Value-of	2-8[1_0]	
+2-7	83-87	with	_	_	_	
+2-8	88-94	atomic	Value[1]	Descriptor-of	2-11[2_1]	
+2-9	95-100	ratio	Value[1]	_	_	
+2-10	101-103	of	_	_	_	
+2-11	104-106	Li	Descriptor[2]	_	_	
+2-12	107-108	:	Descriptor[2]	_	_	
+2-13	109-111	Mn	Descriptor[2]	_	_	
+2-14	112-113	:	Descriptor[2]	_	_	
+2-15	114-116	Sn	Descriptor[2]	_	_	
+2-16	117-118	=	Descriptor[2]	_	_	
+2-17	119-120	3	Descriptor[2]	_	_	
+2-18	121-122	:	Descriptor[2]	_	_	
+2-19	123-124	3	Descriptor[2]	_	_	
+2-20	125-126	:	Descriptor[2]	_	_	
+2-21	127-129	10	Descriptor[2]	_	_	
+2-22	130-134	were	_	_	_	
+2-23	135-141	loaded	Operation	Participant-material|Participant-material|Participant-material|Device-of-operation|Device-of-operation|Next-operation	2-1|2-3|2-6|2-27|2-32|2-38	
+2-24	142-144	in	_	_	_	
+2-25	145-146	a	Value	_	_	
+2-26	147-149	Ta	Descriptor	_	_	
+2-27	150-158	crucible	Device	Value-of|Descriptor-of	2-25|2-26	
+2-28	158-159	,	_	_	_	
+2-29	160-163	and	_	_	_	
+2-30	164-165	a	Value	_	_	
+2-31	166-168	Ta	Descriptor	_	_	
+2-32	169-174	ﬁlter	Device	Value-of|Descriptor-of|Descriptor-of	2-30|2-31|2-34[3_0]	
+2-33	175-179	with	_	_	_	
+2-34	180-187	drilled	Descriptor[3]	_	_	
+2-35	188-193	holes	Descriptor[3]	_	_	
+2-36	194-197	was	_	_	_	
+2-37	198-202	then	_	_	_	
+2-38	203-210	knocked	Operation	Device-of-operation	2-41	
+2-39	211-215	into	_	_	_	
+2-40	216-219	the	_	_	_	
+2-41	220-228	crucible	Device	_	_	
+2-42	228-229	.	_	_	_	
+
+#Text=The crucible
+#Text=was ﬁnally arc welded with a Ta cap and sealed in an evac-
+#Text=uated quartz tube.
+3-1	230-233	The	_	_	_	
+3-2	234-242	crucible	Device	_	_	
+3-3	243-246	was	_	_	_	
+3-4	247-253	ﬁnally	_	_	_	
+3-5	254-257	arc	Operation[4]	Device-of-operation|Device-of-operation|Next-operation	3-2[0_4]|3-10[0_4]|3-12[0_4]	
+3-6	258-264	welded	Operation[4]	_	_	
+3-7	265-269	with	_	_	_	
+3-8	270-271	a	Value	_	_	
+3-9	272-274	Ta	Descriptor	_	_	
+3-10	275-278	cap	Device	Value-of|Descriptor-of	3-8|3-9	
+3-11	279-282	and	_	_	_	
+3-12	283-289	sealed	Operation	Device-of-operation	3-19	
+3-13	290-292	in	_	_	_	
+3-14	293-295	an	Value	_	_	
+3-15	296-300	evac	Descriptor[5]	_	_	
+3-16	300-301	-	Descriptor[5]	_	_	
+3-17	302-307	uated	Descriptor[5]	_	_	
+3-18	308-314	quartz	Descriptor	_	_	
+3-19	315-319	tube	Device	Value-of|Descriptor-of|Descriptor-of	3-14|3-15[5_0]|3-18	
+3-20	319-320	.	_	_	_	
+
+#Text=The tube was heated to 1000 ◦C, kept for
+#Text=20 hs, and then cooled down to 500 ◦C with a rate of 3 ◦C/h.
+4-1	321-324	The	_	_	_	
+4-2	325-329	tube	Device	_	_	
+4-3	330-333	was	_	_	_	
+4-4	334-340	heated	Operation	Device-of-operation|Condition-of|Next-operation	4-2|4-6[6_0]|4-10	
+4-5	341-343	to	_	_	_	
+4-6	344-348	1000	Property-temperature[6]	_	_	
+4-7	349-350	◦	Property-temperature[6]	_	_	
+4-8	350-351	C	Property-temperature[6]	_	_	
+4-9	351-352	,	_	_	_	
+4-10	353-357	kept	Operation	Condition-of|Next-operation	4-12[7_0]|4-17[8_0]	
+4-11	358-361	for	_	_	_	
+4-12	362-364	20	Property-time[7]	_	_	
+4-13	365-367	hs	Property-time[7]	_	_	
+4-14	367-368	,	_	_	_	
+4-15	369-372	and	_	_	_	
+4-16	373-377	then	_	_	_	
+4-17	378-384	cooled	Operation[8]	Condition-of|Condition-of	4-20[9_8]|4-25[0_8]	
+4-18	385-389	down	Operation[8]	_	_	
+4-19	390-392	to	_	_	_	
+4-20	393-396	500	Property-temperature[9]	_	_	
+4-21	397-398	◦	Property-temperature[9]	_	_	
+4-22	398-399	C	Property-temperature[9]	_	_	
+4-23	400-404	with	_	_	_	
+4-24	405-406	a	_	_	_	
+4-25	407-411	rate	Property-rate	Coreference	4-27[10_0]	
+4-26	412-414	of	_	_	_	
+4-27	415-416	3	Property-rate[10]	_	_	
+4-28	417-418	◦	Property-rate[10]	_	_	
+4-29	418-419	C	Property-rate[10]	_	_	
+4-30	419-420	/	Property-rate[10]	_	_	
+4-31	420-421	h	Property-rate[10]	_	_	
+4-32	421-422	.	_	_	_	
+
+#Text=After that, the tube was centrifuged to separate the crys-
+#Text=tals from ﬂux.
+5-1	423-428	After	_	_	_	
+5-2	429-433	that	_	_	_	
+5-3	433-434	,	_	_	_	
+5-4	435-438	the	_	_	_	
+5-5	439-443	tube	Device	_	_	
+5-6	444-447	was	_	_	_	
+5-7	448-459	centrifuged	Operation	Device-of-operation|Next-operation	5-5|5-9	
+5-8	460-462	to	_	_	_	
+5-9	463-471	separate	Operation	Participant-material|Participant-material	5-11[11_0]|5-15	
+5-10	472-475	the	_	_	_	
+5-11	476-480	crys	Material-others[11]	_	_	
+5-12	480-481	-	Material-others[11]	_	_	
+5-13	482-486	tals	Material-others[11]	_	_	
+5-14	487-491	from	_	_	_	
+5-15	492-495	ﬂux	Material-others	_	_	
+5-16	495-496	.	_	_	_	
+
+#Text=Hexagonal plate-shaped single crystals were
+#Text=obtained without signiﬁcant air sensitivity.
+6-1	497-506	Hexagonal	_	_	_	
+6-2	507-519	plate-shaped	_	_	_	
+6-3	520-526	single	_	_	_	
+6-4	527-535	crystals	_	_	_	
+6-5	536-540	were	_	_	_	
+6-6	541-549	obtained	_	_	_	
+6-7	550-557	without	_	_	_	
+6-8	558-568	signiﬁcant	_	_	_	
+6-9	569-572	air	_	_	_	
+6-10	573-584	sensitivity	_	_	_	
+6-11	584-585	.	_	_	_	
+
+#Text=The crystal struc-
+#Text=ture of the samples was checked by x-ray diffraction (XRD)
+#Text=on a PANalytical diffractometer with Cu Kα radiation at
+#Text=room temperature.
+7-1	586-589	The	_	_	_	
+7-2	590-597	crystal	_	_	_	
+7-3	598-603	struc	_	_	_	
+7-4	603-604	-	_	_	_	
+7-5	605-609	ture	_	_	_	
+7-6	610-612	of	_	_	_	
+7-7	613-616	the	_	_	_	
+7-8	617-624	samples	_	_	_	
+7-9	625-628	was	_	_	_	
+7-10	629-636	checked	_	_	_	
+7-11	637-639	by	_	_	_	
+7-12	640-645	x-ray	_	_	_	
+7-13	646-657	diffraction	_	_	_	
+7-14	658-659	(	_	_	_	
+7-15	659-662	XRD	_	_	_	
+7-16	662-663	)	_	_	_	
+7-17	664-666	on	_	_	_	
+7-18	667-668	a	_	_	_	
+7-19	669-680	PANalytical	_	_	_	
+7-20	681-695	diffractometer	_	_	_	
+7-21	696-700	with	_	_	_	
+7-22	701-703	Cu	_	_	_	
+7-23	704-706	Kα	_	_	_	
+7-24	707-716	radiation	_	_	_	
+7-25	717-719	at	_	_	_	
+7-26	720-724	room	_	_	_	
+7-27	725-736	temperature	_	_	_	
+7-28	736-737	.	_	_	_	
+
+#Text=The hexagonal plate-shaped crystals were
+#Text=used for the magnetic properties measurements, and were
+#Text=cut into sticks before the electrical transport measurements.
+8-1	738-741	The	_	_	_	
+8-2	742-751	hexagonal	_	_	_	
+8-3	752-764	plate-shaped	_	_	_	
+8-4	765-773	crystals	_	_	_	
+8-5	774-778	were	_	_	_	
+8-6	779-783	used	_	_	_	
+8-7	784-787	for	_	_	_	
+8-8	788-791	the	_	_	_	
+8-9	792-800	magnetic	_	_	_	
+8-10	801-811	properties	_	_	_	
+8-11	812-824	measurements	_	_	_	
+8-12	824-825	,	_	_	_	
+8-13	826-829	and	_	_	_	
+8-14	830-834	were	_	_	_	
+8-15	835-838	cut	_	_	_	
+8-16	839-843	into	_	_	_	
+8-17	844-850	sticks	_	_	_	
+8-18	851-857	before	_	_	_	
+8-19	858-861	the	_	_	_	
+8-20	862-872	electrical	_	_	_	
+8-21	873-882	transport	_	_	_	
+8-22	883-895	measurements	_	_	_	
+8-23	895-896	.	_	_	_	
+
+#Text=The magnetic properties and electrical transport properties
+#Text=were measured on a Quantum Design Magnetic Properties
+#Text=Measurement System and a Physical Properties Measurement
+#Text=System, respectively.
+9-1	897-900	The	_	_	_	
+9-2	901-909	magnetic	_	_	_	
+9-3	910-920	properties	_	_	_	
+9-4	921-924	and	_	_	_	
+9-5	925-935	electrical	_	_	_	
+9-6	936-945	transport	_	_	_	
+9-7	946-956	properties	_	_	_	
+9-8	957-961	were	_	_	_	
+9-9	962-970	measured	_	_	_	
+9-10	971-973	on	_	_	_	
+9-11	974-975	a	_	_	_	
+9-12	976-983	Quantum	_	_	_	
+9-13	984-990	Design	_	_	_	
+9-14	991-999	Magnetic	_	_	_	
+9-15	1000-1010	Properties	_	_	_	
+9-16	1011-1022	Measurement	_	_	_	
+9-17	1023-1029	System	_	_	_	
+9-18	1030-1033	and	_	_	_	
+9-19	1034-1035	a	_	_	_	
+9-20	1036-1044	Physical	_	_	_	
+9-21	1045-1055	Properties	_	_	_	
+9-22	1056-1067	Measurement	_	_	_	
+9-23	1068-1074	System	_	_	_	
+9-24	1074-1075	,	_	_	_	
+9-25	1076-1088	respectively	_	_	_	
+9-26	1088-1089	.	_	_	_	

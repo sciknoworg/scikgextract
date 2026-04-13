@@ -1,0 +1,81 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A polycrystalline sample was prepared using a solid state
+#Text=reaction based on pure La2O3, SrCO3, NiO, Re2O7, and Re
+#Text=metal as starting materials.
+1-1	0-1	A	Value	_	_	
+1-2	2-17	polycrystalline	Descriptor	_	_	
+1-3	18-24	sample	Material-target	Value-of|Descriptor-of	1-1|1-2	
+1-4	25-28	was	_	_	_	
+1-5	29-37	prepared	Operation	Participant-material	1-3	
+1-6	38-43	using	_	_	_	
+1-7	44-45	a	_	_	_	
+1-8	46-51	solid	Operation[1]	Participant-material|Participant-material|Participant-material|Participant-material|Participant-material|Coreference	1-14[0_1]|1-16[0_1]|1-18[0_1]|1-20[0_1]|1-23[0_1]|1-5[0_1]	
+1-9	52-57	state	Operation[1]	_	_	
+1-10	58-66	reaction	Operation[1]	_	_	
+1-11	67-72	based	_	_	_	
+1-12	73-75	on	_	_	_	
+1-13	76-80	pure	Descriptor	_	_	
+1-14	81-86	La2O3	Material-recipe	Descriptor-of|Coreference	1-13|1-27	
+1-15	86-87	,	_	_	_	
+1-16	88-93	SrCO3	Material-recipe	Coreference	1-27	
+1-17	93-94	,	_	_	_	
+1-18	95-98	NiO	Material-recipe	Coreference	1-27	
+1-19	98-99	,	_	_	_	
+1-20	100-105	Re2O7	Material-recipe	Coreference	1-27	
+1-21	105-106	,	_	_	_	
+1-22	107-110	and	_	_	_	
+1-23	111-113	Re	Material-recipe	Descriptor-of|Coreference	1-24|1-27	
+1-24	114-119	metal	Descriptor	_	_	
+1-25	120-122	as	_	_	_	
+1-26	123-131	starting	Descriptor	_	_	
+1-27	132-141	materials	Material-recipe	Descriptor-of	1-26	
+1-28	141-142	.	_	_	_	
+
+#Text=Stoichiometric mixtures of the
+#Text=starting materials reacted in different steps at high temperatures, resulting in a single-phased LaSrNiReO6.
+2-1	143-157	Stoichiometric	Descriptor	_	_	
+2-2	158-166	mixtures	Material-intermedium	Descriptor-of|Coreference	2-1|2-6	
+2-3	167-169	of	_	_	_	
+2-4	170-173	the	_	_	_	
+2-5	174-182	starting	Descriptor	_	_	
+2-6	183-192	materials	Material-recipe	Descriptor-of	2-5	
+2-7	193-200	reacted	Operation	Participant-material|Condition-of	2-2|2-12[2_0]	
+2-8	201-203	in	_	_	_	
+2-9	204-213	different	_	_	_	
+2-10	214-219	steps	_	_	_	
+2-11	220-222	at	_	_	_	
+2-12	223-227	high	Property-temperature[2]	_	_	
+2-13	228-240	temperatures	Property-temperature[2]	_	_	
+2-14	240-241	,	_	_	_	
+2-15	242-251	resulting	_	_	_	
+2-16	252-254	in	_	_	_	
+2-17	255-256	a	Value	_	_	
+2-18	257-270	single-phased	Descriptor	_	_	
+2-19	271-281	LaSrNiReO6	Material-target	Value-of|Descriptor-of	2-17|2-18	
+2-20	281-282	.	_	_	_	
+
+#Text=Details about
+#Text=the synthesis and basic characterization of the sample are
+#Text=found in Ref. [29]
+3-1	283-290	Details	_	_	_	
+3-2	291-296	about	_	_	_	
+3-3	297-300	the	_	_	_	
+3-4	301-310	synthesis	_	_	_	
+3-5	311-314	and	_	_	_	
+3-6	315-320	basic	_	_	_	
+3-7	321-337	characterization	_	_	_	
+3-8	338-340	of	_	_	_	
+3-9	341-344	the	_	_	_	
+3-10	345-351	sample	_	_	_	
+3-11	352-355	are	_	_	_	
+3-12	356-361	found	_	_	_	
+3-13	362-364	in	_	_	_	
+3-14	365-368	Ref	_	_	_	
+3-15	368-369	.	_	_	_	
+3-16	370-371	[	_	_	_	
+3-17	371-373	29	_	_	_	
+3-18	373-374	]	_	_	_	

@@ -1,0 +1,164 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Ba0.65Rb0.35Fe2As2 were prepared in evacuated quartz ampoules by a solid-state reaction method.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-45	Ba0.65Rb0.35Fe2As2	Material-target	Descriptor-of	1-1	
+1-5	46-50	were	_	_	_	
+1-6	51-59	prepared	Operation	Device-of-operation|Coreference|Participant-material	1-10|1-13[1_0]|1-4	
+1-7	60-62	in	_	_	_	
+1-8	63-72	evacuated	Descriptor	_	_	
+1-9	73-79	quartz	Descriptor	_	_	
+1-10	80-88	ampoules	Device	Descriptor-of|Descriptor-of	1-9|1-8	
+1-11	89-91	by	_	_	_	
+1-12	92-93	a	_	_	_	
+1-13	94-105	solid-state	Operation[1]	_	_	
+1-14	106-114	reaction	Operation[1]	_	_	
+1-15	115-121	method	Operation[1]	_	_	
+1-16	121-122	.	_	_	_	
+
+#Text=Fe2As, BaAs and RbAs were obtained by reacting high-purity As (99.999 %), Fe (99.9%), Ba (99.9%) and Rb (99.95%) at 800, 650 and 500 °C, respectively.
+2-1	123-128	Fe2As	Material-recipe	_	_	
+2-2	128-129	,	_	_	_	
+2-3	130-134	BaAs	Material-recipe	_	_	
+2-4	135-138	and	_	_	_	
+2-5	139-143	RbAs	Material-recipe	_	_	
+2-6	144-148	were	_	_	_	
+2-7	149-157	obtained	Operation	Participant-material|Participant-material|Participant-material	2-5|2-3|2-1	
+2-8	158-160	by	_	_	_	
+2-9	161-169	reacting	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Participant-material|Condition-of|Condition-of|Condition-of|Coreference	2-40|2-11|2-17|2-22|2-27|2-32|2-34|2-36[2_0]|2-7	
+2-10	170-181	high-purity	Descriptor	_	_	
+2-11	182-184	As	Material-recipe	Value-of|Descriptor-of	2-13|2-10	
+2-12	185-186	(	_	_	_	
+2-13	186-192	99.999	Value	_	_	
+2-14	193-194	%	_	_	_	
+2-15	194-195	)	_	_	_	
+2-16	195-196	,	_	_	_	
+2-17	197-199	Fe	Material-recipe	Value-of|Descriptor-of	2-19|2-10	
+2-18	200-201	(	_	_	_	
+2-19	201-206	99.9%	Value	_	_	
+2-20	206-207	)	_	_	_	
+2-21	207-208	,	_	_	_	
+2-22	209-211	Ba	Material-recipe	Value-of|Descriptor-of	2-24|2-10	
+2-23	212-213	(	_	_	_	
+2-24	213-218	99.9%	Value	_	_	
+2-25	218-219	)	_	_	_	
+2-26	220-223	and	_	_	_	
+2-27	224-226	Rb	Material-recipe	Value-of|Descriptor-of	2-29|2-10	
+2-28	227-228	(	_	_	_	
+2-29	228-234	99.95%	Value	_	_	
+2-30	234-235	)	_	_	_	
+2-31	236-238	at	_	_	_	
+2-32	239-242	800	Property-temperature	_	_	
+2-33	242-243	,	_	_	_	
+2-34	244-247	650	Property-temperature	_	_	
+2-35	248-251	and	_	_	_	
+2-36	252-255	500	Property-temperature[2]	_	_	
+2-37	256-257	°	Property-temperature[2]	_	_	
+2-38	257-258	C	Property-temperature[2]	_	_	
+2-39	258-259	,	_	_	_	
+2-40	260-272	respectively	Descriptor	_	_	
+2-41	272-273	.	_	_	_	
+
+#Text=Using stoichiometric amounts of BaAs or RbAs and Fe2As, the terminal compounds BaFe2As2 and RbFe2As2 were synthesized at 950 and 650 °C, respectively.
+3-1	274-279	Using	_	_	_	
+3-2	280-294	stoichiometric	Value[3]	_	_	
+3-3	295-302	amounts	Value[3]	_	_	
+3-4	303-305	of	_	_	_	
+3-5	306-310	BaAs	Material-recipe	Value-of	3-2[3_0]	
+3-6	311-313	or	_	_	_	
+3-7	314-318	RbAs	Material-recipe	Value-of	3-2[3_0]	
+3-8	319-322	and	_	_	_	
+3-9	323-328	Fe2As	Material-recipe	Value-of	3-2[3_0]	
+3-10	328-329	,	_	_	_	
+3-11	330-333	the	_	_	_	
+3-12	334-342	terminal	_	_	_	
+3-13	343-352	compounds	_	_	_	
+3-14	353-361	BaFe2As2	Material-target	_	_	
+3-15	362-365	and	_	_	_	
+3-16	366-374	RbFe2As2	Material-target	_	_	
+3-17	375-379	were	_	_	_	
+3-18	380-391	synthesized	Operation	Participant-material|Participant-material|Participant-material|Condition-of	3-5|3-7|3-9|3-20[4_0]	
+3-19	392-394	at	_	_	_	
+3-20	395-398	950	Property-temperature[4]	_	_	
+3-21	399-402	and	Property-temperature[4]	_	_	
+3-22	403-406	650	Property-temperature[4]	_	_	
+3-23	407-408	°	Property-temperature[4]	_	_	
+3-24	408-409	C	Property-temperature[4]	_	_	
+3-25	409-410	,	Property-temperature[4]	_	_	
+3-26	411-423	respectively	Property-temperature[4]	_	_	
+3-27	423-424	.	_	_	_	
+
+#Text=Finally, samples of Ba1−xRbxFe2As2 with x=0.35 were prepared from appropriate amounts of single-phase BaFe2As2 and RbFe2As2.
+4-1	425-432	Finally	_	_	_	
+4-2	432-433	,	_	_	_	
+4-3	434-441	samples	_	_	_	
+4-4	442-444	of	_	_	_	
+4-5	445-448	Ba1	Material-target[5]	Descriptor-of	4-9[6_5]	
+4-6	448-449	−	Material-target[5]	_	_	
+4-7	449-459	xRbxFe2As2	Material-target[5]	_	_	
+4-8	460-464	with	_	_	_	
+4-9	465-466	x	Descriptor[6]	_	_	
+4-10	466-467	=	Descriptor[6]	_	_	
+4-11	467-471	0.35	Descriptor[6]	_	_	
+4-12	472-476	were	_	_	_	
+4-13	477-485	prepared	Operation	Participant-material|Participant-material|Participant-material	4-19|4-21|4-5[5_0]	
+4-14	486-490	from	_	_	_	
+4-15	491-502	appropriate	Value[7]	_	_	
+4-16	503-510	amounts	Value[7]	_	_	
+4-17	511-513	of	_	_	_	
+4-18	514-526	single-phase	Descriptor	_	_	
+4-19	527-535	BaFe2As2	Material-target	Descriptor-of|Value-of	4-18|4-15[7_0]	
+4-20	536-539	and	_	_	_	
+4-21	540-548	RbFe2As2	Material-target	Descriptor-of|Value-of	4-18|4-15[7_0]	
+4-22	548-549	.	_	_	_	
+
+#Text=The components were mixed, pressed into pellets, placed into alumina crucibles and annealed for 100 h under vacuum at 650 °C with one intermittent grinding.
+5-1	550-553	The	_	_	_	
+5-2	554-564	components	Material-intermedium	_	_	
+5-3	565-569	were	_	_	_	
+5-4	570-575	mixed	Operation	Participant-material	5-2	
+5-5	575-576	,	_	_	_	
+5-6	577-584	pressed	Operation	Next-operation|Next-operation	5-4|5-10	
+5-7	585-589	into	_	_	_	
+5-8	590-597	pellets	Material-intermedium	_	_	
+5-9	597-598	,	_	_	_	
+5-10	599-605	placed	Operation	Device-of-operation|Participant-material|Next-operation	5-13|5-8|5-15	
+5-11	606-610	into	_	_	_	
+5-12	611-618	alumina	Descriptor	_	_	
+5-13	619-628	crucibles	Device	Descriptor-of	5-12	
+5-14	629-632	and	_	_	_	
+5-15	633-641	annealed	Operation	Condition-of|Condition-of|Condition-of|Next-operation	5-17[8_0]|5-19[9_0]|5-22[10_0]|5-28	
+5-16	642-645	for	_	_	_	
+5-17	646-649	100	Property-time[8]	_	_	
+5-18	650-651	h	Property-time[8]	_	_	
+5-19	652-657	under	Property-pressure[9]	_	_	
+5-20	658-664	vacuum	Property-pressure[9]	_	_	
+5-21	665-667	at	_	_	_	
+5-22	668-671	650	Property-temperature[10]	_	_	
+5-23	672-673	°	Property-temperature[10]	_	_	
+5-24	673-674	C	Property-temperature[10]	_	_	
+5-25	675-679	with	_	_	_	
+5-26	680-683	one	Value	_	_	
+5-27	684-696	intermittent	Descriptor	_	_	
+5-28	697-705	grinding	Operation	Descriptor-of|Value-of	5-27|5-26	
+5-29	705-706	.	_	_	_	
+
+#Text=Powder X-ray diffraction analysis revealed that the synthesized samples are single-phase materials.
+6-1	707-713	Powder	_	_	_	
+6-2	714-719	X-ray	_	_	_	
+6-3	720-731	diffraction	_	_	_	
+6-4	732-740	analysis	_	_	_	
+6-5	741-749	revealed	_	_	_	
+6-6	750-754	that	_	_	_	
+6-7	755-758	the	_	_	_	
+6-8	759-770	synthesized	_	_	_	
+6-9	771-778	samples	_	_	_	
+6-10	779-782	are	_	_	_	
+6-11	783-795	single-phase	_	_	_	
+6-12	796-805	materials	_	_	_	
+6-13	805-806	.	_	_	_	

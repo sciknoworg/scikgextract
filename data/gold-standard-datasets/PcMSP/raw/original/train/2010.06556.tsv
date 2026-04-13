@@ -1,0 +1,249 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Ba2RhO4 were prepared by the solid-state reaction with a high-pressure technique using a cubic-anvil-type high-pressure apparatus (METEORITE).
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-34	Ba2RhO4	Material-target	Descriptor-of	1-1	
+1-5	35-39	were	_	_	_	
+1-6	40-48	prepared	Operation	Participant-material|Coreference|Condition-of|Device-of-operation	1-4|1-9[1_0]|1-13|1-19	
+1-7	49-51	by	_	_	_	
+1-8	52-55	the	_	_	_	
+1-9	56-67	solid-state	Operation[1]	_	_	
+1-10	68-76	reaction	Operation[1]	_	_	
+1-11	77-81	with	_	_	_	
+1-12	82-83	a	_	_	_	
+1-13	84-97	high-pressure	Property-pressure	_	_	
+1-14	98-107	technique	_	_	_	
+1-15	108-113	using	_	_	_	
+1-16	114-115	a	Value	_	_	
+1-17	116-132	cubic-anvil-type	Descriptor	_	_	
+1-18	133-146	high-pressure	Descriptor	_	_	
+1-19	147-156	apparatus	Device	Value-of|Descriptor-of|Descriptor-of|Brand-of	1-16|1-17|1-18|1-21	
+1-20	157-158	(	_	_	_	
+1-21	158-167	METEORITE	Brand	_	_	
+1-22	167-168	)	_	_	_	
+1-23	168-169	.	_	_	_	
+
+#Text=The stoichiometric mixture of BaO2(99.9%, Furuuchi Chemical Co., Ltd.) and Rh metal powder (99.96%, Furuya Metal Co., Ltd.) was encapsulated in a platinum tube in a glove box with a high-purity argon atmosphere.
+2-1	170-173	The	_	_	_	
+2-2	174-188	stoichiometric	Value	_	_	
+2-3	189-196	mixture	Material-intermedium	Value-of|Coreference|Coreference	2-2|2-5|2-18	
+2-4	197-199	of	_	_	_	
+2-5	200-204	BaO2	Material-recipe	Brand-of|Value-of	2-9[2_0]|2-7	
+2-6	204-205	(	_	_	_	
+2-7	205-210	99.9%	Value	_	_	
+2-8	210-211	,	_	_	_	
+2-9	212-220	Furuuchi	Brand[2]	_	_	
+2-10	221-229	Chemical	Brand[2]	_	_	
+2-11	230-232	Co	Brand[2]	_	_	
+2-12	232-233	.	Brand[2]	_	_	
+2-13	233-234	,	Brand[2]	_	_	
+2-14	235-238	Ltd	Brand[2]	_	_	
+2-15	238-239	.	Brand[2]	_	_	
+2-16	239-240	)	_	_	_	
+2-17	241-244	and	_	_	_	
+2-18	245-247	Rh	Material-recipe	Descriptor-of|Descriptor-of|Brand-of	2-19[3_0]|2-22|2-24[4_0]	
+2-19	248-253	metal	Descriptor[3]	_	_	
+2-20	254-260	powder	Descriptor[3]	_	_	
+2-21	261-262	(	_	_	_	
+2-22	262-268	99.96%	Value	_	_	
+2-23	268-269	,	_	_	_	
+2-24	270-276	Furuya	Brand[4]	_	_	
+2-25	277-282	Metal	Brand[4]	_	_	
+2-26	283-285	Co	Brand[4]	_	_	
+2-27	285-286	.	Brand[4]	_	_	
+2-28	286-287	,	Brand[4]	_	_	
+2-29	288-291	Ltd	Brand[4]	_	_	
+2-30	291-292	.	Brand[4]	_	_	
+2-31	292-293	)	_	_	_	
+2-32	294-297	was	_	_	_	
+2-33	298-310	encapsulated	Operation	Participant-material|Condition-of|Device-of-operation|Device-of-operation	2-3|2-45[6_0]|2-37|2-40[5_0]	
+2-34	311-313	in	_	_	_	
+2-35	314-315	a	Value	_	_	
+2-36	316-324	platinum	Descriptor	_	_	
+2-37	325-329	tube	Device	Value-of|Descriptor-of	2-35|2-36	
+2-38	330-332	in	_	_	_	
+2-39	333-334	a	Value	_	_	
+2-40	335-340	glove	Device[5]	Value-of	2-39[0_5]	
+2-41	341-344	box	Device[5]	_	_	
+2-42	345-349	with	_	_	_	
+2-43	350-351	a	_	_	_	
+2-44	352-363	high-purity	Descriptor	_	_	
+2-45	364-369	argon	Property-pressure[6]	Descriptor-of	2-44[0_6]	
+2-46	370-380	atmosphere	Property-pressure[6]	_	_	
+2-47	380-381	.	_	_	_	
+
+#Text=The sample was heated at 1350-1400 ◦C for 30 min. at 8 GPa, followed by quenching to room temperature before the pressure was released.
+3-1	382-385	The	_	_	_	
+3-2	386-392	sample	Material-intermedium	_	_	
+3-3	393-396	was	_	_	_	
+3-4	397-403	heated	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Next-operation	3-2|3-6[7_0]|3-12[8_0]|3-16[9_0]|3-21	
+3-5	404-406	at	_	_	_	
+3-6	407-411	1350	Property-temperature[7]	_	_	
+3-7	411-412	-	Property-temperature[7]	_	_	
+3-8	412-416	1400	Property-temperature[7]	_	_	
+3-9	417-418	◦	Property-temperature[7]	_	_	
+3-10	418-419	C	Property-temperature[7]	_	_	
+3-11	420-423	for	_	_	_	
+3-12	424-426	30	Property-time[8]	_	_	
+3-13	427-430	min	Property-time[8]	_	_	
+3-14	430-431	.	_	_	_	
+3-15	432-434	at	_	_	_	
+3-16	435-436	8	Property-pressure[9]	_	_	
+3-17	437-440	GPa	Property-pressure[9]	_	_	
+3-18	440-441	,	_	_	_	
+3-19	442-450	followed	_	_	_	
+3-20	451-453	by	_	_	_	
+3-21	454-463	quenching	Operation	Condition-of|Next-operation	3-23[10_0]|3-29	
+3-22	464-466	to	_	_	_	
+3-23	467-471	room	Property-temperature[10]	_	_	
+3-24	472-483	temperature	Property-temperature[10]	_	_	
+3-25	484-490	before	_	_	_	
+3-26	491-494	the	_	_	_	
+3-27	495-503	pressure	Property-pressure	_	_	
+3-28	504-507	was	_	_	_	
+3-29	508-516	released	Operation	Condition-of	3-27	
+3-30	516-517	.	_	_	_	
+
+#Text=The polycrystalline sample of Ba2RhO4 was obtained as a dense and black pellet.
+4-1	518-521	The	_	_	_	
+4-2	522-537	polycrystalline	_	_	_	
+4-3	538-544	sample	_	_	_	
+4-4	545-547	of	_	_	_	
+4-5	548-555	Ba2RhO4	_	_	_	
+4-6	556-559	was	_	_	_	
+4-7	560-568	obtained	_	_	_	
+4-8	569-571	as	_	_	_	
+4-9	572-573	a	_	_	_	
+4-10	574-579	dense	_	_	_	
+4-11	580-583	and	_	_	_	
+4-12	584-589	black	_	_	_	
+4-13	590-596	pellet	_	_	_	
+4-14	596-597	.	_	_	_	
+
+#Text=As the sample is sensitive to air and moisture, it was kept in a glove box.
+5-1	598-600	As	_	_	_	
+5-2	601-604	the	_	_	_	
+5-3	605-611	sample	Material-target	_	_	
+5-4	612-614	is	_	_	_	
+5-5	615-624	sensitive	_	_	_	
+5-6	625-627	to	_	_	_	
+5-7	628-631	air	_	_	_	
+5-8	632-635	and	_	_	_	
+5-9	636-644	moisture	_	_	_	
+5-10	644-645	,	_	_	_	
+5-11	646-648	it	Material-target	Coreference	5-3	
+5-12	649-652	was	_	_	_	
+5-13	653-657	kept	Operation	Participant-material|Device-of-operation	5-11|5-16[11_0]	
+5-14	658-660	in	_	_	_	
+5-15	661-662	a	Value	_	_	
+5-16	663-668	glove	Device[11]	Value-of	5-15[0_11]	
+5-17	669-672	box	Device[11]	_	_	
+5-18	672-673	.	_	_	_	
+
+#Text=The purity of the sample was checked by powder x-ray diffraction with Cu Kα radiation (BRUKER new D8).
+6-1	674-677	The	_	_	_	
+6-2	678-684	purity	_	_	_	
+6-3	685-687	of	_	_	_	
+6-4	688-691	the	_	_	_	
+6-5	692-698	sample	_	_	_	
+6-6	699-702	was	_	_	_	
+6-7	703-710	checked	_	_	_	
+6-8	711-713	by	_	_	_	
+6-9	714-720	powder	_	_	_	
+6-10	721-726	x-ray	_	_	_	
+6-11	727-738	diffraction	_	_	_	
+6-12	739-743	with	_	_	_	
+6-13	744-746	Cu	_	_	_	
+6-14	747-749	Kα	_	_	_	
+6-15	750-759	radiation	_	_	_	
+6-16	760-761	(	_	_	_	
+6-17	761-767	BRUKER	_	_	_	
+6-18	768-771	new	_	_	_	
+6-19	772-774	D8	_	_	_	
+6-20	774-775	)	_	_	_	
+6-21	775-776	.	_	_	_	
+
+#Text=The data for structure refinements were collected as well, by synchrotron powder x-ray diffraction with a wavelength of 0.68975 Å at BL-8B, Photon Factory, KEK, Japan.
+7-1	777-780	The	_	_	_	
+7-2	781-785	data	_	_	_	
+7-3	786-789	for	_	_	_	
+7-4	790-799	structure	_	_	_	
+7-5	800-811	refinements	_	_	_	
+7-6	812-816	were	_	_	_	
+7-7	817-826	collected	_	_	_	
+7-8	827-829	as	_	_	_	
+7-9	830-834	well	_	_	_	
+7-10	834-835	,	_	_	_	
+7-11	836-838	by	_	_	_	
+7-12	839-850	synchrotron	_	_	_	
+7-13	851-857	powder	_	_	_	
+7-14	858-863	x-ray	_	_	_	
+7-15	864-875	diffraction	_	_	_	
+7-16	876-880	with	_	_	_	
+7-17	881-882	a	_	_	_	
+7-18	883-893	wavelength	_	_	_	
+7-19	894-896	of	_	_	_	
+7-20	897-904	0.68975	_	_	_	
+7-21	905-906	Å	_	_	_	
+7-22	907-909	at	_	_	_	
+7-23	910-912	BL	_	_	_	
+7-24	912-913	-	_	_	_	
+7-25	913-915	8B	_	_	_	
+7-26	915-916	,	_	_	_	
+7-27	917-923	Photon	_	_	_	
+7-28	924-931	Factory	_	_	_	
+7-29	931-932	,	_	_	_	
+7-30	933-936	KEK	_	_	_	
+7-31	936-937	,	_	_	_	
+7-32	938-943	Japan	_	_	_	
+7-33	943-944	.	_	_	_	
+
+#Text=The diffraction data were analyzed using the Rietveld refinement using RIETAN-FP19.
+8-1	945-948	The	_	_	_	
+8-2	949-960	diffraction	_	_	_	
+8-3	961-965	data	_	_	_	
+8-4	966-970	were	_	_	_	
+8-5	971-979	analyzed	_	_	_	
+8-6	980-985	using	_	_	_	
+8-7	986-989	the	_	_	_	
+8-8	990-998	Rietveld	_	_	_	
+8-9	999-1009	refinement	_	_	_	
+8-10	1010-1015	using	_	_	_	
+8-11	1016-1027	RIETAN-FP19	_	_	_	
+8-12	1027-1028	.	_	_	_	
+
+#Text=The resistivity and specific heat were measured by the standard dc four-probe method.
+9-1	1029-1032	The	_	_	_	
+9-2	1033-1044	resistivity	_	_	_	
+9-3	1045-1048	and	_	_	_	
+9-4	1049-1057	specific	_	_	_	
+9-5	1058-1062	heat	_	_	_	
+9-6	1063-1067	were	_	_	_	
+9-7	1068-1076	measured	_	_	_	
+9-8	1077-1079	by	_	_	_	
+9-9	1080-1083	the	_	_	_	
+9-10	1084-1092	standard	_	_	_	
+9-11	1093-1095	dc	_	_	_	
+9-12	1096-1106	four-probe	_	_	_	
+9-13	1107-1113	method	_	_	_	
+9-14	1113-1114	.	_	_	_	
+
+#Text=Magnetic susceptibility data were collected by a superconducting quantum interference device magnetometer.
+10-1	1115-1123	Magnetic	_	_	_	
+10-2	1124-1138	susceptibility	_	_	_	
+10-3	1139-1143	data	_	_	_	
+10-4	1144-1148	were	_	_	_	
+10-5	1149-1158	collected	_	_	_	
+10-6	1159-1161	by	_	_	_	
+10-7	1162-1163	a	_	_	_	
+10-8	1164-1179	superconducting	_	_	_	
+10-9	1180-1187	quantum	_	_	_	
+10-10	1188-1200	interference	_	_	_	
+10-11	1201-1207	device	_	_	_	
+10-12	1208-1220	magnetometer	_	_	_	
+10-13	1220-1221	.	_	_	_	

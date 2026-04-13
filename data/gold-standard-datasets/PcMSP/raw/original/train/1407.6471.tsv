@@ -1,0 +1,136 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of the strontium doped indium oxide were prepared by a solid state processing described in details in Ref. [30].
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-30	the	_	_	_	
+1-5	31-40	strontium	Material-target[1]	Descriptor-of	1-1[0_1]	
+1-6	41-46	doped	Material-target[1]	_	_	
+1-7	47-53	indium	Material-target[1]	_	_	
+1-8	54-59	oxide	Material-target[1]	_	_	
+1-9	60-64	were	_	_	_	
+1-10	65-73	prepared	Operation	Participant-material	1-5[1_0]	
+1-11	74-76	by	_	_	_	
+1-12	77-78	a	_	_	_	
+1-13	79-84	solid	Operation[2]	Coreference	1-10[0_2]	
+1-14	85-90	state	Operation[2]	_	_	
+1-15	91-101	processing	Operation[2]	_	_	
+1-16	102-111	described	_	_	_	
+1-17	112-114	in	_	_	_	
+1-18	115-122	details	_	_	_	
+1-19	123-125	in	_	_	_	
+1-20	126-129	Ref	_	_	_	
+1-21	129-130	.	_	_	_	
+1-22	131-132	[	_	_	_	
+1-23	132-134	30	_	_	_	
+1-24	134-135	]	_	_	_	
+1-25	135-136	.	_	_	_	
+
+#Text=Its main advantages are the relative simplicity and cost-efficiency.
+2-1	137-140	Its	_	_	_	
+2-2	141-145	main	_	_	_	
+2-3	146-156	advantages	_	_	_	
+2-4	157-160	are	_	_	_	
+2-5	161-164	the	_	_	_	
+2-6	165-173	relative	_	_	_	
+2-7	174-184	simplicity	_	_	_	
+2-8	185-188	and	_	_	_	
+2-9	189-204	cost-efficiency	_	_	_	
+2-10	204-205	.	_	_	_	
+
+#Text=Differently doped samples were obtained by mixing fine grained powder of pure indium oxide with SrCO3 powder in distilled water.
+3-1	206-217	Differently	Descriptor[3]	_	_	
+3-2	218-223	doped	Descriptor[3]	_	_	
+3-3	224-231	samples	Material-target	Descriptor-of	3-1[3_0]	
+3-4	232-236	were	_	_	_	
+3-5	237-245	obtained	Operation	Participant-material	3-3	
+3-6	246-248	by	_	_	_	
+3-7	249-255	mixing	Operation	Participant-material|Participant-material|Participant-material|Coreference	3-13[5_0]|3-16|3-19[6_0]|3-5	
+3-8	256-260	fine	Descriptor[4]	_	_	
+3-9	261-268	grained	Descriptor[4]	_	_	
+3-10	269-275	powder	Descriptor	_	_	
+3-11	276-278	of	_	_	_	
+3-12	279-283	pure	Descriptor	_	_	
+3-13	284-290	indium	Material-recipe[5]	Descriptor-of|Descriptor-of|Descriptor-of	3-8[4_5]|3-10[0_5]|3-12[0_5]	
+3-14	291-296	oxide	Material-recipe[5]	_	_	
+3-15	297-301	with	_	_	_	
+3-16	302-307	SrCO3	Material-recipe	Descriptor-of	3-17	
+3-17	308-314	powder	Descriptor	_	_	
+3-18	315-317	in	_	_	_	
+3-19	318-327	distilled	Material-others[6]	_	_	
+3-20	328-333	water	Material-others[6]	_	_	
+3-21	333-334	.	_	_	_	
+
+#Text=The mixture was further dried and compacted to disks of a 10 mm diameter and 3 mm thickness and subjected to thermal treatment at temperature 12000 C during 10 hours.
+4-1	335-338	The	_	_	_	
+4-2	339-346	mixture	Material-intermedium	_	_	
+4-3	347-350	was	_	_	_	
+4-4	351-358	further	_	_	_	
+4-5	359-364	dried	Operation	Participant-material|Next-operation	4-2|4-7	
+4-6	365-368	and	_	_	_	
+4-7	369-378	compacted	Operation	Next-operation	4-22[9_0]	
+4-8	379-381	to	_	_	_	
+4-9	382-387	disks	Material-intermedium	Value-of|Value-of	4-12[7_0]|4-16[8_0]	
+4-10	388-390	of	_	_	_	
+4-11	391-392	a	_	_	_	
+4-12	393-395	10	Value[7]	Descriptor-of	4-14[0_7]	
+4-13	396-398	mm	Value[7]	_	_	
+4-14	399-407	diameter	Descriptor	_	_	
+4-15	408-411	and	_	_	_	
+4-16	412-413	3	Value[8]	Descriptor-of	4-18[0_8]	
+4-17	414-416	mm	Value[8]	_	_	
+4-18	417-426	thickness	Descriptor	_	_	
+4-19	427-430	and	_	_	_	
+4-20	431-440	subjected	_	_	_	
+4-21	441-443	to	_	_	_	
+4-22	444-451	thermal	Operation[9]	Participant-material|Condition-of|Condition-of	4-9[0_9]|4-26[10_9]|4-29[11_9]	
+4-23	452-461	treatment	Operation[9]	_	_	
+4-24	462-464	at	_	_	_	
+4-25	465-476	temperature	Property-temperature	_	_	
+4-26	477-482	12000	Property-temperature[10]	Coreference	4-25[0_10]	
+4-27	483-484	C	Property-temperature[10]	_	_	
+4-28	485-491	during	_	_	_	
+4-29	492-494	10	Property-time[11]	_	_	
+4-30	495-500	hours	Property-time[11]	_	_	
+4-31	500-501	.	_	_	_	
+
+#Text=Weight content of Sr derived from SrO quantity varied in the series of studied samples as x=0.25, 0,5, 1, 2, 4, 6, 8 и 10 %.
+5-1	502-508	Weight	Descriptor[12]	_	_	
+5-2	509-516	content	Descriptor[12]	_	_	
+5-3	517-519	of	_	_	_	
+5-4	520-522	Sr	Material-recipe	Descriptor-of	5-17[13_0]	
+5-5	523-530	derived	Operation	_	_	
+5-6	531-535	from	_	_	_	
+5-7	536-539	SrO	Material-recipe	_	_	
+5-8	540-548	quantity	_	_	_	
+5-9	549-555	varied	_	_	_	
+5-10	556-558	in	_	_	_	
+5-11	559-562	the	_	_	_	
+5-12	563-569	series	_	_	_	
+5-13	570-572	of	_	_	_	
+5-14	573-580	studied	_	_	_	
+5-15	581-588	samples	_	_	_	
+5-16	589-591	as	_	_	_	
+5-17	592-593	x	Descriptor[13]	Descriptor-of	5-1[12_13]	
+5-18	593-594	=	Descriptor[13]	_	_	
+5-19	594-598	0.25	Descriptor[13]	_	_	
+5-20	598-599	,	Descriptor[13]	_	_	
+5-21	600-603	0,5	Descriptor[13]	_	_	
+5-22	603-604	,	Descriptor[13]	_	_	
+5-23	605-606	1	Descriptor[13]	_	_	
+5-24	606-607	,	Descriptor[13]	_	_	
+5-25	608-609	2	Descriptor[13]	_	_	
+5-26	609-610	,	Descriptor[13]	_	_	
+5-27	611-612	4	Descriptor[13]	_	_	
+5-28	612-613	,	Descriptor[13]	_	_	
+5-29	614-615	6	Descriptor[13]	_	_	
+5-30	615-616	,	Descriptor[13]	_	_	
+5-31	617-618	8	Descriptor[13]	_	_	
+5-32	619-620	и	Descriptor[13]	_	_	
+5-33	621-623	10	Descriptor[13]	_	_	
+5-34	624-625	%	Descriptor[13]	_	_	
+5-35	625-626	.	_	_	_	

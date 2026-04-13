@@ -1,0 +1,150 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline samples of the nominal composition La2MMnO6 (M = Co, Ni and Cu) were prepared by conventional solid state reaction, by firing intimate stoichiometric mixtures of the oxides La2O3 and MnO2, and the M(II) oxides or carbonates involved in the formulations, Co(NO3), NiCO3·2Ni(OH)2·4H2O and CuO, respectively.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-27	samples	_	_	_	
+1-4	28-30	of	_	_	_	
+1-5	31-34	the	_	_	_	
+1-6	35-42	nominal	Value[1]	_	_	
+1-7	43-54	composition	Value[1]	_	_	
+1-8	55-63	La2MMnO6	Material-target	Descriptor-of|Descriptor-of	1-2|1-10[2_0]	
+1-9	64-65	(	_	_	_	
+1-10	65-66	M	Descriptor[2]	_	_	
+1-11	67-68	=	Descriptor[2]	_	_	
+1-12	69-71	Co	Descriptor[2]	_	_	
+1-13	71-72	,	Descriptor[2]	_	_	
+1-14	73-75	Ni	Descriptor[2]	_	_	
+1-15	76-79	and	Descriptor[2]	_	_	
+1-16	80-82	Cu	Descriptor[2]	_	_	
+1-17	82-83	)	_	_	_	
+1-18	84-88	were	_	_	_	
+1-19	89-97	prepared	Operation	Participant-material|Coreference	1-8|1-21[3_0]	
+1-20	98-100	by	_	_	_	
+1-21	101-113	conventional	Operation[3]	Coreference	1-27[0_3]	
+1-22	114-119	solid	Operation[3]	_	_	
+1-23	120-125	state	Operation[3]	_	_	
+1-24	126-134	reaction	Operation[3]	_	_	
+1-25	134-135	,	_	_	_	
+1-26	136-138	by	_	_	_	
+1-27	139-145	firing	Operation	Participant-material|Participant-material|Participant-material	1-34|1-36|1-40[4_0]	
+1-28	146-154	intimate	_	_	_	
+1-29	155-169	stoichiometric	Value	Coreference	1-6[1_0]	
+1-30	170-178	mixtures	Material-intermedium	Value-of	1-29	
+1-31	179-181	of	_	_	_	
+1-32	182-185	the	_	_	_	
+1-33	186-192	oxides	Descriptor	_	_	
+1-34	193-198	La2O3	Material-recipe	Descriptor-of	1-33	
+1-35	199-202	and	_	_	_	
+1-36	203-207	MnO2	Material-recipe	Descriptor-of	1-33	
+1-37	207-208	,	_	_	_	
+1-38	209-212	and	_	_	_	
+1-39	213-216	the	_	_	_	
+1-40	217-218	M	Material-recipe[4]	_	_	
+1-41	218-219	(	Material-recipe[4]	_	_	
+1-42	219-221	II	Material-recipe[4]	_	_	
+1-43	221-222	)	Material-recipe[4]	_	_	
+1-44	223-229	oxides	Material-recipe[4]	_	_	
+1-45	230-232	or	Material-recipe[4]	_	_	
+1-46	233-243	carbonates	Material-recipe[4]	_	_	
+1-47	244-252	involved	_	_	_	
+1-48	253-255	in	_	_	_	
+1-49	256-259	the	_	_	_	
+1-50	260-272	formulations	_	_	_	
+1-51	272-273	,	_	_	_	
+1-52	274-276	Co	Material-recipe[5]	Coreference	1-40[4_5]	
+1-53	276-277	(	Material-recipe[5]	_	_	
+1-54	277-280	NO3	Material-recipe[5]	_	_	
+1-55	280-281	)	Material-recipe[5]	_	_	
+1-56	281-282	,	_	_	_	
+1-57	283-288	NiCO3	Material-recipe[6]	Coreference	1-40[4_6]	
+1-58	288-289	·	Material-recipe[6]	_	_	
+1-59	289-292	2Ni	Material-recipe[6]	_	_	
+1-60	292-293	(	Material-recipe[6]	_	_	
+1-61	293-295	OH	Material-recipe[6]	_	_	
+1-62	295-296	)	Material-recipe[6]	_	_	
+1-63	296-297	2	Material-recipe[6]	_	_	
+1-64	297-298	·	Material-recipe[6]	_	_	
+1-65	298-302	4H2O	Material-recipe[6]	_	_	
+1-66	303-306	and	_	_	_	
+1-67	307-310	CuO	Material-recipe	Coreference	1-40[4_0]	
+1-68	310-311	,	_	_	_	
+1-69	312-324	respectively	_	_	_	
+1-70	324-325	.	_	_	_	
+
+#Text=The reactions were carried out in air, in platinum crucibles, at 1000 °C.
+2-1	326-329	The	_	_	_	
+2-2	330-339	reactions	Operation	Condition-of|Device-of-operation|Condition-of|Coreference	2-7|2-11|2-14[8_0]|2-4[7_0]	
+2-3	340-344	were	_	_	_	
+2-4	345-352	carried	Operation[7]	_	_	
+2-5	353-356	out	Operation[7]	_	_	
+2-6	357-359	in	_	_	_	
+2-7	360-363	air	Property-pressure	_	_	
+2-8	363-364	,	_	_	_	
+2-9	365-367	in	_	_	_	
+2-10	368-376	platinum	Descriptor	_	_	
+2-11	377-386	crucibles	Device	Descriptor-of	2-10	
+2-12	386-387	,	_	_	_	
+2-13	388-390	at	_	_	_	
+2-14	391-395	1000	Property-temperature[8]	_	_	
+2-15	396-397	°	Property-temperature[8]	_	_	
+2-16	397-398	C	Property-temperature[8]	_	_	
+2-17	398-399	.	_	_	_	
+
+#Text=The sample was maintained at this temperature, in the furnace, during 10 h.
+3-1	400-403	The	_	_	_	
+3-2	404-410	sample	Material-intermedium	_	_	
+3-3	411-414	was	_	_	_	
+3-4	415-425	maintained	Operation	Participant-material|Condition-of|Device-of-operation|Condition-of	3-2|3-7|3-11|3-14[9_0]	
+3-5	426-428	at	_	_	_	
+3-6	429-433	this	_	_	_	
+3-7	434-445	temperature	Property-temperature	_	_	
+3-8	445-446	,	_	_	_	
+3-9	447-449	in	_	_	_	
+3-10	450-453	the	_	_	_	
+3-11	454-461	furnace	Device	_	_	
+3-12	461-462	,	_	_	_	
+3-13	463-469	during	_	_	_	
+3-14	470-472	10	Property-temperature[9]	_	_	
+3-15	473-474	h	Property-temperature[9]	_	_	
+3-16	474-475	.	_	_	_	
+
+#Text=Heating was interrupted several times to grind the reaction mixture to facilitate the reaction progress.
+4-1	476-483	Heating	Operation	Next-operation	4-3	
+4-2	484-487	was	_	_	_	
+4-3	488-499	interrupted	Operation	Condition-of|Next-operation	4-4[10_0]|4-7	
+4-4	500-507	several	Property-time[10]	_	_	
+4-5	508-513	times	Property-time[10]	_	_	
+4-6	514-516	to	_	_	_	
+4-7	517-522	grind	Operation	Participant-material	4-10	
+4-8	523-526	the	_	_	_	
+4-9	527-535	reaction	Descriptor	_	_	
+4-10	536-543	mixture	Material-intermedium	Descriptor-of	4-9	
+4-11	544-546	to	_	_	_	
+4-12	547-557	facilitate	_	_	_	
+4-13	558-561	the	_	_	_	
+4-14	562-570	reaction	_	_	_	
+4-15	571-579	progress	_	_	_	
+4-16	579-580	.	_	_	_	
+
+#Text=The samples were labelled as LaMMn-SP, where M indicates: Co, Ni or Cu.
+5-1	581-584	The	_	_	_	
+5-2	585-592	samples	_	_	_	
+5-3	593-597	were	_	_	_	
+5-4	598-606	labelled	_	_	_	
+5-5	607-609	as	_	_	_	
+5-6	610-618	LaMMn-SP	_	_	_	
+5-7	618-619	,	_	_	_	
+5-8	620-625	where	_	_	_	
+5-9	626-627	M	_	_	_	
+5-10	628-637	indicates	_	_	_	
+5-11	637-638	:	_	_	_	
+5-12	639-641	Co	_	_	_	
+5-13	641-642	,	_	_	_	
+5-14	643-645	Ni	_	_	_	
+5-15	646-648	or	_	_	_	
+5-16	649-651	Cu	_	_	_	
+5-17	651-652	.	_	_	_	

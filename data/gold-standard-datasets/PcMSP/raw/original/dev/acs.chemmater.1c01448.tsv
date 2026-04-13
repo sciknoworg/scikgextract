@@ -1,0 +1,229 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline Synthesis.
+1-1	0-15	Polycrystalline	_	_	_	
+1-2	16-25	Synthesis	_	_	_	
+1-3	25-26	.	_	_	_	
+
+#Text=In preparation for the synthesis of
+#Text=GaMo4Se8 powder, gallium pieces (Alfa Aesar, 7N) were added to a
+#Text=mixture of molybdenum (Alfa Aesar, 99.95%) and selenium (SigmaAldrich, ≥99.5%) powders.
+2-1	27-29	In	_	_	_	
+2-2	30-41	preparation	_	_	_	
+2-3	42-45	for	_	_	_	
+2-4	46-49	the	_	_	_	
+2-5	50-59	synthesis	Operation	Participant-material	2-7	
+2-6	60-62	of	_	_	_	
+2-7	63-71	GaMo4Se8	Material-target	Descriptor-of	2-8	
+2-8	72-78	powder	Descriptor	_	_	
+2-9	78-79	,	_	_	_	
+2-10	80-87	gallium	Material-recipe	Descriptor-of|Brand-of|Value-of	2-11|2-13[1_0]|2-16	
+2-11	88-94	pieces	Descriptor	_	_	
+2-12	95-96	(	_	_	_	
+2-13	96-100	Alfa	Brand[1]	_	_	
+2-14	101-106	Aesar	Brand[1]	_	_	
+2-15	106-107	,	_	_	_	
+2-16	108-110	7N	Value	_	_	
+2-17	110-111	)	_	_	_	
+2-18	112-116	were	_	_	_	
+2-19	117-122	added	Operation	Participant-material|Participant-material	2-22|2-10	
+2-20	123-125	to	_	_	_	
+2-21	126-127	a	_	_	_	
+2-22	128-135	mixture	Material-recipe	Coreference|Coreference	2-24|2-32	
+2-23	136-138	of	_	_	_	
+2-24	139-149	molybdenum	Material-recipe	Brand-of|Value-of|Descriptor-of	2-26[2_0]|2-29|2-39	
+2-25	150-151	(	_	_	_	
+2-26	151-155	Alfa	Brand[2]	_	_	
+2-27	156-161	Aesar	Brand[2]	_	_	
+2-28	161-162	,	_	_	_	
+2-29	163-169	99.95%	Value	_	_	
+2-30	169-170	)	_	_	_	
+2-31	171-174	and	_	_	_	
+2-32	175-183	selenium	Material-recipe	Brand-of|Value-of|Descriptor-of	2-34|2-36[3_0]|2-39	
+2-33	184-185	(	_	_	_	
+2-34	185-197	SigmaAldrich	Brand	_	_	
+2-35	197-198	,	_	_	_	
+2-36	199-200	≥	Value[3]	_	_	
+2-37	200-205	99.5%	Value[3]	_	_	
+2-38	205-206	)	_	_	_	
+2-39	207-214	powders	Descriptor	_	_	
+2-40	214-215	.	_	_	_	
+
+#Text=The synthesis protocol described by
+#Text=Schueller et al.19 was followed, in which the mixture (with 50% excess
+#Text=Ga over stoichiometry) is sealed in an evacuated quartz tube in a 1 g
+#Text=batch.
+3-1	216-219	The	_	_	_	
+3-2	220-229	synthesis	_	_	_	
+3-3	230-238	protocol	_	_	_	
+3-4	239-248	described	_	_	_	
+3-5	249-251	by	_	_	_	
+3-6	252-261	Schueller	_	_	_	
+3-7	262-264	et	_	_	_	
+3-8	265-267	al	_	_	_	
+3-9	267-270	.19	_	_	_	
+3-10	271-274	was	_	_	_	
+3-11	275-283	followed	_	_	_	
+3-12	283-284	,	_	_	_	
+3-13	285-287	in	_	_	_	
+3-14	288-293	which	_	_	_	
+3-15	294-297	the	_	_	_	
+3-16	298-305	mixture	Material-intermedium	Coreference|Value-of	3-21|3-34[5_0]	
+3-17	306-307	(	_	_	_	
+3-18	307-311	with	_	_	_	
+3-19	312-315	50%	Value[4]	_	_	
+3-20	316-322	excess	Value[4]	_	_	
+3-21	323-325	Ga	Material-recipe	Value-of	3-19[4_0]	
+3-22	326-330	over	_	_	_	
+3-23	331-344	stoichiometry	_	_	_	
+3-24	344-345	)	_	_	_	
+3-25	346-348	is	_	_	_	
+3-26	349-355	sealed	Operation	Participant-material|Device-of-operation	3-16|3-31	
+3-27	356-358	in	_	_	_	
+3-28	359-361	an	Value	_	_	
+3-29	362-371	evacuated	Descriptor	_	_	
+3-30	372-378	quartz	Descriptor	_	_	
+3-31	379-383	tube	Device	Descriptor-of|Value-of|Descriptor-of	3-30|3-28|3-29	
+3-32	384-386	in	_	_	_	
+3-33	387-388	a	_	_	_	
+3-34	389-390	1	Value[5]	_	_	
+3-35	391-392	g	Value[5]	_	_	
+3-36	393-398	batch	Value[5]	_	_	
+3-37	398-399	.	_	_	_	
+
+#Text=It is then heated to 1283 K at a rate of 8 K/min, held for 20 h,
+#Text=and then quenched in cold water.
+4-1	400-402	It	Material-intermedium	_	_	
+4-2	403-405	is	_	_	_	
+4-3	406-410	then	_	_	_	
+4-4	411-417	heated	Operation	Participant-material|Condition-of|Condition-of|Next-operation	4-1|4-6[6_0]|4-12[7_0]|4-17	
+4-5	418-420	to	_	_	_	
+4-6	421-425	1283	Property-temperature[6]	_	_	
+4-7	426-427	K	Property-temperature[6]	_	_	
+4-8	428-430	at	_	_	_	
+4-9	431-432	a	_	_	_	
+4-10	433-437	rate	_	_	_	
+4-11	438-440	of	_	_	_	
+4-12	441-442	8	Property-rate[7]	_	_	
+4-13	443-444	K	Property-rate[7]	_	_	
+4-14	444-445	/	Property-rate[7]	_	_	
+4-15	445-448	min	Property-rate[7]	_	_	
+4-16	448-449	,	_	_	_	
+4-17	450-454	held	Operation	Condition-of|Condition-of|Next-operation	4-19[8_0]|4-6[6_0]|4-24	
+4-18	455-458	for	_	_	_	
+4-19	459-461	20	Property-time[8]	_	_	
+4-20	462-463	h	Property-time[8]	_	_	
+4-21	463-464	,	_	_	_	
+4-22	465-468	and	_	_	_	
+4-23	469-473	then	_	_	_	
+4-24	474-482	quenched	Operation	Participant-material	4-27	
+4-25	483-485	in	_	_	_	
+4-26	486-490	cold	Descriptor	_	_	
+4-27	491-496	water	Material-others	Descriptor-of	4-26	
+4-28	496-497	.	_	_	_	
+
+#Text=Phase identification was performed
+#Text=using X-ray diffraction on a Rigaku SmartLab diffractometer with
+#Text=monochromatic Cu Kα radiation.
+5-1	498-503	Phase	_	_	_	
+5-2	504-518	identification	_	_	_	
+5-3	519-522	was	_	_	_	
+5-4	523-532	performed	_	_	_	
+5-5	533-538	using	_	_	_	
+5-6	539-544	X-ray	_	_	_	
+5-7	545-556	diffraction	_	_	_	
+5-8	557-559	on	_	_	_	
+5-9	560-561	a	_	_	_	
+5-10	562-568	Rigaku	_	_	_	
+5-11	569-577	SmartLab	_	_	_	
+5-12	578-592	diffractometer	_	_	_	
+5-13	593-597	with	_	_	_	
+5-14	598-611	monochromatic	_	_	_	
+5-15	612-614	Cu	_	_	_	
+5-16	615-617	Kα	_	_	_	
+5-17	618-627	radiation	_	_	_	
+5-18	627-628	.	_	_	_	
+
+#Text=This revealed large quantities of
+#Text=binary impurities indicating that the reaction was not complete.
+6-1	629-633	This	_	_	_	
+6-2	634-642	revealed	_	_	_	
+6-3	643-648	large	_	_	_	
+6-4	649-659	quantities	_	_	_	
+6-5	660-662	of	_	_	_	
+6-6	663-669	binary	_	_	_	
+6-7	670-680	impurities	_	_	_	
+6-8	681-691	indicating	_	_	_	
+6-9	692-696	that	_	_	_	
+6-10	697-700	the	_	_	_	
+6-11	701-709	reaction	_	_	_	
+6-12	710-713	was	_	_	_	
+6-13	714-717	not	_	_	_	
+6-14	718-726	complete	_	_	_	
+6-15	726-727	.	_	_	_	
+
+#Text=The
+#Text=powder was therefore annealed under the same conditions, which
+#Text=removed most of the impurity phases with only a small amount of
+#Text=Mo3Ga being observed.
+7-1	728-731	The	_	_	_	
+7-2	732-738	powder	Material-intermedium	_	_	
+7-3	739-742	was	_	_	_	
+7-4	743-752	therefore	_	_	_	
+7-5	753-761	annealed	Operation	Participant-material|Condition-of	7-2|7-9	
+7-6	762-767	under	_	_	_	
+7-7	768-771	the	_	_	_	
+7-8	772-776	same	Descriptor	_	_	
+7-9	777-787	conditions	Property-rate	Descriptor-of	7-8	
+7-10	787-788	,	_	_	_	
+7-11	789-794	which	_	_	_	
+7-12	795-802	removed	_	_	_	
+7-13	803-807	most	_	_	_	
+7-14	808-810	of	_	_	_	
+7-15	811-814	the	_	_	_	
+7-16	815-823	impurity	_	_	_	
+7-17	824-830	phases	_	_	_	
+7-18	831-835	with	_	_	_	
+7-19	836-840	only	_	_	_	
+7-20	841-842	a	_	_	_	
+7-21	843-848	small	_	_	_	
+7-22	849-855	amount	_	_	_	
+7-23	856-858	of	_	_	_	
+7-24	859-864	Mo3Ga	_	_	_	
+7-25	865-870	being	_	_	_	
+7-26	871-879	observed	_	_	_	
+7-27	879-880	.	_	_	_	
+
+#Text=Three 1 g batches prepared in this way were
+#Text=combined and annealed twice more to produce a 3 g batch used to
+#Text=perform powder neutron diffraction.
+8-1	881-886	Three	Value	_	_	
+8-2	887-888	1	Value[9]	_	_	
+8-3	889-890	g	Value[9]	_	_	
+8-4	891-898	batches	Material-intermedium	Value-of|Value-of|Descriptor-of|Descriptor-of	8-2[9_0]|8-1|8-5|8-7[10_0]	
+8-5	899-907	prepared	Descriptor	_	_	
+8-6	908-910	in	_	_	_	
+8-7	911-915	this	Descriptor[10]	_	_	
+8-8	916-919	way	Descriptor[10]	_	_	
+8-9	920-924	were	_	_	_	
+8-10	925-933	combined	Operation	Participant-material|Next-operation	8-4|8-12	
+8-11	934-937	and	_	_	_	
+8-12	938-946	annealed	Operation	Condition-of	8-13	
+8-13	947-952	twice	Property-time	_	_	
+8-14	953-957	more	_	_	_	
+8-15	958-960	to	_	_	_	
+8-16	961-968	produce	Operation	Participant-material|Coreference|Coreference	8-20|8-10|8-12	
+8-17	969-970	a	_	_	_	
+8-18	971-972	3	Value[11]	_	_	
+8-19	973-974	g	Value[11]	_	_	
+8-20	975-980	batch	Material-target	Value-of	8-18[11_0]	
+8-21	981-985	used	_	_	_	
+8-22	986-988	to	_	_	_	
+8-23	989-996	perform	_	_	_	
+8-24	997-1003	powder	_	_	_	
+8-25	1004-1011	neutron	_	_	_	
+8-26	1012-1023	diffraction	_	_	_	
+8-27	1023-1024	.	_	_	_	

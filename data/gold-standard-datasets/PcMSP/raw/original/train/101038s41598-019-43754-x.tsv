@@ -1,0 +1,297 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline specimens of Li(Cd,Mn)P were prepared by solid state reaction with high purity elements.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-25	specimens	Descriptor	_	_	
+1-3	26-28	of	_	_	_	
+1-4	29-31	Li	Material-target[1]	Descriptor-of|Descriptor-of	1-2[0_1]|1-1[0_1]	
+1-5	31-32	(	Material-target[1]	_	_	
+1-6	32-34	Cd	Material-target[1]	_	_	
+1-7	34-35	,	Material-target[1]	_	_	
+1-8	35-37	Mn	Material-target[1]	_	_	
+1-9	37-38	)	Material-target[1]	_	_	
+1-10	38-39	P	Material-target[1]	_	_	
+1-11	40-44	were	_	_	_	
+1-12	45-53	prepared	Operation	Participant-material|Coreference	1-4[1_0]|1-14[2_0]	
+1-13	54-56	by	_	_	_	
+1-14	57-62	solid	Operation[2]	Participant-material	1-20[0_2]	
+1-15	63-68	state	Operation[2]	_	_	
+1-16	69-77	reaction	Operation[2]	_	_	
+1-17	78-82	with	_	_	_	
+1-18	83-87	high	Value[3]	_	_	
+1-19	88-94	purity	Value[3]	_	_	
+1-20	95-103	elements	Material-recipe	Value-of	1-18[3_0]	
+1-21	103-104	.	_	_	_	
+
+#Text=The stoichiometric ratios of starting materials were well mixed and pressed into pellets.
+2-1	105-108	The	_	_	_	
+2-2	109-123	stoichiometric	Value[4]	_	_	
+2-3	124-130	ratios	Value[4]	_	_	
+2-4	131-133	of	_	_	_	
+2-5	134-142	starting	Material-recipe[5]	Value-of	2-2[4_5]	
+2-6	143-152	materials	Material-recipe[5]	_	_	
+2-7	153-157	were	_	_	_	
+2-8	158-162	well	Descriptor	_	_	
+2-9	163-168	mixed	Operation	Descriptor-of|Participant-material|Next-operation	2-8|2-5[5_0]|2-11	
+2-10	169-172	and	_	_	_	
+2-11	173-180	pressed	Operation	Participant-material	2-13	
+2-12	181-185	into	_	_	_	
+2-13	186-193	pellets	Material-recipe	_	_	
+2-14	193-194	.	_	_	_	
+
+#Text=All the processes were performed under the protection of high-purity Argon due to the air sensitivity of precursors and products.
+3-1	195-198	All	_	_	_	
+3-2	199-202	the	_	_	_	
+3-3	203-212	processes	Operation	Condition-of|Coreference	3-10[6_0]|3-5	
+3-4	213-217	were	_	_	_	
+3-5	218-227	performed	Operation	_	_	
+3-6	228-233	under	_	_	_	
+3-7	234-237	the	_	_	_	
+3-8	238-248	protection	_	_	_	
+3-9	249-251	of	_	_	_	
+3-10	252-263	high-purity	Property-pressure[6]	_	_	
+3-11	264-269	Argon	Property-pressure[6]	_	_	
+3-12	270-273	due	_	_	_	
+3-13	274-276	to	_	_	_	
+3-14	277-280	the	_	_	_	
+3-15	281-284	air	_	_	_	
+3-16	285-296	sensitivity	_	_	_	
+3-17	297-299	of	_	_	_	
+3-18	300-310	precursors	_	_	_	
+3-19	311-314	and	_	_	_	
+3-20	315-323	products	_	_	_	
+3-21	323-324	.	_	_	_	
+
+#Text=The pellets were sealed in Ta tubes under 0.5 bar of Argon before being sealed into evacuated quartz tubes.
+4-1	325-328	The	_	_	_	
+4-2	329-336	pellets	Material-intermedium	_	_	
+4-3	337-341	were	_	_	_	
+4-4	342-348	sealed	Operation	Device-of-operation|Participant-material|Condition-of|Next-operation	4-7|4-2|4-9[7_0]|4-15	
+4-5	349-351	in	_	_	_	
+4-6	352-354	Ta	Descriptor	_	_	
+4-7	355-360	tubes	Device	Descriptor-of	4-6	
+4-8	361-366	under	_	_	_	
+4-9	367-370	0.5	Property-pressure[7]	_	_	
+4-10	371-374	bar	Property-pressure[7]	_	_	
+4-11	375-377	of	Property-pressure[7]	_	_	
+4-12	378-383	Argon	Property-pressure[7]	_	_	
+4-13	384-390	before	_	_	_	
+4-14	391-396	being	_	_	_	
+4-15	397-403	sealed	Operation	Device-of-operation|Device-of-operation	4-19|4-7	
+4-16	404-408	into	_	_	_	
+4-17	409-418	evacuated	Descriptor	_	_	
+4-18	419-425	quartz	Descriptor	_	_	
+4-19	426-431	tubes	Device	Descriptor-of|Descriptor-of	4-18|4-17	
+4-20	431-432	.	_	_	_	
+
+#Text=The samples were heated at 470 °C for 48 h.
+5-1	433-436	The	_	_	_	
+5-2	437-444	samples	Material-intermedium	_	_	
+5-3	445-449	were	_	_	_	
+5-4	450-456	heated	Operation	Participant-material|Condition-of|Condition-of	5-2|5-6[8_0]|5-10[9_0]	
+5-5	457-459	at	_	_	_	
+5-6	460-463	470	Property-temperature[8]	_	_	
+5-7	464-465	°	Property-temperature[8]	_	_	
+5-8	465-466	C	Property-temperature[8]	_	_	
+5-9	467-470	for	_	_	_	
+5-10	471-473	48	Property-time[9]	_	_	
+5-11	474-475	h	Property-time[9]	_	_	
+5-12	475-476	.	_	_	_	
+
+#Text=Then the products were reground and sintered at 680 °C for 48 h, followed by a quick quenching to room temperature.
+6-1	477-481	Then	_	_	_	
+6-2	482-485	the	_	_	_	
+6-3	486-494	products	Material-intermedium	_	_	
+6-4	495-499	were	_	_	_	
+6-5	500-508	reground	Operation	Participant-material	6-3	
+6-6	509-512	and	_	_	_	
+6-7	513-521	sintered	Operation	Next-operation|Condition-of|Condition-of	6-5|6-9[10_0]|6-13[11_0]	
+6-8	522-524	at	_	_	_	
+6-9	525-528	680	Property-temperature[10]	_	_	
+6-10	529-530	°	Property-temperature[10]	_	_	
+6-11	530-531	C	Property-temperature[10]	_	_	
+6-12	532-535	for	_	_	_	
+6-13	536-538	48	Property-time[11]	_	_	
+6-14	539-540	h	Property-time[11]	_	_	
+6-15	540-541	,	_	_	_	
+6-16	542-550	followed	_	_	_	
+6-17	551-553	by	_	_	_	
+6-18	554-555	a	_	_	_	
+6-19	556-561	quick	Descriptor	_	_	
+6-20	562-571	quenching	Operation	Descriptor-of|Condition-of|Next-operation	6-19|6-22[12_0]|6-7	
+6-21	572-574	to	_	_	_	
+6-22	575-579	room	Property-temperature[12]	_	_	
+6-23	580-591	temperature	Property-temperature[12]	_	_	
+6-24	591-592	.	_	_	_	
+
+#Text=The recovered samples were characterized by X-ray powder diffraction (XRD) with a Philips X’pert diffractometer using CuKα radiation.
+7-1	593-596	The	_	_	_	
+7-2	597-606	recovered	_	_	_	
+7-3	607-614	samples	_	_	_	
+7-4	615-619	were	_	_	_	
+7-5	620-633	characterized	_	_	_	
+7-6	634-636	by	_	_	_	
+7-7	637-642	X-ray	_	_	_	
+7-8	643-649	powder	_	_	_	
+7-9	650-661	diffraction	_	_	_	
+7-10	662-663	(	_	_	_	
+7-11	663-666	XRD	_	_	_	
+7-12	666-667	)	_	_	_	
+7-13	668-672	with	_	_	_	
+7-14	673-674	a	_	_	_	
+7-15	675-682	Philips	_	_	_	
+7-16	683-684	X	_	_	_	
+7-17	684-685	’	_	_	_	
+7-18	685-689	pert	_	_	_	
+7-19	690-704	diffractometer	_	_	_	
+7-20	705-710	using	_	_	_	
+7-21	711-715	CuKα	_	_	_	
+7-22	716-725	radiation	_	_	_	
+7-23	725-726	.	_	_	_	
+
+#Text=Real compositions of the heavy elements (i.e.
+8-1	727-731	Real	_	_	_	
+8-2	732-744	compositions	_	_	_	
+8-3	745-747	of	_	_	_	
+8-4	748-751	the	_	_	_	
+8-5	752-757	heavy	_	_	_	
+8-6	758-766	elements	_	_	_	
+8-7	767-768	(	_	_	_	
+8-8	768-771	i.e	_	_	_	
+8-9	771-772	.	_	_	_	
+
+#Text=Cd, Mn and P) were determined by using energy dispersive analysis (EDX) on a commercial Scanning Electron Microscope (SEM).
+9-1	773-775	Cd	_	_	_	
+9-2	775-776	,	_	_	_	
+9-3	777-779	Mn	_	_	_	
+9-4	780-783	and	_	_	_	
+9-5	784-785	P	_	_	_	
+9-6	785-786	)	_	_	_	
+9-7	787-791	were	_	_	_	
+9-8	792-802	determined	_	_	_	
+9-9	803-805	by	_	_	_	
+9-10	806-811	using	_	_	_	
+9-11	812-818	energy	_	_	_	
+9-12	819-829	dispersive	_	_	_	
+9-13	830-838	analysis	_	_	_	
+9-14	839-840	(	_	_	_	
+9-15	840-843	EDX	_	_	_	
+9-16	843-844	)	_	_	_	
+9-17	845-847	on	_	_	_	
+9-18	848-849	a	_	_	_	
+9-19	850-860	commercial	_	_	_	
+9-20	861-869	Scanning	_	_	_	
+9-21	870-878	Electron	_	_	_	
+9-22	879-889	Microscope	_	_	_	
+9-23	890-891	(	_	_	_	
+9-24	891-894	SEM	_	_	_	
+9-25	894-895	)	_	_	_	
+9-26	895-896	.	_	_	_	
+
+#Text=Microstructure was studied by high resolution Transmission Electron Microscope (TEM).
+10-1	897-911	Microstructure	_	_	_	
+10-2	912-915	was	_	_	_	
+10-3	916-923	studied	_	_	_	
+10-4	924-926	by	_	_	_	
+10-5	927-931	high	_	_	_	
+10-6	932-942	resolution	_	_	_	
+10-7	943-955	Transmission	_	_	_	
+10-8	956-964	Electron	_	_	_	
+10-9	965-975	Microscope	_	_	_	
+10-10	976-977	(	_	_	_	
+10-11	977-980	TEM	_	_	_	
+10-12	980-981	)	_	_	_	
+10-13	981-982	.	_	_	_	
+
+#Text=The dc magnetic properties were examined by using Superconductivity Quantum Interference Device (SQUID, Quantum design), and transport properties were examined by Physical Property Measurement System (PPMS, Quantum design).
+11-1	983-986	The	_	_	_	
+11-2	987-989	dc	_	_	_	
+11-3	990-998	magnetic	_	_	_	
+11-4	999-1009	properties	_	_	_	
+11-5	1010-1014	were	_	_	_	
+11-6	1015-1023	examined	_	_	_	
+11-7	1024-1026	by	_	_	_	
+11-8	1027-1032	using	_	_	_	
+11-9	1033-1050	Superconductivity	_	_	_	
+11-10	1051-1058	Quantum	_	_	_	
+11-11	1059-1071	Interference	_	_	_	
+11-12	1072-1078	Device	_	_	_	
+11-13	1079-1080	(	_	_	_	
+11-14	1080-1085	SQUID	_	_	_	
+11-15	1085-1086	,	_	_	_	
+11-16	1087-1094	Quantum	_	_	_	
+11-17	1095-1101	design	_	_	_	
+11-18	1101-1102	)	_	_	_	
+11-19	1102-1103	,	_	_	_	
+11-20	1104-1107	and	_	_	_	
+11-21	1108-1117	transport	_	_	_	
+11-22	1118-1128	properties	_	_	_	
+11-23	1129-1133	were	_	_	_	
+11-24	1134-1142	examined	_	_	_	
+11-25	1143-1145	by	_	_	_	
+11-26	1146-1154	Physical	_	_	_	
+11-27	1155-1163	Property	_	_	_	
+11-28	1164-1175	Measurement	_	_	_	
+11-29	1176-1182	System	_	_	_	
+11-30	1183-1184	(	_	_	_	
+11-31	1184-1188	PPMS	_	_	_	
+11-32	1188-1189	,	_	_	_	
+11-33	1190-1197	Quantum	_	_	_	
+11-34	1198-1204	design	_	_	_	
+11-35	1204-1205	)	_	_	_	
+11-36	1205-1206	.	_	_	_	
+
+#Text=We calculated the electronic structures by using the density functional theory (DFT) implemented in the code QUANTUM ESPRESSO36.
+12-1	1207-1209	We	_	_	_	
+12-2	1210-1220	calculated	_	_	_	
+12-3	1221-1224	the	_	_	_	
+12-4	1225-1235	electronic	_	_	_	
+12-5	1236-1246	structures	_	_	_	
+12-6	1247-1249	by	_	_	_	
+12-7	1250-1255	using	_	_	_	
+12-8	1256-1259	the	_	_	_	
+12-9	1260-1267	density	_	_	_	
+12-10	1268-1278	functional	_	_	_	
+12-11	1279-1285	theory	_	_	_	
+12-12	1286-1287	(	_	_	_	
+12-13	1287-1290	DFT	_	_	_	
+12-14	1290-1291	)	_	_	_	
+12-15	1292-1303	implemented	_	_	_	
+12-16	1304-1306	in	_	_	_	
+12-17	1307-1310	the	_	_	_	
+12-18	1311-1315	code	_	_	_	
+12-19	1316-1323	QUANTUM	_	_	_	
+12-20	1324-1334	ESPRESSO36	_	_	_	
+12-21	1334-1335	.	_	_	_	
+
+#Text=The exchange-correlation interactions are described by the Perdew-Burke-Ernzerhof generalized gradients approximation (GGA), and the electronion interactions are represented by the Vanderbilt ultrasoft pseudopotentials.
+13-1	1336-1339	The	_	_	_	
+13-2	1340-1360	exchange-correlation	_	_	_	
+13-3	1361-1373	interactions	_	_	_	
+13-4	1374-1377	are	_	_	_	
+13-5	1378-1387	described	_	_	_	
+13-6	1388-1390	by	_	_	_	
+13-7	1391-1394	the	_	_	_	
+13-8	1395-1417	Perdew-Burke-Ernzerhof	_	_	_	
+13-9	1418-1429	generalized	_	_	_	
+13-10	1430-1439	gradients	_	_	_	
+13-11	1440-1453	approximation	_	_	_	
+13-12	1454-1455	(	_	_	_	
+13-13	1455-1458	GGA	_	_	_	
+13-14	1458-1459	)	_	_	_	
+13-15	1459-1460	,	_	_	_	
+13-16	1461-1464	and	_	_	_	
+13-17	1465-1468	the	_	_	_	
+13-18	1469-1480	electronion	_	_	_	
+13-19	1481-1493	interactions	_	_	_	
+13-20	1494-1497	are	_	_	_	
+13-21	1498-1509	represented	_	_	_	
+13-22	1510-1512	by	_	_	_	
+13-23	1513-1516	the	_	_	_	
+13-24	1517-1527	Vanderbilt	_	_	_	
+13-25	1528-1537	ultrasoft	_	_	_	
+13-26	1538-1554	pseudopotentials	_	_	_	
+13-27	1554-1555	.	_	_	_	

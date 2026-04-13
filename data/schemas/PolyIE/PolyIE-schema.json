@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PolyIE Polymer Information Extraction",
+  "description": "Schema for polymer property extraction from scientific literature, based on the PolyIE dataset. Relations link chemical names to their measured properties and values, optionally with experimental conditions.",
+  "type": "object",
+  "properties": {
+    "entities": {
+      "type": "object",
+      "description": "Named entities extracted from the text.",
+      "properties": {
+        "chemicalNames": {
+          "type": "array",
+          "description": "Chemical/polymer names or abbreviations (e.g., P3HT, PEDOT:PSS, poly(3-hexylthiophene)).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "propertyNames": {
+          "type": "array",
+          "description": "Names of measured properties (e.g., PCE, Voc, Jsc, decomposition temperature, band gap).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "propertyValues": {
+          "type": "array",
+          "description": "Measured values with units (e.g., 3.8%, 0.9 V, 437 °C).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditions": {
+          "type": "array",
+          "description": "Experimental conditions under which measurements were taken (e.g., 5% weight loss, room temperature).",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["chemicalNames", "propertyNames", "propertyValues"],
+      "additionalProperties": false
+    },
+    "relations": {
+      "type": "array",
+      "description": "Relations linking a chemical name to a property name and its value, optionally with a condition.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chemicalName": {
+            "type": "string",
+            "description": "The chemical/polymer name this property belongs to."
+          },
+          "propertyName": {
+            "type": "string",
+            "description": "The name of the measured property."
+          },
+          "propertyValue": {
+            "type": "string",
+            "description": "The measured value with unit."
+          },
+          "condition": {
+            "type": "string",
+            "description": "The experimental condition, if applicable."
+          }
+        },
+        "required": ["chemicalName", "propertyName"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["entities", "relations"],
+  "additionalProperties": false
+}

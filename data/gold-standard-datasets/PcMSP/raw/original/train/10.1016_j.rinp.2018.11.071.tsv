@@ -1,0 +1,304 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline Ca3Co4O9 oxide ceramic powders were synthesized by the citrate acid sol-gel reaction method.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-28	Ca3Co4O9	Material-target	Descriptor-of|Descriptor-of|Descriptor-of	1-2|1-4[1_0]|1-6	
+1-4	29-34	oxide	Descriptor[1]	_	_	
+1-5	35-42	ceramic	Descriptor[1]	_	_	
+1-6	43-50	powders	Descriptor	_	_	
+1-7	51-55	were	_	_	_	
+1-8	56-67	synthesized	Operation	Participant-material|Coreference	1-3|1-11[2_0]	
+1-9	68-70	by	_	_	_	
+1-10	71-74	the	_	_	_	
+1-11	75-82	citrate	Operation[2]	_	_	
+1-12	83-87	acid	Operation[2]	_	_	
+1-13	88-95	sol-gel	Operation[2]	_	_	
+1-14	96-104	reaction	Operation[2]	_	_	
+1-15	105-111	method	Operation[2]	_	_	
+1-16	111-112	.	_	_	_	
+
+#Text=Stoichiometric ratios of highly pure nitrates of Ca and Co were dissolved in distilled water; the citric acid was added in the aqueous solution.
+2-1	113-127	Stoichiometric	Value[3]	_	_	
+2-2	128-134	ratios	Value[3]	_	_	
+2-3	135-137	of	_	_	_	
+2-4	138-144	highly	Descriptor[4]	_	_	
+2-5	145-149	pure	Descriptor[4]	_	_	
+2-6	150-158	nitrates	Descriptor	_	_	
+2-7	159-161	of	_	_	_	
+2-8	162-164	Ca	Material-recipe	Value-of|Descriptor-of|Descriptor-of	2-1[3_0]|2-4[4_0]|2-6	
+2-9	165-168	and	_	_	_	
+2-10	169-171	Co	Material-recipe	Value-of|Descriptor-of|Descriptor-of	2-1[3_0]|2-6|2-4[4_0]	
+2-11	172-176	were	_	_	_	
+2-12	177-186	dissolved	Operation	Participant-material|Participant-material|Participant-material|Next-operation	2-8|2-10|2-15|2-21	
+2-13	187-189	in	_	_	_	
+2-14	190-199	distilled	Descriptor	_	_	
+2-15	200-205	water	Material-others	Descriptor-of	2-14	
+2-16	205-206	;	_	_	_	
+2-17	207-210	the	_	_	_	
+2-18	211-217	citric	Material-recipe[5]	_	_	
+2-19	218-222	acid	Material-recipe[5]	_	_	
+2-20	223-226	was	_	_	_	
+2-21	227-232	added	Operation	Participant-material|Participant-material	2-18[5_0]|2-24[6_0]	
+2-22	233-235	in	_	_	_	
+2-23	236-239	the	_	_	_	
+2-24	240-247	aqueous	Material-intermedium[6]	_	_	
+2-25	248-256	solution	Material-intermedium[6]	_	_	
+2-26	256-257	.	_	_	_	
+
+#Text=The solution was continuously mixed at 80 °C in order to form the precursor gel.
+3-1	258-261	The	_	_	_	
+3-2	262-270	solution	Material-intermedium	_	_	
+3-3	271-274	was	_	_	_	
+3-4	275-287	continuously	Operation[7]	Participant-material|Condition-of	3-2[0_7]|3-7[8_7]	
+3-5	288-293	mixed	Operation[7]	_	_	
+3-6	294-296	at	_	_	_	
+3-7	297-299	80	Property-temperature[8]	_	_	
+3-8	299-300	 	Property-temperature[8]	_	_	
+3-9	300-301	°	Property-temperature[8]	_	_	
+3-10	301-302	C	Property-temperature[8]	_	_	
+3-11	303-305	in	_	_	_	
+3-12	306-311	order	_	_	_	
+3-13	312-314	to	_	_	_	
+3-14	315-319	form	_	_	_	
+3-15	320-323	the	_	_	_	
+3-16	324-333	precursor	_	_	_	
+3-17	334-337	gel	_	_	_	
+3-18	337-338	.	_	_	_	
+
+#Text=The obtained gel was dried at 120 °C for 12 h in air to evaporate the excessive water.
+4-1	339-342	The	_	_	_	
+4-2	343-351	obtained	Descriptor	_	_	
+4-3	352-355	gel	Material-intermedium	Descriptor-of	4-2	
+4-4	356-359	was	_	_	_	
+4-5	360-365	dried	Operation	Participant-material|Condition-of|Condition-of|Condition-of	4-3|4-7[9_0]|4-12[10_0]|4-16	
+4-6	366-368	at	_	_	_	
+4-7	369-372	120	Property-temperature[9]	_	_	
+4-8	372-373	 	Property-temperature[9]	_	_	
+4-9	373-374	°	Property-temperature[9]	_	_	
+4-10	374-375	C	Property-temperature[9]	_	_	
+4-11	376-379	for	_	_	_	
+4-12	380-382	12	Property-time[10]	_	_	
+4-13	382-383	 	Property-time[10]	_	_	
+4-14	383-384	h	Property-time[10]	_	_	
+4-15	385-387	in	_	_	_	
+4-16	388-391	air	Property-pressure	_	_	
+4-17	392-394	to	_	_	_	
+4-18	395-404	evaporate	_	_	_	
+4-19	405-408	the	_	_	_	
+4-20	409-418	excessive	_	_	_	
+4-21	419-424	water	_	_	_	
+4-22	424-425	.	_	_	_	
+
+#Text=Then the dried gel was ground and calcined at 800 °C for 8 h to remove excess organics and to get the Ca3Co4O9 oxide ceramic powders.
+5-1	426-430	Then	_	_	_	
+5-2	431-434	the	_	_	_	
+5-3	435-440	dried	Descriptor	_	_	
+5-4	441-444	gel	Material-intermedium	Descriptor-of	5-3	
+5-5	445-448	was	_	_	_	
+5-6	449-455	ground	Operation	Participant-material|Next-operation	5-4|5-8	
+5-7	456-459	and	_	_	_	
+5-8	460-468	calcined	Operation	Condition-of|Condition-of	5-10[11_0]|5-15[12_0]	
+5-9	469-471	at	_	_	_	
+5-10	472-475	800	Property-temperature[11]	_	_	
+5-11	475-476	 	Property-temperature[11]	_	_	
+5-12	476-477	°	Property-temperature[11]	_	_	
+5-13	477-478	C	Property-temperature[11]	_	_	
+5-14	479-482	for	_	_	_	
+5-15	483-484	8	Property-time[12]	_	_	
+5-16	484-485	 	Property-time[12]	_	_	
+5-17	485-486	h	Property-time[12]	_	_	
+5-18	487-489	to	_	_	_	
+5-19	490-496	remove	Operation	Participant-material	5-21	
+5-20	497-503	excess	Descriptor	_	_	
+5-21	504-512	organics	Material-others	Descriptor-of	5-20	
+5-22	513-516	and	_	_	_	
+5-23	517-519	to	_	_	_	
+5-24	520-523	get	Operation	Participant-material	5-26	
+5-25	524-527	the	_	_	_	
+5-26	528-536	Ca3Co4O9	Material-target	Descriptor-of|Descriptor-of	5-27[13_0]|5-29	
+5-27	537-542	oxide	Descriptor[13]	_	_	
+5-28	543-550	ceramic	Descriptor[13]	_	_	
+5-29	551-558	powders	Descriptor	_	_	
+5-30	558-559	.	_	_	_	
+
+#Text=Then the powder was finely ground for bulk platelet samples preparation.
+6-1	560-564	Then	_	_	_	
+6-2	565-568	the	_	_	_	
+6-3	569-575	powder	Material-intermedium	_	_	
+6-4	576-579	was	_	_	_	
+6-5	580-586	finely	Operation[14]	Participant-material	6-3[0_14]	
+6-6	587-593	ground	Operation[14]	_	_	
+6-7	594-597	for	_	_	_	
+6-8	598-602	bulk	Descriptor	_	_	
+6-9	603-611	platelet	Material-intermedium[15]	Descriptor-of	6-8[0_15]	
+6-10	612-619	samples	Material-intermedium[15]	_	_	
+6-11	620-631	preparation	_	_	_	
+6-12	631-632	.	_	_	_	
+
+#Text=The powers were pressed into bulk pellets with uniaxial formation pressure of 100, 200, 300, 400 and 500 MPa for further processing, respectively.
+7-1	633-636	The	_	_	_	
+7-2	637-643	powers	Material-intermedium	_	_	
+7-3	644-648	were	_	_	_	
+7-4	649-656	pressed	Operation	Participant-material|Condition-of	7-2|7-13[17_0]	
+7-5	657-661	into	_	_	_	
+7-6	662-666	bulk	Descriptor	_	_	
+7-7	667-674	pellets	Material-intermedium	Descriptor-of	7-6	
+7-8	675-679	with	_	_	_	
+7-9	680-688	uniaxial	Descriptor[16]	_	_	
+7-10	689-698	formation	Descriptor[16]	_	_	
+7-11	699-707	pressure	Property-pressure	Descriptor-of|Coreference	7-9[16_0]|7-13[17_0]	
+7-12	708-710	of	_	_	_	
+7-13	711-714	100	Property-pressure[17]	_	_	
+7-14	714-715	,	Property-pressure[17]	_	_	
+7-15	716-719	200	Property-pressure[17]	_	_	
+7-16	719-720	,	Property-pressure[17]	_	_	
+7-17	721-724	300	Property-pressure[17]	_	_	
+7-18	724-725	,	Property-pressure[17]	_	_	
+7-19	726-729	400	Property-pressure[17]	_	_	
+7-20	730-733	and	Property-pressure[17]	_	_	
+7-21	734-737	500	Property-pressure[17]	_	_	
+7-22	737-738	 	Property-pressure[17]	_	_	
+7-23	738-741	MPa	Property-pressure[17]	_	_	
+7-24	742-745	for	_	_	_	
+7-25	746-753	further	_	_	_	
+7-26	754-764	processing	_	_	_	
+7-27	764-765	,	_	_	_	
+7-28	766-778	respectively	_	_	_	
+7-29	778-779	.	_	_	_	
+
+#Text=The ceramic samples were obtained by sintering the bulk pellets at 800 °C, via conventional annealing furnace and SPS with certain pressures.
+8-1	780-783	The	_	_	_	
+8-2	784-791	ceramic	Descriptor	_	_	
+8-3	792-799	samples	Material-intermedium	Descriptor-of	8-2	
+8-4	800-804	were	_	_	_	
+8-5	805-813	obtained	Operation	Participant-material|Coreference	8-3|8-7	
+8-6	814-816	by	_	_	_	
+8-7	817-826	sintering	Operation	Participant-material|Condition-of|Device-of-operation|Device-of-operation	8-10|8-12[18_0]|8-20|8-22	
+8-8	827-830	the	_	_	_	
+8-9	831-835	bulk	Descriptor	_	_	
+8-10	836-843	pellets	Material-intermedium	Descriptor-of	8-9	
+8-11	844-846	at	_	_	_	
+8-12	847-850	800	Property-temperature[18]	_	_	
+8-13	850-851	 	Property-temperature[18]	_	_	
+8-14	851-852	°	Property-temperature[18]	_	_	
+8-15	852-853	C	Property-temperature[18]	_	_	
+8-16	853-854	,	_	_	_	
+8-17	855-858	via	_	_	_	
+8-18	859-871	conventional	Descriptor	_	_	
+8-19	872-881	annealing	Descriptor	_	_	
+8-20	882-889	furnace	Device	Descriptor-of|Descriptor-of	8-18|8-19	
+8-21	890-893	and	_	_	_	
+8-22	894-897	SPS	Device	Condition-of	8-24[19_0]	
+8-23	898-902	with	_	_	_	
+8-24	903-910	certain	Property-pressure[19]	_	_	
+8-25	911-920	pressures	Property-pressure[19]	_	_	
+8-26	920-921	.	_	_	_	
+
+#Text=For bulk platelet samples preparation via conventional annealing furnace, the pellet samples were subjected to furnace sintering at 800 °C for 12 h with a heating rate of 20 °C /min.
+9-1	922-925	For	_	_	_	
+9-2	926-930	bulk	Descriptor	_	_	
+9-3	931-939	platelet	Material-intermedium[20]	Descriptor-of	9-2[0_20]	
+9-4	940-947	samples	Material-intermedium[20]	_	_	
+9-5	948-959	preparation	_	_	_	
+9-6	960-963	via	_	_	_	
+9-7	964-976	conventional	Descriptor	_	_	
+9-8	977-986	annealing	Descriptor	_	_	
+9-9	987-994	furnace	Device	Descriptor-of|Descriptor-of	9-7|9-8	
+9-10	994-995	,	_	_	_	
+9-11	996-999	the	_	_	_	
+9-12	1000-1006	pellet	Material-intermedium[21]	_	_	
+9-13	1007-1014	samples	Material-intermedium[21]	_	_	
+9-14	1015-1019	were	_	_	_	
+9-15	1020-1029	subjected	Operation	Participant-material|Coreference	9-12[21_0]|9-18	
+9-16	1030-1032	to	_	_	_	
+9-17	1033-1040	furnace	Device	_	_	
+9-18	1041-1050	sintering	Operation	Device-of-operation|Condition-of|Condition-of|Condition-of	9-17|9-20[22_0]|9-25[23_0]|9-33[25_0]	
+9-19	1051-1053	at	_	_	_	
+9-20	1054-1057	800	Property-temperature[22]	_	_	
+9-21	1057-1058	 	Property-temperature[22]	_	_	
+9-22	1058-1059	°	Property-temperature[22]	_	_	
+9-23	1059-1060	C	Property-temperature[22]	_	_	
+9-24	1061-1064	for	_	_	_	
+9-25	1065-1067	12	Property-time[23]	_	_	
+9-26	1067-1068	 	Property-time[23]	_	_	
+9-27	1068-1069	h	Property-time[23]	_	_	
+9-28	1070-1074	with	_	_	_	
+9-29	1075-1076	a	_	_	_	
+9-30	1077-1084	heating	Property-rate[24]	_	_	
+9-31	1085-1089	rate	Property-rate[24]	_	_	
+9-32	1090-1092	of	_	_	_	
+9-33	1093-1095	20	Property-rate[25]	Coreference	9-30[24_25]	
+9-34	1095-1096	 	Property-rate[25]	_	_	
+9-35	1096-1097	°	Property-rate[25]	_	_	
+9-36	1097-1098	C	Property-rate[25]	_	_	
+9-37	1099-1100	/	Property-rate[25]	_	_	
+9-38	1100-1103	min	Property-rate[25]	_	_	
+9-39	1103-1104	.	_	_	_	
+
+#Text=For bulk platelet samples preparation via SPS, the obtained pellets pressed at 500 MPa were sintered by SPS at 800 °C with a heating rate of 100 K/min at pressure of 30 MPa and holding time of 5 min.
+10-1	1105-1108	For	_	_	_	
+10-2	1109-1113	bulk	Descriptor	_	_	
+10-3	1114-1122	platelet	Material-intermedium[26]	Descriptor-of	10-2[0_26]	
+10-4	1123-1130	samples	Material-intermedium[26]	_	_	
+10-5	1131-1142	preparation	_	_	_	
+10-6	1143-1146	via	_	_	_	
+10-7	1147-1150	SPS	Device	_	_	
+10-8	1150-1151	,	_	_	_	
+10-9	1152-1155	the	_	_	_	
+10-10	1156-1164	obtained	Descriptor	_	_	
+10-11	1165-1172	pellets	Material-intermedium	Descriptor-of	10-10	
+10-12	1173-1180	pressed	Operation	Condition-of|Participant-material|Next-operation	10-14[27_0]|10-11|10-18	
+10-13	1181-1183	at	_	_	_	
+10-14	1184-1187	500	Property-pressure[27]	_	_	
+10-15	1187-1188	 	Property-pressure[27]	_	_	
+10-16	1188-1191	MPa	Property-pressure[27]	_	_	
+10-17	1192-1196	were	_	_	_	
+10-18	1197-1205	sintered	Operation	Participant-material|Device-of-operation|Condition-of|Condition-of|Condition-of|Condition-of	10-11|10-20|10-22[28_0]|10-31[30_0]|10-39[31_0]|10-46[32_0]	
+10-19	1206-1208	by	_	_	_	
+10-20	1209-1212	SPS	Device	_	_	
+10-21	1213-1215	at	_	_	_	
+10-22	1216-1219	800	Property-temperature[28]	_	_	
+10-23	1219-1220	 	Property-temperature[28]	_	_	
+10-24	1220-1221	°	Property-temperature[28]	_	_	
+10-25	1221-1222	C	Property-temperature[28]	_	_	
+10-26	1223-1227	with	_	_	_	
+10-27	1228-1229	a	_	_	_	
+10-28	1230-1237	heating	Property-rate[29]	_	_	
+10-29	1238-1242	rate	Property-rate[29]	_	_	
+10-30	1243-1245	of	_	_	_	
+10-31	1246-1249	100	Property-rate[30]	Coreference	10-28[29_30]	
+10-32	1249-1250	 	Property-rate[30]	_	_	
+10-33	1250-1251	K	Property-rate[30]	_	_	
+10-34	1251-1252	/	Property-rate[30]	_	_	
+10-35	1252-1255	min	Property-rate[30]	_	_	
+10-36	1256-1258	at	_	_	_	
+10-37	1259-1267	pressure	Property-pressure	_	_	
+10-38	1268-1270	of	_	_	_	
+10-39	1271-1273	30	Property-pressure[31]	Coreference	10-37[0_31]	
+10-40	1273-1274	 	Property-pressure[31]	_	_	
+10-41	1274-1277	MPa	Property-pressure[31]	_	_	
+10-42	1278-1281	and	_	_	_	
+10-43	1282-1289	holding	Descriptor	_	_	
+10-44	1290-1294	time	Property-time	Descriptor-of	10-43	
+10-45	1295-1297	of	_	_	_	
+10-46	1298-1299	5	Property-time[32]	Coreference	10-44[0_32]	
+10-47	1299-1300	 	Property-time[32]	_	_	
+10-48	1300-1303	min	Property-time[32]	_	_	
+10-49	1303-1304	.	_	_	_	
+
+#Text=Table 1 presents the sample index and the preparation parameters.
+11-1	1305-1310	Table	_	_	_	
+11-2	1311-1312	1	_	_	_	
+11-3	1313-1321	presents	_	_	_	
+11-4	1322-1325	the	_	_	_	
+11-5	1326-1332	sample	_	_	_	
+11-6	1333-1338	index	_	_	_	
+11-7	1339-1342	and	_	_	_	
+11-8	1343-1346	the	_	_	_	
+11-9	1347-1358	preparation	_	_	_	
+11-10	1359-1369	parameters	_	_	_	
+11-11	1369-1370	.	_	_	_	

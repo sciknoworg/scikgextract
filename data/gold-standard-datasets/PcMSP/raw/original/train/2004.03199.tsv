@@ -1,0 +1,230 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline PtTe2 films were synthesized by first depositing a Pt metal layer onto a substrate, and then electrodepositing Te on top of this.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-21	PtTe2	Material-target	Descriptor-of|Descriptor-of	1-1|1-3	
+1-3	22-27	films	Descriptor	_	_	
+1-4	28-32	were	_	_	_	
+1-5	33-44	synthesized	Operation	Participant-material|Coreference	1-2|1-8	
+1-6	45-47	by	_	_	_	
+1-7	48-53	first	_	_	_	
+1-8	54-64	depositing	Operation	Participant-material|Participant-material|Next-operation	1-10|1-15|1-19	
+1-9	65-66	a	Value	_	_	
+1-10	67-69	Pt	Material-recipe	Value-of|Descriptor-of	1-9|1-11[1_0]	
+1-11	70-75	metal	Descriptor[1]	_	_	
+1-12	76-81	layer	Descriptor[1]	_	_	
+1-13	82-86	onto	_	_	_	
+1-14	87-88	a	Value	_	_	
+1-15	89-98	substrate	Material-others	Value-of	1-14	
+1-16	98-99	,	_	_	_	
+1-17	100-103	and	_	_	_	
+1-18	104-108	then	_	_	_	
+1-19	109-126	electrodepositing	Operation	Participant-material	1-20	
+1-20	127-129	Te	Material-recipe	Descriptor-of	1-21[2_0]	
+1-21	130-132	on	Descriptor[2]	_	_	
+1-22	133-136	top	Descriptor[2]	_	_	
+1-23	137-139	of	_	_	_	
+1-24	140-144	this	_	_	_	
+1-25	144-145	.	_	_	_	
+
+#Text=The substrates were then placed in nested crucibles in a quartz-tube furnace, as shown in the supporting information (SI), Figure S1.
+2-1	146-149	The	_	_	_	
+2-2	150-160	substrates	Material-others	_	_	
+2-3	161-165	were	_	_	_	
+2-4	166-170	then	_	_	_	
+2-5	171-177	placed	Operation	Participant-material|Device-of-operation|Device-of-operation	2-2|2-8|2-12	
+2-6	178-180	in	_	_	_	
+2-7	181-187	nested	Descriptor	_	_	
+2-8	188-197	crucibles	Device	Descriptor-of	2-7	
+2-9	198-200	in	_	_	_	
+2-10	201-202	a	Value	_	_	
+2-11	203-214	quartz-tube	Descriptor	_	_	
+2-12	215-222	furnace	Device	Value-of|Descriptor-of	2-10|2-11	
+2-13	222-223	,	_	_	_	
+2-14	224-226	as	_	_	_	
+2-15	227-232	shown	_	_	_	
+2-16	233-235	in	_	_	_	
+2-17	236-239	the	_	_	_	
+2-18	240-250	supporting	_	_	_	
+2-19	251-262	information	_	_	_	
+2-20	263-264	(	_	_	_	
+2-21	264-266	SI	_	_	_	
+2-22	266-267	)	_	_	_	
+2-23	267-268	,	_	_	_	
+2-24	269-275	Figure	_	_	_	
+2-25	276-278	S1	_	_	_	
+2-26	278-279	.	_	_	_	
+
+#Text=The nested crucibles served to maintain a high local concentration of Te in the vicinity of the samples, while minimizing the quantitiy of Te required in the furnace.
+3-1	280-283	The	_	_	_	
+3-2	284-290	nested	Descriptor	_	_	
+3-3	291-300	crucibles	Device	Descriptor-of	3-2	
+3-4	301-307	served	_	_	_	
+3-5	308-310	to	_	_	_	
+3-6	311-319	maintain	_	_	_	
+3-7	320-321	a	_	_	_	
+3-8	322-326	high	_	_	_	
+3-9	327-332	local	_	_	_	
+3-10	333-346	concentration	_	_	_	
+3-11	347-349	of	_	_	_	
+3-12	350-352	Te	_	_	_	
+3-13	353-355	in	_	_	_	
+3-14	356-359	the	_	_	_	
+3-15	360-368	vicinity	_	_	_	
+3-16	369-371	of	_	_	_	
+3-17	372-375	the	_	_	_	
+3-18	376-383	samples	_	_	_	
+3-19	383-384	,	_	_	_	
+3-20	385-390	while	_	_	_	
+3-21	391-401	minimizing	_	_	_	
+3-22	402-405	the	_	_	_	
+3-23	406-415	quantitiy	_	_	_	
+3-24	416-418	of	_	_	_	
+3-25	419-421	Te	_	_	_	
+3-26	422-430	required	_	_	_	
+3-27	431-433	in	_	_	_	
+3-28	434-437	the	_	_	_	
+3-29	438-445	furnace	_	_	_	
+3-30	445-446	.	_	_	_	
+
+#Text=The formation of PtTe2 took place under a ~700 mbar N2 atmosphere with a dwell time of 90 minutes.
+4-1	447-450	The	_	_	_	
+4-2	451-460	formation	Operation	Participant-material	4-4	
+4-3	461-463	of	_	_	_	
+4-4	464-469	PtTe2	Material-target	_	_	
+4-5	470-474	took	Operation[3]	Coreference|Condition-of|Condition-of	4-2[0_3]|4-9[4_3]|4-19[7_3]	
+4-6	475-480	place	Operation[3]	_	_	
+4-7	481-486	under	_	_	_	
+4-8	487-488	a	_	_	_	
+4-9	489-490	~	Property-pressure[4]	Coreference	4-12[5_4]	
+4-10	490-493	700	Property-pressure[4]	_	_	
+4-11	494-498	mbar	Property-pressure[4]	_	_	
+4-12	499-501	N2	Property-pressure[5]	_	_	
+4-13	502-512	atmosphere	Property-pressure[5]	_	_	
+4-14	513-517	with	_	_	_	
+4-15	518-519	a	_	_	_	
+4-16	520-525	dwell	Property-time[6]	Coreference	4-19[7_6]	
+4-17	526-530	time	Property-time[6]	_	_	
+4-18	531-533	of	_	_	_	
+4-19	534-536	90	Property-time[7]	_	_	
+4-20	537-544	minutes	Property-time[7]	_	_	
+4-21	544-545	.	_	_	_	
+
+#Text=The standard synthesis temperature was at 450 ˚C.
+5-1	546-549	The	_	_	_	
+5-2	550-558	standard	_	_	_	
+5-3	559-568	synthesis	Descriptor	_	_	
+5-4	569-580	temperature	Property-temperature	Descriptor-of|Coreference	5-3|5-7[8_0]	
+5-5	581-584	was	_	_	_	
+5-6	585-587	at	_	_	_	
+5-7	588-591	450	Property-temperature[8]	_	_	
+5-8	592-593	˚	Property-temperature[8]	_	_	
+5-9	593-594	C	Property-temperature[8]	_	_	
+5-10	594-595	.	_	_	_	
+
+#Text=The effect of the growth temperature is discussed later in the paper.
+6-1	596-599	The	_	_	_	
+6-2	600-606	effect	_	_	_	
+6-3	607-609	of	_	_	_	
+6-4	610-613	the	_	_	_	
+6-5	614-620	growth	_	_	_	
+6-6	621-632	temperature	_	_	_	
+6-7	633-635	is	_	_	_	
+6-8	636-645	discussed	_	_	_	
+6-9	646-651	later	_	_	_	
+6-10	652-654	in	_	_	_	
+6-11	655-658	the	_	_	_	
+6-12	659-664	paper	_	_	_	
+6-13	664-665	.	_	_	_	
+
+#Text=Predeposition of the Pt and Te layers allowed for strong control to be maintained over the reactant quantity on each sample, while also providing intimate contact between the reactants during the reaction.
+7-1	666-679	Predeposition	_	_	_	
+7-2	680-682	of	_	_	_	
+7-3	683-686	the	_	_	_	
+7-4	687-689	Pt	_	_	_	
+7-5	690-693	and	_	_	_	
+7-6	694-696	Te	_	_	_	
+7-7	697-703	layers	_	_	_	
+7-8	704-711	allowed	_	_	_	
+7-9	712-715	for	_	_	_	
+7-10	716-722	strong	_	_	_	
+7-11	723-730	control	_	_	_	
+7-12	731-733	to	_	_	_	
+7-13	734-736	be	_	_	_	
+7-14	737-747	maintained	_	_	_	
+7-15	748-752	over	_	_	_	
+7-16	753-756	the	_	_	_	
+7-17	757-765	reactant	_	_	_	
+7-18	766-774	quantity	_	_	_	
+7-19	775-777	on	_	_	_	
+7-20	778-782	each	_	_	_	
+7-21	783-789	sample	_	_	_	
+7-22	789-790	,	_	_	_	
+7-23	791-796	while	_	_	_	
+7-24	797-801	also	_	_	_	
+7-25	802-811	providing	_	_	_	
+7-26	812-820	intimate	_	_	_	
+7-27	821-828	contact	_	_	_	
+7-28	829-836	between	_	_	_	
+7-29	837-840	the	_	_	_	
+7-30	841-850	reactants	_	_	_	
+7-31	851-857	during	_	_	_	
+7-32	858-861	the	_	_	_	
+7-33	862-870	reaction	_	_	_	
+7-34	870-871	.	_	_	_	
+
+#Text=An advantage of this method is that the thickness of the final PtTe2 films can be defined by controlling the thickness of the initial precursor layers.
+8-1	872-874	An	_	_	_	
+8-2	875-884	advantage	_	_	_	
+8-3	885-887	of	_	_	_	
+8-4	888-892	this	_	_	_	
+8-5	893-899	method	_	_	_	
+8-6	900-902	is	_	_	_	
+8-7	903-907	that	_	_	_	
+8-8	908-911	the	_	_	_	
+8-9	912-921	thickness	_	_	_	
+8-10	922-924	of	_	_	_	
+8-11	925-928	the	_	_	_	
+8-12	929-934	final	_	_	_	
+8-13	935-940	PtTe2	_	_	_	
+8-14	941-946	films	_	_	_	
+8-15	947-950	can	_	_	_	
+8-16	951-953	be	_	_	_	
+8-17	954-961	defined	_	_	_	
+8-18	962-964	by	_	_	_	
+8-19	965-976	controlling	_	_	_	
+8-20	977-980	the	_	_	_	
+8-21	981-990	thickness	_	_	_	
+8-22	991-993	of	_	_	_	
+8-23	994-997	the	_	_	_	
+8-24	998-1005	initial	_	_	_	
+8-25	1006-1015	precursor	_	_	_	
+8-26	1016-1022	layers	_	_	_	
+8-27	1022-1023	.	_	_	_	
+
+#Text=This method also allows large-area, uniform films with defined patterns to be synthesized, which is challenging for CVD-type processes.
+9-1	1024-1028	This	_	_	_	
+9-2	1029-1035	method	_	_	_	
+9-3	1036-1040	also	_	_	_	
+9-4	1041-1047	allows	_	_	_	
+9-5	1048-1058	large-area	_	_	_	
+9-6	1058-1059	,	_	_	_	
+9-7	1060-1067	uniform	_	_	_	
+9-8	1068-1073	films	_	_	_	
+9-9	1074-1078	with	_	_	_	
+9-10	1079-1086	defined	_	_	_	
+9-11	1087-1095	patterns	_	_	_	
+9-12	1096-1098	to	_	_	_	
+9-13	1099-1101	be	_	_	_	
+9-14	1102-1113	synthesized	_	_	_	
+9-15	1113-1114	,	_	_	_	
+9-16	1115-1120	which	_	_	_	
+9-17	1121-1123	is	_	_	_	
+9-18	1124-1135	challenging	_	_	_	
+9-19	1136-1139	for	_	_	_	
+9-20	1140-1148	CVD-type	_	_	_	
+9-21	1149-1158	processes	_	_	_	
+9-22	1158-1159	.	_	_	_	

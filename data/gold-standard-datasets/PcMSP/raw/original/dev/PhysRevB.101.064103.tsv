@@ -1,0 +1,115 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Ca3Mn2O7 were prepared by\rsolid state reaction of mixed stoichiometric quantities of\rCaCO3 (99.0%; Sigma-Aldrich) and MnO2 (99.99%; Sigma-\rAldrich).
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-35	Ca3Mn2O7	Material-target	Descriptor-of	1-1	
+1-5	36-40	were	_	_	_	
+1-6	41-49	prepared	Operation	Participant-material|Coreference	1-4|1-8[1_0]	
+1-7	50-52	by	_	_	_	
+1-8	53-58	solid	Operation[1]	Coreference	1-12[0_1]	
+1-9	59-64	state	Operation[1]	_	_	
+1-10	65-73	reaction	Operation[1]	_	_	
+1-11	74-76	of	_	_	_	
+1-12	77-82	mixed	Operation	Participant-material|Participant-material	1-16|1-23	
+1-13	83-97	stoichiometric	Value[2]	_	_	
+1-14	98-108	quantities	Value[2]	_	_	
+1-15	109-111	of	_	_	_	
+1-16	112-117	CaCO3	Material-recipe	Value-of|Value-of|Brand-of	1-18|1-13[2_0]|1-20	
+1-17	118-119	(	_	_	_	
+1-18	119-124	99.0%	Value	_	_	
+1-19	124-125	;	_	_	_	
+1-20	126-139	Sigma-Aldrich	Brand	_	_	
+1-21	139-140	)	_	_	_	
+1-22	141-144	and	_	_	_	
+1-23	145-149	MnO2	Material-recipe	Value-of|Value-of|Brand-of	1-13[2_0]|1-25|1-27[3_0]	
+1-24	150-151	(	_	_	_	
+1-25	151-157	99.99%	Value	_	_	
+1-26	157-158	;	_	_	_	
+1-27	159-164	Sigma	Brand[3]	_	_	
+1-28	164-165	-	Brand[3]	_	_	
+1-29	166-173	Aldrich	Brand[3]	_	_	
+1-30	173-174	)	_	_	_	
+1-31	174-175	.	_	_	_	
+
+#Text=The mixture was calcinated for 3 h at 1123 K in air.
+2-1	176-179	The	_	_	_	
+2-2	180-187	mixture	Material-intermedium	_	_	
+2-3	188-191	was	_	_	_	
+2-4	192-202	calcinated	Operation	Participant-material|Condition-of|Condition-of|Condition-of	2-2|2-6[4_0]|2-9[5_0]|2-12	
+2-5	203-206	for	_	_	_	
+2-6	207-208	3	Property-time[4]	_	_	
+2-7	209-210	h	Property-time[4]	_	_	
+2-8	211-213	at	_	_	_	
+2-9	214-218	1123	Property-temperature[5]	_	_	
+2-10	219-220	K	Property-temperature[5]	_	_	
+2-11	221-223	in	_	_	_	
+2-12	224-227	air	Property-pressure	_	_	
+2-13	227-228	.	_	_	_	
+
+#Text=Three more grinding and subsequent 12-h 1648 K annealing\rsteps were performed.
+3-1	229-234	Three	Value	_	_	
+3-2	235-239	more	_	_	_	
+3-3	240-248	grinding	Operation	Value-of|Next-operation	3-1|3-11	
+3-4	249-252	and	_	_	_	
+3-5	253-263	subsequent	Descriptor	_	_	
+3-6	264-266	12	Property-time[6]	_	_	
+3-7	266-267	-	Property-time[6]	_	_	
+3-8	267-268	h	Property-time[6]	_	_	
+3-9	269-273	1648	Property-temperature[7]	_	_	
+3-10	274-275	K	Property-temperature[7]	_	_	
+3-11	276-285	annealing	Operation	Condition-of|Condition-of|Descriptor-of	3-6[6_0]|3-9[7_0]|3-5	
+3-12	286-291	steps	_	_	_	
+3-13	292-296	were	_	_	_	
+3-14	297-306	performed	_	_	_	
+3-15	306-307	.	_	_	_	
+
+#Text=Single phase purity was confirmed\rby Le Bail refinement on the x-ray powder diffraction data\rcollected with a Rigaku smartlLab diffractometer and analyzed\rwith the FULLPROF software package [15].
+4-1	308-314	Single	_	_	_	
+4-2	315-320	phase	_	_	_	
+4-3	321-327	purity	_	_	_	
+4-4	328-331	was	_	_	_	
+4-5	332-341	confirmed	_	_	_	
+4-6	342-344	by	_	_	_	
+4-7	345-347	Le	_	_	_	
+4-8	348-352	Bail	_	_	_	
+4-9	353-363	refinement	_	_	_	
+4-10	364-366	on	_	_	_	
+4-11	367-370	the	_	_	_	
+4-12	371-376	x-ray	_	_	_	
+4-13	377-383	powder	_	_	_	
+4-14	384-395	diffraction	_	_	_	
+4-15	396-400	data	_	_	_	
+4-16	401-410	collected	_	_	_	
+4-17	411-415	with	_	_	_	
+4-18	416-417	a	_	_	_	
+4-19	418-424	Rigaku	_	_	_	
+4-20	425-434	smartlLab	_	_	_	
+4-21	435-449	diffractometer	_	_	_	
+4-22	450-453	and	_	_	_	
+4-23	454-462	analyzed	_	_	_	
+4-24	463-467	with	_	_	_	
+4-25	468-471	the	_	_	_	
+4-26	472-480	FULLPROF	_	_	_	
+4-27	481-489	software	_	_	_	
+4-28	490-497	package	_	_	_	
+4-29	498-499	[	_	_	_	
+4-30	499-501	15	_	_	_	
+4-31	501-502	]	_	_	_	
+4-32	502-503	.	_	_	_	
+
+#Text=The extracted\rstructural parameters are presented in Appendix A.
+5-1	504-507	The	_	_	_	
+5-2	508-517	extracted	_	_	_	
+5-3	518-528	structural	_	_	_	
+5-4	529-539	parameters	_	_	_	
+5-5	540-543	are	_	_	_	
+5-6	544-553	presented	_	_	_	
+5-7	554-556	in	_	_	_	
+5-8	557-565	Appendix	_	_	_	
+5-9	566-567	A	_	_	_	
+5-10	567-568	.	_	_	_	

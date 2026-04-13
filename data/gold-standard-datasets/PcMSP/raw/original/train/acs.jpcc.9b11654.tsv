@@ -1,0 +1,161 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples were prepared using solid-state
+#Text=reactions.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	Material-target	Descriptor-of	1-1	
+1-3	24-28	were	_	_	_	
+1-4	29-37	prepared	Operation	Participant-material	1-2	
+1-5	38-43	using	_	_	_	
+1-6	44-55	solid-state	Operation[1]	Coreference	1-4[0_1]	
+1-7	56-65	reactions	Operation[1]	_	_	
+1-8	65-66	.	_	_	_	
+
+#Text=Li3PO4 (Kojundo Chemical Laboratory, >99.9%
+#Text=purity), Li3BO3 (Kojundo Chemical Laboratory, >99.99%
+#Text=purity), and Li2SO4 (Aldrich, >99% purity) were used as the
+#Text=parent materials.
+2-1	67-73	Li3PO4	Material-recipe	Brand-of|Value-of|Coreference	2-3[2_0]|2-7[3_0]|2-37	
+2-2	74-75	(	_	_	_	
+2-3	75-82	Kojundo	Brand[2]	_	_	
+2-4	83-91	Chemical	Brand[2]	_	_	
+2-5	92-102	Laboratory	Brand[2]	_	_	
+2-6	102-103	,	_	_	_	
+2-7	104-105	>	Value[3]	_	_	
+2-8	105-110	99.9%	Value[3]	_	_	
+2-9	111-117	purity	_	_	_	
+2-10	117-118	)	_	_	_	
+2-11	118-119	,	_	_	_	
+2-12	120-126	Li3BO3	Material-recipe	Brand-of|Value-of|Coreference	2-14[4_0]|2-18[5_0]|2-37	
+2-13	127-128	(	_	_	_	
+2-14	128-135	Kojundo	Brand[4]	_	_	
+2-15	136-144	Chemical	Brand[4]	_	_	
+2-16	145-155	Laboratory	Brand[4]	_	_	
+2-17	155-156	,	_	_	_	
+2-18	157-158	>	Value[5]	_	_	
+2-19	158-164	99.99%	Value[5]	_	_	
+2-20	165-171	purity	_	_	_	
+2-21	171-172	)	_	_	_	
+2-22	172-173	,	_	_	_	
+2-23	174-177	and	_	_	_	
+2-24	178-184	Li2SO4	Material-recipe	Brand-of|Value-of|Coreference	2-26|2-28[6_0]|2-37	
+2-25	185-186	(	_	_	_	
+2-26	186-193	Aldrich	Brand	_	_	
+2-27	193-194	,	_	_	_	
+2-28	195-196	>	Value[6]	_	_	
+2-29	196-199	99%	Value[6]	_	_	
+2-30	200-206	purity	_	_	_	
+2-31	206-207	)	_	_	_	
+2-32	208-212	were	_	_	_	
+2-33	213-217	used	Operation	Participant-material|Participant-material|Participant-material	2-1|2-12|2-24	
+2-34	218-220	as	_	_	_	
+2-35	221-224	the	_	_	_	
+2-36	225-231	parent	Descriptor	_	_	
+2-37	232-241	materials	Material-recipe	Descriptor-of	2-36	
+2-38	241-242	.	_	_	_	
+
+#Text=Samples were created by mixing the parent
+#Text=materials weighed with appropriate molar ratios and sintered at
+#Text=temperatures determined from melting points and phase
+#Text=transitions of the mixtures (in the range of 620−1000 °C for
+#Text=12 h).
+3-1	243-250	Samples	Material-intermedium	_	_	
+3-2	251-255	were	_	_	_	
+3-3	256-263	created	Operation	Participant-material	3-1	
+3-4	264-266	by	_	_	_	
+3-5	267-273	mixing	Operation	Next-operation|Coreference	3-15|3-3	
+3-6	274-277	the	_	_	_	
+3-7	278-284	parent	Descriptor	_	_	
+3-8	285-294	materials	Material-recipe	Descriptor-of	3-7	
+3-9	295-302	weighed	Operation	Next-operation|Participant-material	3-5|3-8	
+3-10	303-307	with	_	_	_	
+3-11	308-319	appropriate	Value[7]	_	_	
+3-12	320-325	molar	Value[7]	_	_	
+3-13	326-332	ratios	Value[7]	_	_	
+3-14	333-336	and	_	_	_	
+3-15	337-345	sintered	Operation	Condition-of|Condition-of	3-33[8_0]|3-39[9_0]	
+3-16	346-348	at	_	_	_	
+3-17	349-361	temperatures	Property-temperature	_	_	
+3-18	362-372	determined	_	_	_	
+3-19	373-377	from	_	_	_	
+3-20	378-385	melting	_	_	_	
+3-21	386-392	points	_	_	_	
+3-22	393-396	and	_	_	_	
+3-23	397-402	phase	_	_	_	
+3-24	403-414	transitions	_	_	_	
+3-25	415-417	of	_	_	_	
+3-26	418-421	the	_	_	_	
+3-27	422-430	mixtures	_	_	_	
+3-28	431-432	(	_	_	_	
+3-29	432-434	in	_	_	_	
+3-30	435-438	the	_	_	_	
+3-31	439-444	range	_	_	_	
+3-32	445-447	of	_	_	_	
+3-33	448-451	620	Property-temperature[8]	Coreference	3-17[0_8]	
+3-34	451-452	−	Property-temperature[8]	_	_	
+3-35	452-456	1000	Property-temperature[8]	_	_	
+3-36	457-458	°	Property-temperature[8]	_	_	
+3-37	458-459	C	Property-temperature[8]	_	_	
+3-38	460-463	for	_	_	_	
+3-39	464-466	12	Property-time[9]	_	_	
+3-40	467-468	h	Property-time[9]	_	_	
+3-41	468-469	)	_	_	_	
+3-42	469-470	.	_	_	_	
+
+#Text=The melting points were measured with a differential
+#Text=thermal analyzer (Rigaku, Thermo plus EVO2 TG 8120) at a
+#Text=heating rate of 10 °C/min in argon flow.
+4-1	471-474	The	_	_	_	
+4-2	475-482	melting	_	_	_	
+4-3	483-489	points	_	_	_	
+4-4	490-494	were	_	_	_	
+4-5	495-503	measured	_	_	_	
+4-6	504-508	with	_	_	_	
+4-7	509-510	a	_	_	_	
+4-8	511-523	differential	_	_	_	
+4-9	524-531	thermal	_	_	_	
+4-10	532-540	analyzer	_	_	_	
+4-11	541-542	(	_	_	_	
+4-12	542-548	Rigaku	_	_	_	
+4-13	548-549	,	_	_	_	
+4-14	550-556	Thermo	_	_	_	
+4-15	557-561	plus	_	_	_	
+4-16	562-566	EVO2	_	_	_	
+4-17	567-569	TG	_	_	_	
+4-18	570-574	8120	_	_	_	
+4-19	574-575	)	_	_	_	
+4-20	576-578	at	_	_	_	
+4-21	579-580	a	_	_	_	
+4-22	581-588	heating	_	_	_	
+4-23	589-593	rate	_	_	_	
+4-24	594-596	of	_	_	_	
+4-25	597-599	10	_	_	_	
+4-26	600-601	°	_	_	_	
+4-27	601-602	C	_	_	_	
+4-28	602-603	/	_	_	_	
+4-29	603-606	min	_	_	_	
+4-30	607-609	in	_	_	_	
+4-31	610-615	argon	_	_	_	
+4-32	616-620	flow	_	_	_	
+4-33	620-621	.	_	_	_	
+
+#Text=After sintering, the
+#Text=samples were cooled to room temperature in an argon flow.
+5-1	622-627	After	_	_	_	
+5-2	628-637	sintering	Operation	Next-operation	5-7	
+5-3	637-638	,	_	_	_	
+5-4	639-642	the	_	_	_	
+5-5	643-650	samples	Material-intermedium	_	_	
+5-6	651-655	were	_	_	_	
+5-7	656-662	cooled	Operation	Condition-of|Condition-of|Participant-material	5-9[10_0]|5-13[11_0]|5-5	
+5-8	663-665	to	_	_	_	
+5-9	666-670	room	Property-temperature[10]	_	_	
+5-10	671-682	temperature	Property-temperature[10]	_	_	
+5-11	683-685	in	_	_	_	
+5-12	686-688	an	_	_	_	
+5-13	689-694	argon	Property-pressure[11]	_	_	
+5-14	695-699	flow	Property-pressure[11]	_	_	
+5-15	699-700	.	_	_	_	

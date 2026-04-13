@@ -1,0 +1,162 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline BaIr2As2 samples were prepared by a high temperature and high pressure synthesis method.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-28	BaIr2As2	Material-target	Descriptor-of	1-2	
+1-4	29-36	samples	_	_	_	
+1-5	37-41	were	_	_	_	
+1-6	42-50	prepared	Operation	Participant-material	1-3	
+1-7	51-53	by	_	_	_	
+1-8	54-55	a	_	_	_	
+1-9	56-60	high	Property-temperature[1]	_	_	
+1-10	61-72	temperature	Property-temperature[1]	_	_	
+1-11	73-76	and	_	_	_	
+1-12	77-81	high	Property-pressure[2]	_	_	
+1-13	82-90	pressure	Property-pressure[2]	_	_	
+1-14	91-100	synthesis	Operation[3]	Coreference|Condition-of|Condition-of	1-6[0_3]|1-9[1_3]|1-12[2_3]	
+1-15	101-107	method	Operation[3]	_	_	
+1-16	107-108	.	_	_	_	
+
+#Text=Firstly, the BaAs and IrAs precursors were prepared from the respective elements in evacuated silica tubes at 700 °C for 20 hours.
+2-1	109-116	Firstly	_	_	_	
+2-2	116-117	,	_	_	_	
+2-3	118-121	the	_	_	_	
+2-4	122-126	BaAs	Material-intermedium	_	_	
+2-5	127-130	and	_	_	_	
+2-6	131-135	IrAs	Material-intermedium	_	_	
+2-7	136-146	precursors	Material-intermedium	Coreference|Coreference	2-4|2-6	
+2-8	147-151	were	_	_	_	
+2-9	152-160	prepared	Operation	Device-of-operation|Participant-material|Participant-material|Condition-of|Condition-of	2-17|2-6|2-4|2-19[5_0]|2-23[6_0]	
+2-10	161-165	from	_	_	_	
+2-11	166-169	the	Material-recipe[4]	_	_	
+2-12	170-180	respective	Material-recipe[4]	_	_	
+2-13	181-189	elements	Material-recipe[4]	_	_	
+2-14	190-192	in	_	_	_	
+2-15	193-202	evacuated	Descriptor	_	_	
+2-16	203-209	silica	Descriptor	_	_	
+2-17	210-215	tubes	Device	Descriptor-of|Descriptor-of	2-15|2-16	
+2-18	216-218	at	_	_	_	
+2-19	219-222	700	Property-temperature[5]	_	_	
+2-20	223-224	°	Property-temperature[5]	_	_	
+2-21	224-225	C	Property-temperature[5]	_	_	
+2-22	226-229	for	_	_	_	
+2-23	230-232	20	Property-time[6]	_	_	
+2-24	233-238	hours	Property-time[6]	_	_	
+2-25	238-239	.	_	_	_	
+
+#Text=Secondly, the fine powders of BaAs, IrAs and Ir were mixed together by the molar ratio of 1:1:1, then ground thoroughly and pressed into small pellets.
+3-1	240-248	Secondly	_	_	_	
+3-2	248-249	,	_	_	_	
+3-3	250-253	the	_	_	_	
+3-4	254-258	fine	Descriptor	_	_	
+3-5	259-266	powders	Material-intermedium	Descriptor-of	3-4	
+3-6	267-269	of	_	_	_	
+3-7	270-274	BaAs	Material-intermedium	Coreference|Value-of	3-5|3-20[8_0]	
+3-8	274-275	,	_	_	_	
+3-9	276-280	IrAs	Material-intermedium	Coreference|Value-of	3-5|3-20[8_0]	
+3-10	281-284	and	_	_	_	
+3-11	285-287	Ir	Material-recipe	Coreference|Value-of	3-5|3-20[8_0]	
+3-12	288-292	were	_	_	_	
+3-13	293-298	mixed	Operation	Next-operation|Participant-material|Participant-material|Participant-material	3-27|3-11|3-9|3-7	
+3-14	299-307	together	_	_	_	
+3-15	308-310	by	_	_	_	
+3-16	311-314	the	_	_	_	
+3-17	315-320	molar	Descriptor[7]	_	_	
+3-18	321-326	ratio	Descriptor[7]	_	_	
+3-19	327-329	of	_	_	_	
+3-20	330-331	1	Value[8]	Descriptor-of	3-17[7_8]	
+3-21	331-332	:	Value[8]	_	_	
+3-22	332-333	1	Value[8]	_	_	
+3-23	333-334	:	Value[8]	_	_	
+3-24	334-335	1	Value[8]	_	_	
+3-25	335-336	,	_	_	_	
+3-26	337-341	then	_	_	_	
+3-27	342-348	ground	Operation	Next-operation	3-30	
+3-28	349-359	thoroughly	_	_	_	
+3-29	360-363	and	_	_	_	
+3-30	364-371	pressed	Operation	_	_	
+3-31	372-376	into	_	_	_	
+3-32	377-382	small	Descriptor	_	_	
+3-33	383-390	pellets	Material-intermedium	Descriptor-of	3-32	
+3-34	390-391	.	_	_	_	
+
+#Text=The pellets were placed in a boron nitride capsule and then sintered at 950 °C and a pressure of 2 GPa for 2 hours using a piston-cylinder type high pressure synthesis apparatus.
+4-1	392-395	The	_	_	_	
+4-2	396-403	pellets	Material-intermedium	_	_	
+4-3	404-408	were	_	_	_	
+4-4	409-415	placed	Operation	Device-of-operation|Next-operation|Participant-material	4-9|4-12|4-2	
+4-5	416-418	in	_	_	_	
+4-6	419-420	a	Value	_	_	
+4-7	421-426	boron	Descriptor[9]	_	_	
+4-8	427-434	nitride	Descriptor[9]	_	_	
+4-9	435-442	capsule	Device	Value-of|Descriptor-of	4-6|4-7[9_0]	
+4-10	443-446	and	_	_	_	
+4-11	447-451	then	_	_	_	
+4-12	452-460	sintered	Operation	Device-of-operation|Condition-of|Condition-of|Condition-of	4-30[14_0]|4-21[11_0]|4-24[12_0]|4-14[10_0]	
+4-13	461-463	at	_	_	_	
+4-14	464-467	950	Property-temperature[10]	_	_	
+4-15	468-469	°	Property-temperature[10]	_	_	
+4-16	469-470	C	Property-temperature[10]	_	_	
+4-17	471-474	and	_	_	_	
+4-18	475-476	a	_	_	_	
+4-19	477-485	pressure	Property-pressure	_	_	
+4-20	486-488	of	_	_	_	
+4-21	489-490	2	Property-pressure[11]	Coreference	4-19[0_11]	
+4-22	491-494	GPa	Property-pressure[11]	_	_	
+4-23	495-498	for	_	_	_	
+4-24	499-500	2	Property-time[12]	_	_	
+4-25	501-506	hours	Property-time[12]	_	_	
+4-26	507-512	using	_	_	_	
+4-27	513-514	a	Value	_	_	
+4-28	515-530	piston-cylinder	Descriptor[13]	_	_	
+4-29	531-535	type	Descriptor[13]	_	_	
+4-30	536-540	high	Device[14]	Descriptor-of|Value-of	4-28[13_14]|4-27[0_14]	
+4-31	541-549	pressure	Device[14]	_	_	
+4-32	550-559	synthesis	Device[14]	_	_	
+4-33	560-569	apparatus	Device[14]	_	_	
+4-34	569-570	.	_	_	_	
+
+#Text=The obtained samples are black in color and very unstable in air, but stable in inert atmosphere for months.
+5-1	571-574	The	_	_	_	
+5-2	575-583	obtained	_	_	_	
+5-3	584-591	samples	_	_	_	
+5-4	592-595	are	_	_	_	
+5-5	596-601	black	_	_	_	
+5-6	602-604	in	_	_	_	
+5-7	605-610	color	_	_	_	
+5-8	611-614	and	_	_	_	
+5-9	615-619	very	_	_	_	
+5-10	620-628	unstable	_	_	_	
+5-11	629-631	in	_	_	_	
+5-12	632-635	air	_	_	_	
+5-13	635-636	,	_	_	_	
+5-14	637-640	but	_	_	_	
+5-15	641-647	stable	_	_	_	
+5-16	648-650	in	_	_	_	
+5-17	651-656	inert	_	_	_	
+5-18	657-667	atmosphere	_	_	_	
+5-19	668-671	for	_	_	_	
+5-20	672-678	months	_	_	_	
+5-21	678-679	.	_	_	_	
+
+#Text=All the sample preparation and handling processes were performed in an argon filled glove box.
+6-1	680-683	All	_	_	_	
+6-2	684-687	the	_	_	_	
+6-3	688-694	sample	Operation[15]	_	_	
+6-4	695-706	preparation	Operation[15]	_	_	
+6-5	707-710	and	_	_	_	
+6-6	711-719	handling	Operation[16]	_	_	
+6-7	720-729	processes	Operation[16]	_	_	
+6-8	730-734	were	_	_	_	
+6-9	735-744	performed	Operation	Device-of-operation|Participant-material|Participant-material	6-14[18_0]|6-6[16_0]|6-3[15_0]	
+6-10	745-747	in	_	_	_	
+6-11	748-750	an	Value	_	_	
+6-12	751-756	argon	Descriptor[17]	_	_	
+6-13	757-763	filled	Descriptor[17]	_	_	
+6-14	764-769	glove	Device[18]	Value-of|Descriptor-of	6-11[0_18]|6-12[17_18]	
+6-15	770-773	box	Device[18]	_	_	
+6-16	773-774	.	_	_	_	

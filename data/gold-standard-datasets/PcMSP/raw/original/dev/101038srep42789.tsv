@@ -1,0 +1,308 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A polycrystalline sample of GdPd3 was synthesized by arc-melting the stoichiometric amount of highly pure  
+#Text=(≥ 99.9%) constituent elements under argon followed by vacuum annealing for 240 h at 1000 °C (ref. 28).
+1-1	0-1	A	Value	_	_	
+1-2	2-17	polycrystalline	Descriptor	_	_	
+1-3	18-24	sample	_	_	_	
+1-4	25-27	of	_	_	_	
+1-5	28-33	GdPd3	Material-target	Descriptor-of|Value-of	1-2|1-1	
+1-6	34-37	was	_	_	_	
+1-7	38-49	synthesized	Operation	Participant-material	1-5	
+1-8	50-52	by	_	_	_	
+1-9	53-64	arc-melting	Operation	Next-operation|Participant-material|Condition-of|Coreference	1-27|1-21|1-23|1-7	
+1-10	65-68	the	_	_	_	
+1-11	69-83	stoichiometric	Descriptor[1]	_	_	
+1-12	84-90	amount	Descriptor[1]	_	_	
+1-13	91-93	of	_	_	_	
+1-14	94-100	highly	Descriptor[2]	_	_	
+1-15	101-105	pure	Descriptor[2]	_	_	
+1-16	108-109	(	_	_	_	
+1-17	109-110	≥	Value[3]	_	_	
+1-18	111-116	99.9%	Value[3]	_	_	
+1-19	116-117	)	_	_	_	
+1-20	118-129	constituent	Descriptor	_	_	
+1-21	130-138	elements	Material-recipe	Descriptor-of|Descriptor-of|Descriptor-of|Value-of	1-20|1-14[2_0]|1-11[1_0]|1-17[3_0]	
+1-22	139-144	under	_	_	_	
+1-23	145-150	argon	Property-pressure	_	_	
+1-24	151-159	followed	_	_	_	
+1-25	160-162	by	_	_	_	
+1-26	163-169	vacuum	Property-pressure	_	_	
+1-27	170-179	annealing	Operation	Condition-of|Condition-of|Condition-of	1-26|1-29[4_0]|1-32[5_0]	
+1-28	180-183	for	_	_	_	
+1-29	184-187	240	Property-time[4]	_	_	
+1-30	188-189	h	Property-time[4]	_	_	
+1-31	190-192	at	_	_	_	
+1-32	193-197	1000	Property-temperature[5]	_	_	
+1-33	198-199	°	Property-temperature[5]	_	_	
+1-34	199-200	C	Property-temperature[5]	_	_	
+1-35	201-202	(	_	_	_	
+1-36	202-205	ref	_	_	_	
+1-37	205-206	.	_	_	_	
+1-38	207-209	28	_	_	_	
+1-39	209-210	)	_	_	_	
+1-40	210-211	.	_	_	_	
+
+#Text=Powder 
+#Text=x-ray diffraction data taken at room temperature (see Figure-1 of Supplemental material) and their Rietveld 
+#Text=refinement49 suggest that the synthesized compound is a single phase and is free from any detectable impurity50.
+2-1	212-218	Powder	_	_	_	
+2-2	220-225	x-ray	_	_	_	
+2-3	226-237	diffraction	_	_	_	
+2-4	238-242	data	_	_	_	
+2-5	243-248	taken	_	_	_	
+2-6	249-251	at	_	_	_	
+2-7	252-256	room	_	_	_	
+2-8	257-268	temperature	_	_	_	
+2-9	269-270	(	_	_	_	
+2-10	270-273	see	_	_	_	
+2-11	274-280	Figure	_	_	_	
+2-12	280-281	-	_	_	_	
+2-13	281-282	1	_	_	_	
+2-14	283-285	of	_	_	_	
+2-15	286-298	Supplemental	_	_	_	
+2-16	298-299	 	_	_	_	
+2-17	299-307	material	_	_	_	
+2-18	307-308	)	_	_	_	
+2-19	309-312	and	_	_	_	
+2-20	313-318	their	_	_	_	
+2-21	319-327	Rietveld	_	_	_	
+2-22	329-341	refinement49	_	_	_	
+2-23	342-349	suggest	_	_	_	
+2-24	350-354	that	_	_	_	
+2-25	355-358	the	_	_	_	
+2-26	359-370	synthesized	_	_	_	
+2-27	371-379	compound	_	_	_	
+2-28	380-382	is	_	_	_	
+2-29	383-384	a	_	_	_	
+2-30	385-391	single	_	_	_	
+2-31	392-397	phase	_	_	_	
+2-32	398-401	and	_	_	_	
+2-33	402-404	is	_	_	_	
+2-34	405-409	free	_	_	_	
+2-35	410-414	from	_	_	_	
+2-36	415-418	any	_	_	_	
+2-37	419-429	detectable	_	_	_	
+2-38	430-440	impurity50	_	_	_	
+2-39	440-441	.	_	_	_	
+
+#Text=The refined value of the cubic lattice parameter a is 4.0919(4) Å.
+3-1	443-446	The	_	_	_	
+3-2	447-454	refined	_	_	_	
+3-3	455-460	value	_	_	_	
+3-4	461-463	of	_	_	_	
+3-5	464-467	the	_	_	_	
+3-6	468-473	cubic	_	_	_	
+3-7	474-481	lattice	_	_	_	
+3-8	482-491	parameter	_	_	_	
+3-9	492-493	a	_	_	_	
+3-10	494-496	is	_	_	_	
+3-11	497-503	4.0919	_	_	_	
+3-12	503-504	(	_	_	_	
+3-13	504-505	4	_	_	_	
+3-14	505-506	)	_	_	_	
+3-15	507-508	Å	_	_	_	
+3-16	508-509	.	_	_	_	
+
+#Text=Temperature- and magnetic field-dependent 
+#Text=electrical transport measurements were carried out using the four-probe technique in a Quantum Design Physical 
+#Text=Properties Measurement System (PPMS) equipped with a 3He refrigeration system.
+4-1	510-521	Temperature	_	_	_	
+4-2	521-522	-	_	_	_	
+4-3	523-526	and	_	_	_	
+4-4	527-535	magnetic	_	_	_	
+4-5	536-551	field-dependent	_	_	_	
+4-6	553-563	electrical	_	_	_	
+4-7	564-573	transport	_	_	_	
+4-8	574-586	measurements	_	_	_	
+4-9	587-591	were	_	_	_	
+4-10	592-599	carried	_	_	_	
+4-11	600-603	out	_	_	_	
+4-12	604-609	using	_	_	_	
+4-13	610-613	the	_	_	_	
+4-14	614-624	four-probe	_	_	_	
+4-15	625-634	technique	_	_	_	
+4-16	635-637	in	_	_	_	
+4-17	638-639	a	_	_	_	
+4-18	640-647	Quantum	_	_	_	
+4-19	648-654	Design	_	_	_	
+4-20	655-663	Physical	_	_	_	
+4-21	665-675	Properties	_	_	_	
+4-22	676-687	Measurement	_	_	_	
+4-23	688-694	System	_	_	_	
+4-24	695-696	(	_	_	_	
+4-25	696-700	PPMS	_	_	_	
+4-26	700-701	)	_	_	_	
+4-27	702-710	equipped	_	_	_	
+4-28	711-715	with	_	_	_	
+4-29	716-717	a	_	_	_	
+4-30	718-721	3He	_	_	_	
+4-31	722-735	refrigeration	_	_	_	
+4-32	736-742	system	_	_	_	
+4-33	742-743	.	_	_	_	
+
+#Text=The MR data do not show any 
+#Text=significant dependence on the relative orientation between the current direction and H.
+5-1	744-747	The	_	_	_	
+5-2	748-750	MR	_	_	_	
+5-3	751-755	data	_	_	_	
+5-4	756-758	do	_	_	_	
+5-5	759-762	not	_	_	_	
+5-6	763-767	show	_	_	_	
+5-7	768-771	any	_	_	_	
+5-8	773-784	significant	_	_	_	
+5-9	785-795	dependence	_	_	_	
+5-10	796-798	on	_	_	_	
+5-11	799-802	the	_	_	_	
+5-12	803-811	relative	_	_	_	
+5-13	812-823	orientation	_	_	_	
+5-14	824-831	between	_	_	_	
+5-15	832-835	the	_	_	_	
+5-16	836-843	current	_	_	_	
+5-17	844-853	direction	_	_	_	
+5-18	854-857	and	_	_	_	
+5-19	858-859	H	_	_	_	
+5-20	859-860	.	_	_	_	
+
+#Text=Heat capacity Cp(T) was 
+#Text=measured by relaxation measurement in the PPMS.
+6-1	861-865	Heat	_	_	_	
+6-2	866-874	capacity	_	_	_	
+6-3	875-877	Cp	_	_	_	
+6-4	877-878	(	_	_	_	
+6-5	878-879	T	_	_	_	
+6-6	879-880	)	_	_	_	
+6-7	881-884	was	_	_	_	
+6-8	886-894	measured	_	_	_	
+6-9	895-897	by	_	_	_	
+6-10	898-908	relaxation	_	_	_	
+6-11	909-920	measurement	_	_	_	
+6-12	921-923	in	_	_	_	
+6-13	924-927	the	_	_	_	
+6-14	928-932	PPMS	_	_	_	
+6-15	932-933	.	_	_	_	
+
+#Text=The temperature dependence of χ and field dependence of 
+#Text=the magnetization M was measured in a Quantum Design Magnetic Properties Measurement System (MPMS).
+7-1	934-937	The	_	_	_	
+7-2	938-949	temperature	_	_	_	
+7-3	950-960	dependence	_	_	_	
+7-4	961-963	of	_	_	_	
+7-5	964-965	χ	_	_	_	
+7-6	966-969	and	_	_	_	
+7-7	970-975	field	_	_	_	
+7-8	976-986	dependence	_	_	_	
+7-9	987-989	of	_	_	_	
+7-10	991-994	the	_	_	_	
+7-11	995-1008	magnetization	_	_	_	
+7-12	1009-1010	M	_	_	_	
+7-13	1011-1014	was	_	_	_	
+7-14	1015-1023	measured	_	_	_	
+7-15	1024-1026	in	_	_	_	
+7-16	1027-1028	a	_	_	_	
+7-17	1029-1036	Quantum	_	_	_	
+7-18	1037-1043	Design	_	_	_	
+7-19	1044-1052	Magnetic	_	_	_	
+7-20	1053-1063	Properties	_	_	_	
+7-21	1064-1075	Measurement	_	_	_	
+7-22	1076-1082	System	_	_	_	
+7-23	1083-1084	(	_	_	_	
+7-24	1084-1088	MPMS	_	_	_	
+7-25	1088-1089	)	_	_	_	
+7-26	1089-1090	.	_	_	_	
+
+#Text=The χ(T) data were taken in both zero-field-cooled (ZFC) and field-cooled (FC) conditions at the lowest field 
+#Text=H =  0.01 T.
+8-1	1092-1095	The	_	_	_	
+8-2	1096-1097	χ	_	_	_	
+8-3	1097-1098	(	_	_	_	
+8-4	1098-1099	T	_	_	_	
+8-5	1099-1100	)	_	_	_	
+8-6	1101-1105	data	_	_	_	
+8-7	1106-1110	were	_	_	_	
+8-8	1111-1116	taken	_	_	_	
+8-9	1117-1119	in	_	_	_	
+8-10	1120-1124	both	_	_	_	
+8-11	1125-1142	zero-field-cooled	_	_	_	
+8-12	1143-1144	(	_	_	_	
+8-13	1144-1147	ZFC	_	_	_	
+8-14	1147-1148	)	_	_	_	
+8-15	1149-1152	and	_	_	_	
+8-16	1153-1165	field-cooled	_	_	_	
+8-17	1166-1167	(	_	_	_	
+8-18	1167-1169	FC	_	_	_	
+8-19	1169-1170	)	_	_	_	
+8-20	1171-1181	conditions	_	_	_	
+8-21	1182-1184	at	_	_	_	
+8-22	1185-1188	the	_	_	_	
+8-23	1189-1195	lowest	_	_	_	
+8-24	1196-1201	field	_	_	_	
+8-25	1203-1204	H	_	_	_	
+8-26	1205-1206	=	_	_	_	
+8-27	1208-1212	0.01	_	_	_	
+8-28	1213-1214	T	_	_	_	
+8-29	1214-1215	.	_	_	_	
+
+#Text=Since the ZFC and FC data overlap with each other in the entire T range of the measurement at this H, 
+#Text=the data at higher H’s were taken only in the ZFC condition.
+9-1	1216-1221	Since	_	_	_	
+9-2	1222-1225	the	_	_	_	
+9-3	1226-1229	ZFC	_	_	_	
+9-4	1230-1233	and	_	_	_	
+9-5	1234-1236	FC	_	_	_	
+9-6	1237-1241	data	_	_	_	
+9-7	1242-1249	overlap	_	_	_	
+9-8	1250-1254	with	_	_	_	
+9-9	1255-1259	each	_	_	_	
+9-10	1260-1265	other	_	_	_	
+9-11	1266-1268	in	_	_	_	
+9-12	1269-1272	the	_	_	_	
+9-13	1273-1279	entire	_	_	_	
+9-14	1280-1281	T	_	_	_	
+9-15	1282-1287	range	_	_	_	
+9-16	1288-1290	of	_	_	_	
+9-17	1291-1294	the	_	_	_	
+9-18	1295-1306	measurement	_	_	_	
+9-19	1307-1309	at	_	_	_	
+9-20	1310-1314	this	_	_	_	
+9-21	1315-1316	H	_	_	_	
+9-22	1316-1317	,	_	_	_	
+9-23	1319-1322	the	_	_	_	
+9-24	1323-1327	data	_	_	_	
+9-25	1328-1330	at	_	_	_	
+9-26	1331-1337	higher	_	_	_	
+9-27	1338-1339	H	_	_	_	
+9-28	1339-1340	’	_	_	_	
+9-29	1340-1341	s	_	_	_	
+9-30	1342-1346	were	_	_	_	
+9-31	1347-1352	taken	_	_	_	
+9-32	1353-1357	only	_	_	_	
+9-33	1358-1360	in	_	_	_	
+9-34	1361-1364	the	_	_	_	
+9-35	1365-1368	ZFC	_	_	_	
+9-36	1369-1378	condition	_	_	_	
+9-37	1378-1379	.	_	_	_	
+
+#Text=The overlapping ZFC and FC data suggest that our 
+#Text=sample is free from blocking and pinning effects.
+10-1	1380-1383	The	_	_	_	
+10-2	1384-1395	overlapping	_	_	_	
+10-3	1396-1399	ZFC	_	_	_	
+10-4	1400-1403	and	_	_	_	
+10-5	1404-1406	FC	_	_	_	
+10-6	1407-1411	data	_	_	_	
+10-7	1412-1419	suggest	_	_	_	
+10-8	1420-1424	that	_	_	_	
+10-9	1425-1428	our	_	_	_	
+10-10	1430-1436	sample	_	_	_	
+10-11	1437-1439	is	_	_	_	
+10-12	1440-1444	free	_	_	_	
+10-13	1445-1449	from	_	_	_	
+10-14	1450-1458	blocking	_	_	_	
+10-15	1459-1462	and	_	_	_	
+10-16	1463-1470	pinning	_	_	_	
+10-17	1471-1478	effects	_	_	_	
+10-18	1478-1479	.	_	_	_	

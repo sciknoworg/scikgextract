@@ -1,0 +1,200 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Sample synthesis.
+1-1	0-6	Sample	_	_	_	
+1-2	7-16	synthesis	_	_	_	
+1-3	16-17	.	_	_	_	
+
+#Text=Polycrystalline Eu2In samples were prepared by melting stoichiometric quantities of elemental starting materials followed by annealing in a conventional resistive furnace.
+2-1	18-33	Polycrystalline	Descriptor	_	_	
+2-2	34-39	Eu2In	Material-target	Descriptor-of	2-1	
+2-3	40-47	samples	_	_	_	
+2-4	48-52	were	_	_	_	
+2-5	53-61	prepared	Operation	Participant-material|Coreference|Coreference	2-2|2-7|2-16	
+2-6	62-64	by	_	_	_	
+2-7	65-72	melting	Operation	Participant-material|Next-operation	2-13|2-16	
+2-8	73-87	stoichiometric	Value[1]	_	_	
+2-9	88-98	quantities	Value[1]	_	_	
+2-10	99-101	of	_	_	_	
+2-11	102-111	elemental	Descriptor	_	_	
+2-12	112-120	starting	Descriptor	_	_	
+2-13	121-130	materials	Material-recipe	Value-of|Descriptor-of|Descriptor-of	2-8[1_0]|2-11|2-12	
+2-14	131-139	followed	_	_	_	
+2-15	140-142	by	_	_	_	
+2-16	143-152	annealing	Operation	Device-of-operation	2-21	
+2-17	153-155	in	_	_	_	
+2-18	156-157	a	Value	_	_	
+2-19	158-170	conventional	Descriptor	_	_	
+2-20	171-180	resistive	Descriptor	_	_	
+2-21	181-188	furnace	Device	Value-of|Descriptor-of|Descriptor-of	2-18|2-19|2-20	
+2-22	188-189	.	_	_	_	
+
+#Text=The high-purity europium metal was supplied by the Materials Preparation Center of the Ames Laboratory.
+3-1	190-193	The	_	_	_	
+3-2	194-205	high-purity	Descriptor	_	_	
+3-3	206-214	europium	Material-recipe	Descriptor-of|Descriptor-of|Brand-of	3-2|3-4|3-9[2_0]	
+3-4	215-220	metal	Descriptor	_	_	
+3-5	221-224	was	_	_	_	
+3-6	225-233	supplied	Operation	Participant-material	3-3	
+3-7	234-236	by	_	_	_	
+3-8	237-240	the	_	_	_	
+3-9	241-250	Materials	Brand[2]	_	_	
+3-10	251-262	Preparation	Brand[2]	_	_	
+3-11	263-269	Center	Brand[2]	_	_	
+3-12	270-272	of	Brand[2]	_	_	
+3-13	273-276	the	Brand[2]	_	_	
+3-14	277-281	Ames	Brand[2]	_	_	
+3-15	282-292	Laboratory	Brand[2]	_	_	
+3-16	292-293	.	_	_	_	
+
+#Text=All operations and handling of the samples were carried out in Ar glovebox.
+4-1	294-297	All	Descriptor	_	_	
+4-2	298-308	operations	Operation	Descriptor-of|Participant-material	4-1|4-7	
+4-3	309-312	and	_	_	_	
+4-4	313-321	handling	Operation	Descriptor-of|Participant-material	4-1|4-7	
+4-5	322-324	of	_	_	_	
+4-6	325-328	the	_	_	_	
+4-7	329-336	samples	Material-intermedium	_	_	
+4-8	337-341	were	_	_	_	
+4-9	342-349	carried	Operation[3]	Coreference|Coreference|Device-of-operation	4-2[0_3]|4-4[0_3]|4-13[0_3]	
+4-10	350-353	out	Operation[3]	_	_	
+4-11	354-356	in	_	_	_	
+4-12	357-359	Ar	Descriptor	_	_	
+4-13	360-368	glovebox	Device	Descriptor-of	4-12	
+4-14	368-369	.	_	_	_	
+
+#Text=The starting materials were sealed in a Ta crucible under a partial atmosphere of ultrapure Ar.
+5-1	370-373	The	_	_	_	
+5-2	374-382	starting	Material-recipe[4]	_	_	
+5-3	383-392	materials	Material-recipe[4]	_	_	
+5-4	393-397	were	_	_	_	
+5-5	398-404	sealed	Operation	Participant-material|Device-of-operation|Condition-of|Condition-of	5-2[4_0]|5-9|5-12[5_0]|5-16	
+5-6	405-407	in	_	_	_	
+5-7	408-409	a	Value	_	_	
+5-8	410-412	Ta	Descriptor	_	_	
+5-9	413-421	crucible	Device	Value-of|Descriptor-of	5-7|5-8	
+5-10	422-427	under	_	_	_	
+5-11	428-429	a	_	_	_	
+5-12	430-437	partial	Property-pressure[5]	_	_	
+5-13	438-448	atmosphere	Property-pressure[5]	_	_	
+5-14	449-451	of	_	_	_	
+5-15	452-461	ultrapure	Descriptor	_	_	
+5-16	462-464	Ar	Property-pressure	Descriptor-of	5-15	
+5-17	464-465	.	_	_	_	
+
+#Text=The crucible was then sealed in a quartz tube backfilled with helium gas.
+6-1	466-469	The	_	_	_	
+6-2	470-478	crucible	Device	_	_	
+6-3	479-482	was	_	_	_	
+6-4	483-487	then	_	_	_	
+6-5	488-494	sealed	Operation	Device-of-operation|Device-of-operation	6-2|6-9	
+6-6	495-497	in	_	_	_	
+6-7	498-499	a	Value	_	_	
+6-8	500-506	quartz	Descriptor	_	_	
+6-9	507-511	tube	Device	Value-of|Descriptor-of	6-7|6-8	
+6-10	512-522	backfilled	Operation	Participant-material|Condition-of	6-9|6-12[6_0]	
+6-11	523-527	with	_	_	_	
+6-12	528-534	helium	Property-pressure[6]	_	_	
+6-13	535-538	gas	Property-pressure[6]	_	_	
+6-14	538-539	.	_	_	_	
+
+#Text=The sample was first melted several times at 900 °C in a resistance furnace, flipping the sample tube between each melting.
+7-1	540-543	The	_	_	_	
+7-2	544-550	sample	Material-intermedium	_	_	
+7-3	551-554	was	_	_	_	
+7-4	555-560	first	_	_	_	
+7-5	561-567	melted	Operation	Participant-material|Condition-of|Condition-of|Device-of-operation|Next-operation	7-2|7-6[7_0]|7-9[8_0]|7-15|7-17	
+7-6	568-575	several	Property-time[7]	_	_	
+7-7	576-581	times	Property-time[7]	_	_	
+7-8	582-584	at	_	_	_	
+7-9	585-588	900	Property-temperature[8]	_	_	
+7-10	589-590	°	Property-temperature[8]	_	_	
+7-11	590-591	C	Property-temperature[8]	_	_	
+7-12	592-594	in	_	_	_	
+7-13	595-596	a	Value	_	_	
+7-14	597-607	resistance	Descriptor	_	_	
+7-15	608-615	furnace	Device	Value-of|Descriptor-of	7-13|7-14	
+7-16	615-616	,	_	_	_	
+7-17	617-625	flipping	Operation	Device-of-operation|Next-operation	7-20|7-23	
+7-18	626-629	the	_	_	_	
+7-19	630-636	sample	Descriptor	_	_	
+7-20	637-641	tube	Device	Descriptor-of	7-19	
+7-21	642-649	between	_	_	_	
+7-22	650-654	each	Descriptor	_	_	
+7-23	655-662	melting	Operation	Descriptor-of	7-22	
+7-24	662-663	.	_	_	_	
+
+#Text=Then the sample was annealed at 650 °C for 24 h.
+8-1	664-668	Then	_	_	_	
+8-2	669-672	the	_	_	_	
+8-3	673-679	sample	Material-intermedium	_	_	
+8-4	680-683	was	_	_	_	
+8-5	684-692	annealed	Operation	Participant-material|Condition-of|Condition-of	8-3|8-7[9_0]|8-11[10_0]	
+8-6	693-695	at	_	_	_	
+8-7	696-699	650	Property-temperature[9]	_	_	
+8-8	700-701	°	Property-temperature[9]	_	_	
+8-9	701-702	C	Property-temperature[9]	_	_	
+8-10	703-706	for	_	_	_	
+8-11	707-709	24	Property-time[10]	_	_	
+8-12	710-711	h	Property-time[10]	_	_	
+8-13	711-712	.	_	_	_	
+
+#Text=The resulting sample has a grey metallic appearance, and is relatively brittle.
+9-1	713-716	The	_	_	_	
+9-2	717-726	resulting	_	_	_	
+9-3	727-733	sample	_	_	_	
+9-4	734-737	has	_	_	_	
+9-5	738-739	a	_	_	_	
+9-6	740-744	grey	_	_	_	
+9-7	745-753	metallic	_	_	_	
+9-8	754-764	appearance	_	_	_	
+9-9	764-765	,	_	_	_	
+9-10	766-769	and	_	_	_	
+9-11	770-772	is	_	_	_	
+9-12	773-783	relatively	_	_	_	
+9-13	784-791	brittle	_	_	_	
+9-14	791-792	.	_	_	_	
+
+#Text=Exposure to air leads to darkening of the surface within a few hours.
+10-1	793-801	Exposure	_	_	_	
+10-2	802-804	to	_	_	_	
+10-3	805-808	air	_	_	_	
+10-4	809-814	leads	_	_	_	
+10-5	815-817	to	_	_	_	
+10-6	818-827	darkening	_	_	_	
+10-7	828-830	of	_	_	_	
+10-8	831-834	the	_	_	_	
+10-9	835-842	surface	_	_	_	
+10-10	843-849	within	_	_	_	
+10-11	850-851	a	_	_	_	
+10-12	852-855	few	_	_	_	
+10-13	856-861	hours	_	_	_	
+10-14	861-862	.	_	_	_	
+
+#Text=The results presented in this communication originate from the same sample, but different samples prepared to ensure reproducibility demonstrate comparable properties.
+11-1	863-866	The	_	_	_	
+11-2	867-874	results	_	_	_	
+11-3	875-884	presented	_	_	_	
+11-4	885-887	in	_	_	_	
+11-5	888-892	this	_	_	_	
+11-6	893-906	communication	_	_	_	
+11-7	907-916	originate	_	_	_	
+11-8	917-921	from	_	_	_	
+11-9	922-925	the	_	_	_	
+11-10	926-930	same	_	_	_	
+11-11	931-937	sample	_	_	_	
+11-12	937-938	,	_	_	_	
+11-13	939-942	but	_	_	_	
+11-14	943-952	different	_	_	_	
+11-15	953-960	samples	_	_	_	
+11-16	961-969	prepared	_	_	_	
+11-17	970-972	to	_	_	_	
+11-18	973-979	ensure	_	_	_	
+11-19	980-995	reproducibility	_	_	_	
+11-20	996-1007	demonstrate	_	_	_	
+11-21	1008-1018	comparable	_	_	_	
+11-22	1019-1029	properties	_	_	_	
+11-23	1029-1030	.	_	_	_	

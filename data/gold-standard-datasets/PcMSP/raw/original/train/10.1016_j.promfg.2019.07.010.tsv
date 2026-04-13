@@ -1,0 +1,266 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline samples of BaxB2xOy was prepared by solid state synthesis method, using high purity chemicals of (Ba(C2H3O2)2), H2BO3, citric acid and Ethylene Glycol (Aldrich >99.9%).
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-27	samples	_	_	_	
+1-4	28-30	of	_	_	_	
+1-5	31-39	BaxB2xOy	Material-target	Descriptor-of	1-2	
+1-6	40-43	was	_	_	_	
+1-7	44-52	prepared	Operation	Participant-material	1-5	
+1-8	53-55	by	_	_	_	
+1-9	56-61	solid	Operation[1]	Coreference|Participant-material|Participant-material|Participant-material|Participant-material	1-7[0_1]|1-19[3_1]|1-27[0_1]|1-29[4_1]|1-32[5_1]	
+1-10	62-67	state	Operation[1]	_	_	
+1-11	68-77	synthesis	Operation[1]	_	_	
+1-12	78-84	method	Operation[1]	_	_	
+1-13	84-85	,	_	_	_	
+1-14	86-91	using	_	_	_	
+1-15	92-96	high	Descriptor[2]	_	_	
+1-16	97-103	purity	Descriptor[2]	_	_	
+1-17	104-113	chemicals	Material-recipe	Descriptor-of	1-15[2_0]	
+1-18	114-116	of	_	_	_	
+1-19	117-118	(	Material-recipe[3]	Coreference|Brand-of|Value-of	1-17[0_3]|1-35[0_3]|1-36[6_3]	
+1-20	118-120	Ba	Material-recipe[3]	_	_	
+1-21	120-121	(	Material-recipe[3]	_	_	
+1-22	121-127	C2H3O2	Material-recipe[3]	_	_	
+1-23	127-128	)	Material-recipe[3]	_	_	
+1-24	128-129	2	Material-recipe[3]	_	_	
+1-25	129-130	)	Material-recipe[3]	_	_	
+1-26	130-131	,	_	_	_	
+1-27	132-137	H2BO3	Material-recipe	Coreference|Brand-of|Value-of	1-17|1-35|1-36[6_0]	
+1-28	137-138	,	_	_	_	
+1-29	139-145	citric	Material-recipe[4]	Coreference|Brand-of|Value-of	1-17[0_4]|1-35[0_4]|1-36[6_4]	
+1-30	146-150	acid	Material-recipe[4]	_	_	
+1-31	151-154	and	_	_	_	
+1-32	155-163	Ethylene	Material-recipe[5]	Coreference|Brand-of|Value-of	1-17[0_5]|1-35[0_5]|1-36[6_5]	
+1-33	164-170	Glycol	Material-recipe[5]	_	_	
+1-34	171-172	(	_	_	_	
+1-35	172-179	Aldrich	Brand	_	_	
+1-36	180-181	>	Value[6]	_	_	
+1-37	181-186	99.9%	Value[6]	_	_	
+1-38	186-187	)	_	_	_	
+1-39	187-188	.	_	_	_	
+
+#Text=Stoichiometric amounts of the chemicals were weighed using an electronic balance.
+2-1	189-203	Stoichiometric	Value[7]	_	_	
+2-2	204-211	amounts	Value[7]	_	_	
+2-3	212-214	of	_	_	_	
+2-4	215-218	the	_	_	_	
+2-5	219-228	chemicals	Material-recipe	Value-of	2-1[7_0]	
+2-6	229-233	were	_	_	_	
+2-7	234-241	weighed	Operation	Participant-material|Device-of-operation	2-5|2-11	
+2-8	242-247	using	_	_	_	
+2-9	248-250	an	Value	_	_	
+2-10	251-261	electronic	Descriptor	_	_	
+2-11	262-269	balance	Device	Value-of|Descriptor-of	2-9|2-10	
+2-12	269-270	.	_	_	_	
+
+#Text=The chemicals were mixed individually in 10 ml of distilled water inside different beakers.
+3-1	271-274	The	_	_	_	
+3-2	275-284	chemicals	Material-recipe	_	_	
+3-3	285-289	were	_	_	_	
+3-4	290-295	mixed	Operation	Participant-material|Descriptor-of|Participant-material|Device-of-operation	3-2|3-5|3-10[9_0]|3-14	
+3-5	296-308	individually	Descriptor	_	_	
+3-6	309-311	in	_	_	_	
+3-7	312-314	10	Value[8]	_	_	
+3-8	315-317	ml	Value[8]	_	_	
+3-9	318-320	of	_	_	_	
+3-10	321-330	distilled	Material-others[9]	Value-of	3-7[8_9]	
+3-11	331-336	water	Material-others[9]	_	_	
+3-12	337-343	inside	_	_	_	
+3-13	344-353	different	Descriptor	_	_	
+3-14	354-361	beakers	Device	Descriptor-of	3-13	
+3-15	361-362	.	_	_	_	
+
+#Text=All the chemicals were mixed in a 100 ml beaker.
+4-1	363-366	All	Descriptor	_	_	
+4-2	367-370	the	_	_	_	
+4-3	371-380	chemicals	Material-intermedium	Descriptor-of	4-1	
+4-4	381-385	were	_	_	_	
+4-5	386-391	mixed	Operation	Participant-material|Device-of-operation	4-3|4-10	
+4-6	392-394	in	_	_	_	
+4-7	395-396	a	Value	_	_	
+4-8	397-400	100	Descriptor[10]	_	_	
+4-9	401-403	ml	Descriptor[10]	_	_	
+4-10	404-410	beaker	Device	Value-of|Descriptor-of	4-7|4-8[10_0]	
+4-11	410-411	.	_	_	_	
+
+#Text=The mixture was stirred at 150 oC on a digital mixer (700 rpm) for thirty minutes.
+5-1	412-415	The	_	_	_	
+5-2	416-423	mixture	Material-intermedium	_	_	
+5-3	424-427	was	_	_	_	
+5-4	428-435	stirred	Operation	Participant-material|Condition-of|Device-of-operation|Condition-of|Condition-of	5-2|5-6[11_0]|5-11|5-13[12_0]|5-17[13_0]	
+5-5	436-438	at	_	_	_	
+5-6	439-442	150	Property-temperature[11]	_	_	
+5-7	443-445	oC	Property-temperature[11]	_	_	
+5-8	446-448	on	_	_	_	
+5-9	449-450	a	Value	_	_	
+5-10	451-458	digital	Descriptor	_	_	
+5-11	459-464	mixer	Device	Value-of|Descriptor-of	5-9|5-10	
+5-12	465-466	(	_	_	_	
+5-13	466-469	700	Property-rate[12]	_	_	
+5-14	470-473	rpm	Property-rate[12]	_	_	
+5-15	473-474	)	_	_	_	
+5-16	475-478	for	_	_	_	
+5-17	479-485	thirty	Property-time[13]	_	_	
+5-18	486-493	minutes	Property-time[13]	_	_	
+5-19	493-494	.	_	_	_	
+
+#Text=The polyesterification of the homogenous blue solution was done at 350 oC for 65 minutes (>1 hour).
+6-1	495-498	The	_	_	_	
+6-2	499-517	polyesterification	Operation	Participant-material|Condition-of|Condition-of	6-7|6-11[14_0]|6-14[15_0]	
+6-3	518-520	of	_	_	_	
+6-4	521-524	the	_	_	_	
+6-5	525-535	homogenous	Descriptor	_	_	
+6-6	536-540	blue	Descriptor	_	_	
+6-7	541-549	solution	Material-intermedium	Descriptor-of|Descriptor-of	6-5|6-6	
+6-8	550-553	was	_	_	_	
+6-9	554-558	done	Operation	Coreference	6-2	
+6-10	559-561	at	_	_	_	
+6-11	562-565	350	Property-temperature[14]	_	_	
+6-12	566-568	oC	Property-temperature[14]	_	_	
+6-13	569-572	for	_	_	_	
+6-14	573-575	65	Property-time[15]	_	_	
+6-15	576-583	minutes	Property-time[15]	_	_	
+6-16	584-585	(	_	_	_	
+6-17	585-586	>	Property-time[16]	Coreference	6-14[15_16]	
+6-18	586-587	1	Property-time[16]	_	_	
+6-19	588-592	hour	Property-time[16]	_	_	
+6-20	592-593	)	_	_	_	
+6-21	593-594	.	_	_	_	
+
+#Text=The resulting product was thoroughly mixed and grinded using an agate mortar.
+7-1	595-598	The	_	_	_	
+7-2	599-608	resulting	Descriptor	_	_	
+7-3	609-616	product	Material-intermedium	Descriptor-of	7-2	
+7-4	617-620	was	_	_	_	
+7-5	621-631	thoroughly	Descriptor	_	_	
+7-6	632-637	mixed	Operation	Participant-material|Descriptor-of|Next-operation	7-3|7-5|7-8	
+7-7	638-641	and	_	_	_	
+7-8	642-649	grinded	Operation	Device-of-operation	7-12	
+7-9	650-655	using	_	_	_	
+7-10	656-658	an	Value	_	_	
+7-11	659-664	agate	Descriptor	_	_	
+7-12	665-671	mortar	Device	Value-of|Descriptor-of	7-10|7-11	
+7-13	671-672	.	_	_	_	
+
+#Text=The product was calcine for 330 minutes (5.5 hours) in air at 850 ◦C to give a white powder.
+8-1	673-676	The	_	_	_	
+8-2	677-684	product	Material-intermedium	_	_	
+8-3	685-688	was	_	_	_	
+8-4	689-696	calcine	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Next-operation	8-2|8-6[17_0]|8-13|8-15[19_0]|8-19	
+8-5	697-700	for	_	_	_	
+8-6	701-704	330	Property-time[17]	Coreference	8-9[18_17]	
+8-7	705-712	minutes	Property-time[17]	_	_	
+8-8	713-714	(	_	_	_	
+8-9	714-717	5.5	Property-time[18]	_	_	
+8-10	718-723	hours	Property-time[18]	_	_	
+8-11	723-724	)	_	_	_	
+8-12	725-727	in	_	_	_	
+8-13	728-731	air	Property-pressure	_	_	
+8-14	732-734	at	_	_	_	
+8-15	735-738	850	Property-temperature[19]	_	_	
+8-16	739-740	◦	Property-temperature[19]	_	_	
+8-17	740-741	C	Property-temperature[19]	_	_	
+8-18	742-744	to	_	_	_	
+8-19	745-749	give	Operation	Participant-material	8-22	
+8-20	750-751	a	Value	_	_	
+8-21	752-757	white	Descriptor	_	_	
+8-22	758-764	powder	Material-intermedium	Value-of|Descriptor-of	8-20|8-21	
+8-23	764-765	.	_	_	_	
+
+#Text=The powder was grinded the second time using the agate mortar.
+9-1	766-769	The	_	_	_	
+9-2	770-776	powder	Material-intermedium	_	_	
+9-3	777-780	was	_	_	_	
+9-4	781-788	grinded	Operation	Participant-material|Descriptor-of|Device-of-operation	9-2|9-6[20_0]|9-11	
+9-5	789-792	the	_	_	_	
+9-6	793-799	second	Descriptor[20]	_	_	
+9-7	800-804	time	Descriptor[20]	_	_	
+9-8	805-810	using	_	_	_	
+9-9	811-814	the	_	_	_	
+9-10	815-820	agate	Descriptor	_	_	
+9-11	821-827	mortar	Device	Descriptor-of	9-10	
+9-12	827-828	.	_	_	_	
+
+#Text=After grinding, the powder was formed into cylindrical pellets under a pressure of 13 kN at room temperature for 7 minutes.
+10-1	829-834	After	_	_	_	
+10-2	835-843	grinding	Operation	Next-operation	10-7	
+10-3	843-844	,	_	_	_	
+10-4	845-848	the	_	_	_	
+10-5	849-855	powder	Material-intermedium	_	_	
+10-6	856-859	was	_	_	_	
+10-7	860-866	formed	Operation	Participant-material|Condition-of|Condition-of|Condition-of	10-5|10-15[21_0]|10-18[22_0]|10-21[23_0]	
+10-8	867-871	into	_	_	_	
+10-9	872-883	cylindrical	Descriptor	_	_	
+10-10	884-891	pellets	Material-intermedium	Descriptor-of	10-9	
+10-11	892-897	under	_	_	_	
+10-12	898-899	a	_	_	_	
+10-13	900-908	pressure	Property-pressure	_	_	
+10-14	909-911	of	_	_	_	
+10-15	912-914	13	Property-pressure[21]	Coreference	10-13[0_21]	
+10-16	915-917	kN	Property-pressure[21]	_	_	
+10-17	918-920	at	_	_	_	
+10-18	921-925	room	Property-temperature[22]	_	_	
+10-19	926-937	temperature	Property-temperature[22]	_	_	
+10-20	938-941	for	_	_	_	
+10-21	942-943	7	Property-time[23]	_	_	
+10-22	944-951	minutes	Property-time[23]	_	_	
+10-23	951-952	.	_	_	_	
+
+#Text=The pellet was sintered at 850 oC for 60 minutes (1 hour) and cooled in air at room temperature.
+11-1	953-956	The	_	_	_	
+11-2	957-963	pellet	Material-intermedium	_	_	
+11-3	964-967	was	_	_	_	
+11-4	968-976	sintered	Operation	Participant-material|Condition-of|Condition-of|Next-operation	11-2|11-6[24_0]|11-9[25_0]|11-16	
+11-5	977-979	at	_	_	_	
+11-6	980-983	850	Property-temperature[24]	_	_	
+11-7	984-986	oC	Property-temperature[24]	_	_	
+11-8	987-990	for	_	_	_	
+11-9	991-993	60	Property-time[25]	Coreference	11-12[26_25]	
+11-10	994-1001	minutes	Property-time[25]	_	_	
+11-11	1002-1003	(	_	_	_	
+11-12	1003-1004	1	Property-time[26]	_	_	
+11-13	1005-1009	hour	Property-time[26]	_	_	
+11-14	1009-1010	)	_	_	_	
+11-15	1011-1014	and	_	_	_	
+11-16	1015-1021	cooled	Operation	Condition-of|Condition-of	11-18|11-20[27_0]	
+11-17	1022-1024	in	_	_	_	
+11-18	1025-1028	air	Property-pressure	_	_	
+11-19	1029-1031	at	_	_	_	
+11-20	1032-1036	room	Property-temperature[27]	_	_	
+11-21	1037-1048	temperature	Property-temperature[27]	_	_	
+11-22	1048-1049	.	_	_	_	
+
+#Text=The pellet was sintered the second time at 850 oC for 16 hours.
+12-1	1050-1053	The	_	_	_	
+12-2	1054-1060	pellet	Material-intermedium	_	_	
+12-3	1061-1064	was	_	_	_	
+12-4	1065-1073	sintered	Operation	Participant-material|Descriptor-of|Condition-of|Condition-of	12-2|12-6[28_0]|12-9[29_0]|12-12[30_0]	
+12-5	1074-1077	the	_	_	_	
+12-6	1078-1084	second	Descriptor[28]	_	_	
+12-7	1085-1089	time	Descriptor[28]	_	_	
+12-8	1090-1092	at	_	_	_	
+12-9	1093-1096	850	Property-temperature[29]	_	_	
+12-10	1097-1099	oC	Property-temperature[29]	_	_	
+12-11	1100-1103	for	_	_	_	
+12-12	1104-1106	16	Property-time[30]	_	_	
+12-13	1107-1112	hours	Property-time[30]	_	_	
+12-14	1112-1113	.	_	_	_	
+
+#Text=The sample was allowed to cool in air at room temperature.
+13-1	1114-1117	The	_	_	_	
+13-2	1118-1124	sample	Material-intermedium	_	_	
+13-3	1125-1128	was	_	_	_	
+13-4	1129-1136	allowed	_	_	_	
+13-5	1137-1139	to	_	_	_	
+13-6	1140-1144	cool	Operation	Participant-material|Condition-of|Condition-of	13-2|13-8|13-10[31_0]	
+13-7	1145-1147	in	_	_	_	
+13-8	1148-1151	air	Property-pressure	_	_	
+13-9	1152-1154	at	_	_	_	
+13-10	1155-1159	room	Property-temperature[31]	_	_	
+13-11	1160-1171	temperature	Property-temperature[31]	_	_	
+13-12	1171-1172	.	_	_	_	

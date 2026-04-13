@@ -1,0 +1,168 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples CePd2As2−xPx (0 ≤ x ≤ 2) were synthesized by a solid-statereaction method in evacuated quartz ampoules.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	Descriptor	_	_	
+1-3	24-32	CePd2As2	Material-target[1]	Descriptor-of|Descriptor-of|Descriptor-of	1-7[2_1]|1-2[0_1]|1-1[0_1]	
+1-4	32-33	−	Material-target[1]	_	_	
+1-5	33-36	xPx	Material-target[1]	_	_	
+1-6	37-38	(	_	_	_	
+1-7	38-39	0	Descriptor[2]	_	_	
+1-8	40-41	≤	Descriptor[2]	_	_	
+1-9	42-43	x	Descriptor[2]	_	_	
+1-10	44-45	≤	Descriptor[2]	_	_	
+1-11	46-47	2	Descriptor[2]	_	_	
+1-12	47-48	)	_	_	_	
+1-13	49-53	were	_	_	_	
+1-14	54-65	synthesized	Operation	Participant-material|Coreference	1-3[1_0]|1-17[3_0]	
+1-15	66-68	by	_	_	_	
+1-16	69-70	a	_	_	_	
+1-17	71-90	solid-statereaction	Operation[3]	Device-of-operation	1-22[0_3]	
+1-18	91-97	method	Operation[3]	_	_	
+1-19	98-100	in	_	_	_	
+1-20	101-110	evacuated	Descriptor	_	_	
+1-21	111-117	quartz	Descriptor	_	_	
+1-22	118-126	ampoules	Device	Descriptor-of|Descriptor-of	1-21|1-20	
+1-23	126-127	.	_	_	_	
+
+#Text=The Ce (99.9%) and As (99.999%) chunks, Pd (99.95%) powders and P (99.999%) lumps were used as raw materials.
+2-1	128-131	The	_	_	_	
+2-2	132-134	Ce	Material-recipe	Value-of|Descriptor-of|Coreference	2-4|2-11|2-28	
+2-3	135-136	(	_	_	_	
+2-4	136-141	99.9%	Value	_	_	
+2-5	141-142	)	_	_	_	
+2-6	143-146	and	_	_	_	
+2-7	147-149	As	Material-recipe	Value-of|Descriptor-of|Coreference	2-9|2-11|2-28	
+2-8	150-151	(	_	_	_	
+2-9	151-158	99.999%	Value	_	_	
+2-10	158-159	)	_	_	_	
+2-11	160-166	chunks	Descriptor	_	_	
+2-12	166-167	,	_	_	_	
+2-13	168-170	Pd	Material-recipe	Value-of|Descriptor-of|Coreference	2-15|2-17|2-28	
+2-14	171-172	(	_	_	_	
+2-15	172-178	99.95%	Value	_	_	
+2-16	178-179	)	_	_	_	
+2-17	180-187	powders	Descriptor	_	_	
+2-18	188-191	and	_	_	_	
+2-19	192-193	P	Material-recipe	Value-of|Descriptor-of|Coreference	2-21|2-23|2-28	
+2-20	194-195	(	_	_	_	
+2-21	195-202	99.999%	Value	_	_	
+2-22	202-203	)	_	_	_	
+2-23	204-209	lumps	Descriptor	_	_	
+2-24	210-214	were	_	_	_	
+2-25	215-219	used	Operation	Participant-material|Participant-material|Participant-material|Participant-material	2-2|2-7|2-13|2-19	
+2-26	220-222	as	_	_	_	
+2-27	223-226	raw	Descriptor	_	_	
+2-28	227-236	materials	Material-recipe	Descriptor-of	2-27	
+2-29	236-237	.	_	_	_	
+
+#Text=First, the precursors of CeAs and CeP were prepared in a similar procedure as described elsewhere [14].
+3-1	238-243	First	_	_	_	
+3-2	243-244	,	_	_	_	
+3-3	245-248	the	_	_	_	
+3-4	249-259	precursors	Material-intermedium	_	_	
+3-5	260-262	of	_	_	_	
+3-6	263-267	CeAs	Material-intermedium	Coreference	3-4	
+3-7	268-271	and	_	_	_	
+3-8	272-275	CeP	Material-intermedium	Coreference	3-4	
+3-9	276-280	were	_	_	_	
+3-10	281-289	prepared	Operation	Descriptor-of|Participant-material|Participant-material	3-13[4_0]|3-8|3-6	
+3-11	290-292	in	_	_	_	
+3-12	293-294	a	_	_	_	
+3-13	295-302	similar	Descriptor[4]	_	_	
+3-14	303-312	procedure	Descriptor[4]	_	_	
+3-15	313-315	as	Descriptor[4]	_	_	
+3-16	316-325	described	Descriptor[4]	_	_	
+3-17	326-335	elsewhere	Descriptor[4]	_	_	
+3-18	336-337	[	_	_	_	
+3-19	337-339	14	_	_	_	
+3-20	339-340	]	_	_	_	
+3-21	340-341	.	_	_	_	
+
+#Text=The stoichiometric amounts of CeAs, Pd, As and P were installed in Al2O3 crucibles which were sealed in an evacuated quartz.
+4-1	342-345	The	_	_	_	
+4-2	346-360	stoichiometric	Value[5]	_	_	
+4-3	361-368	amounts	Value[5]	_	_	
+4-4	369-371	of	_	_	_	
+4-5	372-376	CeAs	Material-recipe	Value-of	4-2[5_0]	
+4-6	376-377	,	_	_	_	
+4-7	378-380	Pd	Material-recipe	Value-of	4-2[5_0]	
+4-8	380-381	,	_	_	_	
+4-9	382-384	As	Material-recipe	Value-of	4-2[5_0]	
+4-10	385-388	and	_	_	_	
+4-11	389-390	P	Material-recipe	Value-of	4-2[5_0]	
+4-12	391-395	were	_	_	_	
+4-13	396-405	installed	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Device-of-operation|Next-operation	4-11|4-9|4-7|4-5|4-16|4-19	
+4-14	406-408	in	_	_	_	
+4-15	409-414	Al2O3	Descriptor	_	_	
+4-16	415-424	crucibles	Device	Descriptor-of	4-15	
+4-17	425-430	which	_	_	_	
+4-18	431-435	were	_	_	_	
+4-19	436-442	sealed	Operation	Device-of-operation	4-23	
+4-20	443-445	in	_	_	_	
+4-21	446-448	an	Value	_	_	
+4-22	449-458	evacuated	Descriptor	_	_	
+4-23	459-465	quartz	Device	Descriptor-of|Value-of	4-22|4-21	
+4-24	465-466	.	_	_	_	
+
+#Text=Then, the quartz ampoules were slowly heated to 1200 K and kept at this temperature for 7 days.
+5-1	467-471	Then	_	_	_	
+5-2	471-472	,	_	_	_	
+5-3	473-476	the	_	_	_	
+5-4	477-483	quartz	Descriptor	_	_	
+5-5	484-492	ampoules	Device	Descriptor-of	5-4	
+5-6	493-497	were	_	_	_	
+5-7	498-504	slowly	Descriptor	_	_	
+5-8	505-511	heated	Operation	Device-of-operation|Descriptor-of|Condition-of|Next-operation	5-5|5-7|5-10[6_0]|5-13	
+5-9	512-514	to	_	_	_	
+5-10	515-519	1200	Property-temperature[6]	_	_	
+5-11	520-521	K	Property-temperature[6]	_	_	
+5-12	522-525	and	_	_	_	
+5-13	526-530	kept	Operation	Condition-of|Condition-of	5-10[6_0]|5-18[7_0]	
+5-14	531-533	at	_	_	_	
+5-15	534-538	this	_	_	_	
+5-16	539-550	temperature	_	_	_	
+5-17	551-554	for	_	_	_	
+5-18	555-556	7	Property-time[7]	_	_	
+5-19	557-561	days	Property-time[7]	_	_	
+5-20	561-562	.	_	_	_	
+
+#Text=After that, the samples were thoroughly ground and pressed into pellets, followed by an annealing at 1200 K again.
+6-1	563-568	After	_	_	_	
+6-2	569-573	that	_	_	_	
+6-3	573-574	,	_	_	_	
+6-4	575-578	the	_	_	_	
+6-5	579-586	samples	Material-intermedium	_	_	
+6-6	587-591	were	_	_	_	
+6-7	592-602	thoroughly	Descriptor	_	_	
+6-8	603-609	ground	Operation	Descriptor-of|Participant-material|Next-operation	6-7|6-5|6-10	
+6-9	610-613	and	_	_	_	
+6-10	614-621	pressed	Operation	Participant-material|Next-operation	6-12|6-17	
+6-11	622-626	into	_	_	_	
+6-12	627-634	pellets	Material-intermedium	_	_	
+6-13	634-635	,	_	_	_	
+6-14	636-644	followed	_	_	_	
+6-15	645-647	by	_	_	_	
+6-16	648-650	an	_	_	_	
+6-17	651-660	annealing	Operation	Condition-of	6-19[8_0]	
+6-18	661-663	at	_	_	_	
+6-19	664-668	1200	Property-temperature[8]	_	_	
+6-20	669-670	K	Property-temperature[8]	_	_	
+6-21	671-676	again	_	_	_	
+6-22	676-677	.	_	_	_	
+
+#Text=The preparation process was protected in an argon-filled glove box.
+7-1	678-681	The	_	_	_	
+7-2	682-693	preparation	Operation[9]	_	_	
+7-3	694-701	process	Operation[9]	_	_	
+7-4	702-705	was	_	_	_	
+7-5	706-715	protected	Operation	Participant-material|Device-of-operation	7-2[9_0]|7-9[10_0]	
+7-6	716-718	in	_	_	_	
+7-7	719-721	an	_	_	_	
+7-8	722-734	argon-filled	Descriptor	_	_	
+7-9	735-740	glove	Device[10]	Descriptor-of	7-8[0_10]	
+7-10	741-744	box	Device[10]	_	_	
+7-11	744-745	.	_	_	_	

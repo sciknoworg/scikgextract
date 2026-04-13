@@ -1,0 +1,156 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of CuIr2S4, CuIr2Se4, (Cu1−xZnx)Ir2S4, and Cu(Ir1−xCrx)2S4 were prepared following standard solid state routes in sealed, evacuated quartz ampoules.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	Descriptor	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-34	CuIr2S4	Material-target	Descriptor-of|Descriptor-of	1-1|1-2	
+1-5	34-35	,	_	_	_	
+1-6	36-44	CuIr2Se4	Material-target	Descriptor-of|Descriptor-of	1-1|1-2	
+1-7	44-45	,	_	_	_	
+1-8	46-47	(	Material-target[1]	Descriptor-of|Descriptor-of	1-1[0_1]|1-2[0_1]	
+1-9	47-50	Cu1	Material-target[1]	_	_	
+1-10	50-51	−	Material-target[1]	_	_	
+1-11	51-55	xZnx	Material-target[1]	_	_	
+1-12	55-56	)	Material-target[1]	_	_	
+1-13	56-61	Ir2S4	Material-target[1]	_	_	
+1-14	61-62	,	_	_	_	
+1-15	63-66	and	_	_	_	
+1-16	67-69	Cu	Material-target[2]	Descriptor-of|Descriptor-of	1-1[0_2]|1-2[0_2]	
+1-17	69-70	(	Material-target[2]	_	_	
+1-18	70-73	Ir1	Material-target[2]	_	_	
+1-19	73-74	−	Material-target[2]	_	_	
+1-20	74-78	xCrx	Material-target[2]	_	_	
+1-21	78-79	)	Material-target[2]	_	_	
+1-22	79-82	2S4	Material-target[2]	_	_	
+1-23	83-87	were	_	_	_	
+1-24	88-96	prepared	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Device-of-operation|Coreference	1-16[2_0]|1-8[1_0]|1-6|1-4|1-35|1-26[3_0]	
+1-25	97-106	following	_	_	_	
+1-26	107-115	standard	Operation[3]	_	_	
+1-27	116-121	solid	Operation[3]	_	_	
+1-28	122-127	state	Operation[3]	_	_	
+1-29	128-134	routes	Operation[3]	_	_	
+1-30	135-137	in	_	_	_	
+1-31	138-144	sealed	Descriptor	_	_	
+1-32	144-145	,	_	_	_	
+1-33	146-155	evacuated	Descriptor	_	_	
+1-34	156-162	quartz	Descriptor	_	_	
+1-35	163-171	ampoules	Device	Descriptor-of|Descriptor-of|Descriptor-of	1-34|1-33|1-31	
+1-36	171-172	.	_	_	_	
+
+#Text=Stoichiometric quantities of the metals and elemental sulfur or selenium were thoroughly mixed, pelletized, and sealed under vacuum.
+2-1	173-187	Stoichiometric	Value[4]	_	_	
+2-2	188-198	quantities	Value[4]	_	_	
+2-3	199-201	of	_	_	_	
+2-4	202-205	the	_	_	_	
+2-5	206-212	metals	Material-recipe	Value-of	2-1[4_0]	
+2-6	213-216	and	_	_	_	
+2-7	217-226	elemental	Descriptor	_	_	
+2-8	227-233	sulfur	Material-recipe	Descriptor-of|Value-of	2-7|2-1[4_0]	
+2-9	234-236	or	_	_	_	
+2-10	237-245	selenium	Material-recipe	Descriptor-of|Value-of	2-7|2-1[4_0]	
+2-11	246-250	were	_	_	_	
+2-12	251-261	thoroughly	Descriptor	_	_	
+2-13	262-267	mixed	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Next-operation	2-12|2-5|2-8|2-10|2-15	
+2-14	267-268	,	_	_	_	
+2-15	269-279	pelletized	Operation	Next-operation	2-18	
+2-16	279-280	,	_	_	_	
+2-17	281-284	and	_	_	_	
+2-18	285-291	sealed	Operation	Condition-of	2-20	
+2-19	292-297	under	_	_	_	
+2-20	298-304	vacuum	Property-pressure	_	_	
+2-21	304-305	.	_	_	_	
+
+#Text=The ampoules were slowly heated to various temperatures in 650–1100 °C range, as appropriate to targeted compositions, and held at these temperatures for several weeks with intermediate grinding and pressing.
+3-1	306-309	The	_	_	_	
+3-2	310-318	ampoules	Device	_	_	
+3-3	319-323	were	_	_	_	
+3-4	324-330	slowly	Property-rate	_	_	
+3-5	331-337	heated	Operation	Condition-of|Device-of-operation|Condition-of|Next-operation	3-4|3-2|3-10[6_0]|3-24	
+3-6	338-340	to	_	_	_	
+3-7	341-348	various	Property-temperature[5]	_	_	
+3-8	349-361	temperatures	Property-temperature[5]	_	_	
+3-9	362-364	in	_	_	_	
+3-10	365-368	650	Property-temperature[6]	Coreference|Coreference	3-7[5_6]|3-26[7_6]	
+3-11	368-369	–	Property-temperature[6]	_	_	
+3-12	369-373	1100	Property-temperature[6]	_	_	
+3-13	374-375	°	Property-temperature[6]	_	_	
+3-14	375-376	C	Property-temperature[6]	_	_	
+3-15	377-382	range	_	_	_	
+3-16	382-383	,	_	_	_	
+3-17	384-386	as	_	_	_	
+3-18	387-398	appropriate	_	_	_	
+3-19	399-401	to	_	_	_	
+3-20	402-410	targeted	_	_	_	
+3-21	411-423	compositions	_	_	_	
+3-22	423-424	,	_	_	_	
+3-23	425-428	and	_	_	_	
+3-24	429-433	held	Operation	Condition-of|Condition-of|Next-operation	3-26[7_0]|3-29[8_0]|3-33	
+3-25	434-436	at	_	_	_	
+3-26	437-442	these	Property-temperature[7]	_	_	
+3-27	443-455	temperatures	Property-temperature[7]	_	_	
+3-28	456-459	for	_	_	_	
+3-29	460-467	several	Property-time[8]	_	_	
+3-30	468-473	weeks	Property-time[8]	_	_	
+3-31	474-478	with	_	_	_	
+3-32	479-491	intermediate	Descriptor	_	_	
+3-33	492-500	grinding	Operation	Descriptor-of|Next-operation	3-32|3-35	
+3-34	501-504	and	_	_	_	
+3-35	505-513	pressing	Operation	Descriptor-of	3-32	
+3-36	513-514	.	_	_	_	
+
+#Text=All products were found to be single phase based on laboratory x-ray powder diffraction.
+4-1	515-518	All	_	_	_	
+4-2	519-527	products	_	_	_	
+4-3	528-532	were	_	_	_	
+4-4	533-538	found	_	_	_	
+4-5	539-541	to	_	_	_	
+4-6	542-544	be	_	_	_	
+4-7	545-551	single	_	_	_	
+4-8	552-557	phase	_	_	_	
+4-9	558-563	based	_	_	_	
+4-10	564-566	on	_	_	_	
+4-11	567-577	laboratory	_	_	_	
+4-12	578-583	x-ray	_	_	_	
+4-13	584-590	powder	_	_	_	
+4-14	591-602	diffraction	_	_	_	
+4-15	602-603	.	_	_	_	
+
+#Text=Standard characterization of DC susceptibility and four-terminal resistivity of the samples were carried out in Quantum Design PPMS-9 and MPMS-XL5, and found to be in excellent agreement with other studies18,33,35,40,49,60.
+5-1	604-612	Standard	_	_	_	
+5-2	613-629	characterization	_	_	_	
+5-3	630-632	of	_	_	_	
+5-4	633-635	DC	_	_	_	
+5-5	636-650	susceptibility	_	_	_	
+5-6	651-654	and	_	_	_	
+5-7	655-668	four-terminal	_	_	_	
+5-8	669-680	resistivity	_	_	_	
+5-9	681-683	of	_	_	_	
+5-10	684-687	the	_	_	_	
+5-11	688-695	samples	_	_	_	
+5-12	696-700	were	_	_	_	
+5-13	701-708	carried	_	_	_	
+5-14	709-712	out	_	_	_	
+5-15	713-715	in	_	_	_	
+5-16	716-723	Quantum	_	_	_	
+5-17	724-730	Design	_	_	_	
+5-18	731-735	PPMS	_	_	_	
+5-19	735-736	-	_	_	_	
+5-20	736-737	9	_	_	_	
+5-21	738-741	and	_	_	_	
+5-22	742-750	MPMS-XL5	_	_	_	
+5-23	750-751	,	_	_	_	
+5-24	752-755	and	_	_	_	
+5-25	756-761	found	_	_	_	
+5-26	762-764	to	_	_	_	
+5-27	765-767	be	_	_	_	
+5-28	768-770	in	_	_	_	
+5-29	771-780	excellent	_	_	_	
+5-30	781-790	agreement	_	_	_	
+5-31	791-795	with	_	_	_	
+5-32	796-801	other	_	_	_	
+5-33	802-826	studies18,33,35,40,49,60	_	_	_	
+5-34	826-827	.	_	_	_	

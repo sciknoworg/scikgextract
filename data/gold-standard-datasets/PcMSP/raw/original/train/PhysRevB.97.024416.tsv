@@ -1,0 +1,94 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of CaCu3Cr4O12, LaCu3Cr4O12, and Ca1−xLaxCu3Cr4O12 were synthesized from stoichiometric mixtures of CaO, La2O3, CuO, Cr2O3, and CrO2 at 1200 ◦C under a pressure of 7.7 GPa for 1–2 h.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-38	CaCu3Cr4O12	Material-target	Descriptor-of	1-1	
+1-5	38-39	,	_	_	_	
+1-6	40-51	LaCu3Cr4O12	Material-target	Descriptor-of	1-1	
+1-7	51-52	,	_	_	_	
+1-8	53-56	and	_	_	_	
+1-9	57-60	Ca1	Material-target[1]	Descriptor-of	1-1[0_1]	
+1-10	60-61	−	Material-target[1]	_	_	
+1-11	61-74	xLaxCu3Cr4O12	Material-target[1]	_	_	
+1-12	75-79	were	_	_	_	
+1-13	80-91	synthesized	Operation	Participant-material|Participant-material|Participant-material|Condition-of|Condition-of|Condition-of	1-4|1-6|1-9[1_0]|1-29[2_0]|1-36[3_0]|1-39[4_0]	
+1-14	92-96	from	_	_	_	
+1-15	97-111	stoichiometric	Value	_	_	
+1-16	112-120	mixtures	Material-intermedium	Value-of|Coreference|Coreference|Coreference|Coreference|Coreference	1-15|1-18|1-20|1-22|1-24|1-27	
+1-17	121-123	of	_	_	_	
+1-18	124-127	CaO	Material-recipe	_	_	
+1-19	127-128	,	_	_	_	
+1-20	129-134	La2O3	Material-recipe	_	_	
+1-21	134-135	,	_	_	_	
+1-22	136-139	CuO	Material-recipe	_	_	
+1-23	139-140	,	_	_	_	
+1-24	141-146	Cr2O3	Material-recipe	_	_	
+1-25	146-147	,	_	_	_	
+1-26	148-151	and	_	_	_	
+1-27	152-156	CrO2	Material-recipe	_	_	
+1-28	157-159	at	_	_	_	
+1-29	160-164	1200	Property-temperature[2]	_	_	
+1-30	165-166	◦	Property-temperature[2]	_	_	
+1-31	166-167	C	Property-temperature[2]	_	_	
+1-32	168-173	under	_	_	_	
+1-33	174-175	a	_	_	_	
+1-34	176-184	pressure	Property-pressure	_	_	
+1-35	185-187	of	_	_	_	
+1-36	188-191	7.7	Property-pressure[3]	Coreference	1-34[0_3]	
+1-37	192-195	GPa	Property-pressure[3]	_	_	
+1-38	196-199	for	_	_	_	
+1-39	200-201	1	Property-time[4]	_	_	
+1-40	201-202	–	Property-time[4]	_	_	
+1-41	202-203	2	Property-time[4]	_	_	
+1-42	204-205	h	Property-time[4]	_	_	
+1-43	205-206	.	_	_	_	
+
+#Text=The details of the synthesis have been described elsewhere [10].
+2-1	207-210	The	_	_	_	
+2-2	211-218	details	_	_	_	
+2-3	219-221	of	_	_	_	
+2-4	222-225	the	_	_	_	
+2-5	226-235	synthesis	_	_	_	
+2-6	236-240	have	_	_	_	
+2-7	241-245	been	_	_	_	
+2-8	246-255	described	_	_	_	
+2-9	256-265	elsewhere	_	_	_	
+2-10	266-267	[	_	_	_	
+2-11	267-269	10	_	_	_	
+2-12	269-270	]	_	_	_	
+2-13	270-271	.	_	_	_	
+
+#Text=Powder x-ray diffraction (XRD) analyses showed that the samples were almost single phase with a small (less than 2 wt %) CrO2 impurity.
+3-1	272-278	Powder	_	_	_	
+3-2	279-284	x-ray	_	_	_	
+3-3	285-296	diffraction	_	_	_	
+3-4	297-298	(	_	_	_	
+3-5	298-301	XRD	_	_	_	
+3-6	301-302	)	_	_	_	
+3-7	303-311	analyses	_	_	_	
+3-8	312-318	showed	_	_	_	
+3-9	319-323	that	_	_	_	
+3-10	324-327	the	_	_	_	
+3-11	328-335	samples	_	_	_	
+3-12	336-340	were	_	_	_	
+3-13	341-347	almost	_	_	_	
+3-14	348-354	single	_	_	_	
+3-15	355-360	phase	_	_	_	
+3-16	361-365	with	_	_	_	
+3-17	366-367	a	_	_	_	
+3-18	368-373	small	_	_	_	
+3-19	374-375	(	_	_	_	
+3-20	375-379	less	_	_	_	
+3-21	380-384	than	_	_	_	
+3-22	385-386	2	_	_	_	
+3-23	387-389	wt	_	_	_	
+3-24	390-391	%	_	_	_	
+3-25	391-392	)	_	_	_	
+3-26	393-397	CrO2	_	_	_	
+3-27	398-406	impurity	_	_	_	
+3-28	406-407	.	_	_	_	

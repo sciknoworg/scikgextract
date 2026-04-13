@@ -1,0 +1,536 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Cs2Mo3As3 were synthesized by
+#Text=the high temperature solid state reaction method starting with Cs
+#Text=(lumps, 99.98%), Mo (powder, 99.999%), and As (powder, 99.999%).
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-36	Cs2Mo3As3	Material-target	Descriptor-of	1-1	
+1-5	37-41	were	_	_	_	
+1-6	42-53	synthesized	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Coreference	1-4|1-17|1-24|1-32|1-11[2_0]	
+1-7	54-56	by	_	_	_	
+1-8	57-60	the	_	_	_	
+1-9	61-65	high	Property-temperature[1]	_	_	
+1-10	66-77	temperature	Property-temperature[1]	_	_	
+1-11	78-83	solid	Operation[2]	Condition-of	1-9[1_2]	
+1-12	84-89	state	Operation[2]	_	_	
+1-13	90-98	reaction	Operation[2]	_	_	
+1-14	99-105	method	Operation[2]	_	_	
+1-15	106-114	starting	_	_	_	
+1-16	115-119	with	_	_	_	
+1-17	120-122	Cs	Material-recipe	Descriptor-of|Value-of	1-19|1-21	
+1-18	123-124	(	_	_	_	
+1-19	124-129	lumps	Descriptor	_	_	
+1-20	129-130	,	_	_	_	
+1-21	131-137	99.98%	Value	_	_	
+1-22	137-138	)	_	_	_	
+1-23	138-139	,	_	_	_	
+1-24	140-142	Mo	Material-recipe	Descriptor-of|Value-of	1-26|1-28	
+1-25	143-144	(	_	_	_	
+1-26	144-150	powder	Descriptor	_	_	
+1-27	150-151	,	_	_	_	
+1-28	152-159	99.999%	Value	_	_	
+1-29	159-160	)	_	_	_	
+1-30	160-161	,	_	_	_	
+1-31	162-165	and	_	_	_	
+1-32	166-168	As	Material-recipe	Descriptor-of|Value-of	1-34|1-36	
+1-33	169-170	(	_	_	_	
+1-34	170-176	powder	Descriptor	_	_	
+1-35	176-177	,	_	_	_	
+1-36	178-185	99.999%	Value	_	_	
+1-37	185-186	)	_	_	_	
+1-38	186-187	.	_	_	_	
+
+#Text=The preparation process consists of three steps.
+2-1	188-191	The	_	_	_	
+2-2	192-203	preparation	_	_	_	
+2-3	204-211	process	_	_	_	
+2-4	212-220	consists	_	_	_	
+2-5	221-223	of	_	_	_	
+2-6	224-229	three	_	_	_	
+2-7	230-235	steps	_	_	_	
+2-8	235-236	.	_	_	_	
+
+#Text=First, the CsAs pre-
+#Text=cursor was prepared as the parent material.
+3-1	237-242	First	_	_	_	
+3-2	242-243	,	_	_	_	
+3-3	244-247	the	_	_	_	
+3-4	248-252	CsAs	Material-intermedium	Descriptor-of|Coreference	3-5[3_0]|3-13	
+3-5	253-256	pre	Descriptor[3]	_	_	
+3-6	256-257	-	Descriptor[3]	_	_	
+3-7	258-264	cursor	Descriptor[3]	_	_	
+3-8	265-268	was	_	_	_	
+3-9	269-277	prepared	Operation	Participant-material	3-4	
+3-10	278-280	as	_	_	_	
+3-11	281-284	the	_	_	_	
+3-12	285-291	parent	Descriptor	_	_	
+3-13	292-300	material	Material-intermedium	Descriptor-of	3-12	
+3-14	300-301	.	_	_	_	
+
+#Text=Cs lumps and As powder
+#Text=were mixed with a stoichiometric ratio of 1:1 in an argon-filled glove
+#Text=box, loaded into an alumina crucible and sealed into an evacuated
+#Text=quartz tube.
+4-1	302-304	Cs	Material-recipe	Descriptor-of|Value-of	4-2|4-10[4_0]	
+4-2	305-310	lumps	Descriptor	_	_	
+4-3	311-314	and	_	_	_	
+4-4	315-317	As	Material-recipe	Descriptor-of|Value-of	4-5|4-10[4_0]	
+4-5	318-324	powder	Descriptor	_	_	
+4-6	325-329	were	_	_	_	
+4-7	330-335	mixed	Operation	Participant-material|Participant-material|Device-of-operation|Next-operation	4-1|4-4|4-19[5_0]|4-22	
+4-8	336-340	with	_	_	_	
+4-9	341-342	a	_	_	_	
+4-10	343-357	stoichiometric	Value[4]	_	_	
+4-11	358-363	ratio	Value[4]	_	_	
+4-12	364-366	of	Value[4]	_	_	
+4-13	367-368	1	Value[4]	_	_	
+4-14	368-369	:	Value[4]	_	_	
+4-15	369-370	1	Value[4]	_	_	
+4-16	371-373	in	_	_	_	
+4-17	374-376	an	Value	_	_	
+4-18	377-389	argon-filled	Descriptor	_	_	
+4-19	390-395	glove	Device[5]	Value-of|Descriptor-of	4-17[0_5]|4-18[0_5]	
+4-20	396-399	box	Device[5]	_	_	
+4-21	399-400	,	_	_	_	
+4-22	401-407	loaded	Operation	Device-of-operation|Next-operation	4-26|4-28	
+4-23	408-412	into	_	_	_	
+4-24	413-415	an	Value	_	_	
+4-25	416-423	alumina	Descriptor	_	_	
+4-26	424-432	crucible	Device	Descriptor-of|Value-of	4-25|4-24	
+4-27	433-436	and	_	_	_	
+4-28	437-443	sealed	Operation	Device-of-operation	4-33	
+4-29	444-448	into	_	_	_	
+4-30	449-451	an	Value	_	_	
+4-31	452-461	evacuated	Descriptor	_	_	
+4-32	462-468	quartz	Descriptor	_	_	
+4-33	469-473	tube	Device	Descriptor-of|Descriptor-of|Value-of	4-32|4-31|4-30	
+4-34	473-474	.	_	_	_	
+
+#Text=The quartz tube was slowly (4 K/h) heated to 523 K,
+#Text=held for 20 h, and then cooled down to room temperature.
+5-1	475-478	The	_	_	_	
+5-2	479-485	quartz	Descriptor	_	_	
+5-3	486-490	tube	Device	Descriptor-of	5-2	
+5-4	491-494	was	_	_	_	
+5-5	495-501	slowly	Descriptor	_	_	
+5-6	502-503	(	_	_	_	
+5-7	503-504	4	Property-rate[6]	_	_	
+5-8	505-506	K	Property-rate[6]	_	_	
+5-9	506-507	/	Property-rate[6]	_	_	
+5-10	507-508	h	Property-rate[6]	_	_	
+5-11	508-509	)	_	_	_	
+5-12	510-516	heated	Operation	Condition-of|Condition-of|Device-of-operation|Descriptor-of|Next-operation	5-7[6_0]|5-14[7_0]|5-3|5-5|5-17	
+5-13	517-519	to	_	_	_	
+5-14	520-523	523	Property-temperature[7]	_	_	
+5-15	524-525	K	Property-temperature[7]	_	_	
+5-16	525-526	,	_	_	_	
+5-17	527-531	held	Operation	Device-of-operation|Condition-of|Condition-of|Next-operation	5-3|5-19[8_0]|5-14[7_0]|5-24[9_0]	
+5-18	532-535	for	_	_	_	
+5-19	536-538	20	Property-time[8]	_	_	
+5-20	539-540	h	Property-time[8]	_	_	
+5-21	540-541	,	_	_	_	
+5-22	542-545	and	_	_	_	
+5-23	546-550	then	_	_	_	
+5-24	551-557	cooled	Operation[9]	Condition-of|Device-of-operation	5-27[10_9]|5-3[0_9]	
+5-25	558-562	down	Operation[9]	_	_	
+5-26	563-565	to	_	_	_	
+5-27	566-570	room	Property-temperature[10]	_	_	
+5-28	571-582	temperature	Property-temperature[10]	_	_	
+5-29	582-583	.	_	_	_	
+
+#Text=The mix-
+#Text=ture after heating was collected and ground into fine powder with
+#Text=an agate mortar in a glove box.
+6-1	584-587	The	_	_	_	
+6-2	588-591	mix	Material-intermedium[11]	_	_	
+6-3	591-592	-	Material-intermedium[11]	_	_	
+6-4	593-597	ture	Material-intermedium[11]	_	_	
+6-5	598-603	after	_	_	_	
+6-6	604-611	heating	Operation	Participant-material|Next-operation	6-2[11_0]|6-8	
+6-7	612-615	was	_	_	_	
+6-8	616-625	collected	Operation	Next-operation	6-10	
+6-9	626-629	and	_	_	_	
+6-10	630-636	ground	Operation	Participant-material|Device-of-operation|Device-of-operation	6-13|6-17|6-20[12_0]	
+6-11	637-641	into	_	_	_	
+6-12	642-646	fine	Descriptor	_	_	
+6-13	647-653	powder	Material-intermedium	Descriptor-of	6-12	
+6-14	654-658	with	_	_	_	
+6-15	659-661	an	Value	_	_	
+6-16	662-667	agate	Descriptor	_	_	
+6-17	668-674	mortar	Device	Value-of|Descriptor-of	6-15|6-16	
+6-18	675-677	in	_	_	_	
+6-19	678-679	a	Value	_	_	
+6-20	680-685	glove	Device[12]	Value-of	6-19[0_12]	
+6-21	686-689	box	Device[12]	_	_	
+6-22	689-690	.	_	_	_	
+
+#Text=Second, the obtained CsAs powder,
+#Text=together with Mo and As powder in a stoichiometric ratio of 2.3:3:0.7
+#Text=(the excess of Cs is to compensate for the loss of Cs during the sin-
+#Text=tering process), was fully ground in the agate mortar and pressed
+#Text=into pellets, which was, then, sealed into an evacuated quartz tube
+#Text=and heated at 523 K for 20 h followed by furnace cooling.
+7-1	691-697	Second	_	_	_	
+7-2	697-698	,	_	_	_	
+7-3	699-702	the	_	_	_	
+7-4	703-711	obtained	_	_	_	
+7-5	712-716	CsAs	Material-intermedium	Descriptor-of|Value-of	7-6|7-16[13_0]	
+7-6	717-723	powder	Descriptor	_	_	
+7-7	723-724	,	_	_	_	
+7-8	725-733	together	_	_	_	
+7-9	734-738	with	_	_	_	
+7-10	739-741	Mo	Material-recipe	Descriptor-of|Value-of	7-13|7-16[13_0]	
+7-11	742-745	and	_	_	_	
+7-12	746-748	As	Material-recipe	Descriptor-of|Value-of	7-13|7-16[13_0]	
+7-13	749-755	powder	Descriptor	_	_	
+7-14	756-758	in	_	_	_	
+7-15	759-760	a	_	_	_	
+7-16	761-775	stoichiometric	Value[13]	_	_	
+7-17	776-781	ratio	Value[13]	_	_	
+7-18	782-784	of	Value[13]	_	_	
+7-19	785-788	2.3	Value[13]	_	_	
+7-20	788-789	:	Value[13]	_	_	
+7-21	789-790	3	Value[13]	_	_	
+7-22	790-791	:	Value[13]	_	_	
+7-23	791-794	0.7	Value[13]	_	_	
+7-24	795-796	(	_	_	_	
+7-25	796-799	the	_	_	_	
+7-26	800-806	excess	_	_	_	
+7-27	807-809	of	_	_	_	
+7-28	810-812	Cs	_	_	_	
+7-29	813-815	is	_	_	_	
+7-30	816-818	to	_	_	_	
+7-31	819-829	compensate	_	_	_	
+7-32	830-833	for	_	_	_	
+7-33	834-837	the	_	_	_	
+7-34	838-842	loss	_	_	_	
+7-35	843-845	of	_	_	_	
+7-36	846-848	Cs	_	_	_	
+7-37	849-855	during	_	_	_	
+7-38	856-859	the	_	_	_	
+7-39	860-863	sin	_	_	_	
+7-40	863-864	-	_	_	_	
+7-41	865-871	tering	_	_	_	
+7-42	872-879	process	_	_	_	
+7-43	879-880	)	_	_	_	
+7-44	880-881	,	_	_	_	
+7-45	882-885	was	_	_	_	
+7-46	886-891	fully	Descriptor	_	_	
+7-47	892-898	ground	Operation	Descriptor-of|Device-of-operation|Participant-material|Participant-material|Participant-material|Next-operation	7-46|7-51|7-5|7-10|7-12|7-53	
+7-48	899-901	in	_	_	_	
+7-49	902-905	the	_	_	_	
+7-50	906-911	agate	Descriptor	_	_	
+7-51	912-918	mortar	Device	Descriptor-of	7-50	
+7-52	919-922	and	_	_	_	
+7-53	923-930	pressed	Operation	Next-operation	7-62	
+7-54	931-935	into	_	_	_	
+7-55	936-943	pellets	Material-intermedium	_	_	
+7-56	943-944	,	_	_	_	
+7-57	945-950	which	_	_	_	
+7-58	951-954	was	_	_	_	
+7-59	954-955	,	_	_	_	
+7-60	956-960	then	_	_	_	
+7-61	960-961	,	_	_	_	
+7-62	962-968	sealed	Operation	Participant-material|Device-of-operation|Next-operation	7-55|7-67|7-69	
+7-63	969-973	into	_	_	_	
+7-64	974-976	an	Value	_	_	
+7-65	977-986	evacuated	Descriptor	_	_	
+7-66	987-993	quartz	Descriptor	_	_	
+7-67	994-998	tube	Device	Descriptor-of|Descriptor-of|Value-of	7-66|7-65|7-64	
+7-68	999-1002	and	_	_	_	
+7-69	1003-1009	heated	Operation	Condition-of|Condition-of|Next-operation	7-71[14_0]|7-74[15_0]|7-79	
+7-70	1010-1012	at	_	_	_	
+7-71	1013-1016	523	Property-temperature[14]	_	_	
+7-72	1017-1018	K	Property-temperature[14]	_	_	
+7-73	1019-1022	for	_	_	_	
+7-74	1023-1025	20	Property-time[15]	_	_	
+7-75	1026-1027	h	Property-time[15]	_	_	
+7-76	1028-1036	followed	_	_	_	
+7-77	1037-1039	by	_	_	_	
+7-78	1040-1047	furnace	Device	_	_	
+7-79	1048-1055	cooling	Operation	Device-of-operation	7-78	
+7-80	1055-1056	.	_	_	_	
+
+#Text=Third,
+#Text=the product was ground in a glove box, pressed into pellets, and
+#Text=placed in an alumina crucible again.
+8-1	1057-1062	Third	_	_	_	
+8-2	1062-1063	,	_	_	_	
+8-3	1064-1067	the	_	_	_	
+8-4	1068-1075	product	Material-intermedium	_	_	
+8-5	1076-1079	was	_	_	_	
+8-6	1080-1086	ground	Operation	Device-of-operation|Participant-material|Next-operation	8-9[16_0]|8-4|8-12	
+8-7	1087-1089	in	_	_	_	
+8-8	1090-1091	a	Value	_	_	
+8-9	1092-1097	glove	Device[16]	Value-of	8-8[0_16]	
+8-10	1098-1101	box	Device[16]	_	_	
+8-11	1101-1102	,	_	_	_	
+8-12	1103-1110	pressed	Operation	Next-operation	8-17	
+8-13	1111-1115	into	_	_	_	
+8-14	1116-1123	pellets	Material-intermedium	_	_	
+8-15	1123-1124	,	_	_	_	
+8-16	1125-1128	and	_	_	_	
+8-17	1129-1135	placed	Operation	Participant-material|Device-of-operation	8-14|8-21	
+8-18	1136-1138	in	_	_	_	
+8-19	1139-1141	an	Value	_	_	
+8-20	1142-1149	alumina	Descriptor	_	_	
+8-21	1150-1158	crucible	Device	Descriptor-of|Value-of	8-20|8-19	
+8-22	1159-1164	again	_	_	_	
+8-23	1164-1165	.	_	_	_	
+
+#Text=The crucible was sealed into
+#Text=a Ta Tube with arc welding before finally being sealed into an evac-
+#Text=uated quartz tube.
+9-1	1166-1169	The	_	_	_	
+9-2	1170-1178	crucible	Device	_	_	
+9-3	1179-1182	was	_	_	_	
+9-4	1183-1189	sealed	Operation	Device-of-operation|Device-of-operation|Next-operation	9-2|9-8|9-15	
+9-5	1190-1194	into	_	_	_	
+9-6	1195-1196	a	Value	_	_	
+9-7	1197-1199	Ta	Descriptor	_	_	
+9-8	1200-1204	Tube	Device	Descriptor-of|Value-of	9-7|9-6	
+9-9	1205-1209	with	_	_	_	
+9-10	1210-1213	arc	Operation[17]	Device-of-operation	9-8[0_17]	
+9-11	1214-1221	welding	Operation[17]	_	_	
+9-12	1222-1228	before	_	_	_	
+9-13	1229-1236	finally	_	_	_	
+9-14	1237-1242	being	_	_	_	
+9-15	1243-1249	sealed	Operation	Device-of-operation|Device-of-operation|Device-of-operation	9-2|9-8|9-22	
+9-16	1250-1254	into	_	_	_	
+9-17	1255-1257	an	Value	_	_	
+9-18	1258-1262	evac	Descriptor[18]	_	_	
+9-19	1262-1263	-	Descriptor[18]	_	_	
+9-20	1264-1269	uated	Descriptor[18]	_	_	
+9-21	1270-1276	quartz	Descriptor	_	_	
+9-22	1277-1281	tube	Device	Descriptor-of|Value-of|Descriptor-of	9-21|9-17|9-18[18_0]	
+9-23	1281-1282	.	_	_	_	
+
+#Text=Then, the tube containing the sample was heated
+#Text=to 1123 K, held for 50 h, and cooled down to room temperature
+#Text=with the furnace.
+10-1	1283-1287	Then	_	_	_	
+10-2	1287-1288	,	_	_	_	
+10-3	1289-1292	the	_	_	_	
+10-4	1293-1297	tube	Device	_	_	
+10-5	1298-1308	containing	_	_	_	
+10-6	1309-1312	the	_	_	_	
+10-7	1313-1319	sample	Material-intermedium	_	_	
+10-8	1320-1323	was	_	_	_	
+10-9	1324-1330	heated	Operation	Device-of-operation|Participant-material|Condition-of|Next-operation	10-4|10-7|10-11[19_0]|10-14	
+10-10	1331-1333	to	_	_	_	
+10-11	1334-1338	1123	Property-temperature[19]	_	_	
+10-12	1339-1340	K	Property-temperature[19]	_	_	
+10-13	1340-1341	,	_	_	_	
+10-14	1342-1346	held	Operation	Condition-of|Device-of-operation|Condition-of|Next-operation	10-11[19_0]|10-4|10-16[20_0]|10-20[21_0]	
+10-15	1347-1350	for	_	_	_	
+10-16	1351-1353	50	Property-time[20]	_	_	
+10-17	1354-1355	h	Property-time[20]	_	_	
+10-18	1355-1356	,	_	_	_	
+10-19	1357-1360	and	_	_	_	
+10-20	1361-1367	cooled	Operation[21]	Condition-of|Device-of-operation|Device-of-operation	10-23[22_21]|10-4[0_21]|10-27[0_21]	
+10-21	1368-1372	down	Operation[21]	_	_	
+10-22	1373-1375	to	_	_	_	
+10-23	1376-1380	room	Property-temperature[22]	_	_	
+10-24	1381-1392	temperature	Property-temperature[22]	_	_	
+10-25	1393-1397	with	_	_	_	
+10-26	1398-1401	the	_	_	_	
+10-27	1402-1409	furnace	Device	_	_	
+10-28	1409-1410	.	_	_	_	
+
+#Text=After that, the samples of single phase Cs2Mo3As3
+#Text=were obtained for structural and physical characterizations.
+11-1	1411-1416	After	_	_	_	
+11-2	1417-1421	that	_	_	_	
+11-3	1421-1422	,	_	_	_	
+11-4	1423-1426	the	_	_	_	
+11-5	1427-1434	samples	Descriptor	_	_	
+11-6	1435-1437	of	_	_	_	
+11-7	1438-1444	single	Descriptor[23]	_	_	
+11-8	1445-1450	phase	Descriptor[23]	_	_	
+11-9	1451-1460	Cs2Mo3As3	Material-target	Descriptor-of|Descriptor-of	11-7[23_0]|11-5	
+11-10	1461-1465	were	_	_	_	
+11-11	1466-1474	obtained	Operation	Participant-material	11-9	
+11-12	1475-1478	for	_	_	_	
+11-13	1479-1489	structural	_	_	_	
+11-14	1490-1493	and	_	_	_	
+11-15	1494-1502	physical	_	_	_	
+11-16	1503-1520	characterizations	_	_	_	
+11-17	1520-1521	.	_	_	_	
+
+#Text=We note
+#Text=that different from the previously reported preparation of polycrys-
+#Text=talline K2Mo3As3 samples,32 an additional sintering process at 523 K
+#Text=is necessary to make the sample more homogeneous and obtain
+#Text=single phase samples with bulk superconductivity.
+12-1	1522-1524	We	_	_	_	
+12-2	1525-1529	note	_	_	_	
+12-3	1530-1534	that	_	_	_	
+12-4	1535-1544	different	_	_	_	
+12-5	1545-1549	from	_	_	_	
+12-6	1550-1553	the	_	_	_	
+12-7	1554-1564	previously	_	_	_	
+12-8	1565-1573	reported	_	_	_	
+12-9	1574-1585	preparation	_	_	_	
+12-10	1586-1588	of	_	_	_	
+12-11	1589-1597	polycrys	_	_	_	
+12-12	1597-1598	-	_	_	_	
+12-13	1599-1606	talline	_	_	_	
+12-14	1607-1615	K2Mo3As3	_	_	_	
+12-15	1616-1623	samples	_	_	_	
+12-16	1623-1624	,	_	_	_	
+12-17	1624-1626	32	_	_	_	
+12-18	1627-1629	an	_	_	_	
+12-19	1630-1640	additional	_	_	_	
+12-20	1641-1650	sintering	_	_	_	
+12-21	1651-1658	process	_	_	_	
+12-22	1659-1661	at	_	_	_	
+12-23	1662-1665	523	_	_	_	
+12-24	1666-1667	K	_	_	_	
+12-25	1668-1670	is	_	_	_	
+12-26	1671-1680	necessary	_	_	_	
+12-27	1681-1683	to	_	_	_	
+12-28	1684-1688	make	_	_	_	
+12-29	1689-1692	the	_	_	_	
+12-30	1693-1699	sample	_	_	_	
+12-31	1700-1704	more	_	_	_	
+12-32	1705-1716	homogeneous	_	_	_	
+12-33	1717-1720	and	_	_	_	
+12-34	1721-1727	obtain	_	_	_	
+12-35	1728-1734	single	_	_	_	
+12-36	1735-1740	phase	_	_	_	
+12-37	1741-1748	samples	_	_	_	
+12-38	1749-1753	with	_	_	_	
+12-39	1754-1758	bulk	_	_	_	
+12-40	1759-1776	superconductivity	_	_	_	
+12-41	1776-1777	.	_	_	_	
+
+#Text=Otherwise, very
+#Text=low superconducting volume fraction was observed, which may be
+#Text=related to the deviation from stoichiometric proportions of the sam-
+#Text=ple composition.
+13-1	1778-1787	Otherwise	_	_	_	
+13-2	1787-1788	,	_	_	_	
+13-3	1789-1793	very	_	_	_	
+13-4	1794-1797	low	_	_	_	
+13-5	1798-1813	superconducting	_	_	_	
+13-6	1814-1820	volume	_	_	_	
+13-7	1821-1829	fraction	_	_	_	
+13-8	1830-1833	was	_	_	_	
+13-9	1834-1842	observed	_	_	_	
+13-10	1842-1843	,	_	_	_	
+13-11	1844-1849	which	_	_	_	
+13-12	1850-1853	may	_	_	_	
+13-13	1854-1856	be	_	_	_	
+13-14	1857-1864	related	_	_	_	
+13-15	1865-1867	to	_	_	_	
+13-16	1868-1871	the	_	_	_	
+13-17	1872-1881	deviation	_	_	_	
+13-18	1882-1886	from	_	_	_	
+13-19	1887-1901	stoichiometric	_	_	_	
+13-20	1902-1913	proportions	_	_	_	
+13-21	1914-1916	of	_	_	_	
+13-22	1917-1920	the	_	_	_	
+13-23	1921-1924	sam	_	_	_	
+13-24	1924-1925	-	_	_	_	
+13-25	1926-1929	ple	_	_	_	
+13-26	1930-1941	composition	_	_	_	
+13-27	1941-1942	.	_	_	_	
+
+#Text=The polycrystalline samples synthesized by the
+#Text=above method are black and show good ductility under pressure.
+14-1	1943-1946	The	_	_	_	
+14-2	1947-1962	polycrystalline	_	_	_	
+14-3	1963-1970	samples	_	_	_	
+14-4	1971-1982	synthesized	_	_	_	
+14-5	1983-1985	by	_	_	_	
+14-6	1986-1989	the	_	_	_	
+14-7	1990-1995	above	_	_	_	
+14-8	1996-2002	method	_	_	_	
+14-9	2003-2006	are	_	_	_	
+14-10	2007-2012	black	_	_	_	
+14-11	2013-2016	and	_	_	_	
+14-12	2017-2021	show	_	_	_	
+14-13	2022-2026	good	_	_	_	
+14-14	2027-2036	ductility	_	_	_	
+14-15	2037-2042	under	_	_	_	
+14-16	2043-2051	pressure	_	_	_	
+14-17	2051-2052	.	_	_	_	
+
+#Text=The starting material Cs, the intermediate CsAs, and the obtained
+#Text=Cs2Mo3As3 samples are all very reactive to the oxygen and the mois-
+#Text=ture in the air; hence, the weighing, grinding, and other processes
+#Text=mentioned above need to be carried out carefully in a high-purity
+#Text=argon atmosphere, and any exposure to the air should be avoided in
+#Text=all processes.
+15-1	2053-2056	The	_	_	_	
+15-2	2057-2065	starting	_	_	_	
+15-3	2066-2074	material	_	_	_	
+15-4	2075-2077	Cs	_	_	_	
+15-5	2077-2078	,	_	_	_	
+15-6	2079-2082	the	_	_	_	
+15-7	2083-2095	intermediate	_	_	_	
+15-8	2096-2100	CsAs	_	_	_	
+15-9	2100-2101	,	_	_	_	
+15-10	2102-2105	and	_	_	_	
+15-11	2106-2109	the	_	_	_	
+15-12	2110-2118	obtained	_	_	_	
+15-13	2119-2128	Cs2Mo3As3	_	_	_	
+15-14	2129-2136	samples	_	_	_	
+15-15	2137-2140	are	_	_	_	
+15-16	2141-2144	all	_	_	_	
+15-17	2145-2149	very	_	_	_	
+15-18	2150-2158	reactive	_	_	_	
+15-19	2159-2161	to	_	_	_	
+15-20	2162-2165	the	_	_	_	
+15-21	2166-2172	oxygen	_	_	_	
+15-22	2173-2176	and	_	_	_	
+15-23	2177-2180	the	_	_	_	
+15-24	2181-2185	mois	_	_	_	
+15-25	2185-2186	-	_	_	_	
+15-26	2187-2191	ture	_	_	_	
+15-27	2192-2194	in	_	_	_	
+15-28	2195-2198	the	_	_	_	
+15-29	2199-2202	air	_	_	_	
+15-30	2202-2203	;	_	_	_	
+15-31	2204-2209	hence	_	_	_	
+15-32	2209-2210	,	_	_	_	
+15-33	2211-2214	the	_	_	_	
+15-34	2215-2223	weighing	_	_	_	
+15-35	2223-2224	,	_	_	_	
+15-36	2225-2233	grinding	_	_	_	
+15-37	2233-2234	,	_	_	_	
+15-38	2235-2238	and	_	_	_	
+15-39	2239-2244	other	_	_	_	
+15-40	2245-2254	processes	_	_	_	
+15-41	2255-2264	mentioned	_	_	_	
+15-42	2265-2270	above	_	_	_	
+15-43	2271-2275	need	_	_	_	
+15-44	2276-2278	to	_	_	_	
+15-45	2279-2281	be	_	_	_	
+15-46	2282-2289	carried	_	_	_	
+15-47	2290-2293	out	_	_	_	
+15-48	2294-2303	carefully	_	_	_	
+15-49	2304-2306	in	_	_	_	
+15-50	2307-2308	a	_	_	_	
+15-51	2309-2320	high-purity	_	_	_	
+15-52	2321-2326	argon	_	_	_	
+15-53	2327-2337	atmosphere	_	_	_	
+15-54	2337-2338	,	_	_	_	
+15-55	2339-2342	and	_	_	_	
+15-56	2343-2346	any	_	_	_	
+15-57	2347-2355	exposure	_	_	_	
+15-58	2356-2358	to	_	_	_	
+15-59	2359-2362	the	_	_	_	
+15-60	2363-2366	air	_	_	_	
+15-61	2367-2373	should	_	_	_	
+15-62	2374-2376	be	_	_	_	
+15-63	2377-2384	avoided	_	_	_	
+15-64	2385-2387	in	_	_	_	
+15-65	2388-2391	all	_	_	_	
+15-66	2392-2401	processes	_	_	_	
+15-67	2401-2402	.	_	_	_	

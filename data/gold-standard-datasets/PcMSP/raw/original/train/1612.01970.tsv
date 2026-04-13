@@ -1,0 +1,362 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline sample of Co4Nb2O9 was synthesized by standard solid state reaction route.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-22	sample	_	_	_	
+1-3	23-25	of	_	_	_	
+1-4	26-34	Co4Nb2O9	Material-target	Descriptor-of	1-1	
+1-5	35-38	was	_	_	_	
+1-6	39-50	synthesized	Operation	Participant-material	1-4	
+1-7	51-53	by	_	_	_	
+1-8	54-62	standard	Operation[1]	Coreference	1-6[0_1]	
+1-9	63-68	solid	Operation[1]	_	_	
+1-10	69-74	state	Operation[1]	_	_	
+1-11	75-83	reaction	Operation[1]	_	_	
+1-12	84-89	route	Operation[1]	_	_	
+1-13	89-90	.	_	_	_	
+
+#Text=Stoichiometric amount of pure Co3O4 (Alfa Aesar, 98.0%), and Nb2O5 (Alfa Aesar, 98.0%), were used.
+2-1	91-105	Stoichiometric	Value[2]	_	_	
+2-2	106-112	amount	Value[2]	_	_	
+2-3	113-115	of	_	_	_	
+2-4	116-120	pure	Descriptor	_	_	
+2-5	121-126	Co3O4	Material-recipe	Value-of|Brand-of|Value-of|Descriptor-of	2-1[2_0]|2-7[3_0]|2-10|2-4	
+2-6	127-128	(	_	_	_	
+2-7	128-132	Alfa	Brand[3]	_	_	
+2-8	133-138	Aesar	Brand[3]	_	_	
+2-9	138-139	,	_	_	_	
+2-10	140-145	98.0%	Value	_	_	
+2-11	145-146	)	_	_	_	
+2-12	146-147	,	_	_	_	
+2-13	148-151	and	_	_	_	
+2-14	152-157	Nb2O5	Material-recipe	Brand-of|Value-of|Value-of|Descriptor-of	2-16[4_0]|2-19|2-1[2_0]|2-4	
+2-15	158-159	(	_	_	_	
+2-16	159-163	Alfa	Brand[4]	_	_	
+2-17	164-169	Aesar	Brand[4]	_	_	
+2-18	169-170	,	_	_	_	
+2-19	171-176	98.0%	Value	_	_	
+2-20	176-177	)	_	_	_	
+2-21	177-178	,	_	_	_	
+2-22	179-183	were	_	_	_	
+2-23	184-188	used	Operation	Participant-material|Participant-material	2-14|2-5	
+2-24	188-189	.	_	_	_	
+
+#Text=The mixture was well ground for several hours in agate mortar-pestle.
+3-1	190-193	The	_	_	_	
+3-2	194-201	mixture	Material-intermedium	_	_	
+3-3	202-205	was	_	_	_	
+3-4	206-210	well	Descriptor	_	_	
+3-5	211-217	ground	Operation	Condition-of|Device-of-operation|Participant-material|Descriptor-of	3-7[5_0]|3-11|3-2|3-4	
+3-6	218-221	for	_	_	_	
+3-7	222-229	several	Property-time[5]	_	_	
+3-8	230-235	hours	Property-time[5]	_	_	
+3-9	236-238	in	_	_	_	
+3-10	239-244	agate	Descriptor	_	_	
+3-11	245-258	mortar-pestle	Device	Descriptor-of	3-10	
+3-12	258-259	.	_	_	_	
+
+#Text=After grinding, the mixture was sintered at 900°C for10 hrs in air.
+4-1	260-265	After	_	_	_	
+4-2	266-274	grinding	Operation	Next-operation	4-7	
+4-3	274-275	,	_	_	_	
+4-4	276-279	the	_	_	_	
+4-5	280-287	mixture	Material-intermedium	_	_	
+4-6	288-291	was	_	_	_	
+4-7	292-300	sintered	Operation	Participant-material|Condition-of|Condition-of|Condition-of	4-5|4-9[6_0]|4-12[7_0]|4-15	
+4-8	301-303	at	_	_	_	
+4-9	304-307	900	Property-temperature[6]	_	_	
+4-10	307-308	°	Property-temperature[6]	_	_	
+4-11	308-309	C	Property-temperature[6]	_	_	
+4-12	310-315	for10	Property-time[7]	_	_	
+4-13	316-319	hrs	Property-time[7]	_	_	
+4-14	320-322	in	_	_	_	
+4-15	323-326	air	Property-pressure	_	_	
+4-16	326-327	.	_	_	_	
+
+#Text=After the first sintering, the mixture was again well ground for few hours and then pressed in form of pellets (Diameter = 5 mm, thickness= 0.5 mm).
+5-1	328-333	After	_	_	_	
+5-2	334-337	the	_	_	_	
+5-3	338-343	first	Descriptor	_	_	
+5-4	344-353	sintering	Operation	Descriptor-of|Next-operation	5-3|5-11	
+5-5	353-354	,	_	_	_	
+5-6	355-358	the	_	_	_	
+5-7	359-366	mixture	Material-intermedium	_	_	
+5-8	367-370	was	_	_	_	
+5-9	371-376	again	_	_	_	
+5-10	377-381	well	Descriptor	_	_	
+5-11	382-388	ground	Operation	Next-operation|Condition-of|Participant-material|Descriptor-of	5-17|5-13[8_0]|5-7|5-10	
+5-12	389-392	for	_	_	_	
+5-13	393-396	few	Property-time[8]	_	_	
+5-14	397-402	hours	Property-time[8]	_	_	
+5-15	403-406	and	_	_	_	
+5-16	407-411	then	_	_	_	
+5-17	412-419	pressed	Operation	_	_	
+5-18	420-422	in	_	_	_	
+5-19	423-427	form	_	_	_	
+5-20	428-430	of	_	_	_	
+5-21	431-438	pellets	Material-intermedium	Value-of|Value-of	5-25[9_0]|5-30[10_0]	
+5-22	439-440	(	_	_	_	
+5-23	440-448	Diameter	Descriptor	_	_	
+5-24	449-450	=	_	_	_	
+5-25	451-452	5	Value[9]	Descriptor-of	5-23[0_9]	
+5-26	453-455	mm	Value[9]	_	_	
+5-27	455-456	,	_	_	_	
+5-28	457-466	thickness	Descriptor	_	_	
+5-29	466-467	=	_	_	_	
+5-30	468-471	0.5	Value[10]	Descriptor-of	5-28[0_10]	
+5-31	472-474	mm	Value[10]	_	_	
+5-32	474-475	)	_	_	_	
+5-33	475-476	.	_	_	_	
+
+#Text=These pellets were heated again in air at 1100°C for another 6 hrs.
+6-1	477-482	These	_	_	_	
+6-2	483-490	pellets	Material-intermedium	_	_	
+6-3	491-495	were	_	_	_	
+6-4	496-502	heated	Operation	Condition-of|Condition-of|Condition-of|Participant-material	6-9[11_0]|6-14[12_0]|6-7|6-2	
+6-5	503-508	again	_	_	_	
+6-6	509-511	in	_	_	_	
+6-7	512-515	air	Property-pressure	_	_	
+6-8	516-518	at	_	_	_	
+6-9	519-523	1100	Property-temperature[11]	_	_	
+6-10	523-524	°	Property-temperature[11]	_	_	
+6-11	524-525	C	Property-temperature[11]	_	_	
+6-12	526-529	for	_	_	_	
+6-13	530-537	another	_	_	_	
+6-14	538-539	6	Property-time[12]	_	_	
+6-15	540-543	hrs	Property-time[12]	_	_	
+6-16	543-544	.	_	_	_	
+
+#Text=Both heating and cooling rates were kept at a rate of 5°C/min.
+7-1	545-549	Both	_	_	_	
+7-2	550-557	heating	Operation	Condition-of	7-12[13_0]	
+7-3	558-561	and	_	_	_	
+7-4	562-569	cooling	Operation	Condition-of	7-12[13_0]	
+7-5	570-575	rates	_	_	_	
+7-6	576-580	were	_	_	_	
+7-7	581-585	kept	_	_	_	
+7-8	586-588	at	_	_	_	
+7-9	589-590	a	_	_	_	
+7-10	591-595	rate	Property-rate	_	_	
+7-11	596-598	of	_	_	_	
+7-12	599-600	5	Property-rate[13]	Coreference	7-10[0_13]	
+7-13	600-601	°	Property-rate[13]	_	_	
+7-14	601-602	C	Property-rate[13]	_	_	
+7-15	602-603	/	Property-rate[13]	_	_	
+7-16	603-606	min	Property-rate[13]	_	_	
+7-17	606-607	.	_	_	_	
+
+#Text=Phase purity was confirmed at room temperature powder X-ray diffraction (Rigaku Ultima III X-ray diffractometer with Cu-Kα radiation).
+8-1	608-613	Phase	_	_	_	
+8-2	614-620	purity	_	_	_	
+8-3	621-624	was	_	_	_	
+8-4	625-634	confirmed	_	_	_	
+8-5	635-637	at	_	_	_	
+8-6	638-642	room	_	_	_	
+8-7	643-654	temperature	_	_	_	
+8-8	655-661	powder	_	_	_	
+8-9	662-667	X-ray	_	_	_	
+8-10	668-679	diffraction	_	_	_	
+8-11	680-681	(	_	_	_	
+8-12	681-687	Rigaku	_	_	_	
+8-13	688-694	Ultima	_	_	_	
+8-14	695-698	III	_	_	_	
+8-15	699-704	X-ray	_	_	_	
+8-16	705-719	diffractometer	_	_	_	
+8-17	720-724	with	_	_	_	
+8-18	725-730	Cu-Kα	_	_	_	
+8-19	731-740	radiation	_	_	_	
+8-20	740-741	)	_	_	_	
+8-21	741-742	.	_	_	_	
+
+#Text=Lattice parameters were obtained from Rietveld refinement of the X-ray data using RIETAN 2000 software.
+9-1	743-750	Lattice	_	_	_	
+9-2	751-761	parameters	_	_	_	
+9-3	762-766	were	_	_	_	
+9-4	767-775	obtained	_	_	_	
+9-5	776-780	from	_	_	_	
+9-6	781-789	Rietveld	_	_	_	
+9-7	790-800	refinement	_	_	_	
+9-8	801-803	of	_	_	_	
+9-9	804-807	the	_	_	_	
+9-10	808-813	X-ray	_	_	_	
+9-11	814-818	data	_	_	_	
+9-12	819-824	using	_	_	_	
+9-13	825-831	RIETAN	_	_	_	
+9-14	832-836	2000	_	_	_	
+9-15	837-845	software	_	_	_	
+9-16	845-846	.	_	_	_	
+
+#Text=The DC magnetization measurements were done in VSM mode of a Cryogenic Physical Property Measurement System (PPMS).
+10-1	847-850	The	_	_	_	
+10-2	851-853	DC	_	_	_	
+10-3	854-867	magnetization	_	_	_	
+10-4	868-880	measurements	_	_	_	
+10-5	881-885	were	_	_	_	
+10-6	886-890	done	_	_	_	
+10-7	891-893	in	_	_	_	
+10-8	894-897	VSM	_	_	_	
+10-9	898-902	mode	_	_	_	
+10-10	903-905	of	_	_	_	
+10-11	906-907	a	_	_	_	
+10-12	908-917	Cryogenic	_	_	_	
+10-13	918-926	Physical	_	_	_	
+10-14	927-935	Property	_	_	_	
+10-15	936-947	Measurement	_	_	_	
+10-16	948-954	System	_	_	_	
+10-17	955-956	(	_	_	_	
+10-18	956-960	PPMS	_	_	_	
+10-19	960-961	)	_	_	_	
+10-20	961-962	.	_	_	_	
+
+#Text=The dielectric measurements were done using an Agilent E4980A LCR meter.
+11-1	963-966	The	_	_	_	
+11-2	967-977	dielectric	_	_	_	
+11-3	978-990	measurements	_	_	_	
+11-4	991-995	were	_	_	_	
+11-5	996-1000	done	_	_	_	
+11-6	1001-1006	using	_	_	_	
+11-7	1007-1009	an	_	_	_	
+11-8	1010-1017	Agilent	_	_	_	
+11-9	1018-1024	E4980A	_	_	_	
+11-10	1025-1028	LCR	_	_	_	
+11-11	1029-1034	meter	_	_	_	
+11-12	1034-1035	.	_	_	_	
+
+#Text=For pyroelectric and dielectric measurements, electrodes were prepared on the sample by painting silver paste on the planar surfaces.
+12-1	1036-1039	For	_	_	_	
+12-2	1040-1052	pyroelectric	_	_	_	
+12-3	1053-1056	and	_	_	_	
+12-4	1057-1067	dielectric	_	_	_	
+12-5	1068-1080	measurements	_	_	_	
+12-6	1080-1081	,	_	_	_	
+12-7	1082-1092	electrodes	_	_	_	
+12-8	1093-1097	were	_	_	_	
+12-9	1098-1106	prepared	_	_	_	
+12-10	1107-1109	on	_	_	_	
+12-11	1110-1113	the	_	_	_	
+12-12	1114-1120	sample	_	_	_	
+12-13	1121-1123	by	_	_	_	
+12-14	1124-1132	painting	_	_	_	
+12-15	1133-1139	silver	_	_	_	
+12-16	1140-1145	paste	_	_	_	
+12-17	1146-1148	on	_	_	_	
+12-18	1149-1152	the	_	_	_	
+12-19	1153-1159	planar	_	_	_	
+12-20	1160-1168	surfaces	_	_	_	
+12-21	1168-1169	.	_	_	_	
+
+#Text=The pyroelectric measurement was performed using a Kiethley 6514 electrometer and polarization was derived from the pyroelectric current by integrating over time.
+13-1	1170-1173	The	_	_	_	
+13-2	1174-1186	pyroelectric	_	_	_	
+13-3	1187-1198	measurement	_	_	_	
+13-4	1199-1202	was	_	_	_	
+13-5	1203-1212	performed	_	_	_	
+13-6	1213-1218	using	_	_	_	
+13-7	1219-1220	a	_	_	_	
+13-8	1221-1229	Kiethley	_	_	_	
+13-9	1230-1234	6514	_	_	_	
+13-10	1235-1247	electrometer	_	_	_	
+13-11	1248-1251	and	_	_	_	
+13-12	1252-1264	polarization	_	_	_	
+13-13	1265-1268	was	_	_	_	
+13-14	1269-1276	derived	_	_	_	
+13-15	1277-1281	from	_	_	_	
+13-16	1282-1285	the	_	_	_	
+13-17	1286-1298	pyroelectric	_	_	_	
+13-18	1299-1306	current	_	_	_	
+13-19	1307-1309	by	_	_	_	
+13-20	1310-1321	integrating	_	_	_	
+13-21	1322-1326	over	_	_	_	
+13-22	1327-1331	time	_	_	_	
+13-23	1331-1332	.	_	_	_	
+
+#Text=The sample was poled each time from well above ordering temperature under various combinations of electric and magnetic field.
+14-1	1333-1336	The	_	_	_	
+14-2	1337-1343	sample	_	_	_	
+14-3	1344-1347	was	_	_	_	
+14-4	1348-1353	poled	_	_	_	
+14-5	1354-1358	each	_	_	_	
+14-6	1359-1363	time	_	_	_	
+14-7	1364-1368	from	_	_	_	
+14-8	1369-1373	well	_	_	_	
+14-9	1374-1379	above	_	_	_	
+14-10	1380-1388	ordering	_	_	_	
+14-11	1389-1400	temperature	_	_	_	
+14-12	1401-1406	under	_	_	_	
+14-13	1407-1414	various	_	_	_	
+14-14	1415-1427	combinations	_	_	_	
+14-15	1428-1430	of	_	_	_	
+14-16	1431-1439	electric	_	_	_	
+14-17	1440-1443	and	_	_	_	
+14-18	1444-1452	magnetic	_	_	_	
+14-19	1453-1458	field	_	_	_	
+14-20	1458-1459	.	_	_	_	
+
+#Text=The poling field was removed at lowest temperature and terminals were sorted for 15 minutes to avoid any role of electrostatic stray charges.
+15-1	1460-1463	The	_	_	_	
+15-2	1464-1470	poling	_	_	_	
+15-3	1471-1476	field	_	_	_	
+15-4	1477-1480	was	_	_	_	
+15-5	1481-1488	removed	_	_	_	
+15-6	1489-1491	at	_	_	_	
+15-7	1492-1498	lowest	_	_	_	
+15-8	1499-1510	temperature	_	_	_	
+15-9	1511-1514	and	_	_	_	
+15-10	1515-1524	terminals	_	_	_	
+15-11	1525-1529	were	_	_	_	
+15-12	1530-1536	sorted	_	_	_	
+15-13	1537-1540	for	_	_	_	
+15-14	1541-1543	15	_	_	_	
+15-15	1544-1551	minutes	_	_	_	
+15-16	1552-1554	to	_	_	_	
+15-17	1555-1560	avoid	_	_	_	
+15-18	1561-1564	any	_	_	_	
+15-19	1565-1569	role	_	_	_	
+15-20	1570-1572	of	_	_	_	
+15-21	1573-1586	electrostatic	_	_	_	
+15-22	1587-1592	stray	_	_	_	
+15-23	1593-1600	charges	_	_	_	
+15-24	1600-1601	.	_	_	_	
+
+#Text=The warming ramp rate was fixed at 5 K/min.
+16-1	1602-1605	The	_	_	_	
+16-2	1606-1613	warming	_	_	_	
+16-3	1614-1618	ramp	_	_	_	
+16-4	1619-1623	rate	_	_	_	
+16-5	1624-1627	was	_	_	_	
+16-6	1628-1633	fixed	_	_	_	
+16-7	1634-1636	at	_	_	_	
+16-8	1637-1638	5	_	_	_	
+16-9	1639-1640	K	_	_	_	
+16-10	1640-1641	/	_	_	_	
+16-11	1641-1644	min	_	_	_	
+16-12	1644-1645	.	_	_	_	
+
+#Text=For dielectric measurements, silver paste was used to make contacts onto disc-shaped ceramic samples of 5 mm diameter and 0.5 mm thickness.
+17-1	1646-1649	For	_	_	_	
+17-2	1650-1660	dielectric	_	_	_	
+17-3	1661-1673	measurements	_	_	_	
+17-4	1673-1674	,	_	_	_	
+17-5	1675-1681	silver	_	_	_	
+17-6	1682-1687	paste	_	_	_	
+17-7	1688-1691	was	_	_	_	
+17-8	1692-1696	used	_	_	_	
+17-9	1697-1699	to	_	_	_	
+17-10	1700-1704	make	_	_	_	
+17-11	1705-1713	contacts	_	_	_	
+17-12	1714-1718	onto	_	_	_	
+17-13	1719-1730	disc-shaped	_	_	_	
+17-14	1731-1738	ceramic	_	_	_	
+17-15	1739-1746	samples	_	_	_	
+17-16	1747-1749	of	_	_	_	
+17-17	1750-1751	5	_	_	_	
+17-18	1752-1754	mm	_	_	_	
+17-19	1755-1763	diameter	_	_	_	
+17-20	1764-1767	and	_	_	_	
+17-21	1768-1771	0.5	_	_	_	
+17-22	1772-1774	mm	_	_	_	
+17-23	1775-1784	thickness	_	_	_	
+17-24	1784-1785	.	_	_	_	

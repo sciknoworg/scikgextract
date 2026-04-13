@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PcMSP Materials Science Procedural Text",
+  "description": "Schema for materials synthesis procedure extraction from scientific literature, based on the PcMSP (Procedural text in Materials Science Papers) dataset. Captures entities involved in synthesis processes and their relationships.",
+  "type": "object",
+  "properties": {
+    "entities": {
+      "type": "object",
+      "description": "Named entities extracted from the text.",
+      "properties": {
+        "materials": {
+          "type": "array",
+          "description": "Materials mentioned in the text, each with a subtype.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The material mention text (e.g., Li1.1Cu0.9S, CuS)."
+              },
+              "subtype": {
+                "type": "string",
+                "enum": ["Material-target", "Material-recipe", "Material-intermedium", "Material-others"],
+                "description": "Material subtype: target (final product), recipe (starting material), intermedium (intermediate product), or others."
+              }
+            },
+            "required": ["text", "subtype"],
+            "additionalProperties": false
+          }
+        },
+        "operations": {
+          "type": "array",
+          "description": "Synthesis operations or process steps (e.g., obtained, pressed, annealed).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "descriptors": {
+          "type": "array",
+          "description": "Qualitative descriptors of entities (e.g., polycrystalline, anhydrous, powder).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "values": {
+          "type": "array",
+          "description": "Quantitative values with units (e.g., 99.999%, 14 mm, 1 : 1 stoichiometry).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "properties": {
+          "type": "array",
+          "description": "Measured properties, each with a subtype.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The property mention text (e.g., 900 °C, 10 h, 5 MPa)."
+              },
+              "subtype": {
+                "type": "string",
+                "enum": ["Property-temperature", "Property-time", "Property-pressure", "Property-rate"],
+                "description": "Property subtype."
+              }
+            },
+            "required": ["text", "subtype"],
+            "additionalProperties": false
+          }
+        },
+        "devices": {
+          "type": "array",
+          "description": "Equipment or apparatus used (e.g., Al2O3 tubes, furnace).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "brands": {
+          "type": "array",
+          "description": "Manufacturer or supplier names (e.g., Sigma Aldrich).",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["materials", "operations", "descriptors", "values", "properties", "devices", "brands"],
+      "additionalProperties": false
+    },
+    "relations": {
+      "type": "array",
+      "description": "Typed directed relations between entities.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Descriptor-of",
+              "Value-of",
+              "Brand-of",
+              "Condition-of",
+              "Participant-material",
+              "Device-of-operation",
+              "Next-operation",
+              "Coreference"
+            ],
+            "description": "The relation type linking source to target."
+          },
+          "source": {
+            "type": "string",
+            "description": "The source entity text."
+          },
+          "target": {
+            "type": "string",
+            "description": "The target entity text."
+          }
+        },
+        "required": ["type", "source", "target"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["entities", "relations"],
+  "additionalProperties": false
+}

@@ -1,0 +1,122 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Preparation of Polycrystalline MnPt5As.
+1-1	0-11	Preparation	_	_	_	
+1-2	12-14	of	_	_	_	
+1-3	15-30	Polycrystalline	Descriptor	_	_	
+1-4	31-38	MnPt5As	Material-target	Descriptor-of	1-3	
+1-5	38-39	.	_	_	_	
+
+#Text=Polycrystalline MnPt5As was synthesized by the high-temperature solid-state method.
+2-1	40-55	Polycrystalline	Descriptor	_	_	
+2-2	56-63	MnPt5As	Material-target	Descriptor-of	2-1	
+2-3	64-67	was	_	_	_	
+2-4	68-79	synthesized	Operation	Participant-material|Coreference	2-2|2-8[1_0]	
+2-5	80-82	by	_	_	_	
+2-6	83-86	the	_	_	_	
+2-7	87-103	high-temperature	Property-temperature	_	_	
+2-8	104-115	solid-state	Operation[1]	Condition-of	2-7[0_1]	
+2-9	116-122	method	Operation[1]	_	_	
+2-10	122-123	.	_	_	_	
+
+#Text=Mn powder, Pt powder, and As powder were evenly mixed and pelletized in an argon-filled glovebox due to the toxicity of arsenic.41
+3-1	124-126	Mn	Material-recipe	Descriptor-of	3-2	
+3-2	127-133	powder	Descriptor	_	_	
+3-3	133-134	,	_	_	_	
+3-4	135-137	Pt	Material-recipe	Descriptor-of	3-5	
+3-5	138-144	powder	Descriptor	_	_	
+3-6	144-145	,	_	_	_	
+3-7	146-149	and	_	_	_	
+3-8	150-152	As	Material-recipe	Descriptor-of	3-9	
+3-9	153-159	powder	Descriptor	_	_	
+3-10	160-164	were	_	_	_	
+3-11	165-171	evenly	Descriptor	_	_	
+3-12	172-177	mixed	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Next-operation	3-11|3-1|3-4|3-8|3-14	
+3-13	178-181	and	_	_	_	
+3-14	182-192	pelletized	Operation	Condition-of|Device-of-operation	3-17|3-18	
+3-15	193-195	in	_	_	_	
+3-16	196-198	an	Value	_	_	
+3-17	199-211	argon-filled	Property-pressure	_	_	
+3-18	212-220	glovebox	Device	Value-of	3-16	
+3-19	221-224	due	_	_	_	
+3-20	225-227	to	_	_	_	
+3-21	228-231	the	_	_	_	
+3-22	232-240	toxicity	_	_	_	
+3-23	241-243	of	_	_	_	
+3-24	244-251	arsenic	_	_	_	
+3-25	251-254	.41	_	_	_	
+
+#Text=The obtained pellet was placed in an alumina crucible and sealed into an evacuated silica tube (<10−5 torr).
+4-1	255-258	The	_	_	_	
+4-2	259-267	obtained	Descriptor	_	_	
+4-3	268-274	pellet	Material-intermedium	Descriptor-of	4-2	
+4-4	275-278	was	_	_	_	
+4-5	279-285	placed	Operation	Device-of-operation|Participant-material|Next-operation	4-9|4-3|4-11	
+4-6	286-288	in	_	_	_	
+4-7	289-291	an	Value	_	_	
+4-8	292-299	alumina	Descriptor	_	_	
+4-9	300-308	crucible	Device	Descriptor-of|Value-of	4-8|4-7	
+4-10	309-312	and	_	_	_	
+4-11	313-319	sealed	Operation	Device-of-operation	4-16	
+4-12	320-324	into	_	_	_	
+4-13	325-327	an	Value	_	_	
+4-14	328-337	evacuated	Descriptor	_	_	
+4-15	338-344	silica	Descriptor	_	_	
+4-16	345-349	tube	Device	Descriptor-of|Value-of|Descriptor-of|Condition-of	4-15|4-13|4-14|4-18[2_0]	
+4-17	350-351	(	_	_	_	
+4-18	351-352	<	Property-pressure[2]	_	_	
+4-19	352-354	10	Property-pressure[2]	_	_	
+4-20	354-355	−	Property-pressure[2]	_	_	
+4-21	355-356	5	Property-pressure[2]	_	_	
+4-22	357-361	torr	Property-pressure[2]	_	_	
+4-23	361-362	)	_	_	_	
+4-24	362-363	.	_	_	_	
+
+#Text=The sample was heated up to 1050 °C at a rate of 30 °C/h and held for 2 days, followed by cooling to room temperature in 5 days.
+5-1	364-367	The	_	_	_	
+5-2	368-374	sample	Material-intermedium	_	_	
+5-3	375-378	was	_	_	_	
+5-4	379-385	heated	Operation	Condition-of|Participant-material|Condition-of|Next-operation	5-7[3_0]|5-2|5-14[4_0]|5-20	
+5-5	386-388	up	_	_	_	
+5-6	389-391	to	_	_	_	
+5-7	392-396	1050	Property-temperature[3]	_	_	
+5-8	397-398	°	Property-temperature[3]	_	_	
+5-9	398-399	C	Property-temperature[3]	_	_	
+5-10	400-402	at	_	_	_	
+5-11	403-404	a	_	_	_	
+5-12	405-409	rate	Property-rate	_	_	
+5-13	410-412	of	_	_	_	
+5-14	413-415	30	Property-rate[4]	Coreference	5-12[0_4]	
+5-15	416-417	°	Property-rate[4]	_	_	
+5-16	417-418	C	Property-rate[4]	_	_	
+5-17	418-419	/	Property-rate[4]	_	_	
+5-18	419-420	h	Property-rate[4]	_	_	
+5-19	421-424	and	_	_	_	
+5-20	425-429	held	Operation	Condition-of|Condition-of|Next-operation	5-22[5_0]|5-7[3_0]|5-27	
+5-21	430-433	for	_	_	_	
+5-22	434-435	2	Property-time[5]	_	_	
+5-23	436-440	days	Property-time[5]	_	_	
+5-24	440-441	,	_	_	_	
+5-25	442-450	followed	_	_	_	
+5-26	451-453	by	_	_	_	
+5-27	454-461	cooling	Operation	Condition-of|Condition-of	5-29[6_0]|5-32[7_0]	
+5-28	462-464	to	_	_	_	
+5-29	465-469	room	Property-temperature[6]	_	_	
+5-30	470-481	temperature	Property-temperature[6]	_	_	
+5-31	482-484	in	_	_	_	
+5-32	485-486	5	Property-time[7]	_	_	
+5-33	487-491	days	Property-time[7]	_	_	
+5-34	491-492	.	_	_	_	
+
+#Text=The polycrystalline product is air and moisture stable
+6-1	493-496	The	_	_	_	
+6-2	497-512	polycrystalline	_	_	_	
+6-3	513-520	product	_	_	_	
+6-4	521-523	is	_	_	_	
+6-5	524-527	air	_	_	_	
+6-6	528-531	and	_	_	_	
+6-7	532-540	moisture	_	_	_	
+6-8	541-547	stable	_	_	_	

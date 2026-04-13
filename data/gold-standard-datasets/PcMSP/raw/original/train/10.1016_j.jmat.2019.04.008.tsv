@@ -1,0 +1,167 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline n-type YbxCo4Sb12 ingots were synthesized by the melting and annealing method.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-22	n-type	Descriptor	_	_	
+1-3	23-33	YbxCo4Sb12	Material-target	Descriptor-of|Descriptor-of|Descriptor-of	1-4|1-2|1-1	
+1-4	34-40	ingots	Descriptor	_	_	
+1-5	41-45	were	_	_	_	
+1-6	46-57	synthesized	Operation	Coreference|Participant-material	1-9[1_0]|1-3	
+1-7	58-60	by	_	_	_	
+1-8	61-64	the	_	_	_	
+1-9	65-72	melting	Operation[1]	_	_	
+1-10	73-76	and	Operation[1]	_	_	
+1-11	77-86	annealing	Operation[1]	_	_	
+1-12	87-93	method	Operation[1]	_	_	
+1-13	93-94	.	_	_	_	
+
+#Text=Co shot (99.8%, Alfa Aesar), Sb shot (99.999%, Chengdu Chemphys Chemical Industry, China) and Yb shot (99.9%, Alfa Aesar) were stoichiometrically weighed and put into a graphite crucible, and then sealed within a quartz tube under vacuum.
+2-1	95-97	Co	Material-recipe	Descriptor-of|Value-of|Brand-of	2-2|2-4|2-6[2_0]	
+2-2	98-102	shot	Descriptor	_	_	
+2-3	103-104	(	_	_	_	
+2-4	104-109	99.8%	Value	_	_	
+2-5	109-110	,	_	_	_	
+2-6	111-115	Alfa	Brand[2]	_	_	
+2-7	116-121	Aesar	Brand[2]	_	_	
+2-8	121-122	)	_	_	_	
+2-9	122-123	,	_	_	_	
+2-10	124-126	Sb	Material-recipe	Descriptor-of|Value-of|Brand-of	2-11|2-13|2-15[3_0]	
+2-11	127-131	shot	Descriptor	_	_	
+2-12	132-133	(	_	_	_	
+2-13	133-140	99.999%	Value	_	_	
+2-14	140-141	,	_	_	_	
+2-15	142-149	Chengdu	Brand[3]	_	_	
+2-16	150-158	Chemphys	Brand[3]	_	_	
+2-17	159-167	Chemical	Brand[3]	_	_	
+2-18	168-176	Industry	Brand[3]	_	_	
+2-19	176-177	,	Brand[3]	_	_	
+2-20	178-183	China	Brand[3]	_	_	
+2-21	183-184	)	_	_	_	
+2-22	185-188	and	_	_	_	
+2-23	189-191	Yb	Material-recipe	Descriptor-of|Value-of|Brand-of	2-24|2-26|2-28[4_0]	
+2-24	192-196	shot	Descriptor	_	_	
+2-25	197-198	(	_	_	_	
+2-26	198-203	99.9%	Value	_	_	
+2-27	203-204	,	_	_	_	
+2-28	205-209	Alfa	Brand[4]	_	_	
+2-29	210-215	Aesar	Brand[4]	_	_	
+2-30	215-216	)	_	_	_	
+2-31	217-221	were	_	_	_	
+2-32	222-240	stoichiometrically	Descriptor	_	_	
+2-33	241-248	weighed	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Next-operation	2-32|2-1|2-10|2-23|2-35[5_0]	
+2-34	249-252	and	_	_	_	
+2-35	253-256	put	Operation[5]	Device-of-operation|Next-operation	2-39[0_5]|2-43[0_5]	
+2-36	257-261	into	Operation[5]	_	_	
+2-37	262-263	a	Value	_	_	
+2-38	264-272	graphite	Descriptor	_	_	
+2-39	273-281	crucible	Device	Descriptor-of|Value-of	2-38|2-37	
+2-40	281-282	,	_	_	_	
+2-41	283-286	and	_	_	_	
+2-42	287-291	then	_	_	_	
+2-43	292-298	sealed	Operation	Device-of-operation|Condition-of	2-47|2-49	
+2-44	299-305	within	_	_	_	
+2-45	306-307	a	Value	_	_	
+2-46	308-314	quartz	Descriptor	_	_	
+2-47	315-319	tube	Device	Descriptor-of|Value-of	2-46|2-45	
+2-48	320-325	under	_	_	_	
+2-49	326-332	vacuum	Property-pressure	_	_	
+2-50	332-333	.	_	_	_	
+
+#Text=The sealed quartz tube was put into a vertical tube furnace and heated to 1080 °C for 24 h and then quenched in a supersaturated salt water solution.
+3-1	334-337	The	_	_	_	
+3-2	338-344	sealed	Descriptor	_	_	
+3-3	345-351	quartz	Descriptor	_	_	
+3-4	352-356	tube	Device	Descriptor-of|Descriptor-of	3-2|3-3	
+3-5	357-360	was	_	_	_	
+3-6	361-364	put	Operation	Participant-material|Device-of-operation|Next-operation	3-4|3-11|3-13	
+3-7	365-369	into	_	_	_	
+3-8	370-371	a	Value	_	_	
+3-9	372-380	vertical	Descriptor[6]	_	_	
+3-10	381-385	tube	Descriptor[6]	_	_	
+3-11	386-393	furnace	Device	Descriptor-of|Value-of	3-9[6_0]|3-8	
+3-12	394-397	and	_	_	_	
+3-13	398-404	heated	Operation	Condition-of|Condition-of|Next-operation	3-15[7_0]|3-20[8_0]|3-25	
+3-14	405-407	to	_	_	_	
+3-15	408-412	1080	Property-temperature[7]	_	_	
+3-16	412-413	 	Property-temperature[7]	_	_	
+3-17	413-414	°	Property-temperature[7]	_	_	
+3-18	414-415	C	Property-temperature[7]	_	_	
+3-19	416-419	for	_	_	_	
+3-20	420-422	24	Property-time[8]	_	_	
+3-21	422-423	 	Property-time[8]	_	_	
+3-22	423-424	h	Property-time[8]	_	_	
+3-23	425-428	and	_	_	_	
+3-24	429-433	then	_	_	_	
+3-25	434-442	quenched	Operation	Participant-material	3-29[9_0]	
+3-26	443-445	in	_	_	_	
+3-27	446-447	a	Value	_	_	
+3-28	448-462	supersaturated	Descriptor	_	_	
+3-29	463-467	salt	Material-others[9]	Descriptor-of|Value-of	3-28[0_9]|3-27[0_9]	
+3-30	468-473	water	Material-others[9]	_	_	
+3-31	474-482	solution	Material-others[9]	_	_	
+3-32	482-483	.	_	_	_	
+
+#Text=Then, the quenched quartz tube was annealed at 700 °C for 168 h to form the stable crystallographic phase.
+4-1	484-488	Then	_	_	_	
+4-2	488-489	,	_	_	_	
+4-3	490-493	the	_	_	_	
+4-4	494-502	quenched	Descriptor	_	_	
+4-5	503-509	quartz	Descriptor	_	_	
+4-6	510-514	tube	Device	Descriptor-of|Descriptor-of	4-5|4-4	
+4-7	515-518	was	_	_	_	
+4-8	519-527	annealed	Operation	Condition-of|Condition-of|Participant-material	4-10[10_0]|4-15[11_0]|4-6	
+4-9	528-530	at	_	_	_	
+4-10	531-534	700	Property-temperature[10]	_	_	
+4-11	534-535	 	Property-temperature[10]	_	_	
+4-12	535-536	°	Property-temperature[10]	_	_	
+4-13	536-537	C	Property-temperature[10]	_	_	
+4-14	538-541	for	_	_	_	
+4-15	542-545	168	Property-time[11]	_	_	
+4-16	545-546	 	Property-time[11]	_	_	
+4-17	546-547	h	Property-time[11]	_	_	
+4-18	548-550	to	_	_	_	
+4-19	551-555	form	_	_	_	
+4-20	556-559	the	_	_	_	
+4-21	560-566	stable	_	_	_	
+4-22	567-583	crystallographic	_	_	_	
+4-23	584-589	phase	_	_	_	
+4-24	589-590	.	_	_	_	
+
+#Text=The obtained ingots were then cleaned, crushed into coarse particles and milled by hand into powders in an agate mortar.
+5-1	591-594	The	_	_	_	
+5-2	595-603	obtained	Descriptor	_	_	
+5-3	604-610	ingots	Material-intermedium	Descriptor-of	5-2	
+5-4	611-615	were	_	_	_	
+5-5	616-620	then	_	_	_	
+5-6	621-628	cleaned	Operation	Participant-material|Next-operation	5-3|5-8	
+5-7	628-629	,	_	_	_	
+5-8	630-637	crushed	Operation	Next-operation	5-13	
+5-9	638-642	into	_	_	_	
+5-10	643-649	coarse	Descriptor	_	_	
+5-11	650-659	particles	Material-intermedium	Descriptor-of	5-10	
+5-12	660-663	and	_	_	_	
+5-13	664-670	milled	Operation	Descriptor-of|Participant-material	5-14[12_0]|5-11	
+5-14	671-673	by	Descriptor[12]	Device-of-operation	5-21[0_12]	
+5-15	674-678	hand	Descriptor[12]	_	_	
+5-16	679-683	into	_	_	_	
+5-17	684-691	powders	Material-intermedium	_	_	
+5-18	692-694	in	_	_	_	
+5-19	695-697	an	Value	_	_	
+5-20	698-703	agate	Descriptor	_	_	
+5-21	704-710	mortar	Device	Descriptor-of|Value-of	5-20|5-19	
+5-22	710-711	.	_	_	_	
+
+#Text=The hand-milled powders were used as the starting material.
+6-1	712-715	The	_	_	_	
+6-2	716-727	hand-milled	Descriptor	_	_	
+6-3	728-735	powders	Material-intermedium	Descriptor-of|Descriptor-of	6-8[13_0]|6-2	
+6-4	736-740	were	_	_	_	
+6-5	741-745	used	Operation	Participant-material	6-3	
+6-6	746-748	as	_	_	_	
+6-7	749-752	the	_	_	_	
+6-8	753-761	starting	Descriptor[13]	_	_	
+6-9	762-770	material	Descriptor[13]	_	_	
+6-10	770-771	.	_	_	_	

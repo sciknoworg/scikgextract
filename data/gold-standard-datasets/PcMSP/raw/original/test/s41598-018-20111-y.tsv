@@ -1,0 +1,142 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline SnSe2−δF x (0.000 ≤ x ≤ 0.010) in the form of sintered pellets were synthesized by solid-state reaction.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-21	SnSe2	Material-target[1]	Descriptor-of|Value-of|Descriptor-of	1-1[0_1]|1-7[2_1]|1-17[3_1]	
+1-3	21-22	−	Material-target[1]	_	_	
+1-4	22-24	δF	Material-target[1]	_	_	
+1-5	25-26	x	Material-target[1]	_	_	
+1-6	27-28	(	_	_	_	
+1-7	28-33	0.000	Value[2]	_	_	
+1-8	34-35	≤	Value[2]	_	_	
+1-9	36-37	x	Value[2]	_	_	
+1-10	38-39	≤	Value[2]	_	_	
+1-11	40-45	0.010	Value[2]	_	_	
+1-12	45-46	)	_	_	_	
+1-13	47-49	in	_	_	_	
+1-14	50-53	the	_	_	_	
+1-15	54-58	form	_	_	_	
+1-16	59-61	of	_	_	_	
+1-17	62-70	sintered	Descriptor[3]	_	_	
+1-18	71-78	pellets	Descriptor[3]	_	_	
+1-19	79-83	were	_	_	_	
+1-20	84-95	synthesized	Operation	Coreference|Participant-material	1-22[4_0]|1-2[1_0]	
+1-21	96-98	by	_	_	_	
+1-22	99-110	solid-state	Operation[4]	_	_	
+1-23	111-119	reaction	Operation[4]	_	_	
+1-24	119-120	.	_	_	_	
+
+#Text=Stoichiometric amounts of Sn, Se and anhydrous SnF2 powders were mixed:  (2−𝑥)Sn+𝑥SnF2+2(2−𝑥)Se→2SnSe2−𝑥F𝑥.
+2-1	121-135	Stoichiometric	Value[5]	_	_	
+2-2	136-143	amounts	Value[5]	_	_	
+2-3	144-146	of	_	_	_	
+2-4	147-149	Sn	Material-recipe	Value-of	2-1[5_0]	
+2-5	149-150	,	_	_	_	
+2-6	151-153	Se	Material-recipe	Value-of	2-1[5_0]	
+2-7	154-157	and	_	_	_	
+2-8	158-167	anhydrous	Descriptor	_	_	
+2-9	168-172	SnF2	Material-recipe	Descriptor-of|Descriptor-of|Value-of	2-10|2-8|2-1[5_0]	
+2-10	173-180	powders	Descriptor	_	_	
+2-11	181-185	were	_	_	_	
+2-12	186-191	mixed	Operation	Participant-material|Participant-material|Participant-material	2-4|2-6|2-9	
+2-13	191-192	:	_	_	_	
+2-14	194-195	(	Material-recipe[6]	_	_	
+2-15	195-196	2	Material-recipe[6]	_	_	
+2-16	196-197	−	Material-recipe[6]	_	_	
+2-17	197-199	𝑥	Material-recipe[6]	_	_	
+2-18	199-200	)	Material-recipe[6]	_	_	
+2-19	200-202	Sn	Material-recipe[6]	_	_	
+2-20	202-203	+	_	_	_	
+2-21	203-209	𝑥SnF2	Material-recipe	_	_	
+2-22	209-210	+	_	_	_	
+2-23	210-211	2	Material-recipe[7]	_	_	
+2-24	211-212	(	Material-recipe[7]	_	_	
+2-25	212-213	2	Material-recipe[7]	_	_	
+2-26	213-214	−	Material-recipe[7]	_	_	
+2-27	214-216	𝑥	Material-recipe[7]	_	_	
+2-28	216-217	)	Material-recipe[7]	_	_	
+2-29	217-219	Se	Material-recipe[7]	_	_	
+2-30	219-220	→	_	_	_	
+2-31	220-226	2SnSe2	Material-intermedium	_	_	
+2-32	226-227	−	_	_	_	
+2-33	227-232	𝑥F𝑥	Material-intermedium	_	_	
+2-34	232-233	.	_	_	_	
+
+#Text=Mixed precursors were sealed under vacuum in the silica tubes.
+3-1	234-239	Mixed	Material-intermedium[8]	_	_	
+3-2	240-250	precursors	Material-intermedium[8]	_	_	
+3-3	251-255	were	_	_	_	
+3-4	256-262	sealed	Operation	Participant-material|Condition-of|Device-of-operation	3-1[8_0]|3-6|3-10	
+3-5	263-268	under	_	_	_	
+3-6	269-275	vacuum	Property-pressure	_	_	
+3-7	276-278	in	_	_	_	
+3-8	279-282	the	_	_	_	
+3-9	283-289	silica	Descriptor	_	_	
+3-10	290-295	tubes	Device	Descriptor-of	3-9	
+3-11	295-296	.	_	_	_	
+
+#Text=The reaction was performed by two-step process: the mixed precursors were heated at 400 °C for 48 hours and followed by heating of the pelletized sample at 500 °C for another 48 hours with additional grinding.
+4-1	297-300	The	_	_	_	
+4-2	301-309	reaction	Operation	_	_	
+4-3	310-313	was	_	_	_	
+4-4	314-323	performed	_	_	_	
+4-5	324-326	by	_	_	_	
+4-6	327-335	two-step	Operation[9]	Coreference|Coreference	4-2[0_9]|4-13[0_9]	
+4-7	336-343	process	Operation[9]	_	_	
+4-8	343-344	:	_	_	_	
+4-9	345-348	the	_	_	_	
+4-10	349-354	mixed	Material-intermedium[10]	_	_	
+4-11	355-365	precursors	Material-intermedium[10]	_	_	
+4-12	366-370	were	_	_	_	
+4-13	371-377	heated	Operation	Participant-material|Condition-of|Condition-of|Next-operation	4-10[10_0]|4-15[11_0]|4-19[12_0]|4-24	
+4-14	378-380	at	_	_	_	
+4-15	381-384	400	Property-temperature[11]	_	_	
+4-16	385-386	°	Property-temperature[11]	_	_	
+4-17	386-387	C	Property-temperature[11]	_	_	
+4-18	388-391	for	_	_	_	
+4-19	392-394	48	Property-time[12]	_	_	
+4-20	395-400	hours	Property-time[12]	_	_	
+4-21	401-404	and	_	_	_	
+4-22	405-413	followed	_	_	_	
+4-23	414-416	by	_	_	_	
+4-24	417-424	heating	Operation	Participant-material|Condition-of|Condition-of|Next-operation	4-27[13_0]|4-30[14_0]|4-34[15_0]|4-38[16_0]	
+4-25	425-427	of	_	_	_	
+4-26	428-431	the	_	_	_	
+4-27	432-442	pelletized	Material-intermedium[13]	_	_	
+4-28	443-449	sample	Material-intermedium[13]	_	_	
+4-29	450-452	at	_	_	_	
+4-30	453-456	500	Property-temperature[14]	_	_	
+4-31	457-458	°	Property-temperature[14]	_	_	
+4-32	458-459	C	Property-temperature[14]	_	_	
+4-33	460-463	for	_	_	_	
+4-34	464-471	another	Property-time[15]	_	_	
+4-35	472-474	48	Property-time[15]	_	_	
+4-36	475-480	hours	Property-time[15]	_	_	
+4-37	481-485	with	_	_	_	
+4-38	486-496	additional	Operation[16]	_	_	
+4-39	497-505	grinding	Operation[16]	_	_	
+4-40	505-506	.	_	_	_	
+
+#Text=To prevent the vaporization of the F, samples were slowly heated at 10 °C/hour.
+5-1	507-509	To	_	_	_	
+5-2	510-517	prevent	_	_	_	
+5-3	518-521	the	_	_	_	
+5-4	522-534	vaporization	_	_	_	
+5-5	535-537	of	_	_	_	
+5-6	538-541	the	_	_	_	
+5-7	542-543	F	_	_	_	
+5-8	543-544	,	_	_	_	
+5-9	545-552	samples	Material-intermedium	_	_	
+5-10	553-557	were	_	_	_	
+5-11	558-564	slowly	Operation[17]	Participant-material|Condition-of	5-9[0_17]|5-14[18_17]	
+5-12	565-571	heated	Operation[17]	_	_	
+5-13	572-574	at	_	_	_	
+5-14	575-577	10	Property-rate[18]	_	_	
+5-15	578-579	°	Property-rate[18]	_	_	
+5-16	579-580	C	Property-rate[18]	_	_	
+5-17	580-581	/	Property-rate[18]	_	_	
+5-18	581-585	hour	Property-rate[18]	_	_	
+5-19	585-586	.	_	_	_	

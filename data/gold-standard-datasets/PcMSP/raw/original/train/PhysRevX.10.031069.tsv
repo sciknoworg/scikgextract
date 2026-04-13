@@ -1,0 +1,424 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Two different polycrystalline samples of Ho3Mg2Sb3O14
+#Text=were prepared for this study, the first using a traditional
+#Text=solid state reaction method (referred to as SS sample),
+#Text=and the second using a sol-gel method (referred to as SG
+#Text=sample).
+1-1	0-3	Two	_	_	_	
+1-2	4-13	different	_	_	_	
+1-3	14-29	polycrystalline	Descriptor	_	_	
+1-4	30-37	samples	_	_	_	
+1-5	38-40	of	_	_	_	
+1-6	41-53	Ho3Mg2Sb3O14	Material-target	Descriptor-of	1-3	
+1-7	54-58	were	_	_	_	
+1-8	59-67	prepared	Operation	Coreference|Participant-material	1-18[1_0]|1-6	
+1-9	68-71	for	_	_	_	
+1-10	72-76	this	_	_	_	
+1-11	77-82	study	_	_	_	
+1-12	82-83	,	_	_	_	
+1-13	84-87	the	_	_	_	
+1-14	88-93	first	_	_	_	
+1-15	94-99	using	_	_	_	
+1-16	100-101	a	_	_	_	
+1-17	102-113	traditional	_	_	_	
+1-18	114-119	solid	Operation[1]	_	_	
+1-19	120-125	state	Operation[1]	_	_	
+1-20	126-134	reaction	Operation[1]	_	_	
+1-21	135-141	method	Operation[1]	_	_	
+1-22	142-143	(	_	_	_	
+1-23	143-151	referred	_	_	_	
+1-24	152-154	to	_	_	_	
+1-25	155-157	as	_	_	_	
+1-26	158-160	SS	Material-target[2]	Coreference	1-6[0_2]	
+1-27	161-167	sample	Material-target[2]	_	_	
+1-28	167-168	)	_	_	_	
+1-29	168-169	,	_	_	_	
+1-30	170-173	and	_	_	_	
+1-31	174-177	the	_	_	_	
+1-32	178-184	second	_	_	_	
+1-33	185-190	using	_	_	_	
+1-34	191-192	a	_	_	_	
+1-35	193-200	sol-gel	_	_	_	
+1-36	201-207	method	_	_	_	
+1-37	208-209	(	_	_	_	
+1-38	209-217	referred	_	_	_	
+1-39	218-220	to	_	_	_	
+1-40	221-223	as	_	_	_	
+1-41	224-226	SG	_	_	_	
+1-42	227-233	sample	_	_	_	
+1-43	233-234	)	_	_	_	
+1-44	234-235	.	_	_	_	
+
+#Text=For the SS sample, stoichiometric ratios of Ho2O3
+#Text=(99.9%), MgO (99.99%), and Sb2O3 (99.99%) fine powder
+#Text=were carefully ground and reacted at a temperature of
+#Text=1350 °C in air for 24 h.
+2-1	236-239	For	_	_	_	
+2-2	240-243	the	_	_	_	
+2-3	244-246	SS	Material-target[3]	_	_	
+2-4	247-253	sample	Material-target[3]	_	_	
+2-5	253-254	,	_	_	_	
+2-6	255-269	stoichiometric	Value[4]	_	_	
+2-7	270-276	ratios	Value[4]	_	_	
+2-8	277-279	of	_	_	_	
+2-9	280-285	Ho2O3	Material-recipe	Value-of|Value-of|Descriptor-of|Descriptor-of	2-6[4_0]|2-11|2-24|2-25	
+2-10	286-287	(	_	_	_	
+2-11	287-292	99.9%	Value	_	_	
+2-12	292-293	)	_	_	_	
+2-13	293-294	,	_	_	_	
+2-14	295-298	MgO	Material-recipe	Value-of|Value-of|Descriptor-of|Descriptor-of	2-6[4_0]|2-16|2-24|2-25	
+2-15	299-300	(	_	_	_	
+2-16	300-306	99.99%	Value	_	_	
+2-17	306-307	)	_	_	_	
+2-18	307-308	,	_	_	_	
+2-19	309-312	and	_	_	_	
+2-20	313-318	Sb2O3	Material-recipe	Value-of|Value-of|Descriptor-of|Descriptor-of	2-6[4_0]|2-22|2-25|2-24	
+2-21	319-320	(	_	_	_	
+2-22	320-326	99.99%	Value	_	_	
+2-23	326-327	)	_	_	_	
+2-24	328-332	fine	Descriptor	_	_	
+2-25	333-339	powder	Descriptor	_	_	
+2-26	340-344	were	_	_	_	
+2-27	345-354	carefully	_	_	_	
+2-28	355-361	ground	Operation	Participant-material|Participant-material|Participant-material	2-9|2-14|2-20	
+2-29	362-365	and	_	_	_	
+2-30	366-373	reacted	Operation	Next-operation|Condition-of|Condition-of|Condition-of|Participant-material	2-28|2-35[5_0]|2-38[6_0]|2-41[7_0]|2-3[3_0]	
+2-31	374-376	at	_	_	_	
+2-32	377-378	a	_	_	_	
+2-33	379-390	temperature	Property-temperature	_	_	
+2-34	391-393	of	_	_	_	
+2-35	394-398	1350	Property-temperature[5]	Coreference	2-33[0_5]	
+2-36	399-400	°	Property-temperature[5]	_	_	
+2-37	400-401	C	Property-temperature[5]	_	_	
+2-38	402-404	in	Property-pressure[6]	_	_	
+2-39	405-408	air	Property-pressure[6]	_	_	
+2-40	409-412	for	_	_	_	
+2-41	413-415	24	Property-time[7]	_	_	
+2-42	416-417	h	Property-time[7]	_	_	
+2-43	417-418	.	_	_	_	
+
+#Text=This heating step was repeated until
+#Text=the amount of impurity phases as determined by x-ray
+#Text=diffraction was not reduced further.
+3-1	419-423	This	_	_	_	
+3-2	424-431	heating	Operation[8]	Descriptor-of|Descriptor-of	3-5[0_8]|3-6[9_8]	
+3-3	432-436	step	Operation[8]	_	_	
+3-4	437-440	was	_	_	_	
+3-5	441-449	repeated	Descriptor	_	_	
+3-6	450-455	until	Descriptor[9]	_	_	
+3-7	456-459	the	Descriptor[9]	_	_	
+3-8	460-466	amount	Descriptor[9]	_	_	
+3-9	467-469	of	Descriptor[9]	_	_	
+3-10	470-478	impurity	Descriptor[9]	_	_	
+3-11	479-485	phases	Descriptor[9]	_	_	
+3-12	486-488	as	_	_	_	
+3-13	489-499	determined	_	_	_	
+3-14	500-502	by	_	_	_	
+3-15	503-508	x-ray	_	_	_	
+3-16	509-520	diffraction	_	_	_	
+3-17	521-524	was	Descriptor[10]	Coreference	3-6[9_10]	
+3-18	525-528	not	Descriptor[10]	_	_	
+3-19	529-536	reduced	Descriptor[10]	_	_	
+3-20	537-544	further	Descriptor[10]	_	_	
+3-21	544-545	.	_	_	_	
+
+#Text=The synthesized SS
+#Text=sample contained a small amount of Ho3SbO7 impurity [2.29(18) wt %], which orders antiferromagnetically at
+#Text=TN ¼ 2.07 K [54].
+4-1	546-549	The	_	_	_	
+4-2	550-561	synthesized	_	_	_	
+4-3	562-564	SS	_	_	_	
+4-4	565-571	sample	_	_	_	
+4-5	572-581	contained	_	_	_	
+4-6	582-583	a	_	_	_	
+4-7	584-589	small	_	_	_	
+4-8	590-596	amount	_	_	_	
+4-9	597-599	of	_	_	_	
+4-10	600-607	Ho3SbO7	_	_	_	
+4-11	608-616	impurity	_	_	_	
+4-12	617-618	[	_	_	_	
+4-13	618-622	2.29	_	_	_	
+4-14	622-623	(	_	_	_	
+4-15	623-625	18	_	_	_	
+4-16	625-626	)	_	_	_	
+4-17	627-629	wt	_	_	_	
+4-18	630-631	%	_	_	_	
+4-19	631-632	]	_	_	_	
+4-20	632-633	,	_	_	_	
+4-21	634-639	which	_	_	_	
+4-22	640-646	orders	_	_	_	
+4-23	647-668	antiferromagnetically	_	_	_	
+4-24	669-671	at	_	_	_	
+4-25	672-674	TN	_	_	_	
+4-26	675-676	¼	_	_	_	
+4-27	677-681	2.07	_	_	_	
+4-28	682-683	K	_	_	_	
+4-29	684-685	[	_	_	_	
+4-30	685-687	54	_	_	_	
+4-31	687-688	]	_	_	_	
+4-32	688-689	.	_	_	_	
+
+#Text=This impurity can be removed by the
+#Text=sol-gel synthesis method.
+5-1	690-694	This	_	_	_	
+5-2	695-703	impurity	_	_	_	
+5-3	704-707	can	_	_	_	
+5-4	708-710	be	_	_	_	
+5-5	711-718	removed	_	_	_	
+5-6	719-721	by	_	_	_	
+5-7	722-725	the	_	_	_	
+5-8	726-733	sol-gel	_	_	_	
+5-9	734-743	synthesis	_	_	_	
+5-10	744-750	method	_	_	_	
+5-11	750-751	.	_	_	_	
+
+#Text=For this synthesis, stoichiometric
+#Text=amounts of HoðNO3Þ3, MgðNO3Þ3 (prepared by dissolving
+#Text=Ho2O3 and MgO in hot diluted nitric acid solution) and
+#Text=antimony tartarate (prepared by dissolving Sb2O3 in hot
+#Text=tartaric acid solution) were first mixed in a beaker.
+6-1	752-755	For	_	_	_	
+6-2	756-760	this	_	_	_	
+6-3	761-770	synthesis	_	_	_	
+6-4	770-771	,	_	_	_	
+6-5	772-786	stoichiometric	_	_	_	
+6-6	787-794	amounts	_	_	_	
+6-7	795-797	of	_	_	_	
+6-8	798-806	HoðNO3Þ3	_	_	_	
+6-9	806-807	,	_	_	_	
+6-10	808-816	MgðNO3Þ3	_	_	_	
+6-11	817-818	(	_	_	_	
+6-12	818-826	prepared	_	_	_	
+6-13	827-829	by	_	_	_	
+6-14	830-840	dissolving	_	_	_	
+6-15	841-846	Ho2O3	_	_	_	
+6-16	847-850	and	_	_	_	
+6-17	851-854	MgO	_	_	_	
+6-18	855-857	in	_	_	_	
+6-19	858-861	hot	_	_	_	
+6-20	862-869	diluted	_	_	_	
+6-21	870-876	nitric	_	_	_	
+6-22	877-881	acid	_	_	_	
+6-23	882-890	solution	_	_	_	
+6-24	890-891	)	_	_	_	
+6-25	892-895	and	_	_	_	
+6-26	896-904	antimony	_	_	_	
+6-27	905-914	tartarate	_	_	_	
+6-28	915-916	(	_	_	_	
+6-29	916-924	prepared	_	_	_	
+6-30	925-927	by	_	_	_	
+6-31	928-938	dissolving	_	_	_	
+6-32	939-944	Sb2O3	_	_	_	
+6-33	945-947	in	_	_	_	
+6-34	948-951	hot	_	_	_	
+6-35	952-960	tartaric	_	_	_	
+6-36	961-965	acid	_	_	_	
+6-37	966-974	solution	_	_	_	
+6-38	974-975	)	_	_	_	
+6-39	976-980	were	_	_	_	
+6-40	981-986	first	_	_	_	
+6-41	987-992	mixed	_	_	_	
+6-42	993-995	in	_	_	_	
+6-43	996-997	a	_	_	_	
+6-44	998-1004	beaker	_	_	_	
+6-45	1004-1005	.	_	_	_	
+
+#Text=Citrate
+#Text=acid with a metal-to-citrate molar ratio of 1∶2 was then
+#Text=added to the solution followed by a subsequent heating
+#Text=on a hot plate at 120 °C overnight to remove excessive
+#Text=water.
+7-1	1006-1013	Citrate	_	_	_	
+7-2	1014-1018	acid	_	_	_	
+7-3	1019-1023	with	_	_	_	
+7-4	1024-1025	a	_	_	_	
+7-5	1026-1042	metal-to-citrate	_	_	_	
+7-6	1043-1048	molar	_	_	_	
+7-7	1049-1054	ratio	_	_	_	
+7-8	1055-1057	of	_	_	_	
+7-9	1058-1059	1	_	_	_	
+7-10	1059-1060	∶	_	_	_	
+7-11	1060-1061	2	_	_	_	
+7-12	1062-1065	was	_	_	_	
+7-13	1066-1070	then	_	_	_	
+7-14	1071-1076	added	_	_	_	
+7-15	1077-1079	to	_	_	_	
+7-16	1080-1083	the	_	_	_	
+7-17	1084-1092	solution	_	_	_	
+7-18	1093-1101	followed	_	_	_	
+7-19	1102-1104	by	_	_	_	
+7-20	1105-1106	a	_	_	_	
+7-21	1107-1117	subsequent	_	_	_	
+7-22	1118-1125	heating	_	_	_	
+7-23	1126-1128	on	_	_	_	
+7-24	1129-1130	a	_	_	_	
+7-25	1131-1134	hot	_	_	_	
+7-26	1135-1140	plate	_	_	_	
+7-27	1141-1143	at	_	_	_	
+7-28	1144-1147	120	_	_	_	
+7-29	1148-1149	°	_	_	_	
+7-30	1149-1150	C	_	_	_	
+7-31	1151-1160	overnight	_	_	_	
+7-32	1161-1163	to	_	_	_	
+7-33	1164-1170	remove	_	_	_	
+7-34	1171-1180	excessive	_	_	_	
+7-35	1181-1186	water	_	_	_	
+7-36	1186-1187	.	_	_	_	
+
+#Text=The obtained gel-like solution was slowly heated
+#Text=to 200 °C in a box furnace to decompose the nitrate,
+#Text=and was pyrolyzed at 600 °C for 10–12 h in air.
+8-1	1188-1191	The	_	_	_	
+8-2	1192-1200	obtained	_	_	_	
+8-3	1201-1209	gel-like	_	_	_	
+8-4	1210-1218	solution	_	_	_	
+8-5	1219-1222	was	_	_	_	
+8-6	1223-1229	slowly	_	_	_	
+8-7	1230-1236	heated	_	_	_	
+8-8	1237-1239	to	_	_	_	
+8-9	1240-1243	200	_	_	_	
+8-10	1244-1245	°	_	_	_	
+8-11	1245-1246	C	_	_	_	
+8-12	1247-1249	in	_	_	_	
+8-13	1250-1251	a	_	_	_	
+8-14	1252-1255	box	_	_	_	
+8-15	1256-1263	furnace	_	_	_	
+8-16	1264-1266	to	_	_	_	
+8-17	1267-1276	decompose	_	_	_	
+8-18	1277-1280	the	_	_	_	
+8-19	1281-1288	nitrate	_	_	_	
+8-20	1288-1289	,	_	_	_	
+8-21	1290-1293	and	_	_	_	
+8-22	1294-1297	was	_	_	_	
+8-23	1298-1307	pyrolyzed	_	_	_	
+8-24	1308-1310	at	_	_	_	
+8-25	1311-1314	600	_	_	_	
+8-26	1315-1316	°	_	_	_	
+8-27	1316-1317	C	_	_	_	
+8-28	1318-1321	for	_	_	_	
+8-29	1322-1324	10	_	_	_	
+8-30	1324-1325	–	_	_	_	
+8-31	1325-1327	12	_	_	_	
+8-32	1328-1329	h	_	_	_	
+8-33	1330-1332	in	_	_	_	
+8-34	1333-1336	air	_	_	_	
+8-35	1336-1337	.	_	_	_	
+
+#Text=The
+#Text=obtained powder was then ground, pressed into a pellet, and
+#Text=reheated at 1300 °C until a well-reacted crystalline powder
+#Text=was obtained.
+9-1	1338-1341	The	_	_	_	
+9-2	1342-1350	obtained	_	_	_	
+9-3	1351-1357	powder	_	_	_	
+9-4	1358-1361	was	_	_	_	
+9-5	1362-1366	then	_	_	_	
+9-6	1367-1373	ground	_	_	_	
+9-7	1373-1374	,	_	_	_	
+9-8	1375-1382	pressed	_	_	_	
+9-9	1383-1387	into	_	_	_	
+9-10	1388-1389	a	_	_	_	
+9-11	1390-1396	pellet	_	_	_	
+9-12	1396-1397	,	_	_	_	
+9-13	1398-1401	and	_	_	_	
+9-14	1402-1410	reheated	_	_	_	
+9-15	1411-1413	at	_	_	_	
+9-16	1414-1418	1300	_	_	_	
+9-17	1419-1420	°	_	_	_	
+9-18	1420-1421	C	_	_	_	
+9-19	1422-1427	until	_	_	_	
+9-20	1428-1429	a	_	_	_	
+9-21	1430-1442	well-reacted	_	_	_	
+9-22	1443-1454	crystalline	_	_	_	
+9-23	1455-1461	powder	_	_	_	
+9-24	1462-1465	was	_	_	_	
+9-25	1466-1474	obtained	_	_	_	
+9-26	1474-1475	.	_	_	_	
+
+#Text=Heat-capacity measurements presented
+#Text=below show that the thermomagnetic behavior of the
+#Text=two samples is almost identical, except for a small peak
+#Text=around 2.1 K in the SS sample originating from the
+#Text=Ho3SbO7 impurity.
+10-1	1476-1489	Heat-capacity	_	_	_	
+10-2	1490-1502	measurements	_	_	_	
+10-3	1503-1512	presented	_	_	_	
+10-4	1513-1518	below	_	_	_	
+10-5	1519-1523	show	_	_	_	
+10-6	1524-1528	that	_	_	_	
+10-7	1529-1532	the	_	_	_	
+10-8	1533-1547	thermomagnetic	_	_	_	
+10-9	1548-1556	behavior	_	_	_	
+10-10	1557-1559	of	_	_	_	
+10-11	1560-1563	the	_	_	_	
+10-12	1564-1567	two	_	_	_	
+10-13	1568-1575	samples	_	_	_	
+10-14	1576-1578	is	_	_	_	
+10-15	1579-1585	almost	_	_	_	
+10-16	1586-1595	identical	_	_	_	
+10-17	1595-1596	,	_	_	_	
+10-18	1597-1603	except	_	_	_	
+10-19	1604-1607	for	_	_	_	
+10-20	1608-1609	a	_	_	_	
+10-21	1610-1615	small	_	_	_	
+10-22	1616-1620	peak	_	_	_	
+10-23	1621-1627	around	_	_	_	
+10-24	1628-1631	2.1	_	_	_	
+10-25	1632-1633	K	_	_	_	
+10-26	1634-1636	in	_	_	_	
+10-27	1637-1640	the	_	_	_	
+10-28	1641-1643	SS	_	_	_	
+10-29	1644-1650	sample	_	_	_	
+10-30	1651-1662	originating	_	_	_	
+10-31	1663-1667	from	_	_	_	
+10-32	1668-1671	the	_	_	_	
+10-33	1672-1679	Ho3SbO7	_	_	_	
+10-34	1680-1688	impurity	_	_	_	
+10-35	1688-1689	.	_	_	_	
+
+#Text=A Ho-diluted (La-doped) sample of
+#Text=ðHo0.01La0.99Þ3Mg2Sb3O14 was also synthesized with the
+#Text=same sol-gel technique, with 99% Ho2O3 replaced by
+#Text=La2O3 powder (99.9%, baked at 900 °C overnight
+#Text=before use).
+11-1	1690-1691	A	_	_	_	
+11-2	1692-1702	Ho-diluted	_	_	_	
+11-3	1703-1704	(	_	_	_	
+11-4	1704-1712	La-doped	_	_	_	
+11-5	1712-1713	)	_	_	_	
+11-6	1714-1720	sample	_	_	_	
+11-7	1721-1723	of	_	_	_	
+11-8	1724-1748	ðHo0.01La0.99Þ3Mg2Sb3O14	_	_	_	
+11-9	1749-1752	was	_	_	_	
+11-10	1753-1757	also	_	_	_	
+11-11	1758-1769	synthesized	_	_	_	
+11-12	1770-1774	with	_	_	_	
+11-13	1775-1778	the	_	_	_	
+11-14	1779-1783	same	_	_	_	
+11-15	1784-1791	sol-gel	_	_	_	
+11-16	1792-1801	technique	_	_	_	
+11-17	1801-1802	,	_	_	_	
+11-18	1803-1807	with	_	_	_	
+11-19	1808-1811	99%	_	_	_	
+11-20	1812-1817	Ho2O3	_	_	_	
+11-21	1818-1826	replaced	_	_	_	
+11-22	1827-1829	by	_	_	_	
+11-23	1830-1835	La2O3	_	_	_	
+11-24	1836-1842	powder	_	_	_	
+11-25	1843-1844	(	_	_	_	
+11-26	1844-1849	99.9%	_	_	_	
+11-27	1849-1850	,	_	_	_	
+11-28	1851-1856	baked	_	_	_	
+11-29	1857-1859	at	_	_	_	
+11-30	1860-1863	900	_	_	_	
+11-31	1864-1865	°	_	_	_	
+11-32	1865-1866	C	_	_	_	
+11-33	1867-1876	overnight	_	_	_	
+11-34	1877-1883	before	_	_	_	
+11-35	1884-1887	use	_	_	_	
+11-36	1887-1888	)	_	_	_	
+11-37	1888-1889	.	_	_	_	

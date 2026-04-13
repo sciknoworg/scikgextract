@@ -1,0 +1,146 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline powders of Y3.96Nd0.04Al2O9 (1 at% Nd:Y4Al2O9)\rwere synthesized by using modified sol-gel (Pechini) method as follows: yttrium oxide and neodymium oxide were dissolved in 0.4 mol L\1 solution of acetic acid at 65BC for about 20 h.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	powders	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-43	Y3.96Nd0.04Al2O9	Material-target	Descriptor-of|Descriptor-of	1-1|1-6[1_0]	
+1-5	44-45	(	_	_	_	
+1-6	45-46	1	Descriptor[1]	_	_	
+1-7	47-49	at	Descriptor[1]	_	_	
+1-8	49-50	%	Descriptor[1]	_	_	
+1-9	51-53	Nd	Descriptor[1]	_	_	
+1-10	53-54	:	Descriptor[1]	_	_	
+1-11	54-61	Y4Al2O9	Descriptor[1]	_	_	
+1-12	61-62	)	_	_	_	
+1-13	63-67	were	_	_	_	
+1-14	68-79	synthesized	Operation	Participant-material	1-4	
+1-15	80-82	by	_	_	_	
+1-16	83-88	using	_	_	_	
+1-17	89-97	modified	Operation[2]	Coreference	1-14[0_2]	
+1-18	98-105	sol-gel	Operation[2]	_	_	
+1-19	106-107	(	Operation[2]	_	_	
+1-20	107-114	Pechini	Operation[2]	_	_	
+1-21	114-115	)	Operation[2]	_	_	
+1-22	116-122	method	Operation[2]	_	_	
+1-23	123-125	as	_	_	_	
+1-24	126-133	follows	_	_	_	
+1-25	133-134	:	_	_	_	
+1-26	135-142	yttrium	Material-recipe[3]	_	_	
+1-27	143-148	oxide	Material-recipe[3]	_	_	
+1-28	149-152	and	_	_	_	
+1-29	153-162	neodymium	Material-recipe[4]	_	_	
+1-30	163-168	oxide	Material-recipe[4]	_	_	
+1-31	169-173	were	_	_	_	
+1-32	174-183	dissolved	Operation	Participant-material|Participant-material|Participant-material|Condition-of|Condition-of	1-29[4_0]|1-26[3_0]|1-41[6_0]|1-44|1-46[7_0]	
+1-33	184-186	in	_	_	_	
+1-34	187-190	0.4	Descriptor[5]	_	_	
+1-35	191-194	mol	Descriptor[5]	_	_	
+1-36	195-196	L	Descriptor[5]	_	_	
+1-37	196-197		Descriptor[5]	_	_	
+1-38	197-198	1	Descriptor[5]	_	_	
+1-39	199-207	solution	Descriptor	_	_	
+1-40	208-210	of	_	_	_	
+1-41	211-217	acetic	Material-recipe[6]	Descriptor-of|Descriptor-of	1-39[0_6]|1-34[5_6]	
+1-42	218-222	acid	Material-recipe[6]	_	_	
+1-43	223-225	at	_	_	_	
+1-44	226-230	65BC	Property-temperature	_	_	
+1-45	231-234	for	_	_	_	
+1-46	235-240	about	Property-time[7]	_	_	
+1-47	241-243	20	Property-time[7]	_	_	
+1-48	244-245	h	Property-time[7]	_	_	
+1-49	245-246	.	_	_	_	
+
+#Text=When the\rsesquioxides were completely dissolved aluminum nitrate was\radded.
+2-1	247-251	When	_	_	_	
+2-2	252-255	the	_	_	_	
+2-3	256-268	sesquioxides	Material-intermedium	_	_	
+2-4	269-273	were	_	_	_	
+2-5	274-284	completely	Descriptor	_	_	
+2-6	285-294	dissolved	Operation	Descriptor-of|Next-operation|Participant-material	2-5|2-10|2-3	
+2-7	295-303	aluminum	Material-recipe[8]	_	_	
+2-8	304-311	nitrate	Material-recipe[8]	_	_	
+2-9	312-315	was	_	_	_	
+2-10	316-321	added	Operation	Participant-material	2-7[8_0]	
+2-11	321-322	.	_	_	_	
+
+#Text=This mixture was stirred for 1 h and then ethylene glycol\rwas added and the solution was stirred again for 1 h.
+3-1	323-327	This	_	_	_	
+3-2	328-335	mixture	Material-intermedium	_	_	
+3-3	336-339	was	_	_	_	
+3-4	340-347	stirred	Operation	Participant-material|Condition-of|Next-operation	3-2|3-6[9_0]|3-13	
+3-5	348-351	for	_	_	_	
+3-6	352-353	1	Property-time[9]	_	_	
+3-7	354-355	h	Property-time[9]	_	_	
+3-8	356-359	and	_	_	_	
+3-9	360-364	then	_	_	_	
+3-10	365-373	ethylene	Material-recipe[10]	_	_	
+3-11	374-380	glycol	Material-recipe[10]	_	_	
+3-12	381-384	was	_	_	_	
+3-13	385-390	added	Operation	Participant-material|Next-operation	3-10[10_0]|3-18	
+3-14	391-394	and	_	_	_	
+3-15	395-398	the	_	_	_	
+3-16	399-407	solution	Material-intermedium	_	_	
+3-17	408-411	was	_	_	_	
+3-18	412-419	stirred	Operation	Condition-of	3-21[11_0]	
+3-19	420-425	again	_	_	_	
+3-20	426-429	for	_	_	_	
+3-21	430-431	1	Property-time[11]	_	_	
+3-22	432-433	h	Property-time[11]	_	_	
+3-23	433-434	.	_	_	_	
+
+#Text=The obtained\rmixture was evaporated slowly until the foam was formed.
+4-1	435-438	The	_	_	_	
+4-2	439-447	obtained	Descriptor	_	_	
+4-3	448-455	mixture	Material-intermedium	Descriptor-of	4-2	
+4-4	456-459	was	_	_	_	
+4-5	460-470	evaporated	Operation	Next-operation|Condition-of|Participant-material	4-11|4-6|4-3	
+4-6	471-477	slowly	Property-rate	_	_	
+4-7	478-483	until	_	_	_	
+4-8	484-487	the	_	_	_	
+4-9	488-492	foam	Material-intermedium	_	_	
+4-10	493-496	was	_	_	_	
+4-11	497-503	formed	Operation	Participant-material	4-9	
+4-12	503-504	.	_	_	_	
+
+#Text=The\rfoam was dried at 150 BC for 30 h and then ground in an agate\rmortar to a fine powder.
+5-1	505-508	The	_	_	_	
+5-2	509-513	foam	Material-intermedium	_	_	
+5-3	514-517	was	_	_	_	
+5-4	518-523	dried	Operation	Condition-of|Condition-of|Participant-material|Next-operation	5-9[13_0]|5-6[12_0]|5-2|5-13	
+5-5	524-526	at	_	_	_	
+5-6	527-530	150	Property-temperature[12]	_	_	
+5-7	531-533	BC	Property-temperature[12]	_	_	
+5-8	534-537	for	_	_	_	
+5-9	538-540	30	Property-time[13]	_	_	
+5-10	541-542	h	Property-time[13]	_	_	
+5-11	543-546	and	_	_	_	
+5-12	547-551	then	_	_	_	
+5-13	552-558	ground	Operation	Device-of-operation	5-17	
+5-14	559-561	in	_	_	_	
+5-15	562-564	an	Value	_	_	
+5-16	565-570	agate	Descriptor	_	_	
+5-17	571-577	mortar	Device	Descriptor-of|Value-of	5-16|5-15	
+5-18	578-580	to	_	_	_	
+5-19	581-582	a	Value	_	_	
+5-20	583-587	fine	Descriptor	_	_	
+5-21	588-594	powder	Material-intermedium	Descriptor-of|Value-of	5-20|5-19	
+5-22	594-595	.	_	_	_	
+
+#Text=This powder was calcined in air at 1100 BC\rfor 10 h.
+6-1	596-600	This	_	_	_	
+6-2	601-607	powder	Material-intermedium	_	_	
+6-3	608-611	was	_	_	_	
+6-4	612-620	calcined	Operation	Participant-material|Condition-of|Condition-of|Condition-of	6-2|6-6|6-8[14_0]|6-11[15_0]	
+6-5	621-623	in	_	_	_	
+6-6	624-627	air	Property-pressure	_	_	
+6-7	628-630	at	_	_	_	
+6-8	631-635	1100	Property-temperature[14]	_	_	
+6-9	636-638	BC	Property-temperature[14]	_	_	
+6-10	639-642	for	_	_	_	
+6-11	643-645	10	Property-time[15]	_	_	
+6-12	646-647	h	Property-time[15]	_	_	
+6-13	647-648	.	_	_	_	

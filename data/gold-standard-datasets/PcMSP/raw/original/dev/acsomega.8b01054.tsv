@@ -1,0 +1,194 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Materials and Synthesis.
+1-1	0-9	Materials	_	_	_	
+1-2	10-13	and	_	_	_	
+1-3	14-23	Synthesis	_	_	_	
+1-4	23-24	.	_	_	_	
+
+#Text=Bi2O3 (≥98%), CaCO3 (≥99%), SrCO3 (≥99.9%), PbO (≥99%), TiO2 (99.8%), and FeC2O4·2H2O (99%) were purchased from Sigma-Aldrich and used as received.
+2-1	25-30	Bi2O3	Material-recipe	Value-of|Brand-of|Descriptor-of	2-3[1_0]|2-40|2-43[6_0]	
+2-2	31-32	(	_	_	_	
+2-3	32-33	≥	Value[1]	_	_	
+2-4	33-36	98%	Value[1]	_	_	
+2-5	36-37	)	_	_	_	
+2-6	37-38	,	_	_	_	
+2-7	39-44	CaCO3	Material-recipe	Value-of|Brand-of|Descriptor-of	2-9[2_0]|2-40|2-43[6_0]	
+2-8	45-46	(	_	_	_	
+2-9	46-47	≥	Value[2]	_	_	
+2-10	47-50	99%	Value[2]	_	_	
+2-11	50-51	)	_	_	_	
+2-12	51-52	,	_	_	_	
+2-13	53-58	SrCO3	Material-recipe	Value-of|Brand-of|Descriptor-of	2-15[3_0]|2-40|2-43[6_0]	
+2-14	59-60	(	_	_	_	
+2-15	60-61	≥	Value[3]	_	_	
+2-16	61-66	99.9%	Value[3]	_	_	
+2-17	66-67	)	_	_	_	
+2-18	67-68	,	_	_	_	
+2-19	69-72	PbO	Material-recipe	Value-of|Brand-of|Descriptor-of	2-21[4_0]|2-40|2-43[6_0]	
+2-20	73-74	(	_	_	_	
+2-21	74-75	≥	Value[4]	_	_	
+2-22	75-78	99%	Value[4]	_	_	
+2-23	78-79	)	_	_	_	
+2-24	79-80	,	_	_	_	
+2-25	81-85	TiO2	Material-recipe	Value-of|Brand-of|Descriptor-of	2-27|2-40|2-43[6_0]	
+2-26	86-87	(	_	_	_	
+2-27	87-92	99.8%	Value	_	_	
+2-28	92-93	)	_	_	_	
+2-29	93-94	,	_	_	_	
+2-30	95-98	and	_	_	_	
+2-31	99-105	FeC2O4	Material-recipe[5]	Value-of|Brand-of|Descriptor-of	2-35[0_5]|2-40[0_5]|2-43[6_5]	
+2-32	105-106	·	Material-recipe[5]	_	_	
+2-33	106-110	2H2O	Material-recipe[5]	_	_	
+2-34	111-112	(	_	_	_	
+2-35	112-115	99%	Value	_	_	
+2-36	115-116	)	_	_	_	
+2-37	117-121	were	_	_	_	
+2-38	122-131	purchased	_	_	_	
+2-39	132-136	from	_	_	_	
+2-40	137-150	Sigma-Aldrich	Brand	_	_	
+2-41	151-154	and	_	_	_	
+2-42	155-159	used	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Participant-material|Participant-material	2-1|2-7|2-13|2-19|2-25|2-31[5_0]	
+2-43	160-162	as	Descriptor[6]	_	_	
+2-44	163-171	received	Descriptor[6]	_	_	
+2-45	171-172	.	_	_	_	
+
+#Text=The other reagents employed in our experiments were of analytical grade and used without any further purification.
+3-1	173-176	The	_	_	_	
+3-2	177-182	other	Descriptor	_	_	
+3-3	183-191	reagents	Material-recipe	Descriptor-of|Descriptor-of|Descriptor-of	3-2|3-10[7_0]|3-14[8_0]	
+3-4	192-200	employed	Operation	Participant-material	3-3	
+3-5	201-203	in	_	_	_	
+3-6	204-207	our	_	_	_	
+3-7	208-219	experiments	_	_	_	
+3-8	220-224	were	_	_	_	
+3-9	225-227	of	_	_	_	
+3-10	228-238	analytical	Descriptor[7]	_	_	
+3-11	239-244	grade	Descriptor[7]	_	_	
+3-12	245-248	and	_	_	_	
+3-13	249-253	used	_	_	_	
+3-14	254-261	without	Descriptor[8]	_	_	
+3-15	262-265	any	Descriptor[8]	_	_	
+3-16	266-273	further	Descriptor[8]	_	_	
+3-17	274-286	purification	Descriptor[8]	_	_	
+3-18	286-287	.	_	_	_	
+
+#Text=All the dye solutions were freshly prepared before the experiments in Millipore (Bedford, MA, USA) water.
+4-1	288-291	All	Value	_	_	
+4-2	292-295	the	_	_	_	
+4-3	296-299	dye	Descriptor	_	_	
+4-4	300-309	solutions	Material-recipe	Value-of|Descriptor-of	4-1|4-3	
+4-5	310-314	were	_	_	_	
+4-6	315-322	freshly	Descriptor	_	_	
+4-7	323-331	prepared	Operation	Descriptor-of|Participant-material|Descriptor-of	4-6|4-4|4-11[9_0]	
+4-8	332-338	before	_	_	_	
+4-9	339-342	the	_	_	_	
+4-10	343-354	experiments	_	_	_	
+4-11	355-357	in	Descriptor[9]	_	_	
+4-12	358-367	Millipore	Descriptor[9]	_	_	
+4-13	368-369	(	Descriptor[9]	_	_	
+4-14	369-376	Bedford	Descriptor[9]	_	_	
+4-15	376-377	,	Descriptor[9]	_	_	
+4-16	378-380	MA	Descriptor[9]	_	_	
+4-17	380-381	,	Descriptor[9]	_	_	
+4-18	382-385	USA	Descriptor[9]	_	_	
+4-19	385-386	)	Descriptor[9]	_	_	
+4-20	387-392	water	Descriptor[9]	_	_	
+4-21	392-393	.	_	_	_	
+
+#Text=Polycrystalline samples of Bi5ATi4FeO18 (A = Ca, Sr, and Pb) were prepared by solid-state reactions.
+5-1	394-409	Polycrystalline	Descriptor	_	_	
+5-2	410-417	samples	_	_	_	
+5-3	418-420	of	_	_	_	
+5-4	421-433	Bi5ATi4FeO18	Material-target	Descriptor-of|Descriptor-of	5-6[10_0]|5-1	
+5-5	434-435	(	_	_	_	
+5-6	435-436	A	Descriptor[10]	_	_	
+5-7	437-438	=	Descriptor[10]	_	_	
+5-8	439-441	Ca	Descriptor[10]	_	_	
+5-9	441-442	,	Descriptor[10]	_	_	
+5-10	443-445	Sr	Descriptor[10]	_	_	
+5-11	445-446	,	Descriptor[10]	_	_	
+5-12	447-450	and	Descriptor[10]	_	_	
+5-13	451-453	Pb	Descriptor[10]	_	_	
+5-14	453-454	)	_	_	_	
+5-15	455-459	were	_	_	_	
+5-16	460-468	prepared	Operation	Coreference|Participant-material	5-18[11_0]|5-4	
+5-17	469-471	by	_	_	_	
+5-18	472-483	solid-state	Operation[11]	_	_	
+5-19	484-493	reactions	Operation[11]	_	_	
+5-20	493-494	.	_	_	_	
+
+#Text=For this, stoichiometric quantities of Bi2O3, ACO3 (A = Ca and Sr)/ PbO, TiO2, and FeC2O4·2H2O were thoroughly ground in an agate mortar for 1 h and heated at 780 °C for 2 h.
+6-1	495-498	For	_	_	_	
+6-2	499-503	this	_	_	_	
+6-3	503-504	,	_	_	_	
+6-4	505-519	stoichiometric	Value[12]	_	_	
+6-5	520-530	quantities	Value[12]	_	_	
+6-6	531-533	of	_	_	_	
+6-7	534-539	Bi2O3	Material-recipe	Value-of	6-4[12_0]	
+6-8	539-540	,	_	_	_	
+6-9	541-545	ACO3	Material-recipe	Descriptor-of|Value-of	6-11[13_0]|6-4[12_0]	
+6-10	546-547	(	_	_	_	
+6-11	547-548	A	Descriptor[13]	_	_	
+6-12	549-550	=	Descriptor[13]	_	_	
+6-13	551-553	Ca	Descriptor[13]	_	_	
+6-14	554-557	and	Descriptor[13]	_	_	
+6-15	558-560	Sr	Descriptor[13]	_	_	
+6-16	560-561	)	_	_	_	
+6-17	561-562	/	_	_	_	
+6-18	563-566	PbO	Material-recipe	Value-of	6-4[12_0]	
+6-19	566-567	,	_	_	_	
+6-20	568-572	TiO2	Material-recipe	Value-of	6-4[12_0]	
+6-21	572-573	,	_	_	_	
+6-22	574-577	and	_	_	_	
+6-23	578-584	FeC2O4	Material-recipe[14]	Value-of	6-4[12_14]	
+6-24	584-585	·	Material-recipe[14]	_	_	
+6-25	585-589	2H2O	Material-recipe[14]	_	_	
+6-26	590-594	were	_	_	_	
+6-27	595-605	thoroughly	Descriptor	_	_	
+6-28	606-612	ground	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Participant-material|Participant-material|Device-of-operation|Condition-of|Next-operation	6-27|6-7|6-9|6-18|6-20|6-23[14_0]|6-32|6-34[15_0]|6-37	
+6-29	613-615	in	_	_	_	
+6-30	616-618	an	_	_	_	
+6-31	619-624	agate	Descriptor	_	_	
+6-32	625-631	mortar	Device	Descriptor-of	6-31	
+6-33	632-635	for	_	_	_	
+6-34	636-637	1	Property-time[15]	_	_	
+6-35	638-639	h	Property-time[15]	_	_	
+6-36	640-643	and	_	_	_	
+6-37	644-650	heated	Operation	Condition-of|Condition-of	6-39[16_0]|6-43[17_0]	
+6-38	651-653	at	_	_	_	
+6-39	654-657	780	Property-temperature[16]	_	_	
+6-40	658-659	°	Property-temperature[16]	_	_	
+6-41	659-660	C	Property-temperature[16]	_	_	
+6-42	661-664	for	_	_	_	
+6-43	665-666	2	Property-time[17]	_	_	
+6-44	667-668	h	Property-time[17]	_	_	
+6-45	668-669	.	_	_	_	
+
+#Text=Afterward, the powders obtained after initial heating were reground, pelletized, and heated at 1000 °C for 2 h.
+7-1	670-679	Afterward	_	_	_	
+7-2	679-680	,	_	_	_	
+7-3	681-684	the	_	_	_	
+7-4	685-692	powders	Material-intermedium	_	_	
+7-5	693-701	obtained	_	_	_	
+7-6	702-707	after	_	_	_	
+7-7	708-715	initial	_	_	_	
+7-8	716-723	heating	_	_	_	
+7-9	724-728	were	_	_	_	
+7-10	729-737	reground	Operation	Participant-material|Next-operation	7-4|7-12	
+7-11	737-738	,	_	_	_	
+7-12	739-749	pelletized	Operation	Next-operation	7-15	
+7-13	749-750	,	_	_	_	
+7-14	751-754	and	_	_	_	
+7-15	755-761	heated	Operation	Condition-of|Condition-of	7-17[18_0]|7-21[19_0]	
+7-16	762-764	at	_	_	_	
+7-17	765-769	1000	Property-temperature[18]	_	_	
+7-18	770-771	°	Property-temperature[18]	_	_	
+7-19	771-772	C	Property-temperature[18]	_	_	
+7-20	773-776	for	_	_	_	
+7-21	777-778	2	Property-time[19]	_	_	
+7-22	779-780	h	Property-time[19]	_	_	
+7-23	780-781	.	_	_	_	

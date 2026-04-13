@@ -1,0 +1,152 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Millimeter-sized single crystals of TaAs2 were obtained as a by-product of growing TaAs by means of an Iodine-vapor transport technique with 0.05 g/cm3 I2.
+1-1	0-16	Millimeter-sized	_	_	_	
+1-2	17-23	single	_	_	_	
+1-3	24-32	crystals	_	_	_	
+1-4	33-35	of	_	_	_	
+1-5	36-41	TaAs2	_	_	_	
+1-6	42-46	were	_	_	_	
+1-7	47-55	obtained	_	_	_	
+1-8	56-58	as	_	_	_	
+1-9	59-60	a	_	_	_	
+1-10	61-71	by-product	_	_	_	
+1-11	72-74	of	_	_	_	
+1-12	75-82	growing	_	_	_	
+1-13	83-87	TaAs	_	_	_	
+1-14	88-90	by	_	_	_	
+1-15	91-96	means	_	_	_	
+1-16	97-99	of	_	_	_	
+1-17	100-102	an	_	_	_	
+1-18	103-115	Iodine-vapor	_	_	_	
+1-19	116-125	transport	_	_	_	
+1-20	126-135	technique	_	_	_	
+1-21	136-140	with	_	_	_	
+1-22	141-145	0.05	_	_	_	
+1-23	146-147	g	_	_	_	
+1-24	147-148	/	_	_	_	
+1-25	148-151	cm3	_	_	_	
+1-26	152-154	I2	_	_	_	
+1-27	154-155	.	_	_	_	
+
+#Text=First, polycrystalline TaAs was prepared by heating stoichiometric amounts of Ta and As in an evacuated silica ampoule at 973 K for three days.
+2-1	156-161	First	_	_	_	
+2-2	161-162	,	_	_	_	
+2-3	163-178	polycrystalline	Descriptor	_	_	
+2-4	179-183	TaAs	Material-target	Descriptor-of	2-3	
+2-5	184-187	was	_	_	_	
+2-6	188-196	prepared	Operation	Participant-material	2-4	
+2-7	197-199	by	_	_	_	
+2-8	200-207	heating	Operation	Coreference|Device-of-operation|Condition-of|Condition-of|Participant-material|Participant-material	2-6|2-19|2-21[2_0]|2-24[3_0]|2-12|2-14	
+2-9	208-222	stoichiometric	Value[1]	_	_	
+2-10	223-230	amounts	Value[1]	_	_	
+2-11	231-233	of	_	_	_	
+2-12	234-236	Ta	Material-recipe	Value-of	2-9[1_0]	
+2-13	237-240	and	_	_	_	
+2-14	241-243	As	Material-recipe	Value-of	2-9[1_0]	
+2-15	244-246	in	_	_	_	
+2-16	247-249	an	Value	_	_	
+2-17	250-259	evacuated	Descriptor	_	_	
+2-18	260-266	silica	Descriptor	_	_	
+2-19	267-274	ampoule	Device	Value-of|Descriptor-of|Descriptor-of	2-16|2-17|2-18	
+2-20	275-277	at	_	_	_	
+2-21	278-281	973	Property-temperature[2]	_	_	
+2-22	282-283	K	Property-temperature[2]	_	_	
+2-23	284-287	for	_	_	_	
+2-24	288-293	three	Property-time[3]	_	_	
+2-25	294-298	days	Property-time[3]	_	_	
+2-26	298-299	.	_	_	_	
+
+#Text=Subsequently, the powder was loaded in a horizontal tube furnace in which the temperature of the hot zone was kept at 1123 K and that of the cold zone was ~1023 K.
+3-1	300-312	Subsequently	_	_	_	
+3-2	312-313	,	_	_	_	
+3-3	314-317	the	_	_	_	
+3-4	318-324	powder	Material-intermedium	_	_	
+3-5	325-328	was	_	_	_	
+3-6	329-335	loaded	Operation	Participant-material|Device-of-operation|Next-operation	3-4|3-11|3-21	
+3-7	336-338	in	_	_	_	
+3-8	339-340	a	Value	_	_	
+3-9	341-351	horizontal	Descriptor	_	_	
+3-10	352-356	tube	Descriptor	_	_	
+3-11	357-364	furnace	Device	Value-of|Descriptor-of|Descriptor-of	3-8|3-9|3-10	
+3-12	365-367	in	_	_	_	
+3-13	368-373	which	_	_	_	
+3-14	374-377	the	_	_	_	
+3-15	378-389	temperature	Property-temperature	Coreference|Coreference	3-23[5_0]|3-33[7_0]	
+3-16	390-392	of	_	_	_	
+3-17	393-396	the	_	_	_	
+3-18	397-400	hot	Descriptor[4]	_	_	
+3-19	401-405	zone	Descriptor[4]	_	_	
+3-20	406-409	was	_	_	_	
+3-21	410-414	kept	Operation	Condition-of	3-15	
+3-22	415-417	at	_	_	_	
+3-23	418-422	1123	Property-temperature[5]	Descriptor-of	3-18[4_5]	
+3-24	423-424	K	Property-temperature[5]	_	_	
+3-25	425-428	and	_	_	_	
+3-26	429-433	that	_	_	_	
+3-27	434-436	of	_	_	_	
+3-28	437-440	the	_	_	_	
+3-29	441-445	cold	Descriptor[6]	_	_	
+3-30	446-450	zone	Descriptor[6]	_	_	
+3-31	451-454	was	_	_	_	
+3-32	455-456	~	_	_	_	
+3-33	456-460	1023	Property-temperature[7]	Descriptor-of	3-29[6_7]	
+3-34	461-462	K	Property-temperature[7]	_	_	
+3-35	462-463	.	_	_	_	
+
+#Text=Several TaAs2 single crystals with apparent monoclinic shape were picked from the resultant and their monoclinic structure25 and stoichiometry were confirmed by x-ray diffraction (XRD) and energy dispersive x-ray spectroscopy (EDS).
+4-1	464-471	Several	_	_	_	
+4-2	472-477	TaAs2	_	_	_	
+4-3	478-484	single	_	_	_	
+4-4	485-493	crystals	_	_	_	
+4-5	494-498	with	_	_	_	
+4-6	499-507	apparent	_	_	_	
+4-7	508-518	monoclinic	_	_	_	
+4-8	519-524	shape	_	_	_	
+4-9	525-529	were	_	_	_	
+4-10	530-536	picked	_	_	_	
+4-11	537-541	from	_	_	_	
+4-12	542-545	the	_	_	_	
+4-13	546-555	resultant	_	_	_	
+4-14	556-559	and	_	_	_	
+4-15	560-565	their	_	_	_	
+4-16	566-576	monoclinic	_	_	_	
+4-17	577-588	structure25	_	_	_	
+4-18	589-592	and	_	_	_	
+4-19	593-606	stoichiometry	_	_	_	
+4-20	607-611	were	_	_	_	
+4-21	612-621	confirmed	_	_	_	
+4-22	622-624	by	_	_	_	
+4-23	625-630	x-ray	_	_	_	
+4-24	631-642	diffraction	_	_	_	
+4-25	643-644	(	_	_	_	
+4-26	644-647	XRD	_	_	_	
+4-27	647-648	)	_	_	_	
+4-28	649-652	and	_	_	_	
+4-29	653-659	energy	_	_	_	
+4-30	660-670	dispersive	_	_	_	
+4-31	671-676	x-ray	_	_	_	
+4-32	677-689	spectroscopy	_	_	_	
+4-33	690-691	(	_	_	_	
+4-34	691-694	EDS	_	_	_	
+4-35	694-695	)	_	_	_	
+4-36	695-696	.	_	_	_	
+
+#Text=No I2 doping was detected, and the stoichiometric ratio is fairly homogenous.
+5-1	697-699	No	_	_	_	
+5-2	700-702	I2	_	_	_	
+5-3	703-709	doping	_	_	_	
+5-4	710-713	was	_	_	_	
+5-5	714-722	detected	_	_	_	
+5-6	722-723	,	_	_	_	
+5-7	724-727	and	_	_	_	
+5-8	728-731	the	_	_	_	
+5-9	732-746	stoichiometric	_	_	_	
+5-10	747-752	ratio	_	_	_	
+5-11	753-755	is	_	_	_	
+5-12	756-762	fairly	_	_	_	
+5-13	763-773	homogenous	_	_	_	
+5-14	773-774	.	_	_	_	

@@ -1,0 +1,174 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline Bi1 − xPbxCuSeO (x = 0, 0.02, …, 0.2) samples were prepared by a self-propagating high-temperature synthesis and SHS-SPS technique.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-19	Bi1	Material-target[1]	Descriptor-of|Value-of	1-1[0_1]|1-6[2_1]	
+1-3	20-21	−	Material-target[1]	_	_	
+1-4	22-31	xPbxCuSeO	Material-target[1]	_	_	
+1-5	32-33	(	_	_	_	
+1-6	33-34	x	Value[2]	_	_	
+1-7	35-36	=	Value[2]	_	_	
+1-8	37-38	0	Value[2]	_	_	
+1-9	38-39	,	Value[2]	_	_	
+1-10	40-44	0.02	Value[2]	_	_	
+1-11	44-45	,	Value[2]	_	_	
+1-12	46-47	…	Value[2]	_	_	
+1-13	47-48	,	Value[2]	_	_	
+1-14	49-52	0.2	Value[2]	_	_	
+1-15	52-53	)	_	_	_	
+1-16	54-61	samples	_	_	_	
+1-17	62-66	were	_	_	_	
+1-18	67-75	prepared	Operation	Coreference|Coreference|Participant-material	1-23|1-25[3_0]|1-2[1_0]	
+1-19	76-78	by	_	_	_	
+1-20	79-80	a	_	_	_	
+1-21	81-97	self-propagating	Descriptor	_	_	
+1-22	98-114	high-temperature	Property-temperature	_	_	
+1-23	115-124	synthesis	Operation	Descriptor-of|Condition-of	1-21|1-22	
+1-24	125-128	and	_	_	_	
+1-25	129-136	SHS-SPS	Operation[3]	_	_	
+1-26	137-146	technique	Operation[3]	_	_	
+1-27	146-147	.	_	_	_	
+
+#Text=Stoichiometric amounts of Bi (99.99%, Aladdin), Bi2O3 (99.99%, Aladdin), PbO (99.9%, Aladdin), Cu (99.99%, Aladdin), and Se (99.99%, Aladdin) were mixed by hand grinding.
+2-1	148-162	Stoichiometric	Value[4]	_	_	
+2-2	163-170	amounts	Value[4]	_	_	
+2-3	171-173	of	_	_	_	
+2-4	174-176	Bi	Material-recipe	Value-of|Value-of|Brand-of	2-1[4_0]|2-6|2-8	
+2-5	177-178	(	_	_	_	
+2-6	178-184	99.99%	Value	_	_	
+2-7	184-185	,	_	_	_	
+2-8	186-193	Aladdin	Brand	_	_	
+2-9	193-194	)	_	_	_	
+2-10	194-195	,	_	_	_	
+2-11	196-201	Bi2O3	Material-recipe	Value-of|Value-of|Brand-of	2-1[4_0]|2-13|2-15	
+2-12	202-203	(	_	_	_	
+2-13	203-209	99.99%	Value	_	_	
+2-14	209-210	,	_	_	_	
+2-15	211-218	Aladdin	Brand	_	_	
+2-16	218-219	)	_	_	_	
+2-17	219-220	,	_	_	_	
+2-18	221-224	PbO	Material-recipe	Value-of|Value-of|Brand-of	2-1[4_0]|2-20|2-22	
+2-19	225-226	(	_	_	_	
+2-20	226-231	99.9%	Value	_	_	
+2-21	231-232	,	_	_	_	
+2-22	233-240	Aladdin	Brand	_	_	
+2-23	240-241	)	_	_	_	
+2-24	241-242	,	_	_	_	
+2-25	243-245	Cu	Material-recipe	Value-of|Value-of|Brand-of	2-1[4_0]|2-27|2-29	
+2-26	246-247	(	_	_	_	
+2-27	247-253	99.99%	Value	_	_	
+2-28	253-254	,	_	_	_	
+2-29	255-262	Aladdin	Brand	_	_	
+2-30	262-263	)	_	_	_	
+2-31	263-264	,	_	_	_	
+2-32	265-268	and	_	_	_	
+2-33	269-271	Se	Material-recipe	Value-of|Value-of|Brand-of	2-1[4_0]|2-35|2-37	
+2-34	272-273	(	_	_	_	
+2-35	273-279	99.99%	Value	_	_	
+2-36	279-280	,	_	_	_	
+2-37	281-288	Aladdin	Brand	_	_	
+2-38	288-289	)	_	_	_	
+2-39	290-294	were	_	_	_	
+2-40	295-300	mixed	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Participant-material|Coreference	2-4|2-11|2-18|2-25|2-33|2-42[5_0]	
+2-41	301-303	by	_	_	_	
+2-42	304-308	hand	Operation[5]	_	_	
+2-43	309-317	grinding	Operation[5]	_	_	
+2-44	317-318	.	_	_	_	
+
+#Text=The mixed powders were cold pressed into pellets and underwent the SHS processes.
+3-1	319-322	The	_	_	_	
+3-2	323-328	mixed	Material-intermedium[6]	_	_	
+3-3	329-336	powders	Material-intermedium[6]	_	_	
+3-4	337-341	were	_	_	_	
+3-5	342-346	cold	Operation[7]	Participant-material|Next-operation	3-2[6_7]|3-12[8_7]	
+3-6	347-354	pressed	Operation[7]	_	_	
+3-7	355-359	into	_	_	_	
+3-8	360-367	pellets	Material-intermedium	_	_	
+3-9	368-371	and	_	_	_	
+3-10	372-381	underwent	_	_	_	
+3-11	382-385	the	_	_	_	
+3-12	386-389	SHS	Operation[8]	_	_	
+3-13	390-399	processes	Operation[8]	_	_	
+3-14	399-400	.	_	_	_	
+
+#Text=The details of the SHS method can be found elsewhere23.
+4-1	401-404	The	_	_	_	
+4-2	405-412	details	_	_	_	
+4-3	413-415	of	_	_	_	
+4-4	416-419	the	_	_	_	
+4-5	420-423	SHS	_	_	_	
+4-6	424-430	method	_	_	_	
+4-7	431-434	can	_	_	_	
+4-8	435-437	be	_	_	_	
+4-9	438-443	found	_	_	_	
+4-10	444-455	elsewhere23	_	_	_	
+4-11	455-456	.	_	_	_	
+
+#Text=Given that a significant volatilization of Se may exist during the SHS processes, additional 5 at% Se was added.
+5-1	457-462	Given	_	_	_	
+5-2	463-467	that	_	_	_	
+5-3	468-469	a	_	_	_	
+5-4	470-481	significant	_	_	_	
+5-5	482-496	volatilization	Operation	Participant-material	5-7	
+5-6	497-499	of	_	_	_	
+5-7	500-502	Se	Material-recipe	_	_	
+5-8	503-506	may	_	_	_	
+5-9	507-512	exist	_	_	_	
+5-10	513-519	during	_	_	_	
+5-11	520-523	the	_	_	_	
+5-12	524-527	SHS	Operation[9]	Coreference	5-5[0_9]	
+5-13	528-537	processes	Operation[9]	_	_	
+5-14	537-538	,	_	_	_	
+5-15	539-549	additional	Value[10]	_	_	
+5-16	550-551	5	Value[10]	_	_	
+5-17	552-554	at	Value[10]	_	_	
+5-18	554-555	%	Value[10]	_	_	
+5-19	556-558	Se	Material-recipe	Value-of	5-15[10_0]	
+5-20	559-562	was	_	_	_	
+5-21	563-568	added	Operation	Participant-material	5-19	
+5-22	568-569	.	_	_	_	
+
+#Text=The obtained SHSed powders were then compacted into dense pellets with a diameter of ~12.5 mm and a height of ~10 mm by SPS at 923 K under a uniaxial pressure of 50 MPa for 5 min.
+6-1	570-573	The	_	_	_	
+6-2	574-582	obtained	_	_	_	
+6-3	583-588	SHSed	Material-intermedium	Descriptor-of	6-4	
+6-4	589-596	powders	Descriptor	_	_	
+6-5	597-601	were	_	_	_	
+6-6	602-606	then	_	_	_	
+6-7	607-616	compacted	Operation	Participant-material|Coreference	6-3|6-26	
+6-8	617-621	into	_	_	_	
+6-9	622-627	dense	Descriptor	_	_	
+6-10	628-635	pellets	Material-intermedium	Descriptor-of|Value-of|Value-of	6-9|6-15[11_0]|6-22[12_0]	
+6-11	636-640	with	_	_	_	
+6-12	641-642	a	_	_	_	
+6-13	643-651	diameter	Descriptor	_	_	
+6-14	652-654	of	_	_	_	
+6-15	655-656	~	Value[11]	Descriptor-of	6-13[0_11]	
+6-16	656-660	12.5	Value[11]	_	_	
+6-17	661-663	mm	Value[11]	_	_	
+6-18	664-667	and	_	_	_	
+6-19	668-669	a	_	_	_	
+6-20	670-676	height	Descriptor	_	_	
+6-21	677-679	of	_	_	_	
+6-22	680-681	~	Value[12]	Descriptor-of	6-20[0_12]	
+6-23	681-683	10	Value[12]	_	_	
+6-24	684-686	mm	Value[12]	_	_	
+6-25	687-689	by	_	_	_	
+6-26	690-693	SPS	Operation	Condition-of|Condition-of|Condition-of	6-28[13_0]|6-38[16_0]|6-32[14_0]	
+6-27	694-696	at	_	_	_	
+6-28	697-700	923	Property-temperature[13]	_	_	
+6-29	701-702	K	Property-temperature[13]	_	_	
+6-30	703-708	under	_	_	_	
+6-31	709-710	a	_	_	_	
+6-32	711-719	uniaxial	Property-pressure[14]	Coreference	6-35[15_14]	
+6-33	720-728	pressure	Property-pressure[14]	_	_	
+6-34	729-731	of	_	_	_	
+6-35	732-734	50	Property-pressure[15]	_	_	
+6-36	735-738	MPa	Property-pressure[15]	_	_	
+6-37	739-742	for	_	_	_	
+6-38	743-744	5	Property-time[16]	_	_	
+6-39	745-748	min	Property-time[16]	_	_	
+6-40	748-749	.	_	_	_	

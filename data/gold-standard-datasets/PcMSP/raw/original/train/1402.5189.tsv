@@ -1,0 +1,364 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of LaO0.5F0.5BiS2 were prepared using a HP synthesis
+#Text=technique with a cubic-anvil-type 180 ton press.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-41	LaO0.5F0.5BiS2	Material-target	Descriptor-of	1-1	
+1-5	42-46	were	_	_	_	
+1-6	47-55	prepared	Operation	Participant-material	1-4	
+1-7	56-61	using	_	_	_	
+1-8	62-63	a	_	_	_	
+1-9	64-66	HP	Operation[1]	Coreference|Device-of-operation	1-6[0_1]|1-17[0_1]	
+1-10	67-76	synthesis	Operation[1]	_	_	
+1-11	77-86	technique	Operation[1]	_	_	
+1-12	87-91	with	_	_	_	
+1-13	92-93	a	Value	_	_	
+1-14	94-110	cubic-anvil-type	Descriptor[2]	_	_	
+1-15	111-114	180	Descriptor[2]	_	_	
+1-16	115-118	ton	Descriptor[2]	_	_	
+1-17	119-124	press	Device	Descriptor-of|Value-of	1-14[2_0]|1-13	
+1-18	124-125	.	_	_	_	
+
+#Text=The starting materials are La2S3
+#Text=(99.9 %), Bi2O3 (99.99 %), BiF3 (99.9 %) and Bi2S3 powders and Bi (99.99 %) grains.
+2-1	126-129	The	_	_	_	
+2-2	130-138	starting	Descriptor	_	_	
+2-3	139-148	materials	Material-recipe	Descriptor-of	2-2	
+2-4	149-152	are	_	_	_	
+2-5	153-158	La2S3	Material-recipe	Value-of|Descriptor-of|Coreference	2-7[3_0]|2-24|2-3	
+2-6	159-160	(	_	_	_	
+2-7	160-164	99.9	Value[3]	_	_	
+2-8	165-166	%	Value[3]	_	_	
+2-9	166-167	)	_	_	_	
+2-10	167-168	,	_	_	_	
+2-11	169-174	Bi2O3	Material-recipe	Value-of|Descriptor-of|Coreference	2-13[4_0]|2-24|2-3	
+2-12	175-176	(	_	_	_	
+2-13	176-181	99.99	Value[4]	_	_	
+2-14	182-183	%	Value[4]	_	_	
+2-15	183-184	)	_	_	_	
+2-16	184-185	,	_	_	_	
+2-17	186-190	BiF3	Material-recipe	Value-of|Descriptor-of|Coreference	2-19[5_0]|2-24|2-3	
+2-18	191-192	(	_	_	_	
+2-19	192-196	99.9	Value[5]	_	_	
+2-20	197-198	%	Value[5]	_	_	
+2-21	198-199	)	_	_	_	
+2-22	200-203	and	_	_	_	
+2-23	204-209	Bi2S3	Material-intermedium	Descriptor-of|Coreference	2-24|2-3	
+2-24	210-217	powders	Descriptor	_	_	
+2-25	218-221	and	_	_	_	
+2-26	222-224	Bi	Material-recipe	Value-of|Descriptor-of|Coreference	2-28[6_0]|2-31|2-3	
+2-27	225-226	(	_	_	_	
+2-28	226-231	99.99	Value[6]	_	_	
+2-29	232-233	%	Value[6]	_	_	
+2-30	233-234	)	_	_	_	
+2-31	235-241	grains	Descriptor	_	_	
+2-32	241-242	.	_	_	_	
+
+#Text=The Bi2S3 powder was prepared by reacting Bi and S (99.99 %) grains.
+3-1	243-246	The	_	_	_	
+3-2	247-252	Bi2S3	Material-intermedium	Descriptor-of	3-3	
+3-3	253-259	powder	Descriptor	_	_	
+3-4	260-263	was	_	_	_	
+3-5	264-272	prepared	Operation	Participant-material	3-2	
+3-6	273-275	by	_	_	_	
+3-7	276-284	reacting	Operation	Participant-material|Participant-material|Coreference	3-8|3-10|3-5	
+3-8	285-287	Bi	Material-recipe	Descriptor-of|Value-of	3-15|3-12[7_0]	
+3-9	288-291	and	_	_	_	
+3-10	292-293	S	Material-recipe	Value-of|Descriptor-of	3-12[7_0]|3-15	
+3-11	294-295	(	_	_	_	
+3-12	295-300	99.99	Value[7]	_	_	
+3-13	301-302	%	Value[7]	_	_	
+3-14	302-303	)	_	_	_	
+3-15	304-310	grains	Descriptor	_	_	
+3-16	310-311	.	_	_	_	
+
+#Text=The mixture
+#Text=with a nominal composition of LaO0.5F0.5BiS2 was well-mixed and pressed into a pellet.
+4-1	312-315	The	_	_	_	
+4-2	316-323	mixture	Material-intermedium	Value-of	4-5[8_0]	
+4-3	324-328	with	_	_	_	
+4-4	329-330	a	_	_	_	
+4-5	331-338	nominal	Value[8]	_	_	
+4-6	339-350	composition	Value[8]	_	_	
+4-7	351-353	of	Value[8]	_	_	
+4-8	354-368	LaO0.5F0.5BiS2	Value[8]	_	_	
+4-9	369-372	was	_	_	_	
+4-10	373-383	well-mixed	Operation	Participant-material|Next-operation	4-2|4-12	
+4-11	384-387	and	_	_	_	
+4-12	388-395	pressed	Operation	_	_	
+4-13	396-400	into	_	_	_	
+4-14	401-402	a	Value	_	_	
+4-15	403-409	pellet	Material-intermedium	Value-of	4-14	
+4-16	409-410	.	_	_	_	
+
+#Text=The sample was sealed into a BN sample space and inserted into a HP cell.
+5-1	411-414	The	_	_	_	
+5-2	415-421	sample	Material-intermedium	_	_	
+5-3	422-425	was	_	_	_	
+5-4	426-432	sealed	Operation	Participant-material|Device-of-operation|Next-operation	5-2|5-8[9_0]|5-11	
+5-5	433-437	into	_	_	_	
+5-6	438-439	a	Value	_	_	
+5-7	440-442	BN	Descriptor	_	_	
+5-8	443-449	sample	Device[9]	Descriptor-of|Value-of	5-7[0_9]|5-6[0_9]	
+5-9	450-455	space	Device[9]	_	_	
+5-10	456-459	and	_	_	_	
+5-11	460-468	inserted	Operation	Device-of-operation	5-15	
+5-12	469-473	into	_	_	_	
+5-13	474-475	a	Value	_	_	
+5-14	476-478	HP	Descriptor	_	_	
+5-15	479-483	cell	Device	Value-of|Descriptor-of	5-13|5-14	
+5-16	483-484	.	_	_	_	
+
+#Text=The HP cell was pressed with a pressure of 2 GPa and heated with various
+#Text=annealing temperatures and times.
+6-1	485-488	The	_	_	_	
+6-2	489-491	HP	Descriptor	_	_	
+6-3	492-496	cell	Device	Descriptor-of	6-2	
+6-4	497-500	was	_	_	_	
+6-5	501-508	pressed	Operation	Participant-material|Condition-of|Next-operation	6-3|6-10[10_0]|6-13	
+6-6	509-513	with	_	_	_	
+6-7	514-515	a	_	_	_	
+6-8	516-524	pressure	Property-pressure	_	_	
+6-9	525-527	of	_	_	_	
+6-10	528-529	2	Property-pressure[10]	Coreference	6-8[0_10]	
+6-11	530-533	GPa	Property-pressure[10]	_	_	
+6-12	534-537	and	_	_	_	
+6-13	538-544	heated	Operation	Condition-of|Condition-of	6-15[11_0]|6-19	
+6-14	545-549	with	_	_	_	
+6-15	550-557	various	Property-temperature[11]	_	_	
+6-16	558-567	annealing	Property-temperature[11]	_	_	
+6-17	568-580	temperatures	Property-temperature[11]	_	_	
+6-18	581-584	and	_	_	_	
+6-19	585-590	times	Property-time	_	_	
+6-20	590-591	.	_	_	_	
+
+#Text=The detailed annealing conditions are listed in
+#Text=Table 1.
+7-1	592-595	The	_	_	_	
+7-2	596-604	detailed	_	_	_	
+7-3	605-614	annealing	_	_	_	
+7-4	615-625	conditions	_	_	_	
+7-5	626-629	are	_	_	_	
+7-6	630-636	listed	_	_	_	
+7-7	637-639	in	_	_	_	
+7-8	640-645	Table	_	_	_	
+7-9	646-647	1	_	_	_	
+7-10	647-648	.	_	_	_	
+
+#Text=The temperature dependence of electrical resistivity below 300 K was
+#Text=measured using the four-terminal method.
+8-1	649-652	The	_	_	_	
+8-2	653-664	temperature	_	_	_	
+8-3	665-675	dependence	_	_	_	
+8-4	676-678	of	_	_	_	
+8-5	679-689	electrical	_	_	_	
+8-6	690-701	resistivity	_	_	_	
+8-7	702-707	below	_	_	_	
+8-8	708-711	300	_	_	_	
+8-9	712-713	K	_	_	_	
+8-10	714-717	was	_	_	_	
+8-11	718-726	measured	_	_	_	
+8-12	727-732	using	_	_	_	
+8-13	733-736	the	_	_	_	
+8-14	737-750	four-terminal	_	_	_	
+8-15	751-757	method	_	_	_	
+8-16	757-758	.	_	_	_	
+
+#Text=The DC magnetic susceptibility was
+#Text=measured using a superconducting quantum interference device (SQUID)
+#Text=magnetometer after both zero-field cooling (ZFC) and field cooling (FC).
+9-1	759-762	The	_	_	_	
+9-2	763-765	DC	_	_	_	
+9-3	766-774	magnetic	_	_	_	
+9-4	775-789	susceptibility	_	_	_	
+9-5	790-793	was	_	_	_	
+9-6	794-802	measured	_	_	_	
+9-7	803-808	using	_	_	_	
+9-8	809-810	a	_	_	_	
+9-9	811-826	superconducting	_	_	_	
+9-10	827-834	quantum	_	_	_	
+9-11	835-847	interference	_	_	_	
+9-12	848-854	device	_	_	_	
+9-13	855-856	(	_	_	_	
+9-14	856-861	SQUID	_	_	_	
+9-15	861-862	)	_	_	_	
+9-16	863-875	magnetometer	_	_	_	
+9-17	876-881	after	_	_	_	
+9-18	882-886	both	_	_	_	
+9-19	887-897	zero-field	_	_	_	
+9-20	898-905	cooling	_	_	_	
+9-21	906-907	(	_	_	_	
+9-22	907-910	ZFC	_	_	_	
+9-23	910-911	)	_	_	_	
+9-24	912-915	and	_	_	_	
+9-25	916-921	field	_	_	_	
+9-26	922-929	cooling	_	_	_	
+9-27	930-931	(	_	_	_	
+9-28	931-933	FC	_	_	_	
+9-29	933-934	)	_	_	_	
+9-30	934-935	.	_	_	_	
+
+#Text=The Tconset in
+#Text=the susceptibility measurement was estimated to be a temperature where the
+#Text=susceptibility began to decrease.
+10-1	936-939	The	_	_	_	
+10-2	940-947	Tconset	_	_	_	
+10-3	948-950	in	_	_	_	
+10-4	951-954	the	_	_	_	
+10-5	955-969	susceptibility	_	_	_	
+10-6	970-981	measurement	_	_	_	
+10-7	982-985	was	_	_	_	
+10-8	986-995	estimated	_	_	_	
+10-9	996-998	to	_	_	_	
+10-10	999-1001	be	_	_	_	
+10-11	1002-1003	a	_	_	_	
+10-12	1004-1015	temperature	_	_	_	
+10-13	1016-1021	where	_	_	_	
+10-14	1022-1025	the	_	_	_	
+10-15	1026-1040	susceptibility	_	_	_	
+10-16	1041-1046	began	_	_	_	
+10-17	1047-1049	to	_	_	_	
+10-18	1050-1058	decrease	_	_	_	
+10-19	1058-1059	.	_	_	_	
+
+#Text=The error of the Tconset in the phase diagram (Fig. 4)
+#Text=was estimated by considering the real value of the susceptibility error at normal
+#Text=conducting states around 15 K.
+11-1	1060-1063	The	_	_	_	
+11-2	1064-1069	error	_	_	_	
+11-3	1070-1072	of	_	_	_	
+11-4	1073-1076	the	_	_	_	
+11-5	1077-1084	Tconset	_	_	_	
+11-6	1085-1087	in	_	_	_	
+11-7	1088-1091	the	_	_	_	
+11-8	1092-1097	phase	_	_	_	
+11-9	1098-1105	diagram	_	_	_	
+11-10	1106-1107	(	_	_	_	
+11-11	1107-1110	Fig	_	_	_	
+11-12	1110-1111	.	_	_	_	
+11-13	1112-1113	4	_	_	_	
+11-14	1113-1114	)	_	_	_	
+11-15	1115-1118	was	_	_	_	
+11-16	1119-1128	estimated	_	_	_	
+11-17	1129-1131	by	_	_	_	
+11-18	1132-1143	considering	_	_	_	
+11-19	1144-1147	the	_	_	_	
+11-20	1148-1152	real	_	_	_	
+11-21	1153-1158	value	_	_	_	
+11-22	1159-1161	of	_	_	_	
+11-23	1162-1165	the	_	_	_	
+11-24	1166-1180	susceptibility	_	_	_	
+11-25	1181-1186	error	_	_	_	
+11-26	1187-1189	at	_	_	_	
+11-27	1190-1196	normal	_	_	_	
+11-28	1197-1207	conducting	_	_	_	
+11-29	1208-1214	states	_	_	_	
+11-30	1215-1221	around	_	_	_	
+11-31	1222-1224	15	_	_	_	
+11-32	1225-1226	K	_	_	_	
+11-33	1226-1227	.	_	_	_	
+
+#Text=For Tcirr, the reliable estimation of error was quite
+#Text=difficult due to drastic change of susceptibility around Tcirr.
+12-1	1228-1231	For	_	_	_	
+12-2	1232-1237	Tcirr	_	_	_	
+12-3	1237-1238	,	_	_	_	
+12-4	1239-1242	the	_	_	_	
+12-5	1243-1251	reliable	_	_	_	
+12-6	1252-1262	estimation	_	_	_	
+12-7	1263-1265	of	_	_	_	
+12-8	1266-1271	error	_	_	_	
+12-9	1272-1275	was	_	_	_	
+12-10	1276-1281	quite	_	_	_	
+12-11	1282-1291	difficult	_	_	_	
+12-12	1292-1295	due	_	_	_	
+12-13	1296-1298	to	_	_	_	
+12-14	1299-1306	drastic	_	_	_	
+12-15	1307-1313	change	_	_	_	
+12-16	1314-1316	of	_	_	_	
+12-17	1317-1331	susceptibility	_	_	_	
+12-18	1332-1338	around	_	_	_	
+12-19	1339-1344	Tcirr	_	_	_	
+12-20	1344-1345	.	_	_	_	
+
+#Text=Hence we did not plot in the
+#Text=phase diagram.
+13-1	1346-1351	Hence	_	_	_	
+13-2	1352-1354	we	_	_	_	
+13-3	1355-1358	did	_	_	_	
+13-4	1359-1362	not	_	_	_	
+13-5	1363-1367	plot	_	_	_	
+13-6	1368-1370	in	_	_	_	
+13-7	1371-1374	the	_	_	_	
+13-8	1375-1380	phase	_	_	_	
+13-9	1381-1388	diagram	_	_	_	
+13-10	1388-1389	.	_	_	_	
+
+#Text=The powder X-ray powder diffraction (XRD) experiments were carried
+#Text=out using a Rigaku SmartLab powder diffractometer equipped with a CuKα1
+#Text=monochrometer.
+14-1	1390-1393	The	_	_	_	
+14-2	1394-1400	powder	_	_	_	
+14-3	1401-1406	X-ray	_	_	_	
+14-4	1407-1413	powder	_	_	_	
+14-5	1414-1425	diffraction	_	_	_	
+14-6	1426-1427	(	_	_	_	
+14-7	1427-1430	XRD	_	_	_	
+14-8	1430-1431	)	_	_	_	
+14-9	1432-1443	experiments	_	_	_	
+14-10	1444-1448	were	_	_	_	
+14-11	1449-1456	carried	_	_	_	
+14-12	1457-1460	out	_	_	_	
+14-13	1461-1466	using	_	_	_	
+14-14	1467-1468	a	_	_	_	
+14-15	1469-1475	Rigaku	_	_	_	
+14-16	1476-1484	SmartLab	_	_	_	
+14-17	1485-1491	powder	_	_	_	
+14-18	1492-1506	diffractometer	_	_	_	
+14-19	1507-1515	equipped	_	_	_	
+14-20	1516-1520	with	_	_	_	
+14-21	1521-1522	a	_	_	_	
+14-22	1523-1528	CuKα1	_	_	_	
+14-23	1529-1542	monochrometer	_	_	_	
+14-24	1542-1543	.	_	_	_	
+
+#Text=To compare XRD patterns of various samples precisely, the standard Si
+#Text=powder was mixed with the samples, and used as the reference of the calibration of the
+#Text=peak shift.
+15-1	1544-1546	To	_	_	_	
+15-2	1547-1554	compare	_	_	_	
+15-3	1555-1558	XRD	_	_	_	
+15-4	1559-1567	patterns	_	_	_	
+15-5	1568-1570	of	_	_	_	
+15-6	1571-1578	various	_	_	_	
+15-7	1579-1586	samples	_	_	_	
+15-8	1587-1596	precisely	_	_	_	
+15-9	1596-1597	,	_	_	_	
+15-10	1598-1601	the	_	_	_	
+15-11	1602-1610	standard	_	_	_	
+15-12	1611-1613	Si	_	_	_	
+15-13	1614-1620	powder	_	_	_	
+15-14	1621-1624	was	_	_	_	
+15-15	1625-1630	mixed	_	_	_	
+15-16	1631-1635	with	_	_	_	
+15-17	1636-1639	the	_	_	_	
+15-18	1640-1647	samples	_	_	_	
+15-19	1647-1648	,	_	_	_	
+15-20	1649-1652	and	_	_	_	
+15-21	1653-1657	used	_	_	_	
+15-22	1658-1660	as	_	_	_	
+15-23	1661-1664	the	_	_	_	
+15-24	1665-1674	reference	_	_	_	
+15-25	1675-1677	of	_	_	_	
+15-26	1678-1681	the	_	_	_	
+15-27	1682-1693	calibration	_	_	_	
+15-28	1694-1696	of	_	_	_	
+15-29	1697-1700	the	_	_	_	
+15-30	1701-1705	peak	_	_	_	
+15-31	1706-1711	shift	_	_	_	
+15-32	1711-1712	.	_	_	_	

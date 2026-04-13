@@ -1,0 +1,323 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline samples of FexB2xMgx was prepared by solid state synthesis method, using high purity chemicals  of  (Ba(C2H3O2)2),  Fe(NO3).9H2O,  Mg(NO3)2,  citric  acid  and  Ethylene  Glycol  (Aldrich  >99.9%).
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-27	samples	_	_	_	
+1-4	28-30	of	_	_	_	
+1-5	31-40	FexB2xMgx	Material-target	Descriptor-of	1-2	
+1-6	41-44	was	_	_	_	
+1-7	45-53	prepared	Operation	Coreference|Participant-material|Participant-material|Participant-material|Participant-material|Participant-material|Participant-material	1-12|1-19[3_0]|1-27[4_0]|1-33[5_0]|1-39[6_0]|1-42[7_0]|1-5	
+1-8	54-56	by	_	_	_	
+1-9	57-62	solid	Descriptor[1]	_	_	
+1-10	63-68	state	Descriptor[1]	_	_	
+1-11	69-78	synthesis	Descriptor[1]	_	_	
+1-12	79-85	method	Operation	Descriptor-of	1-9[1_0]	
+1-13	85-86	,	_	_	_	
+1-14	87-92	using	_	_	_	
+1-15	93-97	high	Descriptor[2]	_	_	
+1-16	98-104	purity	Descriptor[2]	_	_	
+1-17	105-114	chemicals	Descriptor[2]	_	_	
+1-18	116-118	of	_	_	_	
+1-19	120-121	(	Material-recipe[3]	Descriptor-of	1-15[2_3]	
+1-20	121-123	Ba	Material-recipe[3]	_	_	
+1-21	123-124	(	Material-recipe[3]	_	_	
+1-22	124-130	C2H3O2	Material-recipe[3]	_	_	
+1-23	130-131	)	Material-recipe[3]	_	_	
+1-24	131-132	2	Material-recipe[3]	_	_	
+1-25	132-133	)	Material-recipe[3]	_	_	
+1-26	133-134	,	_	_	_	
+1-27	136-138	Fe	Material-recipe[4]	Descriptor-of	1-15[2_4]	
+1-28	138-139	(	Material-recipe[4]	_	_	
+1-29	139-142	NO3	Material-recipe[4]	_	_	
+1-30	142-143	)	Material-recipe[4]	_	_	
+1-31	143-148	.9H2O	Material-recipe[4]	_	_	
+1-32	148-149	,	_	_	_	
+1-33	151-153	Mg	Material-recipe[5]	Descriptor-of	1-15[2_5]	
+1-34	153-154	(	Material-recipe[5]	_	_	
+1-35	154-157	NO3	Material-recipe[5]	_	_	
+1-36	157-158	)	Material-recipe[5]	_	_	
+1-37	158-159	2	Material-recipe[5]	_	_	
+1-38	159-160	,	_	_	_	
+1-39	162-168	citric	Material-recipe[6]	_	_	
+1-40	170-174	acid	Material-recipe[6]	_	_	
+1-41	176-179	and	_	_	_	
+1-42	181-189	Ethylene	Material-recipe[7]	Brand-of|Value-of	1-45[0_7]|1-46[8_7]	
+1-43	191-197	Glycol	Material-recipe[7]	_	_	
+1-44	199-200	(	_	_	_	
+1-45	200-207	Aldrich	Brand	_	_	
+1-46	209-210	>	Value[8]	_	_	
+1-47	210-215	99.9%	Value[8]	_	_	
+1-48	215-216	)	_	_	_	
+1-49	216-217	.	_	_	_	
+
+#Text=Stoichiometric  amounts  of  the  chemicals  were  weighed  using  an  electronic  balance.
+2-1	219-233	Stoichiometric	Value[9]	_	_	
+2-2	235-242	amounts	Value[9]	_	_	
+2-3	244-246	of	_	_	_	
+2-4	248-251	the	_	_	_	
+2-5	253-262	chemicals	Material-intermedium	Value-of	2-1[9_0]	
+2-6	264-268	were	_	_	_	
+2-7	270-277	weighed	Operation	Participant-material|Device-of-operation	2-5|2-10[10_0]	
+2-8	279-284	using	_	_	_	
+2-9	286-288	an	Value	_	_	
+2-10	290-300	electronic	Device[10]	Value-of	2-9[0_10]	
+2-11	302-309	balance	Device[10]	_	_	
+2-12	309-310	.	_	_	_	
+
+#Text=The  chemicals  were  mixed  individually in 10 ml of distilled water inside different beakers.
+3-1	312-315	The	_	_	_	
+3-2	317-326	chemicals	Material-intermedium	_	_	
+3-3	328-332	were	_	_	_	
+3-4	334-339	mixed	Operation	Participant-material|Descriptor-of|Participant-material|Device-of-operation	3-2|3-5|3-11|3-14	
+3-5	341-353	individually	Descriptor	_	_	
+3-6	354-356	in	_	_	_	
+3-7	357-359	10	Value[11]	_	_	
+3-8	360-362	ml	Value[11]	_	_	
+3-9	363-365	of	_	_	_	
+3-10	366-375	distilled	Descriptor	_	_	
+3-11	376-381	water	Material-recipe	Descriptor-of|Value-of	3-10|3-7[11_0]	
+3-12	382-388	inside	_	_	_	
+3-13	389-398	different	_	_	_	
+3-14	399-406	beakers	Device	_	_	
+3-15	406-407	.	_	_	_	
+
+#Text=All the chemicals were mixed in a 100 ml beaker.
+4-1	408-411	All	Descriptor	_	_	
+4-2	412-415	the	_	_	_	
+4-3	416-425	chemicals	Material-intermedium	Descriptor-of	4-1	
+4-4	426-430	were	_	_	_	
+4-5	431-436	mixed	Operation	Participant-material|Device-of-operation	4-3|4-10	
+4-6	437-439	in	_	_	_	
+4-7	440-441	a	Value	_	_	
+4-8	442-445	100	Value[12]	_	_	
+4-9	446-448	ml	Value[12]	_	_	
+4-10	449-455	beaker	Device	Value-of|Value-of	4-7|4-8[12_0]	
+4-11	455-456	.	_	_	_	
+
+#Text=The  mixture  was  stirred  at  150  oC  on  a  digital  mixer  (700  rpm)  for  thirty  minutes.
+5-1	457-460	The	_	_	_	
+5-2	462-469	mixture	Material-intermedium	_	_	
+5-3	471-474	was	_	_	_	
+5-4	476-483	stirred	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Device-of-operation	5-2|5-6[13_0]|5-13[14_0]|5-17[15_0]|5-11	
+5-5	485-487	at	_	_	_	
+5-6	489-492	150	Property-temperature[13]	_	_	
+5-7	494-496	oC	Property-temperature[13]	_	_	
+5-8	498-500	on	_	_	_	
+5-9	502-503	a	Value	_	_	
+5-10	505-512	digital	Descriptor	_	_	
+5-11	514-519	mixer	Device	Value-of|Descriptor-of	5-9|5-10	
+5-12	521-522	(	_	_	_	
+5-13	522-525	700	Property-rate[14]	_	_	
+5-14	527-530	rpm	Property-rate[14]	_	_	
+5-15	530-531	)	_	_	_	
+5-16	533-536	for	_	_	_	
+5-17	538-544	thirty	Property-time[15]	_	_	
+5-18	546-553	minutes	Property-time[15]	_	_	
+5-19	553-554	.	_	_	_	
+
+#Text=The  polyesterification  of  the  homogenous  blue  solution  was  done  at  350  oC  for  65  minutes  (>1  hour).
+6-1	556-559	The	_	_	_	
+6-2	561-579	polyesterification	Operation	_	_	
+6-3	581-583	of	_	_	_	
+6-4	585-588	the	_	_	_	
+6-5	590-600	homogenous	Descriptor	_	_	
+6-6	602-606	blue	Descriptor	_	_	
+6-7	608-616	solution	Material-intermedium	Descriptor-of|Descriptor-of	6-5|6-6	
+6-8	618-621	was	_	_	_	
+6-9	623-627	done	Operation	Coreference|Condition-of|Condition-of	6-2|6-11[16_0]|6-14[17_0]	
+6-10	629-631	at	_	_	_	
+6-11	633-636	350	Property-temperature[16]	_	_	
+6-12	638-640	oC	Property-temperature[16]	_	_	
+6-13	642-645	for	_	_	_	
+6-14	647-649	65	Property-time[17]	Coreference	6-17[18_17]	
+6-15	651-658	minutes	Property-time[17]	_	_	
+6-16	660-661	(	_	_	_	
+6-17	661-662	>	Property-time[18]	_	_	
+6-18	662-663	1	Property-time[18]	_	_	
+6-19	665-669	hour	Property-time[18]	_	_	
+6-20	669-670	)	_	_	_	
+6-21	670-671	.	_	_	_	
+
+#Text=The  resulting  product  was  thoroughly  mixed and grinded using an agate mortar.
+7-1	673-676	The	_	_	_	
+7-2	678-687	resulting	Descriptor	_	_	
+7-3	689-696	product	Material-intermedium	Descriptor-of	7-2	
+7-4	698-701	was	_	_	_	
+7-5	703-713	thoroughly	Descriptor	_	_	
+7-6	715-720	mixed	Operation	Descriptor-of|Participant-material|Next-operation	7-5|7-3|7-8	
+7-7	721-724	and	_	_	_	
+7-8	725-732	grinded	Operation	Device-of-operation	7-12	
+7-9	733-738	using	_	_	_	
+7-10	739-741	an	Value	_	_	
+7-11	742-747	agate	Descriptor	_	_	
+7-12	748-754	mortar	Device	Descriptor-of|Value-of	7-11|7-10	
+7-13	754-755	.	_	_	_	
+
+#Text=The product was calcine for 330 minutes (5.5 hours) in air at 850 ◦C to give a white powder.
+8-1	756-759	The	_	_	_	
+8-2	760-767	product	Material-intermedium	_	_	
+8-3	768-771	was	_	_	_	
+8-4	772-779	calcine	Operation	Participant-material|Condition-of|Condition-of|Condition-of	8-2|8-6[19_0]|8-13|8-15[21_0]	
+8-5	780-783	for	_	_	_	
+8-6	784-787	330	Property-time[19]	Coreference	8-9[20_19]	
+8-7	788-795	minutes	Property-time[19]	_	_	
+8-8	796-797	(	_	_	_	
+8-9	797-800	5.5	Property-time[20]	_	_	
+8-10	801-806	hours	Property-time[20]	_	_	
+8-11	806-807	)	_	_	_	
+8-12	808-810	in	_	_	_	
+8-13	811-814	air	Property-pressure	_	_	
+8-14	815-817	at	_	_	_	
+8-15	818-821	850	Property-temperature[21]	_	_	
+8-16	822-823	◦	Property-temperature[21]	_	_	
+8-17	823-824	C	Property-temperature[21]	_	_	
+8-18	825-827	to	_	_	_	
+8-19	828-832	give	_	_	_	
+8-20	833-834	a	_	_	_	
+8-21	835-840	white	Descriptor	_	_	
+8-22	841-847	powder	Material-intermedium	Descriptor-of	8-21	
+8-23	847-848	.	_	_	_	
+
+#Text=The powder was grinded the second time using the agate mortar.
+9-1	849-852	The	_	_	_	
+9-2	853-859	powder	Material-intermedium	_	_	
+9-3	860-863	was	_	_	_	
+9-4	864-871	grinded	Operation	Participant-material|Condition-of|Device-of-operation	9-2|9-6[22_0]|9-11	
+9-5	872-875	the	_	_	_	
+9-6	876-882	second	Property-time[22]	_	_	
+9-7	883-887	time	Property-time[22]	_	_	
+9-8	888-893	using	_	_	_	
+9-9	894-897	the	_	_	_	
+9-10	898-903	agate	Descriptor	_	_	
+9-11	904-910	mortar	Device	Descriptor-of	9-10	
+9-12	910-911	.	_	_	_	
+
+#Text=After grinding, the powder was  formed  into  cylindrical  pellets  under  a  pressure  of  13  kN  at  room  temperature  for  7  minutes.
+10-1	912-917	After	_	_	_	
+10-2	918-926	grinding	Operation	Next-operation	10-7	
+10-3	926-927	,	_	_	_	
+10-4	928-931	the	_	_	_	
+10-5	932-938	powder	Material-intermedium	_	_	
+10-6	939-942	was	_	_	_	
+10-7	944-950	formed	Operation	Participant-material|Condition-of|Condition-of|Condition-of	10-5|10-15[23_0]|10-18[24_0]|10-21[25_0]	
+10-8	952-956	into	_	_	_	
+10-9	958-969	cylindrical	Descriptor	_	_	
+10-10	971-978	pellets	Material-intermedium	Descriptor-of	10-9	
+10-11	980-985	under	_	_	_	
+10-12	987-988	a	Value	_	_	
+10-13	990-998	pressure	Property-pressure	Value-of|Coreference	10-12|10-15[23_0]	
+10-14	1000-1002	of	_	_	_	
+10-15	1004-1006	13	Property-pressure[23]	_	_	
+10-16	1008-1010	kN	Property-pressure[23]	_	_	
+10-17	1012-1014	at	_	_	_	
+10-18	1016-1020	room	Property-temperature[24]	_	_	
+10-19	1022-1033	temperature	Property-temperature[24]	_	_	
+10-20	1035-1038	for	_	_	_	
+10-21	1040-1041	7	Property-time[25]	_	_	
+10-22	1043-1050	minutes	Property-time[25]	_	_	
+10-23	1050-1051	.	_	_	_	
+
+#Text=The  pellet  was  sintered at 850 oC for 60 minutes (1 hour) and cooled in air at room temperature.
+11-1	1053-1056	The	_	_	_	
+11-2	1058-1064	pellet	Material-intermedium	_	_	
+11-3	1066-1069	was	_	_	_	
+11-4	1071-1079	sintered	Operation	Participant-material|Condition-of|Condition-of|Next-operation	11-2|11-6[26_0]|11-9[27_0]|11-16	
+11-5	1080-1082	at	_	_	_	
+11-6	1083-1086	850	Property-time[26]	_	_	
+11-7	1087-1089	oC	Property-time[26]	_	_	
+11-8	1090-1093	for	_	_	_	
+11-9	1094-1096	60	Property-time[27]	Coreference	11-12[28_27]	
+11-10	1097-1104	minutes	Property-time[27]	_	_	
+11-11	1105-1106	(	_	_	_	
+11-12	1106-1107	1	Property-time[28]	_	_	
+11-13	1108-1112	hour	Property-time[28]	_	_	
+11-14	1112-1113	)	_	_	_	
+11-15	1114-1117	and	_	_	_	
+11-16	1118-1124	cooled	Operation	Condition-of|Condition-of	11-18|11-20[29_0]	
+11-17	1125-1127	in	_	_	_	
+11-18	1128-1131	air	Property-pressure	_	_	
+11-19	1132-1134	at	_	_	_	
+11-20	1135-1139	room	Property-temperature[29]	_	_	
+11-21	1140-1151	temperature	Property-temperature[29]	_	_	
+11-22	1151-1152	.	_	_	_	
+
+#Text=The pellet was sintered the second time  at  850  oC  for  16  hours.
+12-1	1153-1156	The	_	_	_	
+12-2	1157-1163	pellet	Material-intermedium	_	_	
+12-3	1164-1167	was	_	_	_	
+12-4	1168-1176	sintered	Operation	Participant-material|Condition-of|Condition-of|Condition-of	12-2|12-6[30_0]|12-9[31_0]|12-12[32_0]	
+12-5	1177-1180	the	_	_	_	
+12-6	1181-1187	second	Property-time[30]	_	_	
+12-7	1188-1192	time	Property-time[30]	_	_	
+12-8	1194-1196	at	_	_	_	
+12-9	1198-1201	850	Property-temperature[31]	_	_	
+12-10	1203-1205	oC	Property-temperature[31]	_	_	
+12-11	1207-1210	for	_	_	_	
+12-12	1212-1214	16	Property-time[32]	_	_	
+12-13	1216-1221	hours	Property-time[32]	_	_	
+12-14	1221-1222	.	_	_	_	
+
+#Text=The  sample  was  allowed  to  cool  in  air  at  room  temperature.
+13-1	1224-1227	The	_	_	_	
+13-2	1229-1235	sample	Material-intermedium	_	_	
+13-3	1237-1240	was	_	_	_	
+13-4	1242-1249	allowed	_	_	_	
+13-5	1251-1253	to	_	_	_	
+13-6	1255-1259	cool	Operation	Participant-material|Condition-of|Condition-of	13-2|13-8|13-10[33_0]	
+13-7	1261-1263	in	_	_	_	
+13-8	1265-1268	air	Property-pressure	_	_	
+13-9	1270-1272	at	_	_	_	
+13-10	1274-1278	room	Property-temperature[33]	_	_	
+13-11	1280-1291	temperature	Property-temperature[33]	_	_	
+13-12	1291-1292	.	_	_	_	
+
+#Text=Microstructural  examinations  of  the  samples  were  done  on  a  transmission  electron  microscopy  (TEM).
+14-1	1294-1309	Microstructural	_	_	_	
+14-2	1311-1323	examinations	_	_	_	
+14-3	1325-1327	of	_	_	_	
+14-4	1329-1332	the	_	_	_	
+14-5	1334-1341	samples	_	_	_	
+14-6	1343-1347	were	_	_	_	
+14-7	1349-1353	done	_	_	_	
+14-8	1355-1357	on	_	_	_	
+14-9	1359-1360	a	_	_	_	
+14-10	1362-1374	transmission	_	_	_	
+14-11	1376-1384	electron	_	_	_	
+14-12	1386-1396	microscopy	_	_	_	
+14-13	1398-1399	(	_	_	_	
+14-14	1399-1402	TEM	_	_	_	
+14-15	1402-1403	)	_	_	_	
+14-16	1403-1404	.	_	_	_	
+
+#Text=The  analysis  of  the  lattice  stability  of  the  TEM  images  was  done  using  ImageJ  software.
+15-1	1406-1409	The	_	_	_	
+15-2	1411-1419	analysis	_	_	_	
+15-3	1421-1423	of	_	_	_	
+15-4	1425-1428	the	_	_	_	
+15-5	1430-1437	lattice	_	_	_	
+15-6	1439-1448	stability	_	_	_	
+15-7	1450-1452	of	_	_	_	
+15-8	1454-1457	the	_	_	_	
+15-9	1459-1462	TEM	_	_	_	
+15-10	1464-1470	images	_	_	_	
+15-11	1472-1475	was	_	_	_	
+15-12	1477-1481	done	_	_	_	
+15-13	1483-1488	using	_	_	_	
+15-14	1490-1496	ImageJ	_	_	_	
+15-15	1498-1506	software	_	_	_	
+15-16	1506-1507	.	_	_	_	
+
+#Text=The  CERN-Root  software  was  used  for  graphical  plots.
+16-1	1509-1512	The	_	_	_	
+16-2	1514-1523	CERN-Root	_	_	_	
+16-3	1525-1533	software	_	_	_	
+16-4	1535-1538	was	_	_	_	
+16-5	1540-1544	used	_	_	_	
+16-6	1546-1549	for	_	_	_	
+16-7	1551-1560	graphical	_	_	_	
+16-8	1562-1567	plots	_	_	_	
+16-9	1567-1568	.	_	_	_	

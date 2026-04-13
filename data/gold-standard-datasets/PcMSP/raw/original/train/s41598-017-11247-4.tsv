@@ -1,0 +1,163 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=VSe2 samples were first synthesized in polycrystalline form by reacting powders of the starting materials, vanadium (Alfa Aesar, 99.5%) and selenium (Alfa Aesar, 99.999%).
+1-1	0-4	VSe2	Material-target	Descriptor-of	1-7	
+1-2	5-12	samples	_	_	_	
+1-3	13-17	were	_	_	_	
+1-4	18-23	first	_	_	_	
+1-5	24-35	synthesized	Operation	Participant-material	1-1	
+1-6	36-38	in	_	_	_	
+1-7	39-54	polycrystalline	Descriptor	_	_	
+1-8	55-59	form	_	_	_	
+1-9	60-62	by	_	_	_	
+1-10	63-71	reacting	Operation	Coreference|Participant-material|Participant-material	1-5|1-17|1-25	
+1-11	72-79	powders	Descriptor	_	_	
+1-12	80-82	of	_	_	_	
+1-13	83-86	the	_	_	_	
+1-14	87-95	starting	Descriptor	_	_	
+1-15	96-105	materials	Material-recipe	Descriptor-of	1-14	
+1-16	105-106	,	_	_	_	
+1-17	107-115	vanadium	Material-recipe	Descriptor-of|Brand-of|Value-of|Coreference	1-11|1-19[1_0]|1-22|1-15	
+1-18	116-117	(	_	_	_	
+1-19	117-121	Alfa	Brand[1]	_	_	
+1-20	122-127	Aesar	Brand[1]	_	_	
+1-21	127-128	,	_	_	_	
+1-22	129-134	99.5%	Value	_	_	
+1-23	134-135	)	_	_	_	
+1-24	136-139	and	_	_	_	
+1-25	140-148	selenium	Material-recipe	Brand-of|Value-of|Coreference	1-27[2_0]|1-30|1-15	
+1-26	149-150	(	_	_	_	
+1-27	150-154	Alfa	Brand[2]	_	_	
+1-28	155-160	Aesar	Brand[2]	_	_	
+1-29	160-161	,	_	_	_	
+1-30	162-169	99.999%	Value	_	_	
+1-31	169-170	)	_	_	_	
+1-32	170-171	.	_	_	_	
+
+#Text=Stoichiometric amounts of the powders were ground together and transferred into quartz tubes, which were evacuated and sealed.
+2-1	172-186	Stoichiometric	Value[3]	_	_	
+2-2	187-194	amounts	Value[3]	_	_	
+2-3	195-197	of	_	_	_	
+2-4	198-201	the	_	_	_	
+2-5	202-209	powders	Material-intermedium	Value-of	2-1[3_0]	
+2-6	210-214	were	_	_	_	
+2-7	215-221	ground	Operation	Participant-material|Next-operation	2-5|2-10	
+2-8	222-230	together	_	_	_	
+2-9	231-234	and	_	_	_	
+2-10	235-246	transferred	Operation	Device-of-operation|Next-operation	2-13|2-17	
+2-11	247-251	into	_	_	_	
+2-12	252-258	quartz	Descriptor	_	_	
+2-13	259-264	tubes	Device	Descriptor-of	2-12	
+2-14	264-265	,	_	_	_	
+2-15	266-271	which	_	_	_	
+2-16	272-276	were	_	_	_	
+2-17	277-286	evacuated	Operation	Next-operation	2-19	
+2-18	287-290	and	_	_	_	
+2-19	291-297	sealed	Operation	_	_	
+2-20	297-298	.	_	_	_	
+
+#Text=The polycrystalline mixture was then heat treated for several days at 750 °C, followed by a second heating at temperatures in the range 815–825 °C for several days.
+3-1	299-302	The	_	_	_	
+3-2	303-318	polycrystalline	Descriptor	_	_	
+3-3	319-326	mixture	Material-intermedium	Descriptor-of	3-2	
+3-4	327-330	was	_	_	_	
+3-5	331-335	then	_	_	_	
+3-6	336-340	heat	Operation[4]	Participant-material|Condition-of|Condition-of|Next-operation	3-3[0_4]|3-9[5_4]|3-12[6_4]|3-20[0_4]	
+3-7	341-348	treated	Operation[4]	_	_	
+3-8	349-352	for	_	_	_	
+3-9	353-360	several	Property-time[5]	_	_	
+3-10	361-365	days	Property-time[5]	_	_	
+3-11	366-368	at	_	_	_	
+3-12	369-372	750	Property-temperature[6]	_	_	
+3-13	373-374	°	Property-temperature[6]	_	_	
+3-14	374-375	C	Property-temperature[6]	_	_	
+3-15	375-376	,	_	_	_	
+3-16	377-385	followed	_	_	_	
+3-17	386-388	by	_	_	_	
+3-18	389-390	a	_	_	_	
+3-19	391-397	second	Descriptor	_	_	
+3-20	398-405	heating	Operation	Condition-of|Condition-of|Descriptor-of	3-26[7_0]|3-32[8_0]|3-19	
+3-21	406-408	at	_	_	_	
+3-22	409-421	temperatures	Property-temperature	_	_	
+3-23	422-424	in	_	_	_	
+3-24	425-428	the	_	_	_	
+3-25	429-434	range	_	_	_	
+3-26	435-438	815	Property-temperature[7]	Coreference	3-22[0_7]	
+3-27	438-439	–	Property-temperature[7]	_	_	
+3-28	439-442	825	Property-temperature[7]	_	_	
+3-29	443-444	°	Property-temperature[7]	_	_	
+3-30	444-445	C	Property-temperature[7]	_	_	
+3-31	446-449	for	_	_	_	
+3-32	450-457	several	Property-time[8]	_	_	
+3-33	458-462	days	Property-time[8]	_	_	
+3-34	462-463	.	_	_	_	
+
+#Text=Single crystals of VSe2 were grown by the chemical vapour transport method by using the polycrystalline VSe2 powder as the starting material.
+4-1	464-470	Single	_	_	_	
+4-2	471-479	crystals	_	_	_	
+4-3	480-482	of	_	_	_	
+4-4	483-487	VSe2	_	_	_	
+4-5	488-492	were	_	_	_	
+4-6	493-498	grown	_	_	_	
+4-7	499-501	by	_	_	_	
+4-8	502-505	the	_	_	_	
+4-9	506-514	chemical	_	_	_	
+4-10	515-521	vapour	_	_	_	
+4-11	522-531	transport	_	_	_	
+4-12	532-538	method	_	_	_	
+4-13	539-541	by	_	_	_	
+4-14	542-547	using	_	_	_	
+4-15	548-551	the	_	_	_	
+4-16	552-567	polycrystalline	_	_	_	
+4-17	568-572	VSe2	_	_	_	
+4-18	573-579	powder	_	_	_	
+4-19	580-582	as	_	_	_	
+4-20	583-586	the	_	_	_	
+4-21	587-595	starting	_	_	_	
+4-22	596-604	material	_	_	_	
+4-23	604-605	.	_	_	_	
+
+#Text=These powders were sealed in a quartz tube under vacuum and then kept in a temperature gradient using the procedure described in Refs. 4, 15, 50.
+5-1	606-611	These	_	_	_	
+5-2	612-619	powders	_	_	_	
+5-3	620-624	were	_	_	_	
+5-4	625-631	sealed	_	_	_	
+5-5	632-634	in	_	_	_	
+5-6	635-636	a	_	_	_	
+5-7	637-643	quartz	_	_	_	
+5-8	644-648	tube	_	_	_	
+5-9	649-654	under	_	_	_	
+5-10	655-661	vacuum	_	_	_	
+5-11	662-665	and	_	_	_	
+5-12	666-670	then	_	_	_	
+5-13	671-675	kept	_	_	_	
+5-14	676-678	in	_	_	_	
+5-15	679-680	a	_	_	_	
+5-16	681-692	temperature	_	_	_	
+5-17	693-701	gradient	_	_	_	
+5-18	702-707	using	_	_	_	
+5-19	708-711	the	_	_	_	
+5-20	712-721	procedure	_	_	_	
+5-21	722-731	described	_	_	_	
+5-22	732-734	in	_	_	_	
+5-23	735-739	Refs	_	_	_	
+5-24	739-740	.	_	_	_	
+5-25	741-742	4	_	_	_	
+5-26	742-743	,	_	_	_	
+5-27	744-746	15	_	_	_	
+5-28	746-747	,	_	_	_	
+5-29	748-750	50	_	_	_	
+5-30	750-751	.	_	_	_	
+
+#Text=Iodine was used as the transporting agent.
+6-1	752-758	Iodine	_	_	_	
+6-2	759-762	was	_	_	_	
+6-3	763-767	used	_	_	_	
+6-4	768-770	as	_	_	_	
+6-5	771-774	the	_	_	_	
+6-6	775-787	transporting	_	_	_	
+6-7	788-793	agent	_	_	_	
+6-8	793-794	.	_	_	_	

@@ -1,0 +1,183 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of TiSe2 were synthesized by solid state reaction with a Ti:Se ratio of 1:2.02.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-32	TiSe2	Material-target	Descriptor-of	1-1	
+1-5	33-37	were	_	_	_	
+1-6	38-49	synthesized	Operation	Coreference|Participant-material	1-8[1_0]|1-4	
+1-7	50-52	by	_	_	_	
+1-8	53-58	solid	Operation[1]	Participant-material	1-13[2_1]	
+1-9	59-64	state	Operation[1]	_	_	
+1-10	65-73	reaction	Operation[1]	_	_	
+1-11	74-78	with	_	_	_	
+1-12	79-80	a	_	_	_	
+1-13	81-83	Ti	Material-recipe[2]	Value-of	1-18[3_2]	
+1-14	83-84	:	Material-recipe[2]	_	_	
+1-15	84-86	Se	Material-recipe[2]	_	_	
+1-16	87-92	ratio	Descriptor	_	_	
+1-17	93-95	of	_	_	_	
+1-18	96-97	1	Value[3]	Descriptor-of	1-16[0_3]	
+1-19	97-98	:	Value[3]	_	_	
+1-20	98-102	2.02	Value[3]	_	_	
+1-21	102-103	.	_	_	_	
+
+#Text=The excess Se was added to compensate for the partial evaporation inherent during synthesis.
+2-1	104-107	The	_	_	_	
+2-2	108-114	excess	Descriptor	_	_	
+2-3	115-117	Se	Material-recipe	Descriptor-of	2-2	
+2-4	118-121	was	_	_	_	
+2-5	122-127	added	Operation	Participant-material	2-3	
+2-6	128-130	to	_	_	_	
+2-7	131-141	compensate	_	_	_	
+2-8	142-145	for	_	_	_	
+2-9	146-149	the	_	_	_	
+2-10	150-157	partial	_	_	_	
+2-11	158-169	evaporation	_	_	_	
+2-12	170-178	inherent	_	_	_	
+2-13	179-185	during	_	_	_	
+2-14	186-195	synthesis	_	_	_	
+2-15	195-196	.	_	_	_	
+
+#Text=The samples were sealed in quartz ampoules under partial Argon atmosphere and heated at 50◦C/hr to 650◦C, followed by a 48 hour dwell at this temperature.
+3-1	197-200	The	_	_	_	
+3-2	201-208	samples	Material-intermedium	_	_	
+3-3	209-213	were	_	_	_	
+3-4	214-220	sealed	Operation	Participant-material|Condition-of|Next-operation|Device-of-operation	3-2|3-9[4_0]|3-13|3-7	
+3-5	221-223	in	_	_	_	
+3-6	224-230	quartz	Descriptor	_	_	
+3-7	231-239	ampoules	Device	Descriptor-of	3-6	
+3-8	240-245	under	_	_	_	
+3-9	246-253	partial	Property-pressure[4]	_	_	
+3-10	254-259	Argon	Property-pressure[4]	_	_	
+3-11	260-270	atmosphere	Property-pressure[4]	_	_	
+3-12	271-274	and	_	_	_	
+3-13	275-281	heated	Operation	Condition-of|Condition-of|Next-operation	3-15[5_0]|3-21[6_0]|3-30	
+3-14	282-284	at	_	_	_	
+3-15	285-287	50	Property-rate[5]	_	_	
+3-16	287-288	◦	Property-rate[5]	_	_	
+3-17	288-289	C	Property-rate[5]	_	_	
+3-18	289-290	/	Property-rate[5]	_	_	
+3-19	290-292	hr	Property-rate[5]	_	_	
+3-20	293-295	to	_	_	_	
+3-21	296-299	650	Property-temperature[6]	Coreference	3-32[8_6]	
+3-22	299-300	◦	Property-temperature[6]	_	_	
+3-23	300-301	C	Property-temperature[6]	_	_	
+3-24	301-302	,	_	_	_	
+3-25	303-311	followed	_	_	_	
+3-26	312-314	by	_	_	_	
+3-27	315-316	a	_	_	_	
+3-28	317-319	48	Property-time[7]	_	_	
+3-29	320-324	hour	Property-time[7]	_	_	
+3-30	325-330	dwell	Operation	Condition-of|Condition-of	3-28[7_0]|3-32[8_0]	
+3-31	331-333	at	_	_	_	
+3-32	334-338	this	Property-temperature[8]	_	_	
+3-33	339-350	temperature	Property-temperature[8]	_	_	
+3-34	350-351	.	_	_	_	
+
+#Text=Subsequently, the samples were either cooled at different rates, or annealed at different temperatures or different times under partial Argon atmosphere.
+4-1	352-364	Subsequently	_	_	_	
+4-2	364-365	,	_	_	_	
+4-3	366-369	the	_	_	_	
+4-4	370-377	samples	Material-intermedium	_	_	
+4-5	378-382	were	_	_	_	
+4-6	383-389	either	_	_	_	
+4-7	390-396	cooled	Operation	Participant-material|Condition-of|Next-operation	4-4|4-9[9_0]|4-13	
+4-8	397-399	at	_	_	_	
+4-9	400-409	different	Property-rate[9]	_	_	
+4-10	410-415	rates	Property-rate[9]	_	_	
+4-11	415-416	,	_	_	_	
+4-12	417-419	or	_	_	_	
+4-13	420-428	annealed	Operation	Condition-of|Condition-of|Condition-of	4-15[10_0]|4-18[11_0]|4-21[12_0]	
+4-14	429-431	at	_	_	_	
+4-15	432-441	different	Property-temperature[10]	_	_	
+4-16	442-454	temperatures	Property-temperature[10]	_	_	
+4-17	455-457	or	_	_	_	
+4-18	458-467	different	Property-time[11]	_	_	
+4-19	468-473	times	Property-time[11]	_	_	
+4-20	474-479	under	_	_	_	
+4-21	480-487	partial	Property-pressure[12]	_	_	
+4-22	488-493	Argon	Property-pressure[12]	_	_	
+4-23	494-504	atmosphere	Property-pressure[12]	_	_	
+4-24	504-505	.	_	_	_	
+
+#Text=TiSe2 single crystals were grown by chemical vapor transport with I2 as the transport agent.
+5-1	506-511	TiSe2	_	_	_	
+5-2	512-518	single	_	_	_	
+5-3	519-527	crystals	_	_	_	
+5-4	528-532	were	_	_	_	
+5-5	533-538	grown	_	_	_	
+5-6	539-541	by	_	_	_	
+5-7	542-550	chemical	_	_	_	
+5-8	551-556	vapor	_	_	_	
+5-9	557-566	transport	_	_	_	
+5-10	567-571	with	_	_	_	
+5-11	572-574	I2	_	_	_	
+5-12	575-577	as	_	_	_	
+5-13	578-581	the	_	_	_	
+5-14	582-591	transport	_	_	_	
+5-15	592-597	agent	_	_	_	
+5-16	597-598	.	_	_	_	
+
+#Text=Ground elemental Ti and Se were sealed in quartz tubes with a ratio of 1:2.02 and 5 mg/cm3 of iodine.
+6-1	599-605	Ground	Descriptor[13]	_	_	
+6-2	606-615	elemental	Descriptor[13]	_	_	
+6-3	616-618	Ti	Material-recipe	Descriptor-of|Value-of	6-1[13_0]|6-15[14_0]	
+6-4	619-622	and	_	_	_	
+6-5	623-625	Se	Material-recipe	Descriptor-of|Value-of	6-1[13_0]|6-15[14_0]	
+6-6	626-630	were	_	_	_	
+6-7	631-637	sealed	Operation	Participant-material|Participant-material|Participant-material|Device-of-operation	6-3|6-5|6-24|6-10	
+6-8	638-640	in	_	_	_	
+6-9	641-647	quartz	Descriptor	_	_	
+6-10	648-653	tubes	Device	Descriptor-of	6-9	
+6-11	654-658	with	_	_	_	
+6-12	659-660	a	_	_	_	
+6-13	661-666	ratio	Descriptor	_	_	
+6-14	667-669	of	_	_	_	
+6-15	670-671	1	Value[14]	Descriptor-of	6-13[0_14]	
+6-16	671-672	:	Value[14]	_	_	
+6-17	672-676	2.02	Value[14]	_	_	
+6-18	677-680	and	_	_	_	
+6-19	681-682	5	Value[15]	_	_	
+6-20	683-685	mg	Value[15]	_	_	
+6-21	685-686	/	Value[15]	_	_	
+6-22	686-689	cm3	Value[15]	_	_	
+6-23	690-692	of	_	_	_	
+6-24	693-699	iodine	Material-others	Value-of	6-19[15_0]	
+6-25	699-700	.	_	_	_	
+
+#Text=The tubes were then placed in a 550◦C - 650◦C temperature gradient and held for 14 days, followed by controlled cooling to room temperature.
+7-1	701-704	The	_	_	_	
+7-2	705-710	tubes	Device	_	_	
+7-3	711-715	were	_	_	_	
+7-4	716-720	then	_	_	_	
+7-5	721-727	placed	Operation	Device-of-operation|Condition-of|Next-operation	7-2|7-8[16_0]|7-18	
+7-6	728-730	in	_	_	_	
+7-7	731-732	a	_	_	_	
+7-8	733-736	550	Property-temperature[16]	Descriptor-of	7-15[17_16]	
+7-9	736-737	◦	Property-temperature[16]	_	_	
+7-10	737-738	C	Property-temperature[16]	_	_	
+7-11	739-740	-	Property-temperature[16]	_	_	
+7-12	741-744	650	Property-temperature[16]	_	_	
+7-13	744-745	◦	Property-temperature[16]	_	_	
+7-14	745-746	C	Property-temperature[16]	_	_	
+7-15	747-758	temperature	Descriptor[17]	_	_	
+7-16	759-767	gradient	Descriptor[17]	_	_	
+7-17	768-771	and	_	_	_	
+7-18	772-776	held	Operation	Condition-of|Next-operation	7-20[18_0]|7-25[19_0]	
+7-19	777-780	for	_	_	_	
+7-20	781-783	14	Property-time[18]	_	_	
+7-21	784-788	days	Property-time[18]	_	_	
+7-22	788-789	,	_	_	_	
+7-23	790-798	followed	_	_	_	
+7-24	799-801	by	_	_	_	
+7-25	802-812	controlled	Operation[19]	Condition-of	7-28[20_19]	
+7-26	813-820	cooling	Operation[19]	_	_	
+7-27	821-823	to	_	_	_	
+7-28	824-828	room	Property-temperature[20]	_	_	
+7-29	829-840	temperature	Property-temperature[20]	_	_	
+7-30	840-841	.	_	_	_	

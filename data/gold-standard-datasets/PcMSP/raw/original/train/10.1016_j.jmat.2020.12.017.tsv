@@ -1,0 +1,80 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline Co3NiNb2O9 was synthesized by the conventional solid-state reaction.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-30	Co3NiNb2O9	Material-target	Descriptor-of	1-2	
+1-4	31-34	was	_	_	_	
+1-5	35-46	synthesized	Operation	Coreference|Participant-material	1-8[1_0]|1-3	
+1-6	47-49	by	_	_	_	
+1-7	50-53	the	_	_	_	
+1-8	54-66	conventional	Operation[1]	_	_	
+1-9	67-78	solid-state	Operation[1]	_	_	
+1-10	79-87	reaction	Operation[1]	_	_	
+1-11	87-88	.	_	_	_	
+
+#Text=The stoichiometric amounts of Co3O4, NiO, and Nb2O5 were mixed and well ground, followed by reaction in an alumina crucible at 900 °C for 24 h in air.
+2-1	89-92	The	_	_	_	
+2-2	93-107	stoichiometric	Value	_	_	
+2-3	108-115	amounts	_	_	_	
+2-4	116-118	of	_	_	_	
+2-5	119-124	Co3O4	Material-recipe	Value-of	2-2	
+2-6	124-125	,	_	_	_	
+2-7	126-129	NiO	Material-recipe	Value-of	2-2	
+2-8	129-130	,	_	_	_	
+2-9	131-134	and	_	_	_	
+2-10	135-140	Nb2O5	Material-recipe	Value-of	2-2	
+2-11	141-145	were	_	_	_	
+2-12	146-151	mixed	Operation	Participant-material|Participant-material|Participant-material|Next-operation	2-10|2-7|2-5|2-15	
+2-13	152-155	and	_	_	_	
+2-14	156-160	well	Descriptor	_	_	
+2-15	161-167	ground	Operation	Descriptor-of|Next-operation	2-14|2-19	
+2-16	167-168	,	_	_	_	
+2-17	169-177	followed	_	_	_	
+2-18	178-180	by	_	_	_	
+2-19	181-189	reaction	Operation	Condition-of|Condition-of|Condition-of|Device-of-operation	2-25[2_0]|2-29[3_0]|2-31[4_0]|2-23	
+2-20	190-192	in	_	_	_	
+2-21	193-195	an	Value	_	_	
+2-22	196-203	alumina	Descriptor	_	_	
+2-23	204-212	crucible	Device	Descriptor-of|Value-of	2-22|2-21	
+2-24	213-215	at	_	_	_	
+2-25	216-219	900	Property-temperature[2]	_	_	
+2-26	220-221	°	Property-temperature[2]	_	_	
+2-27	221-222	C	Property-temperature[2]	_	_	
+2-28	223-226	for	_	_	_	
+2-29	227-229	24	Property-time[3]	_	_	
+2-30	230-231	h	Property-time[3]	_	_	
+2-31	232-234	in	Property-pressure[4]	_	_	
+2-32	235-238	air	Property-pressure[4]	_	_	
+2-33	238-239	.	_	_	_	
+
+#Text=The resultant powder was reground and pressed into pellet under a pressure of 20 MPa and then sintered at 1100 °C for 24 h.
+3-1	240-243	The	_	_	_	
+3-2	244-253	resultant	Descriptor	_	_	
+3-3	254-260	powder	Material-intermedium	Descriptor-of	3-2	
+3-4	261-264	was	_	_	_	
+3-5	265-273	reground	Operation	Participant-material|Next-operation	3-3|3-7	
+3-6	274-277	and	_	_	_	
+3-7	278-285	pressed	Operation	Condition-of|Next-operation	3-14[5_0]|3-18	
+3-8	286-290	into	_	_	_	
+3-9	291-297	pellet	Material-intermedium	_	_	
+3-10	298-303	under	_	_	_	
+3-11	304-305	a	_	_	_	
+3-12	306-314	pressure	Property-pressure	_	_	
+3-13	315-317	of	_	_	_	
+3-14	318-320	20	Property-pressure[5]	Coreference	3-12[0_5]	
+3-15	321-324	MPa	Property-pressure[5]	_	_	
+3-16	325-328	and	_	_	_	
+3-17	329-333	then	_	_	_	
+3-18	334-342	sintered	Operation	Condition-of|Condition-of	3-20[6_0]|3-24[7_0]	
+3-19	343-345	at	_	_	_	
+3-20	346-350	1100	Property-temperature[6]	_	_	
+3-21	351-352	°	Property-temperature[6]	_	_	
+3-22	352-353	C	Property-temperature[6]	_	_	
+3-23	354-357	for	_	_	_	
+3-24	358-360	24	Property-time[7]	_	_	
+3-25	361-362	h	Property-time[7]	_	_	
+3-26	362-363	.	_	_	_	

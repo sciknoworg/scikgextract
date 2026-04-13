@@ -1,0 +1,227 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The A4–xBxNi3O10 samples (A and B = La, Pr, and Nd;
+#Text=x = 0, 1, 2, and 3) were synthesized via the citrate precursor
+#Text=method [27,30], the details of which are given in Appendix
+#Text=A.
+1-1	0-3	The	_	_	_	
+1-2	4-6	A4	Material-recipe[1]	Descriptor-of|Descriptor-of	1-7[2_1]|1-18[3_1]	
+1-3	6-7	–	Material-recipe[1]	_	_	
+1-4	7-16	xBxNi3O10	Material-recipe[1]	_	_	
+1-5	17-24	samples	_	_	_	
+1-6	25-26	(	_	_	_	
+1-7	26-27	A	Descriptor[2]	_	_	
+1-8	28-31	and	Descriptor[2]	_	_	
+1-9	32-33	B	Descriptor[2]	_	_	
+1-10	34-35	=	Descriptor[2]	_	_	
+1-11	36-38	La	Descriptor[2]	_	_	
+1-12	38-39	,	Descriptor[2]	_	_	
+1-13	40-42	Pr	Descriptor[2]	_	_	
+1-14	42-43	,	Descriptor[2]	_	_	
+1-15	44-47	and	Descriptor[2]	_	_	
+1-16	48-50	Nd	Descriptor[2]	_	_	
+1-17	50-51	;	_	_	_	
+1-18	52-53	x	Descriptor[3]	_	_	
+1-19	54-55	=	Descriptor[3]	_	_	
+1-20	56-57	0	Descriptor[3]	_	_	
+1-21	57-58	,	Descriptor[3]	_	_	
+1-22	59-60	1	Descriptor[3]	_	_	
+1-23	60-61	,	Descriptor[3]	_	_	
+1-24	62-63	2	Descriptor[3]	_	_	
+1-25	63-64	,	Descriptor[3]	_	_	
+1-26	65-68	and	Descriptor[3]	_	_	
+1-27	69-70	3	Descriptor[3]	_	_	
+1-28	70-71	)	_	_	_	
+1-29	72-76	were	_	_	_	
+1-30	77-88	synthesized	Operation	Coreference|Participant-material	1-33[4_0]|1-2[1_0]	
+1-31	89-92	via	_	_	_	
+1-32	93-96	the	_	_	_	
+1-33	97-104	citrate	Operation[4]	_	_	
+1-34	105-114	precursor	Operation[4]	_	_	
+1-35	115-121	method	Operation[4]	_	_	
+1-36	122-123	[	_	_	_	
+1-37	123-128	27,30	_	_	_	
+1-38	128-129	]	_	_	_	
+1-39	129-130	,	_	_	_	
+1-40	131-134	the	_	_	_	
+1-41	135-142	details	_	_	_	
+1-42	143-145	of	_	_	_	
+1-43	146-151	which	_	_	_	
+1-44	152-155	are	_	_	_	
+1-45	156-161	given	_	_	_	
+1-46	162-164	in	_	_	_	
+1-47	165-173	Appendix	_	_	_	
+1-48	174-175	A	_	_	_	
+1-49	175-176	.	_	_	_	
+
+#Text=These precursors have been annealed at 1100 °C in oxygen
+#Text=atmosphere for 24 h, except for La4Ni3O10 (which does not
+#Text=require oxygen atmosphere) and Nd4Ni3O10 (which needs a
+#Text=reacting time of 72 h).
+2-1	177-182	These	_	_	_	
+2-2	183-193	precursors	Material-recipe	_	_	
+2-3	194-198	have	_	_	_	
+2-4	199-203	been	_	_	_	
+2-5	204-212	annealed	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Participant-material|Participant-material	2-2|2-7[5_0]|2-11[6_0]|2-14[7_0]|2-19|2-29	
+2-6	213-215	at	_	_	_	
+2-7	216-220	1100	Property-temperature[5]	_	_	
+2-8	221-222	°	Property-temperature[5]	_	_	
+2-9	222-223	C	Property-temperature[5]	_	_	
+2-10	224-226	in	_	_	_	
+2-11	227-233	oxygen	Property-pressure[6]	_	_	
+2-12	234-244	atmosphere	Property-pressure[6]	_	_	
+2-13	245-248	for	_	_	_	
+2-14	249-251	24	Property-time[7]	_	_	
+2-15	252-253	h	Property-time[7]	_	_	
+2-16	253-254	,	_	_	_	
+2-17	255-261	except	_	_	_	
+2-18	262-265	for	_	_	_	
+2-19	266-275	La4Ni3O10	Material-recipe	Condition-of	2-23[8_0]	
+2-20	276-277	(	_	_	_	
+2-21	277-282	which	_	_	_	
+2-22	283-287	does	_	_	_	
+2-23	288-291	not	Property-pressure[8]	_	_	
+2-24	292-299	require	Property-pressure[8]	_	_	
+2-25	300-306	oxygen	Property-pressure[8]	_	_	
+2-26	307-317	atmosphere	Property-pressure[8]	_	_	
+2-27	317-318	)	_	_	_	
+2-28	319-322	and	_	_	_	
+2-29	323-332	Nd4Ni3O10	Material-recipe	Condition-of	2-37[9_0]	
+2-30	333-334	(	_	_	_	
+2-31	334-339	which	_	_	_	
+2-32	340-345	needs	_	_	_	
+2-33	346-347	a	_	_	_	
+2-34	348-356	reacting	_	_	_	
+2-35	357-361	time	_	_	_	
+2-36	362-364	of	_	_	_	
+2-37	365-367	72	Property-time[9]	_	_	
+2-38	368-369	h	Property-time[9]	_	_	
+2-39	369-370	)	_	_	_	
+2-40	370-371	.	_	_	_	
+
+#Text=The compacted and pelleted samples for electronic-transport measurements were obtained by
+#Text=pressing the powder and annealing again at 1100 °C in oxygen
+#Text=atmosphere for 24 h.
+3-1	372-375	The	_	_	_	
+3-2	376-385	compacted	Descriptor	_	_	
+3-3	386-389	and	_	_	_	
+3-4	390-398	pelleted	Descriptor	_	_	
+3-5	399-406	samples	Material-intermedium	Descriptor-of|Descriptor-of	3-4|3-2	
+3-6	407-410	for	_	_	_	
+3-7	411-431	electronic-transport	_	_	_	
+3-8	432-444	measurements	_	_	_	
+3-9	445-449	were	_	_	_	
+3-10	450-458	obtained	Operation	Participant-material	3-5	
+3-11	459-461	by	_	_	_	
+3-12	462-470	pressing	Operation	Participant-material	3-14	
+3-13	471-474	the	_	_	_	
+3-14	475-481	powder	Material-intermedium	_	_	
+3-15	482-485	and	_	_	_	
+3-16	486-495	annealing	Operation	Next-operation|Condition-of|Condition-of|Condition-of|Next-operation	3-12|3-19[10_0]|3-23[11_0]|3-26[12_0]|3-10	
+3-17	496-501	again	_	_	_	
+3-18	502-504	at	_	_	_	
+3-19	505-509	1100	Property-temperature[10]	_	_	
+3-20	510-511	°	Property-temperature[10]	_	_	
+3-21	511-512	C	Property-temperature[10]	_	_	
+3-22	513-515	in	_	_	_	
+3-23	516-522	oxygen	Property-pressure[11]	_	_	
+3-24	523-533	atmosphere	Property-pressure[11]	_	_	
+3-25	534-537	for	_	_	_	
+3-26	538-540	24	Property-time[12]	_	_	
+3-27	541-542	h	Property-time[12]	_	_	
+3-28	542-543	.	_	_	_	
+
+#Text=All samples were characterized by
+#Text=powder XRD at room temperature [Fig. 1(a)], and the results
+#Text=show sharp peaks without visible impurities.
+4-1	544-547	All	_	_	_	
+4-2	548-555	samples	_	_	_	
+4-3	556-560	were	_	_	_	
+4-4	561-574	characterized	_	_	_	
+4-5	575-577	by	_	_	_	
+4-6	578-584	powder	_	_	_	
+4-7	585-588	XRD	_	_	_	
+4-8	589-591	at	_	_	_	
+4-9	592-596	room	_	_	_	
+4-10	597-608	temperature	_	_	_	
+4-11	609-610	[	_	_	_	
+4-12	610-613	Fig	_	_	_	
+4-13	613-614	.	_	_	_	
+4-14	615-616	1	_	_	_	
+4-15	616-617	(	_	_	_	
+4-16	617-618	a	_	_	_	
+4-17	618-619	)	_	_	_	
+4-18	619-620	]	_	_	_	
+4-19	620-621	,	_	_	_	
+4-20	622-625	and	_	_	_	
+4-21	626-629	the	_	_	_	
+4-22	630-637	results	_	_	_	
+4-23	638-642	show	_	_	_	
+4-24	643-648	sharp	_	_	_	
+4-25	649-654	peaks	_	_	_	
+4-26	655-662	without	_	_	_	
+4-27	663-670	visible	_	_	_	
+4-28	671-681	impurities	_	_	_	
+4-29	681-682	.	_	_	_	
+
+#Text=The elemental
+#Text=compositions of all samples were confirmed by EDX (see
+#Text=Appendix C).
+5-1	683-686	The	_	_	_	
+5-2	687-696	elemental	_	_	_	
+5-3	697-709	compositions	_	_	_	
+5-4	710-712	of	_	_	_	
+5-5	713-716	all	_	_	_	
+5-6	717-724	samples	_	_	_	
+5-7	725-729	were	_	_	_	
+5-8	730-739	confirmed	_	_	_	
+5-9	740-742	by	_	_	_	
+5-10	743-746	EDX	_	_	_	
+5-11	747-748	(	_	_	_	
+5-12	748-751	see	_	_	_	
+5-13	752-760	Appendix	_	_	_	
+5-14	761-762	C	_	_	_	
+5-15	762-763	)	_	_	_	
+5-16	763-764	.	_	_	_	
+
+#Text=According to our thermogravimetric analysis,
+#Text=we can confirm an almost stoichiometric oxygen content for
+#Text=all compounds with values around 10.0 within 1% or better
+#Text=(see Table II in Appendix B).
+6-1	765-774	According	_	_	_	
+6-2	775-777	to	_	_	_	
+6-3	778-781	our	_	_	_	
+6-4	782-799	thermogravimetric	_	_	_	
+6-5	800-808	analysis	_	_	_	
+6-6	808-809	,	_	_	_	
+6-7	810-812	we	_	_	_	
+6-8	813-816	can	_	_	_	
+6-9	817-824	confirm	_	_	_	
+6-10	825-827	an	_	_	_	
+6-11	828-834	almost	_	_	_	
+6-12	835-849	stoichiometric	_	_	_	
+6-13	850-856	oxygen	_	_	_	
+6-14	857-864	content	_	_	_	
+6-15	865-868	for	_	_	_	
+6-16	869-872	all	_	_	_	
+6-17	873-882	compounds	_	_	_	
+6-18	883-887	with	_	_	_	
+6-19	888-894	values	_	_	_	
+6-20	895-901	around	_	_	_	
+6-21	902-906	10.0	_	_	_	
+6-22	907-913	within	_	_	_	
+6-23	914-916	1%	_	_	_	
+6-24	917-919	or	_	_	_	
+6-25	920-926	better	_	_	_	
+6-26	927-928	(	_	_	_	
+6-27	928-931	see	_	_	_	
+6-28	932-937	Table	_	_	_	
+6-29	938-940	II	_	_	_	
+6-30	941-943	in	_	_	_	
+6-31	944-952	Appendix	_	_	_	
+6-32	953-954	B	_	_	_	
+6-33	954-955	)	_	_	_	
+6-34	955-956	.	_	_	_	

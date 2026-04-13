@@ -1,0 +1,207 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline sample of composition Sr2CoO4 was synthesized under high pressure at high temperature.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-22	sample	_	_	_	
+1-3	23-25	of	_	_	_	
+1-4	26-37	composition	_	_	_	
+1-5	38-45	Sr2CoO4	Material-target	Descriptor-of	1-1	
+1-6	46-49	was	_	_	_	
+1-7	50-61	synthesized	Operation	Participant-material|Condition-of|Condition-of	1-5|1-9[1_0]|1-12[2_0]	
+1-8	62-67	under	_	_	_	
+1-9	68-72	high	Property-pressure[1]	_	_	
+1-10	73-81	pressure	Property-pressure[1]	_	_	
+1-11	82-84	at	_	_	_	
+1-12	85-89	high	Property-temperature[2]	_	_	
+1-13	90-101	temperature	Property-temperature[2]	_	_	
+1-14	101-102	.	_	_	_	
+
+#Text=Starting materials of SrO2 and Co were well mixed in a molar ratio of SrO2 : Co = 2 : 1.
+2-1	103-111	Starting	Material-recipe[3]	Condition-of|Condition-of	2-4[0_3]|2-6[0_3]	
+2-2	112-121	materials	Material-recipe[3]	_	_	
+2-3	122-124	of	_	_	_	
+2-4	125-129	SrO2	Material-recipe	Coreference	2-15	
+2-5	130-133	and	_	_	_	
+2-6	134-136	Co	Material-recipe	Coreference	2-17	
+2-7	137-141	were	_	_	_	
+2-8	142-146	well	Descriptor	_	_	
+2-9	147-152	mixed	Operation	Descriptor-of|Participant-material	2-8|2-1[3_0]	
+2-10	153-155	in	_	_	_	
+2-11	156-157	a	_	_	_	
+2-12	158-163	molar	Descriptor[4]	_	_	
+2-13	164-169	ratio	Descriptor[4]	_	_	
+2-14	170-172	of	_	_	_	
+2-15	173-177	SrO2	Material-recipe	_	_	
+2-16	178-179	:	_	_	_	
+2-17	180-182	Co	Material-recipe	_	_	
+2-18	183-184	=	_	_	_	
+2-19	185-186	2	Value[5]	Descriptor-of	2-12[4_5]	
+2-20	187-188	:	Value[5]	_	_	
+2-21	189-190	1	Value[5]	_	_	
+2-22	190-191	.	_	_	_	
+
+#Text=The mixture was sealed into a gold capsule.
+3-1	192-195	The	_	_	_	
+3-2	196-203	mixture	Material-intermedium	_	_	
+3-3	204-207	was	_	_	_	
+3-4	208-214	sealed	Operation	Participant-material|Device-of-operation	3-2|3-8	
+3-5	215-219	into	_	_	_	
+3-6	220-221	a	Value	_	_	
+3-7	222-226	gold	Descriptor	_	_	
+3-8	227-234	capsule	Device	Descriptor-of|Value-of	3-7|3-6	
+3-9	234-235	.	_	_	_	
+
+#Text=The capsule was first compressed at 6 GPa in a high pressure apparatus (flat-belt-type-high-pressure apparatus, 1500 ton), then heated to 1200 °C for 30 minutes and finally quenched to room temperature followed by releasing of pressure.
+4-1	236-239	The	_	_	_	
+4-2	240-247	capsule	Device	_	_	
+4-3	248-251	was	_	_	_	
+4-4	252-257	first	_	_	_	
+4-5	258-268	compressed	Operation	Device-of-operation|Condition-of|Device-of-operation|Next-operation	4-2|4-7[6_0]|4-13|4-23	
+4-6	269-271	at	_	_	_	
+4-7	272-273	6	Property-pressure[6]	_	_	
+4-8	274-277	GPa	Property-pressure[6]	_	_	
+4-9	278-280	in	_	_	_	
+4-10	281-282	a	Value	_	_	
+4-11	283-287	high	Descriptor[7]	_	_	
+4-12	288-296	pressure	Descriptor[7]	_	_	
+4-13	297-306	apparatus	Device	Descriptor-of|Value-of|Coreference	4-11[7_0]|4-10|4-16	
+4-14	307-308	(	_	_	_	
+4-15	308-336	flat-belt-type-high-pressure	Descriptor	_	_	
+4-16	337-346	apparatus	Device	Descriptor-of|Descriptor-of	4-18[8_0]|4-15	
+4-17	346-347	,	_	_	_	
+4-18	348-352	1500	Descriptor[8]	_	_	
+4-19	353-356	ton	Descriptor[8]	_	_	
+4-20	356-357	)	_	_	_	
+4-21	357-358	,	_	_	_	
+4-22	359-363	then	_	_	_	
+4-23	364-370	heated	Operation	Device-of-operation|Condition-of|Condition-of|Next-operation	4-13|4-25[9_0]|4-29[10_0]|4-33	
+4-24	371-373	to	_	_	_	
+4-25	374-378	1200	Property-temperature[9]	_	_	
+4-26	379-380	°	Property-temperature[9]	_	_	
+4-27	380-381	C	Property-temperature[9]	_	_	
+4-28	382-385	for	_	_	_	
+4-29	386-388	30	Property-time[10]	_	_	
+4-30	389-396	minutes	Property-time[10]	_	_	
+4-31	397-400	and	_	_	_	
+4-32	401-408	finally	_	_	_	
+4-33	409-417	quenched	Operation	Condition-of|Next-operation	4-35[11_0]|4-39[12_0]	
+4-34	418-420	to	_	_	_	
+4-35	421-425	room	Property-temperature[11]	_	_	
+4-36	426-437	temperature	Property-temperature[11]	_	_	
+4-37	438-446	followed	_	_	_	
+4-38	447-449	by	_	_	_	
+4-39	450-459	releasing	Operation[12]	_	_	
+4-40	460-462	of	Operation[12]	_	_	
+4-41	463-471	pressure	Operation[12]	_	_	
+4-42	471-472	.	_	_	_	
+
+#Text=The crystal structure of the polycrystalline sample was identified by the powder X-ray diffraction (XRD, Rigaku Smartlab3), using Cu-Kα radiation (λ = 1.54184 Å).
+5-1	473-476	The	_	_	_	
+5-2	477-484	crystal	_	_	_	
+5-3	485-494	structure	_	_	_	
+5-4	495-497	of	_	_	_	
+5-5	498-501	the	_	_	_	
+5-6	502-517	polycrystalline	_	_	_	
+5-7	518-524	sample	_	_	_	
+5-8	525-528	was	_	_	_	
+5-9	529-539	identified	_	_	_	
+5-10	540-542	by	_	_	_	
+5-11	543-546	the	_	_	_	
+5-12	547-553	powder	_	_	_	
+5-13	554-559	X-ray	_	_	_	
+5-14	560-571	diffraction	_	_	_	
+5-15	572-573	(	_	_	_	
+5-16	573-576	XRD	_	_	_	
+5-17	576-577	,	_	_	_	
+5-18	578-584	Rigaku	_	_	_	
+5-19	585-594	Smartlab3	_	_	_	
+5-20	594-595	)	_	_	_	
+5-21	595-596	,	_	_	_	
+5-22	597-602	using	_	_	_	
+5-23	603-608	Cu-Kα	_	_	_	
+5-24	609-618	radiation	_	_	_	
+5-25	619-620	(	_	_	_	
+5-26	620-621	λ	_	_	_	
+5-27	622-623	=	_	_	_	
+5-28	624-631	1.54184	_	_	_	
+5-29	632-633	Å	_	_	_	
+5-30	633-634	)	_	_	_	
+5-31	634-635	.	_	_	_	
+
+#Text=The morphology of the sample was observed using a scanning electron microscope (SEM).
+6-1	636-639	The	_	_	_	
+6-2	640-650	morphology	_	_	_	
+6-3	651-653	of	_	_	_	
+6-4	654-657	the	_	_	_	
+6-5	658-664	sample	_	_	_	
+6-6	665-668	was	_	_	_	
+6-7	669-677	observed	_	_	_	
+6-8	678-683	using	_	_	_	
+6-9	684-685	a	_	_	_	
+6-10	686-694	scanning	_	_	_	
+6-11	695-703	electron	_	_	_	
+6-12	704-714	microscope	_	_	_	
+6-13	715-716	(	_	_	_	
+6-14	716-719	SEM	_	_	_	
+6-15	719-720	)	_	_	_	
+6-16	720-721	.	_	_	_	
+
+#Text=The dc magnetic measurements were investigated using a vibrating sample magnetometer (VSM) integrated in a physical property measurement system (PPMS-9, Quantum Design).
+7-1	722-725	The	_	_	_	
+7-2	726-728	dc	_	_	_	
+7-3	729-737	magnetic	_	_	_	
+7-4	738-750	measurements	_	_	_	
+7-5	751-755	were	_	_	_	
+7-6	756-768	investigated	_	_	_	
+7-7	769-774	using	_	_	_	
+7-8	775-776	a	_	_	_	
+7-9	777-786	vibrating	_	_	_	
+7-10	787-793	sample	_	_	_	
+7-11	794-806	magnetometer	_	_	_	
+7-12	807-808	(	_	_	_	
+7-13	808-811	VSM	_	_	_	
+7-14	811-812	)	_	_	_	
+7-15	813-823	integrated	_	_	_	
+7-16	824-826	in	_	_	_	
+7-17	827-828	a	_	_	_	
+7-18	829-837	physical	_	_	_	
+7-19	838-846	property	_	_	_	
+7-20	847-858	measurement	_	_	_	
+7-21	859-865	system	_	_	_	
+7-22	866-867	(	_	_	_	
+7-23	867-871	PPMS	_	_	_	
+7-24	871-872	-	_	_	_	
+7-25	872-873	9	_	_	_	
+7-26	873-874	,	_	_	_	
+7-27	875-882	Quantum	_	_	_	
+7-28	883-889	Design	_	_	_	
+7-29	889-890	)	_	_	_	
+7-30	890-891	.	_	_	_	
+
+#Text=The electrical resistivity of the sample was measured with a Quantum Design PPMS-9 system using the standard four-probe ac method.
+8-1	892-895	The	_	_	_	
+8-2	896-906	electrical	_	_	_	
+8-3	907-918	resistivity	_	_	_	
+8-4	919-921	of	_	_	_	
+8-5	922-925	the	_	_	_	
+8-6	926-932	sample	_	_	_	
+8-7	933-936	was	_	_	_	
+8-8	937-945	measured	_	_	_	
+8-9	946-950	with	_	_	_	
+8-10	951-952	a	_	_	_	
+8-11	953-960	Quantum	_	_	_	
+8-12	961-967	Design	_	_	_	
+8-13	968-972	PPMS	_	_	_	
+8-14	972-973	-	_	_	_	
+8-15	973-974	9	_	_	_	
+8-16	975-981	system	_	_	_	
+8-17	982-987	using	_	_	_	
+8-18	988-991	the	_	_	_	
+8-19	992-1000	standard	_	_	_	
+8-20	1001-1011	four-probe	_	_	_	
+8-21	1012-1014	ac	_	_	_	
+8-22	1015-1021	method	_	_	_	
+8-23	1021-1022	.	_	_	_	

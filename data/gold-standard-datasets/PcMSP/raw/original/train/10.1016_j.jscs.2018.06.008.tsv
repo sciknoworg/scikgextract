@@ -1,0 +1,208 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The Sr2Co2GexMnxFe12−2xO22, (where X = 0.0, 0.1, 0.2, 0.3, 0.4 and 0.5) polycrystalline nanomaterials were fabricated by simple sol–gel process.
+1-1	0-3	The	_	_	_	
+1-2	4-20	Sr2Co2GexMnxFe12	Material-target[1]	Descriptor-of|Descriptor-of|Descriptor-of	1-8[2_1]|1-24[0_1]|1-25[0_1]	
+1-3	20-21	−	Material-target[1]	_	_	
+1-4	21-26	2xO22	Material-target[1]	_	_	
+1-5	26-27	,	_	_	_	
+1-6	28-29	(	_	_	_	
+1-7	29-34	where	_	_	_	
+1-8	35-36	X	Descriptor[2]	_	_	
+1-9	36-37	 	Descriptor[2]	_	_	
+1-10	37-38	=	Descriptor[2]	_	_	
+1-11	38-39	 	Descriptor[2]	_	_	
+1-12	39-42	0.0	Descriptor[2]	_	_	
+1-13	42-43	,	Descriptor[2]	_	_	
+1-14	44-47	0.1	Descriptor[2]	_	_	
+1-15	47-48	,	Descriptor[2]	_	_	
+1-16	49-52	0.2	Descriptor[2]	_	_	
+1-17	52-53	,	Descriptor[2]	_	_	
+1-18	54-57	0.3	Descriptor[2]	_	_	
+1-19	57-58	,	Descriptor[2]	_	_	
+1-20	59-62	0.4	Descriptor[2]	_	_	
+1-21	63-66	and	Descriptor[2]	_	_	
+1-22	67-70	0.5	Descriptor[2]	_	_	
+1-23	70-71	)	_	_	_	
+1-24	72-87	polycrystalline	Descriptor	_	_	
+1-25	88-101	nanomaterials	Descriptor	_	_	
+1-26	102-106	were	_	_	_	
+1-27	107-117	fabricated	Operation	Participant-material|Coreference	1-8[2_0]|1-29[3_0]	
+1-28	118-120	by	_	_	_	
+1-29	121-127	simple	Operation[3]	_	_	
+1-30	128-135	sol–gel	Operation[3]	_	_	
+1-31	136-143	process	Operation[3]	_	_	
+1-32	143-144	.	_	_	_	
+
+#Text=The required amount of metal salts (given in table 1) were dissolved in deionized water and stirred on magnetic stirring hot plate at 50 °C for half an hour.
+2-1	145-148	The	_	_	_	
+2-2	149-157	required	Value[4]	_	_	
+2-3	158-164	amount	Value[4]	_	_	
+2-4	165-167	of	_	_	_	
+2-5	168-173	metal	Material-recipe[5]	Value-of	2-2[4_5]	
+2-6	174-179	salts	Material-recipe[5]	_	_	
+2-7	180-181	(	_	_	_	
+2-8	181-186	given	_	_	_	
+2-9	187-189	in	_	_	_	
+2-10	190-195	table	_	_	_	
+2-11	196-197	1	_	_	_	
+2-12	197-198	)	_	_	_	
+2-13	199-203	were	_	_	_	
+2-14	204-213	dissolved	Operation	Next-operation|Participant-material|Participant-material	2-19|2-5[5_0]|2-16[6_0]	
+2-15	214-216	in	_	_	_	
+2-16	217-226	deionized	Material-others[6]	_	_	
+2-17	227-232	water	Material-others[6]	_	_	
+2-18	233-236	and	_	_	_	
+2-19	237-244	stirred	Operation	Condition-of|Condition-of|Device-of-operation	2-31[9_0]|2-26[8_0]|2-22[7_0]	
+2-20	245-247	on	_	_	_	
+2-21	248-256	magnetic	Descriptor	_	_	
+2-22	257-265	stirring	Device[7]	Descriptor-of	2-21[0_7]	
+2-23	266-269	hot	Device[7]	_	_	
+2-24	270-275	plate	Device[7]	_	_	
+2-25	276-278	at	_	_	_	
+2-26	279-281	50	Property-temperature[8]	_	_	
+2-27	281-282	 	Property-temperature[8]	_	_	
+2-28	282-283	°	Property-temperature[8]	_	_	
+2-29	283-284	C	Property-temperature[8]	_	_	
+2-30	285-288	for	_	_	_	
+2-31	289-293	half	Property-time[9]	_	_	
+2-32	294-296	an	Property-time[9]	_	_	
+2-33	297-301	hour	Property-time[9]	_	_	
+2-34	301-302	.	_	_	_	
+
+#Text=The ethylene glycol as a chelating agent was mixed with the metal salt solution keeping the ratio 1:1.5 between metals and chelating agent.
+3-1	303-306	The	_	_	_	
+3-2	307-315	ethylene	Material-others[10]	Coreference|Value-of	3-6[11_10]|3-18[13_10]	
+3-3	316-322	glycol	Material-others[10]	_	_	
+3-4	323-325	as	_	_	_	
+3-5	326-327	a	Value	_	_	
+3-6	328-337	chelating	Material-others[11]	Value-of	3-5[0_11]	
+3-7	338-343	agent	Material-others[11]	_	_	
+3-8	344-347	was	_	_	_	
+3-9	348-353	mixed	Operation	Participant-material|Participant-material	3-12[12_0]|3-2[10_0]	
+3-10	354-358	with	_	_	_	
+3-11	359-362	the	_	_	_	
+3-12	363-368	metal	Material-intermedium[12]	Value-of	3-18[13_12]	
+3-13	369-373	salt	Material-intermedium[12]	_	_	
+3-14	374-382	solution	Material-intermedium[12]	_	_	
+3-15	383-390	keeping	_	_	_	
+3-16	391-394	the	_	_	_	
+3-17	395-400	ratio	Descriptor	Descriptor-of	3-22[14_0]	
+3-18	401-402	1	Value[13]	Descriptor-of	3-17[0_13]	
+3-19	402-403	:	Value[13]	_	_	
+3-20	403-406	1.5	Value[13]	_	_	
+3-21	407-414	between	_	_	_	
+3-22	415-421	metals	Descriptor[14]	_	_	
+3-23	422-425	and	Descriptor[14]	_	_	
+3-24	426-435	chelating	Descriptor[14]	_	_	
+3-25	436-441	agent	Descriptor[14]	_	_	
+3-26	441-442	.	_	_	_	
+
+#Text=The pH of the resulted sol was maintained at 7.0 by drop wise addition of 2 M ammonia solution.
+4-1	443-446	The	_	_	_	
+4-2	447-449	pH	Descriptor	_	_	
+4-3	450-452	of	_	_	_	
+4-4	453-456	the	_	_	_	
+4-5	457-465	resulted	Descriptor	_	_	
+4-6	466-469	sol	Material-intermedium	Value-of|Descriptor-of	4-10|4-5	
+4-7	470-473	was	_	_	_	
+4-8	474-484	maintained	_	_	_	
+4-9	485-487	at	_	_	_	
+4-10	488-491	7.0	Value	Descriptor-of	4-2	
+4-11	492-494	by	_	_	_	
+4-12	495-499	drop	Descriptor[15]	_	_	
+4-13	500-504	wise	Descriptor[15]	_	_	
+4-14	505-513	addition	Operation	Participant-material|Descriptor-of|Participant-material	4-19[17_0]|4-12[15_0]|4-6	
+4-15	514-516	of	_	_	_	
+4-16	517-518	2	Value[16]	_	_	
+4-17	518-519	 	Value[16]	_	_	
+4-18	519-520	M	Value[16]	_	_	
+4-19	521-528	ammonia	Material-others[17]	Value-of	4-16[16_17]	
+4-20	529-537	solution	Material-others[17]	_	_	
+4-21	537-538	.	_	_	_	
+
+#Text=Sol was heated at 90 ˚C to evaporate the mixture and finally converted in to viscous brown gel.
+5-1	539-542	Sol	Material-intermedium	_	_	
+5-2	543-546	was	_	_	_	
+5-3	547-553	heated	Operation	Participant-material|Condition-of|Next-operation	5-1|5-5[18_0]|5-9	
+5-4	554-556	at	_	_	_	
+5-5	557-559	90	Property-temperature[18]	_	_	
+5-6	560-561	˚	Property-temperature[18]	_	_	
+5-7	561-562	C	Property-temperature[18]	_	_	
+5-8	563-565	to	_	_	_	
+5-9	566-575	evaporate	Operation	Next-operation	5-14	
+5-10	576-579	the	_	_	_	
+5-11	580-587	mixture	Material-intermedium	_	_	
+5-12	588-591	and	_	_	_	
+5-13	592-599	finally	_	_	_	
+5-14	600-609	converted	Operation	_	_	
+5-15	610-612	in	_	_	_	
+5-16	613-615	to	_	_	_	
+5-17	616-623	viscous	Descriptor	_	_	
+5-18	624-629	brown	Descriptor	_	_	
+5-19	630-633	gel	Material-intermedium	Descriptor-of|Descriptor-of	5-17|5-18	
+5-20	633-634	.	_	_	_	
+
+#Text=The gel was burnt into fine powder at 300 °C.
+6-1	635-638	The	_	_	_	
+6-2	639-642	gel	Material-intermedium	_	_	
+6-3	643-646	was	_	_	_	
+6-4	647-652	burnt	Operation	Condition-of|Participant-material	6-9[19_0]|6-2	
+6-5	653-657	into	_	_	_	
+6-6	658-662	fine	Descriptor	_	_	
+6-7	663-669	powder	Material-intermedium	Descriptor-of	6-6	
+6-8	670-672	at	_	_	_	
+6-9	673-676	300	Property-temperature[19]	_	_	
+6-10	676-677	 	Property-temperature[19]	_	_	
+6-11	677-678	°	Property-temperature[19]	_	_	
+6-12	678-679	C	Property-temperature[19]	_	_	
+6-13	679-680	.	_	_	_	
+
+#Text=Finally the resulted powder was annealed for 10 h at 1050 °C to obtained single Y-type hexagonal phase [17].
+7-1	681-688	Finally	_	_	_	
+7-2	689-692	the	_	_	_	
+7-3	693-701	resulted	Descriptor	_	_	
+7-4	702-708	powder	Material-intermedium	Descriptor-of	7-3	
+7-5	709-712	was	_	_	_	
+7-6	713-721	annealed	Operation	Participant-material|Condition-of|Condition-of	7-4|7-8[20_0]|7-12[21_0]	
+7-7	722-725	for	_	_	_	
+7-8	726-728	10	Property-time[20]	_	_	
+7-9	728-729	 	Property-time[20]	_	_	
+7-10	729-730	h	Property-time[20]	_	_	
+7-11	731-733	at	_	_	_	
+7-12	734-738	1050	Property-temperature[21]	_	_	
+7-13	738-739	 	Property-temperature[21]	_	_	
+7-14	739-740	°	Property-temperature[21]	_	_	
+7-15	740-741	C	Property-temperature[21]	_	_	
+7-16	742-744	to	_	_	_	
+7-17	745-753	obtained	_	_	_	
+7-18	754-760	single	_	_	_	
+7-19	761-767	Y-type	_	_	_	
+7-20	768-777	hexagonal	_	_	_	
+7-21	778-783	phase	_	_	_	
+7-22	784-785	[	_	_	_	
+7-23	785-787	17	_	_	_	
+7-24	787-788	]	_	_	_	
+7-25	788-789	.	_	_	_	
+
+#Text=During the preparation, in fact a series of the following chemical reactions may take place.
+8-1	790-796	During	_	_	_	
+8-2	797-800	the	_	_	_	
+8-3	801-812	preparation	_	_	_	
+8-4	812-813	,	_	_	_	
+8-5	814-816	in	_	_	_	
+8-6	817-821	fact	_	_	_	
+8-7	822-823	a	_	_	_	
+8-8	824-830	series	_	_	_	
+8-9	831-833	of	_	_	_	
+8-10	834-837	the	_	_	_	
+8-11	838-847	following	_	_	_	
+8-12	848-856	chemical	_	_	_	
+8-13	857-866	reactions	_	_	_	
+8-14	867-870	may	_	_	_	
+8-15	871-875	take	_	_	_	
+8-16	876-881	place	_	_	_	
+8-17	881-882	.	_	_	_	

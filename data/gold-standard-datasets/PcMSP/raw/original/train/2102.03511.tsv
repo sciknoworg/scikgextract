@@ -1,0 +1,154 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Pr2Ba4Cu7O15−δ were synthesized by using the citrate pyrolysis technique.14,15
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-39	Pr2Ba4Cu7O15	Material-target[1]	Descriptor-of	1-1[0_1]	
+1-5	39-40	−	Material-target[1]	_	_	
+1-6	40-41	δ	Material-target[1]	_	_	
+1-7	42-46	were	_	_	_	
+1-8	47-58	synthesized	Operation	Participant-material|Coreference	1-4[1_0]|1-12[2_0]	
+1-9	59-61	by	_	_	_	
+1-10	62-67	using	_	_	_	
+1-11	68-71	the	_	_	_	
+1-12	72-79	citrate	Operation[2]	_	_	
+1-13	80-89	pyrolysis	Operation[2]	_	_	
+1-14	90-99	technique	Operation[2]	_	_	
+1-15	99-105	.14,15	_	_	_	
+
+#Text=In the first step, stoichiometric mixtures of high purity Pr6O11, Ba(NO3)2, and CuO were dissolved in a nitric acid solution at 50-60 ◦C.
+2-1	107-109	In	_	_	_	
+2-2	110-113	the	_	_	_	
+2-3	114-119	first	_	_	_	
+2-4	120-124	step	_	_	_	
+2-5	124-125	,	_	_	_	
+2-6	126-140	stoichiometric	Value	_	_	
+2-7	141-149	mixtures	Material-intermedium	Value-of|Coreference|Coreference|Coreference	2-6|2-11|2-13[4_0]|2-20	
+2-8	150-152	of	_	_	_	
+2-9	153-157	high	Descriptor[3]	_	_	
+2-10	158-164	purity	Descriptor[3]	_	_	
+2-11	165-171	Pr6O11	Material-recipe	Descriptor-of	2-9[3_0]	
+2-12	171-172	,	_	_	_	
+2-13	173-175	Ba	Material-recipe[4]	Descriptor-of	2-9[3_4]	
+2-14	175-176	(	Material-recipe[4]	_	_	
+2-15	176-179	NO3	Material-recipe[4]	_	_	
+2-16	179-180	)	Material-recipe[4]	_	_	
+2-17	180-181	2	Material-recipe[4]	_	_	
+2-18	181-182	,	_	_	_	
+2-19	183-186	and	_	_	_	
+2-20	187-190	CuO	Material-recipe	Descriptor-of	2-9[3_0]	
+2-21	191-195	were	_	_	_	
+2-22	196-205	dissolved	Operation	Participant-material|Participant-material|Condition-of	2-7|2-27|2-29[6_0]	
+2-23	206-208	in	_	_	_	
+2-24	209-210	a	_	_	_	
+2-25	211-217	nitric	Descriptor[5]	_	_	
+2-26	218-222	acid	Descriptor[5]	_	_	
+2-27	223-231	solution	Material-recipe	Descriptor-of	2-25[5_0]	
+2-28	232-234	at	_	_	_	
+2-29	235-237	50	Property-temperature[6]	_	_	
+2-30	237-238	-	Property-temperature[6]	_	_	
+2-31	238-240	60	Property-temperature[6]	_	_	
+2-32	241-242	◦	Property-temperature[6]	_	_	
+2-33	242-243	C	Property-temperature[6]	_	_	
+2-34	243-244	.	_	_	_	
+
+#Text=After adding citric acid and neutralizing it by aqueous ammonia, we then obtained the porous products through the self-ignition process using halogen lamp stirrer.
+3-1	246-251	After	_	_	_	
+3-2	252-258	adding	Operation	Participant-material|Next-operation	3-3[7_0]|3-6	
+3-3	259-265	citric	Material-recipe[7]	_	_	
+3-4	266-270	acid	Material-recipe[7]	_	_	
+3-5	271-274	and	_	_	_	
+3-6	275-287	neutralizing	Operation	Participant-material|Participant-material|Next-operation	3-7|3-9[8_0]|3-20[9_0]	
+3-7	288-290	it	Material-intermedium	_	_	
+3-8	291-293	by	_	_	_	
+3-9	294-301	aqueous	Material-others[8]	_	_	
+3-10	302-309	ammonia	Material-others[8]	_	_	
+3-11	309-310	,	_	_	_	
+3-12	311-313	we	_	_	_	
+3-13	314-318	then	_	_	_	
+3-14	319-327	obtained	_	_	_	
+3-15	328-331	the	_	_	_	
+3-16	332-338	porous	Descriptor	_	_	
+3-17	339-347	products	Material-intermedium	Descriptor-of	3-16	
+3-18	348-355	through	_	_	_	
+3-19	356-359	the	_	_	_	
+3-20	360-373	self-ignition	Operation[9]	Device-of-operation|Participant-material	3-25[0_9]|3-17[0_9]	
+3-21	374-381	process	Operation[9]	_	_	
+3-22	382-387	using	_	_	_	
+3-23	388-395	halogen	Descriptor[10]	_	_	
+3-24	396-400	lamp	Descriptor[10]	_	_	
+3-25	401-408	stirrer	Device	Descriptor-of	3-23[10_0]	
+3-26	408-409	.	_	_	_	
+
+#Text=In the next step, the precursors were ground and resultant fine powders were annealed under ambient oxygen pressure at 890-891 ◦C for an extended period over 110-120h.
+4-1	411-413	In	_	_	_	
+4-2	414-417	the	_	_	_	
+4-3	418-422	next	_	_	_	
+4-4	423-427	step	_	_	_	
+4-5	427-428	,	_	_	_	
+4-6	429-432	the	_	_	_	
+4-7	433-443	precursors	Material-intermedium	_	_	
+4-8	444-448	were	_	_	_	
+4-9	449-455	ground	Operation	Participant-material|Next-operation	4-7|4-15	
+4-10	456-459	and	_	_	_	
+4-11	460-469	resultant	Descriptor	_	_	
+4-12	470-474	fine	Descriptor	_	_	
+4-13	475-482	powders	Material-intermedium	Descriptor-of|Descriptor-of	4-11|4-12	
+4-14	483-487	were	_	_	_	
+4-15	488-496	annealed	Operation	Participant-material|Condition-of|Condition-of|Condition-of	4-13|4-17[11_0]|4-21[12_0]|4-29	
+4-16	497-502	under	_	_	_	
+4-17	503-510	ambient	Property-pressure[11]	_	_	
+4-18	511-517	oxygen	Property-pressure[11]	_	_	
+4-19	518-526	pressure	Property-pressure[11]	_	_	
+4-20	527-529	at	_	_	_	
+4-21	530-533	890	Property-temperature[12]	_	_	
+4-22	533-534	-	Property-temperature[12]	_	_	
+4-23	534-537	891	Property-temperature[12]	_	_	
+4-24	538-539	◦	Property-temperature[12]	_	_	
+4-25	539-540	C	Property-temperature[12]	_	_	
+4-26	541-544	for	_	_	_	
+4-27	545-547	an	Value	_	_	
+4-28	548-556	extended	Descriptor	_	_	
+4-29	557-563	period	Property-time	Value-of|Descriptor-of|Coreference	4-27|4-28|4-31[13_0]	
+4-30	564-568	over	_	_	_	
+4-31	569-572	110	Property-time[13]	_	_	
+4-32	572-573	-	Property-time[13]	_	_	
+4-33	573-577	120h	Property-time[13]	_	_	
+4-34	577-578	.	_	_	_	
+
+#Text=In the present citrate pyrolysis synthesis procedure, we adopted the electric tube furnace with three zone temperature controlled system, to achieve the temperature uniformity within 1 ◦C.
+5-1	580-582	In	_	_	_	
+5-2	583-586	the	_	_	_	
+5-3	587-594	present	_	_	_	
+5-4	595-602	citrate	Operation[14]	Device-of-operation|Condition-of	5-13[15_14]|5-25[0_14]	
+5-5	603-612	pyrolysis	Operation[14]	_	_	
+5-6	613-622	synthesis	Operation[14]	_	_	
+5-7	623-632	procedure	_	_	_	
+5-8	632-633	,	_	_	_	
+5-9	634-636	we	_	_	_	
+5-10	637-644	adopted	_	_	_	
+5-11	645-648	the	_	_	_	
+5-12	649-657	electric	Descriptor	_	_	
+5-13	658-662	tube	Device[15]	Descriptor-of|Device-of-operation	5-12[0_15]|5-20[0_15]	
+5-14	663-670	furnace	Device[15]	_	_	
+5-15	671-675	with	_	_	_	
+5-16	676-681	three	Value	_	_	
+5-17	682-686	zone	Descriptor[16]	_	_	
+5-18	687-698	temperature	Descriptor[16]	_	_	
+5-19	699-709	controlled	Descriptor[16]	_	_	
+5-20	710-716	system	Device	Value-of|Descriptor-of	5-16|5-17[16_0]	
+5-21	716-717	,	_	_	_	
+5-22	718-720	to	_	_	_	
+5-23	721-728	achieve	_	_	_	
+5-24	729-732	the	_	_	_	
+5-25	733-744	temperature	Property-temperature	Coreference	5-26[17_0]	
+5-26	745-755	uniformity	Property-temperature[17]	_	_	
+5-27	756-762	within	Property-temperature[17]	_	_	
+5-28	763-764	1	Property-temperature[17]	_	_	
+5-29	765-766	◦	Property-temperature[17]	_	_	
+5-30	766-767	C	Property-temperature[17]	_	_	
+5-31	767-768	.	_	_	_	

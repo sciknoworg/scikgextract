@@ -1,0 +1,127 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A polycrystalline sample REE*MxMn1-xO3 were prepared by using conventional solid-state reaction method starting from REE2(C2O4)3, xH2O obtained from the waste and Mn(C2O4)3.H2O.
+1-1	0-1	A	_	_	_	
+1-2	2-17	polycrystalline	Descriptor	_	_	
+1-3	18-24	sample	_	_	_	
+1-4	25-28	REE	Material-target[1]	Descriptor-of	1-2[0_1]	
+1-5	28-29	*	Material-target[1]	_	_	
+1-6	29-34	MxMn1	Material-target[1]	_	_	
+1-7	34-35	-	Material-target[1]	_	_	
+1-8	35-38	xO3	Material-target[1]	_	_	
+1-9	39-43	were	_	_	_	
+1-10	44-52	prepared	Operation	Participant-material|Coreference|Participant-material|Participant-material|Participant-material	1-4[1_0]|1-13[2_0]|1-19[3_0]|1-25|1-31[4_0]	
+1-11	53-55	by	_	_	_	
+1-12	56-61	using	_	_	_	
+1-13	62-74	conventional	Operation[2]	_	_	
+1-14	75-86	solid-state	Operation[2]	_	_	
+1-15	87-95	reaction	Operation[2]	_	_	
+1-16	96-102	method	Operation[2]	_	_	
+1-17	103-111	starting	_	_	_	
+1-18	112-116	from	_	_	_	
+1-19	117-121	REE2	Material-recipe[3]	_	_	
+1-20	121-122	(	Material-recipe[3]	_	_	
+1-21	122-126	C2O4	Material-recipe[3]	_	_	
+1-22	126-127	)	Material-recipe[3]	_	_	
+1-23	127-128	3	Material-recipe[3]	_	_	
+1-24	128-129	,	_	_	_	
+1-25	130-134	xH2O	Material-recipe	_	_	
+1-26	135-143	obtained	Operation	Participant-material|Participant-material	1-25|1-29	
+1-27	144-148	from	_	_	_	
+1-28	149-152	the	_	_	_	
+1-29	153-158	waste	Material-others	_	_	
+1-30	159-162	and	_	_	_	
+1-31	163-165	Mn	Material-recipe[4]	_	_	
+1-32	165-166	(	Material-recipe[4]	_	_	
+1-33	166-170	C2O4	Material-recipe[4]	_	_	
+1-34	170-171	)	Material-recipe[4]	_	_	
+1-35	171-172	3	Material-recipe[4]	_	_	
+1-36	172-173	.	Material-recipe[4]	_	_	
+1-37	173-176	H2O	Material-recipe[4]	_	_	
+1-38	176-177	.	_	_	_	
+
+#Text=The precursors were mixed in stoichiometric proportions and grinded for 30 min.
+2-1	178-181	The	_	_	_	
+2-2	182-192	precursors	Material-intermedium	Value-of	2-6[5_0]	
+2-3	193-197	were	_	_	_	
+2-4	198-203	mixed	Operation	Participant-material|Next-operation	2-2|2-9	
+2-5	204-206	in	_	_	_	
+2-6	207-221	stoichiometric	Value[5]	_	_	
+2-7	222-233	proportions	Value[5]	_	_	
+2-8	234-237	and	_	_	_	
+2-9	238-245	grinded	Operation	Condition-of	2-11[6_0]	
+2-10	246-249	for	_	_	_	
+2-11	250-252	30	Property-time[6]	_	_	
+2-12	253-256	min	Property-time[6]	_	_	
+2-13	256-257	.	_	_	_	
+
+#Text=The obtained powder was then annealed at 800 °C in air for 12 h and pressed into pellets of 15 mm diameter and 2 mm thickness.
+3-1	258-261	The	_	_	_	
+3-2	262-270	obtained	Descriptor	_	_	
+3-3	271-277	powder	Material-intermedium	Descriptor-of	3-2	
+3-4	278-281	was	_	_	_	
+3-5	282-286	then	_	_	_	
+3-6	287-295	annealed	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Next-operation	3-3|3-8[7_0]|3-12|3-14[8_0]|3-17	
+3-7	296-298	at	_	_	_	
+3-8	299-302	800	Property-temperature[7]	_	_	
+3-9	303-304	°	Property-temperature[7]	_	_	
+3-10	304-305	C	Property-temperature[7]	_	_	
+3-11	306-308	in	_	_	_	
+3-12	309-312	air	Property-pressure	_	_	
+3-13	313-316	for	_	_	_	
+3-14	317-319	12	Property-time[8]	_	_	
+3-15	320-321	h	Property-time[8]	_	_	
+3-16	322-325	and	_	_	_	
+3-17	326-333	pressed	Operation	Participant-material	3-19	
+3-18	334-338	into	_	_	_	
+3-19	339-346	pellets	Material-intermedium	Value-of|Value-of	3-21[9_0]|3-25[10_0]	
+3-20	347-349	of	_	_	_	
+3-21	350-352	15	Value[9]	Descriptor-of	3-23[0_9]	
+3-22	353-355	mm	Value[9]	_	_	
+3-23	356-364	diameter	Descriptor	_	_	
+3-24	365-368	and	_	_	_	
+3-25	369-370	2	Value[10]	Descriptor-of	3-27[0_10]	
+3-26	371-373	mm	Value[10]	_	_	
+3-27	374-383	thickness	Descriptor	_	_	
+3-28	383-384	.	_	_	_	
+
+#Text=The pellets were sintered at 900 °C and 1000 °C for 24 h with intermediate grinding and pelleting processes.
+4-1	385-388	The	_	_	_	
+4-2	389-396	pellets	Material-intermedium	_	_	
+4-3	397-401	were	_	_	_	
+4-4	402-410	sintered	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Coreference|Coreference	4-2|4-6[11_0]|4-10[12_0]|4-14[13_0]|4-17[14_0]|4-20[15_0]	
+4-5	411-413	at	_	_	_	
+4-6	414-417	900	Property-temperature[11]	_	_	
+4-7	418-419	°	Property-temperature[11]	_	_	
+4-8	419-420	C	Property-temperature[11]	_	_	
+4-9	421-424	and	_	_	_	
+4-10	425-429	1000	Property-temperature[12]	_	_	
+4-11	430-431	°	Property-temperature[12]	_	_	
+4-12	431-432	C	Property-temperature[12]	_	_	
+4-13	433-436	for	_	_	_	
+4-14	437-439	24	Property-time[13]	_	_	
+4-15	440-441	h	Property-time[13]	_	_	
+4-16	442-446	with	_	_	_	
+4-17	447-459	intermediate	Operation[14]	_	_	
+4-18	460-468	grinding	Operation[14]	_	_	
+4-19	469-472	and	_	_	_	
+4-20	473-482	pelleting	Operation[15]	_	_	
+4-21	483-492	processes	Operation[15]	_	_	
+4-22	492-493	.	_	_	_	
+
+#Text=The final annealing temperature was 1100 °C for 24 h.
+5-1	494-497	The	_	_	_	
+5-2	498-503	final	Descriptor	_	_	
+5-3	504-513	annealing	Operation	Condition-of|Condition-of	5-10[17_0]|5-6[16_0]	
+5-4	514-525	temperature	Property-temperature	Descriptor-of	5-2	
+5-5	526-529	was	_	_	_	
+5-6	530-534	1100	Property-temperature[16]	Coreference	5-4[0_16]	
+5-7	535-536	°	Property-temperature[16]	_	_	
+5-8	536-537	C	Property-temperature[16]	_	_	
+5-9	538-541	for	_	_	_	
+5-10	542-544	24	Property-time[17]	_	_	
+5-11	545-546	h	Property-time[17]	_	_	
+5-12	546-547	.	_	_	_	

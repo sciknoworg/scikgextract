@@ -1,0 +1,235 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The sample preparation was performed in a specialized
+#Text=laboratory, equipped with an argon-filled glove box system (MBraun, p(H2O/O2 ) < 0.1 ppm) [31].
+1-1	0-3	The	_	_	_	
+1-2	4-10	sample	Material-target	_	_	
+1-3	11-22	preparation	Operation	Participant-material|Condition-of|Device-of-operation|Condition-of|Coreference	1-2|1-14|1-15[2_0]|1-21[3_0]|1-5	
+1-4	23-26	was	_	_	_	
+1-5	27-36	performed	Operation	Device-of-operation	1-8[1_0]	
+1-6	37-39	in	_	_	_	
+1-7	40-41	a	_	_	_	
+1-8	42-53	specialized	Device[1]	_	_	
+1-9	54-64	laboratory	Device[1]	_	_	
+1-10	64-65	,	_	_	_	
+1-11	66-74	equipped	_	_	_	
+1-12	75-79	with	_	_	_	
+1-13	80-82	an	_	_	_	
+1-14	83-95	argon-filled	Property-pressure	_	_	
+1-15	96-101	glove	Device[2]	Brand-of	1-19[0_2]	
+1-16	102-105	box	Device[2]	_	_	
+1-17	106-112	system	_	_	_	
+1-18	113-114	(	_	_	_	
+1-19	114-120	MBraun	Brand	_	_	
+1-20	120-121	,	_	_	_	
+1-21	122-123	p	Property-pressure[3]	_	_	
+1-22	123-124	(	Property-pressure[3]	_	_	
+1-23	124-127	H2O	Property-pressure[3]	_	_	
+1-24	127-128	/	Property-pressure[3]	_	_	
+1-25	128-130	O2	Property-pressure[3]	_	_	
+1-26	131-132	)	Property-pressure[3]	_	_	
+1-27	133-134	<	Property-pressure[3]	_	_	
+1-28	135-138	0.1	Property-pressure[3]	_	_	
+1-29	139-142	ppm	Property-pressure[3]	_	_	
+1-30	142-143	)	_	_	_	
+1-31	144-145	[	_	_	_	
+1-32	145-147	31	_	_	_	
+1-33	147-148	]	_	_	_	
+1-34	148-149	.	_	_	_	
+
+#Text=Polycrystalline samples of R4Be33Pt16 (R = Y, La–Nd, Sm–Lu) were
+#Text=synthesized by arc melting of R (pieces, Ames Laboratory, >99.9%), Be (sheet, Heraeus, >99.9%), and Pt (foil,
+#Text=Chempur, >99.9%) in the 10:60:30 ratio.
+2-1	150-165	Polycrystalline	Descriptor	_	_	
+2-2	166-173	samples	_	_	_	
+2-3	174-176	of	_	_	_	
+2-4	177-187	R4Be33Pt16	Material-target	Descriptor-of|Descriptor-of	2-6[4_0]|2-1	
+2-5	188-189	(	_	_	_	
+2-6	189-190	R	Descriptor[4]	_	_	
+2-7	191-192	=	Descriptor[4]	_	_	
+2-8	193-194	Y	Descriptor[4]	_	_	
+2-9	194-195	,	Descriptor[4]	_	_	
+2-10	196-201	La–Nd	Descriptor[4]	_	_	
+2-11	201-202	,	Descriptor[4]	_	_	
+2-12	203-208	Sm–Lu	Descriptor[4]	_	_	
+2-13	208-209	)	_	_	_	
+2-14	210-214	were	_	_	_	
+2-15	215-226	synthesized	Operation	Participant-material|Coreference	2-4|2-17[5_0]	
+2-16	227-229	by	_	_	_	
+2-17	230-233	arc	Operation[5]	Participant-material|Participant-material|Participant-material	2-20[0_5]|2-31[0_5]|2-42[0_5]	
+2-18	234-241	melting	Operation[5]	_	_	
+2-19	242-244	of	_	_	_	
+2-20	245-246	R	Material-recipe	Descriptor-of|Brand-of|Value-of|Value-of	2-22|2-24[6_0]|2-27[7_0]|2-53[10_0]	
+2-21	247-248	(	_	_	_	
+2-22	248-254	pieces	Descriptor	_	_	
+2-23	254-255	,	_	_	_	
+2-24	256-260	Ames	Brand[6]	_	_	
+2-25	261-271	Laboratory	Brand[6]	_	_	
+2-26	271-272	,	_	_	_	
+2-27	273-274	>	Value[7]	_	_	
+2-28	274-279	99.9%	Value[7]	_	_	
+2-29	279-280	)	_	_	_	
+2-30	280-281	,	_	_	_	
+2-31	282-284	Be	Material-recipe	Value-of|Brand-of|Descriptor-of|Value-of	2-37[8_0]|2-35|2-33|2-53[10_0]	
+2-32	285-286	(	_	_	_	
+2-33	286-291	sheet	Descriptor	_	_	
+2-34	291-292	,	_	_	_	
+2-35	293-300	Heraeus	Brand	_	_	
+2-36	300-301	,	_	_	_	
+2-37	302-303	>	Value[8]	_	_	
+2-38	303-308	99.9%	Value[8]	_	_	
+2-39	308-309	)	_	_	_	
+2-40	309-310	,	_	_	_	
+2-41	311-314	and	_	_	_	
+2-42	315-317	Pt	Material-recipe	Value-of|Brand-of|Descriptor-of|Value-of	2-48[9_0]|2-46|2-44|2-53[10_0]	
+2-43	318-319	(	_	_	_	
+2-44	319-323	foil	Descriptor	_	_	
+2-45	323-324	,	_	_	_	
+2-46	325-332	Chempur	Brand	_	_	
+2-47	332-333	,	_	_	_	
+2-48	334-335	>	Value[9]	_	_	
+2-49	335-340	99.9%	Value[9]	_	_	
+2-50	340-341	)	_	_	_	
+2-51	342-344	in	_	_	_	
+2-52	345-348	the	_	_	_	
+2-53	349-351	10	Value[10]	Descriptor-of	2-58[0_10]	
+2-54	351-352	:	Value[10]	_	_	
+2-55	352-354	60	Value[10]	_	_	
+2-56	354-355	:	Value[10]	_	_	
+2-57	355-357	30	Value[10]	_	_	
+2-58	358-363	ratio	Descriptor	_	_	
+2-59	363-364	.	_	_	_	
+
+#Text=In order to ensure
+#Text=homogeneity, all samples were arc melted several times, with
+#Text=final mass losses of at most 2%.
+3-1	365-367	In	_	_	_	
+3-2	368-373	order	_	_	_	
+3-3	374-376	to	_	_	_	
+3-4	377-383	ensure	_	_	_	
+3-5	384-395	homogeneity	_	_	_	
+3-6	395-396	,	_	_	_	
+3-7	397-400	all	_	_	_	
+3-8	401-408	samples	Material-intermedium	_	_	
+3-9	409-413	were	_	_	_	
+3-10	414-417	arc	Operation[11]	Participant-material|Condition-of	3-8[0_11]|3-12[12_11]	
+3-11	418-424	melted	Operation[11]	_	_	
+3-12	425-432	several	Property-time[12]	_	_	
+3-13	433-438	times	Property-time[12]	_	_	
+3-14	438-439	,	_	_	_	
+3-15	440-444	with	_	_	_	
+3-16	445-450	final	_	_	_	
+3-17	451-455	mass	_	_	_	
+3-18	456-462	losses	_	_	_	
+3-19	463-465	of	_	_	_	
+3-20	466-468	at	_	_	_	
+3-21	469-473	most	_	_	_	
+3-22	474-476	2%	_	_	_	
+3-23	476-477	.	_	_	_	
+
+#Text=Small inclusions of secondary
+#Text=phases were identified by several experimental methods (see
+#Text=below), while temperature treatment, as well as changing the
+#Text=initial composition, did not result in completely single-phase
+#Text=samples.
+4-1	478-483	Small	_	_	_	
+4-2	484-494	inclusions	_	_	_	
+4-3	495-497	of	_	_	_	
+4-4	498-507	secondary	_	_	_	
+4-5	508-514	phases	_	_	_	
+4-6	515-519	were	_	_	_	
+4-7	520-530	identified	_	_	_	
+4-8	531-533	by	_	_	_	
+4-9	534-541	several	_	_	_	
+4-10	542-554	experimental	_	_	_	
+4-11	555-562	methods	_	_	_	
+4-12	563-564	(	_	_	_	
+4-13	564-567	see	_	_	_	
+4-14	568-573	below	_	_	_	
+4-15	573-574	)	_	_	_	
+4-16	574-575	,	_	_	_	
+4-17	576-581	while	_	_	_	
+4-18	582-593	temperature	_	_	_	
+4-19	594-603	treatment	_	_	_	
+4-20	603-604	,	_	_	_	
+4-21	605-607	as	_	_	_	
+4-22	608-612	well	_	_	_	
+4-23	613-615	as	_	_	_	
+4-24	616-624	changing	_	_	_	
+4-25	625-628	the	_	_	_	
+4-26	629-636	initial	_	_	_	
+4-27	637-648	composition	_	_	_	
+4-28	648-649	,	_	_	_	
+4-29	650-653	did	_	_	_	
+4-30	654-657	not	_	_	_	
+4-31	658-664	result	_	_	_	
+4-32	665-667	in	_	_	_	
+4-33	668-678	completely	_	_	_	
+4-34	679-691	single-phase	_	_	_	
+4-35	692-699	samples	_	_	_	
+4-36	699-700	.	_	_	_	
+
+#Text=Since the amount of Be is hard to quantify analytically (see below), and given that the evaporation losses of Be
+#Text=are unavoidable, the only way to keep control of the sample
+#Text=composition is to follow a careful weighing protocol.
+5-1	701-706	Since	_	_	_	
+5-2	707-710	the	_	_	_	
+5-3	711-717	amount	_	_	_	
+5-4	718-720	of	_	_	_	
+5-5	721-723	Be	_	_	_	
+5-6	724-726	is	_	_	_	
+5-7	727-731	hard	_	_	_	
+5-8	732-734	to	_	_	_	
+5-9	735-743	quantify	_	_	_	
+5-10	744-756	analytically	_	_	_	
+5-11	757-758	(	_	_	_	
+5-12	758-761	see	_	_	_	
+5-13	762-767	below	_	_	_	
+5-14	767-768	)	_	_	_	
+5-15	768-769	,	_	_	_	
+5-16	770-773	and	_	_	_	
+5-17	774-779	given	_	_	_	
+5-18	780-784	that	_	_	_	
+5-19	785-788	the	_	_	_	
+5-20	789-800	evaporation	_	_	_	
+5-21	801-807	losses	_	_	_	
+5-22	808-810	of	_	_	_	
+5-23	811-813	Be	_	_	_	
+5-24	814-817	are	_	_	_	
+5-25	818-829	unavoidable	_	_	_	
+5-26	829-830	,	_	_	_	
+5-27	831-834	the	_	_	_	
+5-28	835-839	only	_	_	_	
+5-29	840-843	way	_	_	_	
+5-30	844-846	to	_	_	_	
+5-31	847-851	keep	_	_	_	
+5-32	852-859	control	_	_	_	
+5-33	860-862	of	_	_	_	
+5-34	863-866	the	_	_	_	
+5-35	867-873	sample	_	_	_	
+5-36	874-885	composition	_	_	_	
+5-37	886-888	is	_	_	_	
+5-38	889-891	to	_	_	_	
+5-39	892-898	follow	_	_	_	
+5-40	899-900	a	_	_	_	
+5-41	901-908	careful	_	_	_	
+5-42	909-917	weighing	_	_	_	
+5-43	918-926	protocol	_	_	_	
+5-44	926-927	.	_	_	_	
+
+#Text=None of
+#Text=the samples exhibited any marked air or moisture sensitivity
+6-1	928-932	None	_	_	_	
+6-2	933-935	of	_	_	_	
+6-3	936-939	the	_	_	_	
+6-4	940-947	samples	_	_	_	
+6-5	948-957	exhibited	_	_	_	
+6-6	958-961	any	_	_	_	
+6-7	962-968	marked	_	_	_	
+6-8	969-972	air	_	_	_	
+6-9	973-975	or	_	_	_	
+6-10	976-984	moisture	_	_	_	
+6-11	985-996	sensitivity	_	_	_	

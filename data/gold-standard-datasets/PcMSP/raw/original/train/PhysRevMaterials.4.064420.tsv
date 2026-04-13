@@ -1,0 +1,634 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The AP Ba3NiOs2O9 was synthesized by solid-state reactions from BaO (decomposition of BaCO3, Alfa 99.8%),
+#Text=NiO (Alfa 99%), and Os (Alfa 99.95%) in two steps.
+1-1	0-3	The	_	_	_	
+1-2	4-6	AP	Descriptor	_	_	
+1-3	7-17	Ba3NiOs2O9	Material-target	Descriptor-of	1-2	
+1-4	18-21	was	_	_	_	
+1-5	22-33	synthesized	Operation	Participant-material|Coreference	1-3|1-7[1_0]	
+1-6	34-36	by	_	_	_	
+1-7	37-48	solid-state	Operation[1]	Participant-material|Participant-material|Participant-material	1-10[0_1]|1-20[0_1]|1-27[0_1]	
+1-8	49-58	reactions	Operation[1]	_	_	
+1-9	59-63	from	_	_	_	
+1-10	64-67	BaO	Material-recipe	_	_	
+1-11	68-69	(	_	_	_	
+1-12	69-82	decomposition	Operation	Participant-material|Participant-material	1-14|1-10	
+1-13	83-85	of	_	_	_	
+1-14	86-91	BaCO3	Material-recipe	Brand-of|Value-of	1-16|1-17	
+1-15	91-92	,	_	_	_	
+1-16	93-97	Alfa	Brand	_	_	
+1-17	98-103	99.8%	Value	_	_	
+1-18	103-104	)	_	_	_	
+1-19	104-105	,	_	_	_	
+1-20	106-109	NiO	Material-recipe	Brand-of|Value-of	1-22|1-23	
+1-21	110-111	(	_	_	_	
+1-22	111-115	Alfa	Brand	_	_	
+1-23	116-119	99%	Value	_	_	
+1-24	119-120	)	_	_	_	
+1-25	120-121	,	_	_	_	
+1-26	122-125	and	_	_	_	
+1-27	126-128	Os	Material-recipe	Brand-of|Value-of	1-29|1-30	
+1-28	129-130	(	_	_	_	
+1-29	130-134	Alfa	Brand	_	_	
+1-30	135-141	99.95%	Value	_	_	
+1-31	141-142	)	_	_	_	
+1-32	143-145	in	_	_	_	
+1-33	146-149	two	_	_	_	
+1-34	150-155	steps	_	_	_	
+1-35	155-156	.	_	_	_	
+
+#Text=First,
+#Text=BaO and Os with a mole ratio of 3 : 2.4 were well ground
+#Text=together and pressed into pellets inside an Ar glovebox.
+2-1	157-162	First	_	_	_	
+2-2	162-163	,	_	_	_	
+2-3	164-167	BaO	Material-recipe	Value-of	2-11[3_0]	
+2-4	168-171	and	_	_	_	
+2-5	172-174	Os	Material-recipe	Value-of	2-11[3_0]	
+2-6	175-179	with	_	_	_	
+2-7	180-181	a	_	_	_	
+2-8	182-186	mole	Descriptor[2]	_	_	
+2-9	187-192	ratio	Descriptor[2]	_	_	
+2-10	193-195	of	_	_	_	
+2-11	196-197	3	Value[3]	Descriptor-of	2-8[2_3]	
+2-12	198-199	:	Value[3]	_	_	
+2-13	200-203	2.4	Value[3]	_	_	
+2-14	204-208	were	_	_	_	
+2-15	209-213	well	Descriptor	_	_	
+2-16	214-220	ground	Operation	Descriptor-of|Participant-material|Participant-material|Device-of-operation|Condition-of|Next-operation	2-15|2-5|2-3|2-25|2-24|2-19	
+2-17	221-229	together	_	_	_	
+2-18	230-233	and	_	_	_	
+2-19	234-241	pressed	Operation	Device-of-operation|Condition-of	2-25|2-24	
+2-20	242-246	into	_	_	_	
+2-21	247-254	pellets	Material-recipe	_	_	
+2-22	255-261	inside	_	_	_	
+2-23	262-264	an	Value	_	_	
+2-24	265-267	Ar	Property-pressure	_	_	
+2-25	268-276	glovebox	Device	Value-of	2-23	
+2-26	276-277	.	_	_	_	
+
+#Text=The
+#Text=pellets were then loaded into a corundum crucible, which
+#Text=was placed into a silica tube along with a second corundum crucible containing MnO2 (Alfa 99.9%).
+3-1	278-281	The	_	_	_	
+3-2	282-289	pellets	Material-intermedium	_	_	
+3-3	290-294	were	_	_	_	
+3-4	295-299	then	_	_	_	
+3-5	300-306	loaded	Operation	Device-of-operation|Participant-material|Next-operation	3-9|3-2|3-13	
+3-6	307-311	into	_	_	_	
+3-7	312-313	a	Value	_	_	
+3-8	314-322	corundum	Descriptor	_	_	
+3-9	323-331	crucible	Device	Descriptor-of|Value-of	3-8|3-7	
+3-10	331-332	,	_	_	_	
+3-11	333-338	which	_	_	_	
+3-12	339-342	was	_	_	_	
+3-13	343-349	placed	Operation	Device-of-operation|Device-of-operation|Device-of-operation|Participant-material	3-9|3-17|3-23|3-25	
+3-14	350-354	into	_	_	_	
+3-15	355-356	a	Value	_	_	
+3-16	357-363	silica	Descriptor	_	_	
+3-17	364-368	tube	Device	Descriptor-of|Value-of	3-16|3-15	
+3-18	369-374	along	_	_	_	
+3-19	375-379	with	_	_	_	
+3-20	380-381	a	Value	_	_	
+3-21	382-388	second	_	_	_	
+3-22	389-397	corundum	Descriptor	_	_	
+3-23	398-406	crucible	Device	Descriptor-of|Value-of	3-22|3-20	
+3-24	407-417	containing	_	_	_	
+3-25	418-422	MnO2	Material-others	Brand-of|Value-of	3-27|3-28	
+3-26	423-424	(	_	_	_	
+3-27	424-428	Alfa	Brand	_	_	
+3-28	429-434	99.9%	Value	_	_	
+3-29	434-435	)	_	_	_	
+3-30	435-436	.	_	_	_	
+
+#Text=The silica tube
+#Text=was then sealed under the dynamic vacuum using a H2/O2
+#Text=torch, and heated at 750 °C for 48 h.
+4-1	437-440	The	_	_	_	
+4-2	441-447	silica	Descriptor	_	_	
+4-3	448-452	tube	Device	Descriptor-of	4-2	
+4-4	453-456	was	_	_	_	
+4-5	457-461	then	_	_	_	
+4-6	462-468	sealed	Operation	Device-of-operation|Condition-of|Device-of-operation|Next-operation	4-3|4-9[4_0]|4-16|4-19	
+4-7	469-474	under	_	_	_	
+4-8	475-478	the	_	_	_	
+4-9	479-486	dynamic	Property-pressure[4]	_	_	
+4-10	487-493	vacuum	Property-pressure[4]	_	_	
+4-11	494-499	using	_	_	_	
+4-12	500-501	a	Value	_	_	
+4-13	502-504	H2	Descriptor[5]	_	_	
+4-14	504-505	/	Descriptor[5]	_	_	
+4-15	505-507	O2	Descriptor[5]	_	_	
+4-16	508-513	torch	Device	Descriptor-of|Value-of	4-13[5_0]|4-12	
+4-17	513-514	,	_	_	_	
+4-18	515-518	and	_	_	_	
+4-19	519-525	heated	Operation	Condition-of|Condition-of	4-21[6_0]|4-25[7_0]	
+4-20	526-528	at	_	_	_	
+4-21	529-532	750	Property-temperature[6]	_	_	
+4-22	533-534	°	Property-temperature[6]	_	_	
+4-23	534-535	C	Property-temperature[6]	_	_	
+4-24	536-539	for	_	_	_	
+4-25	540-542	48	Property-time[7]	_	_	
+4-26	543-544	h	Property-time[7]	_	_	
+4-27	544-545	.	_	_	_	
+
+#Text=MnO2 decomposes into
+#Text=1
+#Text=2Mn2O3 + 1
+#Text=4O2 at 550 °C and acts as an oxygen source for the
+#Text=reaction.
+5-1	546-550	MnO2	_	_	_	
+5-2	551-561	decomposes	_	_	_	
+5-3	562-566	into	_	_	_	
+5-4	567-568	1	_	_	_	
+5-5	569-575	2Mn2O3	_	_	_	
+5-6	576-577	+	_	_	_	
+5-7	578-579	1	_	_	_	
+5-8	580-583	4O2	_	_	_	
+5-9	584-586	at	_	_	_	
+5-10	587-590	550	_	_	_	
+5-11	591-592	°	_	_	_	
+5-12	592-593	C	_	_	_	
+5-13	594-597	and	_	_	_	
+5-14	598-602	acts	_	_	_	
+5-15	603-605	as	_	_	_	
+5-16	606-608	an	_	_	_	
+5-17	609-615	oxygen	_	_	_	
+5-18	616-622	source	_	_	_	
+5-19	623-626	for	_	_	_	
+5-20	627-630	the	_	_	_	
+5-21	631-639	reaction	_	_	_	
+5-22	639-640	.	_	_	_	
+
+#Text=The molar ratio of Os and MnO2 applied was 1/5.
+6-1	641-644	The	_	_	_	
+6-2	645-650	molar	Descriptor[8]	_	_	
+6-3	651-656	ratio	Descriptor[8]	_	_	
+6-4	657-659	of	_	_	_	
+6-5	660-662	Os	Material-recipe	Value-of	6-10[9_0]	
+6-6	663-666	and	_	_	_	
+6-7	667-671	MnO2	Material-others	Value-of	6-10[9_0]	
+6-8	672-679	applied	_	_	_	
+6-9	680-683	was	_	_	_	
+6-10	684-685	1	Value[9]	Descriptor-of	6-2[8_9]	
+6-11	685-686	/	Value[9]	_	_	
+6-12	686-687	5	Value[9]	_	_	
+6-13	687-688	.	_	_	_	
+
+#Text=This synthesis process is similar to that of Ba3Os2O9 [38].
+7-1	689-693	This	_	_	_	
+7-2	694-703	synthesis	_	_	_	
+7-3	704-711	process	_	_	_	
+7-4	712-714	is	_	_	_	
+7-5	715-722	similar	_	_	_	
+7-6	723-725	to	_	_	_	
+7-7	726-730	that	_	_	_	
+7-8	731-733	of	_	_	_	
+7-9	734-742	Ba3Os2O9	_	_	_	
+7-10	743-744	[	_	_	_	
+7-11	744-746	38	_	_	_	
+7-12	746-747	]	_	_	_	
+7-13	747-748	.	_	_	_	
+
+#Text=Second, the products obtained were mixed with NiO with
+#Text=weight ratios of 1 : 0.0849, corresponding to 1 : 1 molar ratios
+#Text=of Ba3Os2O9 : NiO.
+8-1	749-755	Second	_	_	_	
+8-2	755-756	,	_	_	_	
+8-3	757-760	the	_	_	_	
+8-4	761-769	products	Material-intermedium	Value-of	8-14[11_0]	
+8-5	770-778	obtained	_	_	_	
+8-6	779-783	were	_	_	_	
+8-7	784-789	mixed	Operation	Participant-material|Participant-material	8-4|8-9	
+8-8	790-794	with	_	_	_	
+8-9	795-798	NiO	Material-recipe	Value-of	8-14[11_0]	
+8-10	799-803	with	_	_	_	
+8-11	804-810	weight	Descriptor[10]	_	_	
+8-12	811-817	ratios	Descriptor[10]	_	_	
+8-13	818-820	of	_	_	_	
+8-14	821-822	1	Value[11]	Descriptor-of	8-11[10_11]	
+8-15	823-824	:	Value[11]	_	_	
+8-16	825-831	0.0849	Value[11]	_	_	
+8-17	831-832	,	_	_	_	
+8-18	833-846	corresponding	_	_	_	
+8-19	847-849	to	_	_	_	
+8-20	850-851	1	Value[12]	_	_	
+8-21	852-853	:	Value[12]	_	_	
+8-22	854-855	1	Value[12]	_	_	
+8-23	856-861	molar	Value[13]	Coreference	8-20[12_13]	
+8-24	862-868	ratios	Value[13]	_	_	
+8-25	869-871	of	_	_	_	
+8-26	872-880	Ba3Os2O9	Material-others[14]	Value-of	8-20[12_14]	
+8-27	881-882	:	Material-others[14]	_	_	
+8-28	883-886	NiO	Material-others[14]	_	_	
+8-29	886-887	.	_	_	_	
+
+#Text=The mixed powders were pressed to
+#Text=pellets and loaded into corundum crucibles which were placed
+#Text=in silica tubes.
+9-1	888-891	The	_	_	_	
+9-2	892-897	mixed	Descriptor	_	_	
+9-3	898-905	powders	Material-intermedium	Descriptor-of	9-2	
+9-4	906-910	were	_	_	_	
+9-5	911-918	pressed	Operation	Participant-material|Next-operation	9-3|9-9	
+9-6	919-921	to	_	_	_	
+9-7	922-929	pellets	Material-intermedium	_	_	
+9-8	930-933	and	_	_	_	
+9-9	934-940	loaded	Operation	Device-of-operation	9-12	
+9-10	941-945	into	_	_	_	
+9-11	946-954	corundum	Descriptor	_	_	
+9-12	955-964	crucibles	Device	Descriptor-of	9-11	
+9-13	965-970	which	_	_	_	
+9-14	971-975	were	_	_	_	
+9-15	976-982	placed	Operation	Next-operation|Device-of-operation|Participant-material|Device-of-operation	9-9|9-12|9-7|9-18	
+9-16	983-985	in	_	_	_	
+9-17	986-992	silica	Descriptor	_	_	
+9-18	993-998	tubes	Device	Descriptor-of	9-17	
+9-19	998-999	.	_	_	_	
+
+#Text=The silica tubes were sealed under dynamic
+#Text=vacuum and then annealed at 950 °C for 48 h.
+10-1	1000-1003	The	_	_	_	
+10-2	1004-1010	silica	Descriptor	_	_	
+10-3	1011-1016	tubes	Device	Descriptor-of	10-2	
+10-4	1017-1021	were	_	_	_	
+10-5	1022-1028	sealed	Operation	Device-of-operation|Condition-of|Next-operation	10-3|10-7[15_0]|10-11	
+10-6	1029-1034	under	_	_	_	
+10-7	1035-1042	dynamic	Property-pressure[15]	_	_	
+10-8	1043-1049	vacuum	Property-pressure[15]	_	_	
+10-9	1050-1053	and	_	_	_	
+10-10	1054-1058	then	_	_	_	
+10-11	1059-1067	annealed	Operation	Condition-of|Condition-of	10-13[16_0]|10-17[17_0]	
+10-12	1068-1070	at	_	_	_	
+10-13	1071-1074	950	Property-temperature[16]	_	_	
+10-14	1075-1076	°	Property-temperature[16]	_	_	
+10-15	1076-1077	C	Property-temperature[16]	_	_	
+10-16	1078-1081	for	_	_	_	
+10-17	1082-1084	48	Property-time[17]	_	_	
+10-18	1085-1086	h	Property-time[17]	_	_	
+10-19	1086-1087	.	_	_	_	
+
+#Text=A similar
+#Text=two-step method was used to synthesize Ba3CuOs2O9 and
+#Text=Ba3ZnOs2O9 [16].
+11-1	1088-1089	A	_	_	_	
+11-2	1090-1097	similar	Descriptor	_	_	
+11-3	1098-1106	two-step	Descriptor	_	_	
+11-4	1107-1113	method	Operation	Descriptor-of|Descriptor-of|Coreference	11-3|11-2|11-8	
+11-5	1114-1117	was	_	_	_	
+11-6	1118-1122	used	_	_	_	
+11-7	1123-1125	to	_	_	_	
+11-8	1126-1136	synthesize	Operation	Participant-material|Participant-material	11-9|11-11	
+11-9	1137-1147	Ba3CuOs2O9	Material-target	_	_	
+11-10	1148-1151	and	_	_	_	
+11-11	1152-1162	Ba3ZnOs2O9	Material-target	_	_	
+11-12	1163-1164	[	_	_	_	
+11-13	1164-1166	16	_	_	_	
+11-14	1166-1167	]	_	_	_	
+11-15	1167-1168	.	_	_	_	
+
+#Text=The HP Ba3NiOs2O9 was initially obtained by annealing
+#Text=the AP phase under high pressure.
+12-1	1169-1172	The	_	_	_	
+12-2	1173-1175	HP	Descriptor	_	_	
+12-3	1176-1186	Ba3NiOs2O9	Material-target	Descriptor-of	12-2	
+12-4	1187-1190	was	_	_	_	
+12-5	1191-1200	initially	_	_	_	
+12-6	1201-1209	obtained	Operation	Participant-material|Coreference	12-3|12-8	
+12-7	1210-1212	by	_	_	_	
+12-8	1213-1222	annealing	Operation	Participant-material|Condition-of	12-11|12-13[18_0]	
+12-9	1223-1226	the	_	_	_	
+12-10	1227-1229	AP	Descriptor	_	_	
+12-11	1230-1235	phase	Material-intermedium	Descriptor-of	12-10	
+12-12	1236-1241	under	_	_	_	
+12-13	1242-1246	high	Property-pressure[18]	_	_	
+12-14	1247-1255	pressure	Property-pressure[18]	_	_	
+12-15	1255-1256	.	_	_	_	
+
+#Text=The as prepared AP
+#Text=Ba3NiOs2O9 samples were thoroughly ground and sealed
+#Text=into Pt crucibles.
+13-1	1257-1260	The	_	_	_	
+13-2	1261-1263	as	_	_	_	
+13-3	1264-1272	prepared	Descriptor	_	_	
+13-4	1273-1275	AP	Descriptor	_	_	
+13-5	1276-1286	Ba3NiOs2O9	Material-intermedium	Descriptor-of|Descriptor-of	13-4|13-3	
+13-6	1287-1294	samples	_	_	_	
+13-7	1295-1299	were	_	_	_	
+13-8	1300-1310	thoroughly	Descriptor	_	_	
+13-9	1311-1317	ground	Operation	Descriptor-of|Participant-material|Next-operation	13-8|13-5|13-11	
+13-10	1318-1321	and	_	_	_	
+13-11	1322-1328	sealed	Operation	Device-of-operation	13-14	
+13-12	1329-1333	into	_	_	_	
+13-13	1334-1336	Pt	Descriptor	_	_	
+13-14	1337-1346	crucibles	Device	Descriptor-of	13-13	
+13-15	1346-1347	.	_	_	_	
+
+#Text=The Pt crucibles were then loaded into a
+#Text=multianvil-type press (CTF-MA1500P, C&T Factory Co., Ltd,
+#Text=Japan) with a pressure of 6 GPa.
+14-1	1348-1351	The	_	_	_	
+14-2	1352-1354	Pt	Descriptor	_	_	
+14-3	1355-1364	crucibles	Device	Descriptor-of	14-2	
+14-4	1365-1369	were	_	_	_	
+14-5	1370-1374	then	_	_	_	
+14-6	1375-1381	loaded	Operation	Device-of-operation|Device-of-operation|Condition-of	14-3|14-10|14-29[20_0]	
+14-7	1382-1386	into	_	_	_	
+14-8	1387-1388	a	Value	_	_	
+14-9	1389-1404	multianvil-type	Descriptor	_	_	
+14-10	1405-1410	press	Device	Descriptor-of|Brand-of|Value-of	14-9|14-12[19_0]|14-8	
+14-11	1411-1412	(	_	_	_	
+14-12	1412-1423	CTF-MA1500P	Brand[19]	_	_	
+14-13	1423-1424	,	Brand[19]	_	_	
+14-14	1425-1426	C	Brand[19]	_	_	
+14-15	1426-1427	&	Brand[19]	_	_	
+14-16	1427-1428	T	Brand[19]	_	_	
+14-17	1429-1436	Factory	Brand[19]	_	_	
+14-18	1437-1439	Co	Brand[19]	_	_	
+14-19	1439-1440	.	Brand[19]	_	_	
+14-20	1440-1441	,	Brand[19]	_	_	
+14-21	1442-1445	Ltd	Brand[19]	_	_	
+14-22	1445-1446	,	Brand[19]	_	_	
+14-23	1447-1452	Japan	Brand[19]	_	_	
+14-24	1452-1453	)	_	_	_	
+14-25	1454-1458	with	_	_	_	
+14-26	1459-1460	a	_	_	_	
+14-27	1461-1469	pressure	_	_	_	
+14-28	1470-1472	of	_	_	_	
+14-29	1473-1474	6	Property-pressure[20]	_	_	
+14-30	1475-1478	GPa	Property-pressure[20]	_	_	
+14-31	1478-1479	.	_	_	_	
+
+#Text=The crucibles were heated at
+#Text=1100 °C for 30 min while the pressure maintained stable.
+15-1	1480-1483	The	_	_	_	
+15-2	1484-1493	crucibles	Device	_	_	
+15-3	1494-1498	were	_	_	_	
+15-4	1499-1505	heated	Operation	Device-of-operation|Condition-of|Condition-of|Condition-of	15-2|15-6[21_0]|15-10[22_0]|15-16	
+15-5	1506-1508	at	_	_	_	
+15-6	1509-1513	1100	Property-temperature[21]	_	_	
+15-7	1514-1515	°	Property-temperature[21]	_	_	
+15-8	1515-1516	C	Property-temperature[21]	_	_	
+15-9	1517-1520	for	_	_	_	
+15-10	1521-1523	30	Property-time[22]	_	_	
+15-11	1524-1527	min	Property-time[22]	_	_	
+15-12	1528-1533	while	_	_	_	
+15-13	1534-1537	the	_	_	_	
+15-14	1538-1546	pressure	_	_	_	
+15-15	1547-1557	maintained	_	_	_	
+15-16	1558-1564	stable	Property-pressure	_	_	
+15-17	1564-1565	.	_	_	_	
+
+#Text=Then
+#Text=the pressure was released gradually.
+16-1	1566-1570	Then	_	_	_	
+16-2	1571-1574	the	_	_	_	
+16-3	1575-1583	pressure	Property-pressure	_	_	
+16-4	1584-1587	was	_	_	_	
+16-5	1588-1596	released	Operation	Condition-of|Condition-of	16-3|16-6	
+16-6	1597-1606	gradually	Property-rate	_	_	
+16-7	1606-1607	.	_	_	_	
+
+#Text=Subsequently we found
+#Text=that HP Ba3NiOs2O9 can be synthesized directly from BaO
+#Text=(decomposition of BaCO3, Alfa 99.8%), NiO (Alfa 99%),
+#Text=OsO2 (Lab made from Os powder), and KClO4 (Kishida
+#Text=Chemical >99.5%).
+17-1	1608-1620	Subsequently	_	_	_	
+17-2	1621-1623	we	_	_	_	
+17-3	1624-1629	found	_	_	_	
+17-4	1630-1634	that	_	_	_	
+17-5	1635-1637	HP	Descriptor	_	_	
+17-6	1638-1648	Ba3NiOs2O9	Material-target	Descriptor-of	17-5	
+17-7	1649-1652	can	_	_	_	
+17-8	1653-1655	be	_	_	_	
+17-9	1656-1667	synthesized	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Participant-material	17-6|17-12|17-22|17-28|17-38	
+17-10	1668-1676	directly	_	_	_	
+17-11	1677-1681	from	_	_	_	
+17-12	1682-1685	BaO	Material-recipe	_	_	
+17-13	1686-1687	(	_	_	_	
+17-14	1687-1700	decomposition	Operation	Participant-material|Participant-material	17-16|17-12	
+17-15	1701-1703	of	_	_	_	
+17-16	1704-1709	BaCO3	Material-recipe	Brand-of|Value-of	17-18|17-19	
+17-17	1709-1710	,	_	_	_	
+17-18	1711-1715	Alfa	Brand	_	_	
+17-19	1716-1721	99.8%	Value	_	_	
+17-20	1721-1722	)	_	_	_	
+17-21	1722-1723	,	_	_	_	
+17-22	1724-1727	NiO	Material-recipe	Brand-of|Value-of	17-24|17-25	
+17-23	1728-1729	(	_	_	_	
+17-24	1729-1733	Alfa	Brand	_	_	
+17-25	1734-1737	99%	Value	_	_	
+17-26	1737-1738	)	_	_	_	
+17-27	1738-1739	,	_	_	_	
+17-28	1740-1744	OsO2	Material-recipe	_	_	
+17-29	1745-1746	(	_	_	_	
+17-30	1746-1749	Lab	Operation[23]	Participant-material|Participant-material	17-28[0_23]|17-33[0_23]	
+17-31	1750-1754	made	Operation[23]	_	_	
+17-32	1755-1759	from	_	_	_	
+17-33	1760-1762	Os	Material-recipe	Descriptor-of	17-34	
+17-34	1763-1769	powder	Descriptor	_	_	
+17-35	1769-1770	)	_	_	_	
+17-36	1770-1771	,	_	_	_	
+17-37	1772-1775	and	_	_	_	
+17-38	1776-1781	KClO4	Material-recipe	Brand-of|Value-of	17-40[24_0]|17-42[25_0]	
+17-39	1782-1783	(	_	_	_	
+17-40	1783-1790	Kishida	Brand[24]	_	_	
+17-41	1791-1799	Chemical	Brand[24]	_	_	
+17-42	1800-1801	>	Value[25]	_	_	
+17-43	1801-1806	99.5%	Value[25]	_	_	
+17-44	1806-1807	)	_	_	_	
+17-45	1807-1808	.	_	_	_	
+
+#Text=Powders of BaO, NiO, OsO2, and KClO4
+#Text=with a mole ratio of 3 : 1 : 2 : 0.26 were well ground and sealed
+#Text=into a Pt crucible inside an Ar glovebox, which was then
+#Text=loaded into the same multianvil-type press with a pressure of
+#Text=6 GPa.
+18-1	1809-1816	Powders	Descriptor	_	_	
+18-2	1817-1819	of	_	_	_	
+18-3	1820-1823	BaO	Material-recipe	Descriptor-of|Value-of	18-1|18-16[27_0]	
+18-4	1823-1824	,	_	_	_	
+18-5	1825-1828	NiO	Material-recipe	Descriptor-of|Value-of	18-1|18-16[27_0]	
+18-6	1828-1829	,	_	_	_	
+18-7	1830-1834	OsO2	Material-recipe	Descriptor-of|Value-of	18-1|18-16[27_0]	
+18-8	1834-1835	,	_	_	_	
+18-9	1836-1839	and	_	_	_	
+18-10	1840-1845	KClO4	Material-recipe	Descriptor-of|Value-of	18-1|18-16[27_0]	
+18-11	1846-1850	with	_	_	_	
+18-12	1851-1852	a	_	_	_	
+18-13	1853-1857	mole	Descriptor[26]	_	_	
+18-14	1858-1863	ratio	Descriptor[26]	_	_	
+18-15	1864-1866	of	_	_	_	
+18-16	1867-1868	3	Value[27]	Descriptor-of	18-13[26_27]	
+18-17	1869-1870	:	Value[27]	_	_	
+18-18	1871-1872	1	Value[27]	_	_	
+18-19	1873-1874	:	Value[27]	_	_	
+18-20	1875-1876	2	Value[27]	_	_	
+18-21	1877-1878	:	Value[27]	_	_	
+18-22	1879-1883	0.26	Value[27]	_	_	
+18-23	1884-1888	were	_	_	_	
+18-24	1889-1893	well	Descriptor	_	_	
+18-25	1894-1900	ground	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Participant-material	18-24|18-3|18-5|18-7|18-10	
+18-26	1901-1904	and	_	_	_	
+18-27	1905-1911	sealed	Operation	Next-operation|Participant-material|Participant-material|Participant-material|Participant-material|Device-of-operation|Condition-of|Device-of-operation	18-25|18-3|18-5|18-7|18-10|18-31|18-34|18-35	
+18-28	1912-1916	into	_	_	_	
+18-29	1917-1918	a	Value	_	_	
+18-30	1919-1921	Pt	Descriptor	_	_	
+18-31	1922-1930	crucible	Device	Descriptor-of|Value-of	18-30|18-29	
+18-32	1931-1937	inside	_	_	_	
+18-33	1938-1940	an	Value	_	_	
+18-34	1941-1943	Ar	Property-pressure	_	_	
+18-35	1944-1952	glovebox	Device	Value-of	18-33	
+18-36	1952-1953	,	_	_	_	
+18-37	1954-1959	which	_	_	_	
+18-38	1960-1963	was	_	_	_	
+18-39	1964-1968	then	_	_	_	
+18-40	1969-1975	loaded	Operation	Next-operation|Participant-material|Participant-material|Participant-material|Participant-material|Device-of-operation|Device-of-operation|Condition-of	18-27|18-3|18-5|18-7|18-10|18-31|18-45|18-50[28_0]	
+18-41	1976-1980	into	_	_	_	
+18-42	1981-1984	the	_	_	_	
+18-43	1985-1989	same	Descriptor	_	_	
+18-44	1990-2005	multianvil-type	Descriptor	_	_	
+18-45	2006-2011	press	Device	Descriptor-of|Descriptor-of	18-43|18-44	
+18-46	2012-2016	with	_	_	_	
+18-47	2017-2018	a	_	_	_	
+18-48	2019-2027	pressure	_	_	_	
+18-49	2028-2030	of	_	_	_	
+18-50	2031-2032	6	Property-pressure[28]	_	_	
+18-51	2033-2036	GPa	Property-pressure[28]	_	_	
+18-52	2036-2037	.	_	_	_	
+
+#Text=After heating at 1100 °C for 30 min while maintaining
+#Text=the high pressure, the press released the pressure gradually.
+19-1	2038-2043	After	_	_	_	
+19-2	2044-2051	heating	Operation	Condition-of|Condition-of|Condition-of|Device-of-operation	19-4[29_0]|19-8[30_0]|19-13|19-17	
+19-3	2052-2054	at	_	_	_	
+19-4	2055-2059	1100	Property-temperature[29]	_	_	
+19-5	2060-2061	°	Property-temperature[29]	_	_	
+19-6	2061-2062	C	Property-temperature[29]	_	_	
+19-7	2063-2066	for	_	_	_	
+19-8	2067-2069	30	Property-time[30]	_	_	
+19-9	2070-2073	min	Property-time[30]	_	_	
+19-10	2074-2079	while	_	_	_	
+19-11	2080-2091	maintaining	_	_	_	
+19-12	2092-2095	the	_	_	_	
+19-13	2096-2100	high	Property-pressure	_	_	
+19-14	2101-2109	pressure	_	_	_	
+19-15	2109-2110	,	_	_	_	
+19-16	2111-2114	the	_	_	_	
+19-17	2115-2120	press	Device	_	_	
+19-18	2121-2129	released	Operation	Condition-of|Condition-of|Next-operation|Device-of-operation	19-20|19-21|19-2|19-17	
+19-19	2130-2133	the	_	_	_	
+19-20	2134-2142	pressure	Property-pressure	_	_	
+19-21	2143-2152	gradually	Property-rate	_	_	
+19-22	2152-2153	.	_	_	_	
+
+#Text=The obtained samples were rinsed in deionized water to
+#Text=remove the residual KCl.
+20-1	2154-2157	The	_	_	_	
+20-2	2158-2166	obtained	_	_	_	
+20-3	2167-2174	samples	Material-recipe	_	_	
+20-4	2175-2179	were	_	_	_	
+20-5	2180-2186	rinsed	Operation	Participant-material|Participant-material	20-3|20-8	
+20-6	2187-2189	in	_	_	_	
+20-7	2190-2199	deionized	Descriptor	_	_	
+20-8	2200-2205	water	Material-others	Descriptor-of	20-7	
+20-9	2206-2208	to	_	_	_	
+20-10	2209-2215	remove	_	_	_	
+20-11	2216-2219	the	_	_	_	
+20-12	2220-2228	residual	_	_	_	
+20-13	2229-2232	KCl	_	_	_	
+20-14	2232-2233	.	_	_	_	
+
+#Text=Samples obtained by these two
+#Text=methods show similar x-ray-diffraction (XRD) patterns and
+#Text=magnetic properties (see Figs.
+21-1	2234-2241	Samples	_	_	_	
+21-2	2242-2250	obtained	_	_	_	
+21-3	2251-2253	by	_	_	_	
+21-4	2254-2259	these	_	_	_	
+21-5	2260-2263	two	_	_	_	
+21-6	2264-2271	methods	_	_	_	
+21-7	2272-2276	show	_	_	_	
+21-8	2277-2284	similar	_	_	_	
+21-9	2285-2302	x-ray-diffraction	_	_	_	
+21-10	2303-2304	(	_	_	_	
+21-11	2304-2307	XRD	_	_	_	
+21-12	2307-2308	)	_	_	_	
+21-13	2309-2317	patterns	_	_	_	
+21-14	2318-2321	and	_	_	_	
+21-15	2322-2330	magnetic	_	_	_	
+21-16	2331-2341	properties	_	_	_	
+21-17	2342-2343	(	_	_	_	
+21-18	2343-2346	see	_	_	_	
+21-19	2347-2351	Figs	_	_	_	
+21-20	2351-2352	.	_	_	_	
+
+#Text=S1–S3 in the Supplemental Material [39]).
+22-1	2353-2355	S1	_	_	_	
+22-2	2355-2356	–	_	_	_	
+22-3	2356-2358	S3	_	_	_	
+22-4	2359-2361	in	_	_	_	
+22-5	2362-2365	the	_	_	_	
+22-6	2366-2378	Supplemental	_	_	_	
+22-7	2379-2387	Material	_	_	_	
+22-8	2388-2389	[	_	_	_	
+22-9	2389-2391	39	_	_	_	
+22-10	2391-2392	]	_	_	_	
+22-11	2392-2393	)	_	_	_	
+22-12	2393-2394	.	_	_	_	
+
+#Text=The properties reported in this paper are measured
+#Text=on the sample synthesized by the latter method.
+23-1	2395-2398	The	_	_	_	
+23-2	2399-2409	properties	_	_	_	
+23-3	2410-2418	reported	_	_	_	
+23-4	2419-2421	in	_	_	_	
+23-5	2422-2426	this	_	_	_	
+23-6	2427-2432	paper	_	_	_	
+23-7	2433-2436	are	_	_	_	
+23-8	2437-2445	measured	_	_	_	
+23-9	2446-2448	on	_	_	_	
+23-10	2449-2452	the	_	_	_	
+23-11	2453-2459	sample	_	_	_	
+23-12	2460-2471	synthesized	_	_	_	
+23-13	2472-2474	by	_	_	_	
+23-14	2475-2478	the	_	_	_	
+23-15	2479-2485	latter	_	_	_	
+23-16	2486-2492	method	_	_	_	
+23-17	2492-2493	.	_	_	_	
+
+#Text=Using the
+#Text=latter method, a total amount of about 3.0 g HP Ba3NiOs2O9
+#Text=was produced for the neutron-diffraction study by repeated
+#Text=sample preparation runs.
+24-1	2494-2499	Using	_	_	_	
+24-2	2500-2503	the	_	_	_	
+24-3	2504-2510	latter	_	_	_	
+24-4	2511-2517	method	_	_	_	
+24-5	2517-2518	,	_	_	_	
+24-6	2519-2520	a	_	_	_	
+24-7	2521-2526	total	_	_	_	
+24-8	2527-2533	amount	_	_	_	
+24-9	2534-2536	of	_	_	_	
+24-10	2537-2542	about	_	_	_	
+24-11	2543-2546	3.0	_	_	_	
+24-12	2547-2548	g	_	_	_	
+24-13	2549-2551	HP	_	_	_	
+24-14	2552-2562	Ba3NiOs2O9	_	_	_	
+24-15	2563-2566	was	_	_	_	
+24-16	2567-2575	produced	_	_	_	
+24-17	2576-2579	for	_	_	_	
+24-18	2580-2583	the	_	_	_	
+24-19	2584-2603	neutron-diffraction	_	_	_	
+24-20	2604-2609	study	_	_	_	
+24-21	2610-2612	by	_	_	_	
+24-22	2613-2621	repeated	_	_	_	
+24-23	2622-2628	sample	_	_	_	
+24-24	2629-2640	preparation	_	_	_	
+24-25	2641-2645	runs	_	_	_	
+24-26	2645-2646	.	_	_	_	

@@ -1,0 +1,133 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Single crystal Cd2Os2O7 was grown by the chemical transport method.
+1-1	0-6	Single	_	_	_	
+1-2	7-14	crystal	_	_	_	
+1-3	15-23	Cd2Os2O7	Material-target	_	_	
+1-4	24-27	was	_	_	_	
+1-5	28-33	grown	_	_	_	
+1-6	34-36	by	_	_	_	
+1-7	37-40	the	_	_	_	
+1-8	41-49	chemical	_	_	_	
+1-9	50-59	transport	_	_	_	
+1-10	60-66	method	_	_	_	
+1-11	66-67	.	_	_	_	
+
+#Text=First, a polycrystalline pellet was prepared from a mixture including 5–10% excess CdO and Os in a sealed quartz tube, under supply of an appropriate amount of AgO as the oxygen source at 1073 K; addition of too much AgO should be avoided, as highly toxic OsO4 might be produced.
+2-1	68-73	First	_	_	_	
+2-2	73-74	,	_	_	_	
+2-3	75-76	a	_	_	_	
+2-4	77-92	polycrystalline	Descriptor	_	_	
+2-5	93-99	pellet	Material-target	Descriptor-of	2-4	
+2-6	100-103	was	_	_	_	
+2-7	104-112	prepared	Operation	Participant-material|Device-of-operation|Condition-of	2-5|2-23|2-38[4_0]	
+2-8	113-117	from	_	_	_	
+2-9	118-119	a	_	_	_	
+2-10	120-127	mixture	Material-intermedium	_	_	
+2-11	128-137	including	_	_	_	
+2-12	138-139	5	Value[1]	_	_	
+2-13	139-140	–	Value[1]	_	_	
+2-14	140-143	10%	Value[1]	_	_	
+2-15	144-150	excess	Value[1]	_	_	
+2-16	151-154	CdO	Material-recipe	Value-of|Coreference	2-12[1_0]|2-10	
+2-17	155-158	and	_	_	_	
+2-18	159-161	Os	Material-recipe	Value-of|Coreference	2-12[1_0]|2-10	
+2-19	162-164	in	_	_	_	
+2-20	165-166	a	Value	_	_	
+2-21	167-173	sealed	Descriptor	_	_	
+2-22	174-180	quartz	Descriptor	_	_	
+2-23	181-185	tube	Device	Value-of|Descriptor-of|Descriptor-of	2-20|2-21|2-22	
+2-24	185-186	,	_	_	_	
+2-25	187-192	under	_	_	_	
+2-26	193-199	supply	_	_	_	
+2-27	200-202	of	_	_	_	
+2-28	203-205	an	_	_	_	
+2-29	206-217	appropriate	Value[2]	_	_	
+2-30	218-224	amount	Value[2]	_	_	
+2-31	225-227	of	_	_	_	
+2-32	228-231	AgO	Material-recipe	Value-of|Coreference|Coreference	2-29[2_0]|2-10|2-35[3_0]	
+2-33	232-234	as	_	_	_	
+2-34	235-238	the	_	_	_	
+2-35	239-245	oxygen	Material-recipe[3]	_	_	
+2-36	246-252	source	Material-recipe[3]	_	_	
+2-37	253-255	at	_	_	_	
+2-38	256-260	1073	Property-temperature[4]	_	_	
+2-39	261-262	K	Property-temperature[4]	_	_	
+2-40	262-263	;	_	_	_	
+2-41	264-272	addition	_	_	_	
+2-42	273-275	of	_	_	_	
+2-43	276-279	too	_	_	_	
+2-44	280-284	much	_	_	_	
+2-45	285-288	AgO	_	_	_	
+2-46	289-295	should	_	_	_	
+2-47	296-298	be	_	_	_	
+2-48	299-306	avoided	_	_	_	
+2-49	306-307	,	_	_	_	
+2-50	308-310	as	_	_	_	
+2-51	311-317	highly	_	_	_	
+2-52	318-323	toxic	_	_	_	
+2-53	324-328	OsO4	_	_	_	
+2-54	329-334	might	_	_	_	
+2-55	335-337	be	_	_	_	
+2-56	338-346	produced	_	_	_	
+2-57	346-347	.	_	_	_	
+
+#Text=Second, the tube was kept in a furnace with a temperature gradient of 1040–1200 K for a week with the pellet at the high temperature side.
+3-1	348-354	Second	_	_	_	
+3-2	354-355	,	_	_	_	
+3-3	356-359	the	_	_	_	
+3-4	360-364	tube	Device	_	_	
+3-5	365-368	was	_	_	_	
+3-6	369-373	kept	Operation	Participant-material|Device-of-operation|Condition-of|Condition-of	3-4|3-9|3-15[5_0]|3-20[6_0]	
+3-7	374-376	in	_	_	_	
+3-8	377-378	a	Value	_	_	
+3-9	379-386	furnace	Device	Value-of	3-8	
+3-10	387-391	with	_	_	_	
+3-11	392-393	a	_	_	_	
+3-12	394-405	temperature	Property-temperature	Descriptor-of	3-13	
+3-13	406-414	gradient	Descriptor	_	_	
+3-14	415-417	of	_	_	_	
+3-15	418-422	1040	Property-temperature[5]	Coreference	3-12[0_5]	
+3-16	422-423	–	Property-temperature[5]	_	_	
+3-17	423-427	1200	Property-temperature[5]	_	_	
+3-18	428-429	K	Property-temperature[5]	_	_	
+3-19	430-433	for	_	_	_	
+3-20	434-435	a	Property-time[6]	_	_	
+3-21	436-440	week	Property-time[6]	_	_	
+3-22	441-445	with	_	_	_	
+3-23	446-449	the	_	_	_	
+3-24	450-456	pellet	_	_	_	
+3-25	457-459	at	_	_	_	
+3-26	460-463	the	_	_	_	
+3-27	464-468	high	_	_	_	
+3-28	469-480	temperature	_	_	_	
+3-29	481-485	side	_	_	_	
+3-30	485-486	.	_	_	_	
+
+#Text=Single crystals were then grown via a chemical vapor transport process.
+4-1	487-493	Single	_	_	_	
+4-2	494-502	crystals	_	_	_	
+4-3	503-507	were	_	_	_	
+4-4	508-512	then	_	_	_	
+4-5	513-518	grown	_	_	_	
+4-6	519-522	via	_	_	_	
+4-7	523-524	a	_	_	_	
+4-8	525-533	chemical	_	_	_	
+4-9	534-539	vapor	_	_	_	
+4-10	540-549	transport	_	_	_	
+4-11	550-557	process	_	_	_	
+4-12	557-558	.	_	_	_	
+
+#Text=Magnetization was measured in a Quantum Design MPMS.
+5-1	559-572	Magnetization	_	_	_	
+5-2	573-576	was	_	_	_	
+5-3	577-585	measured	_	_	_	
+5-4	586-588	in	_	_	_	
+5-5	589-590	a	_	_	_	
+5-6	591-598	Quantum	_	_	_	
+5-7	599-605	Design	_	_	_	
+5-8	606-610	MPMS	_	_	_	
+5-9	610-611	.	_	_	_	

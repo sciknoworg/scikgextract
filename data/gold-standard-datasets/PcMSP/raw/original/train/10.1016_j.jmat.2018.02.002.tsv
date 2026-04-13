@@ -1,0 +1,187 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=We synthesized polycrystalline samples with compositions CuGa1-xFexTe2 where x = 0.0, 0.01, 0.02, 0.03, 0.04, and 0.05 by melt and anneal method.
+1-1	0-2	We	_	_	_	
+1-2	3-14	synthesized	Operation	Participant-material|Coreference|Coreference	1-7[1_0]|1-28|1-30	
+1-3	15-30	polycrystalline	Descriptor	_	_	
+1-4	31-38	samples	_	_	_	
+1-5	39-43	with	_	_	_	
+1-6	44-56	compositions	_	_	_	
+1-7	57-62	CuGa1	Material-target[1]	Descriptor-of|Descriptor-of	1-11[2_1]|1-3[0_1]	
+1-8	62-63	-	Material-target[1]	_	_	
+1-9	63-70	xFexTe2	Material-target[1]	_	_	
+1-10	71-76	where	_	_	_	
+1-11	77-78	x	Descriptor[2]	_	_	
+1-12	78-79	 	Descriptor[2]	_	_	
+1-13	79-80	=	Descriptor[2]	_	_	
+1-14	80-81	 	Descriptor[2]	_	_	
+1-15	81-84	0.0	Descriptor[2]	_	_	
+1-16	84-85	,	Descriptor[2]	_	_	
+1-17	86-90	0.01	Descriptor[2]	_	_	
+1-18	90-91	,	Descriptor[2]	_	_	
+1-19	92-96	0.02	Descriptor[2]	_	_	
+1-20	96-97	,	Descriptor[2]	_	_	
+1-21	98-102	0.03	Descriptor[2]	_	_	
+1-22	102-103	,	Descriptor[2]	_	_	
+1-23	104-108	0.04	Descriptor[2]	_	_	
+1-24	108-109	,	Descriptor[2]	_	_	
+1-25	110-113	and	Descriptor[2]	_	_	
+1-26	114-118	0.05	Descriptor[2]	_	_	
+1-27	119-121	by	_	_	_	
+1-28	122-126	melt	Operation	_	_	
+1-29	127-130	and	_	_	_	
+1-30	131-137	anneal	Operation	_	_	
+1-31	138-144	method	_	_	_	
+1-32	144-145	.	_	_	_	
+
+#Text=High purity specimens, Cu (99.99%), Fe (99.99%) Ga (99.9999%), Te (99.9999%) were used in synthesis.
+2-1	146-150	High	Descriptor[3]	_	_	
+2-2	151-157	purity	Descriptor[3]	_	_	
+2-3	158-167	specimens	_	_	_	
+2-4	167-168	,	_	_	_	
+2-5	169-171	Cu	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-7	
+2-6	172-173	(	_	_	_	
+2-7	173-179	99.99%	Value	_	_	
+2-8	179-180	)	_	_	_	
+2-9	180-181	,	_	_	_	
+2-10	182-184	Fe	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-12	
+2-11	185-186	(	_	_	_	
+2-12	186-192	99.99%	Value	_	_	
+2-13	192-193	)	_	_	_	
+2-14	194-196	Ga	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-16	
+2-15	197-198	(	_	_	_	
+2-16	198-206	99.9999%	Value	_	_	
+2-17	206-207	)	_	_	_	
+2-18	207-208	,	_	_	_	
+2-19	209-211	Te	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-21	
+2-20	212-213	(	_	_	_	
+2-21	213-221	99.9999%	Value	_	_	
+2-22	221-222	)	_	_	_	
+2-23	223-227	were	_	_	_	
+2-24	228-232	used	_	_	_	
+2-25	233-235	in	_	_	_	
+2-26	236-245	synthesis	Operation	Participant-material|Participant-material|Participant-material|Participant-material	2-5|2-10|2-14|2-19	
+2-27	245-246	.	_	_	_	
+
+#Text=After weighing in stoichiometric amounts and dry mixing, starting materials were sealed in evacuated quartz tube.
+3-1	247-252	After	_	_	_	
+3-2	253-261	weighing	Operation	Participant-material	3-10[5_0]	
+3-3	262-264	in	_	_	_	
+3-4	265-279	stoichiometric	Value[4]	_	_	
+3-5	280-287	amounts	Value[4]	_	_	
+3-6	288-291	and	_	_	_	
+3-7	292-295	dry	Descriptor	_	_	
+3-8	296-302	mixing	Operation	Descriptor-of|Participant-material|Next-operation|Next-operation	3-7|3-10[5_0]|3-2|3-13	
+3-9	302-303	,	_	_	_	
+3-10	304-312	starting	Material-recipe[5]	Value-of	3-4[4_5]	
+3-11	313-322	materials	Material-recipe[5]	_	_	
+3-12	323-327	were	_	_	_	
+3-13	328-334	sealed	Operation	Participant-material|Device-of-operation	3-10[5_0]|3-17	
+3-14	335-337	in	_	_	_	
+3-15	338-347	evacuated	Descriptor	_	_	
+3-16	348-354	quartz	Descriptor	_	_	
+3-17	355-359	tube	Device	Descriptor-of|Descriptor-of	3-16|3-15	
+3-18	359-360	.	_	_	_	
+
+#Text=These tubes were then heated gradually to 1173 K, and were held at this temperature for 12 h followed by annealing at 873 K for same period of time.
+4-1	361-366	These	_	_	_	
+4-2	367-372	tubes	Device	_	_	
+4-3	373-377	were	_	_	_	
+4-4	378-382	then	_	_	_	
+4-5	383-389	heated	Operation	Device-of-operation|Condition-of|Condition-of|Next-operation	4-2|4-6|4-8[6_0]|4-14	
+4-6	390-399	gradually	Property-rate	_	_	
+4-7	400-402	to	_	_	_	
+4-8	403-407	1173	Property-temperature[6]	Coreference	4-16[7_6]	
+4-9	407-408	 	Property-temperature[6]	_	_	
+4-10	408-409	K	Property-temperature[6]	_	_	
+4-11	409-410	,	_	_	_	
+4-12	411-414	and	_	_	_	
+4-13	415-419	were	_	_	_	
+4-14	420-424	held	Operation	Device-of-operation|Condition-of|Condition-of|Next-operation	4-2|4-16[7_0]|4-19[8_0]|4-24	
+4-15	425-427	at	_	_	_	
+4-16	428-432	this	Property-temperature[7]	_	_	
+4-17	433-444	temperature	Property-temperature[7]	_	_	
+4-18	445-448	for	_	_	_	
+4-19	449-451	12	Property-time[8]	Coreference	4-30[10_8]	
+4-20	451-452	 	Property-time[8]	_	_	
+4-21	452-453	h	Property-time[8]	_	_	
+4-22	454-462	followed	_	_	_	
+4-23	463-465	by	_	_	_	
+4-24	466-475	annealing	Operation	Device-of-operation|Condition-of|Condition-of	4-2|4-26[9_0]|4-30[10_0]	
+4-25	476-478	at	_	_	_	
+4-26	479-482	873	Property-temperature[9]	_	_	
+4-27	482-483	 	Property-temperature[9]	_	_	
+4-28	483-484	K	Property-temperature[9]	_	_	
+4-29	485-488	for	_	_	_	
+4-30	489-493	same	Property-time[10]	_	_	
+4-31	494-500	period	Property-time[10]	_	_	
+4-32	501-503	of	Property-time[10]	_	_	
+4-33	504-508	time	Property-time[10]	_	_	
+4-34	508-509	.	_	_	_	
+
+#Text=After annealing, samples were slowly cooled down to ambient temperature.
+5-1	510-515	After	_	_	_	
+5-2	516-525	annealing	Operation	Next-operation|Participant-material	5-7[11_0]|5-4	
+5-3	525-526	,	_	_	_	
+5-4	527-534	samples	Material-intermedium	_	_	
+5-5	535-539	were	_	_	_	
+5-6	540-546	slowly	Property-rate	_	_	
+5-7	547-553	cooled	Operation[11]	Descriptor-of|Participant-material|Condition-of	5-6[0_11]|5-4[0_11]|5-10[12_11]	
+5-8	554-558	down	Operation[11]	_	_	
+5-9	559-561	to	_	_	_	
+5-10	562-569	ambient	Property-temperature[12]	_	_	
+5-11	570-581	temperature	Property-temperature[12]	_	_	
+5-12	581-582	.	_	_	_	
+
+#Text=Obtained ingots were then crushed into fine powders with mortars.
+6-1	583-591	Obtained	Descriptor	_	_	
+6-2	592-598	ingots	Material-intermedium	Descriptor-of	6-1	
+6-3	599-603	were	_	_	_	
+6-4	604-608	then	_	_	_	
+6-5	609-616	crushed	Operation	Participant-material|Device-of-operation	6-2|6-10	
+6-6	617-621	into	_	_	_	
+6-7	622-626	fine	Descriptor	_	_	
+6-8	627-634	powders	Material-intermedium	Descriptor-of	6-7	
+6-9	635-639	with	_	_	_	
+6-10	640-647	mortars	Device	_	_	
+6-11	647-648	.	_	_	_	
+
+#Text=Pellets of obtained powders were prepared by Spark plasma sintering at 823 K under 50 MPa in an inert atmosphere.
+7-1	649-656	Pellets	Material-intermedium	_	_	
+7-2	657-659	of	_	_	_	
+7-3	660-668	obtained	Descriptor	_	_	
+7-4	669-676	powders	Material-intermedium	Coreference|Descriptor-of	7-1|7-3	
+7-5	677-681	were	_	_	_	
+7-6	682-690	prepared	Operation	Participant-material|Coreference|Condition-of|Condition-of|Condition-of	7-4|7-10|7-12[14_0]|7-16[15_0]|7-21[16_0]	
+7-7	691-693	by	_	_	_	
+7-8	694-699	Spark	Descriptor[13]	_	_	
+7-9	700-706	plasma	Descriptor[13]	_	_	
+7-10	707-716	sintering	Operation	Descriptor-of	7-8[13_0]	
+7-11	717-719	at	_	_	_	
+7-12	720-723	823	Property-temperature[14]	_	_	
+7-13	723-724	 	Property-temperature[14]	_	_	
+7-14	724-725	K	Property-temperature[14]	_	_	
+7-15	726-731	under	_	_	_	
+7-16	732-734	50	Property-pressure[15]	_	_	
+7-17	734-735	 	Property-pressure[15]	_	_	
+7-18	735-738	MPa	Property-pressure[15]	_	_	
+7-19	739-741	in	_	_	_	
+7-20	742-744	an	_	_	_	
+7-21	745-750	inert	Property-pressure[16]	_	_	
+7-22	751-761	atmosphere	Property-pressure[16]	_	_	
+7-23	761-762	.	_	_	_	
+
+#Text=These high dense pellets were used for further characterizations.
+8-1	763-768	These	_	_	_	
+8-2	769-773	high	_	_	_	
+8-3	774-779	dense	_	_	_	
+8-4	780-787	pellets	_	_	_	
+8-5	788-792	were	_	_	_	
+8-6	793-797	used	_	_	_	
+8-7	798-801	for	_	_	_	
+8-8	802-809	further	_	_	_	
+8-9	810-827	characterizations	_	_	_	
+8-10	827-828	.	_	_	_	

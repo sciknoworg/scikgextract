@@ -1,0 +1,172 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples with nominal Fe concentrations between Fe3.10GeTe2 and Fe2.60GeTe2 were prepared by grinding Fe powder, Ge powder, and Te shot in a He filled glove box.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-28	with	_	_	_	
+1-4	29-36	nominal	Descriptor[1]	_	_	
+1-5	37-39	Fe	Descriptor[1]	_	_	
+1-6	40-54	concentrations	Descriptor[1]	_	_	
+1-7	55-62	between	_	_	_	
+1-8	63-74	Fe3.10GeTe2	Material-target[2]	Descriptor-of|Descriptor-of	1-4[1_2]|1-1[0_2]	
+1-9	75-78	and	Material-target[2]	_	_	
+1-10	79-90	Fe2.60GeTe2	Material-target[2]	_	_	
+1-11	91-95	were	_	_	_	
+1-12	96-104	prepared	Operation	Participant-material	1-8[2_0]	
+1-13	105-107	by	_	_	_	
+1-14	108-116	grinding	Operation	Device-of-operation|Participant-material|Participant-material|Participant-material|Coreference	1-28[4_0]|1-15|1-18|1-22|1-12	
+1-15	117-119	Fe	Material-recipe	Descriptor-of	1-16	
+1-16	120-126	powder	Descriptor	_	_	
+1-17	126-127	,	_	_	_	
+1-18	128-130	Ge	Material-recipe	Descriptor-of	1-19	
+1-19	131-137	powder	Descriptor	_	_	
+1-20	137-138	,	_	_	_	
+1-21	139-142	and	_	_	_	
+1-22	143-145	Te	Material-recipe	Descriptor-of	1-23	
+1-23	146-150	shot	Descriptor	_	_	
+1-24	151-153	in	_	_	_	
+1-25	154-155	a	Value	_	_	
+1-26	156-158	He	Descriptor[3]	_	_	
+1-27	159-165	filled	Descriptor[3]	_	_	
+1-28	166-171	glove	Device[4]	Value-of|Descriptor-of	1-25[0_4]|1-26[3_4]	
+1-29	172-175	box	Device[4]	_	_	
+1-30	175-176	.	_	_	_	
+
+#Text=The mixture was transferred, under He, to a vacuum line where the quartz ampoule was sealed under vacuum.
+2-1	177-180	The	_	_	_	
+2-2	181-188	mixture	Material-intermedium	_	_	
+2-3	189-192	was	_	_	_	
+2-4	193-204	transferred	Operation	Participant-material|Condition-of|Device-of-operation|Next-operation	2-2|2-7|2-11[5_0]|2-18	
+2-5	204-205	,	_	_	_	
+2-6	206-211	under	_	_	_	
+2-7	212-214	He	Property-pressure	_	_	
+2-8	214-215	,	_	_	_	
+2-9	216-218	to	_	_	_	
+2-10	219-220	a	Value	_	_	
+2-11	221-227	vacuum	Device[5]	Value-of	2-10[0_5]	
+2-12	228-232	line	Device[5]	_	_	
+2-13	233-238	where	_	_	_	
+2-14	239-242	the	_	_	_	
+2-15	243-249	quartz	Descriptor	_	_	
+2-16	250-257	ampoule	Device	Descriptor-of	2-15	
+2-17	258-261	was	_	_	_	
+2-18	262-268	sealed	Operation	Condition-of|Device-of-operation	2-20|2-16	
+2-19	269-274	under	_	_	_	
+2-20	275-281	vacuum	Property-pressure	_	_	
+2-21	281-282	.	_	_	_	
+
+#Text=The samples were heated at 675◦C for approximately 10 d.
+3-1	283-286	The	_	_	_	
+3-2	287-294	samples	Material-intermedium	_	_	
+3-3	295-299	were	_	_	_	
+3-4	300-306	heated	Operation	Participant-material|Condition-of|Condition-of	3-2|3-6[6_0]|3-10[7_0]	
+3-5	307-309	at	_	_	_	
+3-6	310-313	675	Property-temperature[6]	_	_	
+3-7	313-314	◦	Property-temperature[6]	_	_	
+3-8	314-315	C	Property-temperature[6]	_	_	
+3-9	316-319	for	_	_	_	
+3-10	320-333	approximately	Property-time[7]	_	_	
+3-11	334-336	10	Property-time[7]	_	_	
+3-12	337-338	d	Property-time[7]	_	_	
+3-13	338-339	.	_	_	_	
+
+#Text=The as-reacted Fe3−xGeTe2 samples were found to be either slightly sintered and dull black for small x, or heavily sintered with visible grain growth/crystallization for large x.
+4-1	340-343	The	_	_	_	
+4-2	344-354	as-reacted	_	_	_	
+4-3	355-358	Fe3	_	_	_	
+4-4	358-359	−	_	_	_	
+4-5	359-365	xGeTe2	_	_	_	
+4-6	366-373	samples	_	_	_	
+4-7	374-378	were	_	_	_	
+4-8	379-384	found	_	_	_	
+4-9	385-387	to	_	_	_	
+4-10	388-390	be	_	_	_	
+4-11	391-397	either	_	_	_	
+4-12	398-406	slightly	_	_	_	
+4-13	407-415	sintered	_	_	_	
+4-14	416-419	and	_	_	_	
+4-15	420-424	dull	_	_	_	
+4-16	425-430	black	_	_	_	
+4-17	431-434	for	_	_	_	
+4-18	435-440	small	_	_	_	
+4-19	441-442	x	_	_	_	
+4-20	442-443	,	_	_	_	
+4-21	444-446	or	_	_	_	
+4-22	447-454	heavily	_	_	_	
+4-23	455-463	sintered	_	_	_	
+4-24	464-468	with	_	_	_	
+4-25	469-476	visible	_	_	_	
+4-26	477-482	grain	_	_	_	
+4-27	483-489	growth	_	_	_	
+4-28	489-490	/	_	_	_	
+4-29	490-505	crystallization	_	_	_	
+4-30	506-509	for	_	_	_	
+4-31	510-515	large	_	_	_	
+4-32	516-517	x	_	_	_	
+4-33	517-518	.	_	_	_	
+
+#Text=At this point, the samples were analyzed with x-ray diffraction and magnetization measurements.
+5-1	519-521	At	_	_	_	
+5-2	522-526	this	_	_	_	
+5-3	527-532	point	_	_	_	
+5-4	532-533	,	_	_	_	
+5-5	534-537	the	_	_	_	
+5-6	538-545	samples	_	_	_	
+5-7	546-550	were	_	_	_	
+5-8	551-559	analyzed	_	_	_	
+5-9	560-564	with	_	_	_	
+5-10	565-570	x-ray	_	_	_	
+5-11	571-582	diffraction	_	_	_	
+5-12	583-586	and	_	_	_	
+5-13	587-600	magnetization	_	_	_	
+5-14	601-613	measurements	_	_	_	
+5-15	613-614	.	_	_	_	
+
+#Text=Small pellets were then fired briefly at 600◦C to facilitate isothermal magnetization and energy dispersive spectroscopy (EDS) measurements.
+6-1	615-620	Small	_	_	_	
+6-2	621-628	pellets	_	_	_	
+6-3	629-633	were	_	_	_	
+6-4	634-638	then	_	_	_	
+6-5	639-644	fired	_	_	_	
+6-6	645-652	briefly	_	_	_	
+6-7	653-655	at	_	_	_	
+6-8	656-659	600	_	_	_	
+6-9	659-660	◦	_	_	_	
+6-10	660-661	C	_	_	_	
+6-11	662-664	to	_	_	_	
+6-12	665-675	facilitate	_	_	_	
+6-13	676-686	isothermal	_	_	_	
+6-14	687-700	magnetization	_	_	_	
+6-15	701-704	and	_	_	_	
+6-16	705-711	energy	_	_	_	
+6-17	712-722	dispersive	_	_	_	
+6-18	723-735	spectroscopy	_	_	_	
+6-19	736-737	(	_	_	_	
+6-20	737-740	EDS	_	_	_	
+6-21	740-741	)	_	_	_	
+6-22	742-754	measurements	_	_	_	
+6-23	754-755	.	_	_	_	
+
+#Text=EDS measurements were performed using a Bruker Quantax 70 EDS system on a Hitachi TM-3000 microscope.
+7-1	756-759	EDS	_	_	_	
+7-2	760-772	measurements	_	_	_	
+7-3	773-777	were	_	_	_	
+7-4	778-787	performed	_	_	_	
+7-5	788-793	using	_	_	_	
+7-6	794-795	a	_	_	_	
+7-7	796-802	Bruker	_	_	_	
+7-8	803-810	Quantax	_	_	_	
+7-9	811-813	70	_	_	_	
+7-10	814-817	EDS	_	_	_	
+7-11	818-824	system	_	_	_	
+7-12	825-827	on	_	_	_	
+7-13	828-829	a	_	_	_	
+7-14	830-837	Hitachi	_	_	_	
+7-15	838-840	TM	_	_	_	
+7-16	840-841	-	_	_	_	
+7-17	841-845	3000	_	_	_	
+7-18	846-856	microscope	_	_	_	
+7-19	856-857	.	_	_	_	

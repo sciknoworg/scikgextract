@@ -1,0 +1,154 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline TmMgGaO4 samples were synthesized through the solid-state-reaction method.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-24	TmMgGaO4	Material-target	Descriptor-of	1-1	
+1-3	25-32	samples	_	_	_	
+1-4	33-37	were	_	_	_	
+1-5	38-49	synthesized	Operation	Participant-material|Coreference	1-2|1-8[1_0]	
+1-6	50-57	through	_	_	_	
+1-7	58-61	the	_	_	_	
+1-8	62-82	solid-state-reaction	Operation[1]	_	_	
+1-9	83-89	method	Operation[1]	_	_	
+1-10	89-90	.	_	_	_	
+
+#Text=The starting materials Tm2O3, MgO and Ga2O3 were mixed in stoichiometric quantities and heated in ceramic crucibles at 1500 °C for 4 days in air.
+2-1	91-94	The	_	_	_	
+2-2	95-103	starting	Material-recipe[2]	Coreference|Coreference|Coreference|Value-of	2-4[0_2]|2-6[0_2]|2-8[0_2]|2-12[3_2]	
+2-3	104-113	materials	Material-recipe[2]	_	_	
+2-4	114-119	Tm2O3	Material-recipe	_	_	
+2-5	119-120	,	_	_	_	
+2-6	121-124	MgO	Material-recipe	_	_	
+2-7	125-128	and	_	_	_	
+2-8	129-134	Ga2O3	Material-recipe	_	_	
+2-9	135-139	were	_	_	_	
+2-10	140-145	mixed	Operation	Participant-material|Next-operation	2-2[2_0]|2-15	
+2-11	146-148	in	_	_	_	
+2-12	149-163	stoichiometric	Value[3]	_	_	
+2-13	164-174	quantities	Value[3]	_	_	
+2-14	175-178	and	_	_	_	
+2-15	179-185	heated	Operation	Device-of-operation|Condition-of|Condition-of|Condition-of	2-18|2-20[4_0]|2-24[5_0]|2-27	
+2-16	186-188	in	_	_	_	
+2-17	189-196	ceramic	Descriptor	_	_	
+2-18	197-206	crucibles	Device	Descriptor-of	2-17	
+2-19	207-209	at	_	_	_	
+2-20	210-214	1500	Property-temperature[4]	_	_	
+2-21	215-216	°	Property-temperature[4]	_	_	
+2-22	216-217	C	Property-temperature[4]	_	_	
+2-23	218-221	for	_	_	_	
+2-24	222-223	4	Property-time[5]	_	_	
+2-25	224-228	days	Property-time[5]	_	_	
+2-26	229-231	in	_	_	_	
+2-27	232-235	air	Property-pressure	_	_	
+2-28	235-236	.	_	_	_	
+
+#Text=The polycrystalline samples were then loaded in rubber tubes and compressed into rods hydrostatically at 300 MPa, which were further sintered at 1500 °C for 8 hs.
+3-1	237-240	The	_	_	_	
+3-2	241-256	polycrystalline	Descriptor	_	_	
+3-3	257-264	samples	Material-intermedium	Descriptor-of	3-2	
+3-4	265-269	were	_	_	_	
+3-5	270-274	then	_	_	_	
+3-6	275-281	loaded	Operation	Participant-material|Device-of-operation|Next-operation	3-3|3-9|3-11	
+3-7	282-284	in	_	_	_	
+3-8	285-291	rubber	Descriptor	_	_	
+3-9	292-297	tubes	Device	Descriptor-of	3-8	
+3-10	298-301	and	_	_	_	
+3-11	302-312	compressed	Operation	Descriptor-of|Condition-of|Next-operation	3-14|3-16[6_0]|3-22	
+3-12	313-317	into	_	_	_	
+3-13	318-322	rods	Material-intermedium	Coreference	3-19	
+3-14	323-338	hydrostatically	Descriptor	_	_	
+3-15	339-341	at	_	_	_	
+3-16	342-345	300	Property-pressure[6]	_	_	
+3-17	346-349	MPa	Property-pressure[6]	_	_	
+3-18	349-350	,	_	_	_	
+3-19	351-356	which	Material-intermedium	_	_	
+3-20	357-361	were	_	_	_	
+3-21	362-369	further	_	_	_	
+3-22	370-378	sintered	Operation	Participant-material|Condition-of|Condition-of	3-19|3-24[7_0]|3-28[8_0]	
+3-23	379-381	at	_	_	_	
+3-24	382-386	1500	Property-temperature[7]	_	_	
+3-25	387-388	°	Property-temperature[7]	_	_	
+3-26	388-389	C	Property-temperature[7]	_	_	
+3-27	390-393	for	_	_	_	
+3-28	394-395	8	Property-time[8]	_	_	
+3-29	396-398	hs	Property-time[8]	_	_	
+3-30	398-399	.	_	_	_	
+
+#Text=The resulting feed rods were then transferred into an optical floating zone furnace for the crystal growth.
+4-1	400-403	The	_	_	_	
+4-2	404-413	resulting	Descriptor	_	_	
+4-3	414-418	feed	Material-intermedium[9]	Descriptor-of	4-2[0_9]	
+4-4	419-423	rods	Material-intermedium[9]	_	_	
+4-5	424-428	were	_	_	_	
+4-6	429-433	then	_	_	_	
+4-7	434-445	transferred	Operation	Participant-material|Device-of-operation|Next-operation	4-3[9_0]|4-13|4-16[11_0]	
+4-8	446-450	into	_	_	_	
+4-9	451-453	an	Value	_	_	
+4-10	454-461	optical	Descriptor[10]	_	_	
+4-11	462-470	floating	Descriptor[10]	_	_	
+4-12	471-475	zone	Descriptor[10]	_	_	
+4-13	476-483	furnace	Device	Value-of|Descriptor-of	4-9|4-10[10_0]	
+4-14	484-487	for	_	_	_	
+4-15	488-491	the	_	_	_	
+4-16	492-499	crystal	Operation[11]	_	_	
+4-17	500-506	growth	Operation[11]	_	_	
+4-18	506-507	.	_	_	_	
+
+#Text=Counter-rotation of the feed rod (24 rpm) and crystal (29 rpm) has been applied during the growth.
+5-1	508-524	Counter-rotation	Operation	Condition-of|Condition-of|Participant-material|Participant-material	5-7[13_0]|5-13[14_0]|5-4[12_0]|5-11	
+5-2	525-527	of	_	_	_	
+5-3	528-531	the	_	_	_	
+5-4	532-536	feed	Material-intermedium[12]	_	_	
+5-5	537-540	rod	Material-intermedium[12]	_	_	
+5-6	541-542	(	_	_	_	
+5-7	542-544	24	Property-rate[13]	_	_	
+5-8	545-548	rpm	Property-rate[13]	_	_	
+5-9	548-549	)	_	_	_	
+5-10	550-553	and	_	_	_	
+5-11	554-561	crystal	Material-intermedium	_	_	
+5-12	562-563	(	_	_	_	
+5-13	563-565	29	Property-rate[14]	_	_	
+5-14	566-569	rpm	Property-rate[14]	_	_	
+5-15	569-570	)	_	_	_	
+5-16	571-574	has	_	_	_	
+5-17	575-579	been	_	_	_	
+5-18	580-587	applied	Operation	Coreference|Coreference	5-1|5-21	
+5-19	588-594	during	_	_	_	
+5-20	595-598	the	_	_	_	
+5-21	599-605	growth	Operation	_	_	
+5-22	605-606	.	_	_	_	
+
+#Text=Large and high-quality TmMgGaO4 single crystals up to 5 cm in length can be obtained with a growth rate of 0.6 mm/h (Supplementary Note 1).
+6-1	607-612	Large	_	_	_	
+6-2	613-616	and	_	_	_	
+6-3	617-629	high-quality	_	_	_	
+6-4	630-638	TmMgGaO4	_	_	_	
+6-5	639-645	single	_	_	_	
+6-6	646-654	crystals	_	_	_	
+6-7	655-657	up	_	_	_	
+6-8	658-660	to	_	_	_	
+6-9	661-662	5	_	_	_	
+6-10	663-665	cm	_	_	_	
+6-11	666-668	in	_	_	_	
+6-12	669-675	length	_	_	_	
+6-13	676-679	can	_	_	_	
+6-14	680-682	be	_	_	_	
+6-15	683-691	obtained	_	_	_	
+6-16	692-696	with	_	_	_	
+6-17	697-698	a	_	_	_	
+6-18	699-705	growth	_	_	_	
+6-19	706-710	rate	_	_	_	
+6-20	711-713	of	_	_	_	
+6-21	714-717	0.6	_	_	_	
+6-22	718-720	mm	_	_	_	
+6-23	720-721	/	_	_	_	
+6-24	721-722	h	_	_	_	
+6-25	723-724	(	_	_	_	
+6-26	724-737	Supplementary	_	_	_	
+6-27	738-742	Note	_	_	_	
+6-28	743-744	1	_	_	_	
+6-29	744-745	)	_	_	_	
+6-30	745-746	.	_	_	_	

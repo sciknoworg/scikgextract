@@ -1,0 +1,128 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline sample of Li3Ir3O8 was synthesized by
+#Text=an ion-exchange reaction.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-26	sample	_	_	_	
+1-4	27-29	of	_	_	_	
+1-5	30-38	Li3Ir3O8	Material-target	Descriptor-of	1-2	
+1-6	39-42	was	_	_	_	
+1-7	43-54	synthesized	Operation	Participant-material|Coreference	1-5|1-10[1_0]	
+1-8	55-57	by	_	_	_	
+1-9	58-60	an	_	_	_	
+1-10	61-73	ion-exchange	Operation[1]	_	_	
+1-11	74-82	reaction	Operation[1]	_	_	
+1-12	82-83	.	_	_	_	
+
+#Text=The powder sample of Na4Ir3O8
+#Text=was obtained by a solid-state reaction between Na2CO3 and
+#Text=IrO2 as a precursor.
+2-1	84-87	The	_	_	_	
+2-2	88-94	powder	Descriptor	_	_	
+2-3	95-101	sample	_	_	_	
+2-4	102-104	of	_	_	_	
+2-5	105-113	Na4Ir3O8	Material-intermedium	Descriptor-of|Descriptor-of	2-2|2-18	
+2-6	114-117	was	_	_	_	
+2-7	118-126	obtained	Operation	Participant-material|Coreference	2-5|2-10[2_0]	
+2-8	127-129	by	_	_	_	
+2-9	130-131	a	_	_	_	
+2-10	132-143	solid-state	Operation[2]	Participant-material|Participant-material	2-13[0_2]|2-15[0_2]	
+2-11	144-152	reaction	Operation[2]	_	_	
+2-12	153-160	between	_	_	_	
+2-13	161-167	Na2CO3	Material-recipe	_	_	
+2-14	168-171	and	_	_	_	
+2-15	172-176	IrO2	Material-recipe	_	_	
+2-16	177-179	as	_	_	_	
+2-17	180-181	a	_	_	_	
+2-18	182-191	precursor	Descriptor	_	_	
+2-19	191-192	.	_	_	_	
+
+#Text=The precursor was confirmed to be
+#Text=Na4Ir3O8, not Na3Ir3O8, by magnetization measurements.
+3-1	193-196	The	_	_	_	
+3-2	197-206	precursor	_	_	_	
+3-3	207-210	was	_	_	_	
+3-4	211-220	confirmed	_	_	_	
+3-5	221-223	to	_	_	_	
+3-6	224-226	be	_	_	_	
+3-7	227-235	Na4Ir3O8	_	_	_	
+3-8	235-236	,	_	_	_	
+3-9	237-240	not	_	_	_	
+3-10	241-249	Na3Ir3O8	_	_	_	
+3-11	249-250	,	_	_	_	
+3-12	251-253	by	_	_	_	
+3-13	254-267	magnetization	_	_	_	
+3-14	268-280	measurements	_	_	_	
+3-15	280-281	.	_	_	_	
+
+#Text=The ion-exchange was performed by mixing the precursor
+#Text=powder with LiNO3 of 40 times excess amount in molar ratio.
+4-1	282-285	The	_	_	_	
+4-2	286-298	ion-exchange	Operation	Coreference|Coreference	4-6|4-4	
+4-3	299-302	was	_	_	_	
+4-4	303-312	performed	Operation	_	_	
+4-5	313-315	by	_	_	_	
+4-6	316-322	mixing	Operation	Participant-material|Participant-material	4-9|4-11	
+4-7	323-326	the	_	_	_	
+4-8	327-336	precursor	Descriptor	_	_	
+4-9	337-343	powder	Material-intermedium	Descriptor-of|Value-of	4-8|4-18[4_0]	
+4-10	344-348	with	_	_	_	
+4-11	349-354	LiNO3	Material-recipe	Value-of|Value-of	4-13[3_0]|4-18[4_0]	
+4-12	355-357	of	_	_	_	
+4-13	358-360	40	Value[3]	_	_	
+4-14	361-366	times	Value[3]	_	_	
+4-15	367-373	excess	Value[3]	_	_	
+4-16	374-380	amount	_	_	_	
+4-17	381-383	in	_	_	_	
+4-18	384-389	molar	Value[4]	_	_	
+4-19	390-395	ratio	Value[4]	_	_	
+4-20	395-396	.	_	_	_	
+
+#Text=The mixture was heated at 400 ◦C for 50 h in air.
+5-1	397-400	The	_	_	_	
+5-2	401-408	mixture	Material-intermedium	_	_	
+5-3	409-412	was	_	_	_	
+5-4	413-419	heated	Operation	Participant-material|Condition-of|Condition-of|Condition-of	5-2|5-6[5_0]|5-10[6_0]|5-13	
+5-5	420-422	at	_	_	_	
+5-6	423-426	400	Property-temperature[5]	_	_	
+5-7	427-428	◦	Property-temperature[5]	_	_	
+5-8	428-429	C	Property-temperature[5]	_	_	
+5-9	430-433	for	_	_	_	
+5-10	434-436	50	Property-time[6]	_	_	
+5-11	437-438	h	Property-time[6]	_	_	
+5-12	439-441	in	_	_	_	
+5-13	442-445	air	Property-pressure	_	_	
+5-14	445-446	.	_	_	_	
+
+#Text=The obtained
+#Text=product was rinsed with distilled water to remove residual
+#Text=LiNO3 and NaNO3 byproduct.
+6-1	447-450	The	_	_	_	
+6-2	451-459	obtained	_	_	_	
+6-3	460-467	product	Material-target	_	_	
+6-4	468-471	was	_	_	_	
+6-5	472-478	rinsed	Operation	Participant-material|Participant-material	6-3|6-8	
+6-6	479-483	with	_	_	_	
+6-7	484-493	distilled	Descriptor	_	_	
+6-8	494-499	water	Material-others	Descriptor-of	6-7	
+6-9	500-502	to	_	_	_	
+6-10	503-509	remove	_	_	_	
+6-11	510-518	residual	_	_	_	
+6-12	519-524	LiNO3	_	_	_	
+6-13	525-528	and	_	_	_	
+6-14	529-534	NaNO3	_	_	_	
+6-15	535-544	byproduct	_	_	_	
+6-16	544-545	.	_	_	_	
+
+#Text=The product is stable in air.
+7-1	546-549	The	_	_	_	
+7-2	550-557	product	_	_	_	
+7-3	558-560	is	_	_	_	
+7-4	561-567	stable	_	_	_	
+7-5	568-570	in	_	_	_	
+7-6	571-574	air	_	_	_	
+7-7	574-575	.	_	_	_	

@@ -1,0 +1,165 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline sample of Na0.5La0.5RuO3 was syn-thesized by solid-state reaction using Na2CO3 (dried in an oven at 120°C for 3 days before use), dry La2O3, and RuO2 (Alfa Aesar, 99.5%, 99.99%, and 99.95%, respectively) in stoichiometric ratios as starting materials.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-26	sample	_	_	_	
+1-4	27-29	of	_	_	_	
+1-5	30-44	Na0.5La0.5RuO3	Material-target	Descriptor-of	1-2	
+1-6	45-48	was	_	_	_	
+1-7	49-61	syn-thesized	Operation	Coreference|Participant-material|Participant-material|Participant-material|Participant-material|Next-operation	1-9[1_0]|1-12|1-30|1-33|1-5|1-14	
+1-8	62-64	by	_	_	_	
+1-9	65-76	solid-state	Operation[1]	_	_	
+1-10	77-85	reaction	Operation[1]	_	_	
+1-11	86-91	using	_	_	_	
+1-12	92-98	Na2CO3	Material-recipe	Value-of|Brand-of|Value-of|Coreference	1-38|1-35[4_0]|1-48[5_0]|1-52	
+1-13	99-100	(	_	_	_	
+1-14	100-105	dried	Operation	Condition-of|Condition-of|Participant-material|Device-of-operation	1-19[2_0]|1-23[3_0]|1-12|1-17	
+1-15	106-108	in	_	_	_	
+1-16	109-111	an	Value	_	_	
+1-17	112-116	oven	Device	Value-of	1-16	
+1-18	117-119	at	_	_	_	
+1-19	120-123	120	Property-temperature[2]	_	_	
+1-20	123-124	°	Property-temperature[2]	_	_	
+1-21	124-125	C	Property-temperature[2]	_	_	
+1-22	126-129	for	_	_	_	
+1-23	130-131	3	Property-time[3]	_	_	
+1-24	132-136	days	Property-time[3]	_	_	
+1-25	137-143	before	_	_	_	
+1-26	144-147	use	_	_	_	
+1-27	147-148	)	_	_	_	
+1-28	148-149	,	_	_	_	
+1-29	150-153	dry	Descriptor	_	_	
+1-30	154-159	La2O3	Material-recipe	Value-of|Brand-of|Descriptor-of|Value-of	1-40|1-35[4_0]|1-29|1-48[5_0]	
+1-31	159-160	,	_	_	_	
+1-32	161-164	and	_	_	_	
+1-33	165-169	RuO2	Material-recipe	Value-of|Brand-of|Value-of|Coreference	1-43|1-35[4_0]|1-48[5_0]|1-52	
+1-34	170-171	(	_	_	_	
+1-35	171-175	Alfa	Brand[4]	_	_	
+1-36	176-181	Aesar	Brand[4]	_	_	
+1-37	181-182	,	_	_	_	
+1-38	183-188	99.5%	Value	_	_	
+1-39	188-189	,	_	_	_	
+1-40	190-196	99.99%	Value	_	_	
+1-41	196-197	,	_	_	_	
+1-42	198-201	and	_	_	_	
+1-43	202-208	99.95%	Value	_	_	
+1-44	208-209	,	_	_	_	
+1-45	210-222	respectively	_	_	_	
+1-46	222-223	)	_	_	_	
+1-47	224-226	in	_	_	_	
+1-48	227-241	stoichiometric	Value[5]	_	_	
+1-49	242-248	ratios	Value[5]	_	_	
+1-50	249-251	as	_	_	_	
+1-51	252-260	starting	Descriptor	_	_	
+1-52	261-270	materials	Material-recipe	Descriptor-of	1-51	
+1-53	270-271	.	_	_	_	
+
+#Text=Reagents were mixed thoroughly, placed in alumina crucibles, and heated in air at 900°C for 24 hours.
+2-1	272-280	Reagents	Material-recipe	_	_	
+2-2	281-285	were	_	_	_	
+2-3	286-291	mixed	Operation	Descriptor-of|Participant-material|Next-operation	2-4|2-1|2-6	
+2-4	292-302	thoroughly	Descriptor	_	_	
+2-5	302-303	,	_	_	_	
+2-6	304-310	placed	Operation	Device-of-operation|Next-operation	2-9|2-12	
+2-7	311-313	in	_	_	_	
+2-8	314-321	alumina	Descriptor	_	_	
+2-9	322-331	crucibles	Device	Descriptor-of	2-8	
+2-10	331-332	,	_	_	_	
+2-11	333-336	and	_	_	_	
+2-12	337-343	heated	Operation	Condition-of|Condition-of|Condition-of	2-13[6_0]|2-16[7_0]|2-20[8_0]	
+2-13	344-346	in	Property-pressure[6]	_	_	
+2-14	347-350	air	Property-pressure[6]	_	_	
+2-15	351-353	at	_	_	_	
+2-16	354-357	900	Property-temperature[7]	_	_	
+2-17	357-358	°	Property-temperature[7]	_	_	
+2-18	358-359	C	Property-temperature[7]	_	_	
+2-19	360-363	for	_	_	_	
+2-20	364-366	24	Property-time[8]	_	_	
+2-21	367-372	hours	Property-time[8]	_	_	
+2-22	372-373	.	_	_	_	
+
+#Text=The resulting powder was re-ground and heated in air at 1000°C for 24 hours.
+3-1	374-377	The	_	_	_	
+3-2	378-387	resulting	Material-intermedium[9]	_	_	
+3-3	388-394	powder	Material-intermedium[9]	_	_	
+3-4	395-398	was	_	_	_	
+3-5	399-408	re-ground	Operation	Participant-material|Next-operation	3-2[9_0]|3-7	
+3-6	409-412	and	_	_	_	
+3-7	413-419	heated	Operation	Condition-of|Condition-of|Condition-of	3-8[10_0]|3-11[11_0]|3-15[12_0]	
+3-8	420-422	in	Property-pressure[10]	_	_	
+3-9	423-426	air	Property-pressure[10]	_	_	
+3-10	427-429	at	_	_	_	
+3-11	430-434	1000	Property-temperature[11]	_	_	
+3-12	434-435	°	Property-temperature[11]	_	_	
+3-13	435-436	C	Property-temperature[11]	_	_	
+3-14	437-440	for	_	_	_	
+3-15	441-443	24	Property-time[12]	_	_	
+3-16	444-449	hours	Property-time[12]	_	_	
+3-17	449-450	.	_	_	_	
+
+#Text=The phase purity and crystal structure were determined through pow-der x-ray diffraction (PXRD) using a Bruker D8 Advance Eco with Cu Kα radiation and a LynxEye-XE detector.
+4-1	451-454	The	_	_	_	
+4-2	455-460	phase	_	_	_	
+4-3	461-467	purity	_	_	_	
+4-4	468-471	and	_	_	_	
+4-5	472-479	crystal	_	_	_	
+4-6	480-489	structure	_	_	_	
+4-7	490-494	were	_	_	_	
+4-8	495-505	determined	_	_	_	
+4-9	506-513	through	_	_	_	
+4-10	514-521	pow-der	_	_	_	
+4-11	522-527	x-ray	_	_	_	
+4-12	528-539	diffraction	_	_	_	
+4-13	540-541	(	_	_	_	
+4-14	541-545	PXRD	_	_	_	
+4-15	545-546	)	_	_	_	
+4-16	547-552	using	_	_	_	
+4-17	553-554	a	_	_	_	
+4-18	555-561	Bruker	_	_	_	
+4-19	562-564	D8	_	_	_	
+4-20	565-572	Advance	_	_	_	
+4-21	573-576	Eco	_	_	_	
+4-22	577-581	with	_	_	_	
+4-23	582-584	Cu	_	_	_	
+4-24	585-587	Kα	_	_	_	
+4-25	588-597	radiation	_	_	_	
+4-26	598-601	and	_	_	_	
+4-27	602-603	a	_	_	_	
+4-28	604-614	LynxEye-XE	_	_	_	
+4-29	615-623	detector	_	_	_	
+4-30	623-624	.	_	_	_	
+
+#Text=The crys-tal structure refinement based on the powder diffraction data was performed with GSAS29.
+5-1	625-628	The	_	_	_	
+5-2	629-637	crys-tal	_	_	_	
+5-3	638-647	structure	_	_	_	
+5-4	648-658	refinement	_	_	_	
+5-5	659-664	based	_	_	_	
+5-6	665-667	on	_	_	_	
+5-7	668-671	the	_	_	_	
+5-8	672-678	powder	_	_	_	
+5-9	679-690	diffraction	_	_	_	
+5-10	691-695	data	_	_	_	
+5-11	696-699	was	_	_	_	
+5-12	700-709	performed	_	_	_	
+5-13	710-714	with	_	_	_	
+5-14	715-721	GSAS29	_	_	_	
+5-15	721-722	.	_	_	_	
+
+#Text=The crystal structure drawings were created by using the program VESTA30.
+6-1	723-726	The	_	_	_	
+6-2	727-734	crystal	_	_	_	
+6-3	735-744	structure	_	_	_	
+6-4	745-753	drawings	_	_	_	
+6-5	754-758	were	_	_	_	
+6-6	759-766	created	_	_	_	
+6-7	767-769	by	_	_	_	
+6-8	770-775	using	_	_	_	
+6-9	776-779	the	_	_	_	
+6-10	780-787	program	_	_	_	
+6-11	788-795	VESTA30	_	_	_	
+6-12	795-796	.	_	_	_	

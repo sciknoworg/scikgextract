@@ -1,0 +1,142 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A polycrystalline sample of Sr3Fe2TeO9 was prepared using the standard ceramic method.
+1-1	0-1	A	_	_	_	
+1-2	2-17	polycrystalline	Descriptor	_	_	
+1-3	18-24	sample	_	_	_	
+1-4	25-27	of	_	_	_	
+1-5	28-38	Sr3Fe2TeO9	Material-target	Descriptor-of	1-2	
+1-6	39-42	was	_	_	_	
+1-7	43-51	prepared	Operation	Coreference|Participant-material	1-10[1_0]|1-5	
+1-8	52-57	using	_	_	_	
+1-9	58-61	the	_	_	_	
+1-10	62-70	standard	Operation[1]	_	_	
+1-11	71-78	ceramic	Operation[1]	_	_	
+1-12	79-85	method	Operation[1]	_	_	
+1-13	85-86	.	_	_	_	
+
+#Text=SrCO3, Fe2O3 and TeO2 (purity >99.95%) were weighed out in the appropriate stoichiometric ratio and ground together in an agate mortar for 30 min to give a homogeneous mixture.
+2-1	87-92	SrCO3	Material-recipe	Value-of|Value-of	2-8[2_0]|2-17[3_0]	
+2-2	92-93	,	_	_	_	
+2-3	94-99	Fe2O3	Material-recipe	Value-of|Value-of	2-8[2_0]|2-17[3_0]	
+2-4	100-103	and	_	_	_	
+2-5	104-108	TeO2	Material-recipe	Value-of|Value-of	2-8[2_0]|2-17[3_0]	
+2-6	109-110	(	_	_	_	
+2-7	110-116	purity	_	_	_	
+2-8	117-118	>	Value[2]	_	_	
+2-9	118-124	99.95%	Value[2]	_	_	
+2-10	124-125	)	_	_	_	
+2-11	126-130	were	_	_	_	
+2-12	131-138	weighed	Operation	Participant-material|Participant-material|Participant-material	2-5|2-3|2-1	
+2-13	139-142	out	_	_	_	
+2-14	143-145	in	_	_	_	
+2-15	146-149	the	_	_	_	
+2-16	150-161	appropriate	_	_	_	
+2-17	162-176	stoichiometric	Value[3]	_	_	
+2-18	177-182	ratio	Value[3]	_	_	
+2-19	183-186	and	_	_	_	
+2-20	187-193	ground	Operation	Device-of-operation|Condition-of|Next-operation	2-25|2-27[4_0]|2-12	
+2-21	194-202	together	_	_	_	
+2-22	203-205	in	_	_	_	
+2-23	206-208	an	Value	_	_	
+2-24	209-214	agate	Descriptor	_	_	
+2-25	215-221	mortar	Device	Descriptor-of|Value-of	2-24|2-23	
+2-26	222-225	for	_	_	_	
+2-27	226-228	30	Property-time[4]	_	_	
+2-28	229-232	min	Property-time[4]	_	_	
+2-29	233-235	to	_	_	_	
+2-30	236-240	give	_	_	_	
+2-31	241-242	a	_	_	_	
+2-32	243-254	homogeneous	Descriptor	_	_	
+2-33	255-262	mixture	Material-intermedium	Descriptor-of	2-32	
+2-34	262-263	.	_	_	_	
+
+#Text=The mixture was then loaded into an alumina crucible and fired at 700 °C for 24 h.
+3-1	264-267	The	_	_	_	
+3-2	268-275	mixture	Material-intermedium	_	_	
+3-3	276-279	was	_	_	_	
+3-4	280-284	then	_	_	_	
+3-5	285-291	loaded	Operation[5]	Device-of-operation|Participant-material|Next-operation	3-9[0_5]|3-2[0_5]|3-11[0_5]	
+3-6	292-296	into	Operation[5]	_	_	
+3-7	297-299	an	Value	_	_	
+3-8	300-307	alumina	Descriptor	_	_	
+3-9	308-316	crucible	Device	Descriptor-of|Value-of	3-8|3-7	
+3-10	317-320	and	_	_	_	
+3-11	321-326	fired	Operation	Condition-of|Condition-of	3-13[6_0]|3-17[7_0]	
+3-12	327-329	at	_	_	_	
+3-13	330-333	700	Property-temperature[6]	_	_	
+3-14	334-335	°	Property-temperature[6]	_	_	
+3-15	335-336	C	Property-temperature[6]	_	_	
+3-16	337-340	for	_	_	_	
+3-17	341-343	24	Property-time[7]	_	_	
+3-18	344-345	h	Property-time[7]	_	_	
+3-19	345-346	.	_	_	_	
+
+#Text=It was then quenched to room temperature, reground and pressed into a pellet that was fired in air at 950 °C for 24 h and subsequently annealed at 1200 °C for 48 h after further grinding.
+4-1	347-349	It	Material-intermedium	_	_	
+4-2	350-353	was	_	_	_	
+4-3	354-358	then	_	_	_	
+4-4	359-367	quenched	Operation	Participant-material|Condition-of|Next-operation	4-1|4-6[8_0]|4-9	
+4-5	368-370	to	_	_	_	
+4-6	371-375	room	Property-temperature[8]	_	_	
+4-7	376-387	temperature	Property-temperature[8]	_	_	
+4-8	387-388	,	_	_	_	
+4-9	389-397	reground	Operation	Next-operation	4-11	
+4-10	398-401	and	_	_	_	
+4-11	402-409	pressed	Operation	Next-operation	4-17	
+4-12	410-414	into	_	_	_	
+4-13	415-416	a	Value	_	_	
+4-14	417-423	pellet	Material-intermedium	Value-of	4-13	
+4-15	424-428	that	_	_	_	
+4-16	429-432	was	_	_	_	
+4-17	433-438	fired	Operation	Condition-of|Condition-of|Condition-of|Participant-material|Next-operation	4-18[9_0]|4-21[10_0]|4-25[11_0]|4-14|4-39	
+4-18	439-441	in	Property-pressure[9]	_	_	
+4-19	442-445	air	Property-pressure[9]	_	_	
+4-20	446-448	at	_	_	_	
+4-21	449-452	950	Property-temperature[10]	_	_	
+4-22	453-454	°	Property-temperature[10]	_	_	
+4-23	454-455	C	Property-temperature[10]	_	_	
+4-24	456-459	for	_	_	_	
+4-25	460-462	24	Property-time[11]	_	_	
+4-26	463-464	h	Property-time[11]	_	_	
+4-27	465-468	and	_	_	_	
+4-28	469-481	subsequently	_	_	_	
+4-29	482-490	annealed	Operation	Condition-of|Condition-of	4-31[12_0]|4-35[13_0]	
+4-30	491-493	at	_	_	_	
+4-31	494-498	1200	Property-temperature[12]	_	_	
+4-32	499-500	°	Property-temperature[12]	_	_	
+4-33	500-501	C	Property-temperature[12]	_	_	
+4-34	502-505	for	_	_	_	
+4-35	506-508	48	Property-time[13]	_	_	
+4-36	509-510	h	Property-time[13]	_	_	
+4-37	511-516	after	_	_	_	
+4-38	517-524	further	_	_	_	
+4-39	525-533	grinding	Operation	Next-operation	4-29	
+4-40	533-534	.	_	_	_	
+
+#Text=Finally, the furnace was allowed to cool to 800 °C and then the sample was quenched to room temperature.
+5-1	535-542	Finally	_	_	_	
+5-2	542-543	,	_	_	_	
+5-3	544-547	the	_	_	_	
+5-4	548-555	furnace	Device	_	_	
+5-5	556-559	was	_	_	_	
+5-6	560-567	allowed	_	_	_	
+5-7	568-570	to	_	_	_	
+5-8	571-575	cool	Operation	Participant-material|Condition-of|Next-operation	5-4|5-10[14_0]|5-18	
+5-9	576-578	to	_	_	_	
+5-10	579-582	800	Property-temperature[14]	_	_	
+5-11	583-584	°	Property-temperature[14]	_	_	
+5-12	584-585	C	Property-temperature[14]	_	_	
+5-13	586-589	and	_	_	_	
+5-14	590-594	then	_	_	_	
+5-15	595-598	the	_	_	_	
+5-16	599-605	sample	Material-intermedium	_	_	
+5-17	606-609	was	_	_	_	
+5-18	610-618	quenched	Operation	Participant-material|Condition-of	5-16|5-20[15_0]	
+5-19	619-621	to	_	_	_	
+5-20	622-626	room	Property-temperature[15]	_	_	
+5-21	627-638	temperature	Property-temperature[15]	_	_	
+5-22	638-639	.	_	_	_	

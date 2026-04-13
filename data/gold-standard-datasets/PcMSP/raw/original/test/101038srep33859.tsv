@@ -1,0 +1,100 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline NbP powder was synthesized in a direct reaction of Nb powder (99.9%) and red phosphorous pieces (99.999%) in an evacuated silica tube for 48 h at 800 °C.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-19	NbP	Material-recipe	Descriptor-of|Descriptor-of	1-1|1-3	
+1-3	20-26	powder	Descriptor	_	_	
+1-4	27-30	was	_	_	_	
+1-5	31-42	synthesized	Operation	Participant-material|Coreference	1-2|1-8[1_0]	
+1-6	43-45	in	_	_	_	
+1-7	46-47	a	_	_	_	
+1-8	48-54	direct	Operation[1]	Participant-material|Participant-material|Device-of-operation|Condition-of|Condition-of	1-11[0_1]|1-19[0_1]|1-27[0_1]|1-29[2_1]|1-32[3_1]	
+1-9	55-63	reaction	Operation[1]	_	_	
+1-10	64-66	of	_	_	_	
+1-11	67-69	Nb	Material-recipe	Descriptor-of|Value-of	1-12|1-14	
+1-12	70-76	powder	Descriptor	_	_	
+1-13	77-78	(	_	_	_	
+1-14	78-83	99.9%	Value	_	_	
+1-15	83-84	)	_	_	_	
+1-16	85-88	and	_	_	_	
+1-17	89-92	red	Descriptor	_	_	
+1-18	93-104	phosphorous	Descriptor	_	_	
+1-19	105-111	pieces	Material-recipe	Descriptor-of|Descriptor-of|Value-of	1-17|1-18|1-21	
+1-20	112-113	(	_	_	_	
+1-21	113-120	99.999%	Value	_	_	
+1-22	120-121	)	_	_	_	
+1-23	122-124	in	_	_	_	
+1-24	125-127	an	Value	_	_	
+1-25	128-137	evacuated	Descriptor	_	_	
+1-26	138-144	silica	Descriptor	_	_	
+1-27	145-149	tube	Device	Value-of|Descriptor-of|Descriptor-of	1-24|1-25|1-26	
+1-28	150-153	for	_	_	_	
+1-29	154-156	48	Property-time[2]	_	_	
+1-30	157-158	h	Property-time[2]	_	_	
+1-31	159-161	at	_	_	_	
+1-32	162-165	800	Property-temperature[3]	_	_	
+1-33	166-167	°	Property-temperature[3]	_	_	
+1-34	167-168	C	Property-temperature[3]	_	_	
+1-35	168-169	.	_	_	_	
+
+#Text=Single NbP crystals were grown from this powder in a chemical transport reaction with iodine as a transport agent.
+2-1	170-176	Single	_	_	_	
+2-2	177-180	NbP	_	_	_	
+2-3	181-189	crystals	_	_	_	
+2-4	190-194	were	_	_	_	
+2-5	195-200	grown	_	_	_	
+2-6	201-205	from	_	_	_	
+2-7	206-210	this	_	_	_	
+2-8	211-217	powder	_	_	_	
+2-9	218-220	in	_	_	_	
+2-10	221-222	a	_	_	_	
+2-11	223-231	chemical	_	_	_	
+2-12	232-241	transport	_	_	_	
+2-13	242-250	reaction	_	_	_	
+2-14	251-255	with	_	_	_	
+2-15	256-262	iodine	_	_	_	
+2-16	263-265	as	_	_	_	
+2-17	266-267	a	_	_	_	
+2-18	268-277	transport	_	_	_	
+2-19	278-283	agent	_	_	_	
+2-20	283-284	.	_	_	_	
+
+#Text=The source and sink were set to 950 °C and 850 °C, respectively.
+3-1	285-288	The	_	_	_	
+3-2	289-295	source	Material-intermedium	_	_	
+3-3	296-299	and	_	_	_	
+3-4	300-304	sink	Material-intermedium	_	_	
+3-5	305-309	were	_	_	_	
+3-6	310-313	set	Operation	Participant-material|Participant-material|Condition-of|Condition-of	3-2|3-4|3-8[4_0]|3-12[5_0]	
+3-7	314-316	to	_	_	_	
+3-8	317-320	950	Property-temperature[4]	_	_	
+3-9	321-322	°	Property-temperature[4]	_	_	
+3-10	322-323	C	Property-temperature[4]	_	_	
+3-11	324-327	and	_	_	_	
+3-12	328-331	850	Property-temperature[5]	_	_	
+3-13	332-333	°	Property-temperature[5]	_	_	
+3-14	333-334	C	Property-temperature[5]	_	_	
+3-15	334-335	,	_	_	_	
+3-16	336-348	respectively	_	_	_	
+3-17	348-349	.	_	_	_	
+
+#Text=The VSM measurements were conducted in a Quantum Design PPMS cryostat with a VSM Option.
+4-1	350-353	The	_	_	_	
+4-2	354-357	VSM	_	_	_	
+4-3	358-370	measurements	_	_	_	
+4-4	371-375	were	_	_	_	
+4-5	376-385	conducted	_	_	_	
+4-6	386-388	in	_	_	_	
+4-7	389-390	a	_	_	_	
+4-8	391-398	Quantum	_	_	_	
+4-9	399-405	Design	_	_	_	
+4-10	406-410	PPMS	_	_	_	
+4-11	411-419	cryostat	_	_	_	
+4-12	420-424	with	_	_	_	
+4-13	425-426	a	_	_	_	
+4-14	427-430	VSM	_	_	_	
+4-15	431-437	Option	_	_	_	
+4-16	437-438	.	_	_	_	

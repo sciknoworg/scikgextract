@@ -1,0 +1,216 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Calcination of Polycrystalline Materials.
+1-1	0-11	Calcination	_	_	_	
+1-2	12-14	of	_	_	_	
+1-3	15-30	Polycrystalline	_	_	_	
+1-4	31-40	Materials	_	_	_	
+1-5	40-41	.	_	_	_	
+
+#Text=Polycrystalline samples of the SrTb2O4 compound were synthesized with raw materials SrCO3 (Alfa Aesar, 99.99%) and
+#Text=Tb4O7 (3−5% more) (Alfa Aesar, 99.99%) by a traditional
+#Text=solid-state reaction method.51 The phase purity of raw
+#Text=materials was checked by XRPD at room temperature.
+2-1	42-57	Polycrystalline	Descriptor	_	_	
+2-2	58-65	samples	_	_	_	
+2-3	66-68	of	_	_	_	
+2-4	69-72	the	_	_	_	
+2-5	73-80	SrTb2O4	Material-target	Descriptor-of	2-1	
+2-6	81-89	compound	_	_	_	
+2-7	90-94	were	_	_	_	
+2-8	95-106	synthesized	Operation	Coreference	2-35[4_0]	
+2-9	107-111	with	_	_	_	
+2-10	112-115	raw	Descriptor	_	_	
+2-11	116-125	materials	Material-recipe	Descriptor-of	2-10	
+2-12	126-131	SrCO3	Material-recipe	Value-of|Brand-of|Coreference	2-17|2-14[1_0]|2-11	
+2-13	132-133	(	_	_	_	
+2-14	133-137	Alfa	Brand[1]	_	_	
+2-15	138-143	Aesar	Brand[1]	_	_	
+2-16	143-144	,	_	_	_	
+2-17	145-151	99.99%	Value	_	_	
+2-18	151-152	)	_	_	_	
+2-19	153-156	and	_	_	_	
+2-20	157-162	Tb4O7	Material-recipe	Value-of|Brand-of|Value-of|Coreference	2-31|2-28[3_0]|2-22[2_0]|2-11	
+2-21	163-164	(	_	_	_	
+2-22	164-165	3	Value[2]	_	_	
+2-23	165-166	−	Value[2]	_	_	
+2-24	166-168	5%	Value[2]	_	_	
+2-25	169-173	more	Value[2]	_	_	
+2-26	173-174	)	_	_	_	
+2-27	175-176	(	_	_	_	
+2-28	176-180	Alfa	Brand[3]	_	_	
+2-29	181-186	Aesar	Brand[3]	_	_	
+2-30	186-187	,	_	_	_	
+2-31	188-194	99.99%	Value	_	_	
+2-32	194-195	)	_	_	_	
+2-33	196-198	by	_	_	_	
+2-34	199-200	a	_	_	_	
+2-35	201-212	traditional	Operation[4]	Participant-material|Participant-material	2-20[0_4]|2-12[0_4]	
+2-36	213-224	solid-state	Operation[4]	_	_	
+2-37	225-233	reaction	Operation[4]	_	_	
+2-38	234-240	method	Operation[4]	_	_	
+2-39	240-243	.51	_	_	_	
+2-40	244-247	The	_	_	_	
+2-41	248-253	phase	_	_	_	
+2-42	254-260	purity	_	_	_	
+2-43	261-263	of	_	_	_	
+2-44	264-267	raw	_	_	_	
+2-45	268-277	materials	_	_	_	
+2-46	278-281	was	_	_	_	
+2-47	282-289	checked	_	_	_	
+2-48	290-292	by	_	_	_	
+2-49	293-297	XRPD	_	_	_	
+2-50	298-300	at	_	_	_	
+2-51	301-305	room	_	_	_	
+2-52	306-317	temperature	_	_	_	
+2-53	317-318	.	_	_	_	
+
+#Text=To
+#Text=avoid the humidity effect on the quality of raw materials, they
+#Text=are always stored in a dry atmosphere at 493 K.
+3-1	319-321	To	_	_	_	
+3-2	322-327	avoid	_	_	_	
+3-3	328-331	the	_	_	_	
+3-4	332-340	humidity	_	_	_	
+3-5	341-347	effect	_	_	_	
+3-6	348-350	on	_	_	_	
+3-7	351-354	the	_	_	_	
+3-8	355-362	quality	_	_	_	
+3-9	363-365	of	_	_	_	
+3-10	366-369	raw	_	_	_	
+3-11	370-379	materials	_	_	_	
+3-12	379-380	,	_	_	_	
+3-13	381-385	they	Material-recipe	_	_	
+3-14	386-389	are	_	_	_	
+3-15	390-396	always	_	_	_	
+3-16	397-403	stored	Operation	Participant-material|Condition-of|Condition-of	3-13|3-19[5_0]|3-22[6_0]	
+3-17	404-406	in	_	_	_	
+3-18	407-408	a	_	_	_	
+3-19	409-412	dry	Property-pressure[5]	_	_	
+3-20	413-423	atmosphere	Property-pressure[5]	_	_	
+3-21	424-426	at	_	_	_	
+3-22	427-430	493	Property-temperature[6]	_	_	
+3-23	431-432	K	Property-temperature[6]	_	_	
+3-24	432-433	.	_	_	_	
+
+#Text=They were
+#Text=quickly weighed at ∼473 K.
+4-1	434-438	They	Material-recipe	_	_	
+4-2	439-443	were	_	_	_	
+4-3	444-451	quickly	Descriptor	_	_	
+4-4	452-459	weighed	Operation	Condition-of|Participant-material|Descriptor-of	4-7[7_0]|4-1|4-3	
+4-5	460-462	at	_	_	_	
+4-6	463-464	∼	_	_	_	
+4-7	464-467	473	Property-temperature[7]	_	_	
+4-8	468-469	K	Property-temperature[7]	_	_	
+4-9	469-470	.	_	_	_	
+
+#Text=The initial mixture of both raw
+#Text=materials was milled and mixed with a 50 mm-diameter ball by
+#Text=our Vibratory Micro Mill (FRITSCH PULVERISETTE 0) for
+#Text=1 h, and then we calcined them in air for three times, 1373 K
+#Text=for 24 h, 1473 K for 36 h, and 1573 K for 24 h, with both
+#Text=heating-up and cooling-down ramps of 473 K/h.
+5-1	471-474	The	_	_	_	
+5-2	475-482	initial	Descriptor	_	_	
+5-3	483-490	mixture	Material-intermedium	Descriptor-of	5-2	
+5-4	491-493	of	_	_	_	
+5-5	494-498	both	_	_	_	
+5-6	499-502	raw	Descriptor	_	_	
+5-7	503-512	materials	Material-recipe	Descriptor-of|Coreference	5-6|5-3	
+5-8	513-516	was	_	_	_	
+5-9	517-523	milled	Operation	Next-operation|Participant-material	5-11|5-3	
+5-10	524-527	and	_	_	_	
+5-11	528-533	mixed	Operation	Condition-of|Device-of-operation|Device-of-operation|Next-operation	5-28[11_0]|5-16|5-19[9_0]|5-34	
+5-12	534-538	with	_	_	_	
+5-13	539-540	a	Value	_	_	
+5-14	541-543	50	Value[8]	_	_	
+5-15	544-555	mm-diameter	Value[8]	_	_	
+5-16	556-560	ball	Device	Value-of|Value-of	5-13|5-14[8_0]	
+5-17	561-563	by	_	_	_	
+5-18	564-567	our	_	_	_	
+5-19	568-577	Vibratory	Device[9]	Brand-of	5-23[10_9]	
+5-20	578-583	Micro	Device[9]	_	_	
+5-21	584-588	Mill	Device[9]	_	_	
+5-22	589-590	(	_	_	_	
+5-23	590-597	FRITSCH	Brand[10]	_	_	
+5-24	598-610	PULVERISETTE	Brand[10]	_	_	
+5-25	611-612	0	Brand[10]	_	_	
+5-26	612-613	)	_	_	_	
+5-27	614-617	for	_	_	_	
+5-28	618-619	1	Property-time[11]	_	_	
+5-29	620-621	h	Property-time[11]	_	_	
+5-30	621-622	,	_	_	_	
+5-31	623-626	and	_	_	_	
+5-32	627-631	then	_	_	_	
+5-33	632-634	we	_	_	_	
+5-34	635-643	calcined	Operation	Value-of|Condition-of|Condition-of|Condition-of|Condition-of|Condition-of|Condition-of|Condition-of|Condition-of	5-39[12_0]|5-37|5-42[13_0]|5-45[14_0]|5-48[15_0]|5-51[16_0]|5-55[17_0]|5-58[18_0]|5-68[20_0]	
+5-35	644-648	them	_	_	_	
+5-36	649-651	in	_	_	_	
+5-37	652-655	air	Property-pressure	_	_	
+5-38	656-659	for	_	_	_	
+5-39	660-665	three	Value[12]	_	_	
+5-40	666-671	times	Value[12]	_	_	
+5-41	671-672	,	_	_	_	
+5-42	673-677	1373	Property-temperature[13]	_	_	
+5-43	678-679	K	Property-temperature[13]	_	_	
+5-44	680-683	for	_	_	_	
+5-45	684-686	24	Property-time[14]	_	_	
+5-46	687-688	h	Property-time[14]	_	_	
+5-47	688-689	,	_	_	_	
+5-48	690-694	1473	Property-temperature[15]	_	_	
+5-49	695-696	K	Property-temperature[15]	_	_	
+5-50	697-700	for	_	_	_	
+5-51	701-703	36	Property-time[16]	_	_	
+5-52	704-705	h	Property-time[16]	_	_	
+5-53	705-706	,	_	_	_	
+5-54	707-710	and	_	_	_	
+5-55	711-715	1573	Property-temperature[17]	_	_	
+5-56	716-717	K	Property-temperature[17]	_	_	
+5-57	718-721	for	_	_	_	
+5-58	722-724	24	Property-time[18]	_	_	
+5-59	725-726	h	Property-time[18]	_	_	
+5-60	726-727	,	_	_	_	
+5-61	728-732	with	_	_	_	
+5-62	733-737	both	_	_	_	
+5-63	738-748	heating-up	Property-rate[19]	Coreference	5-68[20_19]	
+5-64	749-752	and	Property-rate[19]	_	_	
+5-65	753-765	cooling-down	Property-rate[19]	_	_	
+5-66	766-771	ramps	Property-rate[19]	_	_	
+5-67	772-774	of	_	_	_	
+5-68	775-778	473	Property-rate[20]	_	_	
+5-69	779-780	K	Property-rate[20]	_	_	
+5-70	780-781	/	Property-rate[20]	_	_	
+5-71	781-782	h	Property-rate[20]	_	_	
+5-72	782-783	.	_	_	_	
+
+#Text=After each
+#Text=calcination, we milled and mixed the intermediate reaction
+#Text=materials again to get fine grains for a homogeneous reaction
+#Text=state.
+6-1	784-789	After	_	_	_	
+6-2	790-794	each	_	_	_	
+6-3	795-806	calcination	_	_	_	
+6-4	806-807	,	_	_	_	
+6-5	808-810	we	_	_	_	
+6-6	811-817	milled	Operation	Next-operation	6-8	
+6-7	818-821	and	_	_	_	
+6-8	822-827	mixed	Operation	Participant-material	6-11[21_0]	
+6-9	828-831	the	_	_	_	
+6-10	832-844	intermediate	Descriptor	_	_	
+6-11	845-853	reaction	Material-intermedium[21]	Descriptor-of	6-10[0_21]	
+6-12	854-863	materials	Material-intermedium[21]	_	_	
+6-13	864-869	again	_	_	_	
+6-14	870-872	to	_	_	_	
+6-15	873-876	get	_	_	_	
+6-16	877-881	fine	_	_	_	
+6-17	882-888	grains	_	_	_	
+6-18	889-892	for	_	_	_	
+6-19	893-894	a	_	_	_	
+6-20	895-906	homogeneous	_	_	_	
+6-21	907-915	reaction	_	_	_	
+6-22	916-921	state	_	_	_	
+6-23	921-922	.	_	_	_	

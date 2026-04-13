@@ -1,0 +1,210 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Np2Co17 and Lu2T17 were prepared by arc melting stoichiometric amounts of high-purity elemental constituents (99.9% Np, 99.9% Lu, 99.999% Co and Ni) on a water-cooled copper hearth, under Ar (99.9999%) atmosphere.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-34	Np2Co17	Material-target	Descriptor-of	1-1	
+1-5	35-38	and	_	_	_	
+1-6	39-45	Lu2T17	Material-target	Descriptor-of	1-1	
+1-7	46-50	were	_	_	_	
+1-8	51-59	prepared	Operation	Participant-material|Participant-material|Coreference	1-4|1-6|1-10[1_0]	
+1-9	60-62	by	_	_	_	
+1-10	63-66	arc	Operation[1]	Device-of-operation|Participant-material|Condition-of	1-34[0_1]|1-17[0_1]|1-37[3_1]	
+1-11	67-74	melting	Operation[1]	_	_	
+1-12	75-89	stoichiometric	Value[2]	_	_	
+1-13	90-97	amounts	Value[2]	_	_	
+1-14	98-100	of	_	_	_	
+1-15	101-112	high-purity	Descriptor	_	_	
+1-16	113-122	elemental	Descriptor	_	_	
+1-17	123-135	constituents	Material-recipe	Value-of|Descriptor-of|Descriptor-of|Coreference|Coreference|Coreference|Coreference	1-12[2_0]|1-15|1-16|1-20|1-23|1-26|1-28	
+1-18	136-137	(	_	_	_	
+1-19	137-142	99.9%	Value	_	_	
+1-20	143-145	Np	Material-recipe	Value-of	1-19	
+1-21	145-146	,	_	_	_	
+1-22	147-152	99.9%	Value	_	_	
+1-23	153-155	Lu	Material-recipe	Value-of	1-22	
+1-24	155-156	,	_	_	_	
+1-25	157-164	99.999%	Value	_	_	
+1-26	165-167	Co	Material-recipe	Value-of	1-25	
+1-27	168-171	and	_	_	_	
+1-28	172-174	Ni	Material-recipe	Value-of	1-25	
+1-29	174-175	)	_	_	_	
+1-30	176-178	on	_	_	_	
+1-31	179-180	a	Value	_	_	
+1-32	181-193	water-cooled	Descriptor	_	_	
+1-33	194-200	copper	Descriptor	_	_	
+1-34	201-207	hearth	Device	Value-of|Descriptor-of|Descriptor-of	1-31|1-32|1-33	
+1-35	207-208	,	_	_	_	
+1-36	209-214	under	_	_	_	
+1-37	215-217	Ar	Property-pressure[3]	_	_	
+1-38	218-219	(	Property-pressure[3]	_	_	
+1-39	219-227	99.9999%	Property-pressure[3]	_	_	
+1-40	227-228	)	Property-pressure[3]	_	_	
+1-41	229-239	atmosphere	Property-pressure[3]	_	_	
+1-42	239-240	.	_	_	_	
+
+#Text=A Zr alloy was used as an oxygen getter.
+2-1	241-242	A	Value	_	_	
+2-2	243-245	Zr	Material-recipe	Descriptor-of|Coreference	2-3|2-9	
+2-3	246-251	alloy	Descriptor	Value-of	2-1	
+2-4	252-255	was	_	_	_	
+2-5	256-260	used	Operation	Participant-material	2-2	
+2-6	261-263	as	_	_	_	
+2-7	264-266	an	Value	_	_	
+2-8	267-273	oxygen	Descriptor	_	_	
+2-9	274-280	getter	Material-recipe	Value-of|Descriptor-of	2-7|2-8	
+2-10	280-281	.	_	_	_	
+
+#Text=The weight losses during melting were less than 0.2%.
+3-1	282-285	The	_	_	_	
+3-2	286-292	weight	Descriptor[4]	_	_	
+3-3	293-299	losses	Descriptor[4]	_	_	
+3-4	300-306	during	_	_	_	
+3-5	307-314	melting	_	_	_	
+3-6	315-319	were	_	_	_	
+3-7	320-324	less	Value[5]	Descriptor-of	3-2[4_5]	
+3-8	325-329	than	Value[5]	_	_	
+3-9	330-334	0.2%	Value[5]	_	_	
+3-10	334-335	.	_	_	_	
+
+#Text=The samples were melted five times to improve the homogeneity, then wrapped in tantalum foils, and annealed at 800 ◦C in evacuated quartz ampoules for 1 week.
+4-1	336-339	The	_	_	_	
+4-2	340-347	samples	Material-intermedium	_	_	
+4-3	348-352	were	_	_	_	
+4-4	353-359	melted	Operation	Participant-material|Condition-of|Next-operation	4-2|4-5[6_0]|4-13	
+4-5	360-364	five	Property-time[6]	_	_	
+4-6	365-370	times	Property-time[6]	_	_	
+4-7	371-373	to	_	_	_	
+4-8	374-381	improve	_	_	_	
+4-9	382-385	the	_	_	_	
+4-10	386-397	homogeneity	_	_	_	
+4-11	397-398	,	_	_	_	
+4-12	399-403	then	_	_	_	
+4-13	404-411	wrapped	Operation	Device-of-operation|Next-operation	4-15|4-19	
+4-14	412-414	in	_	_	_	
+4-15	415-423	tantalum	Device	Descriptor-of	4-16	
+4-16	424-429	foils	Descriptor	_	_	
+4-17	429-430	,	_	_	_	
+4-18	431-434	and	_	_	_	
+4-19	435-443	annealed	Operation	Condition-of|Device-of-operation|Condition-of	4-21[7_0]|4-27|4-29[8_0]	
+4-20	444-446	at	_	_	_	
+4-21	447-450	800	Property-temperature[7]	_	_	
+4-22	451-452	◦	Property-temperature[7]	_	_	
+4-23	452-453	C	Property-temperature[7]	_	_	
+4-24	454-456	in	_	_	_	
+4-25	457-466	evacuated	Descriptor	_	_	
+4-26	467-473	quartz	Descriptor	_	_	
+4-27	474-482	ampoules	Device	Descriptor-of|Descriptor-of	4-25|4-26	
+4-28	483-486	for	_	_	_	
+4-29	487-488	1	Property-time[8]	_	_	
+4-30	489-493	week	Property-time[8]	_	_	
+4-31	493-494	.	_	_	_	
+
+#Text=Phase analysis of the obtained ingots was performed before and after annealing.
+5-1	495-500	Phase	_	_	_	
+5-2	501-509	analysis	_	_	_	
+5-3	510-512	of	_	_	_	
+5-4	513-516	the	_	_	_	
+5-5	517-525	obtained	_	_	_	
+5-6	526-532	ingots	_	_	_	
+5-7	533-536	was	_	_	_	
+5-8	537-546	performed	_	_	_	
+5-9	547-553	before	_	_	_	
+5-10	554-557	and	_	_	_	
+5-11	558-563	after	_	_	_	
+5-12	564-573	annealing	_	_	_	
+5-13	573-574	.	_	_	_	
+
+#Text=Crystallographic analyses were performed at room temperature by x-ray diffraction on samples with a mass of about 25 mg, ground, and dispersed on a Si wafer.
+6-1	575-591	Crystallographic	_	_	_	
+6-2	592-600	analyses	_	_	_	
+6-3	601-605	were	_	_	_	
+6-4	606-615	performed	_	_	_	
+6-5	616-618	at	_	_	_	
+6-6	619-623	room	_	_	_	
+6-7	624-635	temperature	_	_	_	
+6-8	636-638	by	_	_	_	
+6-9	639-644	x-ray	_	_	_	
+6-10	645-656	diffraction	_	_	_	
+6-11	657-659	on	_	_	_	
+6-12	660-667	samples	_	_	_	
+6-13	668-672	with	_	_	_	
+6-14	673-674	a	_	_	_	
+6-15	675-679	mass	_	_	_	
+6-16	680-682	of	_	_	_	
+6-17	683-688	about	_	_	_	
+6-18	689-691	25	_	_	_	
+6-19	692-694	mg	_	_	_	
+6-20	694-695	,	_	_	_	
+6-21	696-702	ground	_	_	_	
+6-22	702-703	,	_	_	_	
+6-23	704-707	and	_	_	_	
+6-24	708-717	dispersed	_	_	_	
+6-25	718-720	on	_	_	_	
+6-26	721-722	a	_	_	_	
+6-27	723-725	Si	_	_	_	
+6-28	726-731	wafer	_	_	_	
+6-29	731-732	.	_	_	_	
+
+#Text=Data were collected in back-reflection mode with a Bruker D8 diffractometer installed inside a α-γ glove box, using Cu-Kα1 radiation selected by a Ge (111) monochromator.
+7-1	733-737	Data	_	_	_	
+7-2	738-742	were	_	_	_	
+7-3	743-752	collected	_	_	_	
+7-4	753-755	in	_	_	_	
+7-5	756-771	back-reflection	_	_	_	
+7-6	772-776	mode	_	_	_	
+7-7	777-781	with	_	_	_	
+7-8	782-783	a	_	_	_	
+7-9	784-790	Bruker	_	_	_	
+7-10	791-793	D8	_	_	_	
+7-11	794-808	diffractometer	_	_	_	
+7-12	809-818	installed	_	_	_	
+7-13	819-825	inside	_	_	_	
+7-14	826-827	a	_	_	_	
+7-15	828-831	α-γ	_	_	_	
+7-16	832-837	glove	_	_	_	
+7-17	838-841	box	_	_	_	
+7-18	841-842	,	_	_	_	
+7-19	843-848	using	_	_	_	
+7-20	849-855	Cu-Kα1	_	_	_	
+7-21	856-865	radiation	_	_	_	
+7-22	866-874	selected	_	_	_	
+7-23	875-877	by	_	_	_	
+7-24	878-879	a	_	_	_	
+7-25	880-882	Ge	_	_	_	
+7-26	883-884	(	_	_	_	
+7-27	884-887	111	_	_	_	
+7-28	887-888	)	_	_	_	
+7-29	889-902	monochromator	_	_	_	
+7-30	902-903	.	_	_	_	
+
+#Text=A 1D position sensitive detector was used to cover the angular range from 15 to 120 degrees, with incremental steps of 0.0085 degrees.
+8-1	904-905	A	_	_	_	
+8-2	906-908	1D	_	_	_	
+8-3	909-917	position	_	_	_	
+8-4	918-927	sensitive	_	_	_	
+8-5	928-936	detector	_	_	_	
+8-6	937-940	was	_	_	_	
+8-7	941-945	used	_	_	_	
+8-8	946-948	to	_	_	_	
+8-9	949-954	cover	_	_	_	
+8-10	955-958	the	_	_	_	
+8-11	959-966	angular	_	_	_	
+8-12	967-972	range	_	_	_	
+8-13	973-977	from	_	_	_	
+8-14	978-980	15	_	_	_	
+8-15	981-983	to	_	_	_	
+8-16	984-987	120	_	_	_	
+8-17	988-995	degrees	_	_	_	
+8-18	995-996	,	_	_	_	
+8-19	997-1001	with	_	_	_	
+8-20	1002-1013	incremental	_	_	_	
+8-21	1014-1019	steps	_	_	_	
+8-22	1020-1022	of	_	_	_	
+8-23	1023-1029	0.0085	_	_	_	
+8-24	1030-1037	degrees	_	_	_	
+8-25	1037-1038	.	_	_	_	

@@ -1,0 +1,172 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The bulk polycrystalline Cu2Se samples were synthesized by mechanical ball milling (BM) and hot pressing (HP) at 700 °C.
+1-1	0-3	The	_	_	_	
+1-2	4-8	bulk	Descriptor	_	_	
+1-3	9-24	polycrystalline	Descriptor	_	_	
+1-4	25-30	Cu2Se	Material-target	Descriptor-of|Descriptor-of	1-3|1-2	
+1-5	31-38	samples	_	_	_	
+1-6	39-43	were	_	_	_	
+1-7	44-55	synthesized	Operation	Participant-material|Coreference|Coreference	1-4|1-10[1_0]|1-16[2_0]	
+1-8	56-58	by	_	_	_	
+1-9	59-69	mechanical	Descriptor	_	_	
+1-10	70-74	ball	Operation[1]	Coreference|Descriptor-of	1-13[0_1]|1-9[0_1]	
+1-11	75-82	milling	Operation[1]	_	_	
+1-12	83-84	(	_	_	_	
+1-13	84-86	BM	Operation	_	_	
+1-14	86-87	)	_	_	_	
+1-15	88-91	and	_	_	_	
+1-16	92-95	hot	Operation[2]	Coreference|Condition-of	1-19[0_2]|1-22[3_2]	
+1-17	96-104	pressing	Operation[2]	_	_	
+1-18	105-106	(	_	_	_	
+1-19	106-108	HP	Operation	_	_	
+1-20	108-109	)	_	_	_	
+1-21	110-112	at	_	_	_	
+1-22	113-116	700	Property-temperature[3]	_	_	
+1-23	117-118	°	Property-temperature[3]	_	_	
+1-24	118-119	C	Property-temperature[3]	_	_	
+1-25	119-120	.	_	_	_	
+
+#Text=The synthesis technique is similar to our previous work [16].
+2-1	121-124	The	_	_	_	
+2-2	125-134	synthesis	_	_	_	
+2-3	135-144	technique	_	_	_	
+2-4	145-147	is	_	_	_	
+2-5	148-155	similar	_	_	_	
+2-6	156-158	to	_	_	_	
+2-7	159-162	our	_	_	_	
+2-8	163-171	previous	_	_	_	
+2-9	172-176	work	_	_	_	
+2-10	177-178	[	_	_	_	
+2-11	178-180	16	_	_	_	
+2-12	180-181	]	_	_	_	
+2-13	181-182	.	_	_	_	
+
+#Text=The typical grain size of the as-fabricated sample is on the order of 1–2 μm, and the samples have typical dimensions of 1 × 3 × 10 mm.
+3-1	183-186	The	_	_	_	
+3-2	187-194	typical	_	_	_	
+3-3	195-200	grain	_	_	_	
+3-4	201-205	size	_	_	_	
+3-5	206-208	of	_	_	_	
+3-6	209-212	the	_	_	_	
+3-7	213-226	as-fabricated	_	_	_	
+3-8	227-233	sample	_	_	_	
+3-9	234-236	is	_	_	_	
+3-10	237-239	on	_	_	_	
+3-11	240-243	the	_	_	_	
+3-12	244-249	order	_	_	_	
+3-13	250-252	of	_	_	_	
+3-14	253-254	1	_	_	_	
+3-15	254-255	–	_	_	_	
+3-16	255-256	2	_	_	_	
+3-17	257-259	μm	_	_	_	
+3-18	259-260	,	_	_	_	
+3-19	261-264	and	_	_	_	
+3-20	265-268	the	_	_	_	
+3-21	269-276	samples	_	_	_	
+3-22	277-281	have	_	_	_	
+3-23	282-289	typical	_	_	_	
+3-24	290-300	dimensions	_	_	_	
+3-25	301-303	of	_	_	_	
+3-26	304-305	1	_	_	_	
+3-27	306-307	×	_	_	_	
+3-28	308-309	3	_	_	_	
+3-29	310-311	×	_	_	_	
+3-30	312-314	10	_	_	_	
+3-31	315-317	mm	_	_	_	
+3-32	317-318	.	_	_	_	
+
+#Text=LR-700 AC Bridge from Linear Research Inc. is used to perform the electrical resistivity and Hall coefficient measurements from 5 to 300 K.
+4-1	319-321	LR	_	_	_	
+4-2	321-322	-	_	_	_	
+4-3	322-325	700	_	_	_	
+4-4	326-328	AC	_	_	_	
+4-5	329-335	Bridge	_	_	_	
+4-6	336-340	from	_	_	_	
+4-7	341-347	Linear	_	_	_	
+4-8	348-356	Research	_	_	_	
+4-9	357-360	Inc	_	_	_	
+4-10	360-361	.	_	_	_	
+4-11	362-364	is	_	_	_	
+4-12	365-369	used	_	_	_	
+4-13	370-372	to	_	_	_	
+4-14	373-380	perform	_	_	_	
+4-15	381-384	the	_	_	_	
+4-16	385-395	electrical	_	_	_	
+4-17	396-407	resistivity	_	_	_	
+4-18	408-411	and	_	_	_	
+4-19	412-416	Hall	_	_	_	
+4-20	417-428	coefficient	_	_	_	
+4-21	429-441	measurements	_	_	_	
+4-22	442-446	from	_	_	_	
+4-23	447-448	5	_	_	_	
+4-24	449-451	to	_	_	_	
+4-25	452-455	300	_	_	_	
+4-26	456-457	K	_	_	_	
+4-27	457-458	.	_	_	_	
+
+#Text=The dc I-V curve of the sample is measured by the standard 4-probe method with Keithley 224 current source, and Agilent 34410A 6½ Digit multimeter or Keithley 2182A nanovoltmeter.
+5-1	459-462	The	_	_	_	
+5-2	463-465	dc	_	_	_	
+5-3	466-469	I-V	_	_	_	
+5-4	470-475	curve	_	_	_	
+5-5	476-478	of	_	_	_	
+5-6	479-482	the	_	_	_	
+5-7	483-489	sample	_	_	_	
+5-8	490-492	is	_	_	_	
+5-9	493-501	measured	_	_	_	
+5-10	502-504	by	_	_	_	
+5-11	505-508	the	_	_	_	
+5-12	509-517	standard	_	_	_	
+5-13	518-519	4	_	_	_	
+5-14	519-520	-	_	_	_	
+5-15	520-525	probe	_	_	_	
+5-16	526-532	method	_	_	_	
+5-17	533-537	with	_	_	_	
+5-18	538-546	Keithley	_	_	_	
+5-19	547-550	224	_	_	_	
+5-20	551-558	current	_	_	_	
+5-21	559-565	source	_	_	_	
+5-22	565-566	,	_	_	_	
+5-23	567-570	and	_	_	_	
+5-24	571-578	Agilent	_	_	_	
+5-25	579-585	34410A	_	_	_	
+5-26	586-588	6½	_	_	_	
+5-27	589-594	Digit	_	_	_	
+5-28	595-605	multimeter	_	_	_	
+5-29	606-608	or	_	_	_	
+5-30	609-617	Keithley	_	_	_	
+5-31	618-623	2182A	_	_	_	
+5-32	624-637	nanovoltmeter	_	_	_	
+5-33	637-638	.	_	_	_	
+
+#Text=In all temperature dependent experiments the temperature is controlled and monitored by a Quantum Design PPMS with a sweeping speed of 0.5 K/min.
+6-1	639-641	In	_	_	_	
+6-2	642-645	all	_	_	_	
+6-3	646-657	temperature	_	_	_	
+6-4	658-667	dependent	_	_	_	
+6-5	668-679	experiments	_	_	_	
+6-6	680-683	the	_	_	_	
+6-7	684-695	temperature	_	_	_	
+6-8	696-698	is	_	_	_	
+6-9	699-709	controlled	_	_	_	
+6-10	710-713	and	_	_	_	
+6-11	714-723	monitored	_	_	_	
+6-12	724-726	by	_	_	_	
+6-13	727-728	a	_	_	_	
+6-14	729-736	Quantum	_	_	_	
+6-15	737-743	Design	_	_	_	
+6-16	744-748	PPMS	_	_	_	
+6-17	749-753	with	_	_	_	
+6-18	754-755	a	_	_	_	
+6-19	756-764	sweeping	_	_	_	
+6-20	765-770	speed	_	_	_	
+6-21	771-773	of	_	_	_	
+6-22	774-777	0.5	_	_	_	
+6-23	778-779	K	_	_	_	
+6-24	779-780	/	_	_	_	
+6-25	780-783	min	_	_	_	
+6-26	783-784	.	_	_	_	

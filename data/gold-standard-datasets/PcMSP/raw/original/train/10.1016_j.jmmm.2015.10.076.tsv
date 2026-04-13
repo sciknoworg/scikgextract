@@ -1,0 +1,127 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline SmFe0.5Mn0.5O3 samples were produced by the combustion reaction method [29].
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-30	SmFe0.5Mn0.5O3	Material-target	Descriptor-of	1-1	
+1-3	31-38	samples	_	_	_	
+1-4	39-43	were	_	_	_	
+1-5	44-52	produced	Operation	Participant-material	1-2	
+1-6	53-55	by	_	_	_	
+1-7	56-59	the	_	_	_	
+1-8	60-70	combustion	Operation[1]	Coreference	1-5[0_1]	
+1-9	71-79	reaction	Operation[1]	_	_	
+1-10	80-86	method	Operation[1]	_	_	
+1-11	87-88	[	_	_	_	
+1-12	88-90	29	_	_	_	
+1-13	90-91	]	_	_	_	
+1-14	91-92	.	_	_	_	
+
+#Text=A solution containing the stoichiometric quantity of high quality grade reagents Sm(NO3)3.6H2O (Aldrich 99.98%), MnCl2:4H2O (Aldrich 99%) and Fe(NO3)3.9H2O (Aldrich; 99.9%) was formed by diluting them in distilled water.
+2-1	93-94	A	_	_	_	
+2-2	95-103	solution	Material-intermedium	_	_	
+2-3	104-114	containing	_	_	_	
+2-4	115-118	the	_	_	_	
+2-5	119-133	stoichiometric	Value[2]	_	_	
+2-6	134-142	quantity	Value[2]	_	_	
+2-7	143-145	of	_	_	_	
+2-8	146-150	high	Descriptor[3]	_	_	
+2-9	151-158	quality	Descriptor[3]	_	_	
+2-10	159-164	grade	Descriptor[3]	_	_	
+2-11	165-173	reagents	Material-recipe	Descriptor-of	2-8[3_0]	
+2-12	174-176	Sm	Material-recipe[4]	Value-of|Brand-of|Coreference|Value-of	2-19[0_4]|2-18[0_4]|2-11[0_4]|2-5[2_4]	
+2-13	176-177	(	Material-recipe[4]	_	_	
+2-14	177-180	NO3	Material-recipe[4]	_	_	
+2-15	180-181	)	Material-recipe[4]	_	_	
+2-16	181-187	3.6H2O	Material-recipe[4]	_	_	
+2-17	188-189	(	_	_	_	
+2-18	189-196	Aldrich	Brand	_	_	
+2-19	197-203	99.98%	Value	_	_	
+2-20	203-204	)	_	_	_	
+2-21	204-205	,	_	_	_	
+2-22	206-211	MnCl2	Material-recipe[5]	Brand-of|Value-of|Coreference|Value-of	2-26[0_5]|2-27[0_5]|2-11[0_5]|2-5[2_5]	
+2-23	211-212	:	Material-recipe[5]	_	_	
+2-24	212-216	4H2O	Material-recipe[5]	_	_	
+2-25	217-218	(	_	_	_	
+2-26	218-225	Aldrich	Brand	_	_	
+2-27	226-229	99%	Value	_	_	
+2-28	229-230	)	_	_	_	
+2-29	231-234	and	_	_	_	
+2-30	235-237	Fe	Material-recipe[6]	Brand-of|Value-of|Coreference|Value-of	2-36[0_6]|2-38[0_6]|2-11[0_6]|2-5[2_6]	
+2-31	237-238	(	Material-recipe[6]	_	_	
+2-32	238-241	NO3	Material-recipe[6]	_	_	
+2-33	241-242	)	Material-recipe[6]	_	_	
+2-34	242-248	3.9H2O	Material-recipe[6]	_	_	
+2-35	249-250	(	_	_	_	
+2-36	250-257	Aldrich	Brand	_	_	
+2-37	257-258	;	_	_	_	
+2-38	259-264	99.9%	Value	_	_	
+2-39	264-265	)	_	_	_	
+2-40	266-269	was	_	_	_	
+2-41	270-276	formed	Operation	Participant-material	2-2	
+2-42	277-279	by	_	_	_	
+2-43	280-288	diluting	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Next-operation	2-46[7_0]|2-12[4_0]|2-22[5_0]|2-30[6_0]|2-41	
+2-44	289-293	them	_	_	_	
+2-45	294-296	in	_	_	_	
+2-46	297-306	distilled	Material-others[7]	_	_	
+2-47	307-312	water	Material-others[7]	_	_	
+2-48	312-313	.	_	_	_	
+
+#Text=The solution was subjected to vigorous stirring with a magnetic stirrer at temperature about 120 °C for 1 h in order to remove water excess.
+3-1	314-317	The	_	_	_	
+3-2	318-326	solution	Material-intermedium	_	_	
+3-3	327-330	was	_	_	_	
+3-4	331-340	subjected	_	_	_	
+3-5	341-343	to	_	_	_	
+3-6	344-352	vigorous	Descriptor	_	_	
+3-7	353-361	stirring	Operation	Participant-material|Descriptor-of|Device-of-operation|Condition-of|Condition-of	3-2|3-6|3-11|3-15[8_0]|3-19[9_0]	
+3-8	362-366	with	_	_	_	
+3-9	367-368	a	Value	_	_	
+3-10	369-377	magnetic	Descriptor	_	_	
+3-11	378-385	stirrer	Device	Value-of|Descriptor-of	3-9|3-10	
+3-12	386-388	at	_	_	_	
+3-13	389-400	temperature	Property-temperature	Coreference	3-15[8_0]	
+3-14	401-406	about	_	_	_	
+3-15	407-410	120	Property-temperature[8]	_	_	
+3-16	411-412	°	Property-temperature[8]	_	_	
+3-17	412-413	C	Property-temperature[8]	_	_	
+3-18	414-417	for	_	_	_	
+3-19	418-419	1	Property-time[9]	_	_	
+3-20	420-421	h	Property-time[9]	_	_	
+3-21	422-424	in	_	_	_	
+3-22	425-430	order	_	_	_	
+3-23	431-433	to	_	_	_	
+3-24	434-440	remove	_	_	_	
+3-25	441-446	water	_	_	_	
+3-26	447-453	excess	_	_	_	
+3-27	453-454	.	_	_	_	
+
+#Text=During the stirring and evaporation process a stoichiometric amount of urea organic fuel, calculated according to propellants chemistry, was added [30].
+4-1	455-461	During	Descriptor[10]	_	_	
+4-2	462-465	the	Descriptor[10]	_	_	
+4-3	466-474	stirring	Descriptor[10]	_	_	
+4-4	475-478	and	Descriptor[10]	_	_	
+4-5	479-490	evaporation	Descriptor[10]	_	_	
+4-6	491-498	process	_	_	_	
+4-7	499-500	a	_	_	_	
+4-8	501-515	stoichiometric	Value[11]	_	_	
+4-9	516-522	amount	Value[11]	_	_	
+4-10	523-525	of	_	_	_	
+4-11	526-530	urea	Material-recipe[12]	Value-of	4-8[11_12]	
+4-12	531-538	organic	Material-recipe[12]	_	_	
+4-13	539-543	fuel	Material-recipe[12]	_	_	
+4-14	543-544	,	_	_	_	
+4-15	545-555	calculated	_	_	_	
+4-16	556-565	according	_	_	_	
+4-17	566-568	to	_	_	_	
+4-18	569-580	propellants	_	_	_	
+4-19	581-590	chemistry	_	_	_	
+4-20	590-591	,	_	_	_	
+4-21	592-595	was	_	_	_	
+4-22	596-601	added	Operation	Descriptor-of|Participant-material	4-1[10_0]|4-11[12_0]	
+4-23	602-603	[	_	_	_	
+4-24	603-605	30	_	_	_	
+4-25	605-606	]	_	_	_	
+4-26	606-607	.	_	_	_	

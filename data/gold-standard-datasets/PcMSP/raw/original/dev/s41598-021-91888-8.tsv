@@ -1,0 +1,139 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A polycrystalline BiCu3Cr4O12 sample was prepared by solid-state reaction under a high-pressure and high-temperature condition.
+1-1	0-1	A	_	_	_	
+1-2	2-17	polycrystalline	Descriptor	_	_	
+1-3	18-29	BiCu3Cr4O12	Material-target	Descriptor-of	1-2	
+1-4	30-36	sample	_	_	_	
+1-5	37-40	was	_	_	_	
+1-6	41-49	prepared	Operation	Participant-material|Coreference|Condition-of|Condition-of	1-3|1-8[1_0]|1-12|1-14	
+1-7	50-52	by	_	_	_	
+1-8	53-64	solid-state	Operation[1]	_	_	
+1-9	65-73	reaction	Operation[1]	_	_	
+1-10	74-79	under	_	_	_	
+1-11	80-81	a	_	_	_	
+1-12	82-95	high-pressure	Property-pressure	_	_	
+1-13	96-99	and	_	_	_	
+1-14	100-116	high-temperature	Property-temperature	_	_	
+1-15	117-126	condition	_	_	_	
+1-16	126-127	.	_	_	_	
+
+#Text=The sample was synthesized from the stoichiometric mixture of Bi2O3, CuO, CrO2, and Cr2O3.
+2-1	128-131	The	_	_	_	
+2-2	132-138	sample	Material-intermedium	_	_	
+2-3	139-142	was	_	_	_	
+2-4	143-154	synthesized	Operation	Participant-material|Participant-material	2-2|2-8	
+2-5	155-159	from	_	_	_	
+2-6	160-163	the	_	_	_	
+2-7	164-178	stoichiometric	Value	_	_	
+2-8	179-186	mixture	Material-intermedium	Value-of|Coreference|Coreference|Coreference|Coreference	2-7|2-10|2-12|2-14|2-17	
+2-9	187-189	of	_	_	_	
+2-10	190-195	Bi2O3	Material-recipe	_	_	
+2-11	195-196	,	_	_	_	
+2-12	197-200	CuO	Material-recipe	_	_	
+2-13	200-201	,	_	_	_	
+2-14	202-206	CrO2	Material-recipe	_	_	
+2-15	206-207	,	_	_	_	
+2-16	208-211	and	_	_	_	
+2-17	212-217	Cr2O3	Material-recipe	_	_	
+2-18	217-218	.	_	_	_	
+
+#Text=The mixture was pressed at 9 GPa and heated at 1273 K for 30 min and then cooled to room temperature.
+3-1	219-222	The	_	_	_	
+3-2	223-230	mixture	Material-intermedium	_	_	
+3-3	231-234	was	_	_	_	
+3-4	235-242	pressed	Operation	Participant-material|Condition-of|Next-operation	3-2|3-6[2_0]|3-9	
+3-5	243-245	at	_	_	_	
+3-6	246-247	9	Property-pressure[2]	_	_	
+3-7	248-251	GPa	Property-pressure[2]	_	_	
+3-8	252-255	and	_	_	_	
+3-9	256-262	heated	Operation	Condition-of|Condition-of|Next-operation	3-11[3_0]|3-14[4_0]|3-18	
+3-10	263-265	at	_	_	_	
+3-11	266-270	1273	Property-temperature[3]	_	_	
+3-12	271-272	K	Property-temperature[3]	_	_	
+3-13	273-276	for	_	_	_	
+3-14	277-279	30	Property-time[4]	_	_	
+3-15	280-283	min	Property-time[4]	_	_	
+3-16	284-287	and	_	_	_	
+3-17	288-292	then	_	_	_	
+3-18	293-299	cooled	Operation	Condition-of	3-20[5_0]	
+3-19	300-302	to	_	_	_	
+3-20	303-307	room	Property-temperature[5]	_	_	
+3-21	308-319	temperature	Property-temperature[5]	_	_	
+3-22	319-320	.	_	_	_	
+
+#Text=The pressure was slowly released after the heat treatment.
+4-1	321-324	The	_	_	_	
+4-2	325-333	pressure	Property-pressure	_	_	
+4-3	334-337	was	_	_	_	
+4-4	338-344	slowly	Operation[6]	Condition-of	4-2[0_6]	
+4-5	345-353	released	Operation[6]	_	_	
+4-6	354-359	after	_	_	_	
+4-7	360-363	the	_	_	_	
+4-8	364-368	heat	_	_	_	
+4-9	369-378	treatment	_	_	_	
+4-10	378-379	.	_	_	_	
+
+#Text=The obtained sample was confirmed to be a single phase by synchrotron X-ray diffraction (SXRD).
+5-1	380-383	The	_	_	_	
+5-2	384-392	obtained	_	_	_	
+5-3	393-399	sample	_	_	_	
+5-4	400-403	was	_	_	_	
+5-5	404-413	confirmed	_	_	_	
+5-6	414-416	to	_	_	_	
+5-7	417-419	be	_	_	_	
+5-8	420-421	a	_	_	_	
+5-9	422-428	single	_	_	_	
+5-10	429-434	phase	_	_	_	
+5-11	435-437	by	_	_	_	
+5-12	438-449	synchrotron	_	_	_	
+5-13	450-455	X-ray	_	_	_	
+5-14	456-467	diffraction	_	_	_	
+5-15	468-469	(	_	_	_	
+5-16	469-473	SXRD	_	_	_	
+5-17	473-474	)	_	_	_	
+5-18	474-475	.	_	_	_	
+
+#Text=The results of structure analysis are given in Supporting information.
+6-1	476-479	The	_	_	_	
+6-2	480-487	results	_	_	_	
+6-3	488-490	of	_	_	_	
+6-4	491-500	structure	_	_	_	
+6-5	501-509	analysis	_	_	_	
+6-6	510-513	are	_	_	_	
+6-7	514-519	given	_	_	_	
+6-8	520-522	in	_	_	_	
+6-9	523-533	Supporting	_	_	_	
+6-10	534-545	information	_	_	_	
+6-11	545-546	.	_	_	_	
+
+#Text=The structure parameters were refined by Rietveld analysis using the RIETAN-FP program44.
+7-1	547-550	The	_	_	_	
+7-2	551-560	structure	_	_	_	
+7-3	561-571	parameters	_	_	_	
+7-4	572-576	were	_	_	_	
+7-5	577-584	refined	_	_	_	
+7-6	585-587	by	_	_	_	
+7-7	588-596	Rietveld	_	_	_	
+7-8	597-605	analysis	_	_	_	
+7-9	606-611	using	_	_	_	
+7-10	612-615	the	_	_	_	
+7-11	616-625	RIETAN-FP	_	_	_	
+7-12	626-635	program44	_	_	_	
+7-13	635-636	.	_	_	_	
+
+#Text=The crystal structure figures were drawn using the VESTA software45.
+8-1	637-640	The	_	_	_	
+8-2	641-648	crystal	_	_	_	
+8-3	649-658	structure	_	_	_	
+8-4	659-666	figures	_	_	_	
+8-5	667-671	were	_	_	_	
+8-6	672-677	drawn	_	_	_	
+8-7	678-683	using	_	_	_	
+8-8	684-687	the	_	_	_	
+8-9	688-693	VESTA	_	_	_	
+8-10	694-704	software45	_	_	_	
+8-11	704-705	.	_	_	_	

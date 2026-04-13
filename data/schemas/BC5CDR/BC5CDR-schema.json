@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BC5CDR Chemical-Disease Relation Extraction",
+  "description": "Schema for chemical and disease entity extraction and chemical-induced-disease (CID) relation extraction from PubMed abstracts, based on the BioCreative V CDR dataset. Captures Chemical and Disease entities with MeSH identifiers and document-level CID relations.",
+  "type": "object",
+  "properties": {
+    "entities": {
+      "type": "array",
+      "description": "Chemical and disease named entities extracted from the text.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The entity mention text as it appears in the passage."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Chemical",
+              "Disease"
+            ],
+            "description": "The semantic type of the entity."
+          },
+          "identifier": {
+            "type": "string",
+            "description": "MeSH identifier for the entity (e.g., D009270). Value is -1 when no MeSH mapping exists."
+          },
+          "offset": {
+            "type": "integer",
+            "description": "Character offset of the entity mention in the full document text."
+          },
+          "length": {
+            "type": "integer",
+            "description": "Character length of the entity mention."
+          }
+        },
+        "required": ["text", "type", "identifier"],
+        "additionalProperties": false
+      }
+    },
+    "relations": {
+      "type": "array",
+      "description": "Document-level Chemical-Induced-Disease (CID) relations between a chemical and a disease, identified by their MeSH identifiers.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "CID"
+            ],
+            "description": "The relation type. Always CID (Chemical-Induced-Disease)."
+          },
+          "chemical": {
+            "type": "string",
+            "description": "MeSH identifier of the chemical entity."
+          },
+          "disease": {
+            "type": "string",
+            "description": "MeSH identifier of the disease entity."
+          }
+        },
+        "required": ["type", "chemical", "disease"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["entities", "relations"],
+  "additionalProperties": false
+}

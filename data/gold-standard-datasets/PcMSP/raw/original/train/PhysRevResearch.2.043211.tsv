@@ -1,0 +1,263 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Ag2FeO2 were prepared from
+#Text=a stoichiometric mixture of Fe2O3, Ag2O, and Ag, using a
+#Text=high-pressure synthesis technique at 900 ◦C under 6 GPa.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-34	Ag2FeO2	Material-target	Descriptor-of	1-1	
+1-5	35-39	were	_	_	_	
+1-6	40-48	prepared	Operation	Coreference|Condition-of|Condition-of|Participant-material|Participant-material	1-21[1_0]|1-25[2_0]|1-29[3_0]|1-4|1-10	
+1-7	49-53	from	_	_	_	
+1-8	54-55	a	_	_	_	
+1-9	56-70	stoichiometric	Value	_	_	
+1-10	71-78	mixture	Material-intermedium	_	_	
+1-11	79-81	of	_	_	_	
+1-12	82-87	Fe2O3	Material-recipe	Value-of|Coreference	1-9|1-10	
+1-13	87-88	,	_	_	_	
+1-14	89-93	Ag2O	Material-recipe	Value-of|Coreference	1-9|1-10	
+1-15	93-94	,	_	_	_	
+1-16	95-98	and	_	_	_	
+1-17	99-101	Ag	Material-recipe	Value-of|Coreference	1-9|1-10	
+1-18	101-102	,	_	_	_	
+1-19	103-108	using	_	_	_	
+1-20	109-110	a	_	_	_	
+1-21	111-124	high-pressure	Operation[1]	_	_	
+1-22	125-134	synthesis	Operation[1]	_	_	
+1-23	135-144	technique	Operation[1]	_	_	
+1-24	145-147	at	_	_	_	
+1-25	148-151	900	Property-temperature[2]	_	_	
+1-26	152-153	◦	Property-temperature[2]	_	_	
+1-27	153-154	C	Property-temperature[2]	_	_	
+1-28	155-160	under	_	_	_	
+1-29	161-162	6	Property-pressure[3]	_	_	
+1-30	163-166	GPa	Property-pressure[3]	_	_	
+1-31	166-167	.	_	_	_	
+
+#Text=Using powder x-ray diffraction (XRD), the sample was confirmed to be predominantly a single phase of Ag2FeO2.
+2-1	168-173	Using	_	_	_	
+2-2	174-180	powder	_	_	_	
+2-3	181-186	x-ray	_	_	_	
+2-4	187-198	diffraction	_	_	_	
+2-5	199-200	(	_	_	_	
+2-6	200-203	XRD	_	_	_	
+2-7	203-204	)	_	_	_	
+2-8	204-205	,	_	_	_	
+2-9	206-209	the	_	_	_	
+2-10	210-216	sample	_	_	_	
+2-11	217-220	was	_	_	_	
+2-12	221-230	confirmed	_	_	_	
+2-13	231-233	to	_	_	_	
+2-14	234-236	be	_	_	_	
+2-15	237-250	predominantly	_	_	_	
+2-16	251-252	a	_	_	_	
+2-17	253-259	single	_	_	_	
+2-18	260-265	phase	_	_	_	
+2-19	266-268	of	_	_	_	
+2-20	269-276	Ag2FeO2	_	_	_	
+2-21	276-277	.	_	_	_	
+
+#Text=The
+#Text=majority impurity is a small percentage of Fe2O3 (hematite).
+3-1	278-281	The	_	_	_	
+3-2	282-290	majority	_	_	_	
+3-3	291-299	impurity	_	_	_	
+3-4	300-302	is	_	_	_	
+3-5	303-304	a	_	_	_	
+3-6	305-310	small	_	_	_	
+3-7	311-321	percentage	_	_	_	
+3-8	322-324	of	_	_	_	
+3-9	325-330	Fe2O3	_	_	_	
+3-10	331-332	(	_	_	_	
+3-11	332-340	hematite	_	_	_	
+3-12	340-341	)	_	_	_	
+3-13	341-342	.	_	_	_	
+
+#Text=The electric resistivity and heat capacity were measured using
+#Text=a quantum design (QD) physical properties measurement system (PPMS).
+4-1	343-346	The	_	_	_	
+4-2	347-355	electric	_	_	_	
+4-3	356-367	resistivity	_	_	_	
+4-4	368-371	and	_	_	_	
+4-5	372-376	heat	_	_	_	
+4-6	377-385	capacity	_	_	_	
+4-7	386-390	were	_	_	_	
+4-8	391-399	measured	_	_	_	
+4-9	400-405	using	_	_	_	
+4-10	406-407	a	_	_	_	
+4-11	408-415	quantum	_	_	_	
+4-12	416-422	design	_	_	_	
+4-13	423-424	(	_	_	_	
+4-14	424-426	QD	_	_	_	
+4-15	426-427	)	_	_	_	
+4-16	428-436	physical	_	_	_	
+4-17	437-447	properties	_	_	_	
+4-18	448-459	measurement	_	_	_	
+4-19	460-466	system	_	_	_	
+4-20	467-468	(	_	_	_	
+4-21	468-472	PPMS	_	_	_	
+4-22	472-473	)	_	_	_	
+4-23	473-474	.	_	_	_	
+
+#Text=The magnetic susceptibility was also measured
+#Text=using QD magnetic property measurement system (MPMS).
+5-1	475-478	The	_	_	_	
+5-2	479-487	magnetic	_	_	_	
+5-3	488-502	susceptibility	_	_	_	
+5-4	503-506	was	_	_	_	
+5-5	507-511	also	_	_	_	
+5-6	512-520	measured	_	_	_	
+5-7	521-526	using	_	_	_	
+5-8	527-529	QD	_	_	_	
+5-9	530-538	magnetic	_	_	_	
+5-10	539-547	property	_	_	_	
+5-11	548-559	measurement	_	_	_	
+5-12	560-566	system	_	_	_	
+5-13	567-568	(	_	_	_	
+5-14	568-572	MPMS	_	_	_	
+5-15	572-573	)	_	_	_	
+5-16	573-574	.	_	_	_	
+
+#Text=The powder neutron diffraction experiments were carried out using the diffractometer HB-2A installed at high flux isotope
+#Text=reactor (HFIR) in Oak Ridge National Laboratory (ORNL).
+6-1	575-578	The	_	_	_	
+6-2	579-585	powder	_	_	_	
+6-3	586-593	neutron	_	_	_	
+6-4	594-605	diffraction	_	_	_	
+6-5	606-617	experiments	_	_	_	
+6-6	618-622	were	_	_	_	
+6-7	623-630	carried	_	_	_	
+6-8	631-634	out	_	_	_	
+6-9	635-640	using	_	_	_	
+6-10	641-644	the	_	_	_	
+6-11	645-659	diffractometer	_	_	_	
+6-12	660-662	HB	_	_	_	
+6-13	662-663	-	_	_	_	
+6-14	663-665	2A	_	_	_	
+6-15	666-675	installed	_	_	_	
+6-16	676-678	at	_	_	_	
+6-17	679-683	high	_	_	_	
+6-18	684-688	flux	_	_	_	
+6-19	689-696	isotope	_	_	_	
+6-20	697-704	reactor	_	_	_	
+6-21	705-706	(	_	_	_	
+6-22	706-710	HFIR	_	_	_	
+6-23	710-711	)	_	_	_	
+6-24	712-714	in	_	_	_	
+6-25	715-718	Oak	_	_	_	
+6-26	719-724	Ridge	_	_	_	
+6-27	725-733	National	_	_	_	
+6-28	734-744	Laboratory	_	_	_	
+6-29	745-746	(	_	_	_	
+6-30	746-750	ORNL	_	_	_	
+6-31	750-751	)	_	_	_	
+6-32	751-752	.	_	_	_	
+
+#Text=The neutron wavelength was fixed at λ = 1.5373 Å.
+7-1	753-756	The	_	_	_	
+7-2	757-764	neutron	_	_	_	
+7-3	765-775	wavelength	_	_	_	
+7-4	776-779	was	_	_	_	
+7-5	780-785	fixed	_	_	_	
+7-6	786-788	at	_	_	_	
+7-7	789-790	λ	_	_	_	
+7-8	791-792	=	_	_	_	
+7-9	793-799	1.5373	_	_	_	
+7-10	800-801	Å	_	_	_	
+7-11	801-802	.	_	_	_	
+
+#Text=The
+#Text=inelastic neutron scattering experiments were carried out on
+#Text=powder sample of Ag2FeO2 on the time-of-flight chopper
+#Text=neutron spectrometer ARCS [8], installed at the Spallation
+#Text=Neutron Source (SNS) at ORNL.
+8-1	803-806	The	_	_	_	
+8-2	807-816	inelastic	_	_	_	
+8-3	817-824	neutron	_	_	_	
+8-4	825-835	scattering	_	_	_	
+8-5	836-847	experiments	_	_	_	
+8-6	848-852	were	_	_	_	
+8-7	853-860	carried	_	_	_	
+8-8	861-864	out	_	_	_	
+8-9	865-867	on	_	_	_	
+8-10	868-874	powder	_	_	_	
+8-11	875-881	sample	_	_	_	
+8-12	882-884	of	_	_	_	
+8-13	885-892	Ag2FeO2	_	_	_	
+8-14	893-895	on	_	_	_	
+8-15	896-899	the	_	_	_	
+8-16	900-914	time-of-flight	_	_	_	
+8-17	915-922	chopper	_	_	_	
+8-18	923-930	neutron	_	_	_	
+8-19	931-943	spectrometer	_	_	_	
+8-20	944-948	ARCS	_	_	_	
+8-21	949-950	[	_	_	_	
+8-22	950-951	8	_	_	_	
+8-23	951-952	]	_	_	_	
+8-24	952-953	,	_	_	_	
+8-25	954-963	installed	_	_	_	
+8-26	964-966	at	_	_	_	
+8-27	967-970	the	_	_	_	
+8-28	971-981	Spallation	_	_	_	
+8-29	982-989	Neutron	_	_	_	
+8-30	990-996	Source	_	_	_	
+8-31	997-998	(	_	_	_	
+8-32	998-1001	SNS	_	_	_	
+8-33	1001-1002	)	_	_	_	
+8-34	1003-1005	at	_	_	_	
+8-35	1006-1010	ORNL	_	_	_	
+8-36	1010-1011	.	_	_	_	
+
+#Text=We utilized an incident
+#Text=energy of 15 meV.
+9-1	1012-1014	We	_	_	_	
+9-2	1015-1023	utilized	_	_	_	
+9-3	1024-1026	an	_	_	_	
+9-4	1027-1035	incident	_	_	_	
+9-5	1036-1042	energy	_	_	_	
+9-6	1043-1045	of	_	_	_	
+9-7	1046-1048	15	_	_	_	
+9-8	1049-1052	meV	_	_	_	
+9-9	1052-1053	.	_	_	_	
+
+#Text=The measurements were performed at 5 K
+#Text=using a closed-cycle refrigerator.
+10-1	1054-1057	The	_	_	_	
+10-2	1058-1070	measurements	_	_	_	
+10-3	1071-1075	were	_	_	_	
+10-4	1076-1085	performed	_	_	_	
+10-5	1086-1088	at	_	_	_	
+10-6	1089-1090	5	_	_	_	
+10-7	1091-1092	K	_	_	_	
+10-8	1093-1098	using	_	_	_	
+10-9	1099-1100	a	_	_	_	
+10-10	1101-1113	closed-cycle	_	_	_	
+10-11	1114-1126	refrigerator	_	_	_	
+10-12	1126-1127	.	_	_	_	
+
+#Text=The 57Fe Mössbauer spectra
+#Text=were measured via transmission geometry using a 57Co/Rh
+#Text=γ -ray source.
+11-1	1128-1131	The	_	_	_	
+11-2	1132-1136	57Fe	_	_	_	
+11-3	1137-1146	Mössbauer	_	_	_	
+11-4	1147-1154	spectra	_	_	_	
+11-5	1155-1159	were	_	_	_	
+11-6	1160-1168	measured	_	_	_	
+11-7	1169-1172	via	_	_	_	
+11-8	1173-1185	transmission	_	_	_	
+11-9	1186-1194	geometry	_	_	_	
+11-10	1195-1200	using	_	_	_	
+11-11	1201-1202	a	_	_	_	
+11-12	1203-1207	57Co	_	_	_	
+11-13	1207-1208	/	_	_	_	
+11-14	1208-1210	Rh	_	_	_	
+11-15	1211-1212	γ	_	_	_	
+11-16	1213-1214	-	_	_	_	
+11-17	1214-1217	ray	_	_	_	
+11-18	1218-1224	source	_	_	_	
+11-19	1224-1225	.	_	_	_	

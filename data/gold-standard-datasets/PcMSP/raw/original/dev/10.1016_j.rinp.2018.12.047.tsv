@@ -1,0 +1,156 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A series of polycrystalline NaAlP2O7:xPr3+ (x = 1, 3, 5, 7, 9, 11, 13%) powders were synthesized via a conventional high temperature solid-state reaction method.
+1-1	0-1	A	Descriptor[1]	_	_	
+1-2	2-8	series	Descriptor[1]	_	_	
+1-3	9-11	of	_	_	_	
+1-4	12-27	polycrystalline	Descriptor	_	_	
+1-5	28-36	NaAlP2O7	Material-target[2]	Descriptor-of|Descriptor-of|Descriptor-of|Descriptor-of	1-1[1_2]|1-4[0_2]|1-10[3_2]|1-28[0_2]	
+1-6	36-37	:	Material-target[2]	_	_	
+1-7	37-41	xPr3	Material-target[2]	_	_	
+1-8	41-42	+	Material-target[2]	_	_	
+1-9	43-44	(	_	_	_	
+1-10	44-45	x	Descriptor[3]	_	_	
+1-11	45-46	 	Descriptor[3]	_	_	
+1-12	46-47	=	Descriptor[3]	_	_	
+1-13	47-48	 	Descriptor[3]	_	_	
+1-14	48-49	1	Descriptor[3]	_	_	
+1-15	49-50	,	Descriptor[3]	_	_	
+1-16	51-52	3	Descriptor[3]	_	_	
+1-17	52-53	,	Descriptor[3]	_	_	
+1-18	54-55	5	Descriptor[3]	_	_	
+1-19	55-56	,	Descriptor[3]	_	_	
+1-20	57-58	7	Descriptor[3]	_	_	
+1-21	58-59	,	Descriptor[3]	_	_	
+1-22	60-61	9	Descriptor[3]	_	_	
+1-23	61-62	,	Descriptor[3]	_	_	
+1-24	63-65	11	Descriptor[3]	_	_	
+1-25	65-66	,	Descriptor[3]	_	_	
+1-26	67-70	13%	Descriptor[3]	_	_	
+1-27	70-71	)	_	_	_	
+1-28	72-79	powders	Descriptor	_	_	
+1-29	80-84	were	_	_	_	
+1-30	85-96	synthesized	Operation	Participant-material|Coreference	1-5[2_0]|1-33[4_0]	
+1-31	97-100	via	_	_	_	
+1-32	101-102	a	_	_	_	
+1-33	103-115	conventional	Operation[4]	_	_	
+1-34	116-120	high	Operation[4]	_	_	
+1-35	121-132	temperature	Operation[4]	_	_	
+1-36	133-144	solid-state	Operation[4]	_	_	
+1-37	145-153	reaction	Operation[4]	_	_	
+1-38	154-160	method	Operation[4]	_	_	
+1-39	160-161	.	_	_	_	
+
+#Text=All chemical reagents were purchased as starting materials without further purification.
+2-1	162-165	All	Value	_	_	
+2-2	166-174	chemical	Material-recipe[5]	Value-of	2-1[0_5]	
+2-3	175-183	reagents	Material-recipe[5]	_	_	
+2-4	184-188	were	_	_	_	
+2-5	189-198	purchased	Operation	Participant-material	2-2[5_0]	
+2-6	199-201	as	_	_	_	
+2-7	202-210	starting	Material-recipe[6]	Descriptor-of	2-9[7_6]	
+2-8	211-220	materials	Material-recipe[6]	_	_	
+2-9	221-228	without	Descriptor[7]	_	_	
+2-10	229-236	further	Descriptor[7]	_	_	
+2-11	237-249	purification	Descriptor[7]	_	_	
+2-12	249-250	.	_	_	_	
+
+#Text=Stoichiometric amounts of analytical reagents Na2CO3, Al2O3, NH4H2PO4 and 99.99% pure praseodymium oxide (Pr2O3) was mixed and pulverized.
+3-1	251-265	Stoichiometric	Value[8]	_	_	
+3-2	266-273	amounts	Value[8]	_	_	
+3-3	274-276	of	_	_	_	
+3-4	277-287	analytical	Descriptor	_	_	
+3-5	288-296	reagents	Material-recipe	Value-of|Descriptor-of|Coreference|Coreference|Coreference	3-1[8_0]|3-4|3-6|3-8|3-10	
+3-6	297-303	Na2CO3	Material-recipe	_	_	
+3-7	303-304	,	_	_	_	
+3-8	305-310	Al2O3	Material-recipe	_	_	
+3-9	310-311	,	_	_	_	
+3-10	312-320	NH4H2PO4	Material-recipe	_	_	
+3-11	321-324	and	_	_	_	
+3-12	325-331	99.99%	Value	_	_	
+3-13	332-336	pure	Descriptor	_	_	
+3-14	337-349	praseodymium	Material-recipe[9]	Value-of|Descriptor-of|Coreference	3-12[0_9]|3-13[0_9]|3-17[0_9]	
+3-15	350-355	oxide	Material-recipe[9]	_	_	
+3-16	356-357	(	_	_	_	
+3-17	357-362	Pr2O3	Material-recipe	_	_	
+3-18	362-363	)	_	_	_	
+3-19	364-367	was	_	_	_	
+3-20	368-373	mixed	Operation	Participant-material|Participant-material|Next-operation	3-5|3-14[9_0]|3-22	
+3-21	374-377	and	_	_	_	
+3-22	378-388	pulverized	Operation	_	_	
+3-23	388-389	.	_	_	_	
+
+#Text=First, the homogenous mixtures were preheated at 473 K for 4 h in order to decompose NH4H2PO4.
+4-1	390-395	First	_	_	_	
+4-2	395-396	,	_	_	_	
+4-3	397-400	the	_	_	_	
+4-4	401-411	homogenous	Descriptor	_	_	
+4-5	412-420	mixtures	Material-intermedium	Descriptor-of	4-4	
+4-6	421-425	were	_	_	_	
+4-7	426-435	preheated	Operation	Participant-material|Condition-of|Condition-of	4-5|4-9[10_0]|4-13[11_0]	
+4-8	436-438	at	_	_	_	
+4-9	439-442	473	Property-temperature[10]	_	_	
+4-10	442-443	 	Property-temperature[10]	_	_	
+4-11	443-444	K	Property-temperature[10]	_	_	
+4-12	445-448	for	_	_	_	
+4-13	449-450	4	Property-time[11]	_	_	
+4-14	450-451	 	Property-time[11]	_	_	
+4-15	451-452	h	Property-time[11]	_	_	
+4-16	453-455	in	_	_	_	
+4-17	456-461	order	_	_	_	
+4-18	462-464	to	_	_	_	
+4-19	465-474	decompose	_	_	_	
+4-20	475-483	NH4H2PO4	_	_	_	
+4-21	483-484	.	_	_	_	
+
+#Text=Subsequently, these mixtures were again ground and calcined in air at 1123 K for 6 days.
+5-1	485-497	Subsequently	_	_	_	
+5-2	497-498	,	_	_	_	
+5-3	499-504	these	Material-intermedium[12]	_	_	
+5-4	505-513	mixtures	Material-intermedium[12]	_	_	
+5-5	514-518	were	_	_	_	
+5-6	519-524	again	_	_	_	
+5-7	525-531	ground	Operation	Participant-material|Next-operation	5-3[12_0]|5-9	
+5-8	532-535	and	_	_	_	
+5-9	536-544	calcined	Operation	Condition-of|Condition-of|Condition-of	5-11|5-13[13_0]|5-17[14_0]	
+5-10	545-547	in	_	_	_	
+5-11	548-551	air	Property-pressure	_	_	
+5-12	552-554	at	_	_	_	
+5-13	555-559	1123	Property-temperature[13]	_	_	
+5-14	559-560	 	Property-temperature[13]	_	_	
+5-15	560-561	K	Property-temperature[13]	_	_	
+5-16	562-565	for	_	_	_	
+5-17	566-567	6	Property-time[14]	_	_	
+5-18	567-568	 	Property-time[14]	_	_	
+5-19	568-572	days	Property-time[14]	_	_	
+5-20	572-573	.	_	_	_	
+
+#Text=Next, the products were gradually cooled down to room temperature by switching off the muffle furnace and ground into powders for further characterization.
+6-1	574-578	Next	_	_	_	
+6-2	578-579	,	_	_	_	
+6-3	580-583	the	_	_	_	
+6-4	584-592	products	Material-intermedium	_	_	
+6-5	593-597	were	_	_	_	
+6-6	598-607	gradually	Operation[15]	Participant-material|Condition-of|Coreference|Coreference	6-4[0_15]|6-10[16_15]|6-13[17_15]|6-19[0_15]	
+6-7	608-614	cooled	Operation[15]	_	_	
+6-8	615-619	down	Operation[15]	_	_	
+6-9	620-622	to	_	_	_	
+6-10	623-627	room	Property-temperature[16]	_	_	
+6-11	628-639	temperature	Property-temperature[16]	_	_	
+6-12	640-642	by	_	_	_	
+6-13	643-652	switching	Operation[17]	Device-of-operation	6-16[18_17]	
+6-14	653-656	off	Operation[17]	_	_	
+6-15	657-660	the	_	_	_	
+6-16	661-667	muffle	Device[18]	_	_	
+6-17	668-675	furnace	Device[18]	_	_	
+6-18	676-679	and	_	_	_	
+6-19	680-686	ground	Operation	Participant-material	6-21	
+6-20	687-691	into	_	_	_	
+6-21	692-699	powders	Material-intermedium	_	_	
+6-22	700-703	for	_	_	_	
+6-23	704-711	further	_	_	_	
+6-24	712-728	characterization	_	_	_	
+6-25	728-729	.	_	_	_	

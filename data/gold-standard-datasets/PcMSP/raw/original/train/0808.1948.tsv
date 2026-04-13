@@ -1,0 +1,163 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline TbFeAsO0.85 was prepared by a solid-state-reaction method.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-27	TbFeAsO0.85	Material-target	Descriptor-of	1-1	
+1-3	28-31	was	_	_	_	
+1-4	32-40	prepared	Operation	Participant-material|Coreference	1-2|1-7[1_0]	
+1-5	41-43	by	_	_	_	
+1-6	44-45	a	_	_	_	
+1-7	46-66	solid-state-reaction	Operation[1]	_	_	
+1-8	67-73	method	Operation[1]	_	_	
+1-9	73-74	.	_	_	_	
+
+#Text=At first, a precursor TbAs was prepared from Tb (20 mesh 3N in oil, Rare Metallic Co.) and As (powder 5N, High Purity Chemicals) with excess 1 mole % of As (i.e. starting composition Tb/ As = 1/ 1.01).
+2-1	75-77	At	_	_	_	
+2-2	78-83	first	_	_	_	
+2-3	83-84	,	_	_	_	
+2-4	85-86	a	_	_	_	
+2-5	87-96	precursor	Descriptor	_	_	
+2-6	97-101	TbAs	Material-intermedium	Descriptor-of	2-5	
+2-7	102-105	was	_	_	_	
+2-8	106-114	prepared	Operation	Participant-material|Participant-material|Participant-material	2-6|2-10|2-24	
+2-9	115-119	from	_	_	_	
+2-10	120-122	Tb	Material-recipe	Descriptor-of|Value-of|Descriptor-of|Brand-of|Descriptor-of	2-12[2_0]|2-14|2-15[3_0]|2-18[4_0]|2-45[7_0]	
+2-11	123-124	(	_	_	_	
+2-12	124-126	20	Descriptor[2]	_	_	
+2-13	127-131	mesh	Descriptor[2]	_	_	
+2-14	132-134	3N	Value	_	_	
+2-15	135-137	in	Descriptor[3]	_	_	
+2-16	138-141	oil	Descriptor[3]	_	_	
+2-17	141-142	,	_	_	_	
+2-18	143-147	Rare	Brand[4]	_	_	
+2-19	148-156	Metallic	Brand[4]	_	_	
+2-20	157-159	Co	Brand[4]	_	_	
+2-21	159-160	.	_	_	_	
+2-22	160-161	)	_	_	_	
+2-23	162-165	and	_	_	_	
+2-24	166-168	As	Material-recipe	Descriptor-of|Value-of|Brand-of|Coreference|Descriptor-of	2-26|2-27|2-29[5_0]|2-39|2-45[7_0]	
+2-25	169-170	(	_	_	_	
+2-26	170-176	powder	Descriptor	_	_	
+2-27	177-179	5N	Value	_	_	
+2-28	179-180	,	_	_	_	
+2-29	181-185	High	Brand[5]	_	_	
+2-30	186-192	Purity	Brand[5]	_	_	
+2-31	193-202	Chemicals	Brand[5]	_	_	
+2-32	202-203	)	_	_	_	
+2-33	204-208	with	_	_	_	
+2-34	209-215	excess	Value[6]	_	_	
+2-35	216-217	1	Value[6]	_	_	
+2-36	218-222	mole	Value[6]	_	_	
+2-37	223-224	%	Value[6]	_	_	
+2-38	225-227	of	_	_	_	
+2-39	228-230	As	Material-recipe	Value-of	2-34[6_0]	
+2-40	231-232	(	_	_	_	
+2-41	232-235	i.e	_	_	_	
+2-42	235-236	.	_	_	_	
+2-43	237-245	starting	_	_	_	
+2-44	246-257	composition	_	_	_	
+2-45	258-260	Tb	Descriptor[7]	_	_	
+2-46	260-261	/	Descriptor[7]	_	_	
+2-47	262-264	As	Descriptor[7]	_	_	
+2-48	265-266	=	Descriptor[7]	_	_	
+2-49	267-268	1	Descriptor[7]	_	_	
+2-50	268-269	/	Descriptor[7]	_	_	
+2-51	270-274	1.01	Descriptor[7]	_	_	
+2-52	274-275	)	_	_	_	
+2-53	275-276	.	_	_	_	
+
+#Text=Beforehand, the oil was carefully removed by using CCl4 in an ultra sonic bath.
+3-1	277-287	Beforehand	_	_	_	
+3-2	287-288	,	_	_	_	
+3-3	289-292	the	_	_	_	
+3-4	293-296	oil	Material-others	_	_	
+3-5	297-300	was	_	_	_	
+3-6	301-310	carefully	Descriptor	_	_	
+3-7	311-318	removed	Operation	Descriptor-of|Participant-material|Participant-material|Device-of-operation	3-6|3-4|3-10|3-15	
+3-8	319-321	by	_	_	_	
+3-9	322-327	using	_	_	_	
+3-10	328-332	CCl4	Material-others	_	_	
+3-11	333-335	in	_	_	_	
+3-12	336-338	an	Value	_	_	
+3-13	339-344	ultra	Descriptor[8]	_	_	
+3-14	345-350	sonic	Descriptor[8]	_	_	
+3-15	351-355	bath	Device	Descriptor-of|Value-of	3-13[8_0]|3-12	
+3-16	355-356	.	_	_	_	
+
+#Text=A mixture of the sources was put into an evacuated quartz tube and then slowly heated up in a furnace.
+4-1	357-358	A	_	_	_	
+4-2	359-366	mixture	Material-intermedium	Coreference	4-5	
+4-3	367-369	of	_	_	_	
+4-4	370-373	the	_	_	_	
+4-5	374-381	sources	Material-recipe	_	_	
+4-6	382-385	was	_	_	_	
+4-7	386-389	put	Operation	Participant-material|Device-of-operation|Next-operation	4-2|4-12|4-16	
+4-8	390-394	into	_	_	_	
+4-9	395-397	an	Value	_	_	
+4-10	398-407	evacuated	Descriptor	_	_	
+4-11	408-414	quartz	Descriptor	_	_	
+4-12	415-419	tube	Device	Descriptor-of|Value-of|Descriptor-of	4-11|4-9|4-10	
+4-13	420-423	and	_	_	_	
+4-14	424-428	then	_	_	_	
+4-15	429-435	slowly	Descriptor	_	_	
+4-16	436-442	heated	Operation	Descriptor-of|Device-of-operation|Device-of-operation	4-15|4-20|4-12	
+4-17	443-445	up	_	_	_	
+4-18	446-448	in	_	_	_	
+4-19	449-450	a	Value	_	_	
+4-20	451-458	furnace	Device	Value-of	4-19	
+4-21	458-459	.	_	_	_	
+
+#Text=The heating was held at 500 °C for 10 hrs, followed by cooling down.
+5-1	460-463	The	_	_	_	
+5-2	464-471	heating	Operation	_	_	
+5-3	472-475	was	_	_	_	
+5-4	476-480	held	Operation	Condition-of|Condition-of|Coreference|Next-operation	5-6[9_0]|5-10[10_0]|5-2|5-15[11_0]	
+5-5	481-483	at	_	_	_	
+5-6	484-487	500	Property-temperature[9]	_	_	
+5-7	488-489	°	Property-temperature[9]	_	_	
+5-8	489-490	C	Property-temperature[9]	_	_	
+5-9	491-494	for	_	_	_	
+5-10	495-497	10	Property-time[10]	_	_	
+5-11	498-501	hrs	Property-time[10]	_	_	
+5-12	501-502	,	_	_	_	
+5-13	503-511	followed	_	_	_	
+5-14	512-514	by	_	_	_	
+5-15	515-522	cooling	Operation[11]	_	_	
+5-16	523-527	down	Operation[11]	_	_	
+5-17	527-528	.	Operation[11]	_	_	
+
+#Text=The product was carefully ground with an agate mortar and a pistol by hand, and then heated again at 850 °C for 8 hrs in the same manner.
+6-1	529-532	The	_	_	_	
+6-2	533-540	product	Material-intermedium	_	_	
+6-3	541-544	was	_	_	_	
+6-4	545-554	carefully	Descriptor	_	_	
+6-5	555-561	ground	Operation	Descriptor-of|Participant-material|Descriptor-of|Next-operation|Device-of-operation|Device-of-operation	6-4|6-2|6-13[12_0]|6-18|6-9|6-12	
+6-6	562-566	with	_	_	_	
+6-7	567-569	an	Value	_	_	
+6-8	570-575	agate	Descriptor	_	_	
+6-9	576-582	mortar	Device	Value-of|Descriptor-of	6-7|6-8	
+6-10	583-586	and	_	_	_	
+6-11	587-588	a	Value	_	_	
+6-12	589-595	pistol	Device	Value-of	6-11	
+6-13	596-598	by	Descriptor[12]	_	_	
+6-14	599-603	hand	Descriptor[12]	_	_	
+6-15	603-604	,	_	_	_	
+6-16	605-608	and	_	_	_	
+6-17	609-613	then	_	_	_	
+6-18	614-620	heated	Operation	Condition-of|Condition-of|Descriptor-of	6-21[13_0]|6-25[14_0]|6-29[15_0]	
+6-19	621-626	again	_	_	_	
+6-20	627-629	at	_	_	_	
+6-21	630-633	850	Property-temperature[13]	_	_	
+6-22	634-635	°	Property-temperature[13]	_	_	
+6-23	635-636	C	Property-temperature[13]	_	_	
+6-24	637-640	for	_	_	_	
+6-25	641-642	8	Property-time[14]	_	_	
+6-26	643-646	hrs	Property-time[14]	_	_	
+6-27	647-649	in	_	_	_	
+6-28	650-653	the	_	_	_	
+6-29	654-658	same	Descriptor[15]	_	_	
+6-30	659-665	manner	Descriptor[15]	_	_	
+6-31	665-666	.	_	_	_	

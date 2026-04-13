@@ -1,0 +1,147 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Single crystals of YMnO3 were grown by the floating-zone technique.
+1-1	0-6	Single	_	_	_	
+1-2	7-15	crystals	_	_	_	
+1-3	16-18	of	_	_	_	
+1-4	19-24	YMnO3	_	_	_	
+1-5	25-29	were	_	_	_	
+1-6	30-35	grown	_	_	_	
+1-7	36-38	by	_	_	_	
+1-8	39-42	the	_	_	_	
+1-9	43-56	floating-zone	_	_	_	
+1-10	57-66	technique	_	_	_	
+1-11	66-67	.	_	_	_	
+
+#Text=The feed and seed rods for the crystal growth were prepared by solid-state reaction.
+2-1	68-71	The	_	_	_	
+2-2	72-76	feed	_	_	_	
+2-3	77-80	and	_	_	_	
+2-4	81-85	seed	_	_	_	
+2-5	86-90	rods	_	_	_	
+2-6	91-94	for	_	_	_	
+2-7	95-98	the	_	_	_	
+2-8	99-106	crystal	_	_	_	
+2-9	107-113	growth	_	_	_	
+2-10	114-118	were	_	_	_	
+2-11	119-127	prepared	_	_	_	
+2-12	128-130	by	_	_	_	
+2-13	131-142	solid-state	_	_	_	
+2-14	143-151	reaction	_	_	_	
+2-15	151-152	.	_	_	_	
+
+#Text=Stoichiometric mixtures of Y2O3 and Mn2O3 were ground together and calcined in air at 1100 °C for 24 h.
+3-1	153-167	Stoichiometric	Value	_	_	
+3-2	168-176	mixtures	Material-intermedium	_	_	
+3-3	177-179	of	_	_	_	
+3-4	180-184	Y2O3	Material-recipe	Value-of|Coreference	3-1|3-2	
+3-5	185-188	and	_	_	_	
+3-6	189-194	Mn2O3	Material-recipe	Value-of|Coreference	3-1|3-2	
+3-7	195-199	were	_	_	_	
+3-8	200-206	ground	Operation	Participant-material|Participant-material|Next-operation	3-6|3-4|3-11	
+3-9	207-215	together	_	_	_	
+3-10	216-219	and	_	_	_	
+3-11	220-228	calcined	Operation	Condition-of|Condition-of|Condition-of	3-13|3-15[1_0]|3-19[2_0]	
+3-12	229-231	in	_	_	_	
+3-13	232-235	air	Property-pressure	_	_	
+3-14	236-238	at	_	_	_	
+3-15	239-243	1100	Property-temperature[1]	_	_	
+3-16	244-245	°	Property-temperature[1]	_	_	
+3-17	245-246	C	Property-temperature[1]	_	_	
+3-18	247-250	for	_	_	_	
+3-19	251-253	24	Property-time[2]	_	_	
+3-20	254-255	h	Property-time[2]	_	_	
+3-21	255-256	.	_	_	_	
+
+#Text=It was then reground again into a powder and pressed into a 6-mm-diameter 60-mm rod under 400 atm hydrostatic pressure, which were finally sintered at 1200 °C for 20 h.
+4-1	257-259	It	Material-intermedium	_	_	
+4-2	260-263	was	_	_	_	
+4-3	264-268	then	_	_	_	
+4-4	269-277	reground	Operation	Participant-material|Next-operation	4-1|4-10	
+4-5	278-283	again	_	_	_	
+4-6	284-288	into	_	_	_	
+4-7	289-290	a	Value	_	_	
+4-8	291-297	powder	Material-intermedium	Value-of	4-7	
+4-9	298-301	and	_	_	_	
+4-10	302-309	pressed	Operation	Participant-material|Condition-of|Next-operation	4-8|4-21[5_0]|4-29	
+4-11	310-314	into	_	_	_	
+4-12	315-316	a	Value	_	_	
+4-13	317-318	6	Value[3]	_	_	
+4-14	318-319	-	Value[3]	_	_	
+4-15	319-330	mm-diameter	Value[3]	_	_	
+4-16	331-333	60	Value[4]	_	_	
+4-17	333-334	-	Value[4]	_	_	
+4-18	334-336	mm	Value[4]	_	_	
+4-19	337-340	rod	Material-intermedium	Value-of|Value-of|Value-of	4-12|4-13[3_0]|4-16[4_0]	
+4-20	341-346	under	_	_	_	
+4-21	347-350	400	Property-pressure[5]	Coreference	4-24[0_5]	
+4-22	351-354	atm	Property-pressure[5]	_	_	
+4-23	355-366	hydrostatic	Descriptor	_	_	
+4-24	367-375	pressure	Property-pressure	Descriptor-of	4-23	
+4-25	375-376	,	_	_	_	
+4-26	377-382	which	_	_	_	
+4-27	383-387	were	_	_	_	
+4-28	388-395	finally	_	_	_	
+4-29	396-404	sintered	Operation	Participant-material|Condition-of|Condition-of	4-19|4-31[6_0]|4-35[7_0]	
+4-30	405-407	at	_	_	_	
+4-31	408-412	1200	Property-temperature[6]	_	_	
+4-32	413-414	°	Property-temperature[6]	_	_	
+4-33	414-415	C	Property-temperature[6]	_	_	
+4-34	416-419	for	_	_	_	
+4-35	420-422	20	Property-time[7]	_	_	
+4-36	423-424	h	Property-time[7]	_	_	
+4-37	424-425	.	_	_	_	
+
+#Text=The crystal growth was carried out in air in an IR-heated image furnace with a growth rate of 4 mm h−1.
+5-1	426-429	The	_	_	_	
+5-2	430-437	crystal	_	_	_	
+5-3	438-444	growth	_	_	_	
+5-4	445-448	was	_	_	_	
+5-5	449-456	carried	_	_	_	
+5-6	457-460	out	_	_	_	
+5-7	461-463	in	_	_	_	
+5-8	464-467	air	_	_	_	
+5-9	468-470	in	_	_	_	
+5-10	471-473	an	_	_	_	
+5-11	474-483	IR-heated	_	_	_	
+5-12	484-489	image	_	_	_	
+5-13	490-497	furnace	_	_	_	
+5-14	498-502	with	_	_	_	
+5-15	503-504	a	_	_	_	
+5-16	505-511	growth	_	_	_	
+5-17	512-516	rate	_	_	_	
+5-18	517-519	of	_	_	_	
+5-19	520-521	4	_	_	_	
+5-20	522-524	mm	_	_	_	
+5-21	525-526	h	_	_	_	
+5-22	526-527	−	_	_	_	
+5-23	527-528	1	_	_	_	
+5-24	528-529	.	_	_	_	
+
+#Text=Small pieces of the single crystals were ground into fine powder for XRD, which shows the pure phase of hexagonal YMnO3.
+6-1	530-535	Small	_	_	_	
+6-2	536-542	pieces	_	_	_	
+6-3	543-545	of	_	_	_	
+6-4	546-549	the	_	_	_	
+6-5	550-556	single	_	_	_	
+6-6	557-565	crystals	_	_	_	
+6-7	566-570	were	_	_	_	
+6-8	571-577	ground	_	_	_	
+6-9	578-582	into	_	_	_	
+6-10	583-587	fine	_	_	_	
+6-11	588-594	powder	_	_	_	
+6-12	595-598	for	_	_	_	
+6-13	599-602	XRD	_	_	_	
+6-14	602-603	,	_	_	_	
+6-15	604-609	which	_	_	_	
+6-16	610-615	shows	_	_	_	
+6-17	616-619	the	_	_	_	
+6-18	620-624	pure	_	_	_	
+6-19	625-630	phase	_	_	_	
+6-20	631-633	of	_	_	_	
+6-21	634-643	hexagonal	_	_	_	
+6-22	644-649	YMnO3	_	_	_	
+6-23	649-650	.	_	_	_	

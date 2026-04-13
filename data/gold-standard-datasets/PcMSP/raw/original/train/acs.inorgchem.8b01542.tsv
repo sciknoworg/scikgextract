@@ -1,0 +1,183 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Synthesis.
+1-1	0-9	Synthesis	_	_	_	
+1-2	9-10	.	_	_	_	
+
+#Text=Polycrystalline samples of Sr2Fe3Se2O3 were synthesized from stoichiometric amounts of SrO, FeSe, Fe2O3 (Alfa Aesar
+#Text=99.998%), and Fe (Alfa Aesar 99.998%).
+2-1	11-26	Polycrystalline	Descriptor	_	_	
+2-2	27-34	samples	_	_	_	
+2-3	35-37	of	_	_	_	
+2-4	38-49	Sr2Fe3Se2O3	Material-target	Descriptor-of	2-1	
+2-5	50-54	were	_	_	_	
+2-6	55-66	synthesized	Operation	Participant-material	2-4	
+2-7	67-71	from	_	_	_	
+2-8	72-86	stoichiometric	Value[1]	_	_	
+2-9	87-94	amounts	Value[1]	_	_	
+2-10	95-97	of	_	_	_	
+2-11	98-101	SrO	Material-intermedium	Value-of	2-8[1_0]	
+2-12	101-102	,	_	_	_	
+2-13	103-107	FeSe	Material-intermedium	Value-of	2-8[1_0]	
+2-14	107-108	,	_	_	_	
+2-15	109-114	Fe2O3	Material-recipe	Brand-of|Value-of|Value-of	2-17[2_0]|2-19|2-8[1_0]	
+2-16	115-116	(	_	_	_	
+2-17	116-120	Alfa	Brand[2]	_	_	
+2-18	121-126	Aesar	Brand[2]	_	_	
+2-19	127-134	99.998%	Value	_	_	
+2-20	134-135	)	_	_	_	
+2-21	135-136	,	_	_	_	
+2-22	137-140	and	_	_	_	
+2-23	141-143	Fe	Material-recipe	Brand-of|Value-of|Value-of	2-25[3_0]|2-27|2-8[1_0]	
+2-24	144-145	(	_	_	_	
+2-25	145-149	Alfa	Brand[3]	_	_	
+2-26	150-155	Aesar	Brand[3]	_	_	
+2-27	156-163	99.998%	Value	_	_	
+2-28	163-164	)	_	_	_	
+2-29	164-165	.	_	_	_	
+
+#Text=The SrO was prepared by
+#Text=thermal decomposition of SrCO3 (Alfa Aesar 99.997%) under
+#Text=dynamic vacuum for 16 h at 800 °C followed by 4 h at 1100 °C.
+3-1	166-169	The	_	_	_	
+3-2	170-173	SrO	Material-intermedium	_	_	
+3-3	174-177	was	_	_	_	
+3-4	178-186	prepared	Operation	Participant-material	3-2	
+3-5	187-189	by	_	_	_	
+3-6	190-197	thermal	Operation[4]	Participant-material|Condition-of|Condition-of|Condition-of|Next-operation|Coreference	3-9[0_4]|3-19[6_4]|3-17[0_4]|3-22[7_4]|3-25[0_4]|3-4[0_4]	
+3-7	198-211	decomposition	Operation[4]	_	_	
+3-8	212-214	of	_	_	_	
+3-9	215-220	SrCO3	Material-recipe	Brand-of|Value-of	3-11[5_0]|3-13	
+3-10	221-222	(	_	_	_	
+3-11	222-226	Alfa	Brand[5]	_	_	
+3-12	227-232	Aesar	Brand[5]	_	_	
+3-13	233-240	99.997%	Value	_	_	
+3-14	240-241	)	_	_	_	
+3-15	242-247	under	_	_	_	
+3-16	248-255	dynamic	Descriptor	_	_	
+3-17	256-262	vacuum	Property-pressure	Descriptor-of	3-16	
+3-18	263-266	for	_	_	_	
+3-19	267-269	16	Property-time[6]	_	_	
+3-20	270-271	h	Property-time[6]	_	_	
+3-21	272-274	at	_	_	_	
+3-22	275-278	800	Property-temperature[7]	_	_	
+3-23	279-280	°	Property-temperature[7]	_	_	
+3-24	280-281	C	Property-temperature[7]	_	_	
+3-25	282-290	followed	Operation	Condition-of|Condition-of	3-27[8_0]|3-30[9_0]	
+3-26	291-293	by	_	_	_	
+3-27	294-295	4	Property-time[8]	_	_	
+3-28	296-297	h	Property-time[8]	_	_	
+3-29	298-300	at	_	_	_	
+3-30	301-305	1100	Property-temperature[9]	_	_	
+3-31	306-307	°	Property-temperature[9]	_	_	
+3-32	307-308	C	Property-temperature[9]	_	_	
+3-33	308-309	.	_	_	_	
+
+#Text=FeSe was prepared by stoichiometric reaction of iron (Alfa Aesar
+#Text=99.998%) and selenium (Alfa Aesar 99.999%) powders at 700 °C for
+#Text=48 h.
+4-1	310-314	FeSe	Material-intermedium	_	_	
+4-2	315-318	was	_	_	_	
+4-3	319-327	prepared	Operation	Participant-material|Coreference	4-1|4-6	
+4-4	328-330	by	_	_	_	
+4-5	331-345	stoichiometric	Value	_	_	
+4-6	346-354	reaction	Operation	Participant-material|Participant-material|Condition-of|Condition-of	4-8|4-15|4-23[12_0]|4-27[13_0]	
+4-7	355-357	of	_	_	_	
+4-8	358-362	iron	Material-recipe	Value-of|Brand-of|Value-of|Descriptor-of	4-5|4-10[10_0]|4-12|4-21	
+4-9	363-364	(	_	_	_	
+4-10	364-368	Alfa	Brand[10]	_	_	
+4-11	369-374	Aesar	Brand[10]	_	_	
+4-12	375-382	99.998%	Value	_	_	
+4-13	382-383	)	_	_	_	
+4-14	384-387	and	_	_	_	
+4-15	388-396	selenium	Material-recipe	Value-of|Brand-of|Value-of|Descriptor-of	4-5|4-17[11_0]|4-19|4-21	
+4-16	397-398	(	_	_	_	
+4-17	398-402	Alfa	Brand[11]	_	_	
+4-18	403-408	Aesar	Brand[11]	_	_	
+4-19	409-416	99.999%	Value	_	_	
+4-20	416-417	)	_	_	_	
+4-21	418-425	powders	Descriptor	_	_	
+4-22	426-428	at	_	_	_	
+4-23	429-432	700	Property-temperature[12]	_	_	
+4-24	433-434	°	Property-temperature[12]	_	_	
+4-25	434-435	C	_	_	_	
+4-26	436-439	for	_	_	_	
+4-27	440-442	48	Property-time[13]	_	_	
+4-28	443-444	h	Property-time[13]	_	_	
+4-29	444-445	.	_	_	_	
+
+#Text=The four reactants were ground together inside an argon-filled
+#Text=dry glovebox (Glovebox Technology Ltd., UK) using an agate pestle
+#Text=and mortar.
+5-1	446-449	The	_	_	_	
+5-2	450-454	four	Value	_	_	
+5-3	455-464	reactants	Material-intermedium	Value-of	5-2	
+5-4	465-469	were	_	_	_	
+5-5	470-476	ground	Operation	Device-of-operation|Participant-material|Device-of-operation	5-10[14_0]|5-3|5-23[16_0]	
+5-6	477-485	together	_	_	_	
+5-7	486-492	inside	_	_	_	
+5-8	493-495	an	Value	_	_	
+5-9	496-508	argon-filled	Property-pressure	_	_	
+5-10	509-512	dry	Device[14]	Value-of|Brand-of|Descriptor-of	5-8[0_14]|5-13[15_14]|5-9[0_14]	
+5-11	513-521	glovebox	Device[14]	_	_	
+5-12	522-523	(	_	_	_	
+5-13	523-531	Glovebox	Brand[15]	_	_	
+5-14	532-542	Technology	Brand[15]	_	_	
+5-15	543-546	Ltd	Brand[15]	_	_	
+5-16	546-547	.	_	_	_	
+5-17	547-548	,	_	_	_	
+5-18	549-551	UK	_	_	_	
+5-19	551-552	)	_	_	_	
+5-20	553-558	using	_	_	_	
+5-21	559-561	an	Value	_	_	
+5-22	562-567	agate	Descriptor	_	_	
+5-23	568-574	pestle	Device[16]	Value-of|Descriptor-of	5-21[0_16]|5-22[0_16]	
+5-24	575-578	and	Device[16]	_	_	
+5-25	579-585	mortar	Device[16]	_	_	
+5-26	585-586	.	_	_	_	
+
+#Text=The ground powder was pressed into a pellet, placed
+#Text=inside an alumina crucible, and sealed inside an evacuated silica
+#Text=ampule.
+6-1	587-590	The	_	_	_	
+6-2	591-597	ground	Descriptor	_	_	
+6-3	598-604	powder	Material-intermedium	Descriptor-of	6-2	
+6-4	605-608	was	_	_	_	
+6-5	609-616	pressed	Operation	Next-operation|Participant-material	6-10|6-3	
+6-6	617-621	into	_	_	_	
+6-7	622-623	a	_	_	_	
+6-8	624-630	pellet	Material-intermedium	_	_	
+6-9	630-631	,	_	_	_	
+6-10	632-638	placed	Operation	Device-of-operation|Next-operation|Participant-material	6-14|6-17|6-8	
+6-11	639-645	inside	_	_	_	
+6-12	646-648	an	Value	_	_	
+6-13	649-656	alumina	Descriptor	_	_	
+6-14	657-665	crucible	Device	Value-of|Descriptor-of	6-12|6-13	
+6-15	665-666	,	_	_	_	
+6-16	667-670	and	_	_	_	
+6-17	671-677	sealed	Operation	Device-of-operation	6-22	
+6-18	678-684	inside	_	_	_	
+6-19	685-687	an	Value	_	_	
+6-20	688-697	evacuated	Descriptor	_	_	
+6-21	698-704	silica	Descriptor	_	_	
+6-22	705-711	ampule	Device	Descriptor-of|Descriptor-of|Value-of	6-21|6-20|6-19	
+6-23	711-712	.	_	_	_	
+
+#Text=Various heating protocols were then investigated as described
+#Text=in the results section.
+7-1	713-720	Various	_	_	_	
+7-2	721-728	heating	_	_	_	
+7-3	729-738	protocols	_	_	_	
+7-4	739-743	were	_	_	_	
+7-5	744-748	then	_	_	_	
+7-6	749-761	investigated	_	_	_	
+7-7	762-764	as	_	_	_	
+7-8	765-774	described	_	_	_	
+7-9	775-777	in	_	_	_	
+7-10	778-781	the	_	_	_	
+7-11	782-789	results	_	_	_	
+7-12	790-797	section	_	_	_	
+7-13	797-798	.	_	_	_	

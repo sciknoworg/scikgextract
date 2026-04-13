@@ -1,0 +1,206 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=All polycrystalline samples were synthesized by solid state reaction in evacuated quartz tubes.
+1-1	0-3	All	Descriptor	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-27	samples	Material-target	Descriptor-of|Descriptor-of	1-2|1-1	
+1-4	28-32	were	_	_	_	
+1-5	33-44	synthesized	Operation	Participant-material	1-3	
+1-6	45-47	by	_	_	_	
+1-7	48-53	solid	Operation[1]	Participant-material|Coreference	1-13[0_1]|1-5[0_1]	
+1-8	54-59	state	Operation[1]	_	_	
+1-9	60-68	reaction	Operation[1]	_	_	
+1-10	69-71	in	_	_	_	
+1-11	72-81	evacuated	Descriptor	_	_	
+1-12	82-88	quartz	Descriptor	_	_	
+1-13	89-94	tubes	Device	Descriptor-of|Descriptor-of	1-12|1-11	
+1-14	94-95	.	_	_	_	
+
+#Text=The mixtures of stoichiometric amounts of elements, Mo (purity 99.9%), Nb (purity 99.9%), and
+#Text=Te (purity 99.999%), in powder form were heated at 1050-1100 ◦C for 12 h, followed by cooling
+#Text=down to room temperature in 3 h.
+2-1	96-99	The	_	_	_	
+2-2	100-108	mixtures	Material-recipe	_	_	
+2-3	109-111	of	_	_	_	
+2-4	112-126	stoichiometric	Descriptor[2]	_	_	
+2-5	127-134	amounts	Descriptor[2]	_	_	
+2-6	135-137	of	_	_	_	
+2-7	138-146	elements	Material-recipe	Descriptor-of|Coreference|Coreference|Coreference|Coreference	2-4[2_0]|2-9|2-15|2-22|2-2	
+2-8	146-147	,	_	_	_	
+2-9	148-150	Mo	Material-recipe	Value-of|Descriptor-of	2-12|2-29	
+2-10	151-152	(	_	_	_	
+2-11	152-158	purity	_	_	_	
+2-12	159-164	99.9%	Value	_	_	
+2-13	164-165	)	_	_	_	
+2-14	165-166	,	_	_	_	
+2-15	167-169	Nb	Material-recipe	Value-of|Descriptor-of	2-18|2-29	
+2-16	170-171	(	_	_	_	
+2-17	171-177	purity	_	_	_	
+2-18	178-183	99.9%	Value	_	_	
+2-19	183-184	)	_	_	_	
+2-20	184-185	,	_	_	_	
+2-21	186-189	and	_	_	_	
+2-22	190-192	Te	Material-recipe	Value-of|Descriptor-of	2-25|2-29	
+2-23	193-194	(	_	_	_	
+2-24	194-200	purity	_	_	_	
+2-25	201-208	99.999%	Value	_	_	
+2-26	208-209	)	_	_	_	
+2-27	209-210	,	_	_	_	
+2-28	211-213	in	_	_	_	
+2-29	214-220	powder	Descriptor	_	_	
+2-30	221-225	form	_	_	_	
+2-31	226-230	were	_	_	_	
+2-32	231-237	heated	Operation	Condition-of|Condition-of|Next-operation|Participant-material	2-34[3_0]|2-40[4_0]|2-45|2-7	
+2-33	238-240	at	_	_	_	
+2-34	241-245	1050	Property-temperature[3]	_	_	
+2-35	245-246	-	Property-temperature[3]	_	_	
+2-36	246-250	1100	Property-temperature[3]	_	_	
+2-37	251-252	◦	Property-temperature[3]	_	_	
+2-38	252-253	C	Property-temperature[3]	_	_	
+2-39	254-257	for	_	_	_	
+2-40	258-260	12	Property-time[4]	_	_	
+2-41	261-262	h	Property-time[4]	_	_	
+2-42	262-263	,	_	_	_	
+2-43	264-272	followed	_	_	_	
+2-44	273-275	by	_	_	_	
+2-45	276-283	cooling	Operation	Condition-of|Condition-of	2-48[5_0]|2-51[6_0]	
+2-46	284-288	down	_	_	_	
+2-47	289-291	to	_	_	_	
+2-48	292-296	room	Property-temperature[5]	_	_	
+2-49	297-308	temperature	Property-temperature[5]	_	_	
+2-50	309-311	in	_	_	_	
+2-51	312-313	3	Property-time[6]	_	_	
+2-52	314-315	h	Property-time[6]	_	_	
+2-53	315-316	.	_	_	_	
+
+#Text=The obtained samples were ground, pelletized, and then annealed
+#Text=at selected temperatures between 800 and 1100 ◦C for 12 h.
+3-1	317-320	The	_	_	_	
+3-2	321-329	obtained	_	_	_	
+3-3	330-337	samples	Material-intermedium	_	_	
+3-4	338-342	were	_	_	_	
+3-5	343-349	ground	Operation	Next-operation|Participant-material	3-7|3-3	
+3-6	349-350	,	_	_	_	
+3-7	351-361	pelletized	Operation	Next-operation|Participant-material	3-11|3-3	
+3-8	361-362	,	_	_	_	
+3-9	363-366	and	_	_	_	
+3-10	367-371	then	_	_	_	
+3-11	372-380	annealed	Operation	Condition-of|Condition-of|Participant-material	3-22[8_0]|3-16[7_0]|3-3	
+3-12	381-383	at	_	_	_	
+3-13	384-392	selected	_	_	_	
+3-14	393-405	temperatures	_	_	_	
+3-15	406-413	between	_	_	_	
+3-16	414-417	800	Property-temperature[7]	_	_	
+3-17	418-421	and	Property-temperature[7]	_	_	
+3-18	422-426	1100	Property-temperature[7]	_	_	
+3-19	427-428	◦	Property-temperature[7]	_	_	
+3-20	428-429	C	Property-temperature[7]	_	_	
+3-21	430-433	for	_	_	_	
+3-22	434-436	12	Property-time[8]	_	_	
+3-23	437-438	h	Property-time[8]	_	_	
+3-24	438-439	.	_	_	_	
+
+#Text=The annealed samples were obtained
+#Text=after water quenching, except for 2H-MoTe2 which was cooled to room temperature by furnace
+#Text=cooling.
+4-1	440-443	The	_	_	_	
+4-2	444-452	annealed	Descriptor	_	_	
+4-3	453-460	samples	Material-intermedium	Descriptor-of	4-2	
+4-4	461-465	were	_	_	_	
+4-5	466-474	obtained	_	_	_	
+4-6	475-480	after	_	_	_	
+4-7	481-486	water	Material-others	_	_	
+4-8	487-496	quenching	Operation	Participant-material|Participant-material	4-7|4-3	
+4-9	496-497	,	_	_	_	
+4-10	498-504	except	_	_	_	
+4-11	505-508	for	_	_	_	
+4-12	509-517	2H-MoTe2	Material-target	_	_	
+4-13	518-523	which	_	_	_	
+4-14	524-527	was	_	_	_	
+4-15	528-534	cooled	Operation	Condition-of|Condition-of|Participant-material	4-17[9_0]|4-20[10_0]|4-12	
+4-16	535-537	to	_	_	_	
+4-17	538-542	room	Property-temperature[9]	_	_	
+4-18	543-554	temperature	Property-temperature[9]	_	_	
+4-19	555-557	by	_	_	_	
+4-20	558-565	furnace	Property-rate[10]	_	_	
+4-21	566-573	cooling	Property-rate[10]	_	_	
+4-22	573-574	.	_	_	_	
+
+#Text=Powder XRD patterns were corrected on a Bruker D8 advance diffractometer using Cu K α
+#Text=radiation.
+5-1	575-581	Powder	_	_	_	
+5-2	582-585	XRD	_	_	_	
+5-3	586-594	patterns	_	_	_	
+5-4	595-599	were	_	_	_	
+5-5	600-609	corrected	_	_	_	
+5-6	610-612	on	_	_	_	
+5-7	613-614	a	_	_	_	
+5-8	615-621	Bruker	_	_	_	
+5-9	622-624	D8	_	_	_	
+5-10	625-632	advance	_	_	_	
+5-11	633-647	diffractometer	_	_	_	
+5-12	648-653	using	_	_	_	
+5-13	654-656	Cu	_	_	_	
+5-14	657-658	K	_	_	_	
+5-15	659-660	α	_	_	_	
+5-16	661-670	radiation	_	_	_	
+5-17	670-671	.	_	_	_	
+
+#Text=For transport measurements, the samples were cut into rectangular shape in the typical
+#Text=dimensions of 5 × 1 × 0.3 mm3.
+6-1	672-675	For	_	_	_	
+6-2	676-685	transport	_	_	_	
+6-3	686-698	measurements	_	_	_	
+6-4	698-699	,	_	_	_	
+6-5	700-703	the	_	_	_	
+6-6	704-711	samples	_	_	_	
+6-7	712-716	were	_	_	_	
+6-8	717-720	cut	_	_	_	
+6-9	721-725	into	_	_	_	
+6-10	726-737	rectangular	_	_	_	
+6-11	738-743	shape	_	_	_	
+6-12	744-746	in	_	_	_	
+6-13	747-750	the	_	_	_	
+6-14	751-758	typical	_	_	_	
+6-15	759-769	dimensions	_	_	_	
+6-16	770-772	of	_	_	_	
+6-17	773-774	5	_	_	_	
+6-18	775-776	×	_	_	_	
+6-19	777-778	1	_	_	_	
+6-20	779-780	×	_	_	_	
+6-21	781-784	0.3	_	_	_	
+6-22	785-788	mm3	_	_	_	
+6-23	788-789	.	_	_	_	
+
+#Text=The thermopower and thermal conductivity were measured by a
+#Text=conventional steady-state method with a temperature difference of less than 1 K between the voltage
+#Text=electrodes.
+7-1	790-793	The	_	_	_	
+7-2	794-805	thermopower	_	_	_	
+7-3	806-809	and	_	_	_	
+7-4	810-817	thermal	_	_	_	
+7-5	818-830	conductivity	_	_	_	
+7-6	831-835	were	_	_	_	
+7-7	836-844	measured	_	_	_	
+7-8	845-847	by	_	_	_	
+7-9	848-849	a	_	_	_	
+7-10	850-862	conventional	_	_	_	
+7-11	863-875	steady-state	_	_	_	
+7-12	876-882	method	_	_	_	
+7-13	883-887	with	_	_	_	
+7-14	888-889	a	_	_	_	
+7-15	890-901	temperature	_	_	_	
+7-16	902-912	difference	_	_	_	
+7-17	913-915	of	_	_	_	
+7-18	916-920	less	_	_	_	
+7-19	921-925	than	_	_	_	
+7-20	926-927	1	_	_	_	
+7-21	928-929	K	_	_	_	
+7-22	930-937	between	_	_	_	
+7-23	938-941	the	_	_	_	
+7-24	942-949	voltage	_	_	_	
+7-25	950-960	electrodes	_	_	_	
+7-26	960-961	.	_	_	_	

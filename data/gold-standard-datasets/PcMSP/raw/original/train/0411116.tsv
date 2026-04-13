@@ -1,0 +1,163 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of ZrB12 were obtained by conventional solid-state reaction.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-32	ZrB12	Material-target	Descriptor-of	1-1	
+1-5	33-37	were	_	_	_	
+1-6	38-46	obtained	Operation	Participant-material	1-4	
+1-7	47-49	by	_	_	_	
+1-8	50-62	conventional	Operation[1]	Coreference	1-6[0_1]	
+1-9	63-74	solid-state	Operation[1]	_	_	
+1-10	75-83	reaction	Operation[1]	_	_	
+1-11	83-84	.	_	_	_	
+
+#Text=Starting materials were Zr metal powder (99.99% purity) and submicron amorphous boron powder (99.9% purity).
+2-1	85-93	Starting	Descriptor	_	_	
+2-2	94-103	materials	Material-recipe	Descriptor-of	2-1	
+2-3	104-108	were	_	_	_	
+2-4	109-111	Zr	Material-recipe	Descriptor-of|Descriptor-of|Value-of|Coreference	2-6|2-5|2-8|2-2	
+2-5	112-117	metal	Descriptor	_	_	
+2-6	118-124	powder	Descriptor	_	_	
+2-7	125-126	(	_	_	_	
+2-8	126-132	99.99%	Value	_	_	
+2-9	133-139	purity	_	_	_	
+2-10	139-140	)	_	_	_	
+2-11	141-144	and	_	_	_	
+2-12	145-154	submicron	Descriptor	_	_	
+2-13	155-164	amorphous	Descriptor	_	_	
+2-14	165-170	boron	Material-recipe	Descriptor-of|Descriptor-of|Descriptor-of|Value-of|Coreference	2-12|2-13|2-15|2-17|2-2	
+2-15	171-177	powder	Descriptor	_	_	
+2-16	178-179	(	_	_	_	
+2-17	179-184	99.9%	Value	_	_	
+2-18	185-191	purity	_	_	_	
+2-19	191-192	)	_	_	_	
+2-20	192-193	.	_	_	_	
+
+#Text=These materials were lightly mixed in appropriate amounts and pressed into pellets 10 mm thick and 20 mm in diameter.
+3-1	194-199	These	_	_	_	
+3-2	200-209	materials	Material-recipe	Value-of	3-7[2_0]	
+3-3	210-214	were	_	_	_	
+3-4	215-222	lightly	Descriptor	_	_	
+3-5	223-228	mixed	Operation	Descriptor-of|Participant-material|Next-operation	3-4|3-2|3-10	
+3-6	229-231	in	_	_	_	
+3-7	232-243	appropriate	Value[2]	_	_	
+3-8	244-251	amounts	Value[2]	_	_	
+3-9	252-255	and	_	_	_	
+3-10	256-263	pressed	Operation	_	_	
+3-11	264-268	into	_	_	_	
+3-12	269-276	pellets	Material-intermedium	Value-of|Value-of	3-13[3_0]|3-17[4_0]	
+3-13	277-279	10	Value[3]	Descriptor-of	3-15[0_3]	
+3-14	280-282	mm	Value[3]	_	_	
+3-15	283-288	thick	Descriptor	_	_	
+3-16	289-292	and	_	_	_	
+3-17	293-295	20	Value[4]	Descriptor-of	3-20[0_4]	
+3-18	296-298	mm	Value[4]	_	_	
+3-19	299-301	in	_	_	_	
+3-20	302-310	diameter	Descriptor	_	_	
+3-21	310-311	.	_	_	_	
+
+#Text=The pellets were wrapped in a tungsten foil and baked at 2000oC by e-beam heating with subsequent slow cooling to room temperature.
+4-1	312-315	The	_	_	_	
+4-2	316-323	pellets	Material-intermedium	_	_	
+4-3	324-328	were	_	_	_	
+4-4	329-336	wrapped	Operation	Participant-material|Next-operation|Participant-material	4-2|4-10|4-8	
+4-5	337-339	in	_	_	_	
+4-6	340-341	a	Value	_	_	
+4-7	342-350	tungsten	Material-recipe	Value-of|Descriptor-of	4-6|4-8	
+4-8	351-355	foil	Descriptor	_	_	
+4-9	356-359	and	_	_	_	
+4-10	360-365	baked	Operation	Condition-of|Coreference|Next-operation	4-12|4-14[5_0]|4-19	
+4-11	366-368	at	_	_	_	
+4-12	369-375	2000oC	Property-temperature	_	_	
+4-13	376-378	by	_	_	_	
+4-14	379-385	e-beam	Operation[5]	_	_	
+4-15	386-393	heating	Operation[5]	_	_	
+4-16	394-398	with	_	_	_	
+4-17	399-409	subsequent	Descriptor	_	_	
+4-18	410-414	slow	Property-rate	_	_	
+4-19	415-422	cooling	Operation	Condition-of|Condition-of|Descriptor-of	4-18|4-21[6_0]|4-17	
+4-20	423-425	to	_	_	_	
+4-21	426-430	room	Property-temperature[6]	_	_	
+4-22	431-442	temperature	Property-temperature[6]	_	_	
+4-23	442-443	.	_	_	_	
+
+#Text=The process took place for two hours in a high vacuum chamber at 2 × 10−4P a.
+5-1	444-447	The	_	_	_	
+5-2	448-455	process	Operation	Condition-of|Device-of-operation|Condition-of|Coreference	5-6[8_0]|5-10[9_0]|5-14[10_0]|5-3[7_0]	
+5-3	456-460	took	Operation[7]	_	_	
+5-4	461-466	place	Operation[7]	_	_	
+5-5	467-470	for	_	_	_	
+5-6	471-474	two	Property-time[8]	_	_	
+5-7	475-480	hours	Property-time[8]	_	_	
+5-8	481-483	in	_	_	_	
+5-9	484-485	a	Value	_	_	
+5-10	486-490	high	Device[9]	Value-of	5-9[0_9]	
+5-11	491-497	vacuum	Device[9]	_	_	
+5-12	498-505	chamber	Device[9]	_	_	
+5-13	506-508	at	_	_	_	
+5-14	509-510	2	Property-pressure[10]	_	_	
+5-15	511-512	×	Property-pressure[10]	_	_	
+5-16	513-515	10	Property-pressure[10]	_	_	
+5-17	515-516	−	Property-pressure[10]	_	_	
+5-18	516-518	4P	Property-pressure[10]	_	_	
+5-19	519-520	a	Property-pressure[10]	_	_	
+5-20	520-521	.	_	_	_	
+
+#Text=The resulting polycrystalline pellets had over 90% of the theoretical mass density and were black in color.
+6-1	522-525	The	_	_	_	
+6-2	526-535	resulting	_	_	_	
+6-3	536-551	polycrystalline	_	_	_	
+6-4	552-559	pellets	_	_	_	
+6-5	560-563	had	_	_	_	
+6-6	564-568	over	_	_	_	
+6-7	569-572	90%	_	_	_	
+6-8	573-575	of	_	_	_	
+6-9	576-579	the	_	_	_	
+6-10	580-591	theoretical	_	_	_	
+6-11	592-596	mass	_	_	_	
+6-12	597-604	density	_	_	_	
+6-13	605-608	and	_	_	_	
+6-14	609-613	were	_	_	_	
+6-15	614-619	black	_	_	_	
+6-16	620-622	in	_	_	_	
+6-17	623-628	color	_	_	_	
+6-18	628-629	.	_	_	_	
+
+#Text=They demonstrated good metallic conductivity at low temperatures.
+7-1	630-634	They	_	_	_	
+7-2	635-647	demonstrated	_	_	_	
+7-3	648-652	good	_	_	_	
+7-4	653-661	metallic	_	_	_	
+7-5	662-674	conductivity	_	_	_	
+7-6	675-677	at	_	_	_	
+7-7	678-681	low	_	_	_	
+7-8	682-694	temperatures	_	_	_	
+7-9	694-695	.	_	_	_	
+
+#Text=After regrinding the prepared pellets in an agate mortar, the respective powders were reheated few times for 2 hours.
+8-1	696-701	After	_	_	_	
+8-2	702-712	regrinding	_	_	_	
+8-3	713-716	the	_	_	_	
+8-4	717-725	prepared	_	_	_	
+8-5	726-733	pellets	_	_	_	
+8-6	734-736	in	_	_	_	
+8-7	737-739	an	_	_	_	
+8-8	740-745	agate	_	_	_	
+8-9	746-752	mortar	_	_	_	
+8-10	752-753	,	_	_	_	
+8-11	754-757	the	_	_	_	
+8-12	758-768	respective	_	_	_	
+8-13	769-776	powders	_	_	_	
+8-14	777-781	were	_	_	_	
+8-15	782-790	reheated	_	_	_	
+8-16	791-794	few	_	_	_	
+8-17	795-800	times	_	_	_	
+8-18	801-804	for	_	_	_	
+8-19	805-806	2	_	_	_	
+8-20	807-812	hours	_	_	_	
+8-21	812-813	.	_	_	_	

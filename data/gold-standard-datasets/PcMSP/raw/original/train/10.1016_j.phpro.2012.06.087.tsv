@@ -1,0 +1,107 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of (Y1-xPrx)Ba2Cu3O7, with x=0.0, 0.10, 0.30, 0.50 were prepared by standard\rsolid state reaction technique using stoichiometric amounts of high purity powders precursors, such as:\rY2O3, Pr6O11, BaCO3 and CuO from Alfa Aesear.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-28	(	Material-target[1]	Descriptor-of|Descriptor-of	1-1[0_1]|1-12[2_1]	
+1-5	28-30	Y1	Material-target[1]	_	_	
+1-6	30-31	-	Material-target[1]	_	_	
+1-7	31-35	xPrx	Material-target[1]	_	_	
+1-8	35-36	)	Material-target[1]	_	_	
+1-9	36-44	Ba2Cu3O7	Material-target[1]	_	_	
+1-10	44-45	,	_	_	_	
+1-11	46-50	with	_	_	_	
+1-12	51-52	x	Descriptor[2]	_	_	
+1-13	52-53	=	Descriptor[2]	_	_	
+1-14	53-56	0.0	Descriptor[2]	_	_	
+1-15	56-57	,	Descriptor[2]	_	_	
+1-16	58-62	0.10	Descriptor[2]	_	_	
+1-17	62-63	,	Descriptor[2]	_	_	
+1-18	64-68	0.30	Descriptor[2]	_	_	
+1-19	68-69	,	Descriptor[2]	_	_	
+1-20	70-74	0.50	Descriptor[2]	_	_	
+1-21	75-79	were	_	_	_	
+1-22	80-88	prepared	_	_	_	
+1-23	89-91	by	_	_	_	
+1-24	92-100	standard	Descriptor	_	_	
+1-25	101-106	solid	Operation[3]	Participant-material|Descriptor-of|Participant-material|Participant-material|Participant-material	1-41[0_3]|1-24[0_3]|1-43[0_3]|1-45[0_3]|1-47[0_3]	
+1-26	107-112	state	Operation[3]	_	_	
+1-27	113-121	reaction	Operation[3]	_	_	
+1-28	122-131	technique	_	_	_	
+1-29	132-137	using	_	_	_	
+1-30	138-152	stoichiometric	Value[4]	_	_	
+1-31	153-160	amounts	Value[4]	_	_	
+1-32	161-163	of	_	_	_	
+1-33	164-168	high	Descriptor[5]	_	_	
+1-34	169-175	purity	Descriptor[5]	_	_	
+1-35	176-183	powders	Descriptor	_	_	
+1-36	184-194	precursors	Material-recipe	Descriptor-of|Descriptor-of|Value-of	1-35|1-33[5_0]|1-30[4_0]	
+1-37	194-195	,	_	_	_	
+1-38	196-200	such	_	_	_	
+1-39	201-203	as	_	_	_	
+1-40	203-204	:	_	_	_	
+1-41	205-209	Y2O3	Material-recipe	Value-of|Brand-of|Descriptor-of|Descriptor-of|Coreference	1-30[4_0]|1-49[6_0]|1-35|1-33[5_0]|1-36	
+1-42	209-210	,	_	_	_	
+1-43	211-217	Pr6O11	Material-recipe	Value-of|Brand-of|Descriptor-of|Descriptor-of|Coreference	1-30[4_0]|1-49[6_0]|1-35|1-33[5_0]|1-36	
+1-44	217-218	,	_	_	_	
+1-45	219-224	BaCO3	Material-recipe	Value-of|Brand-of|Descriptor-of|Descriptor-of|Coreference	1-30[4_0]|1-49[6_0]|1-35|1-33[5_0]|1-36	
+1-46	225-228	and	_	_	_	
+1-47	229-232	CuO	Material-recipe	Value-of|Brand-of|Descriptor-of|Descriptor-of|Coreference	1-30[4_0]|1-49[6_0]|1-35|1-33[5_0]|1-36	
+1-48	233-237	from	_	_	_	
+1-49	238-242	Alfa	Brand[6]	_	_	
+1-50	243-249	Aesear	Brand[6]	_	_	
+1-51	249-250	.	_	_	_	
+
+#Text=The resultant powders were reground and pelletized\rinto disc-shape.
+2-1	251-254	The	_	_	_	
+2-2	255-264	resultant	Descriptor	_	_	
+2-3	265-272	powders	Material-intermedium	Descriptor-of	2-2	
+2-4	273-277	were	_	_	_	
+2-5	278-286	reground	Operation	Participant-material|Next-operation	2-3|2-7	
+2-6	287-290	and	_	_	_	
+2-7	291-301	pelletized	Operation	_	_	
+2-8	302-306	into	_	_	_	
+2-9	307-317	disc-shape	Material-intermedium	_	_	
+2-10	317-318	.	_	_	_	
+
+#Text=We applied thermal treatments for three times consisting of the following steps:\rcalcinated to 1203K for 24h, synthesized to 1208K for 24h, and then annealed to 773K for 20h in\roxidizing atmosphere.
+3-1	319-321	We	_	_	_	
+3-2	322-329	applied	_	_	_	
+3-3	330-337	thermal	Operation[7]	Condition-of	3-6[8_7]	
+3-4	338-348	treatments	Operation[7]	_	_	
+3-5	349-352	for	_	_	_	
+3-6	353-358	three	Property-time[8]	_	_	
+3-7	359-364	times	Property-time[8]	_	_	
+3-8	365-375	consisting	_	_	_	
+3-9	376-378	of	_	_	_	
+3-10	379-382	the	_	_	_	
+3-11	383-392	following	_	_	_	
+3-12	393-398	steps	_	_	_	
+3-13	398-399	:	_	_	_	
+3-14	400-410	calcinated	Operation	Condition-of|Condition-of|Next-operation	3-16|3-18|3-20	
+3-15	411-413	to	_	_	_	
+3-16	414-419	1203K	Property-temperature	_	_	
+3-17	420-423	for	_	_	_	
+3-18	424-427	24h	Property-time	_	_	
+3-19	427-428	,	_	_	_	
+3-20	429-440	synthesized	Operation	Condition-of|Condition-of|Next-operation	3-22|3-24|3-28	
+3-21	441-443	to	_	_	_	
+3-22	444-449	1208K	Property-temperature	_	_	
+3-23	450-453	for	_	_	_	
+3-24	454-457	24h	Property-time	_	_	
+3-25	457-458	,	_	_	_	
+3-26	459-462	and	_	_	_	
+3-27	463-467	then	_	_	_	
+3-28	468-476	annealed	Operation	Condition-of|Condition-of|Condition-of	3-30|3-32|3-34[9_0]	
+3-29	477-479	to	_	_	_	
+3-30	480-484	773K	Property-temperature	_	_	
+3-31	485-488	for	_	_	_	
+3-32	489-492	20h	Property-time	_	_	
+3-33	493-495	in	_	_	_	
+3-34	496-505	oxidizing	Property-pressure[9]	_	_	
+3-35	506-516	atmosphere	Property-pressure[9]	_	_	
+3-36	516-517	.	_	_	_	

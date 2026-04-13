@@ -1,0 +1,94 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline SmFeAsO0.85 and NdFeAsO0.94F0.06 bulk samples were synthesized by solid state reaction under a high pressure [8,10].
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-31	SmFeAsO0.85	Material-target	Descriptor-of	1-2	
+1-4	32-35	and	_	_	_	
+1-5	36-52	NdFeAsO0.94F0.06	Material-target	Descriptor-of	1-2	
+1-6	53-57	bulk	_	_	_	
+1-7	58-65	samples	_	_	_	
+1-8	66-70	were	_	_	_	
+1-9	71-82	synthesized	Operation	Participant-material|Participant-material|Coreference|Condition-of	1-5|1-3|1-11[1_0]|1-16[2_0]	
+1-10	83-85	by	_	_	_	
+1-11	86-91	solid	Operation[1]	_	_	
+1-12	92-97	state	Operation[1]	_	_	
+1-13	98-106	reaction	Operation[1]	_	_	
+1-14	107-112	under	_	_	_	
+1-15	113-114	a	_	_	_	
+1-16	115-119	high	Property-pressure[2]	_	_	
+1-17	120-128	pressure	Property-pressure[2]	_	_	
+1-18	129-130	[	_	_	_	
+1-19	130-134	8,10	_	_	_	
+1-20	134-135	]	_	_	_	
+1-21	135-136	.	_	_	_	
+
+#Text=SmAs (or NdAs, presintered) powder and Fe, Fe2O3, FeF2 powders were mixed together according to the nominal stoichiometric ratio then ground thoroughly and pressed into small pellets.
+2-1	137-141	SmAs	Material-recipe	Descriptor-of|Value-of	2-8|2-22[3_0]	
+2-2	142-143	(	_	_	_	
+2-3	143-145	or	_	_	_	
+2-4	146-150	NdAs	Material-recipe	Descriptor-of|Descriptor-of|Value-of	2-6|2-8|2-22[3_0]	
+2-5	150-151	,	_	_	_	
+2-6	152-163	presintered	Descriptor	_	_	
+2-7	163-164	)	_	_	_	
+2-8	165-171	powder	Descriptor	_	_	
+2-9	172-175	and	_	_	_	
+2-10	176-178	Fe	Material-recipe	Descriptor-of|Value-of	2-15|2-22[3_0]	
+2-11	178-179	,	_	_	_	
+2-12	180-185	Fe2O3	Material-recipe	Descriptor-of|Value-of	2-15|2-22[3_0]	
+2-13	185-186	,	_	_	_	
+2-14	187-191	FeF2	Material-recipe	Descriptor-of|Value-of	2-15|2-22[3_0]	
+2-15	192-199	powders	Descriptor	_	_	
+2-16	200-204	were	_	_	_	
+2-17	205-210	mixed	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Participant-material|Next-operation	2-1|2-4|2-10|2-12|2-14|2-26	
+2-18	211-219	together	_	_	_	
+2-19	220-229	according	_	_	_	
+2-20	230-232	to	_	_	_	
+2-21	233-236	the	_	_	_	
+2-22	237-244	nominal	Value[3]	_	_	
+2-23	245-259	stoichiometric	Value[3]	_	_	
+2-24	260-265	ratio	Value[3]	_	_	
+2-25	266-270	then	_	_	_	
+2-26	271-277	ground	Operation	Descriptor-of|Next-operation	2-27|2-29	
+2-27	278-288	thoroughly	Descriptor	_	_	
+2-28	289-292	and	_	_	_	
+2-29	293-300	pressed	Operation	_	_	
+2-30	301-305	into	_	_	_	
+2-31	306-311	small	Descriptor	_	_	
+2-32	312-319	pellets	Material-recipe	Descriptor-of	2-31	
+2-33	319-320	.	_	_	_	
+
+#Text=The pellets were sealed in boron nitride crucibles and sintered in a high pressure synthesis apparatus under the pressure of 6 GPa at 1250°C for 2 hours.
+3-1	321-324	The	_	_	_	
+3-2	325-332	pellets	Material-intermedium	_	_	
+3-3	333-337	were	_	_	_	
+3-4	338-344	sealed	Operation	Participant-material|Device-of-operation|Next-operation	3-2|3-8|3-10	
+3-5	345-347	in	_	_	_	
+3-6	348-353	boron	Descriptor[4]	_	_	
+3-7	354-361	nitride	Descriptor[4]	_	_	
+3-8	362-371	crucibles	Device	Descriptor-of	3-6[4_0]	
+3-9	372-375	and	_	_	_	
+3-10	376-384	sintered	Operation	Device-of-operation|Condition-of|Condition-of|Condition-of|Device-of-operation	3-15[6_0]|3-21[7_0]|3-24[8_0]|3-28[9_0]|3-8	
+3-11	385-387	in	_	_	_	
+3-12	388-389	a	_	_	_	
+3-13	390-394	high	Descriptor[5]	_	_	
+3-14	395-403	pressure	Descriptor[5]	_	_	
+3-15	404-413	synthesis	Device[6]	Descriptor-of	3-13[5_6]	
+3-16	414-423	apparatus	Device[6]	_	_	
+3-17	424-429	under	_	_	_	
+3-18	430-433	the	_	_	_	
+3-19	434-442	pressure	Property-pressure	_	_	
+3-20	443-445	of	_	_	_	
+3-21	446-447	6	Property-pressure[7]	Coreference	3-19[0_7]	
+3-22	448-451	GPa	Property-pressure[7]	_	_	
+3-23	452-454	at	_	_	_	
+3-24	455-459	1250	Property-temperature[8]	_	_	
+3-25	459-460	°	Property-temperature[8]	_	_	
+3-26	460-461	C	Property-temperature[8]	_	_	
+3-27	462-465	for	_	_	_	
+3-28	466-467	2	Property-time[9]	_	_	
+3-29	468-473	hours	Property-time[9]	_	_	
+3-30	473-474	.	_	_	_	

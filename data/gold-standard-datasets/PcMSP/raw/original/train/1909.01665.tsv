@@ -1,0 +1,192 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline powders of In1-xPbxTe were prepared by melting a mixture of In (99.99%), Pb (99.9%), and Te (99.999%) grains with a nominal composition of In1-xPbxTe.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	powders	Descriptor	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-30	In1	Material-target[1]	Descriptor-of|Descriptor-of	1-1[0_1]|1-2[0_1]	
+1-5	30-31	-	Material-target[1]	_	_	
+1-6	31-37	xPbxTe	Material-target[1]	_	_	
+1-7	38-42	were	_	_	_	
+1-8	43-51	prepared	Operation	Coreference|Participant-material	1-10|1-4[1_0]	
+1-9	52-54	by	_	_	_	
+1-10	55-62	melting	Operation	Participant-material|Participant-material|Participant-material	1-14|1-19|1-25	
+1-11	63-64	a	_	_	_	
+1-12	65-72	mixture	Material-intermedium	Coreference|Coreference|Coreference	1-14|1-19|1-25	
+1-13	73-75	of	_	_	_	
+1-14	76-78	In	Material-recipe	Value-of|Descriptor-of|Value-of	1-16|1-29|1-32[2_0]	
+1-15	79-80	(	_	_	_	
+1-16	80-86	99.99%	Value	_	_	
+1-17	86-87	)	_	_	_	
+1-18	87-88	,	_	_	_	
+1-19	89-91	Pb	Material-recipe	Value-of|Descriptor-of|Value-of	1-21|1-29|1-32[2_0]	
+1-20	92-93	(	_	_	_	
+1-21	93-98	99.9%	Value	_	_	
+1-22	98-99	)	_	_	_	
+1-23	99-100	,	_	_	_	
+1-24	101-104	and	_	_	_	
+1-25	105-107	Te	Material-recipe	Value-of|Descriptor-of|Value-of	1-27|1-29|1-32[2_0]	
+1-26	108-109	(	_	_	_	
+1-27	109-116	99.999%	Value	_	_	
+1-28	116-117	)	_	_	_	
+1-29	118-124	grains	Descriptor	_	_	
+1-30	125-129	with	_	_	_	
+1-31	130-131	a	_	_	_	
+1-32	132-139	nominal	Value[2]	_	_	
+1-33	140-151	composition	Value[2]	_	_	
+1-34	152-154	of	Value[2]	_	_	
+1-35	155-158	In1	Value[2]	_	_	
+1-36	158-159	-	Value[2]	_	_	
+1-37	159-165	xPbxTe	Value[2]	_	_	
+1-38	165-166	.	_	_	_	
+
+#Text=The mixture was sealed in an evacuated quartz tube and heated at 800 ºC for 10 h.
+2-1	167-170	The	_	_	_	
+2-2	171-178	mixture	Material-intermedium	_	_	
+2-3	179-182	was	_	_	_	
+2-4	183-189	sealed	Operation	Participant-material|Next-operation|Device-of-operation	2-2|2-11|2-9	
+2-5	190-192	in	_	_	_	
+2-6	193-195	an	Value	_	_	
+2-7	196-205	evacuated	Descriptor	_	_	
+2-8	206-212	quartz	Descriptor	_	_	
+2-9	213-217	tube	Device	Descriptor-of|Descriptor-of	2-7|2-8	
+2-10	218-221	and	_	_	_	
+2-11	222-228	heated	Operation	Condition-of|Condition-of	2-13[3_0]|2-16[4_0]	
+2-12	229-231	at	_	_	_	
+2-13	232-235	800	Property-temperature[3]	_	_	
+2-14	236-238	ºC	Property-temperature[3]	_	_	
+2-15	239-242	for	_	_	_	
+2-16	243-245	10	Property-time[4]	_	_	
+2-17	246-247	h	Property-time[4]	_	_	
+2-18	247-248	.	_	_	_	
+
+#Text=The obtained sample was ground and pelletized into a pellet with a diameter of 5 mm.
+3-1	249-252	The	_	_	_	
+3-2	253-261	obtained	Descriptor	_	_	
+3-3	262-268	sample	Material-intermedium	Descriptor-of	3-2	
+3-4	269-272	was	_	_	_	
+3-5	273-279	ground	Operation	Next-operation|Participant-material	3-7|3-3	
+3-6	280-283	and	_	_	_	
+3-7	284-294	pelletized	Operation	_	_	
+3-8	295-299	into	_	_	_	
+3-9	300-301	a	Value	_	_	
+3-10	302-308	pellet	Material-intermedium	Value-of|Value-of	3-9|3-15[5_0]	
+3-11	309-313	with	_	_	_	
+3-12	314-315	a	_	_	_	
+3-13	316-324	diameter	Descriptor	_	_	
+3-14	325-327	of	_	_	_	
+3-15	328-329	5	Value[5]	Descriptor-of	3-13[0_5]	
+3-16	330-332	mm	Value[5]	_	_	
+3-17	332-333	.	_	_	_	
+
+#Text=The pellet was placed in a high-pressure cell, which is composed of a BN sample capsule, a carbon heater capsule, electrodes, and a pyrophyllite cubic cell.
+4-1	334-337	The	_	_	_	
+4-2	338-344	pellet	Material-intermedium	_	_	
+4-3	345-348	was	_	_	_	
+4-4	349-355	placed	Operation	Participant-material|Device-of-operation	4-2|4-8	
+4-5	356-358	in	_	_	_	
+4-6	359-360	a	Value	_	_	
+4-7	361-374	high-pressure	Descriptor	_	_	
+4-8	375-379	cell	Device	Value-of|Descriptor-of|Coreference|Coreference|Coreference|Coreference	4-6|4-7|4-17|4-22|4-24|4-30	
+4-9	379-380	,	_	_	_	
+4-10	381-386	which	_	_	_	
+4-11	387-389	is	_	_	_	
+4-12	390-398	composed	_	_	_	
+4-13	399-401	of	_	_	_	
+4-14	402-403	a	Value	_	_	
+4-15	404-406	BN	Material-intermedium[6]	_	_	
+4-16	407-413	sample	Material-intermedium[6]	_	_	
+4-17	414-421	capsule	Device	Value-of|Coreference	4-14|4-15[6_0]	
+4-18	421-422	,	_	_	_	
+4-19	423-424	a	Value	_	_	
+4-20	425-431	carbon	Descriptor[7]	_	_	
+4-21	432-438	heater	Descriptor[7]	_	_	
+4-22	439-446	capsule	Device	Value-of|Descriptor-of	4-19|4-20[7_0]	
+4-23	446-447	,	_	_	_	
+4-24	448-458	electrodes	Device	_	_	
+4-25	458-459	,	_	_	_	
+4-26	460-463	and	_	_	_	
+4-27	464-465	a	Value	_	_	
+4-28	466-478	pyrophyllite	Descriptor[8]	_	_	
+4-29	479-484	cubic	Descriptor[8]	_	_	
+4-30	485-489	cell	Device	Value-of|Descriptor-of	4-27|4-28[8_0]	
+4-31	489-490	.	_	_	_	
+
+#Text=The high-pressure synthesis was performed using 180 ton cubic-anvil-type system (CT factory).
+5-1	491-494	The	_	_	_	
+5-2	495-508	high-pressure	Operation[9]	_	_	
+5-3	509-518	synthesis	Operation[9]	_	_	
+5-4	519-522	was	_	_	_	
+5-5	523-532	performed	Operation	Device-of-operation|Coreference	5-9[11_0]|5-2[9_0]	
+5-6	533-538	using	_	_	_	
+5-7	539-542	180	Descriptor[10]	_	_	
+5-8	543-546	ton	Descriptor[10]	_	_	
+5-9	547-563	cubic-anvil-type	Device[11]	Descriptor-of|Brand-of	5-7[10_11]|5-12[12_11]	
+5-10	564-570	system	Device[11]	_	_	
+5-11	571-572	(	_	_	_	
+5-12	572-574	CT	Brand[12]	_	_	
+5-13	575-582	factory	Brand[12]	_	_	
+5-14	582-583	)	_	_	_	
+5-15	583-584	.	_	_	_	
+
+#Text=The pressure used for the high-pressure synthesis was 3 GPa, and the heating temperature was 700 ºC for x = 0 and 500 ºC for x = 0.2–0.8.
+6-1	585-588	The	_	_	_	
+6-2	589-597	pressure	Property-pressure	Coreference	6-9[14_0]	
+6-3	598-602	used	_	_	_	
+6-4	603-606	for	_	_	_	
+6-5	607-610	the	_	_	_	
+6-6	611-624	high-pressure	Operation[13]	Condition-of|Condition-of|Condition-of|Condition-of	6-2[0_13]|6-9[14_13]|6-17[16_13]|6-24[18_13]	
+6-7	625-634	synthesis	Operation[13]	_	_	
+6-8	635-638	was	_	_	_	
+6-9	639-640	3	Property-pressure[14]	_	_	
+6-10	641-644	GPa	Property-pressure[14]	_	_	
+6-11	644-645	,	_	_	_	
+6-12	646-649	and	_	_	_	
+6-13	650-653	the	_	_	_	
+6-14	654-661	heating	Property-temperature[15]	Coreference	6-17[16_15]	
+6-15	662-673	temperature	Property-temperature[15]	_	_	
+6-16	674-677	was	_	_	_	
+6-17	678-681	700	Property-temperature[16]	Descriptor-of	6-20[17_16]	
+6-18	682-684	ºC	Property-temperature[16]	_	_	
+6-19	685-688	for	_	_	_	
+6-20	689-690	x	Descriptor[17]	_	_	
+6-21	691-692	=	Descriptor[17]	_	_	
+6-22	693-694	0	Descriptor[17]	_	_	
+6-23	695-698	and	_	_	_	
+6-24	699-702	500	Property-temperature[18]	Descriptor-of	6-27[19_18]	
+6-25	703-705	ºC	Property-temperature[18]	_	_	
+6-26	706-709	for	_	_	_	
+6-27	710-711	x	Descriptor[19]	_	_	
+6-28	712-713	=	Descriptor[19]	_	_	
+6-29	714-717	0.2	Descriptor[19]	_	_	
+6-30	717-718	–	Descriptor[19]	_	_	
+6-31	718-721	0.8	Descriptor[19]	_	_	
+6-32	721-722	.	_	_	_	
+
+#Text=The PbTe (x = 1.0) sample was prepared by melting in an evacuated quartz tube without carrying out high-pressure synthesis.
+7-1	723-726	The	_	_	_	
+7-2	727-731	PbTe	Material-target	Descriptor-of	7-4[20_0]	
+7-3	732-733	(	_	_	_	
+7-4	733-734	x	Descriptor[20]	_	_	
+7-5	735-736	=	Descriptor[20]	_	_	
+7-6	737-740	1.0	Descriptor[20]	_	_	
+7-7	740-741	)	_	_	_	
+7-8	742-748	sample	_	_	_	
+7-9	749-752	was	_	_	_	
+7-10	753-761	prepared	Operation	Coreference|Participant-material	7-12|7-2	
+7-11	762-764	by	_	_	_	
+7-12	765-772	melting	Operation	Device-of-operation	7-17	
+7-13	773-775	in	_	_	_	
+7-14	776-778	an	Value	_	_	
+7-15	779-788	evacuated	Descriptor	_	_	
+7-16	789-795	quartz	Descriptor	_	_	
+7-17	796-800	tube	Device	Value-of|Descriptor-of|Descriptor-of	7-14|7-15|7-16	
+7-18	801-808	without	Descriptor[21]	_	_	
+7-19	809-817	carrying	Descriptor[21]	_	_	
+7-20	818-821	out	Descriptor[21]	_	_	
+7-21	822-835	high-pressure	Operation[22]	Descriptor-of	7-18[21_22]	
+7-22	836-845	synthesis	Operation[22]	_	_	
+7-23	845-846	.	_	_	_	

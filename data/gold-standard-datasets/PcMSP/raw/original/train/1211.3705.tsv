@@ -1,0 +1,199 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline EuNiGe3 was prepared from the high purity elements.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	EuNiGe3	Material-target	Descriptor-of	1-1	
+1-3	24-27	was	_	_	_	
+1-4	28-36	prepared	Operation	Participant-material|Participant-material	1-9|1-2	
+1-5	37-41	from	_	_	_	
+1-6	42-45	the	_	_	_	
+1-7	46-50	high	Descriptor[1]	_	_	
+1-8	51-57	purity	Descriptor[1]	_	_	
+1-9	58-66	elements	Material-recipe	Descriptor-of	1-7[1_0]	
+1-10	66-67	.	_	_	_	
+
+#Text=Eu was obtained from Ames Laboratory and Ni (99.996%) and Ge (99.9999+%) from Alfa Aesar.
+2-1	68-70	Eu	Material-recipe	Brand-of	2-5[2_0]	
+2-2	71-74	was	_	_	_	
+2-3	75-83	obtained	_	_	_	
+2-4	84-88	from	_	_	_	
+2-5	89-93	Ames	Brand[2]	_	_	
+2-6	94-104	Laboratory	Brand[2]	_	_	
+2-7	105-108	and	_	_	_	
+2-8	109-111	Ni	Material-recipe	Value-of|Brand-of	2-10|2-20[4_0]	
+2-9	112-113	(	_	_	_	
+2-10	113-120	99.996%	Value	_	_	
+2-11	120-121	)	_	_	_	
+2-12	122-125	and	_	_	_	
+2-13	126-128	Ge	Material-recipe	Value-of|Brand-of	2-15[3_0]|2-20[4_0]	
+2-14	129-130	(	_	_	_	
+2-15	130-137	99.9999	Value[3]	_	_	
+2-16	137-138	+	Value[3]	_	_	
+2-17	138-139	%	Value[3]	_	_	
+2-18	139-140	)	_	_	_	
+2-19	141-145	from	_	_	_	
+2-20	146-150	Alfa	Brand[4]	_	_	
+2-21	151-156	Aesar	Brand[4]	_	_	
+2-22	156-157	.	_	_	_	
+
+#Text=Eu pieces were surrounded by Ni and Ge powders in a pressed pellet.
+3-1	158-160	Eu	Material-recipe	Descriptor-of	3-2	
+3-2	161-167	pieces	Descriptor	_	_	
+3-3	168-172	were	_	_	_	
+3-4	173-183	surrounded	Operation	Participant-material|Participant-material|Participant-material|Next-operation	3-1|3-6|3-8|3-12	
+3-5	184-186	by	_	_	_	
+3-6	187-189	Ni	Material-recipe	Descriptor-of	3-9	
+3-7	190-193	and	_	_	_	
+3-8	194-196	Ge	Material-recipe	Descriptor-of	3-9	
+3-9	197-204	powders	Descriptor	_	_	
+3-10	205-207	in	_	_	_	
+3-11	208-209	a	_	_	_	
+3-12	210-217	pressed	Operation	Participant-material	3-13	
+3-13	218-224	pellet	Material-intermedium	_	_	
+3-14	224-225	.	_	_	_	
+
+#Text=The pellet was placed in a 2 mL alumina crucible and sealed in an evacuated fused silica tube.
+4-1	226-229	The	_	_	_	
+4-2	230-236	pellet	Material-intermedium	_	_	
+4-3	237-240	was	_	_	_	
+4-4	241-247	placed	Operation	Participant-material|Device-of-operation|Next-operation	4-2|4-10|4-12	
+4-5	248-250	in	_	_	_	
+4-6	251-252	a	_	_	_	
+4-7	253-254	2	Value[5]	_	_	
+4-8	255-257	mL	Value[5]	_	_	
+4-9	258-265	alumina	Descriptor	_	_	
+4-10	266-274	crucible	Device	Descriptor-of|Value-of	4-9|4-7[5_0]	
+4-11	275-278	and	_	_	_	
+4-12	279-285	sealed	Operation	Device-of-operation	4-18	
+4-13	286-288	in	_	_	_	
+4-14	289-291	an	Value	_	_	
+4-15	292-301	evacuated	Descriptor	_	_	
+4-16	302-307	fused	Descriptor	_	_	
+4-17	308-314	silica	Descriptor	_	_	
+4-18	315-319	tube	Device	Descriptor-of|Descriptor-of|Descriptor-of|Value-of	4-15|4-16|4-17|4-14	
+4-19	319-320	.	_	_	_	
+
+#Text=The sample was heated at 850 ◦C for 30 h followed by a thorough grinding to ensure homogeneity, and then after pelletizing heated in an evacuated fused silica tube at 900 ◦C for 7 d.
+5-1	321-324	The	_	_	_	
+5-2	325-331	sample	Material-intermedium	_	_	
+5-3	332-335	was	_	_	_	
+5-4	336-342	heated	Operation	Participant-material|Condition-of|Condition-of|Next-operation	5-2|5-6[6_0]|5-10[7_0]|5-16	
+5-5	343-345	at	_	_	_	
+5-6	346-349	850	Property-temperature[6]	_	_	
+5-7	350-351	◦	Property-temperature[6]	_	_	
+5-8	351-352	C	Property-temperature[6]	_	_	
+5-9	353-356	for	_	_	_	
+5-10	357-359	30	Property-time[7]	_	_	
+5-11	360-361	h	Property-time[7]	_	_	
+5-12	362-370	followed	_	_	_	
+5-13	371-373	by	_	_	_	
+5-14	374-375	a	_	_	_	
+5-15	376-384	thorough	Descriptor	_	_	
+5-16	385-393	grinding	Operation	Descriptor-of	5-15	
+5-17	394-396	to	_	_	_	
+5-18	397-403	ensure	_	_	_	
+5-19	404-415	homogeneity	_	_	_	
+5-20	415-416	,	_	_	_	
+5-21	417-420	and	_	_	_	
+5-22	421-425	then	_	_	_	
+5-23	426-431	after	_	_	_	
+5-24	432-443	pelletizing	Operation	Next-operation|Next-operation	5-16|5-25	
+5-25	444-450	heated	Operation	Device-of-operation|Condition-of|Condition-of	5-31|5-37[9_0]|5-33[8_0]	
+5-26	451-453	in	_	_	_	
+5-27	454-456	an	Value	_	_	
+5-28	457-466	evacuated	Descriptor	_	_	
+5-29	467-472	fused	Descriptor	_	_	
+5-30	473-479	silica	Descriptor	_	_	
+5-31	480-484	tube	Device	Descriptor-of|Descriptor-of|Descriptor-of|Value-of	5-30|5-29|5-28|5-27	
+5-32	485-487	at	_	_	_	
+5-33	488-491	900	Property-temperature[8]	_	_	
+5-34	492-493	◦	Property-temperature[8]	_	_	
+5-35	493-494	C	Property-temperature[8]	_	_	
+5-36	495-498	for	_	_	_	
+5-37	499-500	7	Property-time[9]	_	_	
+5-38	501-502	d	Property-time[9]	_	_	
+5-39	502-503	.	_	_	_	
+
+#Text=All sample handling, except for brief exposures to air to press the pellets and load the silica tubes, was done in a glove box containing high-purity He gas.
+6-1	504-507	All	_	_	_	
+6-2	508-514	sample	Material-intermedium	_	_	
+6-3	515-523	handling	Operation	Participant-material|Condition-of	6-2|6-29[11_0]	
+6-4	523-524	,	_	_	_	
+6-5	525-531	except	_	_	_	
+6-6	532-535	for	_	_	_	
+6-7	536-541	brief	_	_	_	
+6-8	542-551	exposures	_	_	_	
+6-9	552-554	to	_	_	_	
+6-10	555-558	air	_	_	_	
+6-11	559-561	to	_	_	_	
+6-12	562-567	press	_	_	_	
+6-13	568-571	the	_	_	_	
+6-14	572-579	pellets	_	_	_	
+6-15	580-583	and	_	_	_	
+6-16	584-588	load	_	_	_	
+6-17	589-592	the	_	_	_	
+6-18	593-599	silica	_	_	_	
+6-19	600-605	tubes	_	_	_	
+6-20	605-606	,	_	_	_	
+6-21	607-610	was	_	_	_	
+6-22	611-615	done	_	_	_	
+6-23	616-618	in	_	_	_	
+6-24	619-620	a	_	_	_	
+6-25	621-626	glove	Device[10]	Device-of-operation	6-3[0_10]	
+6-26	627-630	box	Device[10]	_	_	
+6-27	631-641	containing	_	_	_	
+6-28	642-653	high-purity	Descriptor	_	_	
+6-29	654-656	He	Property-pressure[11]	Descriptor-of	6-28[0_11]	
+6-30	657-660	gas	Property-pressure[11]	_	_	
+6-31	660-661	.	_	_	_	
+
+#Text=A single-phase sample (apart from a trace of elemental Ge) was obtained as established from powder x-ray diffraction measurements described in Section III A below.
+7-1	662-663	A	_	_	_	
+7-2	664-676	single-phase	_	_	_	
+7-3	677-683	sample	_	_	_	
+7-4	684-685	(	_	_	_	
+7-5	685-690	apart	_	_	_	
+7-6	691-695	from	_	_	_	
+7-7	696-697	a	_	_	_	
+7-8	698-703	trace	_	_	_	
+7-9	704-706	of	_	_	_	
+7-10	707-716	elemental	_	_	_	
+7-11	717-719	Ge	_	_	_	
+7-12	719-720	)	_	_	_	
+7-13	721-724	was	_	_	_	
+7-14	725-733	obtained	_	_	_	
+7-15	734-736	as	_	_	_	
+7-16	737-748	established	_	_	_	
+7-17	749-753	from	_	_	_	
+7-18	754-760	powder	_	_	_	
+7-19	761-766	x-ray	_	_	_	
+7-20	767-778	diffraction	_	_	_	
+7-21	779-791	measurements	_	_	_	
+7-22	792-801	described	_	_	_	
+7-23	802-804	in	_	_	_	
+7-24	805-812	Section	_	_	_	
+7-25	813-816	III	_	_	_	
+7-26	817-818	A	_	_	_	
+7-27	819-824	below	_	_	_	
+7-28	824-825	.	_	_	_	
+
+#Text=Growths of single crystals using Sn and NiGe3 fluxes were attempted but were not successful.
+8-1	826-833	Growths	_	_	_	
+8-2	834-836	of	_	_	_	
+8-3	837-843	single	_	_	_	
+8-4	844-852	crystals	_	_	_	
+8-5	853-858	using	_	_	_	
+8-6	859-861	Sn	_	_	_	
+8-7	862-865	and	_	_	_	
+8-8	866-871	NiGe3	_	_	_	
+8-9	872-878	fluxes	_	_	_	
+8-10	879-883	were	_	_	_	
+8-11	884-893	attempted	_	_	_	
+8-12	894-897	but	_	_	_	
+8-13	898-902	were	_	_	_	
+8-14	903-906	not	_	_	_	
+8-15	907-917	successful	_	_	_	
+8-16	917-918	.	_	_	_	

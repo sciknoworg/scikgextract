@@ -1,0 +1,179 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline sample of PHTO was synthesized by a solid state reaction under high pressure of 6 GPa and high temperature of 1273 K.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-26	sample	_	_	_	
+1-4	27-29	of	_	_	_	
+1-5	30-34	PHTO	Material-target	Descriptor-of	1-2	
+1-6	35-38	was	_	_	_	
+1-7	39-50	synthesized	Operation	Participant-material	1-5	
+1-8	51-53	by	_	_	_	
+1-9	54-55	a	_	_	_	
+1-10	56-61	solid	Operation[1]	Coreference|Condition-of|Condition-of	1-7[0_1]|1-14[2_1]|1-20[4_1]	
+1-11	62-67	state	Operation[1]	_	_	
+1-12	68-76	reaction	Operation[1]	_	_	
+1-13	77-82	under	_	_	_	
+1-14	83-87	high	Property-pressure[2]	Coreference	1-17[3_2]	
+1-15	88-96	pressure	Property-pressure[2]	_	_	
+1-16	97-99	of	_	_	_	
+1-17	100-101	6	Property-pressure[3]	_	_	
+1-18	102-105	GPa	Property-pressure[3]	_	_	
+1-19	106-109	and	_	_	_	
+1-20	110-114	high	Property-temperature[4]	_	_	
+1-21	115-126	temperature	Property-temperature[4]	_	_	
+1-22	127-129	of	_	_	_	
+1-23	130-134	1273	Property-temperature[5]	Coreference	1-20[4_5]	
+1-24	135-136	K	Property-temperature[5]	_	_	
+1-25	136-137	.	_	_	_	
+
+#Text=The starting materials HgO (Aldrich, 99.0% pure), PbO (Alfa, 99.995% pure) and TiO2 (Alfa, 99.995% pure) were mixed homogenously in a molar ratio 1:3:4 and pressed into a pellet with diameter of 6 mm in an argon gas protected glove box with oxygen and H2O level of less than 1 ppm.
+2-1	138-141	The	_	_	_	
+2-2	142-150	starting	Material-recipe[6]	_	_	
+2-3	151-160	materials	Material-recipe[6]	_	_	
+2-4	161-164	HgO	Material-recipe	Coreference|Brand-of|Value-of|Value-of	2-2[6_0]|2-6|2-8|2-34[8_0]	
+2-5	165-166	(	_	_	_	
+2-6	166-173	Aldrich	Brand	_	_	
+2-7	173-174	,	_	_	_	
+2-8	175-180	99.0%	Value	_	_	
+2-9	181-185	pure	_	_	_	
+2-10	185-186	)	_	_	_	
+2-11	186-187	,	_	_	_	
+2-12	188-191	PbO	Material-recipe	Coreference|Brand-of|Value-of|Value-of	2-2[6_0]|2-14|2-16|2-34[8_0]	
+2-13	192-193	(	_	_	_	
+2-14	193-197	Alfa	Brand	_	_	
+2-15	197-198	,	_	_	_	
+2-16	199-206	99.995%	Value	_	_	
+2-17	207-211	pure	_	_	_	
+2-18	211-212	)	_	_	_	
+2-19	213-216	and	_	_	_	
+2-20	217-221	TiO2	Material-recipe	Coreference|Brand-of|Value-of|Value-of	2-2[6_0]|2-22|2-24|2-34[8_0]	
+2-21	222-223	(	_	_	_	
+2-22	223-227	Alfa	Brand	_	_	
+2-23	227-228	,	_	_	_	
+2-24	229-236	99.995%	Value	_	_	
+2-25	237-241	pure	_	_	_	
+2-26	241-242	)	_	_	_	
+2-27	243-247	were	_	_	_	
+2-28	248-253	mixed	Operation	Participant-material|Participant-material|Participant-material|Descriptor-of|Next-operation	2-4|2-12|2-20|2-29|2-40	
+2-29	254-266	homogenously	Descriptor	_	_	
+2-30	267-269	in	_	_	_	
+2-31	270-271	a	_	_	_	
+2-32	272-277	molar	Descriptor[7]	_	_	
+2-33	278-283	ratio	Descriptor[7]	_	_	
+2-34	284-285	1	Value[8]	Descriptor-of	2-32[7_8]	
+2-35	285-286	:	Value[8]	_	_	
+2-36	286-287	3	Value[8]	_	_	
+2-37	287-288	:	Value[8]	_	_	
+2-38	288-289	4	Value[8]	_	_	
+2-39	290-293	and	_	_	_	
+2-40	294-301	pressed	Operation	Device-of-operation	2-54[11_0]	
+2-41	302-306	into	_	_	_	
+2-42	307-308	a	_	_	_	
+2-43	309-315	pellet	Material-intermedium	Value-of	2-47[9_0]	
+2-44	316-320	with	_	_	_	
+2-45	321-329	diameter	Descriptor	_	_	
+2-46	330-332	of	_	_	_	
+2-47	333-334	6	Value[9]	Descriptor-of	2-45[0_9]	
+2-48	335-337	mm	Value[9]	_	_	
+2-49	338-340	in	_	_	_	
+2-50	341-343	an	Value	_	_	
+2-51	344-349	argon	Descriptor[10]	_	_	
+2-52	350-353	gas	Descriptor[10]	_	_	
+2-53	354-363	protected	Descriptor[10]	_	_	
+2-54	364-369	glove	Device[11]	Value-of|Descriptor-of|Value-of	2-50[0_11]|2-51[10_11]|2-62[13_11]	
+2-55	370-373	box	Device[11]	_	_	
+2-56	374-378	with	_	_	_	
+2-57	379-385	oxygen	Descriptor[12]	_	_	
+2-58	386-389	and	Descriptor[12]	_	_	
+2-59	390-393	H2O	Descriptor[12]	_	_	
+2-60	394-399	level	Descriptor[12]	_	_	
+2-61	400-402	of	_	_	_	
+2-62	403-407	less	Value[13]	Descriptor-of	2-57[12_13]	
+2-63	408-412	than	Value[13]	_	_	
+2-64	413-414	1	Value[13]	_	_	
+2-65	415-418	ppm	Value[13]	_	_	
+2-66	418-419	.	_	_	_	
+
+#Text=The pre-pressed pellet was sealed in a gold capsule.
+3-1	420-423	The	_	_	_	
+3-2	424-435	pre-pressed	Descriptor	_	_	
+3-3	436-442	pellet	Material-intermedium	Descriptor-of	3-2	
+3-4	443-446	was	_	_	_	
+3-5	447-453	sealed	Operation	Participant-material|Device-of-operation	3-3|3-9	
+3-6	454-456	in	_	_	_	
+3-7	457-458	a	Value	_	_	
+3-8	459-463	gold	Descriptor	_	_	
+3-9	464-471	capsule	Device	Value-of|Descriptor-of	3-7|3-8	
+3-10	471-472	.	_	_	_	
+
+#Text=High pressure experiments were performed with the cubic anvil type high pressure apparatus51,52.
+4-1	473-477	High	Descriptor[14]	_	_	
+4-2	478-486	pressure	Descriptor[14]	_	_	
+4-3	487-498	experiments	Operation	Descriptor-of	4-1[14_0]	
+4-4	499-503	were	_	_	_	
+4-5	504-513	performed	Operation	Coreference|Device-of-operation	4-3|4-8[15_0]	
+4-6	514-518	with	_	_	_	
+4-7	519-522	the	_	_	_	
+4-8	523-528	cubic	Device[15]	_	_	
+4-9	529-534	anvil	Device[15]	_	_	
+4-10	535-539	type	Device[15]	_	_	
+4-11	540-544	high	Device[15]	_	_	
+4-12	545-553	pressure	Device[15]	_	_	
+4-13	554-568	apparatus51,52	Device[15]	_	_	
+4-14	568-569	.	_	_	_	
+
+#Text=After the pressure was gradually increased to 6 GPa, the sample was heated to 1273 K and maintained for 30 min.
+5-1	570-575	After	_	_	_	
+5-2	576-579	the	_	_	_	
+5-3	580-588	pressure	Property-pressure	_	_	
+5-4	589-592	was	_	_	_	
+5-5	593-602	gradually	Descriptor	_	_	
+5-6	603-612	increased	Operation	Participant-material|Descriptor-of|Condition-of|Next-operation	5-3|5-5|5-8[16_0]|5-14	
+5-7	613-615	to	_	_	_	
+5-8	616-617	6	Property-pressure[16]	_	_	
+5-9	618-621	GPa	Property-pressure[16]	_	_	
+5-10	621-622	,	_	_	_	
+5-11	623-626	the	_	_	_	
+5-12	627-633	sample	Material-intermedium	_	_	
+5-13	634-637	was	_	_	_	
+5-14	638-644	heated	Operation	Participant-material|Condition-of|Next-operation	5-12|5-16[17_0]|5-19	
+5-15	645-647	to	_	_	_	
+5-16	648-652	1273	Property-temperature[17]	_	_	
+5-17	653-654	K	Property-temperature[17]	_	_	
+5-18	655-658	and	_	_	_	
+5-19	659-669	maintained	Operation	Condition-of	5-21[18_0]	
+5-20	670-673	for	_	_	_	
+5-21	674-676	30	Property-time[18]	_	_	
+5-22	677-680	min	Property-time[18]	_	_	
+5-23	680-681	.	_	_	_	
+
+#Text=Then the temperature was quenched to ambient before the release of pressure.
+6-1	682-686	Then	_	_	_	
+6-2	687-690	the	_	_	_	
+6-3	691-702	temperature	Property-temperature	_	_	
+6-4	703-706	was	_	_	_	
+6-5	707-715	quenched	Operation	Participant-material|Condition-of|Next-operation	6-3|6-7|6-10	
+6-6	716-718	to	_	_	_	
+6-7	719-726	ambient	Property-temperature	_	_	
+6-8	727-733	before	_	_	_	
+6-9	734-737	the	_	_	_	
+6-10	738-745	release	Operation	Participant-material	6-12	
+6-11	746-748	of	_	_	_	
+6-12	749-757	pressure	Property-pressure	_	_	
+6-13	757-758	.	_	_	_	
+
+#Text=In this process, yellow polycrystalline PHTO was obtained.
+7-1	759-761	In	_	_	_	
+7-2	762-766	this	_	_	_	
+7-3	767-774	process	_	_	_	
+7-4	774-775	,	_	_	_	
+7-5	776-782	yellow	_	_	_	
+7-6	783-798	polycrystalline	_	_	_	
+7-7	799-803	PHTO	_	_	_	
+7-8	804-807	was	_	_	_	
+7-9	808-816	obtained	_	_	_	
+7-10	816-817	.	_	_	_	

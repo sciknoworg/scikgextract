@@ -1,0 +1,77 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Nb5Ir3 and Nb5Ir3Ox were synthesized by the solid state reaction.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-33	Nb5Ir3	Material-target	Descriptor-of	1-1	
+1-5	34-37	and	_	_	_	
+1-6	38-46	Nb5Ir3Ox	Material-target	Descriptor-of	1-1	
+1-7	47-51	were	_	_	_	
+1-8	52-63	synthesized	Operation	Participant-material|Participant-material|Coreference	1-4|1-6|1-11[1_0]	
+1-9	64-66	by	_	_	_	
+1-10	67-70	the	_	_	_	
+1-11	71-76	solid	Operation[1]	_	_	
+1-12	77-82	state	Operation[1]	_	_	
+1-13	83-91	reaction	Operation[1]	_	_	
+1-14	91-92	.	_	_	_	
+
+#Text=Stoichiometric amounts of Nb, Ir and Nb2O3 precursor powders were mixed and pressed into pellets before sealed in a quartz tube under vacuum of around 10−3 mbar.
+2-1	93-107	Stoichiometric	Value[2]	_	_	
+2-2	108-115	amounts	Value[2]	_	_	
+2-3	116-118	of	_	_	_	
+2-4	119-121	Nb	Material-recipe	Value-of|Descriptor-of|Descriptor-of	2-1[2_0]|2-9|2-10	
+2-5	121-122	,	_	_	_	
+2-6	123-125	Ir	Material-recipe	Value-of|Descriptor-of|Descriptor-of	2-1[2_0]|2-9|2-10	
+2-7	126-129	and	_	_	_	
+2-8	130-135	Nb2O3	Material-recipe	Value-of|Descriptor-of|Descriptor-of	2-1[2_0]|2-9|2-10	
+2-9	136-145	precursor	Descriptor	_	_	
+2-10	146-153	powders	Descriptor	_	_	
+2-11	154-158	were	_	_	_	
+2-12	159-164	mixed	Operation	Participant-material|Participant-material|Participant-material|Next-operation	2-4|2-6|2-8|2-14	
+2-13	165-168	and	_	_	_	
+2-14	169-176	pressed	Operation	Next-operation	2-18	
+2-15	177-181	into	_	_	_	
+2-16	182-189	pellets	Material-intermedium	_	_	
+2-17	190-196	before	_	_	_	
+2-18	197-203	sealed	Operation	Participant-material|Device-of-operation|Condition-of	2-16|2-22|2-26[3_0]	
+2-19	204-206	in	_	_	_	
+2-20	207-208	a	Value	_	_	
+2-21	209-215	quartz	Descriptor	_	_	
+2-22	216-220	tube	Device	Descriptor-of|Value-of	2-21|2-20	
+2-23	221-226	under	_	_	_	
+2-24	227-233	vacuum	Property-pressure	_	_	
+2-25	234-236	of	_	_	_	
+2-26	237-243	around	Property-pressure[3]	Coreference	2-24[0_3]	
+2-27	244-246	10	Property-pressure[3]	_	_	
+2-28	246-247	−	Property-pressure[3]	_	_	
+2-29	247-248	3	Property-pressure[3]	_	_	
+2-30	249-253	mbar	Property-pressure[3]	_	_	
+2-31	253-254	.	_	_	_	
+
+#Text=The reaction was at 1200 °C for 72 h followed by a quenching process in either air or liquid nitrogen.
+3-1	255-258	The	_	_	_	
+3-2	259-267	reaction	Operation	Condition-of|Condition-of|Next-operation	3-5[4_0]|3-9[5_0]|3-14[6_0]	
+3-3	268-271	was	_	_	_	
+3-4	272-274	at	_	_	_	
+3-5	275-279	1200	Property-temperature[4]	_	_	
+3-6	280-281	°	Property-temperature[4]	_	_	
+3-7	281-282	C	Property-temperature[4]	_	_	
+3-8	283-286	for	_	_	_	
+3-9	287-289	72	Property-time[5]	_	_	
+3-10	290-291	h	Property-time[5]	_	_	
+3-11	292-300	followed	_	_	_	
+3-12	301-303	by	_	_	_	
+3-13	304-305	a	_	_	_	
+3-14	306-315	quenching	Operation[6]	Condition-of|Condition-of	3-18[0_6]|3-20[7_6]	
+3-15	316-323	process	Operation[6]	_	_	
+3-16	324-326	in	_	_	_	
+3-17	327-333	either	_	_	_	
+3-18	334-337	air	Property-pressure	_	_	
+3-19	338-340	or	_	_	_	
+3-20	341-347	liquid	Property-pressure[7]	_	_	
+3-21	348-356	nitrogen	Property-pressure[7]	_	_	
+3-22	356-357	.	_	_	_	

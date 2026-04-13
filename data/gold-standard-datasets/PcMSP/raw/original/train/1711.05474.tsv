@@ -1,0 +1,203 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of ScRuSi were synthesized by an arc-melting method.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-33	ScRuSi	Material-target	Descriptor-of	1-1	
+1-5	34-38	were	_	_	_	
+1-6	39-50	synthesized	Operation	Coreference|Participant-material	1-9[1_0]|1-4	
+1-7	51-53	by	_	_	_	
+1-8	54-56	an	_	_	_	
+1-9	57-68	arc-melting	Operation[1]	_	_	
+1-10	69-75	method	Operation[1]	_	_	
+1-11	75-76	.	_	_	_	
+
+#Text=The starting materials were ruthenium powder, silicon powder and scandium foil, all purer than 99.9%.
+2-1	77-80	The	_	_	_	
+2-2	81-89	starting	Material-recipe[2]	Coreference|Coreference|Coreference|Value-of	2-5[0_2]|2-8[0_2]|2-11[0_2]|2-16[3_2]	
+2-3	90-99	materials	Material-recipe[2]	_	_	
+2-4	100-104	were	_	_	_	
+2-5	105-114	ruthenium	Material-recipe	Descriptor-of	2-6	
+2-6	115-121	powder	Descriptor	_	_	
+2-7	121-122	,	_	_	_	
+2-8	123-130	silicon	Material-recipe	Descriptor-of	2-9	
+2-9	131-137	powder	Descriptor	_	_	
+2-10	138-141	and	_	_	_	
+2-11	142-150	scandium	Material-recipe	Descriptor-of	2-12	
+2-12	151-155	foil	Descriptor	_	_	
+2-13	155-156	,	_	_	_	
+2-14	157-160	all	_	_	_	
+2-15	161-166	purer	Descriptor	_	_	
+2-16	167-171	than	Value[3]	Descriptor-of	2-15[0_3]	
+2-17	172-177	99.9%	Value[3]	_	_	
+2-18	177-178	.	_	_	_	
+
+#Text=In order to avoid shattering during the melting reaction, the Sc foils were pre-melted into buttons under purified argon.
+3-1	179-181	In	_	_	_	
+3-2	182-187	order	_	_	_	
+3-3	188-190	to	_	_	_	
+3-4	191-196	avoid	_	_	_	
+3-5	197-207	shattering	_	_	_	
+3-6	208-214	during	_	_	_	
+3-7	215-218	the	_	_	_	
+3-8	219-226	melting	Operation[4]	_	_	
+3-9	227-235	reaction	Operation[4]	_	_	
+3-10	235-236	,	_	_	_	
+3-11	237-240	the	_	_	_	
+3-12	241-243	Sc	Material-recipe	Descriptor-of	3-13	
+3-13	244-249	foils	Descriptor	_	_	
+3-14	250-254	were	_	_	_	
+3-15	255-265	pre-melted	Operation	Participant-material|Condition-of	3-12|3-20	
+3-16	266-270	into	_	_	_	
+3-17	271-278	buttons	Material-intermedium	_	_	
+3-18	279-284	under	_	_	_	
+3-19	285-293	purified	Descriptor	_	_	
+3-20	294-299	argon	Property-pressure	Descriptor-of	3-19	
+3-21	299-300	.	_	_	_	
+
+#Text=Powders of elemental Ru and Si were mixed in a molar ratio of 1:1, pelletized and then mixed with a stoichiometric amount of Sc buttons.
+4-1	301-308	Powders	Descriptor	_	_	
+4-2	309-311	of	_	_	_	
+4-3	312-321	elemental	_	_	_	
+4-4	322-324	Ru	Material-recipe	Descriptor-of|Value-of	4-1|4-11[5_0]	
+4-5	325-328	and	_	_	_	
+4-6	329-331	Si	Material-recipe	Descriptor-of|Value-of	4-1|4-11[5_0]	
+4-7	332-336	were	_	_	_	
+4-8	337-342	mixed	Operation	Participant-material|Participant-material|Next-operation	4-4|4-6|4-18	
+4-9	343-345	in	_	_	_	
+4-10	346-347	a	_	_	_	
+4-11	348-353	molar	Value[5]	Value-of	4-14[6_5]	
+4-12	354-359	ratio	Value[5]	_	_	
+4-13	360-362	of	_	_	_	
+4-14	363-364	1	Value[6]	_	_	
+4-15	364-365	:	Value[6]	_	_	
+4-16	365-366	1	Value[6]	_	_	
+4-17	366-367	,	_	_	_	
+4-18	368-378	pelletized	Operation	Next-operation	4-21	
+4-19	379-382	and	_	_	_	
+4-20	383-387	then	_	_	_	
+4-21	388-393	mixed	Operation	Participant-material	4-27	
+4-22	394-398	with	_	_	_	
+4-23	399-400	a	_	_	_	
+4-24	401-415	stoichiometric	Value[7]	_	_	
+4-25	416-422	amount	Value[7]	_	_	
+4-26	423-425	of	_	_	_	
+4-27	426-428	Sc	Material-intermedium	Descriptor-of|Value-of	4-28|4-24[7_0]	
+4-28	429-436	buttons	Descriptor	_	_	
+4-29	436-437	.	_	_	_	
+
+#Text=The mixtures were arc-melted under an argon atmosphere for at least ten times with intermediate turnovers to ensure the sample homogeneity.
+5-1	438-441	The	_	_	_	
+5-2	442-450	mixtures	Material-intermedium	_	_	
+5-3	451-455	were	_	_	_	
+5-4	456-466	arc-melted	Operation	Participant-material|Condition-of|Condition-of|Condition-of	5-2|5-7[8_0]|5-10[9_0]|5-15[10_0]	
+5-5	467-472	under	_	_	_	
+5-6	473-475	an	_	_	_	
+5-7	476-481	argon	Property-pressure[8]	_	_	
+5-8	482-492	atmosphere	Property-pressure[8]	_	_	
+5-9	493-496	for	_	_	_	
+5-10	497-499	at	Property-time[9]	_	_	
+5-11	500-505	least	Property-time[9]	_	_	
+5-12	506-509	ten	Property-time[9]	_	_	
+5-13	510-515	times	Property-time[9]	_	_	
+5-14	516-520	with	_	_	_	
+5-15	521-533	intermediate	Descriptor[10]	_	_	
+5-16	534-543	turnovers	Descriptor[10]	_	_	
+5-17	544-546	to	_	_	_	
+5-18	547-553	ensure	_	_	_	
+5-19	554-557	the	_	_	_	
+5-20	558-564	sample	_	_	_	
+5-21	565-576	homogeneity	_	_	_	
+5-22	576-577	.	_	_	_	
+
+#Text=The weight loss after arc-melting was always less than 1%.
+6-1	578-581	The	_	_	_	
+6-2	582-588	weight	Descriptor[11]	Value-of	6-8[12_11]	
+6-3	589-593	loss	Descriptor[11]	_	_	
+6-4	594-599	after	Descriptor	_	_	
+6-5	600-611	arc-melting	Operation	Descriptor-of	6-4	
+6-6	612-615	was	_	_	_	
+6-7	616-622	always	_	_	_	
+6-8	623-627	less	Value[12]	_	_	
+6-9	628-632	than	Value[12]	_	_	
+6-10	633-635	1%	Value[12]	_	_	
+6-11	635-636	.	_	_	_	
+
+#Text=Some of the samples were directly measured, while the others were wrapped with tantalum foils, sealed into evacuated quartz tubes, and annealed at 1273 K for a week.
+7-1	637-641	Some	Descriptor	_	_	
+7-2	642-644	of	_	_	_	
+7-3	645-648	the	Material-target[13]	Descriptor-of	7-1[0_13]	
+7-4	649-656	samples	Material-target[13]	_	_	
+7-5	657-661	were	_	_	_	
+7-6	662-670	directly	_	_	_	
+7-7	671-679	measured	Operation	Participant-material	7-3[13_0]	
+7-8	679-680	,	_	_	_	
+7-9	681-686	while	_	_	_	
+7-10	687-690	the	Material-target[14]	_	_	
+7-11	691-697	others	Material-target[14]	_	_	
+7-12	698-702	were	_	_	_	
+7-13	703-710	wrapped	Operation	Participant-material|Participant-material|Next-operation	7-10[14_0]|7-15|7-18	
+7-14	711-715	with	_	_	_	
+7-15	716-724	tantalum	Material-others	Descriptor-of	7-16	
+7-16	725-730	foils	Descriptor	_	_	
+7-17	730-731	,	_	_	_	
+7-18	732-738	sealed	Operation	Next-operation|Device-of-operation	7-25|7-22	
+7-19	739-743	into	_	_	_	
+7-20	744-753	evacuated	Descriptor	_	_	
+7-21	754-760	quartz	Descriptor	_	_	
+7-22	761-766	tubes	Device	Descriptor-of|Descriptor-of	7-21|7-20	
+7-23	766-767	,	_	_	_	
+7-24	768-771	and	_	_	_	
+7-25	772-780	annealed	Operation	Condition-of|Condition-of	7-27[15_0]|7-30[16_0]	
+7-26	781-783	at	_	_	_	
+7-27	784-788	1273	Property-temperature[15]	_	_	
+7-28	789-790	K	Property-temperature[15]	_	_	
+7-29	791-794	for	_	_	_	
+7-30	795-796	a	Property-time[16]	_	_	
+7-31	797-801	week	Property-time[16]	_	_	
+7-32	801-802	.	_	_	_	
+
+#Text=All the samples showed metallic luster and were stable in air, whether annealed or not.
+8-1	803-806	All	_	_	_	
+8-2	807-810	the	_	_	_	
+8-3	811-818	samples	_	_	_	
+8-4	819-825	showed	_	_	_	
+8-5	826-834	metallic	_	_	_	
+8-6	835-841	luster	_	_	_	
+8-7	842-845	and	_	_	_	
+8-8	846-850	were	_	_	_	
+8-9	851-857	stable	_	_	_	
+8-10	858-860	in	_	_	_	
+8-11	861-864	air	_	_	_	
+8-12	864-865	,	_	_	_	
+8-13	866-873	whether	_	_	_	
+8-14	874-882	annealed	_	_	_	
+8-15	883-885	or	_	_	_	
+8-16	886-889	not	_	_	_	
+8-17	889-890	.	_	_	_	
+
+#Text=Superconductivity was observed only in the as-prepared samples, and was absent above 1.8 K in the annealed ones.
+9-1	891-908	Superconductivity	_	_	_	
+9-2	909-912	was	_	_	_	
+9-3	913-921	observed	_	_	_	
+9-4	922-926	only	_	_	_	
+9-5	927-929	in	_	_	_	
+9-6	930-933	the	_	_	_	
+9-7	934-945	as-prepared	_	_	_	
+9-8	946-953	samples	_	_	_	
+9-9	953-954	,	_	_	_	
+9-10	955-958	and	_	_	_	
+9-11	959-962	was	_	_	_	
+9-12	963-969	absent	_	_	_	
+9-13	970-975	above	_	_	_	
+9-14	976-979	1.8	_	_	_	
+9-15	980-981	K	_	_	_	
+9-16	982-984	in	_	_	_	
+9-17	985-988	the	_	_	_	
+9-18	989-997	annealed	_	_	_	
+9-19	998-1002	ones	_	_	_	
+9-20	1002-1003	.	_	_	_	

@@ -1,0 +1,170 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline HgMn7O12 was prepared by solid-state reaction under high-pressure and high-temperature conditions.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-24	HgMn7O12	Material-target	Descriptor-of	1-1	
+1-3	25-28	was	_	_	_	
+1-4	29-37	prepared	Operation	Participant-material	1-2	
+1-5	38-40	by	_	_	_	
+1-6	41-52	solid-state	Operation[1]	Coreference|Condition-of|Condition-of	1-4[0_1]|1-9[0_1]|1-11[0_1]	
+1-7	53-61	reaction	Operation[1]	_	_	
+1-8	62-67	under	_	_	_	
+1-9	68-81	high-pressure	Property-pressure	_	_	
+1-10	82-85	and	_	_	_	
+1-11	86-102	high-temperature	Property-temperature	_	_	
+1-12	103-113	conditions	_	_	_	
+1-13	113-114	.	_	_	_	
+
+#Text=Stoichiometric amounts of HgO (Sigma-Aldrich  99.0%), MnO2 (Alfa Aesar 99.997%), and Mn2O3 (Aldrich 99.99%) were well mixed and sealed in a platinum capsule.
+2-1	115-129	Stoichiometric	Value[2]	_	_	
+2-2	130-137	amounts	Value[2]	_	_	
+2-3	138-140	of	_	_	_	
+2-4	141-144	HgO	Material-recipe	Value-of|Brand-of|Value-of	2-1[2_0]|2-6|2-7	
+2-5	145-146	(	_	_	_	
+2-6	146-159	Sigma-Aldrich	Brand	_	_	
+2-7	161-166	99.0%	Value	_	_	
+2-8	166-167	)	_	_	_	
+2-9	167-168	,	_	_	_	
+2-10	169-173	MnO2	Material-recipe	Brand-of|Value-of|Value-of	2-12[3_0]|2-14|2-1[2_0]	
+2-11	174-175	(	_	_	_	
+2-12	175-179	Alfa	Brand[3]	_	_	
+2-13	180-185	Aesar	Brand[3]	_	_	
+2-14	186-193	99.997%	Value	_	_	
+2-15	193-194	)	_	_	_	
+2-16	194-195	,	_	_	_	
+2-17	196-199	and	_	_	_	
+2-18	200-205	Mn2O3	Material-recipe	Brand-of|Value-of|Value-of	2-20|2-21|2-1[2_0]	
+2-19	206-207	(	_	_	_	
+2-20	207-214	Aldrich	Brand	_	_	
+2-21	215-221	99.99%	Value	_	_	
+2-22	221-222	)	_	_	_	
+2-23	223-227	were	_	_	_	
+2-24	228-232	well	Descriptor	_	_	
+2-25	233-238	mixed	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Next-operation	2-24|2-4|2-10|2-18|2-27	
+2-26	239-242	and	_	_	_	
+2-27	243-249	sealed	Operation	Device-of-operation	2-31	
+2-28	250-252	in	_	_	_	
+2-29	253-254	a	Value	_	_	
+2-30	255-263	platinum	Descriptor	_	_	
+2-31	264-271	capsule	Device	Value-of|Descriptor-of	2-29|2-30	
+2-32	271-272	.	_	_	_	
+
+#Text=The capsule, a boron nitrite insulating layer, and a graphite heater were assembled in a pyrophyllite cell and placed in a DIA-type cubic anvil high-pressure apparatus.
+3-1	273-276	The	_	_	_	
+3-2	277-284	capsule	Device	_	_	
+3-3	284-285	,	_	_	_	
+3-4	286-287	a	Value	_	_	
+3-5	288-293	boron	Descriptor[4]	_	_	
+3-6	294-301	nitrite	Descriptor[4]	_	_	
+3-7	302-312	insulating	Device[5]	Value-of|Descriptor-of	3-4[0_5]|3-5[4_5]	
+3-8	313-318	layer	Device[5]	_	_	
+3-9	318-319	,	_	_	_	
+3-10	320-323	and	_	_	_	
+3-11	324-325	a	Value	_	_	
+3-12	326-334	graphite	Descriptor	_	_	
+3-13	335-341	heater	Device	Value-of|Descriptor-of	3-11|3-12	
+3-14	342-346	were	_	_	_	
+3-15	347-356	assembled	Operation	Participant-material|Participant-material|Participant-material|Device-of-operation|Next-operation	3-13|3-7[5_0]|3-2|3-19|3-21	
+3-16	357-359	in	_	_	_	
+3-17	360-361	a	Value	_	_	
+3-18	362-374	pyrophyllite	Descriptor	_	_	
+3-19	375-379	cell	Device	Value-of|Descriptor-of	3-17|3-18	
+3-20	380-383	and	_	_	_	
+3-21	384-390	placed	Operation	Device-of-operation	3-25[6_0]	
+3-22	391-393	in	_	_	_	
+3-23	394-395	a	Value	_	_	
+3-24	396-404	DIA-type	Descriptor	_	_	
+3-25	405-410	cubic	Device[6]	Value-of|Descriptor-of	3-23[0_6]|3-24[0_6]	
+3-26	411-416	anvil	Device[6]	_	_	
+3-27	417-430	high-pressure	Device[6]	_	_	
+3-28	431-440	apparatus	Device[6]	_	_	
+3-29	440-441	.	_	_	_	
+
+#Text=The sample was treated at 8 GPa and 1600 K for 30 min and then released to ambient condition.
+4-1	442-445	The	_	_	_	
+4-2	446-452	sample	Material-intermedium	_	_	
+4-3	453-456	was	_	_	_	
+4-4	457-464	treated	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Next-operation	4-2|4-6[7_0]|4-9[8_0]|4-12[9_0]|4-16	
+4-5	465-467	at	_	_	_	
+4-6	468-469	8	Property-pressure[7]	_	_	
+4-7	470-473	GPa	Property-pressure[7]	_	_	
+4-8	474-477	and	_	_	_	
+4-9	478-482	1600	Property-temperature[8]	_	_	
+4-10	483-484	K	Property-temperature[8]	_	_	
+4-11	485-488	for	_	_	_	
+4-12	489-491	30	Property-time[9]	_	_	
+4-13	492-495	min	Property-time[9]	_	_	
+4-14	496-499	and	_	_	_	
+4-15	500-504	then	_	_	_	
+4-16	505-513	released	Operation	Condition-of	4-18[10_0]	
+4-17	514-516	to	_	_	_	
+4-18	517-524	ambient	Property-pressure[10]	_	_	
+4-19	525-534	condition	Property-pressure[10]	_	_	
+4-20	534-535	.	_	_	_	
+
+#Text=Each synthesis produced a ∼0.1 g sample.
+5-1	536-540	Each	_	_	_	
+5-2	541-550	synthesis	_	_	_	
+5-3	551-559	produced	_	_	_	
+5-4	560-561	a	_	_	_	
+5-5	562-563	∼	_	_	_	
+5-6	563-566	0.1	_	_	_	
+5-7	567-568	g	_	_	_	
+5-8	569-575	sample	_	_	_	
+5-9	575-576	.	_	_	_	
+
+#Text=Judging by x-ray powder diffraction and magnetic susceptibility (see Supplementary Material (SM) [20], Fig.
+6-1	577-584	Judging	_	_	_	
+6-2	585-587	by	_	_	_	
+6-3	588-593	x-ray	_	_	_	
+6-4	594-600	powder	_	_	_	
+6-5	601-612	diffraction	_	_	_	
+6-6	613-616	and	_	_	_	
+6-7	617-625	magnetic	_	_	_	
+6-8	626-640	susceptibility	_	_	_	
+6-9	641-642	(	_	_	_	
+6-10	642-645	see	_	_	_	
+6-11	646-659	Supplementary	_	_	_	
+6-12	660-668	Material	_	_	_	
+6-13	669-670	(	_	_	_	
+6-14	670-672	SM	_	_	_	
+6-15	672-673	)	_	_	_	
+6-16	674-675	[	_	_	_	
+6-17	675-677	20	_	_	_	
+6-18	677-678	]	_	_	_	
+6-19	678-679	,	_	_	_	
+6-20	680-683	Fig	_	_	_	
+6-21	683-684	.	_	_	_	
+
+#Text=S1), products from 14 out of the 24 runs were selected and combined for further analysis in the neutron powder diffraction (NPD) studies.
+7-1	685-687	S1	_	_	_	
+7-2	687-688	)	_	_	_	
+7-3	688-689	,	_	_	_	
+7-4	690-698	products	_	_	_	
+7-5	699-703	from	_	_	_	
+7-6	704-706	14	_	_	_	
+7-7	707-710	out	_	_	_	
+7-8	711-713	of	_	_	_	
+7-9	714-717	the	_	_	_	
+7-10	718-720	24	_	_	_	
+7-11	721-725	runs	_	_	_	
+7-12	726-730	were	_	_	_	
+7-13	731-739	selected	_	_	_	
+7-14	740-743	and	_	_	_	
+7-15	744-752	combined	_	_	_	
+7-16	753-756	for	_	_	_	
+7-17	757-764	further	_	_	_	
+7-18	765-773	analysis	_	_	_	
+7-19	774-776	in	_	_	_	
+7-20	777-780	the	_	_	_	
+7-21	781-788	neutron	_	_	_	
+7-22	789-795	powder	_	_	_	
+7-23	796-807	diffraction	_	_	_	
+7-24	808-809	(	_	_	_	
+7-25	809-812	NPD	_	_	_	
+7-26	812-813	)	_	_	_	
+7-27	814-821	studies	_	_	_	
+7-28	821-822	.	_	_	_	

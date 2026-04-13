@@ -1,0 +1,130 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The compound [Cu(pz)2(2-HOpy)2](PF6 )2 was synthesized by using conventional solution chemistry techniques,
+#Text=described in detail in the Supplemental Material (SM) [49].
+1-1	0-3	The	_	_	_	
+1-2	4-12	compound	_	_	_	
+1-3	13-14	[	Material-target[1]	_	_	
+1-4	14-16	Cu	Material-target[1]	_	_	
+1-5	16-17	(	Material-target[1]	_	_	
+1-6	17-19	pz	Material-target[1]	_	_	
+1-7	19-20	)	Material-target[1]	_	_	
+1-8	20-21	2	Material-target[1]	_	_	
+1-9	21-22	(	Material-target[1]	_	_	
+1-10	22-23	2	Material-target[1]	_	_	
+1-11	23-24	-	Material-target[1]	_	_	
+1-12	24-28	HOpy	Material-target[1]	_	_	
+1-13	28-29	)	Material-target[1]	_	_	
+1-14	29-30	2	Material-target[1]	_	_	
+1-15	30-31	]	Material-target[1]	_	_	
+1-16	31-32	(	Material-target[1]	_	_	
+1-17	32-35	PF6	Material-target[1]	_	_	
+1-18	36-37	)	Material-target[1]	_	_	
+1-19	37-38	2	Material-target[1]	_	_	
+1-20	39-42	was	_	_	_	
+1-21	43-54	synthesized	Operation	Participant-material	1-3[1_0]	
+1-22	55-57	by	_	_	_	
+1-23	58-63	using	_	_	_	
+1-24	64-76	conventional	Operation[2]	Coreference	1-21[0_2]	
+1-25	77-85	solution	Operation[2]	_	_	
+1-26	86-95	chemistry	Operation[2]	_	_	
+1-27	96-106	techniques	Operation[2]	_	_	
+1-28	106-107	,	_	_	_	
+1-29	108-117	described	_	_	_	
+1-30	118-120	in	_	_	_	
+1-31	121-127	detail	_	_	_	
+1-32	128-130	in	_	_	_	
+1-33	131-134	the	_	_	_	
+1-34	135-147	Supplemental	_	_	_	
+1-35	148-156	Material	_	_	_	
+1-36	157-158	(	_	_	_	
+1-37	158-160	SM	_	_	_	
+1-38	160-161	)	_	_	_	
+1-39	162-163	[	_	_	_	
+1-40	163-165	49	_	_	_	
+1-41	165-166	]	_	_	_	
+1-42	166-167	.	_	_	_	
+
+#Text=Slow evaporation of methanol solutions of the product,
+#Text=[Cu(pz)2(2-HOpy)2](PF6 )2, (pz = pyrazine, 2-HOpy = 2-
+#Text=pyridone) produces thin, rectangular, green plates, typically
+#Text=3 to 5 mm on a side and about 1 mm thick.
+2-1	168-172	Slow	Descriptor	_	_	
+2-2	173-184	evaporation	Operation	Descriptor-of|Participant-material|Next-operation	2-1|2-4|2-41	
+2-3	185-187	of	_	_	_	
+2-4	188-196	methanol	Material-others	Descriptor-of	2-5	
+2-5	197-206	solutions	Descriptor	_	_	
+2-6	207-209	of	_	_	_	
+2-7	210-213	the	_	_	_	
+2-8	214-221	product	_	_	_	
+2-9	221-222	,	_	_	_	
+2-10	223-224	[	Material-target[3]	Descriptor-of|Descriptor-of	2-29[4_3]|2-33[5_3]	
+2-11	224-226	Cu	Material-target[3]	_	_	
+2-12	226-227	(	Material-target[3]	_	_	
+2-13	227-229	pz	Material-target[3]	_	_	
+2-14	229-230	)	Material-target[3]	_	_	
+2-15	230-231	2	Material-target[3]	_	_	
+2-16	231-232	(	Material-target[3]	_	_	
+2-17	232-233	2	Material-target[3]	_	_	
+2-18	233-234	-	Material-target[3]	_	_	
+2-19	234-238	HOpy	Material-target[3]	_	_	
+2-20	238-239	)	Material-target[3]	_	_	
+2-21	239-240	2	Material-target[3]	_	_	
+2-22	240-241	]	Material-target[3]	_	_	
+2-23	241-242	(	Material-target[3]	_	_	
+2-24	242-245	PF6	Material-target[3]	_	_	
+2-25	246-247	)	Material-target[3]	_	_	
+2-26	247-248	2	Material-target[3]	_	_	
+2-27	248-249	,	_	_	_	
+2-28	250-251	(	_	_	_	
+2-29	251-253	pz	Descriptor[4]	_	_	
+2-30	254-255	=	Descriptor[4]	_	_	
+2-31	256-264	pyrazine	Descriptor[4]	_	_	
+2-32	264-265	,	_	_	_	
+2-33	266-267	2	Descriptor[5]	_	_	
+2-34	267-268	-	Descriptor[5]	_	_	
+2-35	268-272	HOpy	Descriptor[5]	_	_	
+2-36	273-274	=	Descriptor[5]	_	_	
+2-37	275-276	2	Descriptor[5]	_	_	
+2-38	276-277	-	Descriptor[5]	_	_	
+2-39	278-286	pyridone	Descriptor[5]	_	_	
+2-40	286-287	)	_	_	_	
+2-41	288-296	produces	Operation	Participant-material	2-10[3_0]	
+2-42	297-301	thin	Descriptor	_	_	
+2-43	301-302	,	_	_	_	
+2-44	303-314	rectangular	Descriptor	_	_	
+2-45	314-315	,	_	_	_	
+2-46	316-321	green	Descriptor	_	_	
+2-47	322-328	plates	Material-target	Descriptor-of|Descriptor-of|Descriptor-of|Value-of|Value-of	2-42|2-44|2-46|2-50[6_0]|2-59[7_0]	
+2-48	328-329	,	_	_	_	
+2-49	330-339	typically	_	_	_	
+2-50	340-341	3	Value[6]	_	_	
+2-51	342-344	to	Value[6]	_	_	
+2-52	345-346	5	Value[6]	_	_	
+2-53	347-349	mm	Value[6]	_	_	
+2-54	350-352	on	Value[6]	_	_	
+2-55	353-354	a	Value[6]	_	_	
+2-56	355-359	side	Value[6]	_	_	
+2-57	360-363	and	_	_	_	
+2-58	364-369	about	_	_	_	
+2-59	370-371	1	Value[7]	Descriptor-of	2-61[0_7]	
+2-60	372-374	mm	Value[7]	_	_	
+2-61	375-380	thick	Descriptor	_	_	
+2-62	380-381	.	_	_	_	
+
+#Text=The crystals
+#Text=extinguish well under polarized light and are dichroic.
+3-1	382-385	The	_	_	_	
+3-2	386-394	crystals	_	_	_	
+3-3	395-405	extinguish	_	_	_	
+3-4	406-410	well	_	_	_	
+3-5	411-416	under	_	_	_	
+3-6	417-426	polarized	_	_	_	
+3-7	427-432	light	_	_	_	
+3-8	433-436	and	_	_	_	
+3-9	437-440	are	_	_	_	
+3-10	441-449	dichroic	_	_	_	
+3-11	449-450	.	_	_	_	

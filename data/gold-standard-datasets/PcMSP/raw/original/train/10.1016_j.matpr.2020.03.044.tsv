@@ -1,0 +1,89 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of GeTe have been obtained via arc-melting of a stoichiometric mixture of the pure elements, Ge (Alfa Aesar, 99.999%), Sn (Alfa Aesar 99.8%) and Te (Alfa Aesar, 99.99%) in an Edmund Buhler MAM-1 mini-arc-furnace.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-31	GeTe	Material-target	Descriptor-of	1-1	
+1-5	32-36	have	_	_	_	
+1-6	37-41	been	_	_	_	
+1-7	42-50	obtained	Operation	Coreference|Participant-material	1-9|1-4	
+1-8	51-54	via	_	_	_	
+1-9	55-66	arc-melting	Operation	Participant-material|Device-of-operation	1-13|1-48	
+1-10	67-69	of	_	_	_	
+1-11	70-71	a	_	_	_	
+1-12	72-86	stoichiometric	Value	_	_	
+1-13	87-94	mixture	Material-recipe	Value-of|Coreference	1-12|1-16[1_0]	
+1-14	95-97	of	_	_	_	
+1-15	98-101	the	_	_	_	
+1-16	102-106	pure	Material-recipe[1]	Coreference|Coreference|Coreference	1-19[0_1]|1-27[0_1]|1-34[0_1]	
+1-17	107-115	elements	Material-recipe[1]	_	_	
+1-18	115-116	,	_	_	_	
+1-19	117-119	Ge	Material-recipe	Brand-of|Value-of	1-21[2_0]|1-24	
+1-20	120-121	(	_	_	_	
+1-21	121-125	Alfa	Brand[2]	_	_	
+1-22	126-131	Aesar	Brand[2]	_	_	
+1-23	131-132	,	_	_	_	
+1-24	133-140	99.999%	Value	_	_	
+1-25	140-141	)	_	_	_	
+1-26	141-142	,	_	_	_	
+1-27	143-145	Sn	Material-recipe	Brand-of|Value-of	1-29[3_0]|1-31	
+1-28	146-147	(	_	_	_	
+1-29	147-151	Alfa	Brand[3]	_	_	
+1-30	152-157	Aesar	Brand[3]	_	_	
+1-31	158-163	99.8%	Value	_	_	
+1-32	163-164	)	_	_	_	
+1-33	165-168	and	_	_	_	
+1-34	169-171	Te	Material-recipe	Brand-of|Value-of	1-36[4_0]|1-39	
+1-35	172-173	(	_	_	_	
+1-36	173-177	Alfa	Brand[4]	_	_	
+1-37	178-183	Aesar	Brand[4]	_	_	
+1-38	183-184	,	_	_	_	
+1-39	185-191	99.99%	Value	_	_	
+1-40	191-192	)	_	_	_	
+1-41	193-195	in	_	_	_	
+1-42	196-198	an	Value	_	_	
+1-43	199-205	Edmund	Brand[5]	_	_	
+1-44	206-212	Buhler	Brand[5]	_	_	
+1-45	213-216	MAM	Descriptor[6]	_	_	
+1-46	216-217	-	Descriptor[6]	_	_	
+1-47	217-218	1	Descriptor[6]	_	_	
+1-48	219-235	mini-arc-furnace	Device	Descriptor-of|Brand-of|Value-of	1-45[6_0]|1-43[5_0]|1-42	
+1-49	235-236	.	_	_	_	
+
+#Text=The reagents were ground for 10 min in an agate mortar and cold-pressed before the melting process, which was performed under inert Ar atmosphere in a water-cooled Cu crucible.
+2-1	237-240	The	_	_	_	
+2-2	241-249	reagents	Material-recipe	_	_	
+2-3	250-254	were	_	_	_	
+2-4	255-261	ground	Operation	Participant-material|Condition-of|Device-of-operation|Next-operation	2-2|2-6[7_0]|2-12|2-14	
+2-5	262-265	for	_	_	_	
+2-6	266-268	10	Property-time[7]	_	_	
+2-7	268-269	 	Property-time[7]	_	_	
+2-8	269-272	min	Property-time[7]	_	_	
+2-9	273-275	in	_	_	_	
+2-10	276-278	an	Value	_	_	
+2-11	279-284	agate	Descriptor	_	_	
+2-12	285-291	mortar	Device	Descriptor-of|Value-of	2-11|2-10	
+2-13	292-295	and	_	_	_	
+2-14	296-308	cold-pressed	Operation	Next-operation	2-17	
+2-15	309-315	before	_	_	_	
+2-16	316-319	the	_	_	_	
+2-17	320-327	melting	Operation	Condition-of|Device-of-operation|Coreference	2-24[8_0]|2-31|2-22	
+2-18	328-335	process	_	_	_	
+2-19	335-336	,	_	_	_	
+2-20	337-342	which	_	_	_	
+2-21	343-346	was	_	_	_	
+2-22	347-356	performed	Operation	_	_	
+2-23	357-362	under	_	_	_	
+2-24	363-368	inert	Property-pressure[8]	_	_	
+2-25	369-371	Ar	Property-pressure[8]	_	_	
+2-26	372-382	atmosphere	Property-pressure[8]	_	_	
+2-27	383-385	in	_	_	_	
+2-28	386-387	a	Value	_	_	
+2-29	388-400	water-cooled	Descriptor	_	_	
+2-30	401-403	Cu	Descriptor	_	_	
+2-31	404-412	crucible	Device	Descriptor-of|Descriptor-of|Value-of	2-30|2-29|2-28	
+2-32	412-413	.	_	_	_	

@@ -1,0 +1,241 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of 6H-B Ba3NiSb2O9 were synthesized by treatment under HPHT of 6H-A Ba3NiSb2O9.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-31	6H-B	Descriptor	_	_	
+1-5	32-42	Ba3NiSb2O9	Material-target	Descriptor-of|Descriptor-of	1-1|1-4	
+1-6	43-47	were	_	_	_	
+1-7	48-59	synthesized	Operation	Participant-material	1-5	
+1-8	60-62	by	_	_	_	
+1-9	63-72	treatment	Operation[1]	_	_	
+1-10	73-78	under	Operation[1]	_	_	
+1-11	79-83	HPHT	Operation[1]	_	_	
+1-12	84-86	of	Operation[1]	_	_	
+1-13	87-91	6H-A	Operation[1]	_	_	
+1-14	92-102	Ba3NiSb2O9	Operation[1]	_	_	
+1-15	102-103	.	_	_	_	
+
+#Text=The ambient pressure 6H-A form was prepared by a conventional solid-state reaction.
+2-1	104-107	The	_	_	_	
+2-2	108-115	ambient	_	_	_	
+2-3	116-124	pressure	_	_	_	
+2-4	125-129	6H-A	_	_	_	
+2-5	130-134	form	_	_	_	
+2-6	135-138	was	_	_	_	
+2-7	139-147	prepared	_	_	_	
+2-8	148-150	by	_	_	_	
+2-9	151-152	a	_	_	_	
+2-10	153-165	conventional	_	_	_	
+2-11	166-177	solid-state	_	_	_	
+2-12	178-186	reaction	_	_	_	
+2-13	186-187	.	_	_	_	
+
+#Text=First NiSb2O6 was prepared by reaction of NiO (Strem, 99.99%) and Sb2O5 (Alfa, 99.998 %) in air at 1000 °C.
+3-1	188-193	First	_	_	_	
+3-2	194-201	NiSb2O6	Material-intermedium	_	_	
+3-3	202-205	was	_	_	_	
+3-4	206-214	prepared	Operation	Participant-material	3-2	
+3-5	215-217	by	_	_	_	
+3-6	218-226	reaction	Operation	Condition-of|Condition-of|Participant-material|Participant-material|Coreference	3-23|3-25[3_0]|3-8|3-15|3-4	
+3-7	227-229	of	_	_	_	
+3-8	230-233	NiO	Material-recipe	Brand-of|Value-of	3-10|3-12	
+3-9	234-235	(	_	_	_	
+3-10	235-240	Strem	Brand	_	_	
+3-11	240-241	,	_	_	_	
+3-12	242-248	99.99%	Value	_	_	
+3-13	248-249	)	_	_	_	
+3-14	250-253	and	_	_	_	
+3-15	254-259	Sb2O5	Material-recipe	Brand-of|Value-of	3-17|3-19[2_0]	
+3-16	260-261	(	_	_	_	
+3-17	261-265	Alfa	Brand	_	_	
+3-18	265-266	,	_	_	_	
+3-19	267-273	99.998	Value[2]	_	_	
+3-20	274-275	%	Value[2]	_	_	
+3-21	275-276	)	_	_	_	
+3-22	277-279	in	_	_	_	
+3-23	280-283	air	Property-time	_	_	
+3-24	284-286	at	_	_	_	
+3-25	287-291	1000	Property-temperature[3]	_	_	
+3-26	292-293	°	Property-temperature[3]	_	_	
+3-27	293-294	C	Property-temperature[3]	_	_	
+3-28	294-295	.	_	_	_	
+
+#Text=Stoichiometric amounts of BaCO3 (Aldrich, 99.98 %) and NiSb2O6 were then heated at 1000°C for 68 h and 1200 °C for 70h in air with an intermediate regrinding [14].
+4-1	296-310	Stoichiometric	Value[4]	_	_	
+4-2	311-318	amounts	Value[4]	_	_	
+4-3	319-321	of	_	_	_	
+4-4	322-327	BaCO3	Material-recipe	Value-of|Brand-of|Value-of	4-1[4_0]|4-6|4-8[5_0]	
+4-5	328-329	(	_	_	_	
+4-6	329-336	Aldrich	Brand	_	_	
+4-7	336-337	,	_	_	_	
+4-8	338-343	99.98	Value[5]	_	_	
+4-9	344-345	%	Value[5]	_	_	
+4-10	345-346	)	_	_	_	
+4-11	347-350	and	_	_	_	
+4-12	351-358	NiSb2O6	Material-intermedium	Value-of	4-1[4_0]	
+4-13	359-363	were	_	_	_	
+4-14	364-368	then	_	_	_	
+4-15	369-375	heated	Operation	Condition-of|Condition-of|Participant-material|Participant-material|Next-operation|Condition-of|Condition-of|Condition-of	4-17[6_0]|4-21[7_0]|4-12|4-4|4-34|4-24[8_0]|4-28|4-30	
+4-16	376-378	at	_	_	_	
+4-17	379-383	1000	Property-temperature[6]	_	_	
+4-18	383-384	°	Property-temperature[6]	_	_	
+4-19	384-385	C	Property-temperature[6]	_	_	
+4-20	386-389	for	_	_	_	
+4-21	390-392	68	Property-time[7]	_	_	
+4-22	393-394	h	Property-time[7]	_	_	
+4-23	395-398	and	_	_	_	
+4-24	399-403	1200	Property-temperature[8]	_	_	
+4-25	404-405	°	Property-temperature[8]	_	_	
+4-26	405-406	C	Property-temperature[8]	_	_	
+4-27	407-410	for	_	_	_	
+4-28	411-414	70h	Property-time	_	_	
+4-29	415-417	in	_	_	_	
+4-30	418-421	air	Property-pressure	_	_	
+4-31	422-426	with	_	_	_	
+4-32	427-429	an	Value	_	_	
+4-33	430-442	intermediate	Descriptor	_	_	
+4-34	443-453	regrinding	Operation	Value-of|Descriptor-of	4-32|4-33	
+4-35	454-455	[	_	_	_	
+4-36	455-457	14	_	_	_	
+4-37	457-458	]	_	_	_	
+4-38	458-459	.	_	_	_	
+
+#Text=Samples of the 6H-A phase were characterized by powder Xray diffraction (XRPD) on a Bruker D8 Advance instrument using monochromatic Cu-K α1 (λ= 1.540598 Å) radiation.
+5-1	460-467	Samples	_	_	_	
+5-2	468-470	of	_	_	_	
+5-3	471-474	the	_	_	_	
+5-4	475-479	6H-A	_	_	_	
+5-5	480-485	phase	_	_	_	
+5-6	486-490	were	_	_	_	
+5-7	491-504	characterized	_	_	_	
+5-8	505-507	by	_	_	_	
+5-9	508-514	powder	_	_	_	
+5-10	515-519	Xray	_	_	_	
+5-11	520-531	diffraction	_	_	_	
+5-12	532-533	(	_	_	_	
+5-13	533-537	XRPD	_	_	_	
+5-14	537-538	)	_	_	_	
+5-15	539-541	on	_	_	_	
+5-16	542-543	a	_	_	_	
+5-17	544-550	Bruker	_	_	_	
+5-18	551-553	D8	_	_	_	
+5-19	554-561	Advance	_	_	_	
+5-20	562-572	instrument	_	_	_	
+5-21	573-578	using	_	_	_	
+5-22	579-592	monochromatic	_	_	_	
+5-23	593-597	Cu-K	_	_	_	
+5-24	598-600	α1	_	_	_	
+5-25	601-602	(	_	_	_	
+5-26	602-603	λ	_	_	_	
+5-27	603-604	=	_	_	_	
+5-28	605-613	1.540598	_	_	_	
+5-29	614-615	Å	_	_	_	
+5-30	615-616	)	_	_	_	
+5-31	617-626	radiation	_	_	_	
+5-32	626-627	.	_	_	_	
+
+#Text=Pure samples of 6H-A Ba3NiSb2O9 were then packed into gold capsules and heated in either a belt or a Conac 28 anvil-type apparatus.
+6-1	628-632	Pure	Descriptor	_	_	
+6-2	633-640	samples	_	_	_	
+6-3	641-643	of	_	_	_	
+6-4	644-648	6H-A	Descriptor	_	_	
+6-5	649-659	Ba3NiSb2O9	Material-intermedium	Descriptor-of|Descriptor-of	6-4|6-1	
+6-6	660-664	were	_	_	_	
+6-7	665-669	then	_	_	_	
+6-8	670-676	packed	Operation	Participant-material|Device-of-operation|Next-operation	6-5|6-11|6-13	
+6-9	677-681	into	_	_	_	
+6-10	682-686	gold	Descriptor	_	_	
+6-11	687-695	capsules	Device	Descriptor-of	6-10	
+6-12	696-699	and	_	_	_	
+6-13	700-706	heated	Operation	Device-of-operation|Device-of-operation	6-17|6-20[9_0]	
+6-14	707-709	in	_	_	_	
+6-15	710-716	either	_	_	_	
+6-16	717-718	a	Value	_	_	
+6-17	719-723	belt	Device	Value-of	6-16	
+6-18	724-726	or	_	_	_	
+6-19	727-728	a	Value	_	_	
+6-20	729-734	Conac	Device[9]	Value-of	6-19[0_9]	
+6-21	735-737	28	Device[9]	_	_	
+6-22	738-748	anvil-type	Device[9]	_	_	
+6-23	749-758	apparatus	Device[9]	_	_	
+6-24	758-759	.	_	_	_	
+
+#Text=The latter device allows elaborating a larger amount of powder ( 350mg) in a single experiment.
+7-1	760-763	The	_	_	_	
+7-2	764-770	latter	_	_	_	
+7-3	771-777	device	_	_	_	
+7-4	778-784	allows	_	_	_	
+7-5	785-796	elaborating	_	_	_	
+7-6	797-798	a	_	_	_	
+7-7	799-805	larger	_	_	_	
+7-8	806-812	amount	_	_	_	
+7-9	813-815	of	_	_	_	
+7-10	816-822	powder	_	_	_	
+7-11	823-824	(	_	_	_	
+7-12	824-825		_	_	_	
+7-13	826-831	350mg	_	_	_	
+7-14	831-832	)	_	_	_	
+7-15	833-835	in	_	_	_	
+7-16	836-837	a	_	_	_	
+7-17	838-844	single	_	_	_	
+7-18	845-855	experiment	_	_	_	
+7-19	855-856	.	_	_	_	
+
+#Text=Several syntheses were performed with the belt anvil system in order to determine the best conditions for the syntheses.
+8-1	857-864	Several	_	_	_	
+8-2	865-874	syntheses	_	_	_	
+8-3	875-879	were	_	_	_	
+8-4	880-889	performed	_	_	_	
+8-5	890-894	with	_	_	_	
+8-6	895-898	the	_	_	_	
+8-7	899-903	belt	_	_	_	
+8-8	904-909	anvil	_	_	_	
+8-9	910-916	system	_	_	_	
+8-10	917-919	in	_	_	_	
+8-11	920-925	order	_	_	_	
+8-12	926-928	to	_	_	_	
+8-13	929-938	determine	_	_	_	
+8-14	939-942	the	_	_	_	
+8-15	943-947	best	_	_	_	
+8-16	948-958	conditions	_	_	_	
+8-17	959-962	for	_	_	_	
+8-18	963-966	the	_	_	_	
+8-19	967-976	syntheses	_	_	_	
+8-20	976-977	.	_	_	_	
+
+#Text=The explored condition range was between 2 and 4 GPa and 400°C to 680°C.
+9-1	978-981	The	_	_	_	
+9-2	982-990	explored	Descriptor	_	_	
+9-3	991-1000	condition	Operation	Condition-of|Condition-of|Descriptor-of	9-6[10_0]|9-12[11_0]|9-2	
+9-4	1001-1006	range	_	_	_	
+9-5	1007-1010	was	_	_	_	
+9-6	1011-1018	between	Property-pressure[10]	_	_	
+9-7	1019-1020	2	Property-pressure[10]	_	_	
+9-8	1021-1024	and	Property-pressure[10]	_	_	
+9-9	1025-1026	4	Property-pressure[10]	_	_	
+9-10	1027-1030	GPa	Property-pressure[10]	_	_	
+9-11	1031-1034	and	_	_	_	
+9-12	1035-1038	400	Property-temperature[11]	_	_	
+9-13	1038-1039	°	Property-temperature[11]	_	_	
+9-14	1039-1040	C	Property-temperature[11]	_	_	
+9-15	1041-1043	to	Property-temperature[11]	_	_	
+9-16	1044-1047	680	Property-temperature[11]	_	_	
+9-17	1047-1048	°	Property-temperature[11]	_	_	
+9-18	1048-1049	C	Property-temperature[11]	_	_	
+9-19	1049-1050	.	_	_	_	
+
+#Text=The resulting phases were characterized by XRPD analysis.
+10-1	1051-1054	The	_	_	_	
+10-2	1055-1064	resulting	_	_	_	
+10-3	1065-1071	phases	_	_	_	
+10-4	1072-1076	were	_	_	_	
+10-5	1077-1090	characterized	_	_	_	
+10-6	1091-1093	by	_	_	_	
+10-7	1094-1098	XRPD	_	_	_	
+10-8	1099-1107	analysis	_	_	_	
+10-9	1107-1108	.	_	_	_	

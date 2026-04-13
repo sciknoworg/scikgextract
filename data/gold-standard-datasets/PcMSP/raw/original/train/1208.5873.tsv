@@ -1,0 +1,201 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline PrO0.5F0.5BiS2 is synthesized by standard solid state reaction route via vacuum encapsulation.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-30	PrO0.5F0.5BiS2	Material-target	Descriptor-of	1-1	
+1-3	31-33	is	_	_	_	
+1-4	34-45	synthesized	Operation	Coreference|Participant-material	1-6[1_0]|1-2	
+1-5	46-48	by	_	_	_	
+1-6	49-57	standard	Operation[1]	Descriptor-of	1-12[2_1]	
+1-7	58-63	solid	Operation[1]	_	_	
+1-8	64-69	state	Operation[1]	_	_	
+1-9	70-78	reaction	Operation[1]	_	_	
+1-10	79-84	route	Operation[1]	_	_	
+1-11	85-88	via	_	_	_	
+1-12	89-95	vacuum	Descriptor[2]	_	_	
+1-13	96-109	encapsulation	Descriptor[2]	_	_	
+1-14	109-110	.	_	_	_	
+
+#Text=High purity Pr, Bi, S, PrF3, and Pr6O11 are weighed in stoichiometric ratio and ground thoroughly in a glove box under high purity argon atmosphere.
+2-1	111-115	High	Descriptor[3]	_	_	
+2-2	116-122	purity	Descriptor[3]	_	_	
+2-3	123-125	Pr	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-16[4_0]	
+2-4	125-126	,	_	_	_	
+2-5	127-129	Bi	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-16[4_0]	
+2-6	129-130	,	_	_	_	
+2-7	131-132	S	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-16[4_0]	
+2-8	132-133	,	_	_	_	
+2-9	134-138	PrF3	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-16[4_0]	
+2-10	138-139	,	_	_	_	
+2-11	140-143	and	_	_	_	
+2-12	144-150	Pr6O11	Material-recipe	Descriptor-of|Value-of	2-1[3_0]|2-16[4_0]	
+2-13	151-154	are	_	_	_	
+2-14	155-162	weighed	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Next-operation	2-12|2-9|2-7|2-5|2-19	
+2-15	163-165	in	_	_	_	
+2-16	166-180	stoichiometric	Value[4]	_	_	
+2-17	181-186	ratio	Value[4]	_	_	
+2-18	187-190	and	_	_	_	
+2-19	191-197	ground	Operation	Descriptor-of|Device-of-operation|Condition-of	2-20|2-23[5_0]|2-28[7_0]	
+2-20	198-208	thoroughly	Descriptor	_	_	
+2-21	209-211	in	_	_	_	
+2-22	212-213	a	Value	_	_	
+2-23	214-219	glove	Device[5]	Value-of	2-22[0_5]	
+2-24	220-223	box	Device[5]	_	_	
+2-25	224-229	under	_	_	_	
+2-26	230-234	high	Descriptor[6]	_	_	
+2-27	235-241	purity	Descriptor[6]	_	_	
+2-28	242-247	argon	Property-pressure[7]	Descriptor-of	2-26[6_7]	
+2-29	248-258	atmosphere	Property-pressure[7]	_	_	
+2-30	258-259	.	_	_	_	
+
+#Text=The mixed powders are subsequently palletized and vacuum-sealed (10-4 Torr) in a quartz tube.
+3-1	260-263	The	_	_	_	
+3-2	264-269	mixed	Descriptor	_	_	
+3-3	270-277	powders	Material-intermedium	Descriptor-of	3-2	
+3-4	278-281	are	_	_	_	
+3-5	282-294	subsequently	_	_	_	
+3-6	295-305	palletized	Operation	Participant-material|Next-operation	3-3|3-8	
+3-7	306-309	and	_	_	_	
+3-8	310-323	vacuum-sealed	Operation	Condition-of|Device-of-operation	3-10[8_0]|3-18	
+3-9	324-325	(	_	_	_	
+3-10	325-327	10	Property-pressure[8]	_	_	
+3-11	327-328	-	Property-pressure[8]	_	_	
+3-12	328-329	4	Property-pressure[8]	_	_	
+3-13	330-334	Torr	Property-pressure[8]	_	_	
+3-14	334-335	)	_	_	_	
+3-15	336-338	in	_	_	_	
+3-16	339-340	a	Value	_	_	
+3-17	341-347	quartz	Descriptor	_	_	
+3-18	348-352	tube	Device	Descriptor-of|Value-of	3-17|3-16	
+3-19	352-353	.	_	_	_	
+
+#Text=Sealed quartz ampoule is placed in furnace and heat treated at 780 0C for 12h with the typical heating rate of 2oC/min., and subsequently cooled down slowly over a span of six hours to room temperature.
+4-1	354-360	Sealed	Descriptor	_	_	
+4-2	361-367	quartz	Descriptor	_	_	
+4-3	368-375	ampoule	Device	Descriptor-of|Descriptor-of	4-1|4-2	
+4-4	376-378	is	_	_	_	
+4-5	379-385	placed	Operation	Device-of-operation|Device-of-operation|Next-operation	4-3|4-7|4-9[9_0]	
+4-6	386-388	in	_	_	_	
+4-7	389-396	furnace	Device	_	_	
+4-8	397-400	and	_	_	_	
+4-9	401-405	heat	Operation[9]	Condition-of|Condition-of|Condition-of|Next-operation	4-12[10_9]|4-15[0_9]|4-22[12_9]|4-29[0_9]	
+4-10	406-413	treated	Operation[9]	_	_	
+4-11	414-416	at	_	_	_	
+4-12	417-420	780	Property-temperature[10]	_	_	
+4-13	421-423	0C	Property-temperature[10]	_	_	
+4-14	424-427	for	_	_	_	
+4-15	428-431	12h	Property-time	_	_	
+4-16	432-436	with	_	_	_	
+4-17	437-440	the	_	_	_	
+4-18	441-448	typical	_	_	_	
+4-19	449-456	heating	Property-rate[11]	_	_	
+4-20	457-461	rate	Property-rate[11]	_	_	
+4-21	462-464	of	_	_	_	
+4-22	465-468	2oC	Property-rate[12]	Coreference	4-19[11_12]	
+4-23	468-469	/	Property-rate[12]	_	_	
+4-24	469-472	min	Property-rate[12]	_	_	
+4-25	472-473	.	_	_	_	
+4-26	473-474	,	_	_	_	
+4-27	475-478	and	_	_	_	
+4-28	479-491	subsequently	_	_	_	
+4-29	492-498	cooled	Operation	Descriptor-of|Condition-of|Condition-of	4-31|4-36[13_0]|4-39[14_0]	
+4-30	499-503	down	_	_	_	
+4-31	504-510	slowly	Descriptor	_	_	
+4-32	511-515	over	_	_	_	
+4-33	516-517	a	_	_	_	
+4-34	518-522	span	_	_	_	
+4-35	523-525	of	_	_	_	
+4-36	526-529	six	Property-time[13]	_	_	
+4-37	530-535	hours	Property-time[13]	_	_	
+4-38	536-538	to	_	_	_	
+4-39	539-543	room	Property-temperature[14]	_	_	
+4-40	544-555	temperature	Property-temperature[14]	_	_	
+4-41	555-556	.	_	_	_	
+
+#Text=Thus processed compound was repelletized and sealed in quartz tube and heat treated in similar way.
+5-1	557-561	Thus	_	_	_	
+5-2	562-571	processed	Descriptor	_	_	
+5-3	572-580	compound	Material-intermedium	Descriptor-of	5-2	
+5-4	581-584	was	_	_	_	
+5-5	585-597	repelletized	Operation	Participant-material|Next-operation	5-3|5-7	
+5-6	598-601	and	_	_	_	
+5-7	602-608	sealed	Operation	Device-of-operation|Next-operation	5-10|5-12[15_0]	
+5-8	609-611	in	_	_	_	
+5-9	612-618	quartz	Descriptor	_	_	
+5-10	619-623	tube	Device	Descriptor-of	5-9	
+5-11	624-627	and	_	_	_	
+5-12	628-632	heat	Operation[15]	Descriptor-of	5-15[16_15]	
+5-13	633-640	treated	Operation[15]	_	_	
+5-14	641-643	in	_	_	_	
+5-15	644-651	similar	Descriptor[16]	_	_	
+5-16	652-655	way	Descriptor[16]	_	_	
+5-17	655-656	.	_	_	_	
+
+#Text=X-ray diffraction (XRD) was performed at room temperature using Rigaku Diffractometer with Cu Kα (λ = 1.54Å).
+6-1	657-662	X-ray	_	_	_	
+6-2	663-674	diffraction	_	_	_	
+6-3	675-676	(	_	_	_	
+6-4	676-679	XRD	_	_	_	
+6-5	679-680	)	_	_	_	
+6-6	681-684	was	_	_	_	
+6-7	685-694	performed	_	_	_	
+6-8	695-697	at	_	_	_	
+6-9	698-702	room	_	_	_	
+6-10	703-714	temperature	_	_	_	
+6-11	715-720	using	_	_	_	
+6-12	721-727	Rigaku	_	_	_	
+6-13	728-742	Diffractometer	_	_	_	
+6-14	743-747	with	_	_	_	
+6-15	748-750	Cu	_	_	_	
+6-16	751-753	Kα	_	_	_	
+6-17	754-755	(	_	_	_	
+6-18	755-756	λ	_	_	_	
+6-19	757-758	=	_	_	_	
+6-20	759-764	1.54Å	_	_	_	
+6-21	764-765	)	_	_	_	
+6-22	765-766	.	_	_	_	
+
+#Text=Rietveld analysis was carried out using the FullProf program.
+7-1	767-775	Rietveld	_	_	_	
+7-2	776-784	analysis	_	_	_	
+7-3	785-788	was	_	_	_	
+7-4	789-796	carried	_	_	_	
+7-5	797-800	out	_	_	_	
+7-6	801-806	using	_	_	_	
+7-7	807-810	the	_	_	_	
+7-8	811-819	FullProf	_	_	_	
+7-9	820-827	program	_	_	_	
+7-10	827-828	.	_	_	_	
+
+#Text=Detailed electrical transport, AC/DC magnetization and Heat capacity measurements were performed on Physical Property Measurements System (PPMS-14T), Quantum Design.
+8-1	829-837	Detailed	_	_	_	
+8-2	838-848	electrical	_	_	_	
+8-3	849-858	transport	_	_	_	
+8-4	858-859	,	_	_	_	
+8-5	860-862	AC	_	_	_	
+8-6	862-863	/	_	_	_	
+8-7	863-865	DC	_	_	_	
+8-8	866-879	magnetization	_	_	_	
+8-9	880-883	and	_	_	_	
+8-10	884-888	Heat	_	_	_	
+8-11	889-897	capacity	_	_	_	
+8-12	898-910	measurements	_	_	_	
+8-13	911-915	were	_	_	_	
+8-14	916-925	performed	_	_	_	
+8-15	926-928	on	_	_	_	
+8-16	929-937	Physical	_	_	_	
+8-17	938-946	Property	_	_	_	
+8-18	947-959	Measurements	_	_	_	
+8-19	960-966	System	_	_	_	
+8-20	967-968	(	_	_	_	
+8-21	968-972	PPMS	_	_	_	
+8-22	972-973	-	_	_	_	
+8-23	973-976	14T	_	_	_	
+8-24	976-977	)	_	_	_	
+8-25	977-978	,	_	_	_	
+8-26	979-986	Quantum	_	_	_	
+8-27	987-993	Design	_	_	_	
+8-28	993-994	.	_	_	_	

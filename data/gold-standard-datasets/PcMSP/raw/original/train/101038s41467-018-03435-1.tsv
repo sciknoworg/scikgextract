@@ -1,0 +1,96 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline powders of Sr2Cu(Te0.5W0.5)O6, Sr2CuTeO6 and Sr2CuWO6 were prepared by a solid-state reaction method.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	powders	Descriptor	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-32	Sr2Cu	Material-target[1]	Descriptor-of|Descriptor-of	1-1[0_1]|1-2[0_1]	
+1-5	32-33	(	Material-target[1]	_	_	
+1-6	33-42	Te0.5W0.5	Material-target[1]	_	_	
+1-7	42-43	)	Material-target[1]	_	_	
+1-8	43-45	O6	Material-target[1]	_	_	
+1-9	45-46	,	_	_	_	
+1-10	47-56	Sr2CuTeO6	Material-target	Descriptor-of|Descriptor-of	1-1|1-2	
+1-11	57-60	and	_	_	_	
+1-12	61-69	Sr2CuWO6	Material-target	Descriptor-of|Descriptor-of	1-1|1-2	
+1-13	70-74	were	_	_	_	
+1-14	75-83	prepared	Operation	Participant-material|Participant-material|Participant-material	1-12|1-10|1-4[1_0]	
+1-15	84-86	by	_	_	_	
+1-16	87-88	a	_	_	_	
+1-17	89-100	solid-state	Operation[2]	Coreference	1-14[0_2]	
+1-18	101-109	reaction	Operation[2]	_	_	
+1-19	110-116	method	_	_	_	
+1-20	116-117	.	_	_	_	
+
+#Text=Stoichiometric amounts of SrCO3, CuO, TeO2 and WO3 (all 99.995% or greater purity, Alfa Aesar) were thoroughly ground in an agate mortar with ethanol.
+2-1	118-132	Stoichiometric	Value[3]	_	_	
+2-2	133-140	amounts	Value[3]	_	_	
+2-3	141-143	of	_	_	_	
+2-4	144-149	SrCO3	Material-recipe	Value-of|Value-of|Brand-of	2-1[3_0]|2-13[4_0]|2-18[5_0]	
+2-5	149-150	,	_	_	_	
+2-6	151-154	CuO	Material-recipe	Value-of|Value-of|Brand-of	2-1[3_0]|2-13[4_0]|2-18[5_0]	
+2-7	154-155	,	_	_	_	
+2-8	156-160	TeO2	Material-recipe	Value-of|Value-of|Brand-of	2-1[3_0]|2-13[4_0]|2-18[5_0]	
+2-9	161-164	and	_	_	_	
+2-10	165-168	WO3	Material-recipe	Value-of|Value-of|Brand-of	2-1[3_0]|2-13[4_0]|2-18[5_0]	
+2-11	169-170	(	_	_	_	
+2-12	170-173	all	_	_	_	
+2-13	174-181	99.995%	Value[4]	_	_	
+2-14	182-184	or	Value[4]	_	_	
+2-15	185-192	greater	Value[4]	_	_	
+2-16	193-199	purity	_	_	_	
+2-17	199-200	,	_	_	_	
+2-18	201-205	Alfa	Brand[5]	_	_	
+2-19	206-211	Aesar	Brand[5]	_	_	
+2-20	211-212	)	_	_	_	
+2-21	213-217	were	_	_	_	
+2-22	218-228	thoroughly	Descriptor	_	_	
+2-23	229-235	ground	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Participant-material|Participant-material|Device-of-operation	2-22|2-29|2-4|2-6|2-8|2-10|2-27	
+2-24	236-238	in	_	_	_	
+2-25	239-241	an	Value	_	_	
+2-26	242-247	agate	Descriptor	_	_	
+2-27	248-254	mortar	Device	Descriptor-of|Value-of	2-26|2-25	
+2-28	255-259	with	_	_	_	
+2-29	260-267	ethanol	Material-others	_	_	
+2-30	267-268	.	_	_	_	
+
+#Text=The samples were calcined at 900 °C in air for 12 h, thoroughly ground, pressed into pellets, and fired at 1050 °C in air for 72 h with intermittent grindings.
+3-1	269-272	The	_	_	_	
+3-2	273-280	samples	Material-intermedium	_	_	
+3-3	281-285	were	_	_	_	
+3-4	286-294	calcined	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Next-operation	3-2|3-6[6_0]|3-9[7_0]|3-12[8_0]|3-16	
+3-5	295-297	at	_	_	_	
+3-6	298-301	900	Property-temperature[6]	_	_	
+3-7	302-303	°	Property-temperature[6]	_	_	
+3-8	303-304	C	Property-temperature[6]	_	_	
+3-9	305-307	in	Property-pressure[7]	_	_	
+3-10	308-311	air	Property-pressure[7]	_	_	
+3-11	312-315	for	_	_	_	
+3-12	316-318	12	Property-time[8]	_	_	
+3-13	319-320	h	Property-time[8]	_	_	
+3-14	320-321	,	_	_	_	
+3-15	322-332	thoroughly	Descriptor	_	_	
+3-16	333-339	ground	Operation	Descriptor-of	3-15	
+3-17	339-340	,	_	_	_	
+3-18	341-348	pressed	Operation	Next-operation|Next-operation	3-16|3-23	
+3-19	349-353	into	_	_	_	
+3-20	354-361	pellets	Material-intermedium	_	_	
+3-21	361-362	,	_	_	_	
+3-22	363-366	and	_	_	_	
+3-23	367-372	fired	Operation	Condition-of|Condition-of|Condition-of|Participant-material|Next-operation	3-25[9_0]|3-28[10_0]|3-31[11_0]|3-20|3-35	
+3-24	373-375	at	_	_	_	
+3-25	376-380	1050	Property-temperature[9]	_	_	
+3-26	381-382	°	Property-temperature[9]	_	_	
+3-27	382-383	C	Property-temperature[9]	_	_	
+3-28	384-386	in	Property-pressure[10]	_	_	
+3-29	387-390	air	Property-pressure[10]	_	_	
+3-30	391-394	for	_	_	_	
+3-31	395-397	72	Property-time[11]	_	_	
+3-32	398-399	h	Property-time[11]	_	_	
+3-33	400-404	with	_	_	_	
+3-34	405-417	intermittent	Descriptor	_	_	
+3-35	418-427	grindings	Operation	Descriptor-of	3-34	
+3-36	427-428	.	_	_	_	

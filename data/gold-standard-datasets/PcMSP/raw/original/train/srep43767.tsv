@@ -1,0 +1,220 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline Sr2Co3S2O3 was synthesized by solid state reaction using SrO, Co (Alfa Aesar 99.8%), Co3O4 (Alfa Aesar 99.7%) and S (Alfa Aesar 99.95%) as starting materials.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-26	Sr2Co3S2O3	Material-target	Descriptor-of	1-1	
+1-3	27-30	was	_	_	_	
+1-4	31-42	synthesized	Operation	Participant-material	1-2	
+1-5	43-45	by	_	_	_	
+1-6	46-51	solid	Operation[1]	Participant-material|Participant-material|Participant-material|Participant-material|Coreference	1-10[0_1]|1-12[0_1]|1-19[0_1]|1-26[0_1]|1-4[0_1]	
+1-7	52-57	state	Operation[1]	_	_	
+1-8	58-66	reaction	Operation[1]	_	_	
+1-9	67-72	using	_	_	_	
+1-10	73-76	SrO	Material-intermedium	Coreference	1-34	
+1-11	76-77	,	_	_	_	
+1-12	78-80	Co	Material-recipe	Brand-of|Value-of|Coreference	1-14[2_0]|1-16|1-34	
+1-13	81-82	(	_	_	_	
+1-14	82-86	Alfa	Brand[2]	_	_	
+1-15	87-92	Aesar	Brand[2]	_	_	
+1-16	93-98	99.8%	Value	_	_	
+1-17	98-99	)	_	_	_	
+1-18	99-100	,	_	_	_	
+1-19	101-106	Co3O4	Material-recipe	Brand-of|Value-of|Coreference	1-21[3_0]|1-23|1-34	
+1-20	107-108	(	_	_	_	
+1-21	108-112	Alfa	Brand[3]	_	_	
+1-22	113-118	Aesar	Brand[3]	_	_	
+1-23	119-124	99.7%	Value	_	_	
+1-24	124-125	)	_	_	_	
+1-25	126-129	and	_	_	_	
+1-26	130-131	S	Material-recipe	Brand-of|Value-of|Coreference	1-28[4_0]|1-30|1-34	
+1-27	132-133	(	_	_	_	
+1-28	133-137	Alfa	Brand[4]	_	_	
+1-29	138-143	Aesar	Brand[4]	_	_	
+1-30	144-150	99.95%	Value	_	_	
+1-31	150-151	)	_	_	_	
+1-32	152-154	as	_	_	_	
+1-33	155-163	starting	Descriptor	_	_	
+1-34	164-173	materials	Material-recipe	Descriptor-of	1-33	
+1-35	173-174	.	_	_	_	
+
+#Text=SrO was obtained by heating SrCO3 (Aldrich 99.9+%) at 1080 °C overnight at dymanic vacuum (<10−4 mbar).
+2-1	175-178	SrO	Material-intermedium	_	_	
+2-2	179-182	was	_	_	_	
+2-3	183-191	obtained	Operation	Participant-material	2-1	
+2-4	192-194	by	_	_	_	
+2-5	195-202	heating	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Coreference	2-6|2-14[6_0]|2-17|2-19[7_0]|2-3	
+2-6	203-208	SrCO3	Material-recipe	Brand-of|Value-of	2-8|2-9[5_0]	
+2-7	209-210	(	_	_	_	
+2-8	210-217	Aldrich	Brand	_	_	
+2-9	218-222	99.9	Value[5]	_	_	
+2-10	222-223	+	Value[5]	_	_	
+2-11	223-224	%	Value[5]	_	_	
+2-12	224-225	)	_	_	_	
+2-13	226-228	at	_	_	_	
+2-14	229-233	1080	Property-temperature[6]	_	_	
+2-15	234-235	°	Property-temperature[6]	_	_	
+2-16	235-236	C	Property-temperature[6]	_	_	
+2-17	237-246	overnight	Property-time	_	_	
+2-18	247-249	at	_	_	_	
+2-19	250-257	dymanic	Property-pressure[7]	_	_	
+2-20	258-264	vacuum	Property-pressure[7]	_	_	
+2-21	265-266	(	Property-pressure[7]	_	_	
+2-22	266-267	<	Property-pressure[7]	_	_	
+2-23	267-269	10	Property-pressure[7]	_	_	
+2-24	269-270	−	Property-pressure[7]	_	_	
+2-25	270-271	4	Property-pressure[7]	_	_	
+2-26	272-276	mbar	Property-pressure[7]	_	_	
+2-27	276-277	)	Property-pressure[7]	_	_	
+2-28	277-278	.	_	_	_	
+
+#Text=The starting materials were mixed to homogeneity inside a dry argon filled glovebox (O2, H2O < 1 ppm).
+3-1	279-282	The	_	_	_	
+3-2	283-291	starting	Material-intermedium[8]	_	_	
+3-3	292-301	materials	Material-intermedium[8]	_	_	
+3-4	302-306	were	_	_	_	
+3-5	307-312	mixed	Operation	Device-of-operation|Participant-material	3-13|3-2[8_0]	
+3-6	313-315	to	_	_	_	
+3-7	316-327	homogeneity	_	_	_	
+3-8	328-334	inside	_	_	_	
+3-9	335-336	a	Value	_	_	
+3-10	337-340	dry	Descriptor	_	_	
+3-11	341-346	argon	Descriptor[9]	_	_	
+3-12	347-353	filled	Descriptor[9]	_	_	
+3-13	354-362	glovebox	Device	Value-of|Descriptor-of|Descriptor-of|Descriptor-of	3-9|3-10|3-11[9_0]|3-15[10_0]	
+3-14	363-364	(	_	_	_	
+3-15	364-366	O2	Descriptor[10]	_	_	
+3-16	366-367	,	Descriptor[10]	_	_	
+3-17	368-371	H2O	Descriptor[10]	_	_	
+3-18	372-373	<	Descriptor[10]	_	_	
+3-19	374-375	1	Descriptor[10]	_	_	
+3-20	376-379	ppm	Descriptor[10]	_	_	
+3-21	379-380	)	_	_	_	
+3-22	380-381	.	_	_	_	
+
+#Text=The mixture was then pressed into pellets and inserted into an alumina crucible.
+4-1	382-385	The	_	_	_	
+4-2	386-393	mixture	Material-intermedium	_	_	
+4-3	394-397	was	_	_	_	
+4-4	398-402	then	_	_	_	
+4-5	403-410	pressed	Operation	Next-operation|Participant-material	4-9|4-2	
+4-6	411-415	into	_	_	_	
+4-7	416-423	pellets	Material-intermedium	_	_	
+4-8	424-427	and	_	_	_	
+4-9	428-436	inserted	Operation	Device-of-operation|Participant-material	4-13|4-7	
+4-10	437-441	into	_	_	_	
+4-11	442-444	an	Value	_	_	
+4-12	445-452	alumina	Descriptor	_	_	
+4-13	453-461	crucible	Device	Descriptor-of|Value-of	4-12|4-11	
+4-14	461-462	.	_	_	_	
+
+#Text=The crucible was inserted into an silica tube which was immediately evacuated to high vacuum (~10−4 mbar) and sealed.
+5-1	463-466	The	_	_	_	
+5-2	467-475	crucible	Device	_	_	
+5-3	476-479	was	_	_	_	
+5-4	480-488	inserted	Operation	Participant-material|Device-of-operation|Next-operation	5-2|5-8|5-12	
+5-5	489-493	into	_	_	_	
+5-6	494-496	an	Value	_	_	
+5-7	497-503	silica	Descriptor	_	_	
+5-8	504-508	tube	Device	Value-of|Descriptor-of	5-6|5-7	
+5-9	509-514	which	_	_	_	
+5-10	515-518	was	_	_	_	
+5-11	519-530	immediately	Descriptor	_	_	
+5-12	531-540	evacuated	Operation	Descriptor-of|Condition-of|Condition-of	5-11|5-14[11_0]|5-24	
+5-13	541-543	to	_	_	_	
+5-14	544-548	high	Property-pressure[11]	_	_	
+5-15	549-555	vacuum	Property-pressure[11]	_	_	
+5-16	556-557	(	Property-pressure[11]	_	_	
+5-17	557-558	~	Property-pressure[11]	_	_	
+5-18	558-560	10	Property-pressure[11]	_	_	
+5-19	560-561	−	Property-pressure[11]	_	_	
+5-20	561-562	4	Property-pressure[11]	_	_	
+5-21	563-567	mbar	Property-pressure[11]	_	_	
+5-22	567-568	)	Property-pressure[11]	_	_	
+5-23	569-572	and	_	_	_	
+5-24	573-579	sealed	Operation	_	_	
+5-25	579-580	.	_	_	_	
+
+#Text=The sample was annealed at 1050 °C for 20 h.
+6-1	581-584	The	_	_	_	
+6-2	585-591	sample	Material-intermedium	_	_	
+6-3	592-595	was	_	_	_	
+6-4	596-604	annealed	Operation	Participant-material|Condition-of|Condition-of	6-2|6-6[12_0]|6-10[13_0]	
+6-5	605-607	at	_	_	_	
+6-6	608-612	1050	Property-temperature[12]	_	_	
+6-7	613-614	°	Property-temperature[12]	_	_	
+6-8	614-615	C	Property-temperature[12]	_	_	
+6-9	616-619	for	_	_	_	
+6-10	620-622	20	Property-time[13]	_	_	
+6-11	623-624	h	Property-time[13]	_	_	
+6-12	624-625	.	_	_	_	
+
+#Text=The reaction process was repeated 3 times with intermediate grinding but the annealing time was set to 10 h.
+7-1	626-629	The	_	_	_	
+7-2	630-638	reaction	Operation[14]	_	_	
+7-3	639-646	process	Operation[14]	_	_	
+7-4	647-650	was	_	_	_	
+7-5	651-659	repeated	Operation	Value-of|Participant-material	7-6[15_0]|7-2[14_0]	
+7-6	660-661	3	Value[15]	_	_	
+7-7	662-667	times	Value[15]	_	_	
+7-8	668-672	with	_	_	_	
+7-9	673-685	intermediate	Descriptor	_	_	
+7-10	686-694	grinding	Operation	Descriptor-of|Next-operation	7-9|7-13	
+7-11	695-698	but	_	_	_	
+7-12	699-702	the	_	_	_	
+7-13	703-712	annealing	Operation	Condition-of	7-18[16_0]	
+7-14	713-717	time	_	_	_	
+7-15	718-721	was	_	_	_	
+7-16	722-725	set	_	_	_	
+7-17	726-728	to	_	_	_	
+7-18	729-731	10	Property-time[16]	_	_	
+7-19	732-733	h	Property-time[16]	_	_	
+7-20	733-734	.	_	_	_	
+
+#Text=Small plate-like single crystals were able to obtain by the similar procedures but were annealed at 1300 °C for 12 h following with cooling to 1050 °C in 96 h.
+8-1	735-740	Small	_	_	_	
+8-2	741-751	plate-like	_	_	_	
+8-3	752-758	single	_	_	_	
+8-4	759-767	crystals	_	_	_	
+8-5	768-772	were	_	_	_	
+8-6	773-777	able	_	_	_	
+8-7	778-780	to	_	_	_	
+8-8	781-787	obtain	_	_	_	
+8-9	788-790	by	_	_	_	
+8-10	791-794	the	_	_	_	
+8-11	795-802	similar	_	_	_	
+8-12	803-813	procedures	_	_	_	
+8-13	814-817	but	_	_	_	
+8-14	818-822	were	_	_	_	
+8-15	823-831	annealed	_	_	_	
+8-16	832-834	at	_	_	_	
+8-17	835-839	1300	_	_	_	
+8-18	840-841	°	_	_	_	
+8-19	841-842	C	_	_	_	
+8-20	843-846	for	_	_	_	
+8-21	847-849	12	_	_	_	
+8-22	850-851	h	_	_	_	
+8-23	852-861	following	_	_	_	
+8-24	862-866	with	_	_	_	
+8-25	867-874	cooling	_	_	_	
+8-26	875-877	to	_	_	_	
+8-27	878-882	1050	_	_	_	
+8-28	883-884	°	_	_	_	
+8-29	884-885	C	_	_	_	
+8-30	886-888	in	_	_	_	
+8-31	889-891	96	_	_	_	
+8-32	892-893	h	_	_	_	
+8-33	893-894	.	_	_	_	
+
+#Text=The samples are black and stable in air.
+9-1	895-898	The	_	_	_	
+9-2	899-906	samples	_	_	_	
+9-3	907-910	are	_	_	_	
+9-4	911-916	black	_	_	_	
+9-5	917-920	and	_	_	_	
+9-6	921-927	stable	_	_	_	
+9-7	928-930	in	_	_	_	
+9-8	931-934	air	_	_	_	
+9-9	934-935	.	_	_	_	

@@ -1,0 +1,100 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline B20-type FeGe samples were synthesized with a cubic anvil-type high-pressure apparatus.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-23	B20	Descriptor[1]	_	_	
+1-4	23-24	-	Descriptor[1]	_	_	
+1-5	24-28	type	Descriptor[1]	_	_	
+1-6	29-33	FeGe	Material-target	Descriptor-of|Descriptor-of	1-2|1-3[1_0]	
+1-7	34-41	samples	_	_	_	
+1-8	42-46	were	_	_	_	
+1-9	47-58	synthesized	Operation	Device-of-operation|Participant-material	1-14[3_0]|1-6	
+1-10	59-63	with	_	_	_	
+1-11	64-65	a	Value	_	_	
+1-12	66-71	cubic	Descriptor[2]	_	_	
+1-13	72-82	anvil-type	Descriptor[2]	_	_	
+1-14	83-96	high-pressure	Device[3]	Descriptor-of|Value-of	1-12[2_3]|1-11[0_3]	
+1-15	97-106	apparatus	Device[3]	_	_	
+1-16	106-107	.	_	_	_	
+
+#Text=A mixture of the elemental materials with an atomic ratio of 1:1 was synthesized by electromagnetic induction melting in an argon atmosphere.
+2-1	108-109	A	_	_	_	
+2-2	110-117	mixture	Material-intermedium	_	_	
+2-3	118-120	of	_	_	_	
+2-4	121-124	the	_	_	_	
+2-5	125-134	elemental	Descriptor	_	_	
+2-6	135-144	materials	Material-recipe	Value-of|Descriptor-of	2-9[4_0]|2-5	
+2-7	145-149	with	_	_	_	
+2-8	150-152	an	_	_	_	
+2-9	153-159	atomic	Value[4]	_	_	
+2-10	160-165	ratio	Value[4]	_	_	
+2-11	166-168	of	Value[4]	_	_	
+2-12	169-170	1	Value[4]	_	_	
+2-13	170-171	:	Value[4]	_	_	
+2-14	171-172	1	Value[4]	_	_	
+2-15	173-176	was	_	_	_	
+2-16	177-188	synthesized	Operation	Participant-material|Participant-material|Coreference	2-2|2-6|2-18[5_0]	
+2-17	189-191	by	_	_	_	
+2-18	192-207	electromagnetic	Operation[5]	Condition-of	2-23[6_5]	
+2-19	208-217	induction	Operation[5]	_	_	
+2-20	218-225	melting	Operation[5]	_	_	
+2-21	226-228	in	_	_	_	
+2-22	229-231	an	_	_	_	
+2-23	232-237	argon	Property-pressure[6]	_	_	
+2-24	238-248	atmosphere	Property-pressure[6]	_	_	
+2-25	248-249	.	_	_	_	
+
+#Text=The compound was placed into a cylindrical BN capsule and was heat treated for 1 h at 1,073 K under a high pressure of 4 GPa.
+3-1	250-253	The	_	_	_	
+3-2	254-262	compound	Material-intermedium	_	_	
+3-3	263-266	was	_	_	_	
+3-4	267-273	placed	Operation	Participant-material|Device-of-operation|Next-operation	3-2|3-9|3-12[7_0]	
+3-5	274-278	into	_	_	_	
+3-6	279-280	a	Value	_	_	
+3-7	281-292	cylindrical	Descriptor	_	_	
+3-8	293-295	BN	Descriptor	_	_	
+3-9	296-303	capsule	Device	Descriptor-of|Descriptor-of|Value-of	3-8|3-7|3-6	
+3-10	304-307	and	_	_	_	
+3-11	308-311	was	_	_	_	
+3-12	312-316	heat	Operation[7]	Condition-of|Condition-of|Condition-of	3-15[8_7]|3-18[9_7]|3-25[11_7]	
+3-13	317-324	treated	Operation[7]	_	_	
+3-14	325-328	for	_	_	_	
+3-15	329-330	1	Property-time[8]	_	_	
+3-16	331-332	h	Property-time[8]	_	_	
+3-17	333-335	at	_	_	_	
+3-18	336-341	1,073	Property-temperature[9]	_	_	
+3-19	342-343	K	Property-temperature[9]	_	_	
+3-20	344-349	under	_	_	_	
+3-21	350-351	a	_	_	_	
+3-22	352-356	high	Property-pressure[10]	_	_	
+3-23	357-365	pressure	Property-pressure[10]	_	_	
+3-24	366-368	of	_	_	_	
+3-25	369-370	4	Property-pressure[11]	Coreference	3-22[10_11]	
+3-26	371-374	GPa	Property-pressure[11]	_	_	
+3-27	374-375	.	_	_	_	
+
+#Text=Structural characterization by X-ray diffraction and susceptibility measurements were consistent with the well-established structure and properties of bulk FeGe.
+4-1	376-386	Structural	_	_	_	
+4-2	387-403	characterization	_	_	_	
+4-3	404-406	by	_	_	_	
+4-4	407-412	X-ray	_	_	_	
+4-5	413-424	diffraction	_	_	_	
+4-6	425-428	and	_	_	_	
+4-7	429-443	susceptibility	_	_	_	
+4-8	444-456	measurements	_	_	_	
+4-9	457-461	were	_	_	_	
+4-10	462-472	consistent	_	_	_	
+4-11	473-477	with	_	_	_	
+4-12	478-481	the	_	_	_	
+4-13	482-498	well-established	_	_	_	
+4-14	499-508	structure	_	_	_	
+4-15	509-512	and	_	_	_	
+4-16	513-523	properties	_	_	_	
+4-17	524-526	of	_	_	_	
+4-18	527-531	bulk	_	_	_	
+4-19	532-536	FeGe	_	_	_	
+4-20	536-537	.	_	_	_	

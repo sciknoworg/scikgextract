@@ -1,0 +1,165 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=We obtained a high-quality polycrystalline Y2Ir2O7 sample using Y2O3 (99.999%; Alfa Aesar) and IrO2 (99.9%; Sigma Aldrich) powders.
+1-1	0-2	We	_	_	_	
+1-2	3-11	obtained	Operation	Participant-material|Participant-material|Participant-material	1-6|1-17|1-9	
+1-3	12-13	a	_	_	_	
+1-4	14-26	high-quality	Descriptor	_	_	
+1-5	27-42	polycrystalline	Descriptor	_	_	
+1-6	43-50	Y2Ir2O7	Material-target	Descriptor-of|Descriptor-of|Descriptor-of	1-5|1-4|1-7	
+1-7	51-57	sample	Descriptor	_	_	
+1-8	58-63	using	_	_	_	
+1-9	64-68	Y2O3	Material-recipe	Value-of|Brand-of|Descriptor-of	1-11|1-13[1_0]|1-24	
+1-10	69-70	(	_	_	_	
+1-11	70-77	99.999%	Value	_	_	
+1-12	77-78	;	_	_	_	
+1-13	79-83	Alfa	Brand[1]	_	_	
+1-14	84-89	Aesar	Brand[1]	_	_	
+1-15	89-90	)	_	_	_	
+1-16	91-94	and	_	_	_	
+1-17	95-99	IrO2	Material-recipe	Value-of|Brand-of|Descriptor-of	1-19|1-21[2_0]|1-24	
+1-18	100-101	(	_	_	_	
+1-19	101-106	99.9%	Value	_	_	
+1-20	106-107	;	_	_	_	
+1-21	108-113	Sigma	Brand[2]	_	_	
+1-22	114-121	Aldrich	Brand[2]	_	_	
+1-23	121-122	)	_	_	_	
+1-24	123-130	powders	Descriptor	_	_	
+1-25	130-131	.	_	_	_	
+
+#Text=As IrO2 evaporates easily during sintering, we used 4–10% more IrO2 than suggested by the stoichiometric ratio, Y2O3: IrO2 = 1:2.
+2-1	132-134	As	_	_	_	
+2-2	135-139	IrO2	Material-recipe	Coreference	2-14	
+2-3	140-150	evaporates	Operation	Participant-material|Descriptor-of|Coreference	2-2|2-4|2-5[3_0]	
+2-4	151-157	easily	Descriptor	_	_	
+2-5	158-164	during	Operation[3]	_	_	
+2-6	165-174	sintering	Operation[3]	_	_	
+2-7	174-175	,	_	_	_	
+2-8	176-178	we	_	_	_	
+2-9	179-183	used	Operation	Participant-material	2-14	
+2-10	184-185	4	Value[4]	_	_	
+2-11	185-186	–	Value[4]	_	_	
+2-12	186-189	10%	Value[4]	_	_	
+2-13	190-194	more	Value[4]	_	_	
+2-14	195-199	IrO2	Material-recipe	Value-of|Value-of	2-10[4_0]|2-19[5_0]	
+2-15	200-204	than	_	_	_	
+2-16	205-214	suggested	_	_	_	
+2-17	215-217	by	_	_	_	
+2-18	218-221	the	_	_	_	
+2-19	222-236	stoichiometric	Value[5]	Descriptor-of	2-22[6_5]	
+2-20	237-242	ratio	Value[5]	_	_	
+2-21	242-243	,	_	_	_	
+2-22	244-248	Y2O3	Descriptor[6]	_	_	
+2-23	248-249	:	Descriptor[6]	_	_	
+2-24	250-254	IrO2	Descriptor[6]	_	_	
+2-25	255-256	=	Descriptor[6]	_	_	
+2-26	257-258	1	Descriptor[6]	_	_	
+2-27	258-259	:	Descriptor[6]	_	_	
+2-28	259-260	2	Descriptor[6]	_	_	
+2-29	260-261	.	_	_	_	
+
+#Text=The mixture was pelletized and calcinated in a box furnace at 760 °C for 48 h.
+3-1	262-265	The	_	_	_	
+3-2	266-273	mixture	Material-intermedium	_	_	
+3-3	274-277	was	_	_	_	
+3-4	278-288	pelletized	Operation	Participant-material|Next-operation	3-2|3-6	
+3-5	289-292	and	_	_	_	
+3-6	293-303	calcinated	Operation	Condition-of|Condition-of|Device-of-operation	3-12[7_0]|3-16[8_0]|3-10	
+3-7	304-306	in	_	_	_	
+3-8	307-308	a	Value	_	_	
+3-9	309-312	box	Descriptor	_	_	
+3-10	313-320	furnace	Device	Value-of|Descriptor-of	3-8|3-9	
+3-11	321-323	at	_	_	_	
+3-12	324-327	760	Property-temperature[7]	_	_	
+3-13	328-329	°	Property-temperature[7]	_	_	
+3-14	329-330	C	Property-temperature[7]	_	_	
+3-15	331-334	for	_	_	_	
+3-16	335-337	48	Property-time[8]	_	_	
+3-17	338-339	h	Property-time[8]	_	_	
+3-18	339-340	.	_	_	_	
+
+#Text=After re-grinding and re-pelletizing, several annealing cycles were performed at temperatures between 900 °C and 1030 °C, each for 48 h.
+4-1	341-346	After	_	_	_	
+4-2	347-358	re-grinding	Operation	Next-operation	4-4	
+4-3	359-362	and	_	_	_	
+4-4	363-377	re-pelletizing	Operation	Next-operation	4-7	
+4-5	377-378	,	_	_	_	
+4-6	379-386	several	Value	_	_	
+4-7	387-396	annealing	Operation	Value-of|Condition-of|Coreference|Condition-of	4-6|4-24[10_0]|4-10|4-13[9_0]	
+4-8	397-403	cycles	_	_	_	
+4-9	404-408	were	_	_	_	
+4-10	409-418	performed	Operation	_	_	
+4-11	419-421	at	_	_	_	
+4-12	422-434	temperatures	Property-temperature	_	_	
+4-13	435-442	between	Property-temperature[9]	Coreference	4-12[0_9]	
+4-14	443-446	900	Property-temperature[9]	_	_	
+4-15	447-448	°	Property-temperature[9]	_	_	
+4-16	448-449	C	Property-temperature[9]	_	_	
+4-17	450-453	and	Property-temperature[9]	_	_	
+4-18	454-458	1030	Property-temperature[9]	_	_	
+4-19	459-460	°	Property-temperature[9]	_	_	
+4-20	460-461	C	Property-temperature[9]	_	_	
+4-21	461-462	,	_	_	_	
+4-22	463-467	each	_	_	_	
+4-23	468-471	for	_	_	_	
+4-24	472-474	48	Property-time[10]	_	_	
+4-25	475-476	h	Property-time[10]	_	_	
+4-26	476-477	.	_	_	_	
+
+#Text=High-density targets were prepared for optical experiments by pelletizing Y2Ir2O7 powder using a high-pressure anvil (NCAP-035; Nanki Engineering) operating at 4.3 GPa.
+5-1	478-490	High-density	Descriptor	_	_	
+5-2	491-498	targets	Material-target	Descriptor-of	5-1	
+5-3	499-503	were	_	_	_	
+5-4	504-512	prepared	Operation	Participant-material|Coreference	5-2|5-9	
+5-5	513-516	for	_	_	_	
+5-6	517-524	optical	_	_	_	
+5-7	525-536	experiments	_	_	_	
+5-8	537-539	by	_	_	_	
+5-9	540-551	pelletizing	Operation	Participant-material|Coreference|Device-of-operation	5-10|5-24|5-15	
+5-10	552-559	Y2Ir2O7	Material-recipe	Descriptor-of	5-11	
+5-11	560-566	powder	Descriptor	_	_	
+5-12	567-572	using	_	_	_	
+5-13	573-574	a	Value	_	_	
+5-14	575-588	high-pressure	Descriptor	_	_	
+5-15	589-594	anvil	Device	Value-of|Descriptor-of|Brand-of	5-13|5-14|5-17[11_0]	
+5-16	595-596	(	_	_	_	
+5-17	596-600	NCAP	Brand[11]	_	_	
+5-18	600-601	-	Brand[11]	_	_	
+5-19	601-604	035	Brand[11]	_	_	
+5-20	604-605	;	Brand[11]	_	_	
+5-21	606-611	Nanki	Brand[11]	_	_	
+5-22	612-623	Engineering	Brand[11]	_	_	
+5-23	623-624	)	_	_	_	
+5-24	625-634	operating	Operation	Condition-of	5-26[12_0]	
+5-25	635-637	at	_	_	_	
+5-26	638-641	4.3	Property-pressure[12]	_	_	
+5-27	642-645	GPa	Property-pressure[12]	_	_	
+5-28	645-646	.	_	_	_	
+
+#Text=Samples with densities >87% were polished to render the surfaces shiny and flat (see Supplementary Note 6 for details).
+6-1	647-654	Samples	Material-intermedium	Value-of	6-4[13_0]	
+6-2	655-659	with	_	_	_	
+6-3	660-669	densities	Descriptor	_	_	
+6-4	670-671	>	Value[13]	Descriptor-of	6-3[0_13]	
+6-5	671-674	87%	Value[13]	_	_	
+6-6	675-679	were	_	_	_	
+6-7	680-688	polished	Operation	Coreference|Participant-material	6-9|6-1	
+6-8	689-691	to	_	_	_	
+6-9	692-698	render	Operation	Participant-material	6-11	
+6-10	699-702	the	_	_	_	
+6-11	703-711	surfaces	Material-others	Descriptor-of|Descriptor-of	6-14|6-12	
+6-12	712-717	shiny	Descriptor	_	_	
+6-13	718-721	and	_	_	_	
+6-14	722-726	flat	Descriptor	_	_	
+6-15	727-728	(	_	_	_	
+6-16	728-731	see	_	_	_	
+6-17	732-745	Supplementary	_	_	_	
+6-18	746-750	Note	_	_	_	
+6-19	751-752	6	_	_	_	
+6-20	753-756	for	_	_	_	
+6-21	757-764	details	_	_	_	
+6-22	764-765	)	_	_	_	
+6-23	765-766	.	_	_	_	

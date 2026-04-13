@@ -1,0 +1,152 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystallinePr2−xDyxFe17andPr2Fe17−yAlyhave been prepared by arc melting un-der a high purity argon of high purity elements Fe 99.9 %, Al 99.9%, Pr 99.98% and Dy 99.98%.Approximately, 25% atomic excess Pr was added during melting in order to maintain an over-pressure of praseodymium on the sample to obtain single-phase samples (without the presenceof a secondaryα-Fe phase).
+1-1	0-3	The	_	_	_	
+1-2	4-22	polycrystallinePr2	Material-target[1]	_	_	
+1-3	22-23	−	Material-target[1]	_	_	
+1-4	23-41	xDyxFe17andPr2Fe17	Material-target[1]	_	_	
+1-5	41-42	−	Material-target[1]	_	_	
+1-6	42-50	yAlyhave	Material-target[1]	_	_	
+1-7	51-55	been	_	_	_	
+1-8	56-64	prepared	Operation	Participant-material|Coreference	1-2[1_0]|1-10[2_0]	
+1-9	65-67	by	_	_	_	
+1-10	68-71	arc	Operation[2]	Condition-of|Participant-material|Participant-material|Participant-material|Participant-material	1-16[0_2]|1-25[0_2]|1-21[0_2]|1-28[0_2]|1-31[0_2]	
+1-11	72-79	melting	Operation[2]	_	_	
+1-12	80-86	un-der	_	_	_	
+1-13	87-88	a	_	_	_	
+1-14	89-93	high	Descriptor[3]	_	_	
+1-15	94-100	purity	Descriptor[3]	_	_	
+1-16	101-106	argon	Property-pressure	Descriptor-of	1-14[3_0]	
+1-17	107-109	of	_	_	_	
+1-18	110-114	high	Descriptor[4]	_	_	
+1-19	115-121	purity	Descriptor[4]	_	_	
+1-20	122-130	elements	Material-recipe	Descriptor-of	1-18[4_0]	
+1-21	131-133	Fe	Material-recipe	Value-of|Coreference	1-22[5_0]|1-20	
+1-22	134-138	99.9	Value[5]	_	_	
+1-23	139-140	%	Value[5]	_	_	
+1-24	140-141	,	_	_	_	
+1-25	142-144	Al	Material-recipe	Value-of|Coreference	1-26|1-20	
+1-26	145-150	99.9%	Value	_	_	
+1-27	150-151	,	_	_	_	
+1-28	152-154	Pr	Material-recipe	Value-of|Coreference	1-29|1-20	
+1-29	155-161	99.98%	Value	_	_	
+1-30	162-165	and	_	_	_	
+1-31	166-168	Dy	Material-recipe	Value-of|Coreference	1-32|1-20	
+1-32	169-175	99.98%	Value	_	_	
+1-33	175-176	.	_	_	_	
+1-34	176-189	Approximately	Value[6]	_	_	
+1-35	189-190	,	Value[6]	_	_	
+1-36	191-194	25%	Value[6]	_	_	
+1-37	195-201	atomic	Value[6]	_	_	
+1-38	202-208	excess	Value[6]	_	_	
+1-39	209-211	Pr	Material-recipe	Value-of|Coreference|Coreference	1-34[6_0]|1-28|1-20	
+1-40	212-215	was	_	_	_	
+1-41	216-221	added	Operation	Participant-material|Descriptor-of|Next-operation	1-39|1-42[7_0]|1-10[2_0]	
+1-42	222-228	during	Descriptor[7]	_	_	
+1-43	229-236	melting	Descriptor[7]	_	_	
+1-44	237-239	in	_	_	_	
+1-45	240-245	order	_	_	_	
+1-46	246-248	to	_	_	_	
+1-47	249-257	maintain	_	_	_	
+1-48	258-260	an	_	_	_	
+1-49	261-274	over-pressure	_	_	_	
+1-50	275-277	of	_	_	_	
+1-51	278-290	praseodymium	_	_	_	
+1-52	291-293	on	_	_	_	
+1-53	294-297	the	_	_	_	
+1-54	298-304	sample	_	_	_	
+1-55	305-307	to	_	_	_	
+1-56	308-314	obtain	_	_	_	
+1-57	315-327	single-phase	_	_	_	
+1-58	328-335	samples	_	_	_	
+1-59	336-337	(	_	_	_	
+1-60	337-344	without	_	_	_	
+1-61	345-348	the	_	_	_	
+1-62	349-359	presenceof	_	_	_	
+1-63	360-361	a	_	_	_	
+1-64	362-375	secondaryα-Fe	_	_	_	
+1-65	376-381	phase	_	_	_	
+1-66	381-382	)	_	_	_	
+1-67	382-383	.	_	_	_	
+
+#Text=All ingots were wrapped in tantalum foil, homogenized in thehigh-purity argon atmosphere at 1373 K for one week to minimize the amount of other possibleimpurity phases.
+2-1	385-388	All	Value	_	_	
+2-2	389-395	ingots	Material-intermedium	Value-of	2-1	
+2-3	396-400	were	_	_	_	
+2-4	401-408	wrapped	Operation	Participant-material|Participant-material|Next-operation	2-2|2-6|2-9	
+2-5	409-411	in	_	_	_	
+2-6	412-420	tantalum	Material-others	Descriptor-of	2-7	
+2-7	421-425	foil	Descriptor	_	_	
+2-8	425-426	,	_	_	_	
+2-9	427-438	homogenized	Operation	Condition-of|Condition-of|Condition-of	2-11[8_0]|2-15[9_0]|2-18[10_0]	
+2-10	439-441	in	_	_	_	
+2-11	442-456	thehigh-purity	Property-pressure[8]	_	_	
+2-12	457-462	argon	Property-pressure[8]	_	_	
+2-13	463-473	atmosphere	Property-pressure[8]	_	_	
+2-14	474-476	at	_	_	_	
+2-15	477-481	1373	Property-temperature[9]	_	_	
+2-16	482-483	K	Property-temperature[9]	_	_	
+2-17	484-487	for	_	_	_	
+2-18	488-491	one	Property-time[10]	_	_	
+2-19	492-496	week	Property-time[10]	_	_	
+2-20	497-499	to	_	_	_	
+2-21	500-508	minimize	_	_	_	
+2-22	509-512	the	_	_	_	
+2-23	513-519	amount	_	_	_	
+2-24	520-522	of	_	_	_	
+2-25	523-528	other	_	_	_	
+2-26	529-545	possibleimpurity	_	_	_	
+2-27	546-552	phases	_	_	_	
+2-28	552-553	.	_	_	_	
+
+#Text=The thermal treatment was finished by direct water quenching of the pelletsfrom the furnace.
+3-1	554-557	The	_	_	_	
+3-2	558-565	thermal	Operation[11]	_	_	
+3-3	566-575	treatment	Operation[11]	_	_	
+3-4	576-579	was	_	_	_	
+3-5	580-588	finished	Operation	Participant-material	3-2[11_0]	
+3-6	589-591	by	_	_	_	
+3-7	592-598	direct	Descriptor[12]	_	_	
+3-8	599-604	water	Descriptor[12]	_	_	
+3-9	605-614	quenching	Operation	Descriptor-of|Participant-material|Next-operation	3-7[12_0]|3-12|3-5	
+3-10	615-617	of	_	_	_	
+3-11	618-621	the	_	_	_	
+3-12	622-633	pelletsfrom	Material-intermedium	_	_	
+3-13	634-637	the	_	_	_	
+3-14	638-645	furnace	_	_	_	
+3-15	645-646	.	_	_	_	
+
+#Text=The samples were subsequently milled by means of an agate mortar to pre-pare powders for the measurements.
+4-1	647-650	The	_	_	_	
+4-2	651-658	samples	Material-intermedium	_	_	
+4-3	659-663	were	_	_	_	
+4-4	664-676	subsequently	Descriptor	_	_	
+4-5	677-683	milled	Operation	Participant-material|Device-of-operation|Descriptor-of	4-2|4-11|4-4	
+4-6	684-686	by	_	_	_	
+4-7	687-692	means	_	_	_	
+4-8	693-695	of	_	_	_	
+4-9	696-698	an	Value	_	_	
+4-10	699-704	agate	Descriptor	_	_	
+4-11	705-711	mortar	Device	Descriptor-of|Value-of	4-10|4-9	
+4-12	712-714	to	_	_	_	
+4-13	715-723	pre-pare	_	_	_	
+4-14	724-731	powders	_	_	_	
+4-15	732-735	for	_	_	_	
+4-16	736-739	the	_	_	_	
+4-17	740-752	measurements	_	_	_	
+4-18	752-753	.	_	_	_	
+
+#Text=The powders were sieved using a 36μm pore size metallic
+5-1	754-757	The	_	_	_	
+5-2	758-765	powders	Material-intermedium	_	_	
+5-3	766-770	were	_	_	_	
+5-4	771-777	sieved	Operation	Participant-material|Device-of-operation	5-2|5-10	
+5-5	778-783	using	_	_	_	
+5-6	784-785	a	Value	_	_	
+5-7	786-790	36μm	Value	Descriptor-of	5-8[13_0]	
+5-8	791-795	pore	Descriptor[13]	_	_	
+5-9	796-800	size	Descriptor[13]	_	_	
+5-10	801-809	metallic	Device	Value-of|Value-of	5-7|5-6	

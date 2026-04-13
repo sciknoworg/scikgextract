@@ -1,0 +1,135 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline samples of Hg1212 and Hg1223 were synthesized with a cubic–anvil-type high-pressure apparatus (180 ton press, TRY Eng. Co.).
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-27	samples	_	_	_	
+1-4	28-30	of	_	_	_	
+1-5	31-37	Hg1212	Material-target	Descriptor-of	1-2	
+1-6	38-41	and	_	_	_	
+1-7	42-48	Hg1223	Material-target	Descriptor-of	1-2	
+1-8	49-53	were	_	_	_	
+1-9	54-65	synthesized	Operation	Participant-material|Participant-material|Device-of-operation	1-7|1-5|1-14	
+1-10	66-70	with	_	_	_	
+1-11	71-72	a	_	_	_	
+1-12	73-89	cubic–anvil-type	Descriptor	_	_	
+1-13	90-103	high-pressure	Descriptor	_	_	
+1-14	104-113	apparatus	Device	Descriptor-of|Descriptor-of|Brand-of|Descriptor-of	1-12|1-13|1-20[2_0]|1-16[1_0]	
+1-15	114-115	(	_	_	_	
+1-16	115-118	180	Descriptor[1]	_	_	
+1-17	119-122	ton	Descriptor[1]	_	_	
+1-18	123-128	press	Descriptor[1]	_	_	
+1-19	128-129	,	_	_	_	
+1-20	130-133	TRY	Brand[2]	_	_	
+1-21	134-137	Eng	Brand[2]	_	_	
+1-22	137-138	.	Brand[2]	_	_	
+1-23	139-141	Co	Brand[2]	_	_	
+1-24	141-142	.	Brand[2]	_	_	
+1-25	142-143	)	_	_	_	
+1-26	143-144	.	_	_	_	
+
+#Text=Mixtures of HgO, BaO2 CaO, and CuO/Cu, or mixtures of HgO and the precursor (prepared from BaCO3, CaO and CuO at 950 °C in a flowing high-purity oxygen gas) were placed into a cylindrical gold capsule and sintered for 10–30 min at 805–850 °C under a pressure of 2 GPa.
+2-1	145-153	Mixtures	Material-recipe	Coreference|Coreference|Coreference|Coreference|Coreference	2-3|2-5|2-6|2-9|2-11	
+2-2	154-156	of	_	_	_	
+2-3	157-160	HgO	Material-recipe	_	_	
+2-4	160-161	,	_	_	_	
+2-5	162-166	BaO2	Material-recipe	_	_	
+2-6	167-170	CaO	Material-recipe	_	_	
+2-7	170-171	,	_	_	_	
+2-8	172-175	and	_	_	_	
+2-9	176-179	CuO	Material-recipe	_	_	
+2-10	179-180	/	_	_	_	
+2-11	180-182	Cu	Material-recipe	_	_	
+2-12	182-183	,	_	_	_	
+2-13	184-186	or	_	_	_	
+2-14	187-195	mixtures	Material-intermedium	Coreference|Coreference	2-16|2-19	
+2-15	196-198	of	_	_	_	
+2-16	199-202	HgO	Material-recipe	_	_	
+2-17	203-206	and	_	_	_	
+2-18	207-210	the	_	_	_	
+2-19	211-220	precursor	Material-intermedium	_	_	
+2-20	221-222	(	_	_	_	
+2-21	222-230	prepared	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Condition-of|Condition-of	2-19|2-23|2-25|2-27|2-29[3_0]|2-36[5_0]	
+2-22	231-235	from	_	_	_	
+2-23	236-241	BaCO3	Material-recipe	_	_	
+2-24	241-242	,	_	_	_	
+2-25	243-246	CaO	Material-recipe	_	_	
+2-26	247-250	and	_	_	_	
+2-27	251-254	CuO	Material-recipe	_	_	
+2-28	255-257	at	_	_	_	
+2-29	258-261	950	Property-temperature[3]	_	_	
+2-30	262-263	°	Property-temperature[3]	_	_	
+2-31	263-264	C	Property-temperature[3]	_	_	
+2-32	265-267	in	_	_	_	
+2-33	268-269	a	_	_	_	
+2-34	270-277	flowing	Descriptor[4]	_	_	
+2-35	278-289	high-purity	Descriptor[4]	_	_	
+2-36	290-296	oxygen	Property-pressure[5]	Descriptor-of	2-34[4_5]	
+2-37	297-300	gas	Property-pressure[5]	_	_	
+2-38	300-301	)	_	_	_	
+2-39	302-306	were	_	_	_	
+2-40	307-313	placed	Operation	Participant-material|Participant-material|Device-of-operation|Next-operation	2-1|2-14|2-45|2-47	
+2-41	314-318	into	_	_	_	
+2-42	319-320	a	Value	_	_	
+2-43	321-332	cylindrical	Descriptor	_	_	
+2-44	333-337	gold	Descriptor	_	_	
+2-45	338-345	capsule	Device	Value-of|Descriptor-of|Descriptor-of	2-42|2-43|2-44	
+2-46	346-349	and	_	_	_	
+2-47	350-358	sintered	Operation	Condition-of|Condition-of|Condition-of	2-49[6_0]|2-54[7_0]|2-63[8_0]	
+2-48	359-362	for	_	_	_	
+2-49	363-365	10	Property-time[6]	_	_	
+2-50	365-366	–	Property-time[6]	_	_	
+2-51	366-368	30	Property-time[6]	_	_	
+2-52	369-372	min	Property-time[6]	_	_	
+2-53	373-375	at	_	_	_	
+2-54	376-379	805	Property-temperature[7]	_	_	
+2-55	379-380	–	Property-temperature[7]	_	_	
+2-56	380-383	850	Property-temperature[7]	_	_	
+2-57	384-385	°	Property-temperature[7]	_	_	
+2-58	385-386	C	Property-temperature[7]	_	_	
+2-59	387-392	under	_	_	_	
+2-60	393-394	a	_	_	_	
+2-61	395-403	pressure	Property-pressure	_	_	
+2-62	404-406	of	_	_	_	
+2-63	407-408	2	Property-pressure[8]	Coreference	2-61[0_8]	
+2-64	409-412	GPa	Property-pressure[8]	_	_	
+2-65	412-413	.	_	_	_	
+
+#Text=To control the hole doping level, we have optimized the starting material, sintering condition, and annealing condition for each sample.
+3-1	414-416	To	_	_	_	
+3-2	417-424	control	_	_	_	
+3-3	425-428	the	_	_	_	
+3-4	429-433	hole	_	_	_	
+3-5	434-440	doping	_	_	_	
+3-6	441-446	level	_	_	_	
+3-7	446-447	,	_	_	_	
+3-8	448-450	we	_	_	_	
+3-9	451-455	have	_	_	_	
+3-10	456-465	optimized	_	_	_	
+3-11	466-469	the	_	_	_	
+3-12	470-478	starting	_	_	_	
+3-13	479-487	material	_	_	_	
+3-14	487-488	,	_	_	_	
+3-15	489-498	sintering	_	_	_	
+3-16	499-508	condition	_	_	_	
+3-17	508-509	,	_	_	_	
+3-18	510-513	and	_	_	_	
+3-19	514-523	annealing	_	_	_	
+3-20	524-533	condition	_	_	_	
+3-21	534-537	for	_	_	_	
+3-22	538-542	each	_	_	_	
+3-23	543-549	sample	_	_	_	
+3-24	549-550	.	_	_	_	
+
+#Text=Details are described in Supplementary Table 1.
+4-1	551-558	Details	_	_	_	
+4-2	559-562	are	_	_	_	
+4-3	563-572	described	_	_	_	
+4-4	573-575	in	_	_	_	
+4-5	576-589	Supplementary	_	_	_	
+4-6	590-595	Table	_	_	_	
+4-7	596-597	1	_	_	_	
+4-8	597-598	.	_	_	_	

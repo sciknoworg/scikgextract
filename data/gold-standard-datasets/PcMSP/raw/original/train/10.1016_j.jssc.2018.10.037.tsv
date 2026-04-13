@@ -1,0 +1,233 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of Ca2CeCr2TiO9 and SrLaCrSnO6 were synthesised using the traditional ceramic method.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-39	Ca2CeCr2TiO9	Material-target	Descriptor-of	1-1	
+1-5	40-43	and	_	_	_	
+1-6	44-54	SrLaCrSnO6	Material-target	Descriptor-of	1-1	
+1-7	55-59	were	_	_	_	
+1-8	60-71	synthesised	Operation	Participant-material|Participant-material	1-6|1-4	
+1-9	72-77	using	_	_	_	
+1-10	78-81	the	_	_	_	
+1-11	82-93	traditional	Operation[1]	Coreference	1-8[0_1]	
+1-12	94-101	ceramic	Operation[1]	_	_	
+1-13	102-108	method	Operation[1]	_	_	
+1-14	108-109	.	_	_	_	
+
+#Text=To form SrLaCrSnO6, stoichiometric quantities of SrCO3, Cr2O3, SnO2 and pre-dried La2O3 were ground in an agate pestle and mortar for 30 min and then fired at 900 °C as a loose powder for 16 h.
+2-1	110-112	To	_	_	_	
+2-2	113-117	form	_	_	_	
+2-3	118-128	SrLaCrSnO6	Material-target	_	_	
+2-4	128-129	,	_	_	_	
+2-5	130-144	stoichiometric	Value[2]	_	_	
+2-6	145-155	quantities	Value[2]	_	_	
+2-7	156-158	of	_	_	_	
+2-8	159-164	SrCO3	Material-recipe	Value-of	2-5[2_0]	
+2-9	164-165	,	_	_	_	
+2-10	166-171	Cr2O3	Material-recipe	Value-of	2-5[2_0]	
+2-11	171-172	,	_	_	_	
+2-12	173-177	SnO2	Material-recipe	Value-of	2-5[2_0]	
+2-13	178-181	and	_	_	_	
+2-14	182-191	pre-dried	Descriptor	_	_	
+2-15	192-197	La2O3	Material-recipe	Descriptor-of|Value-of	2-14|2-5[2_0]	
+2-16	198-202	were	_	_	_	
+2-17	203-209	ground	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Condition-of|Next-operation|Device-of-operation	2-8|2-10|2-12|2-15|2-25[4_0]|2-30|2-21[3_0]	
+2-18	210-212	in	_	_	_	
+2-19	213-215	an	Value	_	_	
+2-20	216-221	agate	Descriptor	_	_	
+2-21	222-228	pestle	Device[3]	Value-of|Descriptor-of	2-19[0_3]|2-20[0_3]	
+2-22	229-232	and	Device[3]	_	_	
+2-23	233-239	mortar	Device[3]	_	_	
+2-24	240-243	for	_	_	_	
+2-25	244-246	30	Property-time[4]	_	_	
+2-26	246-247	 	Property-time[4]	_	_	
+2-27	247-250	min	Property-time[4]	_	_	
+2-28	251-254	and	_	_	_	
+2-29	255-259	then	_	_	_	
+2-30	260-265	fired	Operation	Condition-of|Participant-material|Condition-of	2-32[5_0]|2-39|2-41[6_0]	
+2-31	266-268	at	_	_	_	
+2-32	269-272	900	Property-temperature[5]	_	_	
+2-33	272-273	 	Property-temperature[5]	_	_	
+2-34	273-274	°	Property-temperature[5]	_	_	
+2-35	274-275	C	Property-temperature[5]	_	_	
+2-36	276-278	as	_	_	_	
+2-37	279-280	a	Value	_	_	
+2-38	281-286	loose	Descriptor	_	_	
+2-39	287-293	powder	Material-intermedium	Descriptor-of|Value-of	2-38|2-37	
+2-40	294-297	for	_	_	_	
+2-41	298-300	16	Property-time[6]	_	_	
+2-42	300-301	 	Property-time[6]	_	_	
+2-43	301-302	h	Property-time[6]	_	_	
+2-44	302-303	.	_	_	_	
+
+#Text=The resulting mixture was reground, pelletised and fired at 1300 °C for 6 h.
+3-1	304-307	The	_	_	_	
+3-2	308-317	resulting	Descriptor	_	_	
+3-3	318-325	mixture	Material-intermedium	Descriptor-of	3-2	
+3-4	326-329	was	_	_	_	
+3-5	330-338	reground	Operation	Next-operation|Participant-material	3-7|3-3	
+3-6	338-339	,	_	_	_	
+3-7	340-350	pelletised	Operation	Next-operation	3-9	
+3-8	351-354	and	_	_	_	
+3-9	355-360	fired	Operation	Condition-of|Condition-of	3-16[8_0]|3-11[7_0]	
+3-10	361-363	at	_	_	_	
+3-11	364-368	1300	Property-temperature[7]	_	_	
+3-12	368-369	 	Property-temperature[7]	_	_	
+3-13	369-370	°	Property-temperature[7]	_	_	
+3-14	370-371	C	Property-temperature[7]	_	_	
+3-15	372-375	for	_	_	_	
+3-16	376-377	6	Property-time[8]	_	_	
+3-17	377-378	 	Property-time[8]	_	_	
+3-18	378-379	h	Property-time[8]	_	_	
+3-19	379-380	.	_	_	_	
+
+#Text=The sample was subsequently fired at 1350 °C for 48 h and then at 1400 °C for 48 h at a time until the reaction was deemed, on the basis of the X-ray powder diffraction pattern, to have gone to completion.
+4-1	381-384	The	_	_	_	
+4-2	385-391	sample	Material-intermedium	_	_	
+4-3	392-395	was	_	_	_	
+4-4	396-408	subsequently	_	_	_	
+4-5	409-414	fired	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Condition-of	4-2|4-7[9_0]|4-12[10_0]|4-18[11_0]|4-23[12_0]	
+4-6	415-417	at	_	_	_	
+4-7	418-422	1350	Property-temperature[9]	_	_	
+4-8	422-423	 	Property-temperature[9]	_	_	
+4-9	423-424	°	Property-temperature[9]	_	_	
+4-10	424-425	C	Property-temperature[9]	_	_	
+4-11	426-429	for	_	_	_	
+4-12	430-432	48	Property-time[10]	_	_	
+4-13	432-433	 	Property-time[10]	_	_	
+4-14	433-434	h	Property-time[10]	_	_	
+4-15	435-438	and	_	_	_	
+4-16	439-443	then	_	_	_	
+4-17	444-446	at	_	_	_	
+4-18	447-451	1400	Property-temperature[11]	_	_	
+4-19	451-452	 	Property-temperature[11]	_	_	
+4-20	452-453	°	Property-temperature[11]	_	_	
+4-21	453-454	C	Property-temperature[11]	_	_	
+4-22	455-458	for	_	_	_	
+4-23	459-461	48	Property-time[12]	_	_	
+4-24	461-462	 	Property-time[12]	_	_	
+4-25	462-463	h	Property-time[12]	_	_	
+4-26	464-466	at	_	_	_	
+4-27	467-468	a	_	_	_	
+4-28	469-473	time	_	_	_	
+4-29	474-479	until	_	_	_	
+4-30	480-483	the	_	_	_	
+4-31	484-492	reaction	_	_	_	
+4-32	493-496	was	_	_	_	
+4-33	497-503	deemed	_	_	_	
+4-34	503-504	,	_	_	_	
+4-35	505-507	on	_	_	_	
+4-36	508-511	the	_	_	_	
+4-37	512-517	basis	_	_	_	
+4-38	518-520	of	_	_	_	
+4-39	521-524	the	_	_	_	
+4-40	525-530	X-ray	_	_	_	
+4-41	531-537	powder	_	_	_	
+4-42	538-549	diffraction	_	_	_	
+4-43	550-557	pattern	_	_	_	
+4-44	557-558	,	_	_	_	
+4-45	559-561	to	_	_	_	
+4-46	562-566	have	_	_	_	
+4-47	567-571	gone	_	_	_	
+4-48	572-574	to	_	_	_	
+4-49	575-585	completion	_	_	_	
+4-50	585-586	.	_	_	_	
+
+#Text=After each firing the sample was quench-cooled to room temperature and re-ground and re-pelleted.
+5-1	587-592	After	_	_	_	
+5-2	593-597	each	Descriptor	_	_	
+5-3	598-604	firing	Operation	Descriptor-of|Next-operation	5-2|5-7	
+5-4	605-608	the	_	_	_	
+5-5	609-615	sample	Material-intermedium	_	_	
+5-6	616-619	was	_	_	_	
+5-7	620-633	quench-cooled	Operation	Participant-material|Condition-of|Next-operation	5-5|5-9[13_0]|5-12	
+5-8	634-636	to	_	_	_	
+5-9	637-641	room	Property-temperature[13]	_	_	
+5-10	642-653	temperature	Property-temperature[13]	_	_	
+5-11	654-657	and	_	_	_	
+5-12	658-667	re-ground	Operation	Next-operation	5-14	
+5-13	668-671	and	_	_	_	
+5-14	672-683	re-pelleted	Operation	_	_	
+5-15	683-684	.	_	_	_	
+
+#Text=Stoichiometric quantities of CaCO3, Cr2O3, TiO2 and pre-dried CeO2 were used as starting materials to form Ca2CeCr2TiO9.
+6-1	685-699	Stoichiometric	Value[14]	_	_	
+6-2	700-710	quantities	Value[14]	_	_	
+6-3	711-713	of	_	_	_	
+6-4	714-719	CaCO3	Material-recipe	Value-of	6-1[14_0]	
+6-5	719-720	,	_	_	_	
+6-6	721-726	Cr2O3	Material-recipe	Value-of	6-1[14_0]	
+6-7	726-727	,	_	_	_	
+6-8	728-732	TiO2	Material-recipe	Value-of	6-1[14_0]	
+6-9	733-736	and	_	_	_	
+6-10	737-746	pre-dried	Descriptor	_	_	
+6-11	747-751	CeO2	Material-recipe	Descriptor-of|Value-of	6-10|6-1[14_0]	
+6-12	752-756	were	_	_	_	
+6-13	757-761	used	_	_	_	
+6-14	762-764	as	_	_	_	
+6-15	765-773	starting	Descriptor	_	_	
+6-16	774-783	materials	Material-recipe	Descriptor-of|Coreference|Coreference|Coreference|Coreference	6-15|6-4|6-6|6-8|6-11	
+6-17	784-786	to	_	_	_	
+6-18	787-791	form	_	_	_	
+6-19	792-804	Ca2CeCr2TiO9	Material-target	_	_	
+6-20	804-805	.	_	_	_	
+
+#Text=The same firing sequence was used to form Ca2CeCr2TiO9 as was used to form SrLaCrSnO6 except that an additional final firing at 1450 °C for 48 h was required.
+7-1	806-809	The	_	_	_	
+7-2	810-814	same	Descriptor	_	_	
+7-3	815-821	firing	Operation	Descriptor-of|Coreference	7-2|7-12	
+7-4	822-830	sequence	_	_	_	
+7-5	831-834	was	_	_	_	
+7-6	835-839	used	_	_	_	
+7-7	840-842	to	_	_	_	
+7-8	843-847	form	_	_	_	
+7-9	848-860	Ca2CeCr2TiO9	Material-target	_	_	
+7-10	861-863	as	_	_	_	
+7-11	864-867	was	_	_	_	
+7-12	868-872	used	Operation	_	_	
+7-13	873-875	to	_	_	_	
+7-14	876-880	form	_	_	_	
+7-15	881-891	SrLaCrSnO6	_	_	_	
+7-16	892-898	except	_	_	_	
+7-17	899-903	that	_	_	_	
+7-18	904-906	an	Value	_	_	
+7-19	907-917	additional	Descriptor	_	_	
+7-20	918-923	final	Descriptor	_	_	
+7-21	924-930	firing	Operation	Value-of|Descriptor-of|Descriptor-of|Condition-of|Condition-of	7-18|7-19|7-20|7-23[15_0]|7-28[16_0]	
+7-22	931-933	at	_	_	_	
+7-23	934-938	1450	Property-temperature[15]	_	_	
+7-24	938-939	 	Property-temperature[15]	_	_	
+7-25	939-940	°	Property-temperature[15]	_	_	
+7-26	940-941	C	Property-temperature[15]	_	_	
+7-27	942-945	for	_	_	_	
+7-28	946-948	48	Property-time[16]	_	_	
+7-29	948-949	 	Property-time[16]	_	_	
+7-30	949-950	h	Property-time[16]	_	_	
+7-31	951-954	was	_	_	_	
+7-32	955-963	required	_	_	_	
+7-33	963-964	.	_	_	_	
+
+#Text=The polycrystalline sample of SrLaCrSnO6 produced was brown in colour whereas Ca2CeCr2TiO9 was a fine black powder.
+8-1	965-968	The	_	_	_	
+8-2	969-984	polycrystalline	_	_	_	
+8-3	985-991	sample	_	_	_	
+8-4	992-994	of	_	_	_	
+8-5	995-1005	SrLaCrSnO6	_	_	_	
+8-6	1006-1014	produced	_	_	_	
+8-7	1015-1018	was	_	_	_	
+8-8	1019-1024	brown	_	_	_	
+8-9	1025-1027	in	_	_	_	
+8-10	1028-1034	colour	_	_	_	
+8-11	1035-1042	whereas	_	_	_	
+8-12	1043-1055	Ca2CeCr2TiO9	_	_	_	
+8-13	1056-1059	was	_	_	_	
+8-14	1060-1061	a	_	_	_	
+8-15	1062-1066	fine	_	_	_	
+8-16	1067-1072	black	_	_	_	
+8-17	1073-1079	powder	_	_	_	
+8-18	1079-1080	.	_	_	_	

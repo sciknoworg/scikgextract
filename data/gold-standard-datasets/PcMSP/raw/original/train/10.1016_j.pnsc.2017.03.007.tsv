@@ -1,0 +1,172 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline samples of AlFe2B2 were prepared by arc-melting pure Al, Fe and B elements under argon atmosphere.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-23	samples	_	_	_	
+1-3	24-26	of	_	_	_	
+1-4	27-34	AlFe2B2	Material-target	Descriptor-of	1-1	
+1-5	35-39	were	_	_	_	
+1-6	40-48	prepared	Operation	Participant-material	1-4	
+1-7	49-51	by	_	_	_	
+1-8	52-63	arc-melting	Operation	Participant-material|Participant-material|Participant-material|Condition-of|Coreference	1-10|1-12|1-14|1-17[1_0]|1-6	
+1-9	64-68	pure	Descriptor	_	_	
+1-10	69-71	Al	Material-recipe	Descriptor-of|Coreference	1-9|1-15	
+1-11	71-72	,	_	_	_	
+1-12	73-75	Fe	Material-recipe	Descriptor-of|Coreference	1-9|1-15	
+1-13	76-79	and	_	_	_	
+1-14	80-81	B	Material-recipe	Descriptor-of|Coreference	1-9|1-15	
+1-15	82-90	elements	Material-recipe	_	_	
+1-16	91-96	under	_	_	_	
+1-17	97-102	argon	Property-pressure[1]	_	_	
+1-18	103-113	atmosphere	Property-pressure[1]	_	_	
+1-19	113-114	.	_	_	_	
+
+#Text=The starting materials were lumps of Al (99.9%), Fe (99.9%) and B (99.5%).
+2-1	115-118	The	_	_	_	
+2-2	119-127	starting	Descriptor	_	_	
+2-3	128-137	materials	Material-recipe	Descriptor-of	2-2	
+2-4	138-142	were	_	_	_	
+2-5	143-148	lumps	Descriptor	_	_	
+2-6	149-151	of	_	_	_	
+2-7	152-154	Al	Material-recipe	Value-of|Descriptor-of|Coreference	2-9|2-5|2-3	
+2-8	155-156	(	_	_	_	
+2-9	156-161	99.9%	Value	_	_	
+2-10	161-162	)	_	_	_	
+2-11	162-163	,	_	_	_	
+2-12	164-166	Fe	Material-recipe	Value-of|Descriptor-of|Coreference	2-14|2-5|2-3	
+2-13	167-168	(	_	_	_	
+2-14	168-173	99.9%	Value	_	_	
+2-15	173-174	)	_	_	_	
+2-16	175-178	and	_	_	_	
+2-17	179-180	B	Material-recipe	Value-of|Descriptor-of|Coreference	2-19|2-5|2-3	
+2-18	181-182	(	_	_	_	
+2-19	182-187	99.5%	Value	_	_	
+2-20	187-188	)	_	_	_	
+2-21	188-189	.	_	_	_	
+
+#Text=Previous studies have showed that an excess amount of Al is essential to curb the formation of undesired Al13Fe4 and to achieve better phase purity of AlFe2B2.
+3-1	190-198	Previous	_	_	_	
+3-2	199-206	studies	_	_	_	
+3-3	207-211	have	_	_	_	
+3-4	212-218	showed	_	_	_	
+3-5	219-223	that	_	_	_	
+3-6	224-226	an	_	_	_	
+3-7	227-233	excess	Value[2]	_	_	
+3-8	234-240	amount	Value[2]	_	_	
+3-9	241-243	of	_	_	_	
+3-10	244-246	Al	Material-recipe	Value-of	3-7[2_0]	
+3-11	247-249	is	_	_	_	
+3-12	250-259	essential	_	_	_	
+3-13	260-262	to	_	_	_	
+3-14	263-267	curb	_	_	_	
+3-15	268-271	the	_	_	_	
+3-16	272-281	formation	_	_	_	
+3-17	282-284	of	_	_	_	
+3-18	285-294	undesired	_	_	_	
+3-19	295-302	Al13Fe4	_	_	_	
+3-20	303-306	and	_	_	_	
+3-21	307-309	to	_	_	_	
+3-22	310-317	achieve	_	_	_	
+3-23	318-324	better	_	_	_	
+3-24	325-330	phase	_	_	_	
+3-25	331-337	purity	_	_	_	
+3-26	338-340	of	_	_	_	
+3-27	341-348	AlFe2B2	_	_	_	
+3-28	348-349	.	_	_	_	
+
+#Text=Therefore, the synthesis procedure as described in Ref. [7] was adopted and Al, Fe and B mixed in ratio 3:2:2 were melted in an arc furnace.
+4-1	350-359	Therefore	_	_	_	
+4-2	359-360	,	_	_	_	
+4-3	361-364	the	_	_	_	
+4-4	365-374	synthesis	_	_	_	
+4-5	375-384	procedure	_	_	_	
+4-6	385-387	as	_	_	_	
+4-7	388-397	described	_	_	_	
+4-8	398-400	in	_	_	_	
+4-9	401-404	Ref	_	_	_	
+4-10	404-405	.	_	_	_	
+4-11	406-407	[	_	_	_	
+4-12	407-408	7	_	_	_	
+4-13	408-409	]	_	_	_	
+4-14	410-413	was	_	_	_	
+4-15	414-421	adopted	_	_	_	
+4-16	422-425	and	_	_	_	
+4-17	426-428	Al	Material-recipe	Value-of	4-24[3_0]	
+4-18	428-429	,	_	_	_	
+4-19	430-432	Fe	Material-recipe	Value-of	4-24[3_0]	
+4-20	433-436	and	_	_	_	
+4-21	437-438	B	Material-recipe	Value-of	4-24[3_0]	
+4-22	439-444	mixed	Operation	Next-operation|Participant-material|Participant-material|Participant-material	4-31|4-21|4-19|4-17	
+4-23	445-447	in	_	_	_	
+4-24	448-453	ratio	Value[3]	_	_	
+4-25	454-455	3	Value[3]	_	_	
+4-26	455-456	:	Value[3]	_	_	
+4-27	456-457	2	Value[3]	_	_	
+4-28	457-458	:	Value[3]	_	_	
+4-29	458-459	2	Value[3]	_	_	
+4-30	460-464	were	_	_	_	
+4-31	465-471	melted	Operation	Device-of-operation	4-35	
+4-32	472-474	in	_	_	_	
+4-33	475-477	an	Value	_	_	
+4-34	478-481	arc	Descriptor	_	_	
+4-35	482-489	furnace	Device	Descriptor-of|Value-of	4-34|4-33	
+4-36	489-490	.	_	_	_	
+
+#Text=The button was flipped and remelted several times to achieve better homogeneity.
+5-1	491-494	The	_	_	_	
+5-2	495-501	button	Material-intermedium	_	_	
+5-3	502-505	was	_	_	_	
+5-4	506-513	flipped	Operation	Participant-material|Next-operation	5-2|5-6	
+5-5	514-517	and	_	_	_	
+5-6	518-526	remelted	Operation	Descriptor-of	5-7[4_0]	
+5-7	527-534	several	Descriptor[4]	_	_	
+5-8	535-540	times	Descriptor[4]	_	_	
+5-9	541-543	to	_	_	_	
+5-10	544-551	achieve	_	_	_	
+5-11	552-558	better	_	_	_	
+5-12	559-570	homogeneity	_	_	_	
+5-13	570-571	.	_	_	_	
+
+#Text=The XRD analysis of as-prepared material showed the presence of impurity phase Al13Fe4 which was removed by soaking small pieces of the material in dilute HCl for ten minutes which resulted in small porous granules of the material.
+6-1	572-575	The	_	_	_	
+6-2	576-579	XRD	_	_	_	
+6-3	580-588	analysis	_	_	_	
+6-4	589-591	of	_	_	_	
+6-5	592-603	as-prepared	_	_	_	
+6-6	604-612	material	_	_	_	
+6-7	613-619	showed	_	_	_	
+6-8	620-623	the	_	_	_	
+6-9	624-632	presence	_	_	_	
+6-10	633-635	of	_	_	_	
+6-11	636-644	impurity	_	_	_	
+6-12	645-650	phase	_	_	_	
+6-13	651-658	Al13Fe4	_	_	_	
+6-14	659-664	which	_	_	_	
+6-15	665-668	was	_	_	_	
+6-16	669-676	removed	_	_	_	
+6-17	677-679	by	_	_	_	
+6-18	680-687	soaking	_	_	_	
+6-19	688-693	small	_	_	_	
+6-20	694-700	pieces	_	_	_	
+6-21	701-703	of	_	_	_	
+6-22	704-707	the	_	_	_	
+6-23	708-716	material	_	_	_	
+6-24	717-719	in	_	_	_	
+6-25	720-726	dilute	_	_	_	
+6-26	727-730	HCl	_	_	_	
+6-27	731-734	for	_	_	_	
+6-28	735-738	ten	_	_	_	
+6-29	739-746	minutes	_	_	_	
+6-30	747-752	which	_	_	_	
+6-31	753-761	resulted	_	_	_	
+6-32	762-764	in	_	_	_	
+6-33	765-770	small	_	_	_	
+6-34	771-777	porous	_	_	_	
+6-35	778-786	granules	_	_	_	
+6-36	787-789	of	_	_	_	
+6-37	790-793	the	_	_	_	
+6-38	794-802	material	_	_	_	
+6-39	802-803	.	_	_	_	

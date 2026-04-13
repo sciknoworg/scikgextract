@@ -1,0 +1,209 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The polycrystalline material was synthesized by solid-state reaction technique in programmable high-temperature resistive heating furnace.
+1-1	0-3	The	_	_	_	
+1-2	4-19	polycrystalline	Descriptor	_	_	
+1-3	20-28	material	Material-target	Descriptor-of	1-2	
+1-4	29-32	was	_	_	_	
+1-5	33-44	synthesized	Operation	Coreference|Participant-material	1-7[1_0]|1-3	
+1-6	45-47	by	_	_	_	
+1-7	48-59	solid-state	Operation[1]	Device-of-operation	1-15[0_1]	
+1-8	60-68	reaction	Operation[1]	_	_	
+1-9	69-78	technique	_	_	_	
+1-10	79-81	in	_	_	_	
+1-11	82-94	programmable	Descriptor	_	_	
+1-12	95-111	high-temperature	Descriptor	_	_	
+1-13	112-121	resistive	Descriptor	_	_	
+1-14	122-129	heating	Descriptor	_	_	
+1-15	130-137	furnace	Device	Descriptor-of|Descriptor-of|Descriptor-of|Descriptor-of	1-14|1-11|1-12|1-13	
+1-16	137-138	.	_	_	_	
+
+#Text=The chemicals MgO, Na2CO3, ZnO and B2O3 of 99.99% purity with appropriate amount were crushed with the help of mortar and pestle to make the homogeneous mixture.
+2-1	139-142	The	_	_	_	
+2-2	143-152	chemicals	Material-recipe	_	_	
+2-3	153-156	MgO	Material-recipe	Value-of|Value-of|Coreference	2-11|2-14[2_0]|2-2	
+2-4	156-157	,	_	_	_	
+2-5	158-164	Na2CO3	Material-recipe	Value-of|Value-of|Coreference	2-11|2-14[2_0]|2-2	
+2-6	164-165	,	_	_	_	
+2-7	166-169	ZnO	Material-recipe	Value-of|Value-of|Coreference	2-11|2-14[2_0]|2-2	
+2-8	170-173	and	_	_	_	
+2-9	174-178	B2O3	Material-recipe	Value-of|Value-of|Coreference	2-11|2-14[2_0]|2-2	
+2-10	179-181	of	_	_	_	
+2-11	182-188	99.99%	Value	_	_	
+2-12	189-195	purity	_	_	_	
+2-13	196-200	with	_	_	_	
+2-14	201-212	appropriate	Value[2]	_	_	
+2-15	213-219	amount	Value[2]	_	_	
+2-16	220-224	were	_	_	_	
+2-17	225-232	crushed	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Device-of-operation	2-9|2-7|2-5|2-3|2-22[3_0]	
+2-18	233-237	with	_	_	_	
+2-19	238-241	the	_	_	_	
+2-20	242-246	help	_	_	_	
+2-21	247-249	of	_	_	_	
+2-22	250-256	mortar	Device[3]	_	_	
+2-23	257-260	and	Device[3]	_	_	
+2-24	261-267	pestle	Device[3]	_	_	
+2-25	268-270	to	_	_	_	
+2-26	271-275	make	_	_	_	
+2-27	276-279	the	_	_	_	
+2-28	280-291	homogeneous	Descriptor	_	_	
+2-29	292-299	mixture	Material-intermedium	Descriptor-of	2-28	
+2-30	299-300	.	_	_	_	
+
+#Text=Then the homogeneous mixture was transferred to a platinum crucible and kept it in muffle furnace.
+3-1	301-305	Then	_	_	_	
+3-2	306-309	the	_	_	_	
+3-3	310-321	homogeneous	Descriptor	_	_	
+3-4	322-329	mixture	Material-intermedium	Descriptor-of	3-3	
+3-5	330-333	was	_	_	_	
+3-6	334-345	transferred	Operation	Participant-material|Device-of-operation|Next-operation	3-4|3-10|3-12	
+3-7	346-348	to	_	_	_	
+3-8	349-350	a	Value	_	_	
+3-9	351-359	platinum	Descriptor	_	_	
+3-10	360-368	crucible	Device	Descriptor-of|Value-of	3-9|3-8	
+3-11	369-372	and	_	_	_	
+3-12	373-377	kept	Operation	Device-of-operation	3-16	
+3-13	378-380	it	_	_	_	
+3-14	381-383	in	_	_	_	
+3-15	384-390	muffle	Descriptor	_	_	
+3-16	391-398	furnace	Device	Descriptor-of	3-15	
+3-17	398-399	.	_	_	_	
+
+#Text=Initially, the prepared material was heated at 450 oC for 6 h to make the mixture miscible.
+4-1	400-409	Initially	_	_	_	
+4-2	409-410	,	_	_	_	
+4-3	411-414	the	_	_	_	
+4-4	415-423	prepared	Descriptor	_	_	
+4-5	424-432	material	Material-intermedium	Descriptor-of	4-4	
+4-6	433-436	was	_	_	_	
+4-7	437-443	heated	Operation	Condition-of|Condition-of|Participant-material|Next-operation	4-9[4_0]|4-12[5_0]|4-5|4-15	
+4-8	444-446	at	_	_	_	
+4-9	447-450	450	Property-temperature[4]	_	_	
+4-10	451-453	oC	Property-temperature[4]	_	_	
+4-11	454-457	for	_	_	_	
+4-12	458-459	6	Property-time[5]	_	_	
+4-13	460-461	h	Property-time[5]	_	_	
+4-14	462-464	to	_	_	_	
+4-15	465-469	make	Operation	Participant-material	4-17	
+4-16	470-473	the	_	_	_	
+4-17	474-481	mixture	Material-intermedium	Descriptor-of	4-18	
+4-18	482-490	miscible	Descriptor	_	_	
+4-19	490-491	.	_	_	_	
+
+#Text=The mixture was further heated at 850 oC continuously for 10 h to decompose B2O3.
+5-1	492-495	The	_	_	_	
+5-2	496-503	mixture	Material-intermedium	_	_	
+5-3	504-507	was	_	_	_	
+5-4	508-515	further	_	_	_	
+5-5	516-522	heated	Operation	Participant-material|Condition-of|Descriptor-of|Condition-of|Next-operation	5-2|5-7[6_0]|5-9|5-11[7_0]|5-14	
+5-6	523-525	at	_	_	_	
+5-7	526-529	850	Property-temperature[6]	_	_	
+5-8	530-532	oC	Property-temperature[6]	_	_	
+5-9	533-545	continuously	Descriptor	_	_	
+5-10	546-549	for	_	_	_	
+5-11	550-552	10	Property-time[7]	_	_	
+5-12	553-554	h	Property-time[7]	_	_	
+5-13	555-557	to	_	_	_	
+5-14	558-567	decompose	Operation	Participant-material	5-15	
+5-15	568-572	B2O3	Material-others	_	_	
+5-16	572-573	.	_	_	_	
+
+#Text=The temperature was then increased up to 1000 °C to melt a charge and maintained constant for another 24 h.
+6-1	574-577	The	_	_	_	
+6-2	578-589	temperature	Property-temperature	_	_	
+6-3	590-593	was	_	_	_	
+6-4	594-598	then	_	_	_	
+6-5	599-608	increased	Operation	Condition-of|Condition-of|Participant-material|Next-operation	6-8[8_0]|6-20[9_0]|6-2|6-12	
+6-6	609-611	up	_	_	_	
+6-7	612-614	to	_	_	_	
+6-8	615-619	1000	Property-temperature[8]	_	_	
+6-9	620-621	°	Property-temperature[8]	_	_	
+6-10	621-622	C	Property-temperature[8]	_	_	
+6-11	623-625	to	_	_	_	
+6-12	626-630	melt	Operation	Participant-material	6-14	
+6-13	631-632	a	Value	_	_	
+6-14	633-639	charge	Material-intermedium	Value-of	6-13	
+6-15	640-643	and	_	_	_	
+6-16	644-654	maintained	_	_	_	
+6-17	655-663	constant	_	_	_	
+6-18	664-667	for	_	_	_	
+6-19	668-675	another	_	_	_	
+6-20	676-678	24	Property-time[9]	_	_	
+6-21	679-680	h	Property-time[9]	_	_	
+6-22	680-681	.	_	_	_	
+
+#Text=After that, muffle furnace was turned towards slow cooling with a rate of 3 oC/h to reach 650 oC and finally cooled to room temperature at a rate of 10 oC/h.
+7-1	682-687	After	_	_	_	
+7-2	688-692	that	_	_	_	
+7-3	692-693	,	_	_	_	
+7-4	694-700	muffle	Descriptor	_	_	
+7-5	701-708	furnace	Device	Descriptor-of	7-4	
+7-6	709-712	was	_	_	_	
+7-7	713-719	turned	_	_	_	
+7-8	720-727	towards	_	_	_	
+7-9	728-732	slow	Descriptor	_	_	
+7-10	733-740	cooling	Operation	Descriptor-of|Device-of-operation|Condition-of	7-9|7-5|7-15[10_0]	
+7-11	741-745	with	_	_	_	
+7-12	746-747	a	_	_	_	
+7-13	748-752	rate	Property-rate	_	_	
+7-14	753-755	of	_	_	_	
+7-15	756-757	3	Property-rate[10]	Coreference	7-13[0_10]	
+7-16	758-760	oC	Property-rate[10]	_	_	
+7-17	760-761	/	Property-rate[10]	_	_	
+7-18	761-762	h	Property-rate[10]	_	_	
+7-19	763-765	to	_	_	_	
+7-20	766-771	reach	Operation	Next-operation|Condition-of	7-10|7-21[11_0]	
+7-21	772-775	650	Property-temperature[11]	_	_	
+7-22	776-778	oC	Property-temperature[11]	_	_	
+7-23	779-782	and	_	_	_	
+7-24	783-790	finally	_	_	_	
+7-25	791-797	cooled	Operation	Next-operation|Condition-of|Condition-of	7-20|7-27[12_0]|7-33[13_0]	
+7-26	798-800	to	_	_	_	
+7-27	801-805	room	Property-temperature[12]	_	_	
+7-28	806-817	temperature	Property-temperature[12]	_	_	
+7-29	818-820	at	_	_	_	
+7-30	821-822	a	_	_	_	
+7-31	823-827	rate	Property-rate	_	_	
+7-32	828-830	of	_	_	_	
+7-33	831-833	10	Property-rate[13]	Coreference	7-31[0_13]	
+7-34	834-836	oC	Property-rate[13]	_	_	
+7-35	836-837	/	Property-rate[13]	_	_	
+7-36	837-838	h	Property-rate[13]	_	_	
+7-37	838-839	.	_	_	_	
+
+#Text=As the MNZB compound decomposes at high temperatures, the reaction temperature was carefully controlled.
+8-1	840-842	As	_	_	_	
+8-2	843-846	the	_	_	_	
+8-3	847-851	MNZB	_	_	_	
+8-4	852-860	compound	_	_	_	
+8-5	861-871	decomposes	_	_	_	
+8-6	872-874	at	_	_	_	
+8-7	875-879	high	_	_	_	
+8-8	880-892	temperatures	_	_	_	
+8-9	892-893	,	_	_	_	
+8-10	894-897	the	_	_	_	
+8-11	898-906	reaction	_	_	_	
+8-12	907-918	temperature	_	_	_	
+8-13	919-922	was	_	_	_	
+8-14	923-932	carefully	_	_	_	
+8-15	933-943	controlled	_	_	_	
+8-16	943-944	.	_	_	_	
+
+#Text=A polycrystalline material and few crystals were obtained and used for further study.
+9-1	945-946	A	_	_	_	
+9-2	947-962	polycrystalline	_	_	_	
+9-3	963-971	material	_	_	_	
+9-4	972-975	and	_	_	_	
+9-5	976-979	few	_	_	_	
+9-6	980-988	crystals	_	_	_	
+9-7	989-993	were	_	_	_	
+9-8	994-1002	obtained	_	_	_	
+9-9	1003-1006	and	_	_	_	
+9-10	1007-1011	used	_	_	_	
+9-11	1012-1015	for	_	_	_	
+9-12	1016-1023	further	_	_	_	
+9-13	1024-1029	study	_	_	_	
+9-14	1029-1030	.	_	_	_	

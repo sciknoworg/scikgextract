@@ -1,0 +1,168 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline YFeO3 was synthesized by conventional solid state reaction using Y2O3 (99.9%) and Fe2O3 (99.9%) powders.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-21	YFeO3	Material-target	Descriptor-of	1-1	
+1-3	22-25	was	_	_	_	
+1-4	26-37	synthesized	Operation	Participant-material	1-2	
+1-5	38-40	by	_	_	_	
+1-6	41-53	conventional	Operation[1]	Coreference|Participant-material|Participant-material	1-4[0_1]|1-11[0_1]|1-16[0_1]	
+1-7	54-59	solid	Operation[1]	_	_	
+1-8	60-65	state	Operation[1]	_	_	
+1-9	66-74	reaction	Operation[1]	_	_	
+1-10	75-80	using	_	_	_	
+1-11	81-85	Y2O3	Material-recipe	Value-of|Descriptor-of	1-13|1-20	
+1-12	86-87	(	_	_	_	
+1-13	87-92	99.9%	Value	_	_	
+1-14	92-93	)	_	_	_	
+1-15	94-97	and	_	_	_	
+1-16	98-103	Fe2O3	Material-recipe	Value-of|Descriptor-of	1-18|1-20	
+1-17	104-105	(	_	_	_	
+1-18	105-110	99.9%	Value	_	_	
+1-19	110-111	)	_	_	_	
+1-20	112-119	powders	Descriptor	_	_	
+1-21	119-120	.	_	_	_	
+
+#Text=According to stoichiometric ratios, original reagents were weighted and pulverized with moderate anhydrous ethanol in an agate mortar.
+2-1	121-130	According	_	_	_	
+2-2	131-133	to	_	_	_	
+2-3	134-148	stoichiometric	Value[2]	_	_	
+2-4	149-155	ratios	Value[2]	_	_	
+2-5	155-156	,	_	_	_	
+2-6	157-165	original	Descriptor	_	_	
+2-7	166-174	reagents	Material-recipe	Value-of|Descriptor-of	2-3[2_0]|2-6	
+2-8	175-179	were	_	_	_	
+2-9	180-188	weighted	Operation	Participant-material|Next-operation	2-7|2-11	
+2-10	189-192	and	_	_	_	
+2-11	193-203	pulverized	Operation	Participant-material|Device-of-operation	2-15|2-19	
+2-12	204-208	with	_	_	_	
+2-13	209-217	moderate	Descriptor	_	_	
+2-14	218-227	anhydrous	Descriptor	_	_	
+2-15	228-235	ethanol	Material-intermedium	Descriptor-of|Descriptor-of	2-13|2-14	
+2-16	236-238	in	_	_	_	
+2-17	239-241	an	Value	_	_	
+2-18	242-247	agate	Descriptor	_	_	
+2-19	248-254	mortar	Device	Value-of|Descriptor-of	2-17|2-18	
+2-20	254-255	.	_	_	_	
+
+#Text=Mixtures were sintered at 1300 ∘C for 1000 min, then furnace cooled down to room temperature.
+3-1	256-264	Mixtures	Material-intermedium	_	_	
+3-2	265-269	were	_	_	_	
+3-3	270-278	sintered	Operation	Participant-material|Condition-of|Condition-of|Next-operation	3-1|3-5[3_0]|3-9[4_0]|3-13[5_0]	
+3-4	279-281	at	_	_	_	
+3-5	282-286	1300	Property-temperature[3]	_	_	
+3-6	287-288	∘	Property-temperature[3]	_	_	
+3-7	288-289	C	Property-temperature[3]	_	_	
+3-8	290-293	for	_	_	_	
+3-9	294-298	1000	Property-time[4]	_	_	
+3-10	299-302	min	Property-time[4]	_	_	
+3-11	302-303	,	_	_	_	
+3-12	304-308	then	_	_	_	
+3-13	309-316	furnace	Operation[5]	Condition-of	3-17[6_5]	
+3-14	317-323	cooled	Operation[5]	_	_	
+3-15	324-328	down	_	_	_	
+3-16	329-331	to	_	_	_	
+3-17	332-336	room	Property-temperature[6]	_	_	
+3-18	337-348	temperature	Property-temperature[6]	_	_	
+3-19	348-349	.	_	_	_	
+
+#Text=We continued to grind the presintered sample into powder, pressed it into sheets, reduced the gap between the powder particles, and conducted the second sintering.
+4-1	350-352	We	_	_	_	
+4-2	353-362	continued	_	_	_	
+4-3	363-365	to	_	_	_	
+4-4	366-371	grind	Operation	Participant-material|Next-operation	4-7|4-11	
+4-5	372-375	the	_	_	_	
+4-6	376-387	presintered	Descriptor	_	_	
+4-7	388-394	sample	Material-intermedium	Descriptor-of	4-6	
+4-8	395-399	into	_	_	_	
+4-9	400-406	powder	Material-intermedium	_	_	
+4-10	406-407	,	_	_	_	
+4-11	408-415	pressed	Operation	Participant-material|Next-operation	4-9|4-28	
+4-12	416-418	it	_	_	_	
+4-13	419-423	into	_	_	_	
+4-14	424-430	sheets	Material-intermedium	_	_	
+4-15	430-431	,	_	_	_	
+4-16	432-439	reduced	_	_	_	
+4-17	440-443	the	_	_	_	
+4-18	444-447	gap	_	_	_	
+4-19	448-455	between	_	_	_	
+4-20	456-459	the	_	_	_	
+4-21	460-466	powder	_	_	_	
+4-22	467-476	particles	_	_	_	
+4-23	476-477	,	_	_	_	
+4-24	478-481	and	_	_	_	
+4-25	482-491	conducted	_	_	_	
+4-26	492-495	the	_	_	_	
+4-27	496-502	second	Descriptor	_	_	
+4-28	503-512	sintering	Operation	Participant-material|Descriptor-of	4-14|4-27	
+4-29	512-513	.	_	_	_	
+
+#Text=The sintering temperature and duration were the same as the pre-firing process.
+5-1	514-517	The	_	_	_	
+5-2	518-527	sintering	Descriptor	_	_	
+5-3	528-539	temperature	Property-temperature	Descriptor-of|Descriptor-of	5-2|5-8	
+5-4	540-543	and	_	_	_	
+5-5	544-552	duration	Property-time	Descriptor-of|Descriptor-of	5-2|5-8	
+5-6	553-557	were	_	_	_	
+5-7	558-561	the	_	_	_	
+5-8	562-566	same	Descriptor	_	_	
+5-9	567-569	as	_	_	_	
+5-10	570-573	the	_	_	_	
+5-11	574-584	pre-firing	Operation	_	_	
+5-12	585-592	process	_	_	_	
+5-13	592-593	.	_	_	_	
+
+#Text=The secondary sintered pellets were thoroughly reground, and the polycrystalline powders were pressed into a rod that is 70–80 mm in length and 5–6 mm in diameter by a Hydrostatic Press System under 70 MPa, and then sintered again at 1300 ∘C.
+6-1	594-597	The	_	_	_	
+6-2	598-607	secondary	Descriptor	_	_	
+6-3	608-616	sintered	Descriptor	Descriptor-of	6-2	
+6-4	617-624	pellets	Material-intermedium	Descriptor-of	6-3	
+6-5	625-629	were	_	_	_	
+6-6	630-640	thoroughly	Descriptor	_	_	
+6-7	641-649	reground	Operation	Participant-material|Descriptor-of|Next-operation	6-4|6-6|6-14	
+6-8	649-650	,	_	_	_	
+6-9	651-654	and	_	_	_	
+6-10	655-658	the	_	_	_	
+6-11	659-674	polycrystalline	_	_	_	
+6-12	675-682	powders	_	_	_	
+6-13	683-687	were	_	_	_	
+6-14	688-695	pressed	Operation	Device-of-operation|Condition-of|Next-operation	6-35[9_0]|6-39[10_0]|6-44	
+6-15	696-700	into	_	_	_	
+6-16	701-702	a	Value	_	_	
+6-17	703-706	rod	Material-intermedium	Value-of|Value-of|Value-of	6-16|6-20[7_0]|6-27[8_0]	
+6-18	707-711	that	_	_	_	
+6-19	712-714	is	_	_	_	
+6-20	715-717	70	Value[7]	Descriptor-of	6-25[0_7]	
+6-21	717-718	–	Value[7]	_	_	
+6-22	718-720	80	Value[7]	_	_	
+6-23	721-723	mm	Value[7]	_	_	
+6-24	724-726	in	_	_	_	
+6-25	727-733	length	Descriptor	_	_	
+6-26	734-737	and	_	_	_	
+6-27	738-739	5	Value[8]	Descriptor-of	6-32[0_8]	
+6-28	739-740	–	Value[8]	_	_	
+6-29	740-741	6	Value[8]	_	_	
+6-30	742-744	mm	Value[8]	_	_	
+6-31	745-747	in	_	_	_	
+6-32	748-756	diameter	Descriptor	_	_	
+6-33	757-759	by	_	_	_	
+6-34	760-761	a	Value	_	_	
+6-35	762-773	Hydrostatic	Device[9]	Value-of	6-34[0_9]	
+6-36	774-779	Press	Device[9]	_	_	
+6-37	780-786	System	Device[9]	_	_	
+6-38	787-792	under	_	_	_	
+6-39	793-795	70	Property-pressure[10]	_	_	
+6-40	796-799	MPa	Property-pressure[10]	_	_	
+6-41	799-800	,	_	_	_	
+6-42	801-804	and	_	_	_	
+6-43	805-809	then	_	_	_	
+6-44	810-818	sintered	Operation	Condition-of	6-47[11_0]	
+6-45	819-824	again	_	_	_	
+6-46	825-827	at	_	_	_	
+6-47	828-832	1300	Property-temperature[11]	_	_	
+6-48	833-834	∘	Property-temperature[11]	_	_	
+6-49	834-835	C	Property-temperature[11]	_	_	
+6-50	835-836	.	_	_	_	

@@ -1,0 +1,70 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Single phase polycrystalline KCu6AlBiO4(SO4)5Cl was synthesised by the solid-state reaction in which high-purity KAl(SO4)2, CuCl2, CuSO4, CuO and Bi2O3 powders were mixed in a molar ratio of 2:1:6:5:1, followed by heating at 600 °C for 3 days and slow cooling in air.
+1-1	0-6	Single	Descriptor[1]	_	_	
+1-2	7-12	phase	Descriptor[1]	_	_	
+1-3	13-28	polycrystalline	Descriptor	_	_	
+1-4	29-39	KCu6AlBiO4	Material-target[2]	Descriptor-of|Descriptor-of	1-3[0_2]|1-1[1_2]	
+1-5	39-40	(	Material-target[2]	_	_	
+1-6	40-43	SO4	Material-target[2]	_	_	
+1-7	43-44	)	Material-target[2]	_	_	
+1-8	44-47	5Cl	Material-target[2]	_	_	
+1-9	48-51	was	_	_	_	
+1-10	52-63	synthesised	Operation	Participant-material|Coreference	1-4[2_0]|1-13[3_0]	
+1-11	64-66	by	_	_	_	
+1-12	67-70	the	_	_	_	
+1-13	71-82	solid-state	Operation[3]	Coreference|Coreference|Coreference	1-33[0_3]|1-51[0_3]|1-61[0_3]	
+1-14	83-91	reaction	Operation[3]	_	_	
+1-15	92-94	in	_	_	_	
+1-16	95-100	which	_	_	_	
+1-17	101-112	high-purity	Value	_	_	
+1-18	113-116	KAl	Material-recipe[4]	Descriptor-of|Descriptor-of|Value-of	1-17[0_4]|1-31[0_4]|1-39[6_4]	
+1-19	116-117	(	Material-recipe[4]	_	_	
+1-20	117-120	SO4	Material-recipe[4]	_	_	
+1-21	120-121	)	Material-recipe[4]	_	_	
+1-22	121-122	2	Material-recipe[4]	_	_	
+1-23	122-123	,	_	_	_	
+1-24	124-129	CuCl2	Material-recipe	Descriptor-of|Descriptor-of|Value-of	1-17|1-31|1-39[6_0]	
+1-25	129-130	,	_	_	_	
+1-26	131-136	CuSO4	Material-recipe	Descriptor-of|Descriptor-of|Value-of	1-17|1-31|1-39[6_0]	
+1-27	136-137	,	_	_	_	
+1-28	138-141	CuO	Material-recipe	Descriptor-of|Descriptor-of|Value-of	1-17|1-31|1-39[6_0]	
+1-29	142-145	and	_	_	_	
+1-30	146-151	Bi2O3	Material-recipe	Descriptor-of|Descriptor-of|Value-of	1-17|1-31|1-39[6_0]	
+1-31	152-159	powders	Descriptor	_	_	
+1-32	160-164	were	_	_	_	
+1-33	165-170	mixed	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Participant-material	1-30|1-28|1-26|1-24|1-18[4_0]	
+1-34	171-173	in	_	_	_	
+1-35	174-175	a	_	_	_	
+1-36	176-181	molar	Descriptor[5]	_	_	
+1-37	182-187	ratio	Descriptor[5]	_	_	
+1-38	188-190	of	_	_	_	
+1-39	191-192	2	Value[6]	Descriptor-of	1-36[5_6]	
+1-40	192-193	:	Value[6]	_	_	
+1-41	193-194	1	Value[6]	_	_	
+1-42	194-195	:	Value[6]	_	_	
+1-43	195-196	6	Value[6]	_	_	
+1-44	196-197	:	Value[6]	_	_	
+1-45	197-198	5	Value[6]	_	_	
+1-46	198-199	:	Value[6]	_	_	
+1-47	199-200	1	Value[6]	_	_	
+1-48	200-201	,	_	_	_	
+1-49	202-210	followed	_	_	_	
+1-50	211-213	by	_	_	_	
+1-51	214-221	heating	Operation	Next-operation|Condition-of|Condition-of	1-33|1-53[7_0]|1-57[8_0]	
+1-52	222-224	at	_	_	_	
+1-53	225-228	600	Property-temperature[7]	_	_	
+1-54	229-230	°	Property-temperature[7]	_	_	
+1-55	230-231	C	Property-temperature[7]	_	_	
+1-56	232-235	for	_	_	_	
+1-57	236-237	3	Property-time[8]	_	_	
+1-58	238-242	days	Property-time[8]	_	_	
+1-59	243-246	and	_	_	_	
+1-60	247-251	slow	Descriptor	_	_	
+1-61	252-259	cooling	Operation	Next-operation|Descriptor-of|Condition-of	1-51|1-60|1-63	
+1-62	260-262	in	_	_	_	
+1-63	263-266	air	Property-pressure	_	_	
+1-64	266-267	.	_	_	_	

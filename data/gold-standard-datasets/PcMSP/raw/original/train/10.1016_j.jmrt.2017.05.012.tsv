@@ -1,0 +1,177 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Polycrystalline La1−xMgxMnO3(x = 0.10, 0.25, 0.50) sampleswere prepared by the usual solid state reaction method froma stoichiometric mixture of high purity La2O3(99.99%), MgO(99.995%) and MnO2(99.99%) in air at sintering temperature of1150◦C by 24 h at 2.5◦C/min of heating and cooling rate.
+1-1	0-15	Polycrystalline	Descriptor	_	_	
+1-2	16-19	La1	Material-target[1]	Descriptor-of|Descriptor-of	1-6[2_1]|1-1[0_1]	
+1-3	19-20	−	Material-target[1]	_	_	
+1-4	20-28	xMgxMnO3	Material-target[1]	_	_	
+1-5	28-29	(	_	_	_	
+1-6	29-30	x	Descriptor[2]	_	_	
+1-7	31-32	=	Descriptor[2]	_	_	
+1-8	33-37	0.10	Descriptor[2]	_	_	
+1-9	37-38	,	Descriptor[2]	_	_	
+1-10	39-43	0.25	Descriptor[2]	_	_	
+1-11	43-44	,	Descriptor[2]	_	_	
+1-12	45-49	0.50	Descriptor[2]	_	_	
+1-13	49-50	)	_	_	_	
+1-14	51-62	sampleswere	_	_	_	
+1-15	63-71	prepared	Operation	Participant-material|Coreference|Participant-material|Participant-material|Participant-material|Condition-of|Condition-of|Condition-of|Condition-of	1-2[1_0]|1-19[3_0]|1-29|1-34|1-39|1-44|1-48[6_0]|1-52[7_0]|1-55[8_0]	
+1-16	72-74	by	_	_	_	
+1-17	75-78	the	_	_	_	
+1-18	79-84	usual	_	_	_	
+1-19	85-90	solid	Operation[3]	_	_	
+1-20	91-96	state	Operation[3]	_	_	
+1-21	97-105	reaction	Operation[3]	_	_	
+1-22	106-112	method	Operation[3]	_	_	
+1-23	113-118	froma	_	_	_	
+1-24	119-133	stoichiometric	Value	_	_	
+1-25	134-141	mixture	Material-recipe	Value-of|Coreference|Coreference|Coreference	1-24|1-29|1-34|1-39	
+1-26	142-144	of	_	_	_	
+1-27	145-149	high	Descriptor[4]	_	_	
+1-28	150-156	purity	Descriptor[4]	_	_	
+1-29	157-162	La2O3	Material-recipe	Descriptor-of|Value-of	1-27[4_0]|1-31	
+1-30	162-163	(	_	_	_	
+1-31	163-169	99.99%	Value	_	_	
+1-32	169-170	)	_	_	_	
+1-33	170-171	,	_	_	_	
+1-34	172-175	MgO	Material-recipe	Value-of|Descriptor-of	1-36|1-27[4_0]	
+1-35	175-176	(	_	_	_	
+1-36	176-183	99.995%	Value	_	_	
+1-37	183-184	)	_	_	_	
+1-38	185-188	and	_	_	_	
+1-39	189-193	MnO2	Material-recipe	Value-of|Descriptor-of	1-41|1-27[4_0]	
+1-40	193-194	(	_	_	_	
+1-41	194-200	99.99%	Value	_	_	
+1-42	200-201	)	_	_	_	
+1-43	202-204	in	_	_	_	
+1-44	205-208	air	Property-pressure	_	_	
+1-45	209-211	at	_	_	_	
+1-46	212-221	sintering	Property-temperature[5]	_	_	
+1-47	222-233	temperature	Property-temperature[5]	_	_	
+1-48	234-240	of1150	Property-temperature[6]	Coreference	1-46[5_6]	
+1-49	240-241	◦	Property-temperature[6]	_	_	
+1-50	241-242	C	Property-temperature[6]	_	_	
+1-51	243-245	by	_	_	_	
+1-52	246-248	24	Property-time[7]	_	_	
+1-53	249-250	h	Property-time[7]	_	_	
+1-54	251-253	at	_	_	_	
+1-55	254-257	2.5	Property-rate[8]	Coreference	1-61[9_8]	
+1-56	257-258	◦	Property-rate[8]	_	_	
+1-57	258-259	C	Property-rate[8]	_	_	
+1-58	259-260	/	Property-rate[8]	_	_	
+1-59	260-263	min	Property-rate[8]	_	_	
+1-60	264-266	of	_	_	_	
+1-61	267-274	heating	Property-rate[9]	_	_	
+1-62	275-278	and	Property-rate[9]	_	_	
+1-63	279-286	cooling	Property-rate[9]	_	_	
+1-64	287-291	rate	Property-rate[9]	_	_	
+1-65	291-292	.	_	_	_	
+
+#Text=X-raypowder diffraction (XRD) data were collected on PANalyti-cal X’Pert’s X ray diffractometer with K˛-Curadiation at roomtemperature.
+2-1	293-304	X-raypowder	_	_	_	
+2-2	305-316	diffraction	_	_	_	
+2-3	317-318	(	_	_	_	
+2-4	318-321	XRD	_	_	_	
+2-5	321-322	)	_	_	_	
+2-6	323-327	data	_	_	_	
+2-7	328-332	were	_	_	_	
+2-8	333-342	collected	_	_	_	
+2-9	343-345	on	_	_	_	
+2-10	346-358	PANalyti-cal	_	_	_	
+2-11	359-360	X	_	_	_	
+2-12	360-361	’	_	_	_	
+2-13	361-365	Pert	_	_	_	
+2-14	365-366	’	_	_	_	
+2-15	366-367	s	_	_	_	
+2-16	368-369	X	_	_	_	
+2-17	370-373	ray	_	_	_	
+2-18	374-388	diffractometer	_	_	_	
+2-19	389-393	with	_	_	_	
+2-20	394-395	K	_	_	_	
+2-21	395-396	˛	_	_	_	
+2-22	396-397	-	_	_	_	
+2-23	397-408	Curadiation	_	_	_	
+2-24	409-411	at	_	_	_	
+2-25	412-427	roomtemperature	_	_	_	
+2-26	427-428	.	_	_	_	
+
+#Text=XRD patterns were studied by Rietveld methodwith FullProf software.
+3-1	429-432	XRD	_	_	_	
+3-2	433-441	patterns	_	_	_	
+3-3	442-446	were	_	_	_	
+3-4	447-454	studied	_	_	_	
+3-5	455-457	by	_	_	_	
+3-6	458-466	Rietveld	_	_	_	
+3-7	467-477	methodwith	_	_	_	
+3-8	478-486	FullProf	_	_	_	
+3-9	487-495	software	_	_	_	
+3-10	495-496	.	_	_	_	
+
+#Text=Surface was analyzed by scanning elec-tron microscopy (SEM) with JEOL JSM-6490LV microscope andelemental analysis (EDS) with EDS Inca Energy 250 analyzer.
+4-1	497-504	Surface	_	_	_	
+4-2	505-508	was	_	_	_	
+4-3	509-517	analyzed	_	_	_	
+4-4	518-520	by	_	_	_	
+4-5	521-529	scanning	_	_	_	
+4-6	530-539	elec-tron	_	_	_	
+4-7	540-550	microscopy	_	_	_	
+4-8	551-552	(	_	_	_	
+4-9	552-555	SEM	_	_	_	
+4-10	555-556	)	_	_	_	
+4-11	557-561	with	_	_	_	
+4-12	562-566	JEOL	_	_	_	
+4-13	567-570	JSM	_	_	_	
+4-14	570-571	-	_	_	_	
+4-15	571-577	6490LV	_	_	_	
+4-16	578-588	microscope	_	_	_	
+4-17	589-601	andelemental	_	_	_	
+4-18	602-610	analysis	_	_	_	
+4-19	611-612	(	_	_	_	
+4-20	612-615	EDS	_	_	_	
+4-21	615-616	)	_	_	_	
+4-22	617-621	with	_	_	_	
+4-23	622-625	EDS	_	_	_	
+4-24	626-630	Inca	_	_	_	
+4-25	631-637	Energy	_	_	_	
+4-26	638-641	250	_	_	_	
+4-27	642-650	analyzer	_	_	_	
+4-28	650-651	.	_	_	_	
+
+#Text=Magnetization measurements were performed in vibratingmagnetometer Versalab and Physical Property MeasurementsSystem (PPMS) of Quantum-Design.
+5-1	652-665	Magnetization	_	_	_	
+5-2	666-678	measurements	_	_	_	
+5-3	679-683	were	_	_	_	
+5-4	684-693	performed	_	_	_	
+5-5	694-696	in	_	_	_	
+5-6	697-718	vibratingmagnetometer	_	_	_	
+5-7	719-727	Versalab	_	_	_	
+5-8	728-731	and	_	_	_	
+5-9	732-740	Physical	_	_	_	
+5-10	741-749	Property	_	_	_	
+5-11	750-768	MeasurementsSystem	_	_	_	
+5-12	769-770	(	_	_	_	
+5-13	770-774	PPMS	_	_	_	
+5-14	774-775	)	_	_	_	
+5-15	776-778	of	_	_	_	
+5-16	779-793	Quantum-Design	_	_	_	
+5-17	793-794	.	_	_	_	
+
+#Text=Electrical resistance mea-surements were performed with PPMS by using the standard4-probe method.
+6-1	795-805	Electrical	_	_	_	
+6-2	806-816	resistance	_	_	_	
+6-3	817-830	mea-surements	_	_	_	
+6-4	831-835	were	_	_	_	
+6-5	836-845	performed	_	_	_	
+6-6	846-850	with	_	_	_	
+6-7	851-855	PPMS	_	_	_	
+6-8	856-858	by	_	_	_	
+6-9	859-864	using	_	_	_	
+6-10	865-868	the	_	_	_	
+6-11	869-878	standard4	_	_	_	
+6-12	878-879	-	_	_	_	
+6-13	879-884	probe	_	_	_	
+6-14	885-891	method	_	_	_	
+6-15	891-892	.	_	_	_	

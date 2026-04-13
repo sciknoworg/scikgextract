@@ -1,0 +1,215 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Target preparation.
+1-1	0-6	Target	_	_	_	
+1-2	7-18	preparation	_	_	_	
+1-3	18-19	.	_	_	_	
+
+#Text=The polycrystalline SmO0.9F0.1FeAs target used in the experiments was synthesized by a two-step solid state reaction.
+2-1	20-23	The	_	_	_	
+2-2	24-39	polycrystalline	Descriptor	_	_	
+2-3	40-54	SmO0.9F0.1FeAs	Material-target	Descriptor-of	2-2	
+2-4	55-61	target	_	_	_	
+2-5	62-66	used	_	_	_	
+2-6	67-69	in	_	_	_	
+2-7	70-73	the	_	_	_	
+2-8	74-85	experiments	_	_	_	
+2-9	86-89	was	_	_	_	
+2-10	90-101	synthesized	Operation	Participant-material|Coreference	2-3|2-14[1_0]	
+2-11	102-104	by	_	_	_	
+2-12	105-106	a	_	_	_	
+2-13	107-115	two-step	Descriptor	_	_	
+2-14	116-121	solid	Operation[1]	Descriptor-of	2-13[0_1]	
+2-15	122-127	state	Operation[1]	_	_	
+2-16	128-136	reaction	Operation[1]	_	_	
+2-17	136-137	.	_	_	_	
+
+#Text=All processes except heating were performed in an argon-filled glove box.
+3-1	138-141	All	Descriptor	_	_	
+3-2	142-151	processes	Operation	Descriptor-of	3-1	
+3-3	152-158	except	Descriptor	_	_	
+3-4	159-166	heating	Operation	Descriptor-of	3-3	
+3-5	167-171	were	_	_	_	
+3-6	172-181	performed	Operation	Coreference|Device-of-operation	3-2|3-10[2_0]	
+3-7	182-184	in	_	_	_	
+3-8	185-187	an	Value	_	_	
+3-9	188-200	argon-filled	Descriptor	_	_	
+3-10	201-206	glove	Device[2]	Descriptor-of|Value-of	3-9[0_2]|3-8[0_2]	
+3-11	207-210	box	Device[2]	_	_	
+3-12	210-211	.	_	_	_	
+
+#Text=First, the precursor materials SmAs, Fe2As and FeAs were synthesized by mixing elements of Sm, Fe, and As.
+4-1	212-217	First	_	_	_	
+4-2	217-218	,	_	_	_	
+4-3	219-222	the	_	_	_	
+4-4	223-232	precursor	Descriptor	_	_	
+4-5	233-242	materials	_	_	_	
+4-6	243-247	SmAs	Material-recipe	Descriptor-of	4-4	
+4-7	247-248	,	_	_	_	
+4-8	249-254	Fe2As	Material-recipe	Descriptor-of	4-4	
+4-9	255-258	and	_	_	_	
+4-10	259-263	FeAs	Material-recipe	Descriptor-of	4-4	
+4-11	264-268	were	_	_	_	
+4-12	269-280	synthesized	Operation	Participant-material|Participant-material|Participant-material|Coreference	4-6|4-8|4-10|4-14	
+4-13	281-283	by	_	_	_	
+4-14	284-290	mixing	Operation	Participant-material|Participant-material|Participant-material	4-17|4-19|4-22	
+4-15	291-299	elements	Descriptor	_	_	
+4-16	300-302	of	_	_	_	
+4-17	303-305	Sm	Material-recipe	Descriptor-of	4-15	
+4-18	305-306	,	_	_	_	
+4-19	307-309	Fe	Material-recipe	Descriptor-of	4-15	
+4-20	309-310	,	_	_	_	
+4-21	311-314	and	_	_	_	
+4-22	315-317	As	Material-recipe	Descriptor-of	4-15	
+4-23	317-318	.	_	_	_	
+
+#Text=They were mixed in the chemical composition of Sm:Fe:As = 1:3:3 and heated at 900 °C for 12 h in an evacuated silica tube.
+5-1	319-323	They	Material-intermedium	Value-of	5-15[5_0]	
+5-2	324-328	were	_	_	_	
+5-3	329-334	mixed	Operation	Participant-material|Next-operation	5-1|5-21	
+5-4	335-337	in	_	_	_	
+5-5	338-341	the	_	_	_	
+5-6	342-350	chemical	Value[3]	Coreference	5-15[5_3]	
+5-7	351-362	composition	Value[3]	_	_	
+5-8	363-365	of	_	_	_	
+5-9	366-368	Sm	Descriptor[4]	_	_	
+5-10	368-369	:	Descriptor[4]	_	_	
+5-11	369-371	Fe	Descriptor[4]	_	_	
+5-12	371-372	:	Descriptor[4]	_	_	
+5-13	372-374	As	Descriptor[4]	_	_	
+5-14	375-376	=	_	_	_	
+5-15	377-378	1	Value[5]	Descriptor-of	5-9[4_5]	
+5-16	378-379	:	Value[5]	_	_	
+5-17	379-380	3	Value[5]	_	_	
+5-18	380-381	:	Value[5]	_	_	
+5-19	381-382	3	Value[5]	_	_	
+5-20	383-386	and	_	_	_	
+5-21	387-393	heated	Operation	Condition-of|Condition-of|Device-of-operation	5-23[6_0]|5-27[7_0]|5-33	
+5-22	394-396	at	_	_	_	
+5-23	397-400	900	Property-temperature[6]	_	_	
+5-24	401-402	°	Property-temperature[6]	_	_	
+5-25	402-403	C	Property-temperature[6]	_	_	
+5-26	404-407	for	_	_	_	
+5-27	408-410	12	Property-time[7]	_	_	
+5-28	411-412	h	Property-time[7]	_	_	
+5-29	413-415	in	_	_	_	
+5-30	416-418	an	Value	_	_	
+5-31	419-428	evacuated	Descriptor	_	_	
+5-32	429-435	silica	Descriptor	_	_	
+5-33	436-440	tube	Device	Value-of|Descriptor-of|Descriptor-of	5-30|5-32|5-31	
+5-34	440-441	.	_	_	_	
+
+#Text=The resultant SmFe3As3 powder was then mixed with dehydrated Sm2O3 powder, where 10% of Sm2O3 was replaced by a 1:1 mixture of SmF3 and Sm metal for F substitution, following the chemical reaction of SmFe3As3 + 0.9 Sm2O3 + 0.1 SmF3 + 0.1 Sm → 3 Sm(O0.9F0.1)FeAs.
+6-1	442-445	The	_	_	_	
+6-2	446-455	resultant	Descriptor	_	_	
+6-3	456-464	SmFe3As3	Material-intermedium	Descriptor-of|Descriptor-of	6-4|6-2	
+6-4	465-471	powder	Descriptor	_	_	
+6-5	472-475	was	_	_	_	
+6-6	476-480	then	_	_	_	
+6-7	481-486	mixed	Operation	Participant-material|Participant-material|Participant-material|Next-operation	6-3|6-10|6-24|6-36[9_0]	
+6-8	487-491	with	_	_	_	
+6-9	492-502	dehydrated	Descriptor	_	_	
+6-10	503-508	Sm2O3	Material-recipe	Descriptor-of|Descriptor-of	6-9|6-11	
+6-11	509-515	powder	Descriptor	_	_	
+6-12	515-516	,	_	_	_	
+6-13	517-522	where	_	_	_	
+6-14	523-526	10%	Value	_	_	
+6-15	527-529	of	_	_	_	
+6-16	530-535	Sm2O3	Material-recipe	Value-of	6-14	
+6-17	536-539	was	_	_	_	
+6-18	540-548	replaced	Operation	Participant-material	6-16	
+6-19	549-551	by	_	_	_	
+6-20	552-553	a	_	_	_	
+6-21	554-555	1	Value[8]	_	_	
+6-22	555-556	:	Value[8]	_	_	
+6-23	556-557	1	Value[8]	_	_	
+6-24	558-565	mixture	Material-intermedium	Value-of|Coreference|Coreference	6-21[8_0]|6-26|6-28	
+6-25	566-568	of	_	_	_	
+6-26	569-573	SmF3	Material-recipe	_	_	
+6-27	574-577	and	_	_	_	
+6-28	578-580	Sm	Material-recipe	Descriptor-of	6-29	
+6-29	581-586	metal	Descriptor	_	_	
+6-30	587-590	for	_	_	_	
+6-31	591-592	F	_	_	_	
+6-32	593-605	substitution	_	_	_	
+6-33	605-606	,	_	_	_	
+6-34	607-616	following	_	_	_	
+6-35	617-620	the	_	_	_	
+6-36	621-629	chemical	Operation[9]	Coreference|Participant-material|Participant-material|Participant-material|Participant-material	6-49[0_9]|6-39[0_9]|6-42[0_9]|6-45[0_9]|6-48[0_9]	
+6-37	630-638	reaction	Operation[9]	_	_	
+6-38	639-641	of	_	_	_	
+6-39	642-650	SmFe3As3	Material-intermedium	_	_	
+6-40	651-652	+	_	_	_	
+6-41	653-656	0.9	Value	_	_	
+6-42	657-662	Sm2O3	Material-recipe	Value-of	6-41	
+6-43	663-664	+	_	_	_	
+6-44	665-668	0.1	Value	_	_	
+6-45	669-673	SmF3	Material-recipe	Value-of	6-44	
+6-46	674-675	+	_	_	_	
+6-47	676-679	0.1	Value	_	_	
+6-48	680-682	Sm	Material-recipe	Value-of	6-47	
+6-49	683-684	→	Operation	_	_	
+6-50	685-686	3	Value	_	_	
+6-51	687-689	Sm	Material-intermedium[10]	Value-of	6-50[0_10]	
+6-52	689-690	(	Material-intermedium[10]	_	_	
+6-53	690-698	O0.9F0.1	Material-intermedium[10]	_	_	
+6-54	698-699	)	Material-intermedium[10]	_	_	
+6-55	699-703	FeAs	Material-intermedium[10]	_	_	
+6-56	703-704	.	_	_	_	
+
+#Text=The mixture compound Sm(O0.9F0.1)FeAs was pressed and heated in an evacuated silica-tube at 1300 °C for 40 h to obtain a sintered pellet.
+7-1	705-708	The	_	_	_	
+7-2	709-716	mixture	Descriptor	_	_	
+7-3	717-725	compound	Descriptor	_	_	
+7-4	726-728	Sm	Material-intermedium[11]	Descriptor-of|Descriptor-of	7-2[0_11]|7-3[0_11]	
+7-5	728-729	(	Material-intermedium[11]	_	_	
+7-6	729-737	O0.9F0.1	Material-intermedium[11]	_	_	
+7-7	737-738	)	Material-intermedium[11]	_	_	
+7-8	738-742	FeAs	Material-intermedium[11]	_	_	
+7-9	743-746	was	_	_	_	
+7-10	747-754	pressed	Operation	Participant-material|Next-operation	7-4[11_0]|7-12	
+7-11	755-758	and	_	_	_	
+7-12	759-765	heated	Operation	Device-of-operation|Condition-of|Condition-of	7-16|7-18[12_0]|7-22[13_0]	
+7-13	766-768	in	_	_	_	
+7-14	769-771	an	Value	_	_	
+7-15	772-781	evacuated	Descriptor	_	_	
+7-16	782-793	silica-tube	Device	Value-of|Descriptor-of	7-14|7-15	
+7-17	794-796	at	_	_	_	
+7-18	797-801	1300	Property-temperature[12]	_	_	
+7-19	802-803	°	Property-temperature[12]	_	_	
+7-20	803-804	C	Property-temperature[12]	_	_	
+7-21	805-808	for	_	_	_	
+7-22	809-811	40	Property-time[13]	_	_	
+7-23	812-813	h	Property-time[13]	_	_	
+7-24	814-816	to	_	_	_	
+7-25	817-823	obtain	_	_	_	
+7-26	824-825	a	_	_	_	
+7-27	826-834	sintered	Descriptor	_	_	
+7-28	835-841	pellet	Material-intermedium	Descriptor-of	7-27	
+7-29	841-842	.	_	_	_	
+
+#Text=Phase purity of the resulting PLD target was examined by X-ray diffraction, indicating a small amount of FeAs impurity.
+8-1	843-848	Phase	_	_	_	
+8-2	849-855	purity	_	_	_	
+8-3	856-858	of	_	_	_	
+8-4	859-862	the	_	_	_	
+8-5	863-872	resulting	_	_	_	
+8-6	873-876	PLD	_	_	_	
+8-7	877-883	target	_	_	_	
+8-8	884-887	was	_	_	_	
+8-9	888-896	examined	_	_	_	
+8-10	897-899	by	_	_	_	
+8-11	900-905	X-ray	_	_	_	
+8-12	906-917	diffraction	_	_	_	
+8-13	917-918	,	_	_	_	
+8-14	919-929	indicating	_	_	_	
+8-15	930-931	a	_	_	_	
+8-16	932-937	small	_	_	_	
+8-17	938-944	amount	_	_	_	
+8-18	945-947	of	_	_	_	
+8-19	948-952	FeAs	_	_	_	
+8-20	953-961	impurity	_	_	_	
+8-21	961-962	.	_	_	_	

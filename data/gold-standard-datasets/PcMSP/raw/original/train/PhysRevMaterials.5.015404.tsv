@@ -1,0 +1,291 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=High-purity LiCoO2 was synthesized from a stoichiometric mixture of Li2CO3 99.998% and Co3O4 99.995%, which
+#Text=were vacuum dried and then thoroughly ground and pelleted in an argon-filled glove box.
+1-1	0-11	High-purity	Descriptor	_	_	
+1-2	12-18	LiCoO2	Material-target	Descriptor-of	1-1	
+1-3	19-22	was	_	_	_	
+1-4	23-34	synthesized	Operation	Participant-material|Participant-material	1-2|1-8	
+1-5	35-39	from	_	_	_	
+1-6	40-41	a	_	_	_	
+1-7	42-56	stoichiometric	Value	_	_	
+1-8	57-64	mixture	Material-recipe	Value-of|Coreference|Coreference	1-7|1-10|1-13	
+1-9	65-67	of	_	_	_	
+1-10	68-74	Li2CO3	Material-recipe	Value-of	1-11	
+1-11	75-82	99.998%	Value	_	_	
+1-12	83-86	and	_	_	_	
+1-13	87-92	Co3O4	Material-recipe	Value-of	1-14	
+1-14	93-100	99.995%	Value	_	_	
+1-15	100-101	,	_	_	_	
+1-16	102-107	which	_	_	_	
+1-17	108-112	were	_	_	_	
+1-18	113-119	vacuum	Property-pressure	_	_	
+1-19	120-125	dried	Operation	Condition-of|Participant-material|Participant-material|Next-operation	1-18|1-10|1-13|1-23	
+1-20	126-129	and	_	_	_	
+1-21	130-134	then	_	_	_	
+1-22	135-145	thoroughly	Descriptor	_	_	
+1-23	146-152	ground	Operation	Descriptor-of|Device-of-operation|Next-operation	1-22|1-29[1_0]|1-25	
+1-24	153-156	and	_	_	_	
+1-25	157-165	pelleted	Operation	Device-of-operation	1-29[1_0]	
+1-26	166-168	in	_	_	_	
+1-27	169-171	an	Value	_	_	
+1-28	172-184	argon-filled	Descriptor	_	_	
+1-29	185-190	glove	Device[1]	Value-of|Descriptor-of	1-27[0_1]|1-28[0_1]	
+1-30	191-194	box	Device[1]	_	_	
+1-31	194-195	.	_	_	_	
+
+#Text=The pellets were heated at
+#Text=850 ◦C for 4 h in air and then introduced into a glove box
+#Text=while still hot after removal from the furnace at 200 ◦C.
+2-1	196-199	The	_	_	_	
+2-2	200-207	pellets	Material-intermedium	_	_	
+2-3	208-212	were	_	_	_	
+2-4	213-219	heated	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Next-operation	2-2|2-6[2_0]|2-10[3_0]|2-13|2-16	
+2-5	220-222	at	_	_	_	
+2-6	223-226	850	Property-temperature[2]	_	_	
+2-7	227-228	◦	Property-temperature[2]	_	_	
+2-8	228-229	C	Property-temperature[2]	_	_	
+2-9	230-233	for	_	_	_	
+2-10	234-235	4	Property-time[3]	_	_	
+2-11	236-237	h	Property-time[3]	_	_	
+2-12	238-240	in	_	_	_	
+2-13	241-244	air	Property-pressure	_	_	
+2-14	245-248	and	_	_	_	
+2-15	249-253	then	_	_	_	
+2-16	254-264	introduced	Operation	Device-of-operation	2-19[4_0]	
+2-17	265-269	into	_	_	_	
+2-18	270-271	a	Value	_	_	
+2-19	272-277	glove	Device[4]	Value-of	2-18[0_4]	
+2-20	278-281	box	Device[4]	_	_	
+2-21	282-287	while	_	_	_	
+2-22	288-293	still	_	_	_	
+2-23	294-297	hot	Property-temperature	_	_	
+2-24	298-303	after	_	_	_	
+2-25	304-311	removal	Operation	Device-of-operation|Condition-of|Next-operation	2-28|2-30[5_0]|2-16	
+2-26	312-316	from	_	_	_	
+2-27	317-320	the	_	_	_	
+2-28	321-328	furnace	Device	_	_	
+2-29	329-331	at	_	_	_	
+2-30	332-335	200	Property-temperature[5]	_	_	
+2-31	336-337	◦	Property-temperature[5]	_	_	
+2-32	337-338	C	Property-temperature[5]	_	_	
+2-33	338-339	.	_	_	_	
+
+#Text=For
+#Text=the synthesis of PdCoO2, phase-pure LiCoO2, Pd 99.95%,
+#Text=and PdCl2 99.999% (vacuum dried) were thoroughly mixed
+#Text=in an argon-filled glovebox according to the equation Pd +
+#Text=PdCl2 + 2LiCoO2 → 2PdCoO2 + 2LiCl.
+3-1	340-343	For	_	_	_	
+3-2	344-347	the	_	_	_	
+3-3	348-357	synthesis	Operation	Participant-material|Coreference	3-5|3-22	
+3-4	358-360	of	_	_	_	
+3-5	361-367	PdCoO2	Material-target	Coreference	3-37	
+3-6	367-368	,	_	_	_	
+3-7	369-379	phase-pure	Descriptor	_	_	
+3-8	380-386	LiCoO2	Material-recipe	Descriptor-of|Coreference	3-7|3-35	
+3-9	386-387	,	_	_	_	
+3-10	388-390	Pd	Material-recipe	Descriptor-of|Value-of|Coreference	3-7|3-11|3-31	
+3-11	391-397	99.95%	Value	_	_	
+3-12	397-398	,	_	_	_	
+3-13	399-402	and	_	_	_	
+3-14	403-408	PdCl2	Material-recipe	Descriptor-of|Value-of|Coreference	3-7|3-15|3-33	
+3-15	409-416	99.999%	Value	_	_	
+3-16	417-418	(	_	_	_	
+3-17	418-424	vacuum	Property-pressure	_	_	
+3-18	425-430	dried	Operation	Condition-of|Participant-material	3-17|3-14	
+3-19	430-431	)	_	_	_	
+3-20	432-436	were	_	_	_	
+3-21	437-447	thoroughly	Descriptor	_	_	
+3-22	448-453	mixed	Operation	Descriptor-of|Participant-material|Participant-material|Participant-material|Device-of-operation	3-21|3-8|3-10|3-14|3-26	
+3-23	454-456	in	_	_	_	
+3-24	457-459	an	Value	_	_	
+3-25	460-472	argon-filled	Descriptor	_	_	
+3-26	473-481	glovebox	Device	Value-of|Descriptor-of	3-24|3-25	
+3-27	482-491	according	_	_	_	
+3-28	492-494	to	_	_	_	
+3-29	495-498	the	_	_	_	
+3-30	499-507	equation	_	_	_	
+3-31	508-510	Pd	Material-recipe	_	_	
+3-32	511-512	+	_	_	_	
+3-33	513-518	PdCl2	Material-recipe	_	_	
+3-34	519-520	+	_	_	_	
+3-35	521-528	2LiCoO2	Material-recipe	_	_	
+3-36	529-530	→	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Participant-material	3-31|3-33|3-35|3-37|3-39	
+3-37	531-538	2PdCoO2	Material-target	_	_	
+3-38	539-540	+	_	_	_	
+3-39	541-546	2LiCl	Material-others	_	_	
+3-40	546-547	.	_	_	_	
+
+#Text=The resulting powder was pressed into pellets and sealed under vacuum in a
+#Text=thoroughly dried quartz ampoule with an inner quartz crucible
+#Text=to help withstand attack during the synthesis.
+4-1	548-551	The	_	_	_	
+4-2	552-561	resulting	Descriptor	_	_	
+4-3	562-568	powder	Material-intermedium	Descriptor-of	4-2	
+4-4	569-572	was	_	_	_	
+4-5	573-580	pressed	Operation	Participant-material|Next-operation	4-3|4-9	
+4-6	581-585	into	_	_	_	
+4-7	586-593	pellets	Material-intermedium	_	_	
+4-8	594-597	and	_	_	_	
+4-9	598-604	sealed	Operation	Participant-material|Condition-of|Device-of-operation|Device-of-operation	4-7|4-11|4-17|4-22	
+4-10	605-610	under	_	_	_	
+4-11	611-617	vacuum	Property-pressure	_	_	
+4-12	618-620	in	_	_	_	
+4-13	621-622	a	Value	_	_	
+4-14	623-633	thoroughly	Descriptor	_	_	
+4-15	634-639	dried	Descriptor	_	_	
+4-16	640-646	quartz	Descriptor	_	_	
+4-17	647-654	ampoule	Device	Descriptor-of|Value-of|Descriptor-of|Descriptor-of	4-16|4-13|4-15|4-14	
+4-18	655-659	with	_	_	_	
+4-19	660-662	an	Value	_	_	
+4-20	663-668	inner	_	_	_	
+4-21	669-675	quartz	Descriptor	_	_	
+4-22	676-684	crucible	Device	Value-of|Descriptor-of	4-19|4-21	
+4-23	685-687	to	_	_	_	
+4-24	688-692	help	_	_	_	
+4-25	693-702	withstand	_	_	_	
+4-26	703-709	attack	_	_	_	
+4-27	710-716	during	_	_	_	
+4-28	717-720	the	_	_	_	
+4-29	721-730	synthesis	_	_	_	
+4-30	730-731	.	_	_	_	
+
+#Text=The ampoule
+#Text=was heated at 700 ◦C for 80 h with a heating and cooling
+#Text=rate of 100 ◦C/h.
+5-1	732-735	The	_	_	_	
+5-2	736-743	ampoule	Device	_	_	
+5-3	744-747	was	_	_	_	
+5-4	748-754	heated	Operation	Device-of-operation|Condition-of|Condition-of|Condition-of	5-2|5-6[6_0]|5-10[7_0]|5-19[9_0]	
+5-5	755-757	at	_	_	_	
+5-6	758-761	700	Property-temperature[6]	_	_	
+5-7	762-763	◦	Property-temperature[6]	_	_	
+5-8	763-764	C	Property-temperature[6]	_	_	
+5-9	765-768	for	_	_	_	
+5-10	769-771	80	Property-time[7]	_	_	
+5-11	772-773	h	Property-time[7]	_	_	
+5-12	774-778	with	_	_	_	
+5-13	779-780	a	_	_	_	
+5-14	781-788	heating	Property-rate[8]	_	_	
+5-15	789-792	and	Property-rate[8]	_	_	
+5-16	793-800	cooling	Property-rate[8]	_	_	
+5-17	801-805	rate	Property-rate[8]	_	_	
+5-18	806-808	of	_	_	_	
+5-19	809-812	100	Property-rate[9]	Coreference	5-14[8_9]	
+5-20	813-814	◦	Property-rate[9]	_	_	
+5-21	814-815	C	Property-rate[9]	_	_	
+5-22	815-816	/	Property-rate[9]	_	_	
+5-23	816-817	h	Property-rate[9]	_	_	
+5-24	817-818	.	_	_	_	
+
+#Text=The LiCl2 was then removed from the product by thorough washing with hot distilled water.
+6-1	819-822	The	_	_	_	
+6-2	823-828	LiCl2	Material-others	_	_	
+6-3	829-832	was	_	_	_	
+6-4	833-837	then	_	_	_	
+6-5	838-845	removed	Operation	Participant-material|Participant-material|Coreference	6-2|6-8|6-11	
+6-6	846-850	from	_	_	_	
+6-7	851-854	the	_	_	_	
+6-8	855-862	product	Material-target	_	_	
+6-9	863-865	by	_	_	_	
+6-10	866-874	thorough	Descriptor	_	_	
+6-11	875-882	washing	Operation	Participant-material|Descriptor-of	6-15|6-10	
+6-12	883-887	with	_	_	_	
+6-13	888-891	hot	Property-temperature	_	_	
+6-14	892-901	distilled	Descriptor	_	_	
+6-15	902-907	water	Material-others	Descriptor-of|Condition-of	6-14|6-13	
+6-16	907-908	.	_	_	_	
+
+#Text=Following
+#Text=this, to ensure complete removal of LiCl2, the sample was washed with dilute nitric acid before final washing with water.
+7-1	909-918	Following	_	_	_	
+7-2	919-923	this	_	_	_	
+7-3	923-924	,	_	_	_	
+7-4	925-927	to	_	_	_	
+7-5	928-934	ensure	_	_	_	
+7-6	935-943	complete	_	_	_	
+7-7	944-951	removal	_	_	_	
+7-8	952-954	of	_	_	_	
+7-9	955-960	LiCl2	_	_	_	
+7-10	960-961	,	_	_	_	
+7-11	962-965	the	_	_	_	
+7-12	966-972	sample	Material-target	_	_	
+7-13	973-976	was	_	_	_	
+7-14	977-983	washed	Operation	Participant-material|Participant-material|Next-operation	7-12|7-17[10_0]|7-21	
+7-15	984-988	with	_	_	_	
+7-16	989-995	dilute	Descriptor	_	_	
+7-17	996-1002	nitric	Material-others[10]	Descriptor-of	7-16[0_10]	
+7-18	1003-1007	acid	Material-others[10]	_	_	
+7-19	1008-1014	before	_	_	_	
+7-20	1015-1020	final	Descriptor	_	_	
+7-21	1021-1028	washing	Operation	Participant-material|Descriptor-of	7-23|7-20	
+7-22	1029-1033	with	_	_	_	
+7-23	1034-1039	water	Material-others	_	_	
+7-24	1039-1040	.	_	_	_	
+
+#Text=This process resulted in phase-pure PdCoO2 as confirmed by
+#Text=Cu-Kα1 laboratory x-ray diffraction (XRD) [Fig. 2(a)].
+8-1	1041-1045	This	_	_	_	
+8-2	1046-1053	process	_	_	_	
+8-3	1054-1062	resulted	_	_	_	
+8-4	1063-1065	in	_	_	_	
+8-5	1066-1076	phase-pure	_	_	_	
+8-6	1077-1083	PdCoO2	_	_	_	
+8-7	1084-1086	as	_	_	_	
+8-8	1087-1096	confirmed	_	_	_	
+8-9	1097-1099	by	_	_	_	
+8-10	1100-1106	Cu-Kα1	_	_	_	
+8-11	1107-1117	laboratory	_	_	_	
+8-12	1118-1123	x-ray	_	_	_	
+8-13	1124-1135	diffraction	_	_	_	
+8-14	1136-1137	(	_	_	_	
+8-15	1137-1140	XRD	_	_	_	
+8-16	1140-1141	)	_	_	_	
+8-17	1142-1143	[	_	_	_	
+8-18	1143-1146	Fig	_	_	_	
+8-19	1146-1147	.	_	_	_	
+8-20	1148-1149	2	_	_	_	
+8-21	1149-1150	(	_	_	_	
+8-22	1150-1151	a	_	_	_	
+8-23	1151-1152	)	_	_	_	
+8-24	1152-1153	]	_	_	_	
+8-25	1153-1154	.	_	_	_	
+
+#Text=Inductively coupled plasma and atomic absorption spectroscopy
+#Text=analysis of a representative batch yielded a Pd:Co ratio of
+#Text=1:1.02, further confirming the quality of the sample.
+9-1	1155-1166	Inductively	_	_	_	
+9-2	1167-1174	coupled	_	_	_	
+9-3	1175-1181	plasma	_	_	_	
+9-4	1182-1185	and	_	_	_	
+9-5	1186-1192	atomic	_	_	_	
+9-6	1193-1203	absorption	_	_	_	
+9-7	1204-1216	spectroscopy	_	_	_	
+9-8	1217-1225	analysis	_	_	_	
+9-9	1226-1228	of	_	_	_	
+9-10	1229-1230	a	_	_	_	
+9-11	1231-1245	representative	_	_	_	
+9-12	1246-1251	batch	_	_	_	
+9-13	1252-1259	yielded	_	_	_	
+9-14	1260-1261	a	_	_	_	
+9-15	1262-1264	Pd	_	_	_	
+9-16	1264-1265	:	_	_	_	
+9-17	1265-1267	Co	_	_	_	
+9-18	1268-1273	ratio	_	_	_	
+9-19	1274-1276	of	_	_	_	
+9-20	1277-1278	1	_	_	_	
+9-21	1278-1279	:	_	_	_	
+9-22	1279-1283	1.02	_	_	_	
+9-23	1283-1284	,	_	_	_	
+9-24	1285-1292	further	_	_	_	
+9-25	1293-1303	confirming	_	_	_	
+9-26	1304-1307	the	_	_	_	
+9-27	1308-1315	quality	_	_	_	
+9-28	1316-1318	of	_	_	_	
+9-29	1319-1322	the	_	_	_	
+9-30	1323-1329	sample	_	_	_	
+9-31	1329-1330	.	_	_	_	

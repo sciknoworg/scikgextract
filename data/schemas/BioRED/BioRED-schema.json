@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BioRED Biomedical Relation Extraction",
+  "description": "Schema for biomedical entity and relation extraction from PubMed abstracts, based on the BioRED dataset. Captures typed biomedical entities with database identifiers and document-level relations between entity pairs, including a novelty flag.",
+  "type": "object",
+  "properties": {
+    "entities": {
+      "type": "array",
+      "description": "Biomedical named entities extracted from the text.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The entity mention text as it appears in the passage."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "GeneOrGeneProduct",
+              "DiseaseOrPhenotypicFeature",
+              "ChemicalEntity",
+              "SequenceVariant",
+              "OrganismTaxon",
+              "CellLine"
+            ],
+            "description": "The semantic type of the entity."
+          },
+          "identifier": {
+            "type": "string",
+            "description": "Database identifier (e.g., MeSH ID, NCBI Gene ID, NCBI Taxonomy ID)."
+          },
+          "offset": {
+            "type": "integer",
+            "description": "Character offset of the entity mention in the full document text."
+          },
+          "length": {
+            "type": "integer",
+            "description": "Character length of the entity mention."
+          }
+        },
+        "required": ["text", "type", "identifier"],
+        "additionalProperties": false
+      }
+    },
+    "relations": {
+      "type": "array",
+      "description": "Document-level relations between entity pairs, identified by their database identifiers.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Association",
+              "Positive_Correlation",
+              "Negative_Correlation",
+              "Bind",
+              "Comparison",
+              "Conversion",
+              "Cotreatment",
+              "Drug_Interaction"
+            ],
+            "description": "The semantic relation type between the two entities."
+          },
+          "entity1": {
+            "type": "string",
+            "description": "Database identifier of the first entity."
+          },
+          "entity2": {
+            "type": "string",
+            "description": "Database identifier of the second entity."
+          },
+          "novel": {
+            "type": "boolean",
+            "description": "Whether this relation is novel (not previously reported in the literature)."
+          }
+        },
+        "required": ["type", "entity1", "entity2", "novel"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["entities", "relations"],
+  "additionalProperties": false
+}

@@ -1,0 +1,211 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=The studied Bi2Se3 crystals have been prepared using the standard Bridgman method.
+1-1	0-3	The	_	_	_	
+1-2	4-11	studied	Descriptor	_	_	
+1-3	12-18	Bi2Se3	Material-recipe	Descriptor-of|Descriptor-of	1-2|1-4	
+1-4	19-27	crystals	Descriptor	_	_	
+1-5	28-32	have	_	_	_	
+1-6	33-37	been	_	_	_	
+1-7	38-46	prepared	Operation	Participant-material|Coreference	1-3|1-9[1_0]	
+1-8	47-52	using	_	_	_	
+1-9	53-56	the	Operation[1]	_	_	
+1-10	57-65	standard	Operation[1]	_	_	
+1-11	66-74	Bridgman	Operation[1]	_	_	
+1-12	75-81	method	Operation[1]	_	_	
+1-13	81-82	.	_	_	_	
+
+#Text=The starting material for growing the single crystals was prepared from the elements Bi and Se of 5 N purity.
+2-1	83-86	The	_	_	_	
+2-2	87-95	starting	_	_	_	
+2-3	96-104	material	_	_	_	
+2-4	105-108	for	_	_	_	
+2-5	109-116	growing	_	_	_	
+2-6	117-120	the	_	_	_	
+2-7	121-127	single	_	_	_	
+2-8	128-136	crystals	_	_	_	
+2-9	137-140	was	_	_	_	
+2-10	141-149	prepared	_	_	_	
+2-11	150-154	from	_	_	_	
+2-12	155-158	the	_	_	_	
+2-13	159-167	elements	_	_	_	
+2-14	168-170	Bi	_	_	_	
+2-15	171-174	and	_	_	_	
+2-16	175-177	Se	_	_	_	
+2-17	178-180	of	_	_	_	
+2-18	181-182	5	_	_	_	
+2-19	183-184	N	_	_	_	
+2-20	185-191	purity	_	_	_	
+2-21	191-192	.	_	_	_	
+
+#Text=Polycrystalline material was prepared from a mixture of the elements close to stoichiometry (Bi:Se = 2:3) in silica ampoules evacuated to a pressure of 10−4 Pa.
+3-1	193-208	Polycrystalline	Descriptor	_	_	
+3-2	209-217	material	Material-target	Descriptor-of	3-1	
+3-3	218-221	was	_	_	_	
+3-4	222-230	prepared	Operation	Participant-material|Participant-material|Device-of-operation|Next-operation	3-2|3-7|3-25|3-26	
+3-5	231-235	from	_	_	_	
+3-6	236-237	a	_	_	_	
+3-7	238-245	mixture	Material-intermedium	Coreference	3-10	
+3-8	246-248	of	_	_	_	
+3-9	249-252	the	_	_	_	
+3-10	253-261	elements	Material-recipe	Value-of	3-13	
+3-11	262-267	close	_	_	_	
+3-12	268-270	to	_	_	_	
+3-13	271-284	stoichiometry	Value	Descriptor-of	3-15[2_0]	
+3-14	285-286	(	_	_	_	
+3-15	286-288	Bi	Descriptor[2]	_	_	
+3-16	288-289	:	Descriptor[2]	_	_	
+3-17	289-291	Se	Descriptor[2]	_	_	
+3-18	292-293	=	Descriptor[2]	_	_	
+3-19	294-295	2	Descriptor[2]	_	_	
+3-20	295-296	:	Descriptor[2]	_	_	
+3-21	296-297	3	Descriptor[2]	_	_	
+3-22	297-298	)	_	_	_	
+3-23	299-301	in	_	_	_	
+3-24	302-308	silica	Descriptor	_	_	
+3-25	309-317	ampoules	Device	Descriptor-of	3-24	
+3-26	318-327	evacuated	Operation	Condition-of|Participant-material	3-29|3-25	
+3-27	328-330	to	_	_	_	
+3-28	331-332	a	_	_	_	
+3-29	333-341	pressure	Property-pressure	_	_	
+3-30	342-344	of	_	_	_	
+3-31	345-347	10	Property-pressure[3]	Coreference	3-29[0_3]	
+3-32	347-348	−	Property-pressure[3]	_	_	
+3-33	348-349	4	Property-pressure[3]	_	_	
+3-34	350-352	Pa	Property-pressure[3]	_	_	
+3-35	352-353	.	_	_	_	
+
+#Text=The synthesis was carried out at the temperature of 1073 K.
+4-1	354-357	The	_	_	_	
+4-2	358-367	synthesis	Operation	_	_	
+4-3	368-371	was	_	_	_	
+4-4	372-379	carried	Operation[4]	Coreference|Condition-of	4-2[0_4]|4-8[0_4]	
+4-5	380-383	out	Operation[4]	_	_	
+4-6	384-386	at	_	_	_	
+4-7	387-390	the	_	_	_	
+4-8	391-402	temperature	Property-temperature	_	_	
+4-9	403-405	of	_	_	_	
+4-10	406-410	1073	Property-temperature[5]	Coreference	4-8[0_5]	
+4-11	411-412	K	Property-temperature[5]	_	_	
+4-12	412-413	.	_	_	_	
+
+#Text=A conical quartz ampoule, containing the synthesized polycrystalline material, was then placed in the upper (warmer) part of the Bridgman furnace, where it was remelted.
+5-1	414-415	A	Value	_	_	
+5-2	416-423	conical	Descriptor	_	_	
+5-3	424-430	quartz	Descriptor	_	_	
+5-4	431-438	ampoule	Device	Value-of|Descriptor-of|Descriptor-of	5-1|5-2|5-3	
+5-5	438-439	,	_	_	_	
+5-6	440-450	containing	_	_	_	
+5-7	451-454	the	_	_	_	
+5-8	455-466	synthesized	Descriptor	_	_	
+5-9	467-482	polycrystalline	Descriptor	_	_	
+5-10	483-491	material	Material-intermedium	Descriptor-of|Descriptor-of	5-8|5-9	
+5-11	491-492	,	_	_	_	
+5-12	493-496	was	_	_	_	
+5-13	497-501	then	_	_	_	
+5-14	502-508	placed	Operation	Participant-material|Device-of-operation|Device-of-operation|Next-operation	5-10|5-4|5-25|5-30	
+5-15	509-511	in	_	_	_	
+5-16	512-515	the	_	_	_	
+5-17	516-521	upper	_	_	_	
+5-18	522-523	(	_	_	_	
+5-19	523-529	warmer	_	_	_	
+5-20	529-530	)	_	_	_	
+5-21	531-535	part	_	_	_	
+5-22	536-538	of	_	_	_	
+5-23	539-542	the	_	_	_	
+5-24	543-551	Bridgman	Brand	_	_	
+5-25	552-559	furnace	Device	Brand-of	5-24	
+5-26	559-560	,	_	_	_	
+5-27	561-566	where	_	_	_	
+5-28	567-569	it	_	_	_	
+5-29	570-573	was	_	_	_	
+5-30	574-582	remelted	Operation	_	_	
+5-31	582-583	.	_	_	_	
+
+#Text=Then it was lowered into a temperature gradient of 80 K/cm (30 K/cm for the sample C) at a rate of 1.3 mm/h.
+6-1	584-588	Then	_	_	_	
+6-2	589-591	it	Material-intermedium	Value-of	6-10[7_0]	
+6-3	592-595	was	_	_	_	
+6-4	596-603	lowered	Operation	Participant-material|Condition-of	6-2|6-26	
+6-5	604-608	into	_	_	_	
+6-6	609-610	a	_	_	_	
+6-7	611-622	temperature	Descriptor[6]	_	_	
+6-8	623-631	gradient	Descriptor[6]	_	_	
+6-9	632-634	of	_	_	_	
+6-10	635-637	80	Value[7]	Descriptor-of	6-7[6_7]	
+6-11	638-639	K	Value[7]	_	_	
+6-12	639-640	/	Value[7]	_	_	
+6-13	640-642	cm	Value[7]	_	_	
+6-14	643-644	(	_	_	_	
+6-15	644-646	30	Value[8]	Descriptor-of	6-7[6_8]	
+6-16	647-648	K	Value[8]	_	_	
+6-17	648-649	/	Value[8]	_	_	
+6-18	649-651	cm	Value[8]	_	_	
+6-19	652-655	for	_	_	_	
+6-20	656-659	the	_	_	_	
+6-21	660-666	sample	Material-intermedium[9]	Value-of	6-15[8_9]	
+6-22	667-668	C	Material-intermedium[9]	_	_	
+6-23	668-669	)	_	_	_	
+6-24	670-672	at	_	_	_	
+6-25	673-674	a	_	_	_	
+6-26	675-679	rate	Property-rate	_	_	
+6-27	680-682	of	_	_	_	
+6-28	683-686	1.3	Property-rate[10]	Coreference	6-26[0_10]	
+6-29	687-689	mm	Property-rate[10]	_	_	
+6-30	689-690	/	Property-rate[10]	_	_	
+6-31	690-691	h	Property-rate[10]	_	_	
+6-32	691-692	.	_	_	_	
+
+#Text=Three bulk crystals, differing in the concentration of conduction-band electrons in the conduction band, have been chosen for this study.
+7-1	693-698	Three	Value	_	_	
+7-2	699-703	bulk	Descriptor	_	_	
+7-3	704-712	crystals	Material-intermedium	Descriptor-of|Value-of	7-2|7-1	
+7-4	712-713	,	_	_	_	
+7-5	714-723	differing	_	_	_	
+7-6	724-726	in	_	_	_	
+7-7	727-730	the	_	_	_	
+7-8	731-744	concentration	_	_	_	
+7-9	745-747	of	_	_	_	
+7-10	748-763	conduction-band	_	_	_	
+7-11	764-773	electrons	_	_	_	
+7-12	774-776	in	_	_	_	
+7-13	777-780	the	_	_	_	
+7-14	781-791	conduction	_	_	_	
+7-15	792-796	band	_	_	_	
+7-16	796-797	,	_	_	_	
+7-17	798-802	have	_	_	_	
+7-18	803-807	been	_	_	_	
+7-19	808-814	chosen	Operation	Participant-material	7-3	
+7-20	815-818	for	_	_	_	
+7-21	819-823	this	_	_	_	
+7-22	824-829	study	_	_	_	
+7-23	829-830	.	_	_	_	
+
+#Text=They were characterized by approximate electron densities , and  cm−3 and denoted as samples A, B and C, respectively.
+8-1	831-835	They	_	_	_	
+8-2	836-840	were	_	_	_	
+8-3	841-854	characterized	_	_	_	
+8-4	855-857	by	_	_	_	
+8-5	858-869	approximate	_	_	_	
+8-6	870-878	electron	_	_	_	
+8-7	879-888	densities	_	_	_	
+8-8	889-890	,	_	_	_	
+8-9	891-894	and	_	_	_	
+8-10	896-898	cm	_	_	_	
+8-11	898-899	−	_	_	_	
+8-12	899-900	3	_	_	_	
+8-13	901-904	and	_	_	_	
+8-14	905-912	denoted	_	_	_	
+8-15	913-915	as	_	_	_	
+8-16	916-923	samples	_	_	_	
+8-17	924-925	A	_	_	_	
+8-18	925-926	,	_	_	_	
+8-19	927-928	B	_	_	_	
+8-20	929-932	and	_	_	_	
+8-21	933-934	C	_	_	_	
+8-22	934-935	,	_	_	_	
+8-23	936-948	respectively	_	_	_	
+8-24	948-949	.	_	_	_	

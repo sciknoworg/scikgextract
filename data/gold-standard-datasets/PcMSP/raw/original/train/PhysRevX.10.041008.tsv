@@ -1,0 +1,267 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=By using the solid-state reaction method, polycrystalline
+#Text=samples of CsFe4−xSe4 were successfully synthesized.
+1-1	0-2	By	_	_	_	
+1-2	3-8	using	_	_	_	
+1-3	9-12	the	_	_	_	
+1-4	13-24	solid-state	Operation[1]	Coreference	1-16[0_1]	
+1-5	25-33	reaction	Operation[1]	_	_	
+1-6	34-40	method	Operation[1]	_	_	
+1-7	40-41	,	_	_	_	
+1-8	42-57	polycrystalline	Descriptor	_	_	
+1-9	58-65	samples	_	_	_	
+1-10	66-68	of	_	_	_	
+1-11	69-74	CsFe4	Material-target[2]	Descriptor-of	1-8[0_2]	
+1-12	74-75	−	Material-target[2]	_	_	
+1-13	75-79	xSe4	Material-target[2]	_	_	
+1-14	80-84	were	_	_	_	
+1-15	85-97	successfully	_	_	_	
+1-16	98-109	synthesized	Operation	Participant-material	1-11[2_0]	
+1-17	109-110	.	_	_	_	
+
+#Text=First, FeSe precursors were prepared by reacting Fe powder
+#Text=and Se powder (Alfa Aesar, 99.999% and 99.99%, respectively) at 950 K for 24 h in sealed quartz tubes.
+2-1	111-116	First	_	_	_	
+2-2	116-117	,	_	_	_	
+2-3	118-122	FeSe	Material-intermedium	Descriptor-of	2-4	
+2-4	123-133	precursors	Descriptor	_	_	
+2-5	134-138	were	_	_	_	
+2-6	139-147	prepared	Operation	Coreference|Participant-material	2-8|2-3	
+2-7	148-150	by	_	_	_	
+2-8	151-159	reacting	Operation	Participant-material|Participant-material|Condition-of|Condition-of|Device-of-operation	2-9|2-12|2-25[4_0]|2-28[5_0]|2-33	
+2-9	160-162	Fe	Material-recipe	Descriptor-of	2-10	
+2-10	163-169	powder	Descriptor	_	_	
+2-11	170-173	and	_	_	_	
+2-12	174-176	Se	Material-recipe	Descriptor-of|Brand-of|Value-of|Value-of	2-13|2-15[3_0]|2-18|2-20	
+2-13	177-183	powder	Descriptor	_	_	
+2-14	184-185	(	_	_	_	
+2-15	185-189	Alfa	Brand[3]	_	_	
+2-16	190-195	Aesar	Brand[3]	_	_	
+2-17	195-196	,	_	_	_	
+2-18	197-204	99.999%	Value	_	_	
+2-19	205-208	and	_	_	_	
+2-20	209-215	99.99%	Value	_	_	
+2-21	215-216	,	_	_	_	
+2-22	217-229	respectively	_	_	_	
+2-23	229-230	)	_	_	_	
+2-24	231-233	at	_	_	_	
+2-25	234-237	950	Property-temperature[4]	_	_	
+2-26	238-239	K	Property-temperature[4]	_	_	
+2-27	240-243	for	_	_	_	
+2-28	244-246	24	Property-time[5]	_	_	
+2-29	247-248	h	Property-time[5]	_	_	
+2-30	249-251	in	_	_	_	
+2-31	252-258	sealed	Descriptor	_	_	
+2-32	259-265	quartz	Descriptor	_	_	
+2-33	266-271	tubes	Device	Descriptor-of|Descriptor-of	2-31|2-32	
+2-34	271-272	.	_	_	_	
+
+#Text=Second, we
+#Text=reground the FeSe precursors, mixed them with a stoichiometric amount of alkali metal Cs (Alfa Aesar, 99.95%) in
+#Text=an alumina crucible, and sealed the crucible into an
+#Text=evacuated quartz tube under vacuum.
+3-1	273-279	Second	_	_	_	
+3-2	279-280	,	_	_	_	
+3-3	281-283	we	_	_	_	
+3-4	284-292	reground	Operation	Participant-material|Next-operation	3-6|3-9	
+3-5	293-296	the	_	_	_	
+3-6	297-301	FeSe	Material-intermedium	Descriptor-of|Coreference	3-7|3-10	
+3-7	302-312	precursors	Descriptor	_	_	
+3-8	312-313	,	_	_	_	
+3-9	314-319	mixed	Operation	Participant-material|Participant-material|Device-of-operation|Next-operation	3-10|3-18|3-27[9_0]|3-31	
+3-10	320-324	them	Material-intermedium	_	_	
+3-11	325-329	with	_	_	_	
+3-12	330-331	a	_	_	_	
+3-13	332-346	stoichiometric	Value[6]	_	_	
+3-14	347-353	amount	Value[6]	_	_	
+3-15	354-356	of	_	_	_	
+3-16	357-363	alkali	Descriptor[7]	_	_	
+3-17	364-369	metal	Descriptor[7]	_	_	
+3-18	370-372	Cs	Material-recipe	Value-of|Descriptor-of|Brand-of|Value-of	3-13[6_0]|3-16[7_0]|3-20[8_0]|3-23	
+3-19	373-374	(	_	_	_	
+3-20	374-378	Alfa	Brand[8]	_	_	
+3-21	379-384	Aesar	Brand[8]	_	_	
+3-22	384-385	,	_	_	_	
+3-23	386-392	99.95%	Value	_	_	
+3-24	392-393	)	_	_	_	
+3-25	394-396	in	_	_	_	
+3-26	397-399	an	Value	_	_	
+3-27	400-407	alumina	Device[9]	Value-of	3-26[0_9]	
+3-28	408-416	crucible	Device[9]	_	_	
+3-29	416-417	,	_	_	_	
+3-30	418-421	and	_	_	_	
+3-31	422-428	sealed	Operation	Device-of-operation|Condition-of|Device-of-operation	3-33|3-40|3-38	
+3-32	429-432	the	_	_	_	
+3-33	433-441	crucible	Device	_	_	
+3-34	442-446	into	_	_	_	
+3-35	447-449	an	Value	_	_	
+3-36	450-459	evacuated	Descriptor	_	_	
+3-37	460-466	quartz	Descriptor	_	_	
+3-38	467-471	tube	Device	Value-of|Descriptor-of|Descriptor-of	3-35|3-36|3-37	
+3-39	472-477	under	_	_	_	
+3-40	478-484	vacuum	Property-pressure	_	_	
+3-41	484-485	.	_	_	_	
+
+#Text=All manipulations
+#Text=were performed in a glove box filled with argon gas.
+4-1	486-489	All	_	_	_	
+4-2	490-503	manipulations	Operation	Coreference	4-4	
+4-3	504-508	were	_	_	_	
+4-4	509-518	performed	Operation	Device-of-operation|Condition-of	4-7[10_0]|4-11[11_0]	
+4-5	519-521	in	_	_	_	
+4-6	522-523	a	Value	_	_	
+4-7	524-529	glove	Device[10]	Value-of	4-6[0_10]	
+4-8	530-533	box	Device[10]	_	_	
+4-9	534-540	filled	_	_	_	
+4-10	541-545	with	_	_	_	
+4-11	546-551	argon	Property-pressure[11]	_	_	
+4-12	552-555	gas	Property-pressure[11]	_	_	
+4-13	555-556	.	_	_	_	
+
+#Text=The
+#Text=tube was subsequently heated up to and kept at 873 K for
+#Text=24 h.
+5-1	557-560	The	_	_	_	
+5-2	561-565	tube	Device	_	_	
+5-3	566-569	was	_	_	_	
+5-4	570-582	subsequently	_	_	_	
+5-5	583-589	heated	Operation[12]	Participant-material|Next-operation	5-2[0_12]|5-9[0_12]	
+5-6	590-592	up	Operation[12]	_	_	
+5-7	593-595	to	_	_	_	
+5-8	596-599	and	_	_	_	
+5-9	600-604	kept	Operation	Condition-of|Condition-of	5-11[13_0]|5-14[14_0]	
+5-10	605-607	at	_	_	_	
+5-11	608-611	873	Property-temperature[13]	_	_	
+5-12	612-613	K	Property-temperature[13]	_	_	
+5-13	614-617	for	_	_	_	
+5-14	618-620	24	Property-time[14]	_	_	
+5-15	621-622	h	Property-time[14]	_	_	
+5-16	622-623	.	_	_	_	
+
+#Text=Then, the obtained sample was pulverized, pressed
+#Text=into a pellet, sealed in a quartz tube under vacuum, and
+#Text=heated up and kept at 923 K for 72 h.
+6-1	624-628	Then	_	_	_	
+6-2	628-629	,	_	_	_	
+6-3	630-633	the	_	_	_	
+6-4	634-642	obtained	Material-intermedium[15]	_	_	
+6-5	643-649	sample	Material-intermedium[15]	_	_	
+6-6	650-653	was	_	_	_	
+6-7	654-664	pulverized	Operation	Participant-material|Next-operation	6-4[15_0]|6-9	
+6-8	664-665	,	_	_	_	
+6-9	666-673	pressed	Operation	Next-operation	6-14	
+6-10	674-678	into	_	_	_	
+6-11	679-680	a	Value	_	_	
+6-12	681-687	pellet	Material-intermedium	Value-of	6-11	
+6-13	687-688	,	_	_	_	
+6-14	689-695	sealed	Operation	Condition-of|Next-operation|Device-of-operation|Participant-material	6-20|6-23[16_0]|6-18|6-12	
+6-15	696-698	in	_	_	_	
+6-16	699-700	a	Value	_	_	
+6-17	701-707	quartz	Descriptor	_	_	
+6-18	708-712	tube	Device	Value-of|Descriptor-of	6-16|6-17	
+6-19	713-718	under	_	_	_	
+6-20	719-725	vacuum	Property-pressure	_	_	
+6-21	725-726	,	_	_	_	
+6-22	727-730	and	_	_	_	
+6-23	731-737	heated	Operation[16]	Next-operation	6-26[0_16]	
+6-24	738-740	up	Operation[16]	_	_	
+6-25	741-744	and	_	_	_	
+6-26	745-749	kept	Operation	Condition-of|Condition-of	6-28[17_0]|6-31[18_0]	
+6-27	750-752	at	_	_	_	
+6-28	753-756	923	Property-temperature[17]	_	_	
+6-29	757-758	K	Property-temperature[17]	_	_	
+6-30	759-762	for	_	_	_	
+6-31	763-765	72	Property-time[18]	_	_	
+6-32	766-767	h	Property-time[18]	_	_	
+6-33	767-768	.	_	_	_	
+
+#Text=Finally, dark-colored
+#Text=samples were obtained.
+7-1	769-776	Finally	_	_	_	
+7-2	776-777	,	_	_	_	
+7-3	778-790	dark-colored	_	_	_	
+7-4	791-798	samples	_	_	_	
+7-5	799-803	were	_	_	_	
+7-6	804-812	obtained	_	_	_	
+7-7	812-813	.	_	_	_	
+
+#Text=The samples are sensitive to air,
+#Text=and thus they are usually vacuum packed and put in the
+#Text=glove box.
+8-1	814-817	The	_	_	_	
+8-2	818-825	samples	_	_	_	
+8-3	826-829	are	_	_	_	
+8-4	830-839	sensitive	_	_	_	
+8-5	840-842	to	_	_	_	
+8-6	843-846	air	_	_	_	
+8-7	846-847	,	_	_	_	
+8-8	848-851	and	_	_	_	
+8-9	852-856	thus	_	_	_	
+8-10	857-861	they	_	_	_	
+8-11	862-865	are	_	_	_	
+8-12	866-873	usually	_	_	_	
+8-13	874-880	vacuum	_	_	_	
+8-14	881-887	packed	_	_	_	
+8-15	888-891	and	_	_	_	
+8-16	892-895	put	_	_	_	
+8-17	896-898	in	_	_	_	
+8-18	899-902	the	_	_	_	
+8-19	903-908	glove	_	_	_	
+8-20	909-912	box	_	_	_	
+8-21	912-913	.	_	_	_	
+
+#Text=The synthesis process is similar to that of
+#Text=previous work [18].
+9-1	914-917	The	_	_	_	
+9-2	918-927	synthesis	_	_	_	
+9-3	928-935	process	_	_	_	
+9-4	936-938	is	_	_	_	
+9-5	939-946	similar	_	_	_	
+9-6	947-949	to	_	_	_	
+9-7	950-954	that	_	_	_	
+9-8	955-957	of	_	_	_	
+9-9	958-966	previous	_	_	_	
+9-10	967-971	work	_	_	_	
+9-11	972-973	[	_	_	_	
+9-12	973-975	18	_	_	_	
+9-13	975-976	]	_	_	_	
+9-14	976-977	.	_	_	_	
+
+#Text=The only difference is that in previous
+#Text=work, the quartz tube was sealed with Ar gas, while in our
+#Text=experiments, the quartz tube is sealed under evacuation.
+10-1	978-981	The	_	_	_	
+10-2	982-986	only	_	_	_	
+10-3	987-997	difference	_	_	_	
+10-4	998-1000	is	_	_	_	
+10-5	1001-1005	that	_	_	_	
+10-6	1006-1008	in	_	_	_	
+10-7	1009-1017	previous	_	_	_	
+10-8	1018-1022	work	_	_	_	
+10-9	1022-1023	,	_	_	_	
+10-10	1024-1027	the	_	_	_	
+10-11	1028-1034	quartz	Descriptor	_	_	
+10-12	1035-1039	tube	Device	Descriptor-of	10-11	
+10-13	1040-1043	was	_	_	_	
+10-14	1044-1050	sealed	Operation	Condition-of|Device-of-operation	10-16[19_0]|10-12	
+10-15	1051-1055	with	_	_	_	
+10-16	1056-1058	Ar	Property-pressure[19]	_	_	
+10-17	1059-1062	gas	Property-pressure[19]	_	_	
+10-18	1062-1063	,	_	_	_	
+10-19	1064-1069	while	_	_	_	
+10-20	1070-1072	in	_	_	_	
+10-21	1073-1076	our	_	_	_	
+10-22	1077-1088	experiments	_	_	_	
+10-23	1088-1089	,	_	_	_	
+10-24	1090-1093	the	_	_	_	
+10-25	1094-1100	quartz	Descriptor	_	_	
+10-26	1101-1105	tube	Device	Descriptor-of	10-25	
+10-27	1106-1108	is	_	_	_	
+10-28	1109-1115	sealed	Operation	Condition-of|Device-of-operation	10-30|10-26	
+10-29	1116-1121	under	_	_	_	
+10-30	1122-1132	evacuation	Property-pressure	_	_	
+10-31	1132-1133	.	_	_	_	

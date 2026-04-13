@@ -1,0 +1,93 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A polycrystalline sample of NaNiO2 was synthesized by\ra solid-state reaction technique.
+1-1	0-1	A	Value	_	_	
+1-2	2-17	polycrystalline	Descriptor	_	_	
+1-3	18-24	sample	_	_	_	
+1-4	25-27	of	_	_	_	
+1-5	28-34	NaNiO2	Material-target	Descriptor-of|Value-of	1-2|1-1	
+1-6	35-38	was	_	_	_	
+1-7	39-50	synthesized	Operation	Participant-material|Coreference	1-5|1-10[1_0]	
+1-8	51-53	by	_	_	_	
+1-9	54-55	a	_	_	_	
+1-10	56-67	solid-state	Operation[1]	_	_	
+1-11	68-76	reaction	Operation[1]	_	_	
+1-12	77-86	technique	Operation[1]	_	_	
+1-13	86-87	.	_	_	_	
+
+#Text=Powders of Na2O2 and NiO were mixed in the ratio of 1.1:2 and pelletized in an Ar\ratmosphere.
+2-1	88-95	Powders	Descriptor	_	_	
+2-2	96-98	of	_	_	_	
+2-3	99-104	Na2O2	Material-recipe	Descriptor-of|Value-of	2-1|2-10[2_0]	
+2-4	105-108	and	_	_	_	
+2-5	109-112	NiO	Material-recipe	Descriptor-of|Value-of	2-1|2-10[2_0]	
+2-6	113-117	were	_	_	_	
+2-7	118-123	mixed	Operation	Next-operation|Participant-material|Participant-material	2-16|2-5|2-3	
+2-8	124-126	in	_	_	_	
+2-9	127-130	the	_	_	_	
+2-10	131-136	ratio	Value[2]	_	_	
+2-11	137-139	of	Value[2]	_	_	
+2-12	140-143	1.1	Value[2]	_	_	
+2-13	143-144	:	Value[2]	_	_	
+2-14	144-145	2	Value[2]	_	_	
+2-15	146-149	and	_	_	_	
+2-16	150-160	pelletized	Operation	Condition-of	2-19[3_0]	
+2-17	161-163	in	_	_	_	
+2-18	164-166	an	_	_	_	
+2-19	167-169	Ar	Property-pressure[3]	_	_	
+2-20	170-180	atmosphere	Property-pressure[3]	_	_	
+2-21	180-181	.	_	_	_	
+
+#Text=The pelletized disk was heated at 700 ◦C in an\rO2 gas flow for 27 h.
+3-1	182-185	The	_	_	_	
+3-2	186-196	pelletized	Descriptor	_	_	
+3-3	197-201	disk	Material-intermedium	Descriptor-of	3-2	
+3-4	202-205	was	_	_	_	
+3-5	206-212	heated	Operation	Participant-material|Condition-of|Condition-of|Condition-of	3-3|3-16[6_0]|3-7[4_0]|3-12	
+3-6	213-215	at	_	_	_	
+3-7	216-219	700	Property-temperature[4]	_	_	
+3-8	220-221	◦	Property-temperature[4]	_	_	
+3-9	221-222	C	Property-temperature[4]	_	_	
+3-10	223-225	in	_	_	_	
+3-11	226-228	an	_	_	_	
+3-12	229-231	O2	Property-pressure	Descriptor-of	3-13[5_0]	
+3-13	232-235	gas	Descriptor[5]	_	_	
+3-14	236-240	flow	Descriptor[5]	_	_	
+3-15	241-244	for	_	_	_	
+3-16	245-247	27	Property-time[6]	_	_	
+3-17	248-249	h	Property-time[6]	_	_	
+3-18	249-250	.	_	_	_	
+
+#Text=This heating process was repeated after\ran intermediate grinding.
+4-1	251-255	This	_	_	_	
+4-2	256-263	heating	Operation[7]	Next-operation	4-9[0_7]	
+4-3	264-271	process	Operation[7]	_	_	
+4-4	272-275	was	_	_	_	
+4-5	276-284	repeated	Operation	Participant-material	4-2[7_0]	
+4-6	285-290	after	_	_	_	
+4-7	291-293	an	Value	_	_	
+4-8	294-306	intermediate	Descriptor	_	_	
+4-9	307-315	grinding	Operation	Value-of|Descriptor-of|Next-operation	4-7|4-8|4-5	
+4-10	315-316	.	_	_	_	
+
+#Text=The obtained sample was confirmed\ras a single phase of NaNiO2 by powder x-ray diffraction\rmeasurements.
+5-1	317-320	The	_	_	_	
+5-2	321-329	obtained	_	_	_	
+5-3	330-336	sample	_	_	_	
+5-4	337-340	was	_	_	_	
+5-5	341-350	confirmed	_	_	_	
+5-6	351-353	as	_	_	_	
+5-7	354-355	a	_	_	_	
+5-8	356-362	single	_	_	_	
+5-9	363-368	phase	_	_	_	
+5-10	369-371	of	_	_	_	
+5-11	372-378	NaNiO2	_	_	_	
+5-12	379-381	by	_	_	_	
+5-13	382-388	powder	_	_	_	
+5-14	389-394	x-ray	_	_	_	
+5-15	395-406	diffraction	_	_	_	
+5-16	407-419	measurements	_	_	_	
+5-17	419-420	.	_	_	_	

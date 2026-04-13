@@ -1,0 +1,108 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=A polycrystalline sample of SrLa2Ni2TeO9 was synthesized using the traditional ceramic method.
+1-1	0-1	A	_	_	_	
+1-2	2-17	polycrystalline	Descriptor	_	_	
+1-3	18-24	sample	_	_	_	
+1-4	25-27	of	_	_	_	
+1-5	28-40	SrLa2Ni2TeO9	Material-target	Descriptor-of	1-2	
+1-6	41-44	was	_	_	_	
+1-7	45-56	synthesized	Operation	Participant-material	1-5	
+1-8	57-62	using	_	_	_	
+1-9	63-66	the	_	_	_	
+1-10	67-78	traditional	Operation[1]	Next-operation	1-7[0_1]	
+1-11	79-86	ceramic	Operation[1]	_	_	
+1-12	87-93	method	Operation[1]	_	_	
+1-13	93-94	.	_	_	_	
+
+#Text=Stoichiometric quantities of SrCO3, NiO, TeO2 and pre-dried La2O3 were initially mixed, ground together and fired in an alumina crucible at 800 °C.
+2-1	95-109	Stoichiometric	Value[2]	_	_	
+2-2	110-120	quantities	Value[2]	_	_	
+2-3	121-123	of	_	_	_	
+2-4	124-129	SrCO3	Material-recipe	Value-of	2-1[2_0]	
+2-5	129-130	,	_	_	_	
+2-6	131-134	NiO	Material-recipe	Value-of	2-1[2_0]	
+2-7	134-135	,	_	_	_	
+2-8	136-140	TeO2	Material-recipe	Value-of	2-1[2_0]	
+2-9	141-144	and	_	_	_	
+2-10	145-154	pre-dried	Descriptor	_	_	
+2-11	155-160	La2O3	Material-recipe	Descriptor-of|Value-of	2-10|2-1[2_0]	
+2-12	161-165	were	_	_	_	
+2-13	166-175	initially	_	_	_	
+2-14	176-181	mixed	Operation	Participant-material|Participant-material|Participant-material|Participant-material|Next-operation	2-11|2-8|2-6|2-4|2-16	
+2-15	181-182	,	_	_	_	
+2-16	183-189	ground	Operation	Next-operation	2-19	
+2-17	190-198	together	_	_	_	
+2-18	199-202	and	_	_	_	
+2-19	203-208	fired	Operation	Device-of-operation|Condition-of	2-23|2-25[3_0]	
+2-20	209-211	in	_	_	_	
+2-21	212-214	an	Value	_	_	
+2-22	215-222	alumina	Descriptor	_	_	
+2-23	223-231	crucible	Device	Value-of|Descriptor-of	2-21|2-22	
+2-24	232-234	at	_	_	_	
+2-25	235-238	800	Property-temperature[3]	_	_	
+2-26	239-240	°	Property-temperature[3]	_	_	
+2-27	240-241	C	Property-temperature[3]	_	_	
+2-28	241-242	.	_	_	_	
+
+#Text=The reaction mixture was then pelletised before being heated at 950, 1100, 1200 and finally at 1225 °C, with intermediate regrinding.
+3-1	243-246	The	_	_	_	
+3-2	247-255	reaction	Descriptor	_	_	
+3-3	256-263	mixture	Material-intermedium	Descriptor-of	3-2	
+3-4	264-267	was	_	_	_	
+3-5	268-272	then	_	_	_	
+3-6	273-283	pelletised	Operation	Participant-material|Participant-material	3-3|3-9	
+3-7	284-290	before	_	_	_	
+3-8	291-296	being	_	_	_	
+3-9	297-303	heated	Operation	Condition-of|Condition-of|Condition-of|Condition-of|Next-operation	3-11|3-13|3-15|3-19[4_0]|3-25	
+3-10	304-306	at	_	_	_	
+3-11	307-310	950	Property-temperature	_	_	
+3-12	310-311	,	_	_	_	
+3-13	312-316	1100	Property-temperature	_	_	
+3-14	316-317	,	_	_	_	
+3-15	318-322	1200	Property-temperature	_	_	
+3-16	323-326	and	_	_	_	
+3-17	327-334	finally	Descriptor	_	_	
+3-18	335-337	at	_	_	_	
+3-19	338-342	1225	Property-temperature[4]	Descriptor-of	3-17[0_4]	
+3-20	343-344	°	Property-temperature[4]	_	_	
+3-21	344-345	C	Property-temperature[4]	_	_	
+3-22	345-346	,	_	_	_	
+3-23	347-351	with	_	_	_	
+3-24	352-364	intermediate	Descriptor	_	_	
+3-25	365-375	regrinding	Operation	Descriptor-of	3-24	
+3-26	375-376	.	_	_	_	
+
+#Text=After a total of six days at 1225 °C the reaction product was cooled to 800 °C in the furnace and then quenched to room temperature.
+4-1	377-382	After	_	_	_	
+4-2	383-384	a	_	_	_	
+4-3	385-390	total	_	_	_	
+4-4	391-393	of	_	_	_	
+4-5	394-397	six	Property-time[5]	_	_	
+4-6	398-402	days	Property-time[5]	_	_	
+4-7	403-405	at	_	_	_	
+4-8	406-410	1225	Property-temperature[6]	_	_	
+4-9	411-412	°	Property-temperature[6]	_	_	
+4-10	412-413	C	Property-temperature[6]	_	_	
+4-11	414-417	the	_	_	_	
+4-12	418-426	reaction	Operation	Condition-of|Condition-of|Next-operation	4-5[5_0]|4-8[6_0]|4-15	
+4-13	427-434	product	Material-intermedium	_	_	
+4-14	435-438	was	_	_	_	
+4-15	439-445	cooled	Operation	Participant-material|Condition-of|Device-of-operation|Next-operation	4-13|4-17[7_0]|4-22|4-25	
+4-16	446-448	to	_	_	_	
+4-17	449-452	800	Property-temperature[7]	_	_	
+4-18	453-454	°	Property-temperature[7]	_	_	
+4-19	454-455	C	Property-temperature[7]	_	_	
+4-20	456-458	in	_	_	_	
+4-21	459-462	the	_	_	_	
+4-22	463-470	furnace	Device	_	_	
+4-23	471-474	and	_	_	_	
+4-24	475-479	then	_	_	_	
+4-25	480-488	quenched	Operation	Condition-of	4-27[8_0]	
+4-26	489-491	to	_	_	_	
+4-27	492-496	room	Property-temperature[8]	_	_	
+4-28	497-508	temperature	Property-temperature[8]	_	_	
+4-29	508-509	.	_	_	_	

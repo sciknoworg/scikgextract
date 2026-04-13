@@ -1,0 +1,138 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=webanno.custom.DemoNERRE|NamedentityTags
+#T_RL=webanno.custom.DemoRE|NamedentityRelations|BT_webanno.custom.DemoNERRE
+
+
+#Text=Sample preparation.
+1-1	0-6	Sample	_	_	_	
+1-2	7-18	preparation	_	_	_	
+1-3	18-19	.	_	_	_	
+
+#Text=Polycrystalline samples of MnGe were prepared by high-pressure synthesis technique.
+2-1	20-35	Polycrystalline	Descriptor	_	_	
+2-2	36-43	samples	_	_	_	
+2-3	44-46	of	_	_	_	
+2-4	47-51	MnGe	Material-target	Descriptor-of	2-1	
+2-5	52-56	were	_	_	_	
+2-6	57-65	prepared	Operation	Participant-material	2-4	
+2-7	66-68	by	_	_	_	
+2-8	69-82	high-pressure	Operation[1]	Coreference	2-6[0_1]	
+2-9	83-92	synthesis	Operation[1]	_	_	
+2-10	93-102	technique	Operation[1]	_	_	
+2-11	102-103	.	_	_	_	
+
+#Text=Mn and Ge were first mixed with an atomic ratio of 1:1 and then melted in an arc furnace under an argon atmosphere.
+3-1	104-106	Mn	Material-recipe	Value-of	3-12[3_0]	
+3-2	107-110	and	_	_	_	
+3-3	111-113	Ge	Material-recipe	Value-of	3-12[3_0]	
+3-4	114-118	were	_	_	_	
+3-5	119-124	first	_	_	_	
+3-6	125-130	mixed	Operation	Participant-material|Participant-material|Next-operation	3-1|3-3|3-17	
+3-7	131-135	with	_	_	_	
+3-8	136-138	an	_	_	_	
+3-9	139-145	atomic	Value[2]	_	_	
+3-10	146-151	ratio	Value[2]	_	_	
+3-11	152-154	of	_	_	_	
+3-12	155-156	1	Value[3]	Coreference	3-9[2_3]	
+3-13	156-157	:	Value[3]	_	_	
+3-14	157-158	1	Value[3]	_	_	
+3-15	159-162	and	_	_	_	
+3-16	163-167	then	_	_	_	
+3-17	168-174	melted	Operation	Device-of-operation|Condition-of	3-21|3-24[4_0]	
+3-18	175-177	in	_	_	_	
+3-19	178-180	an	Value	_	_	
+3-20	181-184	arc	Descriptor	_	_	
+3-21	185-192	furnace	Device	Value-of|Descriptor-of	3-19|3-20	
+3-22	193-198	under	_	_	_	
+3-23	199-201	an	_	_	_	
+3-24	202-207	argon	Property-pressure[4]	_	_	
+3-25	208-218	atmosphere	Property-pressure[4]	_	_	
+3-26	218-219	.	_	_	_	
+
+#Text=Afterwards, it was heated at 1073 K for 1 h under 4 GPa in a cubic-anvil-type high-pressure apparatus.
+4-1	220-230	Afterwards	_	_	_	
+4-2	230-231	,	_	_	_	
+4-3	232-234	it	Material-intermedium	_	_	
+4-4	235-238	was	_	_	_	
+4-5	239-245	heated	Operation	Participant-material|Condition-of|Condition-of|Condition-of|Device-of-operation	4-3|4-7[5_0]|4-10[6_0]|4-13[7_0]|4-19	
+4-6	246-248	at	_	_	_	
+4-7	249-253	1073	Property-temperature[5]	_	_	
+4-8	254-255	K	Property-temperature[5]	_	_	
+4-9	256-259	for	_	_	_	
+4-10	260-261	1	Property-time[6]	_	_	
+4-11	262-263	h	Property-time[6]	_	_	
+4-12	264-269	under	_	_	_	
+4-13	270-271	4	Property-pressure[7]	_	_	
+4-14	272-275	GPa	Property-pressure[7]	_	_	
+4-15	276-278	in	_	_	_	
+4-16	279-280	a	Value	_	_	
+4-17	281-297	cubic-anvil-type	Descriptor	_	_	
+4-18	298-311	high-pressure	Descriptor	_	_	
+4-19	312-321	apparatus	Device	Value-of|Descriptor-of|Descriptor-of	4-16|4-17|4-18	
+4-20	321-322	.	_	_	_	
+
+#Text=Powder X-ray analyses confirmed B20-type crystal structure (P213) with no detectable impurity content (Supplementary Figure 4).
+5-1	323-329	Powder	_	_	_	
+5-2	330-335	X-ray	_	_	_	
+5-3	336-344	analyses	_	_	_	
+5-4	345-354	confirmed	_	_	_	
+5-5	355-358	B20	_	_	_	
+5-6	358-359	-	_	_	_	
+5-7	359-363	type	_	_	_	
+5-8	364-371	crystal	_	_	_	
+5-9	372-381	structure	_	_	_	
+5-10	382-383	(	_	_	_	
+5-11	383-387	P213	_	_	_	
+5-12	387-388	)	_	_	_	
+5-13	389-393	with	_	_	_	
+5-14	394-396	no	_	_	_	
+5-15	397-407	detectable	_	_	_	
+5-16	408-416	impurity	_	_	_	
+5-17	417-424	content	_	_	_	
+5-18	425-426	(	_	_	_	
+5-19	426-439	Supplementary	_	_	_	
+5-20	440-446	Figure	_	_	_	
+5-21	447-448	4	_	_	_	
+5-22	448-449	)	_	_	_	
+5-23	449-450	.	_	_	_	
+
+#Text=A single crystal of MnSi was grown by the Czochralski method in tetra-arc furnace under an argon atmosphere.
+6-1	451-452	A	_	_	_	
+6-2	453-459	single	_	_	_	
+6-3	460-467	crystal	_	_	_	
+6-4	468-470	of	_	_	_	
+6-5	471-475	MnSi	_	_	_	
+6-6	476-479	was	_	_	_	
+6-7	480-485	grown	_	_	_	
+6-8	486-488	by	_	_	_	
+6-9	489-492	the	_	_	_	
+6-10	493-504	Czochralski	_	_	_	
+6-11	505-511	method	_	_	_	
+6-12	512-514	in	_	_	_	
+6-13	515-524	tetra-arc	_	_	_	
+6-14	525-532	furnace	_	_	_	
+6-15	533-538	under	_	_	_	
+6-16	539-541	an	_	_	_	
+6-17	542-547	argon	_	_	_	
+6-18	548-558	atmosphere	_	_	_	
+6-19	558-559	.	_	_	_	
+
+#Text=Powder X-ray diffraction pattern of the pulverized single crystal indicated that the sample was of single phase.
+7-1	560-566	Powder	_	_	_	
+7-2	567-572	X-ray	_	_	_	
+7-3	573-584	diffraction	_	_	_	
+7-4	585-592	pattern	_	_	_	
+7-5	593-595	of	_	_	_	
+7-6	596-599	the	_	_	_	
+7-7	600-610	pulverized	_	_	_	
+7-8	611-617	single	_	_	_	
+7-9	618-625	crystal	_	_	_	
+7-10	626-635	indicated	_	_	_	
+7-11	636-640	that	_	_	_	
+7-12	641-644	the	_	_	_	
+7-13	645-651	sample	_	_	_	
+7-14	652-655	was	_	_	_	
+7-15	656-658	of	_	_	_	
+7-16	659-665	single	_	_	_	
+7-17	666-671	phase	_	_	_	
+7-18	671-672	.	_	_	_	
