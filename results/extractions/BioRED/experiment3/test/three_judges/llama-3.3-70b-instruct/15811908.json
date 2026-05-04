@@ -1,0 +1,123 @@
+{
+    "entities": [
+        {
+            "text": "Pheochromocytoma",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010673",
+            "offset": 0,
+            "length": 14
+        },
+        {
+            "text": "amisulpride",
+            "type": "ChemicalEntity",
+            "identifier": "C07564",
+            "offset": 31,
+            "length": 10
+        },
+        {
+            "text": "tiapride",
+            "type": "ChemicalEntity",
+            "identifier": "C07174",
+            "offset": 44,
+            "length": 8
+        },
+        {
+            "text": "hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006973",
+            "offset": 123,
+            "length": 11
+        },
+        {
+            "text": "headache",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006261",
+            "offset": 143,
+            "length": 8
+        },
+        {
+            "text": "vomiting",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D014839",
+            "offset": 154,
+            "length": 8
+        },
+        {
+            "text": "nicardipine",
+            "type": "ChemicalEntity",
+            "identifier": "C07224",
+            "offset": 213,
+            "length": 10
+        },
+        {
+            "text": "verapamil",
+            "type": "ChemicalEntity",
+            "identifier": "C07179",
+            "offset": 226,
+            "length": 9
+        },
+        {
+            "text": "adrenal mass",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000326",
+            "offset": 264,
+            "length": 11
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D010673",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D010673",
+            "entity2": "D006261",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D010673",
+            "entity2": "D014839",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C07564",
+            "entity2": "D006973",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C07174",
+            "entity2": "D006973",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C07224",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C07179",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D010673",
+            "entity2": "D000326",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "C07224",
+            "entity2": "C07179",
+            "novel": false
+        }
+    ]
+}

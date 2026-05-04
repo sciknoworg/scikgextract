@@ -1,0 +1,52 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "collected",
+            "ground",
+            "heating"
+        ],
+        "descriptors": [
+            "fine"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "agate mortar",
+            "glove box"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "heating",
+            "target": "collected"
+        },
+        {
+            "type": "Next-operation",
+            "source": "collected",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ground",
+            "target": "powder"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "ground"
+        }
+    ]
+}

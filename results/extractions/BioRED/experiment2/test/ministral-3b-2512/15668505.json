@@ -1,0 +1,93 @@
+{
+    "entities": [
+        {
+            "text": "BRCA2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6739",
+            "offset": 13,
+            "length": 5
+        },
+        {
+            "text": "BRCA2 gene",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6739",
+            "offset": 105,
+            "length": 11
+        },
+        {
+            "text": "N372H",
+            "type": "SequenceVariant",
+            "identifier": "rs1801461",
+            "offset": 45,
+            "length": 4
+        },
+        {
+            "text": "203G>A",
+            "type": "SequenceVariant",
+            "identifier": "rs1801461",
+            "offset": 115,
+            "length": 5
+        },
+        {
+            "text": "breast cancer",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001044",
+            "offset": 60,
+            "length": 11
+        },
+        {
+            "text": "ovarian cancer",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003475",
+            "offset": 75,
+            "length": 12
+        },
+        {
+            "text": "778 women",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 140,
+            "length": 8
+        },
+        {
+            "text": "403 families",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 149,
+            "length": 9
+        },
+        {
+            "text": "Cox proportional hazards model",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 180,
+            "length": 23
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "6739",
+            "entity2": "D001044",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "6739",
+            "entity2": "D003475",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs1801461",
+            "entity2": "D003475",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "rs1801461",
+            "entity2": "D001044",
+            "novel": false
+        }
+    ]
+}

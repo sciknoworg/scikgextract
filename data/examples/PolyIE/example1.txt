@@ -1,0 +1,68 @@
+Below is an example of extracting structured polymer property information from sentences in a polymer science paper. PolyIE extracts chemical names, property names, property values, and conditions, then links them via n-ary relations.
+
+=== Input Text (Document with multiple sentences) ===
+
+Sentence 1:
+The solar cell devices based on the polymer as donor and PC61BM as acceptor achieved a power conversion efficiency ( PCE ) of 5.22% without using any processing additives or postfabrication treatment. This is the highest performance in solar cell devices among all polymers based on NDF building blocks. The active layer was processed with chlorobenzene ( CB ) and the concentration of donor material was 10 mg / mL. Solar cells based on PNDFT-DTBT:PC61BM ( 1 : 3 ) as the photoactive layer ( thickness of 85 nm ) exhibited the best photovoltaic performance with a PCE of 5.22% , a J sc of 8.21 mA cm^-2 , a V oc of 0.89 V , and a high FF of 0.72.
+
+Sentence 2:
+A new NDF building block ( NDFT ) has been designed and synthesized as building block for conjugated polymer. The new monomer was fully characterized and was applied in synthesis of conjugated polymer ( PNDFT - DTBT ).
+
+=== Expected Output ===
+
+{
+  "sentences": [
+    {
+      "entities": {
+        "chemicalNames": ["PC61BM", "chlorobenzene", "CB", "PNDFT-DTBT:PC61BM"],
+        "propertyNames": ["power conversion efficiency", "PCE", "concentration", "J sc", "V oc", "FF"],
+        "propertyValues": ["5.22%", "10 mg / mL.", "85 nm", "8.21 mA cm^-2", "0.89 V", "0.72."],
+        "conditions": []
+      },
+      "relations": [
+        {
+          "chemicalName": "PNDFT-DTBT:PC61BM",
+          "propertyName": "PCE",
+          "propertyValue": "5.22%",
+          "condition": null
+        },
+        {
+          "chemicalName": "PNDFT-DTBT:PC61BM",
+          "propertyName": "J sc",
+          "propertyValue": "8.21 mA cm^-2",
+          "condition": null
+        },
+        {
+          "chemicalName": "PNDFT-DTBT:PC61BM",
+          "propertyName": "V oc",
+          "propertyValue": "0.89 V",
+          "condition": null
+        },
+        {
+          "chemicalName": "PNDFT-DTBT:PC61BM",
+          "propertyName": "FF",
+          "propertyValue": "0.72.",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "entities": {
+        "chemicalNames": ["PNDFT - DTBT"],
+        "propertyNames": [],
+        "propertyValues": [],
+        "conditions": []
+      },
+      "relations": []
+    }
+  ]
+}
+
+=== Extraction Guidelines ===
+
+1. Entity categories: chemicalNames (chemical/polymer names, abbreviations, blends), propertyNames (measured properties), propertyValues (numerical values with units), conditions (experimental conditions like temperature, atmosphere).
+2. All entity categories are plain string lists (no subtypes).
+3. Relations are n-ary tuples linking a chemicalName to a propertyName and propertyValue, with an optional condition.
+4. The "condition" field is null if no specific experimental condition is associated with the measurement.
+5. Extract entities and relations from each sentence. A document may contain multiple sentences.
+6. Chemical names include polymer abbreviations, blend compositions (e.g., "PNDFT-DTBT:PC61BM"), and common chemical names.

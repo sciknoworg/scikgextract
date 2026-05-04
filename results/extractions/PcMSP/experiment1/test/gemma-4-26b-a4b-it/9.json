@@ -1,0 +1,70 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "resulting products",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "distilled water",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "coloured turquoise to pale blue",
+            "several times",
+            "in air"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "coloured turquoise to pale blue",
+            "target": "resulting products"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "distilled water",
+            "target": "washed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "washed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "dried"
+        },
+        {
+            "type": "Condition-of",
+            "source": "in air",
+            "target": "dried"
+        }
+    ]
+}

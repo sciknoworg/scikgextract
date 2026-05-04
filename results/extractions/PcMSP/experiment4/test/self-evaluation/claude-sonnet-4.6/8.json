@@ -1,0 +1,105 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled"
+        ],
+        "descriptors": [
+            "x = 0.99 ( 1 )"
+        ],
+        "values": [
+            "x = 0.99 ( 1 )",
+            "1 K / min",
+            "483 K",
+            "24 h",
+            "0.1 K / min",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "24 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "0.1 K / min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "autoclave"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fully Zn-substituted",
+            "target": "fully Zn-substituted sample"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.99 ( 1 )",
+            "target": "fully Zn-substituted sample"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "autoclave",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 K / min",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "483 K",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 K / min",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "held"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "x = 0.99 ( 1 )",
+            "target": "sample"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "cooled"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fully Zn-substituted sample",
+            "target": "heated"
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "placed",
+            "growth"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "powders",
+            "evacuated"
+        ],
+        "values": [
+            "~ 5 mg cm \u2212 3"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule",
+            "two-zone furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Br2",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "~ 5 mg cm \u2212 3",
+            "target": "Br2"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "loaded"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "two-zone furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "growth"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "growth"
+        }
+    ]
+}

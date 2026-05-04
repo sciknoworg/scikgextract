@@ -1,0 +1,126 @@
+{
+    "entities": [
+        {
+            "text": "ANKH",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10091",
+            "offset": 25,
+            "length": 4
+        },
+        {
+            "text": "ANKH",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10091",
+            "offset": 50,
+            "length": 4
+        },
+        {
+            "text": "ANKH protein",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10091",
+            "offset": 75,
+            "length": 11
+        },
+        {
+            "text": "inorganic pyrophosphate",
+            "type": "ChemicalEntity",
+            "identifier": "D005947",
+            "offset": 100,
+            "length": 23
+        },
+        {
+            "text": "PPi",
+            "type": "ChemicalEntity",
+            "identifier": "D005947",
+            "offset": 130,
+            "length": 3
+        },
+        {
+            "text": "chondrocalcinosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001679",
+            "offset": 14,
+            "length": 15
+        },
+        {
+            "text": "pseudogout",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007168",
+            "offset": 160,
+            "length": 7
+        },
+        {
+            "text": "-4-basepair G-to-A transition",
+            "type": "SequenceVariant",
+            "identifier": "rs74805019",
+            "offset": 18,
+            "length": 25
+        },
+        {
+            "text": "ANKH",
+            "type": "GeneOrGeneProduct",
+            "identifier": "56172",
+            "offset": 1653,
+            "length": 4
+        },
+        {
+            "text": "5'-UTR",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10091",
+            "offset": 25,
+            "length": 4
+        },
+        {
+            "text": "type X collagen",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000999",
+            "offset": 300,
+            "length": 14
+        },
+        {
+            "text": "CH-8 articular chondrocytes",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 280,
+            "length": 28
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "10091",
+            "entity2": "D001679",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs74805019",
+            "entity2": "D001679",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "10091",
+            "entity2": "D007168",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "c|SUB|G|-4|A",
+            "entity2": "D043564",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D005947",
+            "entity2": "D000999",
+            "novel": true
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "rs74805019",
+            "entity2": "CH-8 articular chondrocytes",
+            "novel": true
+        }
+    ]
+}

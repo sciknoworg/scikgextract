@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "β-phase",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "ice water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "used",
+            "quenched"
+        ],
+        "descriptors": [
+            "metastable",
+            "higher",
+            "immediately"
+        ],
+        "values": [
+            "900 – 1000 °C",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "900 – 1000 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "metastable",
+            "target": "β-phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "higher",
+            "target": "temperature profile"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "quenched"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 – 1000 °C",
+            "target": "temperature profile"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Next-operation",
+            "source": "used",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "immediately",
+            "target": "quenched"
+        }
+    ]
+}

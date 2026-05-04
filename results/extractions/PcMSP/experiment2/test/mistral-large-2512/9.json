@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "resulting products",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Zn-substituted product",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "coloured turquoise to pale blue",
+            "several times",
+            "distilled",
+            "in air"
+        ],
+        "values": [
+            "level of Zn-substitution"
+        ],
+        "properties": [
+            {
+                "text": "in air",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "coloured turquoise to pale blue",
+            "target": "resulting products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "level of Zn-substitution",
+            "target": "resulting products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "distilled",
+            "target": "water"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "washed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in air",
+            "target": "dried"
+        },
+        {
+            "type": "Coreference",
+            "source": "resulting products",
+            "target": "Zn-substituted product"
+        }
+    ]
+}

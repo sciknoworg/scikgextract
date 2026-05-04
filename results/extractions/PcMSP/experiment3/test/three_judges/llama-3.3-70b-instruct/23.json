@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ta",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "quartz",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "crucible",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "arc welding"
+        ],
+        "descriptors": [
+            "evacuated"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "evacuated",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "Ta Tube",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Ta Tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "arc welding",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        }
+    ]
+}

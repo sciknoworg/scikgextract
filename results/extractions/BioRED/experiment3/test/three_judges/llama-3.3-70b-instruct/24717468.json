@@ -1,0 +1,71 @@
+{
+    "entities": [
+        {
+            "text": "dexmedetomidine",
+            "type": "ChemicalEntity",
+            "identifier": "C075066",
+            "offset": 10,
+            "length": 13
+        },
+        {
+            "text": "propofol",
+            "type": "ChemicalEntity",
+            "identifier": "C075155",
+            "offset": 30,
+            "length": 8
+        },
+        {
+            "text": "severe hypotension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0020446",
+            "offset": 120,
+            "length": 17
+        },
+        {
+            "text": "bradycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0005477",
+            "offset": 150,
+            "length": 11
+        },
+        {
+            "text": "neurocritical care patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 200,
+            "length": 24
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C075066",
+            "entity2": "C0020446",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C075066",
+            "entity2": "C0005477",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C075155",
+            "entity2": "C0020446",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C075155",
+            "entity2": "C0005477",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "C075066",
+            "entity2": "C075155",
+            "novel": false
+        }
+    ]
+}

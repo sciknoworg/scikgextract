@@ -1,0 +1,87 @@
+{
+    "entities": [
+        {
+            "text": "Nefiracetam",
+            "type": "ChemicalEntity",
+            "identifier": "C07746",
+            "offset": 0,
+            "length": 10
+        },
+        {
+            "text": "DM-9384",
+            "type": "ChemicalEntity",
+            "identifier": "C07746",
+            "offset": 11,
+            "length": 7
+        },
+        {
+            "text": "apomorphine",
+            "type": "ChemicalEntity",
+            "identifier": "D000994",
+            "offset": 34,
+            "length": 10
+        },
+        {
+            "text": "passive avoidance response",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020926",
+            "offset": 63,
+            "length": 24
+        },
+        {
+            "text": "scopolamine",
+            "type": "ChemicalEntity",
+            "identifier": "D000071",
+            "offset": 141,
+            "length": 10
+        },
+        {
+            "text": "learning deficits",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000071",
+            "offset": 162,
+            "length": 15
+        },
+        {
+            "text": "dopaminergic agonism",
+            "type": "ChemicalEntity",
+            "identifier": "D020924",
+            "offset": 193,
+            "length": 17
+        },
+        {
+            "text": "D1 dopamine receptor",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DRD1",
+            "offset": 246,
+            "length": 18
+        },
+        {
+            "text": "D2 dopamine receptor",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DRD2",
+            "offset": 265,
+            "length": 18
+        }
+    ],
+    "relations": [
+        {
+            "type": "Drug_Interaction",
+            "entity1": "C07746",
+            "entity2": "D000994",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D000994",
+            "entity2": "D020926",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C07746",
+            "entity2": "D020926",
+            "novel": true
+        }
+    ]
+}

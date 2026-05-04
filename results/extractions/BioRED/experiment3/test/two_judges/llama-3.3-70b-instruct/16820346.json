@@ -1,0 +1,124 @@
+{
+    "entities": [
+        {
+            "text": "atorvastatin",
+            "type": "ChemicalEntity",
+            "identifier": "C079338",
+            "offset": 0,
+            "length": 11
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "D002945",
+            "offset": 24,
+            "length": 12
+        },
+        {
+            "text": "hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006973",
+            "offset": 43,
+            "length": 11
+        },
+        {
+            "text": "Sprague-Dawley rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 93,
+            "length": 17
+        },
+        {
+            "text": "systolic blood pressure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020641",
+            "offset": 154,
+            "length": 20
+        },
+        {
+            "text": "plasma superoxide",
+            "type": "ChemicalEntity",
+            "identifier": "D011129",
+            "offset": 210,
+            "length": 15
+        },
+        {
+            "text": "atorvastatin",
+            "type": "ChemicalEntity",
+            "identifier": "C079338",
+            "offset": 246,
+            "length": 11
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "D002945",
+            "offset": 270,
+            "length": 12
+        },
+        {
+            "text": "plasma nitrate/nitrite",
+            "type": "ChemicalEntity",
+            "identifier": "D009653",
+            "offset": 341,
+            "length": 18
+        },
+        {
+            "text": "thymus weight",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 394,
+            "length": 12
+        }
+    ],
+    "relations": [
+        {
+            "type": "Cotreatment",
+            "entity1": "C079338",
+            "entity2": "D002945",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D002945",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C079338",
+            "entity2": "D006973",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D002945",
+            "entity2": "D020641",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C079338",
+            "entity2": "D020641",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D002945",
+            "entity2": "D011129",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C079338",
+            "entity2": "D011129",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D002945",
+            "entity2": "D009653",
+            "novel": false
+        }
+    ]
+}

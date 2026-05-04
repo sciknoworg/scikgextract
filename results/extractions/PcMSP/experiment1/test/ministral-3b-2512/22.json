@@ -1,0 +1,39 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "alumina crucible",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "placed"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "pressed"
+        }
+    ]
+}

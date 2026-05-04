@@ -1,0 +1,33 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingots",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ipped",
+            "remelted"
+        ],
+        "descriptors": [
+            "homogeneous"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "ipped",
+            "target": "remelted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneous",
+            "target": "ingots"
+        }
+    ]
+}

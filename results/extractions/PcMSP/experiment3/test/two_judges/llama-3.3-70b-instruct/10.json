@@ -1,0 +1,121 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "NbP",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "red phosphorous",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "reaction"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "pieces",
+            "evacuated",
+            "direct",
+            "powder"
+        ],
+        "values": [
+            "99.9%",
+            "99.999%",
+            "48 h",
+            "800 °C"
+        ],
+        "properties": [
+            {
+                "text": "800 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "silica tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "NbP"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Nb"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pieces",
+            "target": "red phosphorous"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "silica tube"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "direct",
+            "target": "reaction"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Nb"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "red phosphorous"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "reaction"
+        },
+        {
+            "type": "Value-of",
+            "source": "800 °C",
+            "target": "reaction"
+        },
+        {
+            "type": "Condition-of",
+            "source": "evacuated",
+            "target": "reaction"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tube",
+            "target": "reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "red phosphorous",
+            "target": "reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NbP",
+            "target": "synthesized"
+        }
+    ]
+}

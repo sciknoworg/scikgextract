@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "N2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "evacuated",
+            "filled",
+            "sealed"
+        ],
+        "descriptors": [
+            "N2 - filled"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "glove box",
+            "jar"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "evacuated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "filled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "N2",
+            "target": "filled"
+        },
+        {
+            "type": "Next-operation",
+            "source": "filled",
+            "target": "evacuated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "filled"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se grains",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnClx",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnSe2-xClx",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "added",
+            "synthesize",
+            "annealing"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "second"
+        ],
+        "values": [
+            "600 °C",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se grains"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "second",
+            "target": "annealing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnClx",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se grains",
+            "target": "synthesize"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "600 °C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "time"
+        },
+        {
+            "type": "Coreference",
+            "source": "SnSe2-xClx",
+            "target": "synthesize"
+        }
+    ]
+}

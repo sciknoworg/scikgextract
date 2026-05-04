@@ -1,0 +1,65 @@
+{
+    "entities": [
+        {
+            "text": "hMSH2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "2956",
+            "offset": 0,
+            "length": 6
+        },
+        {
+            "text": "breast cancer",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001943",
+            "offset": 44,
+            "length": 11
+        },
+        {
+            "text": "Gly322Asp polymorphism",
+            "type": "SequenceVariant",
+            "identifier": "rs1130214",
+            "offset": 156,
+            "length": 13
+        },
+        {
+            "text": "Asn127Ser polymorphism",
+            "type": "SequenceVariant",
+            "identifier": "rs267607",
+            "offset": 201,
+            "length": 13
+        },
+        {
+            "text": "humans",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 270,
+            "length": 7
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "2956",
+            "entity2": "D001943",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "rs1130214",
+            "entity2": "D001943",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs267607",
+            "entity2": "D001943",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs1130214",
+            "entity2": "D001943",
+            "novel": true
+        }
+    ]
+}

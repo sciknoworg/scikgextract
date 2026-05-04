@@ -1,0 +1,73 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "kept",
+            "cooling"
+        ],
+        "descriptors": [
+            "free",
+            "free"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "Ampoules",
+            "target": "kept"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "free",
+            "target": "cooling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "cooling"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "free",
+            "target": "cooling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turned-off",
+            "target": "furnace"
+        },
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "kept"
+        }
+    ]
+}

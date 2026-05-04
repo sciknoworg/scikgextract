@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "piece to grind into a powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "piece for scanning electron microscopy",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "bar for physical property measurements",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind"
+        ],
+        "descriptors": [
+            "diamond",
+            "powder"
+        ],
+        "values": [
+            "8 mm × 3 mm × 3 mm"
+        ],
+        "properties": [],
+        "devices": [
+            "diamond saw",
+            "synchrotron X-ray diffraction",
+            "scanning electron microscopy"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "piece to grind into a powder",
+            "target": "grind"
+        },
+        {
+            "type": "Participant-material",
+            "source": "piece for scanning electron microscopy",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "bar for physical property measurements",
+            "target": "sectioned"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "synchrotron X-ray diffraction",
+            "target": "grind"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "scanning electron microscopy",
+            "target": "sectioned"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "piece to grind into a powder"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "sectioned"
+        }
+    ]
+}

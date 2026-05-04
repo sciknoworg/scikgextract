@@ -1,0 +1,48 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Ta foil",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "conducted",
+            "wrapping",
+            "sealing"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "fused silica ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "wrapping"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "sealing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta foil",
+            "target": "wrapping"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica ampoule",
+            "target": "sealing"
+        }
+    ]
+}

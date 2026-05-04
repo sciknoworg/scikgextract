@@ -1,0 +1,138 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "La2MMnO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2CoMnO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2NiMnO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2CuMnO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MnO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co(NO3)",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiCO3 · 2Ni(OH)2 · 4H2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "firing",
+            "solid state reaction"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "conventional",
+            "intimate",
+            "stoichiometric"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "La2MMnO6",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2CoMnO6",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2NiMnO6",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2CuMnO6",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2O3",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MnO2",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co(NO3)",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiCO3 · 2Ni(OH)2 · 4H2O",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "firing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "firing",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "La2MMnO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "conventional",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intimate",
+            "target": "mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixtures"
+        }
+    ]
+}

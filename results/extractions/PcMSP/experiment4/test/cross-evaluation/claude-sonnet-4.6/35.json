@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "single-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "performed",
+            "sintering",
+            "obtain"
+        ],
+        "descriptors": [
+            "single-phase",
+            "several times"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "single-phase",
+            "target": "single-phase"
+        },
+        {
+            "type": "Coreference",
+            "source": "sintering",
+            "target": "performed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "obtain",
+            "target": "sintering"
+        },
+        {
+            "type": "Participant-material",
+            "source": "single-phase",
+            "target": "obtain"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "grinding"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "sintering"
+        }
+    ]
+}

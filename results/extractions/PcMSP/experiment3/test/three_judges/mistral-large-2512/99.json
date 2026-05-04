@@ -1,0 +1,63 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "kept",
+            "free cooling"
+        ],
+        "descriptors": [
+            "free",
+            "turned-off",
+            "room"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "free",
+            "target": "cooling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turned-off",
+            "target": "furnace"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooling"
+        },
+        {
+            "type": "Next-operation",
+            "source": "free cooling",
+            "target": "kept"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "free cooling"
+        }
+    ]
+}

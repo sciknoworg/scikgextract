@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "text": "Nefiracetam",
+            "type": "ChemicalEntity",
+            "identifier": "C07744",
+            "offset": 0,
+            "length": 10
+        },
+        {
+            "text": "apomorphine",
+            "type": "ChemicalEntity",
+            "identifier": "D000279",
+            "offset": 24,
+            "length": 10
+        },
+        {
+            "text": "amnesia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000447",
+            "offset": 43,
+            "length": 6
+        },
+        {
+            "text": "passive avoidance response",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000447",
+            "offset": 51,
+            "length": 24
+        },
+        {
+            "text": "scopolamine",
+            "type": "ChemicalEntity",
+            "identifier": "D012722",
+            "offset": 123,
+            "length": 10
+        },
+        {
+            "text": "dopaminergic agonism",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D019417",
+            "offset": 156,
+            "length": 18
+        },
+        {
+            "text": "D1 dopamine receptor",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DRD1",
+            "offset": 246,
+            "length": 19
+        },
+        {
+            "text": "D2 dopamine receptor",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DRD2",
+            "offset": 266,
+            "length": 19
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C07744",
+            "entity2": "D000447",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000279",
+            "entity2": "D000447",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D012722",
+            "entity2": "D000447",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C07744",
+            "entity2": "D019417",
+            "novel": true
+        },
+        {
+            "type": "Bind",
+            "entity1": "DRD1",
+            "entity2": "D000279",
+            "novel": false
+        },
+        {
+            "type": "Bind",
+            "entity1": "DRD2",
+            "entity2": "D000279",
+            "novel": false
+        }
+    ]
+}

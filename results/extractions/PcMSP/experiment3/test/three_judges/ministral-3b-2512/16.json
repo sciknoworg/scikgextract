@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs2Mo3As3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cs2Mo3As3",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "starting"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "powder",
+            "powder"
+        ],
+        "values": [
+            "99.98%",
+            "99.98%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.98%",
+            "target": "Cs"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "lumps",
+            "target": "Cs"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Mo"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "As"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "As"
+        }
+    ]
+}

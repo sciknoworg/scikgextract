@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "stoichiometric mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "heating"
+        ],
+        "descriptors": [
+            "evacuated",
+            "stoichiometric"
+        ],
+        "values": [
+            "1.7 K / min",
+            "1223 K"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoules"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoules",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoules"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "stoichiometric mixture"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1.7 K / min",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1223 K",
+            "target": "heating"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "MoTe2",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "loaded",
+            "loaded",
+            "placed"
+        ],
+        "descriptors": [
+            "quartz"
+        ],
+        "values": [
+            "~ 5 mg cm − 3"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "MoTe2",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "two-zone furnace",
+            "target": "growth of samples"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Value-of",
+            "source": "~5 mg cm−3",
+            "target": "Br2"
+        }
+    ]
+}

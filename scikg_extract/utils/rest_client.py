@@ -1,4 +1,12 @@
+"""
+REST client utility for SciKGExtract.
+
+Provides a simple asynchronous REST client using httpx for making GET and POST requests to specified endpoints, with optional API key authentication and error handling.
+"""
+# Httpx Import
 import httpx
+
+# Python Imports
 from typing import Any, Dict, Optional
 
 class RestClient:

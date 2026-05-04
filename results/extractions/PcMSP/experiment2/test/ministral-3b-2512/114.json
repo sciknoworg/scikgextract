@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu2Se",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cu",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "fabricated",
+            "high-energy ball milling"
+        ],
+        "descriptors": [
+            "powder",
+            "stoichiometric composition"
+        ],
+        "values": [
+            "200 min"
+        ],
+        "properties": [
+            {
+                "text": "200 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "SPEX",
+            "8000 M Mixer / Mill"
+        ],
+        "brands": [
+            "SPEX"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cu",
+            "target": "fabricated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "fabricated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu2Se",
+            "target": "fabricated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "SPEX 8000 M Mixer / Mill",
+            "target": "high-energy ball milling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric composition",
+            "target": "Cu2Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "200 min",
+            "target": "Property-time"
+        },
+        {
+            "type": "Brand-of",
+            "source": "SPEX",
+            "target": "SPEX 8000 M Mixer / Mill"
+        }
+    ]
+}

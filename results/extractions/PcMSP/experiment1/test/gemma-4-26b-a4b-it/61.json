@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "metastable \u03b2-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "synthesis process",
+            "quenched"
+        ],
+        "descriptors": [
+            "high temperature",
+            "immediately",
+            "room temperature"
+        ],
+        "values": [
+            "900 \u2013 1000 \u00b0 C"
+        ],
+        "properties": [
+            {
+                "text": "900 \u2013 1000 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ice water"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "metastable",
+            "target": "\u03b2-phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high temperature",
+            "target": "\u03b2-phase"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u2013 1000 \u00b0 C",
+            "target": "synthesis process"
+        },
+        {
+            "type": "Participant-material",
+            "source": "\u03b2-phase",
+            "target": "synthesis process"
+        },
+        {
+            "type": "Participant-material",
+            "source": "\u03b2-phase",
+            "target": "quenched"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "immediately",
+            "target": "quenched"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "quenched"
+        }
+    ]
+}

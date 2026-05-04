@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Not Found",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "kept",
+            "cooling",
+            "free cooling"
+        ],
+        "descriptors": [
+            "free"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "Ampoules"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "temperature",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "free cooling"
+        },
+        {
+            "type": "Next-operation",
+            "source": "free cooling",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turned-off",
+            "target": "furnace"
+        }
+    ]
+}

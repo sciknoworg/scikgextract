@@ -1,0 +1,68 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "LiNi0.88Co0.09Al0.03O2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Li",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiNi0.88Co0.09 - Al0.03O2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Co",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "Synthesis"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "LiNi0.88Co0.09Al0.03O2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiNi0.88Co0.09Al0.03O2",
+            "target": "Synthesis"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Li",
+            "target": "Synthesis"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "Synthesis"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "LiNi0.88Co0.09 - Al0.03O2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "Synthesis"
+        }
+    ]
+}

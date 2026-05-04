@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "kept"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "pure phase"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Na2O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "NiO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "CuO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "TeO2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "Na2O"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "NiO"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "CuO"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "TeO2"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "kept",
+            "target": "furnace"
+        }
+    ]
+}

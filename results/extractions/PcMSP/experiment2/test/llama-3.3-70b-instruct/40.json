@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "thoroughly mixed",
+            "kept in the furnace"
+        ],
+        "descriptors": [
+            "stoichiometric proportions",
+            "pure phase"
+        ],
+        "values": [
+            "stoichiometric proportions"
+        ],
+        "properties": [],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "thoroughly mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "thoroughly mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "thoroughly mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "thoroughly mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept in the furnace"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "Na2O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "NiO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "CuO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "TeO2"
+        },
+        {
+            "type": "Next-operation",
+            "source": "kept in the furnace",
+            "target": "thoroughly mixed"
+        }
+    ]
+}

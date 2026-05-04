@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "aluminium/platinum crucible",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated",
+            "gradually heated"
+        ],
+        "descriptors": [
+            "aluminium",
+            "aluminium / platinum",
+            "gradually"
+        ],
+        "values": [
+            "5 °C/min",
+            "900 °C"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium/platinum crucible",
+            "target": "gradually heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 °C/min",
+            "target": "gradually heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 °C",
+            "target": "reach"
+        },
+        {
+            "type": "Coreference",
+            "source": "rate",
+            "target": "5 \u000e C / min"
+        },
+        {
+            "type": "Participant-material",
+            "source": "platinum",
+            "target": "aluminium/platinum crucible"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 °C/min",
+            "target": "Property-rate"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 °C",
+            "target": "Property-temperature"
+        }
+    ]
+}

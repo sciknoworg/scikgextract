@@ -1,0 +1,49 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "jar",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "subjected",
+            "milling"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "450 rpm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "planetary ball mill"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Participant-material",
+            "source": "jar",
+            "target": "subjected"
+        }
+    ]
+}

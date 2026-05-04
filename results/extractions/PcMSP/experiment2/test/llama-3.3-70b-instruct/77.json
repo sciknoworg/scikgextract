@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "This material",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired"
+        ],
+        "descriptors": [
+            "fine powder"
+        ],
+        "values": [
+            "1 / 2 \"",
+            "1200 \u25e6 C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u25e6 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine powder",
+            "target": "This material"
+        },
+        {
+            "type": "Participant-material",
+            "source": "This material",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 / 2 \"",
+            "target": "pellet"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 \u25e6 C",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "intermediate grinding and pelletizing step"
+        }
+    ]
+}

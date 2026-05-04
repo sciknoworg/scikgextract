@@ -1,13 +1,12 @@
 """
 Script to evaluate extracted structured knowledge using the LLM-as-a-Judge paradigm. The LLM acts as a judge to assess the quality of the extracted knowledge based on predefined rubrics.
-
-Author: Sameer Sadruddin
-Created: November 27, 2025
-Last Modified: November 27, 2025
 """
 # Python packages
 import os
 import argparse
+
+# External packages
+from pydantic import BaseModel
 
 # SciKG-Extract Utility Imports
 from scikg_extract.utils.log_handler import LogHandler
@@ -44,7 +43,7 @@ if __name__ == "__main__":
     logger.info("Starting LLM-as-a-Judge evaluation script...")
 
     # Extracted Information path
-    extracted_data_path = args.extracted_data_path if args.extracted_data_path else "results/extracted-data/ALD/version2/ZnO-IGZO-papers/experimental-usecase/IGZO"
+    extracted_data_path = args.extracted_data_path if args.extracted_data_path else "results/extracted-data/ALD/version2/ZnO-IGZO-papers/experimental-usecase/IGZO/AtomicLimits Database"
     logger.info(f"Extracted data path: {extracted_data_path}")
 
     # Scientific document path
@@ -57,7 +56,7 @@ if __name__ == "__main__":
     logger.info(f"Process schema loaded from: {process_schema_path}")
 
     # Results directory
-    results_dir = args.results_dir if args.results_dir else "results/evaluation"
+    results_dir = args.results_dir if args.results_dir else "results/evaluation1"
     logger.info(f"Results directory for evaluation: {results_dir}")
 
     # LLM model to use for evaluation
@@ -118,25 +117,31 @@ if __name__ == "__main__":
 
             # Define the initial state for evaluation
             initial_state = ExtractionState(
+                extraction_llm="",
                 process_name=ProcessConfig.Process_name,
                 process_description=ProcessConfig.Process_description,
                 process_property_constraints=ProcessConfig.Process_property_constraints,
                 scientific_document=scientific_document,
                 process_schema=process_schema,
+                process_instances_key="processes",
                 extracted_json=extracted_data,
-                validation_llm_model=llm_model,
+                examples="",
+                data_model=BaseModel,
+                reflection_llm=llm_model,
+                rubric_names=[Correctness, Completeness]
             )
             logger.info("Initial evaluation state defined successfully.")
 
             # Initialize the Reflection configuration
             reflection_config = ReflectionConfig(
-                llm_name=llm_model,
+                reflection_mode="single",
+                reflection_llm=llm_model,
                 rubric_names=[Correctness, Completeness]
             )
             logger.info("Reflection configuration initialized successfully.")
 
             # Execute the validation agent to evaluate the extracted processes
-            final_state = validate_extracted_processes(reflection_config, initial_state)
+            final_state = validate_extracted_processes(initial_state)
             logger.info(f"Evaluation completed using LLM-as-a-Judge paradigm for file: {json_filepath}")
 
             # Save the evaluation results

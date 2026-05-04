@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "crucible",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "sealed"
+        ],
+        "descriptors": [
+            "evacuated"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "Ta Tube",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Ta Tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        }
+    ]
+}

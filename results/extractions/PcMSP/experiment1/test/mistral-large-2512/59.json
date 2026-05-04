@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "quartz ampoule",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "placed"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "evacuated",
+            "two-zone"
+        ],
+        "values": [
+            "certain amount",
+            "~ 5 mg cm \u2212 3"
+        ],
+        "properties": [],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Br2",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "~ 5 mg cm \u2212 3",
+            "target": "Br2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz ampoule",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "two-zone",
+            "target": "furnace"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "loaded"
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "( 2 − x ) Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnClx",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "anhydrous",
+            "powder",
+            "anhydrous"
+        ],
+        "values": [
+            "stoichiometric amount",
+            "24 hrs"
+        ],
+        "properties": [
+            {
+                "text": "250 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "SnSe2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric amount",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric amount",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnCl2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnClx",
+            "target": "mixed"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixtures",
+            "target": "SnClx"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "250 ° C",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 hrs",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "mixed"
+        }
+    ]
+}

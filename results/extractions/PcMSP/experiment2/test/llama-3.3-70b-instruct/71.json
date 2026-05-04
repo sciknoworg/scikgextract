@@ -1,0 +1,49 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ta",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "silica",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "wrapping",
+            "sealing"
+        ],
+        "descriptors": [
+            "vacuum"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "fused silica ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica ampoule",
+            "target": "sealing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta",
+            "target": "wrapping"
+        },
+        {
+            "type": "Participant-material",
+            "source": "silica",
+            "target": "sealing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum",
+            "target": "sealing"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "homogeneous sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "arc melting",
+            "repeated"
+        ],
+        "descriptors": [
+            "homogeneous"
+        ],
+        "values": [
+            "5 times"
+        ],
+        "properties": [
+            {
+                "text": "five times",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "homogeneous sample",
+            "target": "arc melting"
+        },
+        {
+            "type": "Next-operation",
+            "source": "repeated",
+            "target": "arc melting"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 times",
+            "target": "five times"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneous",
+            "target": "homogeneous sample"
+        }
+    ]
+}

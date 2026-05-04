@@ -1,0 +1,48 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pure Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Zr (99.2%)",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "used"
+        ],
+        "descriptors": [
+            "pure"
+        ],
+        "values": [
+            "99.2%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "pure Zr",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr (99.2%)",
+            "target": "used"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "pure Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.2%",
+            "target": "Zr (99.2%)"
+        }
+    ]
+}

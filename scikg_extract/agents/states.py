@@ -1,4 +1,10 @@
+"""
+Extraction state definition for the SciKGExtract agent workflow.
+
+This module defines ExtractionState, the central Pydantic model that is threaded through every node in the LangGraph workflow. It holds all inputs, intermediate results, and final outputs produced across the extraction, reflection, and feedback phases of the pipeline.
+"""
 # Pydantic Imports
+from typing import Any
 from pydantic import BaseModel, Field
 
 from yescieval.base.rubric import Rubric
@@ -12,8 +18,8 @@ class ExtractionState(BaseModel):
     # Extraction Agent properties #
     ##############################
 
-    # Largest Language Model Name
-    llm_model: str
+    # LLM to be used by extraction agent
+    extraction_llm: str
 
     # Process Name
     process_name: str
@@ -54,8 +60,8 @@ class ExtractionState(BaseModel):
     # Clean Extracted JSON
     cleaned_extracted_json: bool = False
 
-    # LLM for Normalization Disambiguation
-    normalization_llm_model: str = ""
+    # LLM to be used for normalization within extraction agent
+    normalization_llm: str = ""
 
     # PubChem LMDB Path
     pubchem_lmdb_path: str = ""
@@ -73,8 +79,20 @@ class ExtractionState(BaseModel):
     # Reflection Agent properties #
     ##############################
 
-    # Validation LLM Model
-    validation_llm_model: str = ""
+    # Reflection Mode
+    reflection_mode: str = "single"
+
+    # LLM to be used by reflection agent in single judge mode
+    reflection_llm: str = ""
+
+    # LLM to be used by summarizer in reflection agent
+    summarizer_llm: str = ""
+
+    # List of judge LLMs for multi-judge and debate modes (e.g., ["OPENAI:gpt-4o", "SAIA:llama-3.3-70b"])
+    reflection_judge_llms: list[str] = Field(default_factory=list)
+
+    # List of critic LLMs for debate mode (e.g., ["OPENAI:gpt-4o"])
+    reflection_critic_llms: list[str] = Field(default_factory=list)
 
     # Validation Rubrics
     rubric_names: list[type[Rubric]] = Field(default_factory=list)
@@ -82,15 +100,21 @@ class ExtractionState(BaseModel):
     # Evaluation Results from LLM-as-a-Judge
     evaluation_results: dict[str, dict[str, str]] | None = None
 
+    # Individual evaluation results per judge (for multi-judge and debate modes)
+    individual_evaluation_results: list[dict[str, Any]] = Field(default_factory=list)
+
     # Total retries for validation failures
     total_validation_retries: int = 3
+
+    # Debate max iterations
+    debate_max_iterations: int = 3
 
     ###############################
     # Feedback Agent properties #
     ###############################
 
-    # Feedback LLM Model
-    feedback_llm_model: str = ""
+    # LLM to be used by feedback agent
+    feedback_llm: str = ""
 
     # User prompt with feedback
     user_feedback_prompt: str | None = ""

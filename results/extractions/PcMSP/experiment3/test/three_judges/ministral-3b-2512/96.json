@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AsSn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "synthesized AsSn",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized"
+        ],
+        "descriptors": [
+            "synthesized",
+            "compound"
+        ],
+        "values": [
+            "stoichiometric"
+        ],
+        "properties": [
+            {
+                "text": "5 N",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "5 N",
+            "target": "stoichiometric mixtures"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AsSn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "synthesized AsSn",
+            "target": "synthesized AsSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "5 N"
+        }
+    ]
+}

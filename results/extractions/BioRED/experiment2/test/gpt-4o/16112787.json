@@ -1,0 +1,105 @@
+{
+    "entities": [
+        {
+            "text": "vancomycin",
+            "type": "ChemicalEntity",
+            "identifier": "D014661",
+            "offset": 66,
+            "length": 10
+        },
+        {
+            "text": "reactive oxygen species",
+            "type": "ChemicalEntity",
+            "identifier": "D017382",
+            "offset": 118,
+            "length": 22
+        },
+        {
+            "text": "erdosteine",
+            "type": "ChemicalEntity",
+            "identifier": "D019821",
+            "offset": 178,
+            "length": 10
+        },
+        {
+            "text": "rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 263,
+            "length": 4
+        },
+        {
+            "text": "malondialdehyde",
+            "type": "ChemicalEntity",
+            "identifier": "D008288",
+            "offset": 497,
+            "length": 15
+        },
+        {
+            "text": "N-acetyl-beta-d-glucosaminidase",
+            "type": "ChemicalEntity",
+            "identifier": "D009317",
+            "offset": 519,
+            "length": 29
+        },
+        {
+            "text": "superoxide dismutase",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6647",
+            "offset": 594,
+            "length": 19
+        },
+        {
+            "text": "catalase",
+            "type": "GeneOrGeneProduct",
+            "identifier": "847",
+            "offset": 617,
+            "length": 8
+        },
+        {
+            "text": "nephrotoxicity",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009399",
+            "offset": 877,
+            "length": 14
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D014661",
+            "entity2": "D017382",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D014661",
+            "entity2": "D009399",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D014661",
+            "entity2": "D008288",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D019821",
+            "entity2": "D008288",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D019821",
+            "entity2": "D009317",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D019821",
+            "entity2": "6647",
+            "novel": true
+        }
+    ]
+}

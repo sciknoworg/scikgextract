@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Te",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "powders",
+            "sealed",
+            "quartz"
+        ],
+        "values": [
+            "99.999%"
+        ],
+        "properties": [
+            {
+                "text": "750 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "750 ° C",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "MoTe₂"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Te"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Value-of",
+            "source": "750 °C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        }
+    ]
+}

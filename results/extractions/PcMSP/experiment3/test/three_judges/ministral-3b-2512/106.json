@@ -1,0 +1,37 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "N2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "evacuated",
+            "N2-filled",
+            "evacuated"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "N2",
+            "target": "evacuated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "N2",
+            "target": "N2-filled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "evacuated"
+        }
+    ]
+}

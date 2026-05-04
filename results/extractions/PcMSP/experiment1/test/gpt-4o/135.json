@@ -1,0 +1,107 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb0.18Re0.82",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "niobium",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "rhenium",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "melting"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "high purity"
+        ],
+        "values": [
+            "0.3 g",
+            "99.95 %",
+            "99.999 %"
+        ],
+        "properties": [],
+        "devices": [
+            "arc-melter",
+            "tungsten electrode",
+            "water-cooled copper hearth"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.3 g",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb0.18Re0.82",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "niobium",
+            "target": "melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "rhenium",
+            "target": "melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "niobium"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95 %",
+            "target": "niobium"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "niobium"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999 %",
+            "target": "rhenium"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "rhenium"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc-melter",
+            "target": "melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "tungsten electrode",
+            "target": "melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "water-cooled copper hearth",
+            "target": "melting"
+        }
+    ]
+}

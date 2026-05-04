@@ -1,0 +1,68 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "kept",
+            "heated"
+        ],
+        "descriptors": [
+            "gradually",
+            "in the air"
+        ],
+        "values": [
+            "5 \u00a0C / min",
+            "900 \u00a0C"
+        ],
+        "properties": [
+            {
+                "text": "5 \u00a0C / min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "900 \u00a0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "aluminium / platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 \u00a0C / min",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00a0C",
+            "target": "heated"
+        }
+    ]
+}

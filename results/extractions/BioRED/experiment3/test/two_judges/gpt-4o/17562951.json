@@ -1,0 +1,92 @@
+{
+    "entities": [
+        {
+            "text": "iopamidol",
+            "type": "ChemicalEntity",
+            "identifier": "D007473",
+            "offset": 148,
+            "length": 9
+        },
+        {
+            "text": "iodixanol",
+            "type": "ChemicalEntity",
+            "identifier": "D019101",
+            "offset": 179,
+            "length": 9
+        },
+        {
+            "text": "chronic kidney disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003424",
+            "offset": 218,
+            "length": 21
+        },
+        {
+            "text": "serum creatinine",
+            "type": "ChemicalEntity",
+            "identifier": "D007013",
+            "offset": 354,
+            "length": 15
+        },
+        {
+            "text": "diabetes mellitus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003920",
+            "offset": 664,
+            "length": 16
+        },
+        {
+            "text": "N-acetylcysteine",
+            "type": "ChemicalEntity",
+            "identifier": "D009683",
+            "offset": 702,
+            "length": 15
+        },
+        {
+            "text": "contrast-induced nephropathy",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D054198",
+            "offset": 9,
+            "length": 28
+        },
+        {
+            "text": "estimated glomerular filtration rate",
+            "type": "ChemicalEntity",
+            "identifier": "D005947",
+            "offset": 265,
+            "length": 36
+        }
+    ],
+    "relations": [
+        {
+            "type": "Comparison",
+            "entity1": "D007473",
+            "entity2": "D019101",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D007473",
+            "entity2": "D007013",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D019101",
+            "entity2": "D007013",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D009683",
+            "entity2": "D007473",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D009683",
+            "entity2": "D019101",
+            "novel": false
+        }
+    ]
+}

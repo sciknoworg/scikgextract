@@ -1,0 +1,161 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "CsAs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "sealed",
+            "heated",
+            "furnace cooling"
+        ],
+        "descriptors": [
+            "excess",
+            "fully",
+            "powder"
+        ],
+        "values": [
+            "2.3 : 3 : 0.7",
+            "523 K",
+            "20 h"
+        ],
+        "properties": [
+            {
+                "text": "523 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "20 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "agate mortar",
+            "quartz tube",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "2.3 : 3 : 0.7"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fully",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "As"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ground",
+            "target": "CsAs"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ground",
+            "target": "Mo"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ground",
+            "target": "As"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pressed",
+            "target": "pellets"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pressed",
+            "target": "CsAs"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pressed",
+            "target": "Mo"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pressed",
+            "target": "As"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "523 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "20 h",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "furnace cooling"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "furnace cooling",
+            "target": "heated"
+        }
+    ]
+}

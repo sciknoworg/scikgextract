@@ -1,0 +1,48 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "Annealing"
+        ],
+        "descriptors": [
+            "homogeneity"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "10 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "950 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneity",
+            "target": "Annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 days",
+            "target": "Annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "950 °C",
+            "target": "Annealing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "Annealing"
+        }
+    ]
+}

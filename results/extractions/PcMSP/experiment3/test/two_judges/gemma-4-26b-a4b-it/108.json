@@ -1,0 +1,99 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "obtained",
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "obtained",
+            "Figure S26",
+            "13 mm diameter",
+            "residual"
+        ],
+        "values": [
+            "13 mm",
+            "∼ 10 − 4 Torr"
+        ],
+        "properties": [
+            {
+                "text": "residual pressure",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "obtained",
+            "target": "powder sample"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Figure S26",
+            "target": "powder sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "taken",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "diameter",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "residual",
+            "target": "residual pressure"
+        },
+        {
+            "type": "Value-of",
+            "source": "∼ 10 − 4 Torr",
+            "target": "residual pressure"
+        },
+        {
+            "type": "Condition-of",
+            "source": "residual pressure",
+            "target": "flame-sealed"
+        }
+    ]
+}

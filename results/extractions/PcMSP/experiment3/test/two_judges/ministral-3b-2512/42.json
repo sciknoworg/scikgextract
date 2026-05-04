@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "IrO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Y2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Y2O3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "used",
+            "used"
+        ],
+        "descriptors": [
+            "stoichiometric ratio"
+        ],
+        "values": [
+            "1",
+            "1 : 2 stoichiometry"
+        ],
+        "properties": [
+            {
+                "text": "sintering",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "IrO2",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Y2O3",
+            "target": "used"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 – 10% more",
+            "target": "IrO2"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 2 stoichiometry",
+            "target": "Y2O3:IrO2 (1:2)"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Y2O3",
+            "target": "used"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric ratio",
+            "target": "Y2O3:IrO2 (1:2)"
+        }
+    ]
+}

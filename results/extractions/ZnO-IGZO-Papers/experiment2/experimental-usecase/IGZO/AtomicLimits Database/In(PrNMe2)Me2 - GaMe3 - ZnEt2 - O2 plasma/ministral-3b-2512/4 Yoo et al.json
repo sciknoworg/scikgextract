@@ -1,0 +1,853 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "method": "SALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "Al2O3",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "TMA",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/7852",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/241178067",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/16682925"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "N2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "N2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "AP S-ALD system",
+                    "manufacturer": "Nexusbe Co."
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "PI coated glass, Si wafer",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                },
+                "deliveryMethod": "Spatial ALD (S-ALD) with separate zones for precursor and reactant dosing",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 760.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "Al2O3",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.33,
+                                        "unit": {
+                                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Length",
+                                            "sameAs": "https://qudt.org/vocab/unit/ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": null,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Count",
+                                    "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [],
+                    "purgeTime": [],
+                    "flowRates": [
+                        {
+                            "compound": "Al2O3",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 4.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": {
+                        "quantityValue": {
+                            "numericValue": 1.63,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex",
+                                "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/RefractiveIndex"
+                    },
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": null,
+                                "unit": {
+                                    "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                                    "sameAs": "https://qudt.org/vocab/unit/PERCENT"
+                                }
+                            },
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "O"
+                        ],
+                        "value": "1:1.53",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "Al2O3",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "Not Found"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 2.79,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": null,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Mobility",
+                            "sameAs": "https://qudt.org/vocab/unit/CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": null,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Voltage",
+                            "sameAs": "https://qudt.org/vocab/unit/V"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Voltage"
+                },
+                "subthresholdSwing": {
+                    "quantityValue": {
+                        "numericValue": null,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliV"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ElectricPotential"
+                },
+                "onOffRatio": {
+                    "quantityValue": {
+                        "numericValue": null,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio",
+                            "sameAs": "https://qudt.org/vocab/unit/UNITLESS"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                },
+                "deviceStructure": "TG-BC IGZO TFT with Al2O3 buffer and gate insulator"
+            },
+            "otherAspects": {
+                "safety": "Atmospheric pressure spatial ALD (AP S-ALD) requires careful handling of TMA and O3 precursors; N2 carrier/purging gas is used.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "method": "SALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "Al2O3",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "TMA",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/7852",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/241178067",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/16682925"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "N2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "N2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "AP S-ALD system",
+                    "manufacturer": "Nexusbe Co."
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "PI coated glass, Si wafer",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                },
+                "deliveryMethod": "Spatial ALD (S-ALD) with separate zones for precursor and reactant dosing",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 150.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 760.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "Al2O3",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": null,
+                                        "unit": null
+                                    },
+                                    "quantityKind": null
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        },
+                        "filmThickness": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [],
+                    "purgeTime": [],
+                    "flowRates": [
+                        {
+                            "compound": "Al2O3",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 4.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": null
+                        },
+                        "quantityKind": null
+                    },
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": null,
+                                "unit": null
+                            },
+                            "quantityKind": null
+                        },
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "O"
+                        ],
+                        "value": "1:1.64",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "Al2O3",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "Not Found"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 2.66,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "thresholdVoltage": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "subthresholdSwing": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "onOffRatio": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "deviceStructure": "Not Found"
+            },
+            "otherAspects": {
+                "safety": "Atmospheric pressure spatial ALD (AP S-ALD) requires careful handling of TMA and O3 precursors; N2 carrier/purging gas is used.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "method": "SALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "Al2O3",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "TMA",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/7852",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/241178067",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/16682925"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "Al2O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9989226"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "O3",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/24823"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "N2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "N2",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "AP S-ALD system",
+                    "manufacturer": "Nexusbe Co."
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "PI coated glass, Si wafer",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                },
+                "deliveryMethod": "Spatial ALD (S-ALD) with separate zones for precursor and reactant dosing",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 100.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/Temperature",
+                            "sameAs": "https://qudt.org/vocab/unit/DEG_C"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 760.0,
+                        "unit": {
+                            "hasQuantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea",
+                            "sameAs": "https://qudt.org/vocab/unit/MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "Al2O3",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": null,
+                                        "unit": null
+                                    },
+                                    "quantityKind": null
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        },
+                        "filmThickness": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [],
+                    "purgeTime": [],
+                    "flowRates": [
+                        {
+                            "compound": "Al2O3",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 4.0,
+                                    "unit": {
+                                        "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate",
+                                        "sameAs": "https://qudt.org/vocab/unit/SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "https://qudt.org/vocab/quantitykind/MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": null
+                        },
+                        "quantityKind": null
+                    },
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": null,
+                                "unit": null
+                            },
+                            "quantityKind": null
+                        },
+                        "characterizationMethod": "XPS"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Al",
+                            "O"
+                        ],
+                        "value": "1:1.82",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "Al2O3",
+                "crystallinity": {
+                    "phase": "amorphous",
+                    "characterizationMethod": "Not Found"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": 2.55,
+                            "unit": {
+                                "hasQuantityKind": "https://qudt.org/vocab/quantitykind/MassDensity",
+                                "sameAs": "https://qudt.org/vocab/unit/GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "thresholdVoltage": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "subthresholdSwing": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "onOffRatio": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "deviceStructure": "Not Found"
+            },
+            "otherAspects": {
+                "safety": "Atmospheric pressure spatial ALD (AP S-ALD) requires careful handling of TMA and O3 precursors; N2 carrier/purging gas is used.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

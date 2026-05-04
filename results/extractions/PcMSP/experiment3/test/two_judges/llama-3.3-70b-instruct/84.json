@@ -1,0 +1,73 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "CuCl2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "HNO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "dissolved",
+            "added"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "aqueous"
+        ],
+        "values": [
+            "2.5 mmol",
+            "1M",
+            "25 mL",
+            "5 mmol",
+            "10 mL"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "CuCl2"
+        },
+        {
+            "type": "Value-of",
+            "source": "1M",
+            "target": "HNO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "dissolved",
+            "target": "CuCl2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "dissolved",
+            "target": "HNO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "added",
+            "target": "HIO3"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "added",
+            "target": "HNO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "HIO3"
+        }
+    ]
+}

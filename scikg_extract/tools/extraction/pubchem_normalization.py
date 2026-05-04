@@ -1,3 +1,8 @@
+"""
+PubChem Normalization Tool for SciKGExtract.
+
+This module implements the PubChem normalization tool, which is responsible for normalizing chemical names in the extracted JSON data using PubChem. It includes functions to fetch CIDs from the PubChem API, normalize values using a synonym-to-CID mapping, perform LLM-based disambiguation, and update the extracted JSON data with normalized URIs. The main function `pubchem_normalization` orchestrates the normalization process for each specified property in the extracted data.
+"""
 # Python imports
 import copy
 import asyncio
@@ -13,7 +18,7 @@ from data.models.api.pubchem_synonyms import PubChemSynonymsResponse
 from data.models.normalization.llm_disambiguation import LLM_Disambiguation
 
 # Scikg_Extract Config Imports
-from scikg_extract.config.llm.llmConfig import LLM_REGISTRY
+from scikg_extract.config.llm.llmConfig import ProviderRegistry
 from scikg_extract.config.process.processConfig import ProcessConfig
 
 # Scikg_Extract Agent State Imports
@@ -203,14 +208,12 @@ def normalize_value_with_pubchem_cid_mapping(env: lmdb.Environment, value: str) 
     # Return the list of normalized URIs
     return normalized_uris
 
-def perform_llm_disambiguation(values: str, llm_model: str) -> BaseModel | None:
+def perform_llm_disambiguation(values: str, llm: str) -> BaseModel | None:
     """
     Performs LLM-based disambiguation to get a more formal and standardized chemical name.
     Args:
         values (str): The chemical name to disambiguate.
-        llm_model (str): The LLM model to use for disambiguation.
-        process_name (str): The name of the process being normalized.
-        process_description (str): The description of the process being normalized.
+        llm (str): The LLM model to use for disambiguation, specified in the format "provider:model".
     Returns:
         BaseModel | None: The disambiguated Pydantic model or None if not found.
     """
@@ -219,8 +222,8 @@ def perform_llm_disambiguation(values: str, llm_model: str) -> BaseModel | None:
     logger.debug(f"Performing LLM disambiguation...")
 
     # Initialize the LLM Model Adapter
-    inference_adapter = LLM_REGISTRY.get(llm_model).inference_adapter
-    model_adapter = inference_adapter(model_name=llm_model, temperature=0.1, response_format="json_object")
+    llm_config = ProviderRegistry.resolve_from_string(llm)
+    model_adapter = llm_config.inference_adapter(model_name=llm_config.model_name, temperature=0.1, response_format="json_object")
     logger.debug(f"Initialized Model adapter: {model_adapter}")
 
     # Format the prompt template
@@ -369,7 +372,7 @@ def pubchem_normalization(state: ExtractionState) -> ExtractionState:
                     continue
 
                 # Normalize the value using LLM disambiguation
-                disambiguted_details = perform_llm_disambiguation([value], state.normalization_llm_model)
+                disambiguted_details = perform_llm_disambiguation([value], state.normalization_llm)
                 logger.debug(f"LLM Disambiguation result for value {value}: {disambiguted_details}")
 
                 # Excecute the normalizers again on the disambiguated name/molecular formaula

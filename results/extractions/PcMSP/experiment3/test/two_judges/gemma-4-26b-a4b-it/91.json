@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "solid",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Mn ( IO3 ) 2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "dried",
+            "to give"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "polycrystalline",
+            "based on Mn"
+        ],
+        "values": [
+            "1 week",
+            "86 %"
+        ],
+        "properties": [
+            {
+                "text": "1 week",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "yield",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "Figure S2"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "solid",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 week",
+            "target": "dried"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 week",
+            "target": "dried"
+        },
+        {
+            "type": "Next-operation",
+            "source": "to give",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn ( IO3 ) 2",
+            "target": "to give"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Value-of",
+            "source": "86 %",
+            "target": "yield"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "based on Mn",
+            "target": "86 %"
+        },
+        {
+            "type": "Value-of",
+            "source": "Mn",
+            "target": "based on Mn"
+        }
+    ]
+}

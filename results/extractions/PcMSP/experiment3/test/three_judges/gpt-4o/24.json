@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled"
+        ],
+        "descriptors": [],
+        "values": [
+            "1123 K",
+            "50 h"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "tube",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "1123 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "50 h",
+            "target": "held"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "cooled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "tube",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooled"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "heated"
+        }
+    ]
+}

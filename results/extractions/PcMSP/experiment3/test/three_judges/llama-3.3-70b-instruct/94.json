@@ -1,0 +1,100 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zn(IO3)2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Zn",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "precipitated",
+            "collected",
+            "dried"
+        ],
+        "descriptors": [
+            "colorless",
+            "solid",
+            "polycrystalline"
+        ],
+        "values": [
+            "3 days",
+            "65%"
+        ],
+        "properties": [
+            {
+                "text": "yield",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "filtration"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "colorless",
+            "target": "Zn(IO3)2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "solid",
+            "target": "Zn(IO3)2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Zn(IO3)2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zn",
+            "target": "precipitated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zn(IO3)2",
+            "target": "precipitated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "3 days",
+            "target": "precipitated"
+        },
+        {
+            "type": "Value-of",
+            "source": "65%",
+            "target": "yield"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Based on Zn",
+            "target": "yield"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Air",
+            "target": "dried"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "filtration",
+            "target": "collected"
+        },
+        {
+            "type": "Next-operation",
+            "source": "collected",
+            "target": "precipitated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "collected"
+        }
+    ]
+}

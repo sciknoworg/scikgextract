@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs2Mo3As3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "lumps",
+            "powder"
+        ],
+        "values": [
+            "99.98%",
+            "99.999%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Cs2Mo3As3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "lumps",
+            "target": "Cs"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.98%",
+            "target": "Cs"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Mo"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "As"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "As"
+        }
+    ]
+}

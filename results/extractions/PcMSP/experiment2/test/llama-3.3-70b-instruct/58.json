@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Te",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "heating"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "sealed",
+            "evacuated"
+        ],
+        "values": [
+            "99.99%",
+            "99.999%",
+            "750 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "750 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Te",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Mo"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Te"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "sealed and evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Value-of",
+            "source": "750 \u00b0C",
+            "target": "heating"
+        }
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "NbP",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Nb powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NbP",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "reacted"
+        ],
+        "descriptors": [
+            "powder",
+            "silica"
+        ],
+        "values": [
+            "99.9%",
+            "99.9%"
+        ],
+        "properties": [
+            {
+                "text": "800 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "NbP",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb powder",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "red phosphorous pieces",
+            "target": "reacted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "NbP"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Nb"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Nb powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "red phosphorous pieces"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "evacuated silica tube",
+            "target": "synthesized"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 h",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Value-of",
+            "source": "800 °C",
+            "target": "Property-temperature"
+        }
+    ]
+}

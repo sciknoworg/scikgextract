@@ -1,0 +1,94 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tantalum foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "put",
+            "annealed"
+        ],
+        "descriptors": [
+            "thin",
+            "evacuated",
+            "Al-rich eutectic"
+        ],
+        "values": [
+            "620 \u00b0 C",
+            "14 days"
+        ],
+        "properties": [
+            {
+                "text": "620 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thin",
+            "target": "tantalum foil"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "put"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "put"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "620 \u00b0 C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "14 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "put",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "wrapped",
+            "target": "put"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind"
+        ],
+        "descriptors": [
+            "diamond"
+        ],
+        "values": [
+            "8 mm \u00d7 3 mm \u00d7 3 mm"
+        ],
+        "properties": [],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "grind"
+        }
+    ]
+}

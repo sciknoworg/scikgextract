@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ampoules",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "cooling"
+        ],
+        "descriptors": [
+            "room temperature",
+            "turned-off",
+            "free"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turned-off",
+            "target": "furnace"
+        },
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "kept"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooling",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "free",
+            "target": "cooling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "room temperature",
+            "target": "cooling"
+        }
+    ]
+}

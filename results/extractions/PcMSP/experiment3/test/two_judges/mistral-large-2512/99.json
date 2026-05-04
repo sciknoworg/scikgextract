@@ -1,0 +1,100 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ampoules",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "cooling"
+        ],
+        "descriptors": [
+            "free",
+            "turned-off",
+            "room"
+        ],
+        "values": [
+            "6 h",
+            "room temperature",
+            "this temperature"
+        ],
+        "properties": [
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "this temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace",
+            "ampoules"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "free",
+            "target": "cooling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turned-off",
+            "target": "furnace"
+        },
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "6 h"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "kept"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "room temperature"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "cooling"
+        },
+        {
+            "type": "Value-of",
+            "source": "this temperature",
+            "target": "this temperature"
+        },
+        {
+            "type": "Condition-of",
+            "source": "this temperature",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ampoules",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooling"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooling",
+            "target": "kept"
+        }
+    ]
+}

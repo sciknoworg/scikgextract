@@ -1,0 +1,53 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellet",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "sintered"
+        ],
+        "descriptors": [
+            "dark brown",
+            "well sintered",
+            "resulting"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "dark brown",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "well sintered",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "dark brown",
+            "target": "pellet"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "well sintered",
+            "target": "pellet"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "resulting",
+            "target": "pellet"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellet",
+            "target": "sintered"
+        }
+    ]
+}

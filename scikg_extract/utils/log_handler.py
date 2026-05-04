@@ -1,7 +1,14 @@
+"""
+Log handling utilities for SciKGExtract.
+
+Provides a LogHandler class with static methods to set up logging configurations for different modules, including options for console and rotating file handlers, as well as utilities for generating unique log file names based on run identifiers to avoid contention across concurrent instances.
+"""
+# Python Imports
 import os
+import re
 import logging
 import datetime
-from typing import Optional, List
+from typing import Optional
 from logging import FileHandler
 from logging.handlers import RotatingFileHandler
 
@@ -14,10 +21,20 @@ class LogHandler:
     DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
     @staticmethod
-    def setup_logging(name: str, log_dir: Optional[str] = None, log_file: Optional[str] = None, console_level: int = logging.INFO, file_level: int = logging.DEBUG, rotating: bool = True, max_bytes: int = 10*1024*1024, backup_count: int = 10, propogate: bool = True) -> logging.Logger:
+    def _sanitize_run_id(run_id: str) -> str:
+        """
+        Sanitize a run identifier to be filesystem-safe.
+        Args:
+            run_id (str): The raw run identifier.
+        Returns:
+            str: A sanitized string safe for use in filenames.
+        """
+        return re.sub(r'[:/\\\s]+', '_', run_id)
+
+    @staticmethod
+    def setup_logging(name: str, log_dir: Optional[str] = None, log_file: Optional[str] = None, console_level: int = logging.INFO, file_level: int = logging.DEBUG, rotating: bool = True, max_bytes: int = 10*1024*1024, backup_count: int = 10, propogate: bool = True, run_id: Optional[str] = None) -> logging.Logger:
         """
         Set up logging with console and optional file handlers.
-
         Args:
             name (str): Name of the logger.
             log_dir (Optional[str]): Directory to save log files. Defaults to 'logs'.
@@ -28,7 +45,7 @@ class LogHandler:
             max_bytes (int): Maximum size of log file before rotation.
             backup_count (int): Number of backup files to keep.
             propogate (bool): Whether to propagate logs to ancestor loggers.
-
+            run_id (Optional[str]): Unique identifier for this run (e.g., LLM name + PID). Embedded in the log filename to avoid file contention across concurrent instances.
         Returns:
             logging.Logger: Configured logger instance.
         """
@@ -57,9 +74,14 @@ class LogHandler:
             log_dir = log_dir or LogHandler.LOG_DIR
             os.makedirs(log_dir, exist_ok=True)
 
-            # Append timestamp to log file name
+            # Append run_id (if provided) and timestamp to log file name
             timestamp = datetime.datetime.now().strftime("%Y%m%d")
-            log_file = f"{os.path.splitext(log_file)[0]}_{timestamp}.log"
+            base_name = os.path.splitext(log_file)[0]
+            if run_id:
+                sanitized_run_id = LogHandler._sanitize_run_id(run_id)
+                log_file = f"{base_name}_{sanitized_run_id}_{timestamp}.log"
+            else:
+                log_file = f"{base_name}_{timestamp}.log"
 
             # Full log file path
             log_filepath = os.path.join(log_dir, log_file)
@@ -83,14 +105,14 @@ class LogHandler:
         return logger
     
     @staticmethod
-    def setup_module_logging(module_name: str, console_level: int = logging.INFO, file_level: int = logging.DEBUG) -> logging.Logger:
+    def setup_module_logging(module_name: str, console_level: int = logging.INFO, file_level: int = logging.DEBUG, run_id: Optional[str] = None) -> logging.Logger:
         """
         Set up logging for a specific module.
-
         Args:
             module_name (str): Name of the module.
             console_level (int): Logging level for console output.
             file_level (int): Logging level for file output.
+            run_id (Optional[str]): Unique identifier for this run (e.g., LLM name + PID). Embedded in the log filename to avoid file contention across concurrent instances.
         Returns:
             logging.Logger: Configured logger instance for the module.
         """
@@ -107,7 +129,8 @@ class LogHandler:
             log_dir=log_dir,
             log_file=log_file,
             console_level=console_level,
-            file_level=file_level
+            file_level=file_level,
+            run_id=run_id
         )
 
     @staticmethod

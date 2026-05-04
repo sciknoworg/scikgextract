@@ -1,0 +1,112 @@
+{
+    "entities": [
+        {
+            "text": "pheochromocytoma",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010673",
+            "offset": 0,
+            "length": 15
+        },
+        {
+            "text": "amisulpride",
+            "type": "ChemicalEntity",
+            "identifier": "D019695",
+            "offset": 38,
+            "length": 11
+        },
+        {
+            "text": "tiapride",
+            "type": "ChemicalEntity",
+            "identifier": "D019696",
+            "offset": 54,
+            "length": 8
+        },
+        {
+            "text": "acute hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006973",
+            "offset": 119,
+            "length": 17
+        },
+        {
+            "text": "headache",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006261",
+            "offset": 143,
+            "length": 8
+        },
+        {
+            "text": "vomiting",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D014839",
+            "offset": 156,
+            "length": 8
+        },
+        {
+            "text": "nicardipine",
+            "type": "ChemicalEntity",
+            "identifier": "D009538",
+            "offset": 252,
+            "length": 10
+        },
+        {
+            "text": "verapamil",
+            "type": "ChemicalEntity",
+            "identifier": "D014661",
+            "offset": 268,
+            "length": 9
+        },
+        {
+            "text": "adrenal mass",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000311",
+            "offset": 297,
+            "length": 12
+        },
+        {
+            "text": "Naranjo probability scale",
+            "type": "GeneOrGeneProduct",
+            "identifier": "-1",
+            "offset": 487,
+            "length": 23
+        }
+    ],
+    "relations": [
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D019695",
+            "entity2": "D019696",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D019695",
+            "entity2": "D006973",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D019696",
+            "entity2": "D006973",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D010673",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D010673",
+            "entity2": "D000311",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D009538",
+            "entity2": "D014661",
+            "novel": false
+        }
+    ]
+}

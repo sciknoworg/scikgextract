@@ -1,0 +1,114 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cl-doped SnSe\u2082",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SnCl\u2093",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se grains",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2SnCl\u2093",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2(2 \u2212 x)Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "fused silica tubes",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "annealed"
+        ],
+        "descriptors": [
+            "Cl-doped",
+            "stoichiometric",
+            "fused silica"
+        ],
+        "values": [
+            "600 \u00b0C",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "600 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cl-doped SnSe\u2082",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se grains",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2SnCl\u2093",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2(2 \u2212 x)Se",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se grains"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "2SnCl\u2093"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Cl-doped",
+            "target": "Cl-doped SnSe\u2082"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "600 \u00b0C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fused silica",
+            "target": "fused silica tubes"
+        }
+    ]
+}

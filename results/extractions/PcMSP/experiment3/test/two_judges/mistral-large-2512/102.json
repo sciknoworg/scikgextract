@@ -1,0 +1,139 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingots",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Mn1.4PtSn",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Rh-substituted samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "annealed",
+            "quenching"
+        ],
+        "descriptors": [
+            "synthesized",
+            "evacuated",
+            "parent compound",
+            "ice-water"
+        ],
+        "values": [
+            "873 K",
+            "1073 K",
+            "7 d"
+        ],
+        "properties": [
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1073 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "7 d",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube",
+            "ice-water mixture"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "synthesized",
+            "target": "ingots"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "parent compound",
+            "target": "Mn1.4PtSn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ice-water",
+            "target": "ice-water mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pd-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "873 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4PtSn",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1073 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "7 d",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenching",
+            "target": "annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ice-water mixture",
+            "target": "quenching"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "quenching"
+        }
+    ]
+}

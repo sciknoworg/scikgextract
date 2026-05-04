@@ -1,0 +1,58 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "kept",
+            "free cooling"
+        ],
+        "descriptors": [
+            "turned-off"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Ampoules",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Ampoules",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ampoules",
+            "target": "free cooling"
+        },
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "kept"
+        },
+        {
+            "type": "Next-operation",
+            "source": "free cooling",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "free cooling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turned-off",
+            "target": "furnace"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe2−δFx",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "solid-state reaction",
+            "sintered"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "sintered"
+        ],
+        "values": [
+            "0.000 ≤ x ≤ 0.010"
+        ],
+        "properties": [
+            {
+                "text": "0.000 ≤ x ≤ 0.010",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "SnSe2−δFx"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sintered",
+            "target": "pellets"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnSe2−δFx",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.000 ≤ x ≤ 0.010",
+            "target": "SnSe2−δFx"
+        },
+        {
+            "type": "Coreference",
+            "source": "solid-state reaction",
+            "target": "synthesized"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Not Found",
+            "target": "synthesized"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Not Found",
+            "target": "SnSe2−δFx"
+        }
+    ]
+}

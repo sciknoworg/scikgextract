@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "homogenized-quenched (HQ) sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "brought",
+            "air-quenched"
+        ],
+        "descriptors": [
+            "homogenized"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "1423 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "air-quenching apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized",
+            "target": "homogenized-quenched (HQ) sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched (HQ) sample",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "homogenized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "brought",
+            "target": "homogenized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "air-quenched",
+            "target": "brought"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1423 K",
+            "target": "brought"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "brought"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "air-quenching apparatus",
+            "target": "air-quenched"
+        }
+    ]
+}

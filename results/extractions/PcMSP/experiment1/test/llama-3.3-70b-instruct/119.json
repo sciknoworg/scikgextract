@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu2 - xSe",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "glycerol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cu2Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixing"
+        ],
+        "descriptors": [
+            "all-inorganic",
+            "ball-milled",
+            "dried"
+        ],
+        "values": [
+            "2.5 g",
+            "2 g",
+            "1 g",
+            "2 h"
+        ],
+        "properties": [],
+        "devices": [
+            "planetary centrifugal mixer"
+        ],
+        "brands": [
+            "Thinky",
+            "ARM-100"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "all-inorganic",
+            "target": "Cu2 - xSe"
+        },
+        {
+            "type": "Participant-material",
+            "source": "glycerol",
+            "target": "mixing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu2Se",
+            "target": "mixing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "mixing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary centrifugal mixer",
+            "target": "mixing"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Thinky",
+            "target": "planetary centrifugal mixer"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.5 g",
+            "target": "glycerol"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 g",
+            "target": "Cu2Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 g",
+            "target": "Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "mixing"
+        }
+    ]
+}

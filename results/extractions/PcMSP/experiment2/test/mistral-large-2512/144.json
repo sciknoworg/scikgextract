@@ -1,0 +1,111 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe2\u2212\u03b4Fx",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "F",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "sintered pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "solid-state reaction"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "sintered"
+        ],
+        "values": [
+            "0.000 \u2264 x \u2264 0.010"
+        ],
+        "properties": [
+            {
+                "text": "Not Found",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "SnSe2\u2212\u03b4Fx"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sintered",
+            "target": "pellets"
+        },
+        {
+            "type": "Coreference",
+            "source": "solid-state reaction",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "F",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnSe2\u2212\u03b4Fx",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sintered pellets",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.000 \u2264 x \u2264 0.010",
+            "target": "SnSe2\u2212\u03b4Fx"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "solid-state reaction"
+        }
+    ]
+}

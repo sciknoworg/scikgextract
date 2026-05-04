@@ -1,0 +1,103 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs lumps",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As powder",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric ratio",
+            "argon-filled",
+            "alumina",
+            "evacuated",
+            "quartz"
+        ],
+        "values": [
+            "1 : 1"
+        ],
+        "properties": [],
+        "devices": [
+            "argon-filled glove box",
+            "alumina crucible",
+            "evacuated quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cs lumps",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As powder",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 : 1",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1",
+            "target": "stoichiometric ratio"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "argon-filled glove box",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "argon-filled",
+            "target": "argon-filled glove box"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "loaded"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "alumina",
+            "target": "alumina crucible"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "evacuated quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "evacuated quartz tube"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "quartz",
+            "target": "evacuated quartz tube"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "homogenized-quenched ( HQ ) sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "heated",
+            "air-quenched"
+        ],
+        "descriptors": [
+            "homogenized-quenched",
+            "HQ"
+        ],
+        "values": [
+            "1423 K",
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "1423 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched",
+            "target": "homogenized-quenched ( HQ ) sample"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "HQ",
+            "target": "homogenized-quenched ( HQ ) sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "homogenized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "homogenized"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1423 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "1423 K",
+            "target": "1423 K"
+        },
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "6 h"
+        },
+        {
+            "type": "Next-operation",
+            "source": "air-quenched",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "air-quenched"
+        }
+    ]
+}

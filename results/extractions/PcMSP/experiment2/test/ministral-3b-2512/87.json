@@ -1,0 +1,63 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn(IO\u2083)\u2082",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "MnCl\u2082",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "HIO\u2083",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "reaction"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [
+            "80 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "80 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Mn(IO\u2083)\u2082",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MnCl\u2082",
+            "target": "reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HIO\u2083",
+            "target": "reaction"
+        },
+        {
+            "type": "Value-of",
+            "source": "80 \u00b0C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 \u00b0C",
+            "target": "Property-temperature"
+        }
+    ]
+}

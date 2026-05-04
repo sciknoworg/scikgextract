@@ -1,0 +1,98 @@
+{
+    "entities": [
+        {
+            "text": "dehydroepiandrosterone",
+            "type": "ChemicalEntity",
+            "identifier": "D001788",
+            "offset": 1,
+            "length": 19
+        },
+        {
+            "text": "amphetamine",
+            "type": "ChemicalEntity",
+            "identifier": "D000479",
+            "offset": 33,
+            "length": 9
+        },
+        {
+            "text": "catalepsy",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D002375",
+            "offset": 547,
+            "length": 9
+        },
+        {
+            "text": "haloperidol",
+            "type": "ChemicalEntity",
+            "identifier": "D001500",
+            "offset": 140,
+            "length": 9
+        },
+        {
+            "text": "apomorphine",
+            "type": "ChemicalEntity",
+            "identifier": "D000479",
+            "offset": 153,
+            "length": 9
+        },
+        {
+            "text": "hyperlocomotion",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 165,
+            "length": 12
+        },
+        {
+            "text": "catalepsy",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 200,
+            "length": 8
+        },
+        {
+            "text": "climbing",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 210,
+            "length": 7
+        }
+    ],
+    "relations": [
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D001788",
+            "entity2": "D000479",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D000479",
+            "entity2": "D001788",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D001788",
+            "entity2": "hyperlocomotion",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D001500",
+            "entity2": "catalepsy",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D003687",
+            "entity2": "D002375",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "10090",
+            "entity2": "D000479",
+            "novel": false
+        }
+    ]
+}

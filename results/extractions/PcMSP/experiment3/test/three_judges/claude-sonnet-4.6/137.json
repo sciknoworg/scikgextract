@@ -1,0 +1,76 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb buttons",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Re buttons",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "made",
+            "arc melting"
+        ],
+        "descriptors": [
+            "alone",
+            "powder"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "made"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb buttons",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re buttons",
+            "target": "arc melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Nb"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Re"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "alone",
+            "target": "arc melting"
+        }
+    ]
+}

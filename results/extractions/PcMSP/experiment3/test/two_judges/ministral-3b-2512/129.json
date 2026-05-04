@@ -1,0 +1,49 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "annealing",
+            "quenched"
+        ],
+        "descriptors": [
+            "room temperature"
+        ],
+        "values": [
+            "Not Found"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ampoule"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenched",
+            "target": "annealing"
+        }
+    ]
+}

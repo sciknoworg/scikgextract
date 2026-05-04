@@ -1,0 +1,108 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn50 − xAsxSe50",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "reactions"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "high-temperature"
+        ],
+        "values": [
+            "x = 0",
+            "x = 0.05",
+            "x = 0.5",
+            "x = 2.5"
+        ],
+        "properties": [
+            {
+                "text": "0",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "0.05",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "0.5",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "2.5",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "Sn50 − xAsxSe50"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn50 − xAsxSe50",
+            "target": "prepared"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0",
+            "target": "Sn50 − xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.05",
+            "target": "Sn50 − xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.5",
+            "target": "Sn50 − xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 2.5",
+            "target": "Sn50 − xAsxSe50"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-temperature",
+            "target": "reactions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "reactions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "reactions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "reactions"
+        }
+    ]
+}

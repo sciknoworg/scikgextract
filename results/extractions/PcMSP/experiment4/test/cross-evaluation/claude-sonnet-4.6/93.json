@@ -1,0 +1,114 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "aqueous solution",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "added",
+            "stirred",
+            "stirred"
+        ],
+        "descriptors": [
+            "aqueous",
+            "aqueous"
+        ],
+        "values": [
+            "5 mmol",
+            "5 mmol"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HIO3",
+            "target": "added"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mmol",
+            "target": "HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 mL",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aqueous solution",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "stirred",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "solution"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        },
+        {
+            "type": "Next-operation",
+            "source": "give",
+            "target": "stirred"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "give"
+        },
+        {
+            "type": "Participant-material",
+            "source": "colorless solution",
+            "target": "give"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "colorless",
+            "target": "colorless solution"
+        }
+    ]
+}

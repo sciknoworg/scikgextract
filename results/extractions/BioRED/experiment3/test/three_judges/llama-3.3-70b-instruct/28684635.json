@@ -1,0 +1,120 @@
+{
+    "entities": [
+        {
+            "text": "Type 2 Diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 0,
+            "length": 13
+        },
+        {
+            "text": "ADCY5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "109",
+            "offset": 24,
+            "length": 5
+        },
+        {
+            "text": "rs11708067",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 44,
+            "length": 10
+        },
+        {
+            "text": "rs11708067-A",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067-A",
+            "offset": 65,
+            "length": 11
+        },
+        {
+            "text": "H3K27ac",
+            "type": "ChemicalEntity",
+            "identifier": "H3K27ac",
+            "offset": 93,
+            "length": 7
+        },
+        {
+            "text": "Adenylate cyclase 5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "109",
+            "offset": 114,
+            "length": 17
+        },
+        {
+            "text": "cyclic AMP",
+            "type": "ChemicalEntity",
+            "identifier": "cyclic AMP",
+            "offset": 143,
+            "length": 10
+        },
+        {
+            "text": "insulin",
+            "type": "ChemicalEntity",
+            "identifier": "insulin",
+            "offset": 165,
+            "length": 7
+        },
+        {
+            "text": "insulin secretion",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "insulin secretion",
+            "offset": 183,
+            "length": 16
+        },
+        {
+            "text": "rodent b-cells",
+            "type": "CellLine",
+            "identifier": "rodent b-cells",
+            "offset": 212,
+            "length": 12
+        },
+        {
+            "text": "Adcy5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "11518",
+            "offset": 238,
+            "length": 6
+        },
+        {
+            "text": "Sec22a",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Sec22a",
+            "offset": 257,
+            "length": 6
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D003924",
+            "entity2": "109",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs11708067-A",
+            "entity2": "H3K27ac",
+            "novel": true
+        },
+        {
+            "type": "Bind",
+            "entity1": "rs11708067-A",
+            "entity2": "nuclear protein",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs11708067-A",
+            "entity2": "Adcy5",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "Adcy5",
+            "entity2": "insulin secretion",
+            "novel": true
+        }
+    ]
+}

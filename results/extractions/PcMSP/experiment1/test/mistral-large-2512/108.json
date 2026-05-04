@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "obtained",
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "obtained",
+            "residual"
+        ],
+        "values": [
+            "13 mm",
+            "\u223c 10 \u2212 4 Torr"
+        ],
+        "properties": [
+            {
+                "text": "\u223c 10 \u2212 4 Torr",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "obtained",
+            "target": "powder sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "\u223c 10 \u2212 4 Torr",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "residual",
+            "target": "flame-sealed"
+        }
+    ]
+}

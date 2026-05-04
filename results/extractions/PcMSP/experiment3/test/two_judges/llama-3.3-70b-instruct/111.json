@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03(OH)2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiOH",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [
+            "1:1.02 molar ratio",
+            "480 °C",
+            "5 h",
+            "730 °C",
+            "12 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Ni0.88Co0.09Al0.03(OH)2"
+        },
+        {
+            "type": "Value-of",
+            "source": "1:1.02 molar ratio",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "480 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "730 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "temperature",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "time",
+            "target": "calcined"
+        }
+    ]
+}

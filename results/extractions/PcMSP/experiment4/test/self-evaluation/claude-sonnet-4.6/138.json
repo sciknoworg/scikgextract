@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Nb",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Nb0.18Re0.82",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Nb0.18Re0.82",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "melted",
+            "make"
+        ],
+        "descriptors": [
+            "button",
+            "buttons"
+        ],
+        "values": [
+            "a",
+            "single"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "together",
+            "target": "melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "together",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "make",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "button",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb0.18Re0.82",
+            "target": "make"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "single",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.18",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "melted"
+        }
+    ]
+}

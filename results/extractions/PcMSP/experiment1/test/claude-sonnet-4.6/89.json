@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "aqueous solution",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "added",
+            "stirred"
+        ],
+        "descriptors": [
+            "aqueous"
+        ],
+        "values": [
+            "5 mmol",
+            "10 mL",
+            "80 \u00b0 C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "80 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HIO3",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mmol",
+            "target": "HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 mL",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aqueous solution",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "stirred",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 \u00b0 C",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        }
+    ]
+}

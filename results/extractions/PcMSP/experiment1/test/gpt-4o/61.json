@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "\u03b2-phase",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "used",
+            "quenched"
+        ],
+        "descriptors": [
+            "metastable",
+            "high temperature",
+            "immediately"
+        ],
+        "values": [
+            "900 \u2013 1000 \u00b0C",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "900 \u2013 1000 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "metastable",
+            "target": "\u03b2-phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high temperature",
+            "target": "\u03b2-phase"
+        },
+        {
+            "type": "Participant-material",
+            "source": "\u03b2-phase",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "quenched"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u2013 1000 \u00b0C",
+            "target": "used"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "immediately",
+            "target": "quenched"
+        }
+    ]
+}

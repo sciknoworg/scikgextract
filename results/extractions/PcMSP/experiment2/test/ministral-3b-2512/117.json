@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "added",
+            "centrifuged"
+        ],
+        "descriptors": [
+            "precipitate"
+        ],
+        "values": [
+            "37.5 mL",
+            "7715 \u00d7 g",
+            "10 min"
+        ],
+        "properties": [
+            {
+                "text": "7715 \u00d7 g",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "10 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Se ion binder",
+            "target": "precipitate"
+        },
+        {
+            "type": "Value-of",
+            "source": "37.5 mL",
+            "target": "added"
+        },
+        {
+            "type": "Value-of",
+            "source": "7715 \u00d7 g",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 min",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "precipitate",
+            "target": "Se ion binder"
+        }
+    ]
+}

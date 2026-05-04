@@ -1,0 +1,108 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pure phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "preparation",
+            "thoroughly mixed",
+            "kept"
+        ],
+        "descriptors": [
+            "stoichiometric proportions",
+            "pure phase"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "stoichiometric proportions",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric proportions",
+            "target": "thoroughly mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "preparation"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "preparation"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "preparation"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "preparation"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "Na2O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "NiO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "CuO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric proportions",
+            "target": "TeO2"
+        },
+        {
+            "type": "Condition-of",
+            "source": "thoroughly mixed",
+            "target": "stoichiometric proportions"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pure phase",
+            "target": "kept"
+        }
+    ]
+}

@@ -1,0 +1,107 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled down"
+        ],
+        "descriptors": [
+            "slowly"
+        ],
+        "values": [
+            "4 K / h",
+            "523 K",
+            "20 h",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "heating rate",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "cooled down"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 K / h",
+            "target": "heating rate"
+        },
+        {
+            "type": "Condition-of",
+            "source": "heating rate",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "523 K",
+            "target": "temperature"
+        },
+        {
+            "type": "Condition-of",
+            "source": "temperature",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "held"
+        },
+        {
+            "type": "Value-of",
+            "source": "20 h",
+            "target": "time"
+        },
+        {
+            "type": "Condition-of",
+            "source": "time",
+            "target": "held"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "cooled down"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "cooled down"
+        }
+    ]
+}

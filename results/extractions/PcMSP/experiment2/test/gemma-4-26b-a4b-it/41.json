@@ -1,0 +1,93 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Y2Ir2O7",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Y2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "IrO2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "obtained"
+        ],
+        "descriptors": [
+            "high-quality",
+            "polycrystalline",
+            "powders"
+        ],
+        "values": [
+            "99.999%",
+            "99.9%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": [
+            "Alfa Aesar",
+            "Sigma Aldrich"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "high-quality",
+            "target": "Y2Ir2O7"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Y2Ir2O7"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Y2Ir2O7",
+            "target": "obtained"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Y2O3",
+            "target": "obtained"
+        },
+        {
+            "type": "Participant-material",
+            "source": "IrO2",
+            "target": "obtained"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Y2O3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "IrO2"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Y2O3"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Y2O3"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "IrO2"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "IrO2"
+        }
+    ]
+}

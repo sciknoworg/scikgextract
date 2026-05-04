@@ -1,0 +1,47 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "RuAl6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "arc-melting"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "samples"
+        },
+        {
+            "type": "Coreference",
+            "source": "samples",
+            "target": "RuAl6"
+        },
+        {
+            "type": "Participant-material",
+            "source": "RuAl6",
+            "target": "synthesized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesized",
+            "target": "arc-melting"
+        }
+    ]
+}

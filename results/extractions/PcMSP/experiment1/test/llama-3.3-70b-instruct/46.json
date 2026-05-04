@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "weighed compositions",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "stoichiometric"
+        ],
+        "values": [
+            "1 h",
+            "2 h",
+            "stoichiometric amount"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "weighed compositions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric amount",
+            "target": "weighed compositions"
+        }
+    ]
+}

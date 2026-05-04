@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "jar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "ball milling"
+        ],
+        "descriptors": [],
+        "values": [
+            "450 rpm",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "450 rpm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "planetary ball mill (PM 100, RETSCH)"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill (PM 100, RETSCH)",
+            "target": "ball milling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "450 rpm",
+            "target": "ball milling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "ball milling"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill (PM 100, RETSCH)"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "\u03b2-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "synthesis",
+            "quenched"
+        ],
+        "descriptors": [
+            "high-temperature",
+            "metastable",
+            "immediately"
+        ],
+        "values": [
+            "900 \u2013 1000 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "900 \u2013 1000 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "high-temperature",
+            "target": "\u03b2-phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "metastable",
+            "target": "\u03b2-phase"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u2013 1000 \u00b0C",
+            "target": "synthesis"
+        },
+        {
+            "type": "Participant-material",
+            "source": "\u03b2-phase",
+            "target": "synthesis"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenched",
+            "target": "synthesis"
+        }
+    ]
+}

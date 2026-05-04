@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "AsSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "heating"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "vacuum-sealed"
+        ],
+        "values": [
+            "933 K",
+            "14 days",
+            "\u223c 10 \u2212 3 Pa"
+        ],
+        "properties": [
+            {
+                "text": "933 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "10 \u2212 3 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "AsSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "933 K",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "14 days",
+            "target": "Property-time"
+        },
+        {
+            "type": "Value-of",
+            "source": "\u223c 10 \u2212 3 Pa",
+            "target": "Property-pressure"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum-sealed",
+            "target": "quartz ampoule"
+        }
+    ]
+}

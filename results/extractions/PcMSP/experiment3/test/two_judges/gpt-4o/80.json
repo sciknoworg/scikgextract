@@ -1,0 +1,75 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingot",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "annealed",
+            "homogenize"
+        ],
+        "descriptors": [
+            "arc-melted",
+            "industrial grade"
+        ],
+        "values": [
+            "1200 °C",
+            "72 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "arc-melted",
+            "target": "ingot"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingot",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ar",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hrs",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "homogenize"
+        }
+    ]
+}

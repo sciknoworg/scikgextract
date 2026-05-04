@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "synthesized samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "ground",
+            "re-annealed"
+        ],
+        "descriptors": [
+            "powder form",
+            "synthesized"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "agate mortar"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powder form",
+            "target": "samples"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "synthesized",
+            "target": "samples"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "re-annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "ground"
+        }
+    ]
+}

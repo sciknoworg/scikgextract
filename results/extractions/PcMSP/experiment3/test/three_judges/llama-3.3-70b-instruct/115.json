@@ -1,0 +1,58 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sieved",
+            "removing"
+        ],
+        "descriptors": [
+            "ball-milled",
+            "larger than"
+        ],
+        "values": [
+            "45 µm"
+        ],
+        "properties": [],
+        "devices": [
+            "sieve"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "ball-milled",
+            "target": "powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "45 µm",
+            "target": "particles"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "sieved"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "sieve",
+            "target": "sieved"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ball-milled",
+            "target": "sieved"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "larger than",
+            "target": "45 µm"
+        }
+    ]
+}

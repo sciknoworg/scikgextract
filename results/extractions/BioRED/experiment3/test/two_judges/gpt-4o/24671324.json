@@ -1,0 +1,122 @@
+{
+    "entities": [
+        {
+            "text": "bortezomib",
+            "type": "ChemicalEntity",
+            "identifier": "C48346",
+            "offset": 50,
+            "length": 10
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "C481",
+            "offset": 66,
+            "length": 13
+        },
+        {
+            "text": "Waldenstrom macroglobulinaemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D014867",
+            "offset": 116,
+            "length": 28
+        },
+        {
+            "text": "necrotising fasciitis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009417",
+            "offset": 161,
+            "length": 21
+        },
+        {
+            "text": "neutropenia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009503",
+            "offset": 188,
+            "length": 11
+        },
+        {
+            "text": "rituximab",
+            "type": "ChemicalEntity",
+            "identifier": "C2256",
+            "offset": 246,
+            "length": 9
+        },
+        {
+            "text": "bacterial infections",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003141",
+            "offset": 362,
+            "length": 20
+        },
+        {
+            "text": "elderly patient",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 0,
+            "length": 14
+        }
+    ],
+    "relations": [
+        {
+            "type": "Cotreatment",
+            "entity1": "C48346",
+            "entity2": "C481",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "C48346",
+            "entity2": "C2256",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "C481",
+            "entity2": "C2256",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C48346",
+            "entity2": "D009417",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C481",
+            "entity2": "D009417",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C2256",
+            "entity2": "D009417",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D009503",
+            "entity2": "D009417",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C48346",
+            "entity2": "D003141",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C481",
+            "entity2": "D003141",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C2256",
+            "entity2": "D003141",
+            "novel": true
+        }
+    ]
+}

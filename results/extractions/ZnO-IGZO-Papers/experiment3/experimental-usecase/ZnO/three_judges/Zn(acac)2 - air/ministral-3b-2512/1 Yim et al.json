@@ -1,0 +1,961 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Zn(acac)2",
+                        "precursor": "Zn(acac)2"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "synthetic air"
+                    }
+                ],
+                "carrierGas": "Nitrogen (N₂)",
+                "purgingGas": "Nitrogen (N₂)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Fixed-bed powder ALD reactor (F-120, ASM Microchemistry Ltd.)",
+                    "manufacturer": "ASM Microchemistry Ltd."
+                },
+                "plasmaPower": null,
+                "substrate": "mesoporous monoclinic ZrO₂ (250–420 µm particle size)",
+                "deliveryMethod": "Flow-type reactor with six inlet tubes",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 5.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 2.2,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 1.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": null,
+                                "unit": null
+                            },
+                            "quantityKind": null
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": null
+                        },
+                        "quantityKind": null
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 3600.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 7200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": null,
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": {
+                    "resistivity": null,
+                    "carrierDensity": null,
+                    "mobility": null,
+                    "characterizationMethod": null
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 1.2,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "ICP-OES"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O"
+                        ],
+                        "value": "1:1",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "amorphous/polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": null
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": null
+            },
+            "otherAspects": {
+                "safety": "Zn(acac)2 is nontoxic and stable in air; synthetic air used for oxidation is safe.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Zn(acac)2",
+                        "precursor": "Zn(acac)2"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "synthetic air"
+                    }
+                ],
+                "carrierGas": "Nitrogen (N₂)",
+                "purgingGas": "Nitrogen (N₂)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Fixed-bed powder ALD reactor (F-120, ASM Microchemistry Ltd.)",
+                    "manufacturer": "ASM Microchemistry Ltd."
+                },
+                "plasmaPower": null,
+                "substrate": "mesoporous ZrO₂ calcined at 600 °C",
+                "deliveryMethod": "Flow-type reactor with six inlet tubes",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 240.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 5.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 3.0,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 1.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": null
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 3600.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 7200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": null,
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": {
+                    "resistivity": null,
+                    "carrierDensity": null,
+                    "mobility": null,
+                    "characterizationMethod": null
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 1.7,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "ICP-OES"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O"
+                        ],
+                        "value": "1:1",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "amorphous/polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": null
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": null
+            },
+            "otherAspects": {
+                "safety": "Zn(acac)2 is nontoxic and stable in air; synthetic air used for oxidation is safe.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Zn(acac)2",
+                        "precursor": "Zn(acac)2"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "air"
+                    }
+                ],
+                "carrierGas": "Nitrogen (N₂)",
+                "purgingGas": "Nitrogen (N₂)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Fixed-bed powder ALD reactor (F-120, ASM Microchemistry Ltd.)",
+                    "manufacturer": "ASM Microchemistry Ltd."
+                },
+                "plasmaPower": null,
+                "substrate": "mesoporous ZrO₂ calcined at 400 °C",
+                "deliveryMethod": "Flow-type reactor with six inlet tubes",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 5.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 2.2,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 3.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": null
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 3600.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 7200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": null,
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": {
+                    "resistivity": null,
+                    "carrierDensity": null,
+                    "mobility": null,
+                    "characterizationMethod": null
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 0.62,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "ICP-OES"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O"
+                        ],
+                        "value": "1:1",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "amorphous/polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": null
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": null
+            },
+            "otherAspects": {
+                "safety": "Zn(acac)2 is nontoxic and stable in air; synthetic air used for oxidation is safe.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "ZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Zn(acac)2",
+                        "precursor": "Zn(acac)2"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "ZnO",
+                        "coReactant": "synthetic air"
+                    }
+                ],
+                "carrierGas": "Nitrogen (N₂)",
+                "purgingGas": "Nitrogen (N₂)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Fixed-bed powder ALD reactor (F-120, ASM Microchemistry Ltd.)",
+                    "manufacturer": "ASM Microchemistry Ltd."
+                },
+                "plasmaPower": null,
+                "substrate": "mesoporous ZrO₂ calcined at 1000 °C",
+                "deliveryMethod": "Flow-type reactor with six inlet tubes",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 5.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 2.2,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 3.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": null
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 3600.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 7200.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": null
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": null,
+                                "quantityKind": null
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 100.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": null,
+                    "characterizationMethod": null
+                },
+                "electricalProperties": {
+                    "resistivity": null,
+                    "carrierDensity": null,
+                    "mobility": null,
+                    "characterizationMethod": null
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 0.95,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "ICP-OES"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O"
+                        ],
+                        "value": "1:1",
+                        "characterizationMethod": "XPS"
+                    }
+                },
+                "chemicalComposition": "ZnO",
+                "crystallinity": {
+                    "phase": "amorphous/polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "AFM"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": null
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": null
+            },
+            "otherAspects": {
+                "safety": "Zn(acac)2 is nontoxic and stable in air; synthetic air used for oxidation is safe.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ZnxCu4\u2212x(OH)6FBr",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "ZnBr2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuBr2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "achieved",
+            "addition",
+            "varying"
+        ],
+        "descriptors": [
+            "Zn-substituted",
+            "excess"
+        ],
+        "values": [
+            "amount of CuBr2",
+            "Supplementary Table 1"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Zn-substituted",
+            "target": "ZnxCu4\u2212x(OH)6FBr"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ZnBr2",
+            "target": "addition"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "ZnBr2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuBr2",
+            "target": "varying"
+        },
+        {
+            "type": "Next-operation",
+            "source": "varying",
+            "target": "addition"
+        },
+        {
+            "type": "Next-operation",
+            "source": "achieved",
+            "target": "varying"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ZnxCu4\u2212x(OH)6FBr",
+            "target": "achieved"
+        },
+        {
+            "type": "Value-of",
+            "source": "amount of CuBr2",
+            "target": "varying"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Supplementary Table 1",
+            "target": "varying"
+        }
+    ]
+}

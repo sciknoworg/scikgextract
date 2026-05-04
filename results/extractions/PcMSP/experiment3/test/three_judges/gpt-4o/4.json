@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "(Sr0.95La0.05)GeO3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "AP",
+            "in air"
+        ],
+        "values": [
+            "1,200 °C",
+            "10 h"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(Sr0.95La0.05)GeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(Sr0.95La0.05)GeO3",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "AP",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in air",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "1,200 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "mixed"
+        }
+    ]
+}

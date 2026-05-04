@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [
+            "cubic-anvil-type"
+        ],
+        "values": [
+            "1073 K",
+            "a",
+            "5.5 – 6.0 GPa"
+        ],
+        "properties": [
+            {
+                "text": "5.5 – 6.0 GPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "pressure",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "cubic-anvil-type high-pressure apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "cubic-anvil-type",
+            "target": "high-pressure apparatus"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "a",
+            "target": "cubic-anvil-type high-pressure apparatus"
+        },
+        {
+            "type": "Value-of",
+            "source": "5.5 – 6.0 GPa",
+            "target": "pressure"
+        },
+        {
+            "type": "Participant-material",
+            "source": "high-pressure apparatus",
+            "target": "heated"
+        }
+    ]
+}

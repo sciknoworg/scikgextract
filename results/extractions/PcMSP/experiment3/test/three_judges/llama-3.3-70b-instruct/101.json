@@ -1,0 +1,127 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn1.4Pt1−xPdxSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4Pt1−yRhySn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Pt",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Pd",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Rh",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared by arc melting"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "stoichiometric"
+        ],
+        "values": [
+            "x = 0",
+            "x = 0.1",
+            "x = 0.2",
+            "x = 0.3",
+            "y = 0.1",
+            "y = 0.2",
+            "y = 0.3",
+            "y = 0.4",
+            "y = 0.5",
+            "y = 0.6",
+            "y = 0.7",
+            "y = 0.8"
+        ],
+        "properties": [],
+        "devices": [
+            "arc melter"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn1.4Pt1−xPdxSn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn1.4Pt1−yRhySn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Mn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Pt"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Pd"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Rh"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn",
+            "target": "prepared by arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pt",
+            "target": "prepared by arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pd",
+            "target": "prepared by arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "prepared by arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh",
+            "target": "prepared by arc melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melter",
+            "target": "prepared by arc melting"
+        }
+    ]
+}

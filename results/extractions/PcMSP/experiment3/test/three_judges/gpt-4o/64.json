@@ -1,0 +1,58 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "melted"
+        ],
+        "descriptors": [
+            "water-cooled"
+        ],
+        "values": [
+            "Four samples"
+        ],
+        "properties": [],
+        "devices": [
+            "Crystalox MCGS5 levitation melting system"
+        ],
+        "brands": [
+            "Crystalox"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1Sn",
+            "target": "melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Crystalox MCGS5 levitation melting system",
+            "target": "melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "Crystalox MCGS5 levitation melting system"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Crystalox",
+            "target": "Crystalox MCGS5 levitation melting system"
+        },
+        {
+            "type": "Condition-of",
+            "source": "under an Ar atmosphere",
+            "target": "melted"
+        },
+        {
+            "type": "Value-of",
+            "source": "Four samples",
+            "target": "TiNi1.1Sn"
+        }
+    ]
+}

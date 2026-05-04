@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs2Mo3As3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "obtained",
+            "characterizations"
+        ],
+        "descriptors": [
+            "single phase",
+            "structural",
+            "physical"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "single phase",
+            "target": "Cs2Mo3As3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs2Mo3As3",
+            "target": "obtained"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "obtained"
+        },
+        {
+            "type": "Next-operation",
+            "source": "characterizations",
+            "target": "obtained"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "structural",
+            "target": "characterizations"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "physical",
+            "target": "characterizations"
+        },
+        {
+            "type": "Coreference",
+            "source": "samples",
+            "target": "Cs2Mo3As3"
+        }
+    ]
+}

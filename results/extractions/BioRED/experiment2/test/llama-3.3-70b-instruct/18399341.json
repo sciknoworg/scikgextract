@@ -1,0 +1,92 @@
+{
+    "entities": [
+        {
+            "text": "unilateral spinal anaesthesia",
+            "type": "ChemicalEntity",
+            "identifier": "C0085091",
+            "offset": 123,
+            "length": 25
+        },
+        {
+            "text": "conventional spinal anaesthesia",
+            "type": "ChemicalEntity",
+            "identifier": "C0085091",
+            "offset": 173,
+            "length": 29
+        },
+        {
+            "text": "hypotension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006942",
+            "offset": 251,
+            "length": 10
+        },
+        {
+            "text": "bupivacaine",
+            "type": "ChemicalEntity",
+            "identifier": "C0074563",
+            "offset": 310,
+            "length": 10
+        },
+        {
+            "text": "epinephrine",
+            "type": "ChemicalEntity",
+            "identifier": "C0014065",
+            "offset": 421,
+            "length": 10
+        },
+        {
+            "text": "blood pressure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001794",
+            "offset": 463,
+            "length": 13
+        },
+        {
+            "text": "respiratory rate",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D012121",
+            "offset": 513,
+            "length": 15
+        },
+        {
+            "text": "oxygen saturation",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D0101005",
+            "offset": 555,
+            "length": 16
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C0085091",
+            "entity2": "D006942",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "C0085091",
+            "entity2": "C0074563",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D006942",
+            "entity2": "C0014065",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D001794",
+            "entity2": "D012121",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D0101005",
+            "entity2": "C0085091",
+            "novel": false
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "homogenized-quenched ( HQ ) sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "brought to 1423 K",
+            "air-quenched"
+        ],
+        "descriptors": [
+            "homogenized-quenched"
+        ],
+        "values": [
+            "1423 K",
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "1423 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched",
+            "target": "homogenized-quenched ( HQ ) sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "homogenized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "brought to 1423 K",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "brought to 1423 K"
+        },
+        {
+            "type": "Value-of",
+            "source": "1423 K",
+            "target": "brought to 1423 K"
+        },
+        {
+            "type": "Value-of",
+            "source": "1423 K",
+            "target": "1423 K"
+        },
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "brought to 1423 K"
+        },
+        {
+            "type": "Value-of",
+            "source": "6 h",
+            "target": "6 h"
+        },
+        {
+            "type": "Next-operation",
+            "source": "air-quenched",
+            "target": "brought to 1423 K"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "air-quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1423 K",
+            "target": "air-quenched"
+        }
+    ]
+}

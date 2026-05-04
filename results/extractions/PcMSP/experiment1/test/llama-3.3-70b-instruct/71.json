@@ -1,0 +1,45 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ta",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "silica",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "wrapping",
+            "sealing"
+        ],
+        "descriptors": [
+            "vacuum"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "fused silica ampoule",
+            "Ta foil"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "wrapping",
+            "target": "Ta foil"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "sealing",
+            "target": "fused silica ampoule"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum",
+            "target": "sealing"
+        }
+    ]
+}

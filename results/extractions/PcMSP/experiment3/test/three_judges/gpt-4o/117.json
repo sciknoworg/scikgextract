@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "isopropanol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "dissolved solution",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "added",
+            "centrifuged",
+            "precipitate"
+        ],
+        "descriptors": [
+            "dissolved"
+        ],
+        "values": [
+            "37.5 mL"
+        ],
+        "properties": [
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "7715 × g",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "10 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "isopropanol",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "dissolved solution",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "dissolved solution",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se ion binder",
+            "target": "precipitate"
+        },
+        {
+            "type": "Value-of",
+            "source": "37.5 mL",
+            "target": "isopropanol"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "dissolved",
+            "target": "solution"
+        },
+        {
+            "type": "Next-operation",
+            "source": "centrifuged",
+            "target": "added"
+        }
+    ]
+}

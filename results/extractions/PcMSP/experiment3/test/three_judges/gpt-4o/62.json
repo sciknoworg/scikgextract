@@ -1,0 +1,109 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "polycrystalline sample",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SrCO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re2O7",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re metal",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "solid state reaction"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "pure"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "polycrystalline sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "polycrystalline sample",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2O3",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrCO3",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re2O7",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re metal",
+            "target": "solid state reaction"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "La2O3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "SrCO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "NiO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Re2O7"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Re metal"
+        },
+        {
+            "type": "Next-operation",
+            "source": "solid state reaction",
+            "target": "prepared"
+        }
+    ]
+}

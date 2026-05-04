@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiOH\ua78fH2O",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [],
+        "values": [
+            "1 : 1.02"
+        ],
+        "properties": [
+            {
+                "text": "480 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "730 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "Ni0.88Co0.09Al0.03 ( OH ) 2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "LiOH\ua78fH2O"
+        },
+        {
+            "type": "Condition-of",
+            "source": "calcined",
+            "target": "480 \u00b0 C"
+        },
+        {
+            "type": "Condition-of",
+            "source": "calcined",
+            "target": "5 h"
+        },
+        {
+            "type": "Condition-of",
+            "source": "calcined",
+            "target": "730 \u00b0 C"
+        },
+        {
+            "type": "Condition-of",
+            "source": "calcined",
+            "target": "12 h"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1.02",
+            "target": "Ni0.88Co0.09Al0.03 ( OH ) 2"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1.02",
+            "target": "LiOH\ua78fH2O"
+        }
+    ]
+}

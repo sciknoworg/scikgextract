@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe₂",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnCl₂",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "mixed"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "doped with Cl",
+            "stoichiometric",
+            "anhydrous",
+            "polycrystalline"
+        ],
+        "values": [
+            "250 °C",
+            "stoichiometric amount"
+        ],
+        "properties": [
+            {
+                "text": "250 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnCl₂",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "SnSe₂"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "doped with Cl",
+            "target": "SnSe₂"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnCl₂"
+        },
+        {
+            "type": "Value-of",
+            "source": "250 °C",
+            "target": "250 °C"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fused",
+            "target": "tubes"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "mixed"
+        },
+        {
+            "type": "Coreference",
+            "source": "2 − x Sn + xSnCl₂ → 2SnClx",
+            "target": "mixed"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "solid",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "isolated",
+            "filtration",
+            "washed"
+        ],
+        "descriptors": [
+            "pale pink",
+            "deionized"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "pale pink",
+            "target": "solid"
+        },
+        {
+            "type": "Participant-material",
+            "source": "solid",
+            "target": "isolated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "filtration",
+            "target": "isolated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtration"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "deionized",
+            "target": "water"
+        }
+    ]
+}

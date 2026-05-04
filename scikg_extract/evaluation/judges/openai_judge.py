@@ -1,23 +1,32 @@
+"""
+OpenAIJudge class for evaluating extracted structured knowledge using an OpenAI model.
+
+The OpenAIJudge class inherits from the BaseJudge and implements the evaluate method to use an OpenAI model for scoring the quality of the extracted knowledge based on a given rubric. It formats the prompts according to the rubric's templates, invokes the OpenAI adapter, and includes retry logic for robustness.
+"""
+# Python Imports
 from types import SimpleNamespace
 
+# SciKGExtract Model Imports
 from scikg_extract.models.openai_adapter import Openai_Adapter
+
+# SciKGExtract Config Imports
 from scikg_extract.config.process.processConfig import ProcessConfig
+
+# SciKGExtract Utils Imports
 from scikg_extract.utils.log_handler import LogHandler
 
+# SciKGExtract Evaluation Imports
+from scikg_extract.evaluation.judges.base_judge import BaseJudge
+
+# External Imports
 from pydantic import BaseModel
-from yescieval.base.judge import Judge
 from yescieval.base import Rubric
 
-class OpenAIJudge(Judge):
-
+class OpenAIJudge(BaseJudge):
+    """
+    OpenAIJudge is a subclass of BaseJudge which uses an OpenAI model to evaluate the quality of the extracted structured knowledge based on a specified rubric and returns a score.
+    """
     def __init__(self, model: str, temperature: float = 0.1, data_model: BaseModel = None) -> None:
-        """
-        Initializes the OpenAIJudge with the specified model and temperature.
-        Args:
-            model (str): The name of the OpenAI model to use for judging.
-            temperature (float, optional): Sampling temperature for response generation. Defaults to 0.1.
-            data_model (BaseModel, optional): The Pydantic data model for validation of the judged knowledge. Defaults to None.
-        """
         
         # Initialize the base Judge class
         super().__init__()
@@ -42,21 +51,27 @@ class OpenAIJudge(Judge):
         Returns:
             BaseModel: The evaluation results mapped to the specified Pydantic data model.
         """
-        # Initialize the logger
-        logger = LogHandler.get_logger(__name__)
-        logger.debug("Starting evaluation using OpenAIJudge...")
+        try:
+            # Initialize the logger
+            logger = LogHandler.get_logger(__name__)
+            logger.debug("Starting evaluation using OpenAIJudge...")
 
-        # Format the prompt template
-        var_dict = {"process_name": ProcessConfig.Process_name, "process_description": ProcessConfig.Process_description, "scientific_article": rubric.scientific_article, "process_schema": rubric.process_schema, "extracted_data": rubric.extracted_data}
+            # Format the prompt template
+            var_dict = {"process_name": ProcessConfig.Process_name, "process_description": ProcessConfig.Process_description, "scientific_article": rubric.scientific_article, "process_schema": rubric.process_schema, "extracted_data": rubric.extracted_data}
 
-        # Encapsulating the System and User prompts to an object
-        prompt_template = SimpleNamespace(
-            system_prompt=rubric.system_prompt_template,
-            user_prompt=rubric.user_prompt_template
-        )
+            # Encapsulating the System and User prompts to an object
+            prompt_template = SimpleNamespace(
+                system_prompt=rubric.system_prompt_template,
+                user_prompt=rubric.user_prompt_template
+            )
 
-        # Evaluate using the OpenAI adapter
-        evaluation_result = self.openai_adapter.structured_completion(prompt_template, var_dict, self.data_model)
+            # Define the evaluation function to be used with retry logic
+            def _evaluate():
+                return self.openai_adapter.structured_completion(prompt_template, var_dict, self.data_model)
 
-        # Return the evaluation result
-        return evaluation_result
+            # Evaluate using the OpenAI adapter with retry logic
+            return self._evaluate_with_retry(_evaluate, self.num_retry)
+        except Exception as e:
+            self.logger.debug(f"Exception Occurred while evaluating using OpenAIJudge")
+            self.logger.debug(f"Exception: {e}")
+            return None

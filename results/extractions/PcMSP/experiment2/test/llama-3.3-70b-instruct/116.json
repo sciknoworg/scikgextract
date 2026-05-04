@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se binder",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "ethanethiol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "ethylenediamine",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "dissolving",
+            "stirring"
+        ],
+        "descriptors": [
+            "soluble",
+            "ionic",
+            "vigorous",
+            "room temperature"
+        ],
+        "values": [
+            "0.5 g",
+            "0.5 mL",
+            "4.5 mL"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "soluble",
+            "target": "Se binder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ionic",
+            "target": "Se binder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "dissolving"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ethanethiol",
+            "target": "dissolving"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ethylenediamine",
+            "target": "dissolving"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "stirring",
+            "target": "Not Found"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5 g",
+            "target": "Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5 mL",
+            "target": "ethanethiol"
+        },
+        {
+            "type": "Value-of",
+            "source": "4.5 mL",
+            "target": "ethylenediamine"
+        }
+    ]
+}

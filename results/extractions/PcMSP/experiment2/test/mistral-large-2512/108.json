@@ -1,0 +1,91 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "silica tubes",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "taken",
+            "loaded",
+            "flame-sealed",
+            "obtained"
+        ],
+        "descriptors": [
+            "powder",
+            "residual"
+        ],
+        "values": [
+            "13 mm",
+            "\u223c 10^\u22124 Torr"
+        ],
+        "properties": [
+            {
+                "text": "\u223c 10^\u22124 Torr",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "powder sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "flame-sealed",
+            "target": "loaded"
+        },
+        {
+            "type": "Condition-of",
+            "source": "\u223c 10^\u22124 Torr",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "residual",
+            "target": "\u223c 10^\u22124 Torr"
+        }
+    ]
+}

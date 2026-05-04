@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HP4 samples",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "HP2 samples",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "held",
+            "cool"
+        ],
+        "descriptors": [],
+        "values": [
+            "5.8 h",
+            "5 h"
+        ],
+        "properties": [
+            {
+                "text": "5.8 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "hot press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "5.8 h",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 h",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HP4 samples",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HP2 samples",
+            "target": "held"
+        },
+        {
+            "type": "Value-of",
+            "source": "5.8 h",
+            "target": "HP4 samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "HP2 samples"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cool",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hot press",
+            "target": "cool"
+        }
+    ]
+}

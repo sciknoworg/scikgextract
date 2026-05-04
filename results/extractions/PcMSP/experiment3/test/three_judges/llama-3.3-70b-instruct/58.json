@@ -1,0 +1,98 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Te",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "heating"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "powders",
+            "sealed and evacuated"
+        ],
+        "values": [
+            "99.99%",
+            "99.999%",
+            "750 °C"
+        ],
+        "properties": [
+            {
+                "text": "750 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Te"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Mo"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Te"
+        },
+        {
+            "type": "Condition-of",
+            "source": "750 °C",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Te",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "synthesized"
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "powder"
+        ],
+        "values": [
+            "13 mm"
+        ],
+        "properties": [
+            {
+                "text": "∼ 10 − 4 Torr",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "taken",
+            "target": "powder sample"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "loaded",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "flame-sealed",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Condition-of",
+            "source": "∼ 10 − 4 Torr",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "powder sample"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "starting elements",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Gd",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "taken",
+            "compensate"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "excess"
+        ],
+        "values": [
+            "99%",
+            "1%",
+            "1% excess"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "99%",
+            "target": "starting elements"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "ratios"
+        },
+        {
+            "type": "Value-of",
+            "source": "1%",
+            "target": "excess"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "Gd"
+        },
+        {
+            "type": "Value-of",
+            "source": "1% excess",
+            "target": "Gd"
+        },
+        {
+            "type": "Participant-material",
+            "source": "starting elements",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Gd",
+            "target": "compensate"
+        }
+    ]
+}

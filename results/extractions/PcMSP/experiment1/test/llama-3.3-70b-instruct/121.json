@@ -1,0 +1,70 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "La2MMnO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MnO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co(II) oxides",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiCO3 \u00b7 2Ni(OH)2 \u00b7 4H2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "firing"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "stoichiometric",
+            "intimate"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "La2MMnO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "La2O3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intimate",
+            "target": "La2O3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "prepared",
+            "target": "La2MMnO6"
+        },
+        {
+            "type": "Participant-material",
+            "source": "firing",
+            "target": "La2O3"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "platinum crucibles",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "reactions"
+        ],
+        "descriptors": [
+            "in air",
+            "platinum"
+        ],
+        "values": [
+            "1000 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "1000 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "platinum crucibles"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "in air",
+            "target": "reactions"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucibles",
+            "target": "reactions"
+        },
+        {
+            "type": "Value-of",
+            "source": "1000 \u00b0C",
+            "target": "Property-temperature"
+        }
+    ]
+}

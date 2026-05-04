@@ -1,0 +1,108 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "LaSrNiReO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "stoichiometric mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "reacted",
+            "resulting",
+            "steps"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "single-phased",
+            "high",
+            "different"
+        ],
+        "values": [
+            "1:1"
+        ],
+        "properties": [
+            {
+                "text": "high temperatures",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "single-phased",
+            "target": "LaSrNiReO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high",
+            "target": "temperatures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "different",
+            "target": "steps"
+        },
+        {
+            "type": "Value-of",
+            "source": "1:1",
+            "target": "mixtures"
+        },
+        {
+            "type": "Condition-of",
+            "source": "high temperatures",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixtures",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LaSrNiReO6",
+            "target": "resulting"
+        },
+        {
+            "type": "Coreference",
+            "source": "resulting",
+            "target": "reacted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "resulting",
+            "target": "reacted"
+        }
+    ]
+}

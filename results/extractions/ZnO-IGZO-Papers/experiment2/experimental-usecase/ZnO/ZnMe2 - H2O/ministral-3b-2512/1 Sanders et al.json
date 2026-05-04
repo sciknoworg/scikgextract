@@ -1,0 +1,1163 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnS",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9833931"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnO-xSx",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "dimethylzinc (DMZ)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/6093185"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "ZnS",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9833931"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "dimethylzinc (DMZ)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/6093185"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnO-xSx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "1% H\u2082S in nitrogen (with trace oxygen/water)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5359967"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "Nitrogen",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "Nitrogen (with optional oxygen filter for x = 0.95)",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/5359268"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Chemical Vapor Atomic Layer Deposition (CVALD) System",
+                    "manufacturer": "Custom-built"
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "Corning 7059 glass, silicon (111) wafers",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/5359967"
+                    ]
+                },
+                "deliveryMethod": "Sequential gas pulses via computer-controlled valves",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 573.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.0,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 10.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 5000.0,
+                                "unit": {
+                                    "hasQuantityKind": "Thickness",
+                                    "sameAs": "NanoM"
+                                }
+                            },
+                            "quantityKind": "Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "Count",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO-xSx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 8.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO-xSx",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 30.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 5000.0,
+                            "unit": {
+                                "hasQuantityKind": "Thickness",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Thickness"
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.58,
+                            "unit": {
+                                "hasQuantityKind": "Energy",
+                                "sameAs": "EV"
+                            }
+                        },
+                        "quantityKind": "Energy"
+                    },
+                    "characterizationMethod": "UV-Vis Spectroscopy"
+                },
+                "electricalProperties": {
+                    "resistivity": {
+                        "quantityValue": {
+                            "numericValue": 0.042,
+                            "unit": {
+                                "hasQuantityKind": "ElectricResistivity",
+                                "sameAs": "OHM-M"
+                            }
+                        },
+                        "quantityKind": "ElectricResistivity"
+                    },
+                    "carrierDensity": {
+                        "quantityValue": {
+                            "numericValue": 1.66e+19,
+                            "unit": {
+                                "hasQuantityKind": "ElectricChargeVolumeDensity",
+                                "sameAs": "C-PER-M3"
+                            }
+                        },
+                        "quantityKind": "ElectricChargeVolumeDensity"
+                    },
+                    "mobility": {
+                        "quantityValue": {
+                            "numericValue": 32.2,
+                            "unit": {
+                                "hasQuantityKind": "ElectronMobility",
+                                "sameAs": "CentiM2-PER-V-SEC"
+                            }
+                        },
+                        "quantityKind": "ElectronMobility"
+                    },
+                    "characterizationMethod": "Hall Measurements"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "PERCENT"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 0.95,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "Rutherford Backscattering Spectroscopy (RBS)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O",
+                            "S"
+                        ],
+                        "value": "1:0.95:0.05",
+                        "characterizationMethod": "RBS"
+                    }
+                },
+                "chemicalComposition": "ZnO-xSx",
+                "crystallinity": {
+                    "phase": "Amorphous to Two-Phase (x \u2248 0.56)",
+                    "characterizationMethod": "X-Ray Diffraction (XRD)"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "Length",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Length"
+                    },
+                    "characterizationMethod": "Not Found"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "MassDensity",
+                                "sameAs": "GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "MassDensity"
+                    },
+                    "characterizationMethod": "Not Found"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": "Not Found"
+            },
+            "otherAspects": {
+                "safety": "Handling dimethylzinc and hydrogen sulfide requires careful ventilation and safety protocols due to toxicity.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnO-xSx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnO-xSx",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnO-xSx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "dimethylzinc (DMZ)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/6093185"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnO-xSx",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "H\u2082S (30\u201370 PSIG)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5461123"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "Nitrogen",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "Nitrogen (with oxygen filter for x = 0.95)",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Chemical Vapor Atomic Layer Deposition (CVALD) System",
+                    "manufacturer": "Custom-built"
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "Corning 7059 glass, silicon (111) wafers",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/5359967"
+                    ]
+                },
+                "deliveryMethod": "Variable delay in H\u2082S dosing (0\u20138 s)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 573.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO-xSx",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.0,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 10.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 500.0,
+                                "unit": {
+                                    "hasQuantityKind": "Thickness",
+                                    "sameAs": "NanoM"
+                                }
+                            },
+                            "quantityKind": "Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "Count",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO-xSx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO-xSx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 8.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO-xSx",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 30.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 500.0,
+                            "unit": {
+                                "hasQuantityKind": "Thickness",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Thickness"
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.65,
+                            "unit": {
+                                "hasQuantityKind": "Energy",
+                                "sameAs": "EV"
+                            }
+                        },
+                        "quantityKind": "Energy"
+                    },
+                    "characterizationMethod": "UV-Vis Spectroscopy"
+                },
+                "electricalProperties": {
+                    "resistivity": {
+                        "quantityValue": {
+                            "numericValue": 0.0048,
+                            "unit": {
+                                "hasQuantityKind": "ElectricResistivity",
+                                "sameAs": "OHM-M"
+                            }
+                        },
+                        "quantityKind": "ElectricResistivity"
+                    },
+                    "carrierDensity": {
+                        "quantityValue": {
+                            "numericValue": 4.8e+19,
+                            "unit": {
+                                "hasQuantityKind": "ElectricChargeVolumeDensity",
+                                "sameAs": "C-PER-M3"
+                            }
+                        },
+                        "quantityKind": "ElectricChargeVolumeDensity"
+                    },
+                    "mobility": {
+                        "quantityValue": {
+                            "numericValue": 13.2,
+                            "unit": {
+                                "hasQuantityKind": "ElectronMobility",
+                                "sameAs": "CentiM2-PER-V-SEC"
+                            }
+                        },
+                        "quantityKind": "ElectronMobility"
+                    },
+                    "characterizationMethod": "Hall Measurements"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "PERCENT"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 0.65,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "Rutherford Backscattering Spectroscopy (RBS)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "O",
+                            "S"
+                        ],
+                        "value": "1:0.35:0.65",
+                        "characterizationMethod": "RBS"
+                    }
+                },
+                "chemicalComposition": "ZnO-xSx (x \u2248 0.65)",
+                "crystallinity": {
+                    "phase": "Amorphous to Two-Phase (x \u2248 0.56)",
+                    "characterizationMethod": "X-Ray Diffraction (XRD)"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "Length",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Length"
+                    },
+                    "characterizationMethod": "Not Found"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "MassDensity",
+                                "sameAs": "GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "MassDensity"
+                    },
+                    "characterizationMethod": "Not Found"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": "Not Found"
+            },
+            "otherAspects": {
+                "safety": "Handling dimethylzinc and hydrogen sulfide requires careful ventilation and safety protocols due to toxicity.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        },
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnS",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9833931"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnS",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/9833931"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnS",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9833931"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "dimethylzinc (DMZ)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/6093185"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnS",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/9833931"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "H\u2082S (70 PSIG)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5461123"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "Nitrogen",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "Nitrogen",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Chemical Vapor Atomic Layer Deposition (CVALD) System",
+                    "manufacturer": "Custom-built"
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "Corning 7059 glass, silicon (111) wafers",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/5359967"
+                    ]
+                },
+                "deliveryMethod": "Variable delay in H\u2082S dosing (0\u20138 s)",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 573.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 1.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnS",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 1.0,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 10.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 1000.0,
+                                "unit": {
+                                    "hasQuantityKind": "Thickness",
+                                    "sameAs": "NanoM"
+                                }
+                            },
+                            "quantityKind": "Thickness"
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "Count",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnS",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnS",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 8.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 0.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnS",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 70.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": 50.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 1000.0,
+                            "unit": {
+                                "hasQuantityKind": "Thickness",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Thickness"
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": {
+                        "quantityValue": {
+                            "numericValue": 3.65,
+                            "unit": {
+                                "hasQuantityKind": "Energy",
+                                "sameAs": "EV"
+                            }
+                        },
+                        "quantityKind": "Energy"
+                    },
+                    "characterizationMethod": "UV-Vis Spectroscopy"
+                },
+                "electricalProperties": {
+                    "resistivity": null,
+                    "carrierDensity": null,
+                    "mobility": null,
+                    "characterizationMethod": "Not Found"
+                },
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": 0.0,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "PERCENT"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": 0.95,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "Rutherford Backscattering Spectroscopy (RBS)"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "S"
+                        ],
+                        "value": "1:0.95",
+                        "characterizationMethod": "RBS"
+                    }
+                },
+                "chemicalComposition": "ZnS",
+                "crystallinity": {
+                    "phase": "Cubic (111) or Hexagonal (002)",
+                    "characterizationMethod": "X-Ray Diffraction (XRD)"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "Length",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Length"
+                    },
+                    "characterizationMethod": "Not Found"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "MassDensity",
+                                "sameAs": "GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "MassDensity"
+                    },
+                    "characterizationMethod": "Not Found"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": "Not Found"
+            },
+            "otherAspects": {
+                "safety": "Handling dimethylzinc and hydrogen sulfide requires careful ventilation and safety protocols due to toxicity.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

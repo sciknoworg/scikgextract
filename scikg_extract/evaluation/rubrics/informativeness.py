@@ -1,10 +1,19 @@
+"""
+Informativeness Rubrics for LLM-as-a-Judge evaluation of scientific information extraction.
+
+Defines rubric classes for evaluating the informativeness of extracted structured knowledge, including Correctness (factual accuracy) and Completeness (coverage of relevant information). Each rubric class inherits from the Yescieval Rubric base class and implements the necessary methods for rendering papers, verbalizing criteria, and instructing the judge LLM.
+"""
+# SciKGExtract Prompts Imports
 from scikg_extract.prompts.evaluation.rubrics import correctness
 from scikg_extract.prompts.evaluation.rubrics import completeness
 
+# Yescieval Rubric Base Class
 from yescieval.base.rubric import Rubric
 
 class Correctness(Rubric):
-
+    """
+    Correctness rubric for evaluating the factual accuracy of extracted structured knowledge against the source scientific document.
+    """
     # Rubric Name
     name: str = "Correctness"
     
@@ -51,7 +60,9 @@ class Correctness(Rubric):
         pass
 
 class Completeness(Rubric):
-
+    """
+    Completeness rubric for evaluating the completeness of extracted structured knowledge against the source scientific document and process schema.
+    """
     # Rubric Name
     name: str = "Completeness"
 

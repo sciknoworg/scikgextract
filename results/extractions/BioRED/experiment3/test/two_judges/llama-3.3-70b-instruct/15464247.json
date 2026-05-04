@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "text": "interleukin 12B (IL12B)",
+            "type": "GeneOrGeneProduct",
+            "identifier": "3593",
+            "offset": 24,
+            "length": 17
+        },
+        {
+            "text": "hepatitis C virus infection",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005246",
+            "offset": 74,
+            "length": 20
+        },
+        {
+            "text": "sustained virologic response (SVR)",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000082",
+            "offset": 234,
+            "length": 24
+        },
+        {
+            "text": "antiviral combination therapy",
+            "type": "ChemicalEntity",
+            "identifier": "C0015965",
+            "offset": 312,
+            "length": 23
+        },
+        {
+            "text": "IL12B 3'-UTR 1188-C allele",
+            "type": "SequenceVariant",
+            "identifier": "rs3212227",
+            "offset": 421,
+            "length": 15
+        },
+        {
+            "text": "relapse",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006349",
+            "offset": 503,
+            "length": 8
+        },
+        {
+            "text": "HCV genotype 1",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005246",
+            "offset": 548,
+            "length": 20
+        }
+    ],
+    "relations": [
+        {
+            "type": "Positive_Correlation",
+            "entity1": "3593",
+            "entity2": "rs3212227",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs3212227",
+            "entity2": "D000082",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs3212227",
+            "entity2": "D006349",
+            "novel": true
+        }
+    ]
+}

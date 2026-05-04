@@ -1,0 +1,132 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "polycrystalline SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cl",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "anhydrous SnCl2 powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnClx",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "stoichiometric amount",
+            "anhydrous",
+            "powders",
+            "fused silica"
+        ],
+        "values": [
+            "2",
+            "250 °C",
+            "24 hrs"
+        ],
+        "properties": [
+            {
+                "text": "250 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "SnSe2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "anhydrous SnCl2 powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "stoichiometric amount",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnClx",
+            "target": "mixtures"
+        },
+        {
+            "type": "Value-of",
+            "source": "2",
+            "target": "SnClx"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "250 °C",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 hrs",
+            "target": "melted"
+        },
+        {
+            "type": "Value-of",
+            "source": "250 °C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "Property-time"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnCl2 powders"
+        }
+    ]
+}

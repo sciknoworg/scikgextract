@@ -1,0 +1,91 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "compositions",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "compositions",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "weighed",
+            "mixed",
+            "mixed"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "thoroughly"
+        ],
+        "values": [
+            "1 h",
+            "stoichiometric amount"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "compositions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "compositions",
+            "target": "weighed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "weighed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "compositions",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "alcohol",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "mixed"
+        }
+    ]
+}

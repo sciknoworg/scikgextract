@@ -1,0 +1,228 @@
+{
+    "entities": [
+        {
+            "text": "type 2 diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 0,
+            "length": 18
+        },
+        {
+            "text": "ADCY5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10000",
+            "offset": 35,
+            "length": 5
+        },
+        {
+            "text": "adenylate cyclase 5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10000",
+            "offset": 58,
+            "length": 19
+        },
+        {
+            "text": "adenylate cyclase",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10000",
+            "offset": 68,
+            "length": 15
+        },
+        {
+            "text": "cyclic AMP",
+            "type": "ChemicalEntity",
+            "identifier": "D001837",
+            "offset": 90,
+            "length": 8
+        },
+        {
+            "text": "second messenger molecule",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 105,
+            "length": 22
+        },
+        {
+            "text": "pancreatic b-cell",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 125,
+            "length": 13
+        },
+        {
+            "text": "insulin secretion",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006749",
+            "offset": 145,
+            "length": 16
+        },
+        {
+            "text": "rs11708067",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 165,
+            "length": 9
+        },
+        {
+            "text": "enhancer region",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 180,
+            "length": 12
+        },
+        {
+            "text": "pancreatic islets",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 195,
+            "length": 13
+        },
+        {
+            "text": "H3K27ac",
+            "type": "ChemicalEntity",
+            "identifier": "D001837",
+            "offset": 210,
+            "length": 6
+        },
+        {
+            "text": "ChIP-seq reads",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 220,
+            "length": 11
+        },
+        {
+            "text": "human islets",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 230,
+            "length": 11
+        },
+        {
+            "text": "rs11708067-A",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 245,
+            "length": 8
+        },
+        {
+            "text": "rs11708067-G",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 260,
+            "length": 8
+        },
+        {
+            "text": "rodent b-cells",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 280,
+            "length": 12
+        },
+        {
+            "text": "rat 832/13",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 300,
+            "length": 9
+        },
+        {
+            "text": "mouse MIN6",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 315,
+            "length": 9
+        },
+        {
+            "text": "nuclear protein binding",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 330,
+            "length": 18
+        },
+        {
+            "text": "Adcy5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "10000",
+            "offset": 350,
+            "length": 5
+        },
+        {
+            "text": "Sec22a",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 365,
+            "length": 6
+        },
+        {
+            "text": "insulin secretion",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006749",
+            "offset": 385,
+            "length": 16
+        },
+        {
+            "text": "832/13 cells",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 400,
+            "length": 10
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D003924",
+            "entity2": "10000",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "rs11708067",
+            "entity2": "D003924",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "rs11708067",
+            "entity2": "D001837",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs11708067-A",
+            "entity2": "H3K27ac",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs11708067-A",
+            "entity2": "nuclear protein binding",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "Adcy5",
+            "entity2": "insulin secretion",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs11708067-A",
+            "entity2": "Adcy5 expression",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "Adcy5 expression (832/13 cells)",
+            "entity2": "Sec22a expression",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs11708067-A",
+            "entity2": "insulin secretion",
+            "novel": false
+        }
+    ]
+}

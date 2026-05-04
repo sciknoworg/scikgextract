@@ -1,0 +1,100 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "resulting products",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "water",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "turquoise",
+            "pale blue",
+            "distilled"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [
+            {
+                "text": "distilled water",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "in air",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "turquoise",
+            "target": "resulting products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pale blue",
+            "target": "resulting products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "distilled",
+            "target": "water"
+        },
+        {
+            "type": "Participant-material",
+            "source": "water",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "dried"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "air",
+            "target": "dried"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "washed"
+        }
+    ]
+}

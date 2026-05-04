@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "argon-filled"
+        ],
+        "values": [
+            "1 : 1"
+        ],
+        "properties": [],
+        "devices": [
+            "alumina crucible",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "1 : 1"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "loaded"
+        }
+    ]
+}

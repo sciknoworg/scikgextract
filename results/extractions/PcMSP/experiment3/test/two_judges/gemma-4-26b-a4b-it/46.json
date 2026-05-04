@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "weighed compositions",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "alcohol",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "weighed",
+            "mixed",
+            "mixed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "thoroughly",
+            "air atmosphere"
+        ],
+        "values": [
+            "1 h",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "weighed compositions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "weighed compositions",
+            "target": "weighed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "weighed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "weighed compositions",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air atmosphere",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "alcohol",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "mixed"
+        }
+    ]
+}

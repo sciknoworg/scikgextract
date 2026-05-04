@@ -1,0 +1,108 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Te",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "heating"
+        ],
+        "descriptors": [
+            "powders",
+            "stoichiometric",
+            "sealed",
+            "evacuated"
+        ],
+        "values": [
+            "99.99%",
+            "99.999%"
+        ],
+        "properties": [
+            {
+                "text": "750 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Te"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Te",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "750 °C",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesized",
+            "target": "heating"
+        }
+    ]
+}

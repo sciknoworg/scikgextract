@@ -1,0 +1,197 @@
+{
+    "entities": [
+        {
+            "text": "cocaine",
+            "type": "ChemicalEntity",
+            "identifier": "D003042",
+            "offset": 42,
+            "length": 7
+        },
+        {
+            "text": "ischemic stroke",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020521",
+            "offset": 60,
+            "length": 14
+        },
+        {
+            "text": "haemorrhagic stroke",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020792",
+            "offset": 79,
+            "length": 18
+        },
+        {
+            "text": "bilateral ischemia of the globus pallidus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020826",
+            "offset": 120,
+            "length": 38
+        },
+        {
+            "text": "globus pallidus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020826",
+            "offset": 135,
+            "length": 14
+        },
+        {
+            "text": "alcohol",
+            "type": "ChemicalEntity",
+            "identifier": "D000437",
+            "offset": 158,
+            "length": 7
+        },
+        {
+            "text": "intranasal cocaine",
+            "type": "ChemicalEntity",
+            "identifier": "D003042",
+            "offset": 171,
+            "length": 16
+        },
+        {
+            "text": "Drug-related globus pallidus infarctions",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020826",
+            "offset": 210,
+            "length": 36
+        },
+        {
+            "text": "heroin",
+            "type": "ChemicalEntity",
+            "identifier": "D006549",
+            "offset": 255,
+            "length": 6
+        },
+        {
+            "text": "Bilateral basal ganglia infarcts",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D020826",
+            "offset": 300,
+            "length": 28
+        },
+        {
+            "text": "cocaine",
+            "type": "ChemicalEntity",
+            "identifier": "D003042",
+            "offset": 340,
+            "length": 7
+        },
+        {
+            "text": "heroin",
+            "type": "ChemicalEntity",
+            "identifier": "D006549",
+            "offset": 370,
+            "length": 6
+        },
+        {
+            "text": "transient cardiac arrhythmia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001145",
+            "offset": 420,
+            "length": 25
+        },
+        {
+            "text": "respiratory dysfunction",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D012128",
+            "offset": 449,
+            "length": 22
+        },
+        {
+            "text": "cocaine",
+            "type": "ChemicalEntity",
+            "identifier": "D003042",
+            "offset": 480,
+            "length": 7
+        },
+        {
+            "text": "ethanol",
+            "type": "ChemicalEntity",
+            "identifier": "D000431",
+            "offset": 488,
+            "length": 7
+        },
+        {
+            "text": "cerebral hypoperfusion",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D002543",
+            "offset": 520,
+            "length": 21
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D003042",
+            "entity2": "D020521",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D003042",
+            "entity2": "D020792",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D003042",
+            "entity2": "D020826",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D000437",
+            "entity2": "D020826",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D006549",
+            "entity2": "D020826",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D003042",
+            "entity2": "D001145",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D003042",
+            "entity2": "D012128",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000431",
+            "entity2": "D001145",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000431",
+            "entity2": "D012128",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "D001145",
+            "entity2": "D002543",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "D012128",
+            "entity2": "D002543",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "D002543",
+            "entity2": "D020826",
+            "novel": false
+        }
+    ]
+}

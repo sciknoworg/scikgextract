@@ -1,0 +1,113 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingots",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "parent compound Mn1.4PtSn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Rh-substituted samples",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "annealed",
+            "quenching"
+        ],
+        "descriptors": [
+            "evacuated",
+            "ice-water"
+        ],
+        "values": [
+            "873 K",
+            "1073 K",
+            "7 d"
+        ],
+        "properties": [
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1073 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "7 d",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pd-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "parent compound Mn1.4PtSn",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Value-of",
+            "source": "873 K",
+            "target": "Pd-substituted samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "parent compound Mn1.4PtSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Rh-substituted samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "7 d",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ice-water",
+            "target": "quenching"
+        }
+    ]
+}

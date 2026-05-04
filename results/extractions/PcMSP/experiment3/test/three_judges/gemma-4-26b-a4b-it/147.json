@@ -1,0 +1,101 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pelletized sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "heated",
+            "heating",
+            "grinding"
+        ],
+        "descriptors": [
+            "two-step",
+            "pelletized"
+        ],
+        "values": [
+            "400 ° C",
+            "48 hours",
+            "500 ° C",
+            "48 hours"
+        ],
+        "properties": [
+            {
+                "text": "400 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "500 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "two-step",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "heated",
+            "target": "mixed precursors"
+        },
+        {
+            "type": "Condition-of",
+            "source": "400 ° C",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hours",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "heating",
+            "target": "pelletized sample"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heating",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "500 ° C",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hours",
+            "target": "heating"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "grinding",
+            "target": "pelletized sample"
+        }
+    ]
+}

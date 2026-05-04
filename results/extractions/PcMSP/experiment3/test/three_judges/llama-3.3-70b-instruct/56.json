@@ -1,0 +1,50 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "high-pressure cell",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "pressed",
+            "heated"
+        ],
+        "descriptors": [],
+        "values": [
+            "2 GPa",
+            "700 ºC",
+            "1 hour"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "high-pressure cell",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "high-pressure cell",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 GPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "700 ºC",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 hour",
+            "target": "heated"
+        }
+    ]
+}

@@ -1,11 +1,7 @@
 """
 Orchestrator Agent for managing the overall extraction workflow including structured knowledge extraction and LLM-as-a-Judge validation.
 
-This module defines an orchestrator agent that manages the end-to-end workflow for extracting structured knowledge from scientific documents. It integrates the Extraction Agent for knowledge extraction and the Reflection Agent for validating the extracted data using specified rubrics.
-
-Author: Sameer Sadruddin
-Created: November 26, 2025
-Last Modified: November 26, 2025
+The Orchestrator Agent serves as the central controller for the entire structured knowledge extraction workflow. It compiles and manages the execution of the LangGraph StateGraph that defines the sequence of steps for extracting structured knowledge from scientific documents, validating it using LLM-as-a-Judge approaches, and refining it based on feedback. The agent takes in configurations for the extraction process, reflection/validation settings, and feedback mechanisms, and ensures that each component is invoked in the correct order with the appropriate parameters. It also handles routing logic to determine when to invoke the reflection and feedback agents based on workflow settings and evaluation results.
 """
 # External imports
 from langgraph.graph import StateGraph, START, END
@@ -19,7 +15,10 @@ from scikg_extract.config.agents.orchestrator import OrchestratorConfig
 from scikg_extract.config.agents.workflow import WorkflowConfig
 from scikg_extract.config.process.processConfig import ProcessConfig
 from scikg_extract.config.normalization.normalizationConfig import NormalizationConfig
-from scikg_extract.config.llm.llmConfig import LLM_REGISTRY
+from scikg_extract.config.llm.llmConfig import ProviderRegistry
+
+# SciKG_Extract Callback Imports
+from scikg_extract.callbacks.timing_callback import IterationTimingCallback
 
 # Scikg_Extract Agent Imports
 from scikg_extract.agents.extraction_agent import extract_knowledge
@@ -44,22 +43,33 @@ def validate_orchestrator_config_params(orchestrator_config: OrchestratorConfig,
     logger.info("Validating Orchestrator Agent configuration parameters...")
 
     # Step 1: Validate LLM models (LLM model for extraction, normalization, reflection and feedback)
-    if orchestrator_config.llm_name not in LLM_REGISTRY:
-        raise ValueError(f"Extraction LLM model {orchestrator_config.llm_name} not found in registry.")
-    logger.debug(f"LLM model for extraction: {orchestrator_config.llm_name} is valid.")
+    if not ProviderRegistry.has_model_or_provider_from_string(orchestrator_config.extraction_llm):
+        raise ValueError(f"Extraction LLM model {orchestrator_config.extraction_llm} not found in registry.")
+    logger.debug(f"LLM model for extraction: {orchestrator_config.extraction_llm} is valid.")
 
     if workflowConfig.normalize_extracted_data:
-        if orchestrator_config.normalization_llm_name not in LLM_REGISTRY:
-            raise ValueError(f"Normalization LLM model {orchestrator_config.normalization_llm_name} not found in registry.")
-        logger.debug(f"LLM model for normalization: {orchestrator_config.normalization_llm_name} is valid.")
+        if not ProviderRegistry.has_model_or_provider_from_string(orchestrator_config.normalization_llm):
+            raise ValueError(f"Normalization LLM model {orchestrator_config.normalization_llm} not found in registry.")
+        logger.debug(f"LLM model for normalization: {orchestrator_config.normalization_llm} is valid.")
     
     if workflowConfig.validate_extracted_data:
-        if orchestrator_config.reflection_llm_name not in LLM_REGISTRY:
-            raise ValueError(f"Reflection LLM model {orchestrator_config.reflection_llm_name} not found in registry.")
-        logger.debug(f"LLM model for reflection: {orchestrator_config.reflection_llm_name} is valid.")
-        if orchestrator_config.feedback_llm_name not in LLM_REGISTRY:
-            raise ValueError(f"Feedback LLM model {orchestrator_config.feedback_llm_name} not found in registry.")
-        logger.debug(f"LLM model for feedback: {orchestrator_config.feedback_llm_name} is valid.")
+        reflection_mode = workflowConfig.reflection_mode.lower().strip() if workflowConfig.reflection_mode else "single"
+        if reflection_mode in ("multi-judge", "debate"):
+            # Multi-judge/debate modes don't require reflection_llm; summarizer_llm is validated in Step 5
+            if orchestrator_config.reflection_llm:
+                if not ProviderRegistry.has_model_or_provider_from_string(orchestrator_config.reflection_llm):
+                    raise ValueError(f"Reflection LLM model {orchestrator_config.reflection_llm} not found in registry.")
+                logger.debug(f"LLM model for reflection: {orchestrator_config.reflection_llm} is valid.")
+        else:
+            # Single mode requires reflection_llm
+            if not ProviderRegistry.has_model_or_provider_from_string(orchestrator_config.reflection_llm):
+                raise ValueError(f"Reflection LLM model {orchestrator_config.reflection_llm} not found in registry.")
+            logger.debug(f"LLM model for reflection: {orchestrator_config.reflection_llm} is valid.")
+
+    if workflowConfig.refine_extracted_data: 
+        if not ProviderRegistry.has_model_or_provider_from_string(orchestrator_config.feedback_llm):
+            raise ValueError(f"Feedback LLM model {orchestrator_config.feedback_llm} not found in registry.")
+        logger.debug(f"LLM model for feedback: {orchestrator_config.feedback_llm} is valid.")
 
     # Step 2: Check that process schema, scientific document are provided
     if not orchestrator_config.process_schema:
@@ -76,10 +86,31 @@ def validate_orchestrator_config_params(orchestrator_config: OrchestratorConfig,
 
     # Step 4: Check if all Rubrics are of type Rubric from yescieval if validation is enabled
     if workflowConfig.validate_extracted_data:
-        valid_rubrics = all(isinstance(rubric, Rubric) for rubric in orchestrator_config.rubrics)
+        valid_rubrics = all(issubclass(rubric, Rubric) for rubric in orchestrator_config.rubrics)
         if not valid_rubrics:
             raise ValueError("All provided rubrics must be instances of the Rubric class from yescieval.")
         logger.debug("All provided rubrics are valid instances of the Rubric class.")
+
+    # Step 5: Validate multi-judge and debate mode specific configurations
+    reflection_mode = workflowConfig.reflection_mode.lower().strip() if workflowConfig.reflection_mode else "single"
+    if workflowConfig.validate_extracted_data and reflection_mode in ("multi-judge", "debate"):
+        # Judge models are required for multi-judge and debate modes
+        if not orchestrator_config.reflection_judge_llms:
+            raise ValueError(f"Reflection judge models must be provided for '{reflection_mode}' reflection mode.")
+        logger.debug(f"Reflection judge models are configured for '{reflection_mode}' mode: {orchestrator_config.reflection_judge_llms}")
+
+        # Summarizer LLM is required for multi-judge and debate modes
+        if not orchestrator_config.summarizer_llm:
+            raise ValueError(f"Summarizer LLM model must be provided for '{reflection_mode}' reflection mode.")
+        if not ProviderRegistry.has_model_or_provider_from_string(orchestrator_config.summarizer_llm):
+            raise ValueError(f"Summarizer LLM model {orchestrator_config.summarizer_llm} not found in registry.")
+        logger.debug(f"Summarizer LLM model: {orchestrator_config.summarizer_llm} is valid.")
+
+        # Critic models are required for debate mode
+        if reflection_mode == "debate":
+            if not orchestrator_config.reflection_critic_llms:
+                raise ValueError("Reflection critic models must be provided for 'debate' reflection mode.")
+            logger.debug(f"Reflection critic models are configured for debate mode: {orchestrator_config.reflection_critic_llms}")
 
     # Return True if all validations pass
     return True
@@ -92,9 +123,13 @@ def route_to_reflection_agent(state: ExtractionState) -> str:
     Returns:
         str: The name of the next node to route to.
     """
-    # Check if validation LLM model and rubrics are specified
-    if state.validation_llm_model and state.rubric_names and state.total_validation_retries >= 0:
-        return "validate_extracted_processes"
+    # Check if rubrics and retries are configured
+    if state.rubric_names and state.total_validation_retries >= 0:
+        # Single mode requires reflection_llm, Multi-judge/debate modes require summarizer_llm and judge/critic LLMs
+        has_single = bool(state.reflection_llm)
+        has_multi = bool(state.summarizer_llm and (state.reflection_judge_llms or state.reflection_critic_llms))
+        if has_single or has_multi:
+            return "validate_extracted_processes"
     
     # Otherwise, terminate the workflow
     return END
@@ -108,7 +143,7 @@ def route_to_feedback_agent(state: ExtractionState) -> str:
         str: The name of the next node to route to.
     """
     # Check if feedback LLM model is specified and evaluation results are available
-    if state.feedback_llm_model and state.evaluation_results  and state.total_validation_retries >= 0:
+    if state.feedback_llm and state.evaluation_results  and state.total_validation_retries > 0:
         return "provide_feedback"
 
     # Otherwise, terminate the workflow
@@ -148,13 +183,16 @@ def orchestrate_extraction_workflow(orchestrator_config: OrchestratorConfig, wor
     logger = LogHandler.get_logger(__name__)
     logger.info("Starting Orchestrator Agent for extraction workflow...")
 
+    # Validate the orchestrator configuration parameters upfront
+    validate_orchestrator_config_params(orchestrator_config, workflow_config)
+
     # Create the state graph
     graph = StateGraph(ExtractionState)
     logger.debug("Created StateGraph for the Orchestractor Agent.")
 
     # Step 1: Initialize the state object for the extraction workflow
     state = {
-        "llm_model": orchestrator_config.llm_name,
+        "extraction_llm": orchestrator_config.extraction_llm,
         "data_model": orchestrator_config.extraction_data_model,
         "process_name": ProcessConfig.Process_name,
         "process_description": ProcessConfig.Process_description,
@@ -172,7 +210,7 @@ def orchestrate_extraction_workflow(orchestrator_config: OrchestratorConfig, wor
 
     # Step 2: Extract structured knowledge using Extraction Agent
     if workflow_config.normalize_extracted_data:
-        state.normalization_llm_model = orchestrator_config.normalization_llm_name
+        state.normalization_llm = orchestrator_config.normalization_llm
         state.pubchem_lmdb_path = orchestrator_config.pubchem_lmdb_path
         state.synonym_to_cid_mapping = orchestrator_config.synonym_to_cid_mapping
         state.normalization_properties_to_include = NormalizationConfig.include_paths
@@ -188,13 +226,22 @@ def orchestrate_extraction_workflow(orchestrator_config: OrchestratorConfig, wor
 
     # Step 3: Validate the extracted structured knowledge using Reflection Agent and feedback agent if enabled in workflowConfig
     if workflow_config.validate_extracted_data:
+        
         # Setup Reflection Config
-        state.validation_llm_model = orchestrator_config.reflection_llm_name
+        state.reflection_mode = workflow_config.reflection_mode
+        state.reflection_llm = orchestrator_config.reflection_llm
+        state.summarizer_llm = orchestrator_config.summarizer_llm
+        state.reflection_judge_llms = orchestrator_config.reflection_judge_llms
+        state.reflection_critic_llms = orchestrator_config.reflection_critic_llms
         state.rubric_names = orchestrator_config.rubrics
-        state.total_validation_retries = workflow_config.total_validation_retries
+        state.debate_max_iterations = workflow_config.debate_max_iterations
 
+    # Step 4: Refine the extracted knowledge based on evaluation results using feedback agent if enabled in workflowConfig
+    if workflow_config.refine_extracted_data:
+        
         # Setup Feedback Config
-        state.feedback_llm_model = orchestrator_config.feedback_llm_name
+        state.feedback_llm = orchestrator_config.feedback_llm
+        state.total_validation_retries = workflow_config.total_validation_retries
 
     # Add the node for reflection agent
     graph.add_node("validate_extracted_processes", validate_extracted_processes)
@@ -220,9 +267,20 @@ def orchestrate_extraction_workflow(orchestrator_config: OrchestratorConfig, wor
     orchestrator_workflow = graph.compile()
     logger.info("Compiled the orchestractor workflow graph.")
 
+    # Add timing callback to track time taken for each iteration of the workflow
+    timing_callback = IterationTimingCallback()
+
+    # Set recursion_limit high enough to accommodate all iterations:
+    # Each iteration uses ~4 steps (extract → reflect → feedback → route), so
+    # (retries + 1) * 10 gives a safe upper bound with room to spare.
+    recursion_limit = (workflow_config.total_validation_retries + 1) * 10 + 25
+
     # Execute the feedback workflow
     logger.info("Invoking the orchestrator workflow...")
-    final_state = orchestrator_workflow.invoke(state)
+    final_state = orchestrator_workflow.invoke(state, config={"callbacks": [timing_callback], "recursion_limit": recursion_limit})
+
+    # Log the iteration durations for each iteration of the workflow
+    timing_callback.log_summary()
 
     # Step 5: Return the final extracted and validated structured knowledge
     return final_state

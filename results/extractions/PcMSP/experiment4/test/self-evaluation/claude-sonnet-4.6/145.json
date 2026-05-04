@@ -1,0 +1,108 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "𝑥F𝑥",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2SnSe2 − 𝑥F𝑥",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "anhydrous",
+            "powders"
+        ],
+        "values": [
+            "Stoichiometric amounts"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "Stoichiometric amounts",
+            "target": "Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Se"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnF2",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Value-of",
+            "source": "( 2 − 𝑥 ) Sn + 𝑥SnF2 + 2 ( 2 − 𝑥 ) Se",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "( 2 − 𝑥 ) Sn + 𝑥SnF2 + 2 ( 2 − 𝑥 ) Se",
+            "target": "Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "( 2 − 𝑥 ) Sn + 𝑥SnF2 + 2 ( 2 − 𝑥 ) Se",
+            "target": "SnF2"
+        }
+    ]
+}

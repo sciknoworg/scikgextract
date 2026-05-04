@@ -1,0 +1,59 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ampoule",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "annealing",
+            "quenched"
+        ],
+        "descriptors": [
+            "room"
+        ],
+        "values": [
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "room",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ampoule",
+            "target": "quenched"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenched",
+            "target": "annealing"
+        }
+    ]
+}

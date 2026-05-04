@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "jar",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "taken",
+            "subjected"
+        ],
+        "descriptors": [
+            "planetary"
+        ],
+        "values": [
+            "450 rpm",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "450 rpm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "planetary ball mill",
+            "glove box"
+        ],
+        "brands": [
+            "PM 100",
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "jar",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "subjected",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "planetary",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Brand-of",
+            "source": "PM 100",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Value-of",
+            "source": "450 rpm",
+            "target": "subjected"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "subjected"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        }
+    ]
+}

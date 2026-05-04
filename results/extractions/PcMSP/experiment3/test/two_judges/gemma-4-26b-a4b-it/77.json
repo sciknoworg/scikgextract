@@ -1,0 +1,118 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "This material",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "fine powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "1 / 2 ” pellet",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired",
+            "intermediate grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "fine",
+            "Ar atmosphere"
+        ],
+        "values": [
+            "1 / 2 ”",
+            "1200 ◦ C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 ◦ C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "This material",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fine powder",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fine powder",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "1 / 2 ” pellet",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 / 2 ”",
+            "target": "1 / 2 ” pellet"
+        },
+        {
+            "type": "Participant-material",
+            "source": "1 / 2 ” pellet",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1200 ◦ C",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "intermediate grinding",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hrs",
+            "target": "intermediate grinding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletizing",
+            "target": "intermediate grinding"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "text": "levodopa",
+            "type": "ChemicalEntity",
+            "identifier": "D007980",
+            "offset": 15,
+            "length": 8
+        },
+        {
+            "text": "dyskinesias",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D004409",
+            "offset": 33,
+            "length": 11
+        },
+        {
+            "text": "Parkinson disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010300",
+            "offset": 48,
+            "length": 17
+        },
+        {
+            "text": "levodopa-induced dyskinesia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D004409",
+            "offset": 100,
+            "length": 27
+        },
+        {
+            "text": "Parkinson disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010300",
+            "offset": 222,
+            "length": 17
+        },
+        {
+            "text": "apomorphine",
+            "type": "ChemicalEntity",
+            "identifier": "D001058",
+            "offset": 355,
+            "length": 11
+        },
+        {
+            "text": "drug-induced dyskinesias",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D004409",
+            "offset": 421,
+            "length": 24
+        }
+    ],
+    "relations": [
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D007980",
+            "entity2": "D004409",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D007980",
+            "entity2": "D010300",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D001058",
+            "entity2": "D004409",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D001058",
+            "entity2": "D010300",
+            "novel": false
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Co",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Rh",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ir",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "pelletized"
+        ],
+        "descriptors": [
+            "pure",
+            "powder"
+        ],
+        "values": [
+            "99%",
+            "99.9%",
+            "7mm"
+        ],
+        "properties": [],
+        "devices": [
+            "mortar and pestle"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Co",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ir",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "mortar and pestle",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletized",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "99%",
+            "target": "Co"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Ni"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Fe"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Rh"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Ir"
+        },
+        {
+            "type": "Value-of",
+            "source": "7mm",
+            "target": "pelletized"
+        }
+    ]
+}

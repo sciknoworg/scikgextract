@@ -1,0 +1,41 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "metal pellet",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "pure Zr",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "used"
+        ],
+        "descriptors": [],
+        "values": [
+            "99.2%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "metal pellet",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pure Zr",
+            "target": "used"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.2%",
+            "target": "pure Zr"
+        }
+    ]
+}

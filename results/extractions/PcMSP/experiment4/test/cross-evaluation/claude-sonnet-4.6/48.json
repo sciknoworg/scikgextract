@@ -1,0 +1,101 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "pressed"
+        ],
+        "descriptors": [
+            "fine",
+            "homogenous",
+            "cylindrical",
+            "diameter",
+            "hydraulic"
+        ],
+        "values": [
+            "a",
+            "1 – 2 mm",
+            "4 × 10^6 Pa"
+        ],
+        "properties": [
+            {
+                "text": "4 × 106 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenous",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 mm",
+            "target": "pellets"
+        },
+        {
+            "type": "Condition-of",
+            "source": "4 × 106 Pa",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 – 2 mm",
+            "target": "pellets"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thickness",
+            "target": "pellets"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hydraulic press",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "4 × 10^6 Pa",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 × 10^6 Pa",
+            "target": "4 × 10^6 Pa"
+        }
+    ]
+}

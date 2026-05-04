@@ -1,12 +1,23 @@
+"""
+Abstract base class for LLM model adapters in SciKGExtract.
+
+Defines the common interface (invoke, structured_invoke, _invoke_with_retry) that all concrete adapter implementations (OpenAI, SAIA, Ollama, HuggingFace) must implement. Also provides shared utilities for prompt formatting and Pydantic-schema-based structured output parsing.
+"""
+# Python Imports
+import json
 import logging
+from typing import Any, get_origin
 from abc import ABC, abstractmethod
-from typing import Any
 
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+# Pydantic Imports
+from pydantic import BaseModel
+
+# Langchain Imports
 from langchain_core.prompt_values import PromptValue
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
+# Scikg_extract Config Imports
 from scikg_extract.config.llm.envConfig import EnvConfig
-
 
 class ModelAdapter(ABC):
     """
@@ -85,6 +96,75 @@ class ModelAdapter(ABC):
         # Returning the formatted prompt
         return prompt
         
+    @staticmethod
+    def _try_wrap_list_output(raw_content: str, data_model: type[BaseModel], original_error: Exception) -> BaseModel:
+        """
+        Fallback for when the LLM returns a raw JSON array instead of the expected wrapper object.
+        Detects if raw_content is a JSON list, finds the single list-typed field in data_model,
+        and wraps the array with that field name.
+        Args:
+            raw_content (str): The raw string content from the LLM response.
+            data_model (type[BaseModel]): The Pydantic model class expected by structured output.
+            original_error (Exception): The original parsing error to re-raise if wrapping is not applicable.
+        Returns:
+            BaseModel: The successfully parsed data model instance.
+        Raises:
+            Exception: Re-raises original_error if the raw content is not a list or wrapping fails.
+        """
+        logger = logging.getLogger(__name__)
+
+        # Try to parse raw content as JSON
+        try:
+            raw_json = json.loads(raw_content)
+        except (json.JSONDecodeError, TypeError):
+            raise original_error
+
+        # Only applies when the LLM returned a list
+        if not isinstance(raw_json, list):
+            raise original_error
+
+        # Find list-typed fields in the data model
+        list_fields = [
+            name for name, field_info in data_model.model_fields.items()
+            if get_origin(field_info.annotation) is list
+        ]
+
+        # Only wrap if there is exactly one list field (unambiguous)
+        if len(list_fields) != 1:
+            raise original_error
+
+        field_name = list_fields[0]
+        logger.warning(
+            f"LLM returned a raw JSON array instead of {data_model.__name__}. "
+            f"Wrapping with key '{field_name}' as fallback."
+        )
+
+        try:
+            return data_model(**{field_name: raw_json})
+        except Exception:
+            raise original_error
+
+    def _invoke_with_retry(self, invoke_func, max_retries: int) -> Any | None:
+        """
+        Helper method to invoke a function with retry logic. Raises RunTimeError after maximum retries are exhausted.
+        Args:
+            invoke_func: The function to be invoked with retry logic.
+            max_retries (int): The maximum number of retries allowed.
+        Returns:
+            Any | None: The output from the invoked function, or None if no response is obtained after retries.
+        Raises:
+            RuntimeError: If the maximum number of retries is exhausted without obtaining a response.
+        """
+        retries = 0
+        while retries < max_retries:
+            try:
+                return invoke_func()
+            except Exception as e:
+                self.logger.debug(f"Exception occurred while invoking the model: {self.model_name} with error: {e}")
+                retries += 1
+                self.logger.debug(f"Retrying... Attempt {retries}/{max_retries}")
+        self.logger.debug(f"Maximum retries exhausted. No response obtained from the model: {self.model_name}")
+        raise RuntimeError(f"Maximum retries exhausted. No response obtained from the model: {self.model_name}")
 
     @abstractmethod
     def completion(self, prompt_template, var_dict) -> Any | None:

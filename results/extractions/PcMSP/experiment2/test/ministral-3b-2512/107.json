@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "planetary ball mill",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "subjected",
+            "planetary ball mill"
+        ],
+        "descriptors": [],
+        "values": [
+            "450 rpm",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "450 rpm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "planetary ball mill (PM 100)"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill (PM 100)",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Value-of",
+            "source": "450 rpm",
+            "target": "Property-rate"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill (PM 100)"
+        }
+    ]
+}

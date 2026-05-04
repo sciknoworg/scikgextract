@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "pressed"
+        ],
+        "descriptors": [
+            "graphite"
+        ],
+        "values": [
+            "1200 \u00b0C",
+            "300 \u00b0C h\u22121",
+            "39 MPa",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "300 \u00b0C h\u22121",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "39 MPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "graphite foil lined cylindrical graphite die"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "graphite",
+            "target": "graphite foil lined cylindrical graphite die"
+        },
+        {
+            "type": "Participant-material",
+            "source": "heated",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pressed",
+            "target": "mixture"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "graphite foil lined cylindrical graphite die",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 \u00b0C",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "300 \u00b0C h\u22121",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "39 MPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "pressed"
+        }
+    ]
+}

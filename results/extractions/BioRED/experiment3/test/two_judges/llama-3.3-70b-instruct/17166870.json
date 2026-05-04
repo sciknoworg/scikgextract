@@ -1,0 +1,86 @@
+{
+    "entities": [
+        {
+            "text": "endoglin gene",
+            "type": "GeneOrGeneProduct",
+            "identifier": "2022",
+            "offset": 0,
+            "length": 12
+        },
+        {
+            "text": "systemic sclerosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D059334",
+            "offset": 24,
+            "length": 17
+        },
+        {
+            "text": "pulmonary arterial hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D011655",
+            "offset": 53,
+            "length": 27
+        },
+        {
+            "text": "TGF-beta",
+            "type": "GeneOrGeneProduct",
+            "identifier": "7040",
+            "offset": 104,
+            "length": 8
+        },
+        {
+            "text": "6bINS",
+            "type": "SequenceVariant",
+            "identifier": "Not Found",
+            "offset": 143,
+            "length": 5
+        },
+        {
+            "text": "osteoarthritis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010049",
+            "offset": 201,
+            "length": 14
+        },
+        {
+            "text": "microangiopathy",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D008871",
+            "offset": 240,
+            "length": 14
+        },
+        {
+            "text": "French Caucasian population",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 283,
+            "length": 23
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "2022",
+            "entity2": "D059334",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D059334",
+            "entity2": "D011655",
+            "novel": false
+        },
+        {
+            "type": "Bind",
+            "entity1": "2022",
+            "entity2": "7040",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "6bINS",
+            "entity2": "D011655",
+            "novel": true
+        }
+    ]
+}

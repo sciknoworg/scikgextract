@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "annealed-compound",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "annealing"
+        ],
+        "descriptors": [
+            "powder"
+        ],
+        "values": [
+            "900 \u00b0C",
+            "1030 \u00b0C",
+            "48 h"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Not Found"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "annealed-compound"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00b0C",
+            "target": "annealed-compound"
+        },
+        {
+            "type": "Value-of",
+            "source": "1030 \u00b0C",
+            "target": "annealed-compound"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 \u00b0C",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1030 \u00b0C",
+            "target": "annealing"
+        }
+    ]
+}

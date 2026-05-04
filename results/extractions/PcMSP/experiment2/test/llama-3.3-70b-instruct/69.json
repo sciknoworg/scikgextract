@@ -1,0 +1,46 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQA8 sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "quenched",
+            "annealed"
+        ],
+        "descriptors": [
+            "8 h"
+        ],
+        "values": [
+            "623 K"
+        ],
+        "properties": [
+            {
+                "text": "623 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "8 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "623 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA8 sample",
+            "target": "annealed"
+        }
+    ]
+}

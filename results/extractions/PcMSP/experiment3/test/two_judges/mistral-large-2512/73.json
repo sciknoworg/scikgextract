@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sr4Cr3O9",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "solid state synthesis"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [
+            "~ 2 g"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "~ 2 g",
+            "target": "samples"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sr4Cr3O9",
+            "target": "prepared"
+        },
+        {
+            "type": "Coreference",
+            "source": "solid state synthesis",
+            "target": "prepared"
+        }
+    ]
+}

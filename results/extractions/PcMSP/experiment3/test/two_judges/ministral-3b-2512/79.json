@@ -1,0 +1,56 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellet",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "arc-melted"
+        ],
+        "descriptors": [
+            "high purity",
+            "sintered"
+        ],
+        "values": [
+            "Part of"
+        ],
+        "properties": [
+            {
+                "text": "high purity",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "Ar atmosphere",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "high purity",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "water cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "arc-melted"
+        }
+    ]
+}

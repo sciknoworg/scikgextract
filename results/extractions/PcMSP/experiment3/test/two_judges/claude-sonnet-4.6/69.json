@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQA8",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "HQ",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "quenched",
+            "annealed",
+            "heat treatment"
+        ],
+        "descriptors": [
+            "homogenized-quenched-annealed",
+            "same"
+        ],
+        "values": [
+            "8 h",
+            "623 K"
+        ],
+        "properties": [
+            {
+                "text": "8 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "623 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched-annealed",
+            "target": "HQA8"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "same",
+            "target": "heat treatment"
+        },
+        {
+            "type": "Coreference",
+            "source": "heat treatment",
+            "target": "homogenized"
+        },
+        {
+            "type": "Coreference",
+            "source": "heat treatment",
+            "target": "quenched"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA8",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA8",
+            "target": "quenched"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA8",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "heat treatment"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQ",
+            "target": "heat treatment"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "heat treatment"
+        },
+        {
+            "type": "Condition-of",
+            "source": "8 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "623 K",
+            "target": "annealed"
+        }
+    ]
+}

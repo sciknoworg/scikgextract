@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "BN",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Boron Nitride",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "inserted"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "BN crucible",
+            "high-pressure cell",
+            "carbon heater",
+            "pyrophyllite cube",
+            "electrodes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "BN crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "inserted",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure cell",
+            "target": "inserted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "high-pressure cell"
+        },
+        {
+            "type": "Coreference",
+            "source": "BN crucible",
+            "target": "BN"
+        },
+        {
+            "type": "Coreference",
+            "source": "BN crucible",
+            "target": "Boron Nitride"
+        }
+    ]
+}

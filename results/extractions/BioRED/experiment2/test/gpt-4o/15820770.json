@@ -1,0 +1,108 @@
+{
+    "entities": [
+        {
+            "text": "Vitamin D-binding protein",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DBP",
+            "offset": 0,
+            "length": 23
+        },
+        {
+            "text": "1.25(OH)2D3",
+            "type": "ChemicalEntity",
+            "identifier": "D000701",
+            "offset": 66,
+            "length": 10
+        },
+        {
+            "text": "type 1 diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003922",
+            "offset": 118,
+            "length": 15
+        },
+        {
+            "text": "GAT-->GAG substitution",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 230,
+            "length": 21
+        },
+        {
+            "text": "ACG-->AAG substitution",
+            "type": "SequenceVariant",
+            "identifier": "rs4588",
+            "offset": 307,
+            "length": 21
+        },
+        {
+            "text": "aspartic acid",
+            "type": "ChemicalEntity",
+            "identifier": "D000077",
+            "offset": 263,
+            "length": 13
+        },
+        {
+            "text": "glutamic acid",
+            "type": "ChemicalEntity",
+            "identifier": "D000077",
+            "offset": 283,
+            "length": 13
+        },
+        {
+            "text": "threonine",
+            "type": "ChemicalEntity",
+            "identifier": "D000077",
+            "offset": 340,
+            "length": 9
+        },
+        {
+            "text": "lysine",
+            "type": "ChemicalEntity",
+            "identifier": "D000077",
+            "offset": 354,
+            "length": 6
+        },
+        {
+            "text": "DBP gene",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DBP",
+            "offset": 432,
+            "length": 8
+        },
+        {
+            "text": "IA-2 antibodies",
+            "type": "GeneOrGeneProduct",
+            "identifier": "IA-2",
+            "offset": 732,
+            "length": 13
+        },
+        {
+            "text": "GAD65 antibodies",
+            "type": "GeneOrGeneProduct",
+            "identifier": "GAD65",
+            "offset": 832,
+            "length": 14
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "DBP",
+            "entity2": "D003922",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs7041",
+            "entity2": "IA-2",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs4588",
+            "entity2": "IA-2",
+            "novel": true
+        }
+    ]
+}

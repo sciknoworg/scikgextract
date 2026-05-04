@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "piece",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "bar",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind",
+            "measurements"
+        ],
+        "descriptors": [
+            "diamond",
+            "approximately"
+        ],
+        "values": [
+            "8 mm × 3 mm × 3 mm"
+        ],
+        "properties": [
+            {
+                "text": "8 mm × 3 mm × 3 mm",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "diamond",
+            "target": "diamond saw"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "piece",
+            "target": "grind"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "piece"
+        },
+        {
+            "type": "Participant-material",
+            "source": "piece",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "bar",
+            "target": "sectioned"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "approximately",
+            "target": "8 mm × 3 mm × 3 mm"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 mm × 3 mm × 3 mm",
+            "target": "bar"
+        },
+        {
+            "type": "Next-operation",
+            "source": "measurements",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "bar",
+            "target": "measurements"
+        }
+    ]
+}

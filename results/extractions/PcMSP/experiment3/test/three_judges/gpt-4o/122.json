@@ -1,0 +1,53 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "air",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "platinum",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [],
+        "values": [
+            "1000 °C"
+        ],
+        "properties": [
+            {
+                "text": "1000 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "platinum crucibles"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucibles",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "platinum",
+            "target": "platinum crucibles"
+        },
+        {
+            "type": "Value-of",
+            "source": "1000 °C",
+            "target": "heated"
+        }
+    ]
+}

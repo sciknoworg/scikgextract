@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "GdCo5",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "GdCo5- xNix",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "GdCo5",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "GdCo5 􀀀 xNix",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "water cooled copper hearth",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "synthesized"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "water cooled"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "argon atmosphere",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "GdCo5- xNix"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hearth",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "constituent elements",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "GdCo5- xNix",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water cooled",
+            "target": "hearth"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hearth",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "water cooled copper hearth",
+            "target": "arc melting"
+        },
+        {
+            "type": "Value-of",
+            "source": "argon atmosphere",
+            "target": "synthesized"
+        }
+    ]
+}

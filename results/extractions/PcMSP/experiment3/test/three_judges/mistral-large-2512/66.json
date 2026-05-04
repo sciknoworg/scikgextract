@@ -1,0 +1,51 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "heat treatments"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "heat treatments"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heat treatments"
+        },
+        {
+            "type": "Condition-of",
+            "source": "temperature",
+            "target": "heat treatments"
+        },
+        {
+            "type": "Condition-of",
+            "source": "time",
+            "target": "heat treatments"
+        }
+    ]
+}

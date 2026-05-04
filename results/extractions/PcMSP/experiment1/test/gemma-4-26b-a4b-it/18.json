@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs lumps",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As powder",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric ratio",
+            "argon-filled",
+            "evacuated"
+        ],
+        "values": [
+            "1 : 1"
+        ],
+        "properties": [],
+        "devices": [
+            "argon-filled glove box",
+            "alumina crucible",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "1 : 1",
+            "target": "stoichiometric ratio"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs lumps",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As powder",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric ratio",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "argon-filled glove box",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "argon-filled",
+            "target": "glove box"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs lumps",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As powder",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        }
+    ]
+}

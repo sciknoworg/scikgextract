@@ -1,0 +1,76 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn1.4Pt1 − xPdxSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4Pt1 − yRhySn",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "arc melting"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [
+            "x = 0, 0.1 … 0.3",
+            "y = 0.1, 0.2 … 0.8",
+            "stoichiometric amounts"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn1.4Pt1 − xPdxSn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn1.4Pt1 − yRhySn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 − xPdxSn",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 − yRhySn",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "arc melting"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0, 0.1 … 0.3",
+            "target": "Mn1.4Pt1 − xPdxSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "y = 0.1, 0.2 … 0.8",
+            "target": "Mn1.4Pt1 − yRhySn"
+        },
+        {
+            "type": "Value-of",
+            "source": "stoichiometric amounts",
+            "target": "Mn1.4Pt1 − xPdxSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "stoichiometric amounts",
+            "target": "Mn1.4Pt1 − yRhySn"
+        }
+    ]
+}

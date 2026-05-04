@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ta foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "fused silica",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "ampoule",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "sealed",
+            "conducted"
+        ],
+        "descriptors": [
+            "under vacuum"
+        ],
+        "values": [
+            "vacuum"
+        ],
+        "properties": [
+            {
+                "text": "vacuum",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "fused silica ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Ta foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fused silica ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "under vacuum",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum",
+            "target": "Property-pressure"
+        }
+    ]
+}

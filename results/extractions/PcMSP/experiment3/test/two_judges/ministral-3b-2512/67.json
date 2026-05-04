@@ -1,0 +1,75 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "homogenized sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "the sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "held",
+            "held"
+        ],
+        "descriptors": [
+            "homogenized",
+            "air-quenched"
+        ],
+        "values": [
+            "1173 K",
+            "144 h (6 d)"
+        ],
+        "properties": [
+            {
+                "text": "1173 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1173 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "1173 K",
+            "target": "held"
+        },
+        {
+            "type": "Value-of",
+            "source": "144 h",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 d",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized sample",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "air-quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized",
+            "target": "sample"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "air-quenched",
+            "target": "sample"
+        }
+    ]
+}

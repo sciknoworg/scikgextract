@@ -1,0 +1,94 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2 polycrystalline powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "placed",
+            "growth of samples"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "evacuated"
+        ],
+        "values": [
+            "~ 5 mg cm−3"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule",
+            "two-zone furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "MoTe2 polycrystalline powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Br2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "growth of samples"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "two-zone furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoTe2 polycrystalline powders"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Value-of",
+            "source": "~ 5 mg cm−3",
+            "target": "Br2"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "growth of samples",
+            "target": "placed"
+        }
+    ]
+}

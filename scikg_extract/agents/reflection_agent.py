@@ -1,7 +1,12 @@
 """
 Reflection Agent for validating extracted structured processes using LLM-as-a-Judge paradigm.
 
-This module defines a reflection agent that validates the extracted structured knowledge from the scientific documents using the provided rubrics like Correctness, Completeness, etc. The agent is implemented using langgraph's StateGraph to create a workflow that evaluates the extracted data against each rubric.
+This module defines a reflection agent that validates the extracted structured knowledge from the scientific documents using the provided rubrics like Correctness, Completeness, etc. The agent supports three reflection modes:
+- single: Sequential single-judge evaluation per rubric (default behavior).
+- multi-judge: Multiple LLM judges evaluate each rubric independently, then a summarizer consolidates.
+- debate: Evaluator-critic pairs debate each rubric, then a summarizer consolidates.
+
+The mode is determined by state.reflection_mode, which is set from the REFLECTION_MODE env var or overridden in OrchestratorConfig.
 """
 # External imports
 from langgraph.graph import StateGraph, START, END
@@ -14,10 +19,13 @@ from scikg_extract.utils.log_handler import LogHandler
 
 # Scikg_Extract Agent Imports
 from scikg_extract.agents.states import ExtractionState
+from scikg_extract.agents.reflection_multi_judge import validate_extracted_processes_multi_judge
+from scikg_extract.agents.reflection_debate import validate_extracted_processes_debate
 
 def validate_extracted_processes(state: ExtractionState) -> ExtractionState:
     """
-    Validates the extracted structured knowledge using the validation agent designed with langgraph StateGraph.
+    Validates the extracted structured knowledge by routing to the appropriate reflection
+    mode based on state.reflection_mode.
     Args:
         state (ExtractionState): The current state of the extraction process containing necessary data.
     Returns:
@@ -26,7 +34,31 @@ def validate_extracted_processes(state: ExtractionState) -> ExtractionState:
 
     # Initialize the logger
     logger = LogHandler.get_logger(__name__)
-    logger.info("Starting Validation Agent...")
+    mode = state.reflection_mode.lower().strip()
+    logger.info(f"Starting Validation Agent (mode: {mode})...")
+
+    if mode == "multi-judge":
+        return validate_extracted_processes_multi_judge(state)
+    elif mode == "debate":
+        return validate_extracted_processes_debate(state)
+    else:
+        # Default: single-judge mode (original behavior)
+        if mode != "single":
+            logger.warning(f"Unknown reflection mode '{mode}'. Falling back to 'single' mode.")
+        return _validate_single(state)
+
+def _validate_single(state: ExtractionState) -> ExtractionState:
+    """
+    Validates the extracted structured knowledge using a single-judge approach with langgraph StateGraph. This is the original behavior where each rubric is evaluated sequentially by a single LLM judge.
+    Args:
+        state (ExtractionState): The current state of the extraction process containing necessary data.
+    Returns:
+        ExtractionState: The final state containing the evaluation results.
+    """
+
+    # Initialize the logger
+    logger = LogHandler.get_logger(__name__)
+    logger.info("Running single-judge validation workflow...")
 
     # Create the state graph
     graph = StateGraph(ExtractionState)

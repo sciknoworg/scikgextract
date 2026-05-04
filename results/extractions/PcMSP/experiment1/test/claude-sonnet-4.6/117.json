@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "dissolved solution",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "isopropanol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "added",
+            "centrifuged",
+            "precipitate"
+        ],
+        "descriptors": [],
+        "values": [
+            "72 h",
+            "37.5 mL",
+            "7715 \u00d7 g",
+            "10 min"
+        ],
+        "properties": [
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "10 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "72 h",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "dissolved solution",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "isopropanol",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "centrifuged",
+            "target": "added"
+        },
+        {
+            "type": "Value-of",
+            "source": "37.5 mL",
+            "target": "isopropanol"
+        },
+        {
+            "type": "Value-of",
+            "source": "7715 \u00d7 g",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 min",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se ion binder",
+            "target": "precipitate"
+        },
+        {
+            "type": "Coreference",
+            "source": "precipitate",
+            "target": "centrifuged"
+        }
+    ]
+}

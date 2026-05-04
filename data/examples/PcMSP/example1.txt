@@ -1,0 +1,81 @@
+Below is an example of extracting structured materials science entity and relation information from a sentence in a synthesis procedure.
+
+=== Example 1 ===
+
+Input Text:
+Polycrystalline Li1.1Cu0.9S was obtained by the reaction of Li foil ( 99.999% ) with CuS powder ( anhydrous , 99.999% ) both from Sigma Aldrich , close to 1 : 1 stoichiometry , but with a slight excess of Li .
+
+Expected Output:
+{
+  "entities": {
+    "materials": [
+      {"text": "Li1.1Cu0.9S", "subtype": "Material-target"},
+      {"text": "Li", "subtype": "Material-recipe"},
+      {"text": "CuS", "subtype": "Material-recipe"}
+    ],
+    "operations": ["obtained", "reaction"],
+    "descriptors": ["Polycrystalline", "foil", "powder", "anhydrous", "slight excess"],
+    "values": ["99.999%", "1 : 1 stoichiometry"],
+    "properties": [],
+    "devices": [],
+    "brands": ["Sigma Aldrich"]
+  },
+  "relations": [
+    {"type": "Descriptor-of", "source": "Polycrystalline", "target": "Li1.1Cu0.9S"},
+    {"type": "Coreference", "source": "reaction", "target": "obtained"},
+    {"type": "Participant-material", "source": "Li", "target": "obtained"},
+    {"type": "Participant-material", "source": "Li1.1Cu0.9S", "target": "obtained"},
+    {"type": "Descriptor-of", "source": "foil", "target": "Li"},
+    {"type": "Value-of", "source": "99.999%", "target": "Li"},
+    {"type": "Brand-of", "source": "Sigma Aldrich", "target": "Li"},
+    {"type": "Value-of", "source": "1 : 1 stoichiometry", "target": "Li"},
+    {"type": "Value-of", "source": "1 : 1 stoichiometry", "target": "CuS"},
+    {"type": "Descriptor-of", "source": "powder", "target": "CuS"},
+    {"type": "Descriptor-of", "source": "anhydrous", "target": "CuS"},
+    {"type": "Value-of", "source": "99.999%", "target": "CuS"},
+    {"type": "Brand-of", "source": "Sigma Aldrich", "target": "CuS"},
+    {"type": "Descriptor-of", "source": "slight excess", "target": "Li"}
+  ]
+}
+
+=== Example 2 ===
+
+Input Text:
+A mixture of the starting materials was pressed into pellets and placed in Al2O3 tubes ( ∅ 14 mm , Al23 , Friatec ) .
+
+Expected Output:
+{
+  "entities": {
+    "materials": [
+      {"text": "mixture", "subtype": "Material-intermedium"},
+      {"text": "materials", "subtype": "Material-recipe"},
+      {"text": "pellets", "subtype": "Material-intermedium"}
+    ],
+    "operations": ["pressed", "placed"],
+    "descriptors": ["starting", "∅", "Al23"],
+    "values": ["14 mm"],
+    "properties": [],
+    "devices": ["Al2O3 tubes"],
+    "brands": ["Friatec"]
+  },
+  "relations": [
+    {"type": "Descriptor-of", "source": "starting", "target": "materials"},
+    {"type": "Coreference", "source": "mixture", "target": "materials"},
+    {"type": "Participant-material", "source": "mixture", "target": "pressed"},
+    {"type": "Next-operation", "source": "placed", "target": "pressed"},
+    {"type": "Device-of-operation", "source": "Al2O3 tubes", "target": "placed"},
+    {"type": "Participant-material", "source": "pellets", "target": "placed"},
+    {"type": "Descriptor-of", "source": "Al23", "target": "Al2O3 tubes"},
+    {"type": "Brand-of", "source": "Friatec", "target": "Al2O3 tubes"},
+    {"type": "Value-of", "source": "14 mm", "target": "Al2O3 tubes"},
+    {"type": "Descriptor-of", "source": "∅", "target": "Al2O3 tubes"}
+  ]
+}
+
+=== Extraction Guidelines ===
+
+1. Entity categories: materials (with subtypes: Material-target, Material-recipe, Material-intermedium, Material-others), operations, descriptors, values, properties (with subtypes: Property-temperature, Property-time, Property-pressure, Property-rate), devices, brands.
+2. Materials and properties require a "subtype" field; other entity categories are plain text strings.
+3. Relation types: Descriptor-of, Value-of, Brand-of, Condition-of, Participant-material, Device-of-operation, Next-operation, Coreference.
+4. Relations reference entity text via "source" and "target" fields.
+5. Extract all entities and relations present in the sentence.

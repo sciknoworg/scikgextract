@@ -1,0 +1,125 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Ti",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "formed"
+        ],
+        "descriptors": [
+            "elemental",
+            "wire",
+            "foil",
+            "shot",
+            "stoichiometric"
+        ],
+        "values": [
+            "12 g",
+            "99.7%",
+            "99.9%",
+            "99.8%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": [
+            "Sigma Aldrich"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1Sn",
+            "target": "formed"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 g",
+            "target": "formed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "formed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "elemental",
+            "target": "Ti"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "wire",
+            "target": "Ti"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.7%",
+            "target": "Ti"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Ti"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "foil",
+            "target": "Ni"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Ni"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Ni"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "shot",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.8%",
+            "target": "Sn"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Sn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ti",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "formed"
+        }
+    ]
+}

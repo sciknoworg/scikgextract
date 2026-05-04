@@ -1,0 +1,49 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2Co2TeO6",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "attaining",
+            "collected"
+        ],
+        "descriptors": [
+            "flaky",
+            "light purple"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "room temperature ( RT )",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "room temperature ( RT )",
+            "target": "collected"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2Co2TeO6",
+            "target": "collected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "flaky",
+            "target": "Na2Co2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "light purple",
+            "target": "Na2Co2TeO6"
+        }
+    ]
+}

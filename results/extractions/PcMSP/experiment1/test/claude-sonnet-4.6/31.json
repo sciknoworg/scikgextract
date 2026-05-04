@@ -1,0 +1,109 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cl-doped SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "2SnClx",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2SnSe2 \u2212 xClx",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "added",
+            "synthesize",
+            "annealing"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "fused",
+            "second",
+            "first",
+            "finished"
+        ],
+        "values": [
+            "600 \u00b0 C",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "600 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesize",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cl-doped SnSe2",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2SnClx",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2SnSe2 \u2212 xClx",
+            "target": "synthesize"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealing",
+            "target": "synthesize"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "second",
+            "target": "annealing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "600 \u00b0 C",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hrs",
+            "target": "annealing"
+        }
+    ]
+}

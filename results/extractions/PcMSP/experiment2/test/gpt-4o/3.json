@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SrCO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "GeO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "La2O3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "using",
+            "reaction"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "solid-state"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrCO3",
+            "target": "reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "GeO2",
+            "target": "reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2O3",
+            "target": "reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "prepared"
+        },
+        {
+            "type": "Next-operation",
+            "source": "using",
+            "target": "prepared"
+        },
+        {
+            "type": "Next-operation",
+            "source": "reaction",
+            "target": "using"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "solid-state",
+            "target": "reaction"
+        }
+    ]
+}

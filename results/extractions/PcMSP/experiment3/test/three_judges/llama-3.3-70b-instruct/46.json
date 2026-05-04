@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "weighed compositions",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "alcohol",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "stoichiometric"
+        ],
+        "values": [
+            "1 h",
+            "2 h"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "weighed compositions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "alcohol",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "weighed compositions",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "mixed"
+        }
+    ]
+}

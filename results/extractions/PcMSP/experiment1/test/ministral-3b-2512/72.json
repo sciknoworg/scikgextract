@@ -1,0 +1,70 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "piece",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "bar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind",
+            "scanning electron microscopy",
+            "physical property measurements"
+        ],
+        "descriptors": [
+            "diamond saw",
+            "synchrotron X-ray diffraction",
+            "scanning electron microscopy",
+            "approximately"
+        ],
+        "values": [
+            "8 mm \u00d7 3 mm \u00d7 3 mm"
+        ],
+        "properties": [
+            {
+                "text": "8 mm \u00d7 3 mm \u00d7 3 mm",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "grind"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 mm \u00d7 3 mm \u00d7 3 mm",
+            "target": "piece"
+        },
+        {
+            "type": "Coreference",
+            "source": "scanning electron microscopy",
+            "target": "scanning electron microscopy"
+        },
+        {
+            "type": "Coreference",
+            "source": "physical property measurements",
+            "target": "bar"
+        }
+    ]
+}

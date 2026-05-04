@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "(Sr0.95La0.05)GeO3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "undoped",
+            "La-doped"
+        ],
+        "values": [
+            "1,200 \u00b0C",
+            "10 h"
+        ],
+        "properties": [
+            {
+                "text": "1,200 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "undoped",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "La-doped",
+            "target": "(Sr0.95La0.05)GeO3"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "1,200 \u00b0C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 h",
+            "target": "calcined"
+        }
+    ]
+}

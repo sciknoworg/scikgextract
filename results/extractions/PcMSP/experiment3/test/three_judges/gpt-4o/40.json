@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2 powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pure phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "taken",
+            "mixed",
+            "kept"
+        ],
+        "descriptors": [
+            "stoichiometric"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "stoichiometric proportions",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2 powders",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pure phase",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "proportions"
+        }
+    ]
+}

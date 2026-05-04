@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "resulting products",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "distilled water",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "turquoise",
+            "pale blue"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "level of Zn-substitution",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "in air",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "turquoise",
+            "target": "resulting products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pale blue",
+            "target": "resulting products"
+        },
+        {
+            "type": "Condition-of",
+            "source": "level of Zn-substitution",
+            "target": "resulting products"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "filtered",
+            "target": "washed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "distilled water",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "dried"
+        },
+        {
+            "type": "Condition-of",
+            "source": "in air",
+            "target": "dried"
+        }
+    ]
+}

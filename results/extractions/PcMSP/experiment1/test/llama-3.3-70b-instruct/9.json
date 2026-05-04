@@ -1,0 +1,50 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zn-substitution products",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "turquoise",
+            "pale blue"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "turquoise",
+            "target": "Zn-substitution products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pale blue",
+            "target": "Zn-substitution products"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zn-substitution products",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        }
+    ]
+}

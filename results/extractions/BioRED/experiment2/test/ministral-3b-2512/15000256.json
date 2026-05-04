@@ -1,0 +1,201 @@
+{
+    "entities": [
+        {
+            "text": "FMR1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "NM_000146",
+            "offset": 18,
+            "length": 5
+        },
+        {
+            "text": "autistic",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001074",
+            "offset": 48,
+            "length": 7
+        },
+        {
+            "text": "mental retardation",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007188",
+            "offset": 65,
+            "length": 17
+        },
+        {
+            "text": "Fragile X syndrome",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D004982",
+            "offset": 85,
+            "length": 19
+        },
+        {
+            "text": "trinucleotide repeat",
+            "type": "SequenceVariant",
+            "identifier": "Not Found",
+            "offset": 110,
+            "length": 16
+        },
+        {
+            "text": "trinucleotide",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 110,
+            "length": 9
+        },
+        {
+            "text": "5'-untranslated region",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 130,
+            "length": 23
+        },
+        {
+            "text": "exon 9",
+            "type": "GeneOrGeneProduct",
+            "identifier": "NM_000146.3:ENST00000354532",
+            "offset": 210,
+            "length": 6
+        },
+        {
+            "text": "A to C substitution",
+            "type": "SequenceVariant",
+            "identifier": "rs74805019",
+            "offset": 250,
+            "length": 16
+        },
+        {
+            "text": "nucleotide 879",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 270,
+            "length": 10
+        },
+        {
+            "text": "A",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 280,
+            "length": 1
+        },
+        {
+            "text": "C",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 281,
+            "length": 1
+        },
+        {
+            "text": "heterozygous",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 300,
+            "length": 9
+        },
+        {
+            "text": "female patient",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 310,
+            "length": 13
+        },
+        {
+            "text": "controls",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 350,
+            "length": 7
+        },
+        {
+            "text": "autistic children",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001074",
+            "offset": 370,
+            "length": 13
+        },
+        {
+            "text": "mental retarded children",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007188",
+            "offset": 380,
+            "length": 17
+        },
+        {
+            "text": "PCR",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 410,
+            "length": 3
+        },
+        {
+            "text": "SSCP",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 418,
+            "length": 4
+        },
+        {
+            "text": "aberrant splicing",
+            "type": "SequenceVariant",
+            "identifier": "Not Found",
+            "offset": 460,
+            "length": 15
+        },
+        {
+            "text": "premature termination",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 480,
+            "length": 18
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "NM_000146",
+            "entity2": "D004982",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D004982",
+            "entity2": "D001074",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D004982",
+            "entity2": "D007188",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "rs74805019",
+            "entity2": "D001074",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "NM_000146",
+            "entity2": "D007188",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "9606",
+            "entity2": "rs74805019",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "rs74805019",
+            "entity2": "Not Found",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "NM_000146",
+            "entity2": "D007188",
+            "novel": false
+        }
+    ]
+}

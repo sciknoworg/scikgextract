@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind",
+            "synchrotron X-ray diffraction",
+            "scanning electron microscopy",
+            "physical property measurements"
+        ],
+        "descriptors": [
+            "diamond"
+        ],
+        "values": [
+            "8 mm × 3 mm × 3 mm"
+        ],
+        "properties": [],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "grind"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synchrotron X-ray diffraction",
+            "target": "grind"
+        },
+        {
+            "type": "Next-operation",
+            "source": "scanning electron microscopy",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "physical property measurements",
+            "target": "sectioned"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 mm × 3 mm × 3 mm",
+            "target": "physical property measurements"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "diamond",
+            "target": "diamond saw"
+        }
+    ]
+}

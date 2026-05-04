@@ -1,0 +1,44 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoAlB",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "reactants",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "hot-pressing"
+        ],
+        "descriptors": [
+            "dense",
+            "polycrystalline"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "vacuum hot press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "vacuum hot press",
+            "target": "hot-pressing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reactants",
+            "target": "hot-pressing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoAlB",
+            "target": "hot-pressing"
+        }
+    ]
+}

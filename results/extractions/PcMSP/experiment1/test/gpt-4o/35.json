@@ -1,0 +1,31 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "single-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "grinding",
+            "sintering"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "sintering",
+            "target": "grinding"
+        },
+        {
+            "type": "Participant-material",
+            "source": "single-phase",
+            "target": "sintering"
+        }
+    ]
+}

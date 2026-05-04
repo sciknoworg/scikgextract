@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "dissolved solution",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "isopropanol",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "added",
+            "centrifuged",
+            "precipitate"
+        ],
+        "descriptors": [
+            "dissolved"
+        ],
+        "values": [
+            "37.5 mL",
+            "7715 × g",
+            "10 min",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "7715 × g",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "10 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "centrifuge"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "dissolved",
+            "target": "dissolved solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "added",
+            "target": "isopropanol"
+        },
+        {
+            "type": "Participant-material",
+            "source": "centrifuged",
+            "target": "dissolved solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precipitate",
+            "target": "Se ion binder"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 h",
+            "target": "dissolved solution"
+        },
+        {
+            "type": "Value-of",
+            "source": "7715 × g",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 min",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "centrifuged",
+            "target": "centrifuge"
+        }
+    ]
+}

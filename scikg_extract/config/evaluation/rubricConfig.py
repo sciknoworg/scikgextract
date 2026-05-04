@@ -1,3 +1,8 @@
+"""
+Rubric registry and configuration factory for LLM-as-a-Judge evaluation.
+
+Maps rubric names (e.g. "Correctness", "Completeness") to their corresponding Rubric objects and evaluation tool functions. Used by the reflection agent and evaluation tools to look up the correct rubric and scoring function by name.
+"""
 # Python imports
 from dataclasses import dataclass
 

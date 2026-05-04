@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "aluminium / platinum",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "heated"
+        ],
+        "descriptors": [
+            "gradually",
+            "in the air"
+        ],
+        "values": [
+            "5 \u00b0C / min",
+            "900 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 \u00b0C / min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "aluminium / platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 \u00b0C / min",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "in the air",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00b0C",
+            "target": "heated"
+        },
+        {
+            "type": "Coreference",
+            "source": "aluminium / platinum crucible",
+            "target": "aluminium / platinum"
+        }
+    ]
+}

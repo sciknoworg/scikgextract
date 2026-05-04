@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HP4 samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "HP2 samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "held",
+            "cool"
+        ],
+        "descriptors": [],
+        "values": [
+            "5.8 h",
+            "5 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "pressure",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "5.8 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "hot press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "temperature",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "pressure",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5.8 h",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 h",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HP4 samples",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HP2 samples",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hot press",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hot press",
+            "target": "cool"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cool",
+            "target": "held"
+        }
+    ]
+}

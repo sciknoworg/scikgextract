@@ -1,0 +1,123 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnCl2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesize",
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "stoichiometric",
+            "anhydrous",
+            "powder"
+        ],
+        "values": [
+            "250 \u00b0 C",
+            "24 hrs"
+        ],
+        "properties": [
+            {
+                "text": "250 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "SnSe2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnSe2",
+            "target": "synthesize"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "synthesize"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnCl2",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "250 \u00b0 C",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 hrs",
+            "target": "melted"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixtures",
+            "target": "mixed"
+        }
+    ]
+}

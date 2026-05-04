@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "solution",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "isopropanol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "isopropanol",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "centrifuged",
+            "precipitate",
+            "precipitate"
+        ],
+        "descriptors": [],
+        "values": [
+            "72 h",
+            "37.5 mL",
+            "7715 × g",
+            "10 min"
+        ],
+        "properties": [
+            {
+                "text": "After 72 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "10 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "72 h",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "dissolved solution",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "isopropanol",
+            "target": "added"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 min",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Next-operation",
+            "source": "centrifuged",
+            "target": "added"
+        },
+        {
+            "type": "Condition-of",
+            "source": "7715 × g",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 min",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Participant-material",
+            "source": "isopropanol",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se ion binder",
+            "target": "precipitate"
+        }
+    ]
+}

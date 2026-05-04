@@ -1,0 +1,93 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "calcined",
+            "ground",
+            "pressed",
+            "fired"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "intermittent"
+        ],
+        "values": [
+            "900 \u00b0C",
+            "12 h",
+            "1050 \u00b0C",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1050 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00b0C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "1050 \u00b0C",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 h",
+            "target": "fired"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "fired"
+        }
+    ]
+}

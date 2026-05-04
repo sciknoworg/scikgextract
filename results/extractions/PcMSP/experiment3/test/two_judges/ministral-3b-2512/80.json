@@ -1,0 +1,51 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingot",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "annealed"
+        ],
+        "descriptors": [
+            "arc-melted"
+        ],
+        "values": [
+            "1200 °C",
+            "72 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "industrial grade Ar atmosphere",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "Ar atmosphere"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "1200 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "annealed"
+        }
+    ]
+}

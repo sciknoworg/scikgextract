@@ -1,0 +1,166 @@
+{
+    "entities": [
+        {
+            "text": "MEN1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "30001",
+            "offset": 10,
+            "length": 4
+        },
+        {
+            "text": "multiple endocrine neoplasia type 1",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007446",
+            "offset": 25,
+            "length": 30
+        },
+        {
+            "text": "parathyroid",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007446",
+            "offset": 60,
+            "length": 9
+        },
+        {
+            "text": "enteropancreatic endocrine",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007446",
+            "offset": 75,
+            "length": 18
+        },
+        {
+            "text": "pituitary adenomas",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007446",
+            "offset": 85,
+            "length": 15
+        },
+        {
+            "text": "primary hyperparathyroidism",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007446",
+            "offset": 130,
+            "length": 23
+        },
+        {
+            "text": "prolactinoma",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007446",
+            "offset": 145,
+            "length": 9
+        },
+        {
+            "text": "Turkish",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 160,
+            "length": 6
+        },
+        {
+            "text": "Chinese",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 200,
+            "length": 6
+        },
+        {
+            "text": "A to G transition at codon 557",
+            "type": "SequenceVariant",
+            "identifier": "rs121913577",
+            "offset": 260,
+            "length": 25
+        },
+        {
+            "text": "AAG-->GAG",
+            "type": "SequenceVariant",
+            "identifier": "rs121913577",
+            "offset": 275,
+            "length": 6
+        },
+        {
+            "text": "lysine",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 285,
+            "length": 6
+        },
+        {
+            "text": "glutamic acid",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 295,
+            "length": 12
+        },
+        {
+            "text": "GAC-->TAT",
+            "type": "SequenceVariant",
+            "identifier": "rs121913578",
+            "offset": 340,
+            "length": 6
+        },
+        {
+            "text": "MEN1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "4221",
+            "offset": 1365,
+            "length": 4
+        },
+        {
+            "text": "tyrosine",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 360,
+            "length": 7
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "30001",
+            "entity2": "D007446",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D007446",
+            "entity2": "D007446",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D007446",
+            "entity2": "D007446",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "rs121913577",
+            "entity2": "D007446",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D018761",
+            "entity2": "p|SUB|D|418|Y",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D007446",
+            "entity2": "primary hyperparathyroidism",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs121913577",
+            "entity2": "primary hyperparathyroidism",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs121913578",
+            "entity2": "prolactinoma",
+            "novel": true
+        }
+    ]
+}

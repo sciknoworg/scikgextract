@@ -1,0 +1,93 @@
+{
+    "entities": [
+        {
+            "text": "delusional parasitosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 34,
+            "length": 20
+        },
+        {
+            "text": "chronic hepatitis C",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006526",
+            "offset": 63,
+            "length": 17
+        },
+        {
+            "text": "pegylated interferon alpha-2b",
+            "type": "ChemicalEntity",
+            "identifier": "C1139523",
+            "offset": 123,
+            "length": 24
+        },
+        {
+            "text": "ribavirin",
+            "type": "ChemicalEntity",
+            "identifier": "C0070184",
+            "offset": 152,
+            "length": 8
+        },
+        {
+            "text": "interferon",
+            "type": "ChemicalEntity",
+            "identifier": "D007368",
+            "offset": 193,
+            "length": 10
+        },
+        {
+            "text": "depression",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003865",
+            "offset": 240,
+            "length": 10
+        },
+        {
+            "text": "psychosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D011906",
+            "offset": 262,
+            "length": 8
+        },
+        {
+            "text": "parasites",
+            "type": "OrganismTaxon",
+            "identifier": "-1",
+            "offset": 335,
+            "length": 9
+        },
+        {
+            "text": "fleas",
+            "type": "OrganismTaxon",
+            "identifier": "-1",
+            "offset": 351,
+            "length": 5
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D006526",
+            "entity2": "D003865",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D006526",
+            "entity2": "D011906",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C1139523",
+            "entity2": "D003924",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C0070184",
+            "entity2": "D003924",
+            "novel": true
+        }
+    ]
+}

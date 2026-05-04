@@ -1,0 +1,75 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Ta",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "silica",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heat treatments",
+            "wrapping",
+            "sealing"
+        ],
+        "descriptors": [
+            "fused"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "Ta foil",
+            "silica ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "heat treatments"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "wrapping"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Ta foil",
+            "target": "wrapping"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta",
+            "target": "wrapping"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fused",
+            "target": "silica"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica ampoule",
+            "target": "sealing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "wrapping",
+            "target": "sealing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealing",
+            "target": "heat treatments"
+        }
+    ]
+}

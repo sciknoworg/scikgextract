@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "products",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "coloured turquoise to pale blue"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "coloured turquoise to pale blue",
+            "target": "products"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "dried"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        }
+    ]
+}

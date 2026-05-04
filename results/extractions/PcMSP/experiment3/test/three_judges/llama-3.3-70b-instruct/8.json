@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "fully Zn-substituted sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled"
+        ],
+        "descriptors": [
+            "fully Zn-substituted",
+            "x = 0.99 (1)"
+        ],
+        "values": [
+            "1 K/min",
+            "483 K",
+            "24 h",
+            "0.1 K/min"
+        ],
+        "properties": [
+            {
+                "text": "483 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "1 K/min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "0.1 K/min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "autoclave"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fully Zn-substituted",
+            "target": "fully Zn-substituted sample"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.99 (1)",
+            "target": "fully Zn-substituted sample"
+        },
+        {
+            "type": "Condition-of",
+            "source": "483 K",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "autoclave",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "autoclave",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "autoclave",
+            "target": "cooled"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "held"
+        }
+    ]
+}

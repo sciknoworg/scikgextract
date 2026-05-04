@@ -1,0 +1,165 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Co",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Rh",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ir",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "powders",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "pelletized"
+        ],
+        "descriptors": [
+            "pure",
+            "certain composition"
+        ],
+        "values": [
+            "99%",
+            "99.9%",
+            "7mm"
+        ],
+        "properties": [],
+        "devices": [
+            "mortar",
+            "pestle"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Co"
+        },
+        {
+            "type": "Value-of",
+            "source": "99%",
+            "target": "Co"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Ni"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Ni"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Fe"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Fe"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Rh"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Rh"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Ir"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Ir"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "certain composition",
+            "target": "powders"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ir",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "mortar",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "pestle",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletized",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "pelletized"
+        },
+        {
+            "type": "Value-of",
+            "source": "7mm",
+            "target": "pellets"
+        },
+        {
+            "type": "Coreference",
+            "source": "pellets",
+            "target": "powders"
+        }
+    ]
+}

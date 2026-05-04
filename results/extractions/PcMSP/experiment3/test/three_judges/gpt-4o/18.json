@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "sealed"
+        ],
+        "descriptors": [
+            "lumps",
+            "powder"
+        ],
+        "values": [
+            "1 : 1"
+        ],
+        "properties": [
+            {
+                "text": "argon-filled",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "evacuated",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "alumina crucible",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1",
+            "target": "stoichiometric ratio"
+        }
+    ]
+}

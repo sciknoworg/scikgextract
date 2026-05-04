@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "Synthesis"
+        ],
+        "descriptors": [],
+        "values": [
+            "1.7 K / min",
+            "1223 K"
+        ],
+        "properties": [
+            {
+                "text": "1223 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1223 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ampoules"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "evacuated quartz ampoules",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ampoules",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "1223 K",
+            "target": "1223 K"
+        },
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixture",
+            "target": "heating"
+        }
+    ]
+}

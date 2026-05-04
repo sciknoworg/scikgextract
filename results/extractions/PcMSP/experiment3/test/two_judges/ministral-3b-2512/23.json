@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ta",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "quartz",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "sealed",
+            "evacuated"
+        ],
+        "descriptors": [
+            "arc",
+            "evac - uated"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "tube",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "Ta Tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz",
+            "target": "evacuated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "arc",
+            "target": "welding"
+        }
+    ]
+}

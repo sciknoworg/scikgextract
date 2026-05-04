@@ -1,0 +1,105 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "NbP",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Nb powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "red phosphorous pieces",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "direct reaction"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "powder",
+            "evacuated",
+            "silica"
+        ],
+        "values": [
+            "99.9%",
+            "99.999%",
+            "48 h",
+            "800 \u00b0 C"
+        ],
+        "properties": [
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "800 \u00b0 C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "silica tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "NbP"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "NbP"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb powder",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "red phosphorous pieces",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NbP",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Nb powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "red phosphorous pieces"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tube",
+            "target": "direct reaction"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "silica tube"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "direct reaction"
+        },
+        {
+            "type": "Value-of",
+            "source": "800 \u00b0 C",
+            "target": "direct reaction"
+        }
+    ]
+}

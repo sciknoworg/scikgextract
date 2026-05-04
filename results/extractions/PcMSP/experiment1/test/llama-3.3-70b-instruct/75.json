@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cr",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "reacted"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "industrial grade"
+        ],
+        "values": [
+            "4 : 3",
+            "1100 \u25e6 C",
+            "24 hrs",
+            "1% air"
+        ],
+        "properties": [
+            {
+                "text": "1100 \u25e6 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Al2O3 crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 : 3",
+            "target": "Sr : Cr"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sr",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cr",
+            "target": "reacted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Al2O3 crucible",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "1100 \u25e6 C",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "reacted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        }
+    ]
+}

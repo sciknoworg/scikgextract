@@ -1,0 +1,116 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrCr",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cr",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "reacted"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "powder",
+            "flow",
+            "industrial grade"
+        ],
+        "values": [
+            "4 : 3",
+            "1100 \u00b0C",
+            "24 hrs",
+            "1%"
+        ],
+        "properties": [
+            {
+                "text": "1100 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Agate mortar",
+            "Al2O3 crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "SrCr",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sr",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cr",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 : 3",
+            "target": "Sr : Cr"
+        },
+        {
+            "type": "Value-of",
+            "source": "1100 \u00b0C",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "reacted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Agate mortar",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Al2O3 crucible",
+            "target": "reacted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Al2O3 crucible"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "flow",
+            "target": "reacted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        },
+        {
+            "type": "Value-of",
+            "source": "1%",
+            "target": "air"
+        }
+    ]
+}

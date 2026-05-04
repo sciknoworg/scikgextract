@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "\u03b1-Cu(IO3)2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cu(IO3)2\u00b72/3H2O",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "heating"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [
+            "300 \u00b0C",
+            "8 hours"
+        ],
+        "properties": [
+            {
+                "text": "300 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "8 hours",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "\u03b1-Cu(IO3)2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu(IO3)2\u00b72/3H2O",
+            "target": "heating"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heating",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "300 \u00b0C",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 hours",
+            "target": "heating"
+        }
+    ]
+}

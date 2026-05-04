@@ -1,0 +1,105 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "loaded",
+            "heated",
+            "pressed"
+        ],
+        "descriptors": [
+            "graphite",
+            "cylindrical",
+            "graphite"
+        ],
+        "values": [
+            "1200 \u00b0C",
+            "300 \u00b0C h\u22121",
+            "39 MPa",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "39 MPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "300 \u00b0C h\u22121",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "graphite foil lined cylindrical graphite die"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "graphite foil lined cylindrical graphite die",
+            "target": "loaded"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "graphite",
+            "target": "graphite foil lined cylindrical graphite die"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "graphite foil lined cylindrical graphite die"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "graphite",
+            "target": "graphite foil lined cylindrical graphite die"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 \u00b0C",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "300 \u00b0C h\u22121",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "39 MPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "heated"
+        }
+    ]
+}

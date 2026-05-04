@@ -1,0 +1,44 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precipitates",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "dried"
+        ],
+        "descriptors": [
+            "vacuum"
+        ],
+        "values": [
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum",
+            "target": "condition"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precipitates",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "dried"
+        }
+    ]
+}

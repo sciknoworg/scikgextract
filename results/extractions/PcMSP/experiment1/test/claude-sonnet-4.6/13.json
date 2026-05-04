@@ -1,0 +1,73 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "elements",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Gd",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "taken",
+            "compensate",
+            "melting"
+        ],
+        "descriptors": [
+            "starting",
+            "stoichiometric",
+            "excess"
+        ],
+        "values": [
+            "99%",
+            "1%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "starting",
+            "target": "elements"
+        },
+        {
+            "type": "Value-of",
+            "source": "99%",
+            "target": "elements"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "elements",
+            "target": "taken"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "Gd"
+        },
+        {
+            "type": "Value-of",
+            "source": "1%",
+            "target": "Gd"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Gd",
+            "target": "compensate"
+        },
+        {
+            "type": "Condition-of",
+            "source": "melting",
+            "target": "compensate"
+        }
+    ]
+}

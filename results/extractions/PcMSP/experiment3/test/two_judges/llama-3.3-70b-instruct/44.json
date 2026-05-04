@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "materials",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "re-grinding",
+            "re-pelletizing",
+            "annealing"
+        ],
+        "descriptors": [
+            "several",
+            "each",
+            "between"
+        ],
+        "values": [
+            "900 °C",
+            "1030 °C",
+            "48 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "several",
+            "target": "annealing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "each",
+            "target": "annealing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "between",
+            "target": "temperature range"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 °C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "1030 °C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "time"
+        },
+        {
+            "type": "Condition-of",
+            "source": "temperature",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "time",
+            "target": "annealing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealing",
+            "target": "re-pelletizing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "re-pelletizing",
+            "target": "re-grinding"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled"
+        ],
+        "descriptors": [
+            "slowly"
+        ],
+        "values": [
+            "4 K/h",
+            "523 K",
+            "20 h",
+            "298 K"
+        ],
+        "properties": [
+            {
+                "text": "4 K/h",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "523 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "20 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "4 K/h"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 K/h",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "523 K",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "20 h",
+            "target": "held"
+        },
+        {
+            "type": "Value-of",
+            "source": "298 K",
+            "target": "cooled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "cooled"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "held"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "unspecified target material",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "starting material",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "grounded",
+            "pressed",
+            "fired",
+            "intermediate grinding and pelletizing"
+        ],
+        "descriptors": [
+            "fine powder",
+            "Ar atmosphere"
+        ],
+        "values": [
+            "1/2 inch",
+            "48 hrs",
+            "72 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine powder",
+            "target": "grounded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "unspecified target material",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1/2 inch",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Participant-material",
+            "source": "starting material",
+            "target": "grounded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "intermediate grinding and pelletizing",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "intermediate grinding and pelletizing"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Coreference",
+            "source": "grounded",
+            "target": "pressed"
+        }
+    ]
+}

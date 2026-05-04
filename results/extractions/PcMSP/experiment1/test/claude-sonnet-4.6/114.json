@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu2Se",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cu",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "fabricated"
+        ],
+        "descriptors": [
+            "powder",
+            "stoichiometric",
+            "high-energy"
+        ],
+        "values": [
+            "200 min"
+        ],
+        "properties": [
+            {
+                "text": "200 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "SPEX , 8000 M Mixer / Mill"
+        ],
+        "brands": [
+            "SPEX"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cu2Se",
+            "target": "fabricated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu",
+            "target": "fabricated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "fabricated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Cu2Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Cu2Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-energy",
+            "target": "fabricated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "SPEX , 8000 M Mixer / Mill",
+            "target": "fabricated"
+        },
+        {
+            "type": "Brand-of",
+            "source": "SPEX",
+            "target": "SPEX , 8000 M Mixer / Mill"
+        },
+        {
+            "type": "Condition-of",
+            "source": "200 min",
+            "target": "fabricated"
+        }
+    ]
+}

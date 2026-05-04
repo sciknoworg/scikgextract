@@ -1,0 +1,42 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "kept",
+            "free cooling"
+        ],
+        "descriptors": [
+            "furnace cooling mode"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "free cooling"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "free cooling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "turned-off",
+            "target": "furnace"
+        }
+    ]
+}

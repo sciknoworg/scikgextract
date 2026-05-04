@@ -1,12 +1,16 @@
+# Python Imports
 from typing import Dict, List
 
+# Transformers and Evaluation Library Imports
 import evaluate
 from transformers import AutoTokenizer, PreTrainedTokenizer
 from sentence_transformers import SentenceTransformer, util
 
+# Numpy Import
 import numpy as np
-from scipy.optimize import linear_sum_assignment
 
+# Scipy Import for Hungarian Algorithm
+from scipy.optimize import linear_sum_assignment
 
 def rouge_score(references: list, predictions: list) -> dict:
     """
@@ -20,7 +24,6 @@ def rouge_score(references: list, predictions: list) -> dict:
     rouge = evaluate.load("rouge")
     return rouge.compute(predictions=predictions, references=references)
 
-
 def bleu_score(references: list, predictions: list) -> dict:
     """
     Calculate the BLEU scores between the reference output and the predicted output
@@ -32,7 +35,6 @@ def bleu_score(references: list, predictions: list) -> dict:
     """
     bleu = evaluate.load("bleu")
     return bleu.compute(predictions=predictions, references=references)
-
 
 def split_into_chunks(text: str, tokenizer: PreTrainedTokenizer, max_length: int = 512) -> list:
     """
@@ -49,7 +51,6 @@ def split_into_chunks(text: str, tokenizer: PreTrainedTokenizer, max_length: int
         tokens[i : i + max_length - 4] for i in range(0, len(tokens), max_length - 4)
     ]
     return [tokenizer.decode(chunk, skip_special_tokens=False) for chunk in chunks]
-
 
 def bert_score(references: list, predictions: list, embedding_model: str, embedding_model_revision: str, max_length: int = 256) -> dict:
     """
@@ -131,7 +132,15 @@ def cosine_similarity_score(references: list, predictions: list, embedding_model
     return average_similarity
 
 def hungarian_similarity(sent1: str, sent2: str, embedding_model: str = "allenai/scibert_scivocab_uncased") -> float:
-    
+    """
+    Calculate the similarity between two sentences using the Hungarian algorithm for optimal token alignment based on cosine similarity of embeddings.
+    Args:
+        sent1 (str): The first sentence
+        sent2 (str): The second sentence
+        embedding_model (str): The name of the embedding model to be used
+    Returns:
+        float: The similarity score between the two sentences
+    """
     # Load the embedding model
     model = SentenceTransformer(embedding_model)
     

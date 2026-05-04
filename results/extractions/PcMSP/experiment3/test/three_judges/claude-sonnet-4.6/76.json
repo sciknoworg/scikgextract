@@ -1,0 +1,44 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "product",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "treatment",
+            "obtained"
+        ],
+        "descriptors": [
+            "initial",
+            "brick orange"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "initial",
+            "target": "treatment"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "brick orange",
+            "target": "product"
+        },
+        {
+            "type": "Next-operation",
+            "source": "treatment",
+            "target": "obtained"
+        },
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "obtained"
+        }
+    ]
+}

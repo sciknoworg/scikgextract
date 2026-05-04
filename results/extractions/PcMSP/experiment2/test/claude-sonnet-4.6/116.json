@@ -1,0 +1,127 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "ethanethiol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "ethylenediamine",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "soluble ionic Se binder",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "co-solvent",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "dissolving",
+            "stirring"
+        ],
+        "descriptors": [
+            "soluble",
+            "ionic",
+            "vigorous",
+            "powder"
+        ],
+        "values": [
+            "0.5 g",
+            "0.5 mL",
+            "4.5 mL"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "soluble",
+            "target": "soluble ionic Se binder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ionic",
+            "target": "soluble ionic Se binder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "soluble ionic Se binder",
+            "target": "synthesized"
+        },
+        {
+            "type": "Coreference",
+            "source": "dissolving",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se powder",
+            "target": "dissolving"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Se powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5 g",
+            "target": "Se powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "co-solvent",
+            "target": "dissolving"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ethanethiol",
+            "target": "dissolving"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5 mL",
+            "target": "ethanethiol"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ethylenediamine",
+            "target": "dissolving"
+        },
+        {
+            "type": "Value-of",
+            "source": "4.5 mL",
+            "target": "ethylenediamine"
+        },
+        {
+            "type": "Next-operation",
+            "source": "stirring",
+            "target": "dissolving"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vigorous",
+            "target": "stirring"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "stirring"
+        }
+    ]
+}

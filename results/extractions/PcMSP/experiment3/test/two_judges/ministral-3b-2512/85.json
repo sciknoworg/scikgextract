@@ -1,0 +1,42 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "stirred"
+        ],
+        "descriptors": [],
+        "values": [
+            "80 °C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "80 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "80 °C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "time"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        }
+    ]
+}

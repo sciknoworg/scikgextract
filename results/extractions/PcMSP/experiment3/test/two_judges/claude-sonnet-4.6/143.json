@@ -1,0 +1,47 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "obtain",
+            "arc melting",
+            "repeated"
+        ],
+        "descriptors": [
+            "homogeneous",
+            "all"
+        ],
+        "values": [
+            "five times"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneous",
+            "target": "sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "five times",
+            "target": "arc melting"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "repeated"
+        }
+    ]
+}

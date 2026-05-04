@@ -1,0 +1,156 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "ZnO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "MgO",
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": "Zn1-xMgxO",
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": "Zn1-xMgxO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "Zn1-xMgxO",
+                        "precursor": "ZnEt2"
+                    },
+                    {
+                        "compound": "Zn1-xMgxO",
+                        "precursor": "bis-cyclopentadienyl magnesium"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "Zn1-xMgxO",
+                        "coReactant": "water"
+                    }
+                ],
+                "carrierGas": "nitrogen",
+                "purgingGas": "nitrogen"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "F-120 reactor",
+                    "manufacturer": "Microchemistry"
+                },
+                "plasmaPower": null,
+                "substrate": "soda lime glass (SLG), magnesium free fused silica (SiO2) and CIGS",
+                "deliveryMethod": "effusion",
+                "temperature": {
+                    "quantityValue": null,
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/Temperature"
+                },
+                "pressure": {
+                    "quantityValue": null,
+                    "quantityKind": "https://qudt.org/vocab/quantitykind/ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [],
+                        "numberofCycles": {
+                            "quantityValue": null,
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                        },
+                        "filmThickness": null
+                    },
+                    "saturation": false,
+                    "nucleationPeriod": {
+                        "quantityValue": null,
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Count"
+                    },
+                    "dosingTime": [],
+                    "purgeTime": [],
+                    "flowRates": [],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Thickness"
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": {
+                    "refractiveIndex": null,
+                    "absorptionCoefficient": null,
+                    "bandGap": {
+                        "quantityValue": null,
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Energy"
+                    },
+                    "characterizationMethod": "transmission and reflectance measurements"
+                },
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": null,
+                            "quantityKind": "https://qudt.org/vocab/quantitykind/DimensionlessRatio"
+                        },
+                        "characterizationMethod": "XRF/XRR"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "Mg",
+                            "O"
+                        ],
+                        "value": "Not Found",
+                        "characterizationMethod": "XRF/XRR"
+                    }
+                },
+                "chemicalComposition": "Zn1-xMgxO",
+                "crystallinity": {
+                    "phase": "polycrystalline",
+                    "characterizationMethod": "GI-XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/Length"
+                    },
+                    "characterizationMethod": "Not Found"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": "https://qudt.org/vocab/quantitykind/MassDensity"
+                    },
+                    "characterizationMethod": "XRR"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": null,
+                "thresholdVoltage": null,
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": "SLG/Mo/CIGS/buffer/ZnO/ZnO:Al"
+            },
+            "otherAspects": {
+                "safety": null,
+                "filmStability": null,
+                "reproducibility": true
+            }
+        }
+    ]
+}

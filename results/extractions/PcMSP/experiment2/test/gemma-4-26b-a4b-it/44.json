@@ -1,0 +1,56 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "re-grinding",
+            "re-pelletizing",
+            "annealing cycles"
+        ],
+        "descriptors": [
+            "several"
+        ],
+        "values": [
+            "900 \u00b0 C",
+            "1030 \u00b0 C",
+            "48 h"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1030 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "re-pelletizing",
+            "target": "annealing cycles"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00b0 C",
+            "target": "annealing cycles"
+        },
+        {
+            "type": "Value-of",
+            "source": "1030 \u00b0 C",
+            "target": "annealing cycles"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "annealing cycles"
+        }
+    ]
+}

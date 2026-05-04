@@ -1,0 +1,421 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": "InGaZnO",
+                        "method": "SALD"
+                    }
+                ],
+                "materialDeposited": "InGaZnO"
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": "InOx",
+                        "precursor": "Trimethylindium (TMIn)"
+                    },
+                    {
+                        "compound": "GaOx",
+                        "precursor": "Triethylgallium (TEGa)"
+                    },
+                    {
+                        "compound": "ZnOx",
+                        "precursor": "Diethylzinc (DEZ)"
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": "InGaZnO",
+                        "coReactant": "Water (H2O)"
+                    }
+                ],
+                "carrierGas": "Argon",
+                "purgingGas": "Not explicitly mentioned, assumed to be inert gas (e.g., N2 or Ar)"
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "Spatial Atmospheric Atomic Layer Deposition (S-ALD) System",
+                    "manufacturer": "Not specified"
+                },
+                "plasmaPower": null,
+                "substrate": "Thermally grown SiO2/Si",
+                "deliveryMethod": "Coinjection of vaporized metal precursors",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 200.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 760.0,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.18,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            },
+                            {
+                                "compound": "InZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.05,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            },
+                            {
+                                "compound": "InGaZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.03,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "ANGSTROM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": 1400.0,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": {
+                                "numericValue": 250.0,
+                                "unit": {
+                                    "hasQuantityKind": "Thickness",
+                                    "sameAs": "NanoM"
+                                }
+                            },
+                            "quantityKind": "Thickness"
+                        }
+                    },
+                    "saturation": false,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": 200.0,
+                            "unit": {
+                                "hasQuantityKind": "Count",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnOx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        },
+                        {
+                            "compound": "InOx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        },
+                        {
+                            "compound": "GaOx",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [],
+                    "flowRates": [
+                        {
+                            "compound": "ZnOx",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 1.96,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 0.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "purgingGasFlow": null
+                        },
+                        {
+                            "compound": "InOx",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 0.25,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 0.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "purgingGasFlow": null
+                        },
+                        {
+                            "compound": "GaOx",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": 0.37,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": 0.0,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "purgingGasFlow": null
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": {
+                            "numericValue": 250.0,
+                            "unit": {
+                                "hasQuantityKind": "Thickness",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Thickness"
+                    }
+                },
+                "supercycleDesign": {
+                    "numberofSubcycles": [],
+                    "subcycleSequence": [
+                        "InOx",
+                        "GaOx",
+                        "ZnOx"
+                    ]
+                }
+            },
+            "materialProperties": {
+                "opticalProperties": null,
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "PERCENT"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "DimensionlessRatio",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "DimensionlessRatio"
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": {
+                                "numericValue": null,
+                                "unit": {
+                                    "hasQuantityKind": "DimensionlessRatio",
+                                    "sameAs": "PERCENT"
+                                }
+                            },
+                            "quantityKind": "DimensionlessRatio"
+                        },
+                        "characterizationMethod": "XPS Depth Profiling"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "In",
+                            "Ga",
+                            "Zn"
+                        ],
+                        "value": "20:8:72",
+                        "characterizationMethod": "EDX"
+                    }
+                },
+                "chemicalComposition": "InGaZnO",
+                "crystallinity": {
+                    "phase": "Amorphous",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "Length",
+                                "sameAs": "NanoM"
+                            }
+                        },
+                        "quantityKind": "Length"
+                    },
+                    "characterizationMethod": "Not specified"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "MassDensity",
+                                "sameAs": "GM-PER-DeciM3"
+                            }
+                        },
+                        "quantityKind": "MassDensity"
+                    },
+                    "characterizationMethod": "Not specified"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": {
+                        "numericValue": 3.5,
+                        "unit": {
+                            "hasQuantityKind": "Mobility",
+                            "sameAs": "CentiM2-PER-V-SEC"
+                        }
+                    },
+                    "quantityKind": "Mobility"
+                },
+                "thresholdVoltage": {
+                    "quantityValue": {
+                        "numericValue": -25.0,
+                        "unit": {
+                            "hasQuantityKind": "Voltage",
+                            "sameAs": "V"
+                        }
+                    },
+                    "quantityKind": "Voltage"
+                },
+                "subthresholdSwing": null,
+                "onOffRatio": null,
+                "deviceStructure": "Bottom-gate top-contact"
+            },
+            "otherAspects": {
+                "safety": "Safety considerations include handling of volatile metal precursors (TMIn, TEGa, DEZ) and water vapor, requiring proper ventilation and containment.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

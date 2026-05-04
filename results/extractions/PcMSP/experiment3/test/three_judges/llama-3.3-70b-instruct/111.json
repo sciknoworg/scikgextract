@@ -1,0 +1,73 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03(OH)2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiOH·H2O",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined at 480 °C for 5 h",
+            "calcined at 730 °C for 12 h"
+        ],
+        "descriptors": [
+            "1:1.02 molar ratio"
+        ],
+        "values": [
+            "480 °C",
+            "5 h",
+            "730 °C",
+            "12 h",
+            "1:1.02"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Ni0.88Co0.09Al0.03(OH)2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiOH·H2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "480 °C for 5 h",
+            "target": "calcined at 480 °C for 5 h"
+        },
+        {
+            "type": "Condition-of",
+            "source": "730 °C for 12 h",
+            "target": "calcined at 730 °C for 12 h"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined at 480 °C for 5 h",
+            "target": "calcined at 730 °C for 12 h"
+        },
+        {
+            "type": "Value-of",
+            "source": "1:1.02",
+            "target": "molar ratio"
+        }
+    ]
+}

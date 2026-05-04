@@ -1,3 +1,9 @@
+"""
+String utility functions for SciKGExtract.
+
+Provides functions for normalizing and cleaning strings, filtering lists of strings, and parsing dot-notation paths with array indices for traversing nested extraction outputs.
+"""
+# Python Imports
 import re
 import string
 import unicodedata

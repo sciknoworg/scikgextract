@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "inserted"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "high-pressure",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "BN crucible",
+            "high-pressure cell",
+            "carbon heater",
+            "pyrophyllite cube",
+            "electrodes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "sealed",
+            "target": "BN crucible"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "inserted",
+            "target": "high-pressure cell"
+        }
+    ]
+}

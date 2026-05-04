@@ -1,0 +1,78 @@
+{
+    "entities": [
+        {
+            "text": "dexmedetomidine",
+            "type": "ChemicalEntity",
+            "identifier": "C075172",
+            "offset": 10,
+            "length": 13
+        },
+        {
+            "text": "propofol",
+            "type": "ChemicalEntity",
+            "identifier": "D005617",
+            "offset": 34,
+            "length": 8
+        },
+        {
+            "text": "severe hemodynamic disturbances",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0272656",
+            "offset": 0,
+            "length": 27
+        },
+        {
+            "text": "hypotension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006973",
+            "offset": 156,
+            "length": 10
+        },
+        {
+            "text": "bradycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001919",
+            "offset": 173,
+            "length": 10
+        },
+        {
+            "text": "neurocritical care patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 44,
+            "length": 24
+        }
+    ],
+    "relations": [
+        {
+            "type": "Comparison",
+            "entity1": "C075172",
+            "entity2": "D005617",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C075172",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D005617",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C075172",
+            "entity2": "D001919",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D005617",
+            "entity2": "D001919",
+            "novel": false
+        }
+    ]
+}

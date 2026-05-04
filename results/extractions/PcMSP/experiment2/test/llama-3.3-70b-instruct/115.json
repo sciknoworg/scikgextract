@@ -1,0 +1,45 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sieved",
+            "ball-milled"
+        ],
+        "descriptors": [
+            "larger than 45 \u00b5m"
+        ],
+        "values": [
+            "45 \u00b5m"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "larger than 45 \u00b5m",
+            "target": "particles"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "ball-milled"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sieved",
+            "target": "ball-milled"
+        },
+        {
+            "type": "Value-of",
+            "source": "45 \u00b5m",
+            "target": "particles"
+        }
+    ]
+}

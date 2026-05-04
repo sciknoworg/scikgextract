@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "text": "complete atrioventricular (AV) block",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D054537",
+            "offset": 48,
+            "length": 32
+        },
+        {
+            "text": "syncopal attacks",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D013575",
+            "offset": 82,
+            "length": 15
+        },
+        {
+            "text": "lithium",
+            "type": "ChemicalEntity",
+            "identifier": "D008094",
+            "offset": 106,
+            "length": 7
+        },
+        {
+            "text": "permanent pacemaker implantation",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 148,
+            "length": 30
+        },
+        {
+            "text": "lithium",
+            "type": "ChemicalEntity",
+            "identifier": "D008094",
+            "offset": 190,
+            "length": 7
+        },
+        {
+            "text": "patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 290,
+            "length": 8
+        },
+        {
+            "text": "AV conduction",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001279",
+            "offset": 315,
+            "length": 13
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D008094",
+            "entity2": "D054537",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D054537",
+            "entity2": "D013575",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D054537",
+            "entity2": "Not Found",
+            "novel": false
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D008094",
+            "entity2": "D054537",
+            "novel": true
+        }
+    ]
+}

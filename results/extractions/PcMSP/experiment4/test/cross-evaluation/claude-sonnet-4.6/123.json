@@ -1,0 +1,51 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "maintained"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "maintained"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "maintained"
+        },
+        {
+            "type": "Condition-of",
+            "source": "this temperature",
+            "target": "maintained"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 h",
+            "target": "maintained"
+        }
+    ]
+}

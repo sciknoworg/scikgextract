@@ -1,0 +1,145 @@
+{
+    "entities": [
+        {
+            "text": "Necrotising fasciitis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005206",
+            "offset": 11,
+            "length": 21
+        },
+        {
+            "text": "bortezomib",
+            "type": "ChemicalEntity",
+            "identifier": "D031393",
+            "offset": 27,
+            "length": 10
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "D003907",
+            "offset": 42,
+            "length": 13
+        },
+        {
+            "text": "Waldenstrom macroglobulinaemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D014853",
+            "offset": 80,
+            "length": 29
+        },
+        {
+            "text": "76-year-old man",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 114,
+            "length": 14
+        },
+        {
+            "text": "neutropenia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009503",
+            "offset": 160,
+            "length": 10
+        },
+        {
+            "text": "bortezomib",
+            "type": "ChemicalEntity",
+            "identifier": "D031393",
+            "offset": 190,
+            "length": 10
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "D003907",
+            "offset": 201,
+            "length": 13
+        },
+        {
+            "text": "rituximab",
+            "type": "ChemicalEntity",
+            "identifier": "D064040",
+            "offset": 225,
+            "length": 9
+        },
+        {
+            "text": "antimicrobial therapy",
+            "type": "ChemicalEntity",
+            "identifier": "D000936",
+            "offset": 300,
+            "length": 20
+        },
+        {
+            "text": "elderly patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 400,
+            "length": 15
+        },
+        {
+            "text": "fatal bacterial infections",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001424",
+            "offset": 450,
+            "length": 23
+        },
+        {
+            "text": "B-cell malignancies",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001464",
+            "offset": 500,
+            "length": 19
+        }
+    ],
+    "relations": [
+        {
+            "type": "Cotreatment",
+            "entity1": "D031393",
+            "entity2": "D003907",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D031393",
+            "entity2": "D064040",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D003907",
+            "entity2": "D064040",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D014853",
+            "entity2": "D005206",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D031393",
+            "entity2": "D005206",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D003907",
+            "entity2": "D005206",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D031393",
+            "entity2": "D001424",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D003907",
+            "entity2": "D001424",
+            "novel": true
+        }
+    ]
+}

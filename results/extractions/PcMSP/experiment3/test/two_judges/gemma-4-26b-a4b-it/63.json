@@ -1,0 +1,73 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "starting materials",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LaSrNiReO6",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "reacted",
+            "resulting in"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "different",
+            "single-phased"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "high temperatures",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "mixtures"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixtures",
+            "target": "starting materials"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "reacted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "high temperatures",
+            "target": "reacted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "reacted",
+            "target": "resulting in"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LaSrNiReO6",
+            "target": "resulting in"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "single-phased",
+            "target": "LaSrNiReO6"
+        }
+    ]
+}

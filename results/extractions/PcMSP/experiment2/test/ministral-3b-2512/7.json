@@ -1,0 +1,74 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ZnxCu4\u2212x(OH)6FBr",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "ZnBr2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuBr2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "achieved",
+            "addition",
+            "varied"
+        ],
+        "descriptors": [
+            "excess",
+            "varied"
+        ],
+        "values": [
+            "1:1 stoichiometry"
+        ],
+        "properties": [
+            {
+                "text": "Zn/Cu ratio",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "Not Found"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "ZnxCu4\u2212x(OH)6FBr",
+            "target": "achieved"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ZnBr2",
+            "target": "addition"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuBr2",
+            "target": "varied"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "ZnBr2"
+        },
+        {
+            "type": "Value-of",
+            "source": "1:1 stoichiometry",
+            "target": "Zn/Cu ratio"
+        },
+        {
+            "type": "Condition-of",
+            "source": "varied",
+            "target": "ZnBr2"
+        }
+    ]
+}

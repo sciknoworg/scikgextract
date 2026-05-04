@@ -1,0 +1,40 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "evacuated",
+            "N2-filled",
+            "sealed"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "glove box",
+            "jar"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "evacuated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "evacuated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "N2-filled",
+            "target": "evacuated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "N2-filled"
+        }
+    ]
+}

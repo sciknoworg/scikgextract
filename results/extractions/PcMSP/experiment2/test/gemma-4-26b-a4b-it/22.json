@@ -1,0 +1,60 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "product",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "placed"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "glove box",
+            "alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "placed"
+        }
+    ]
+}

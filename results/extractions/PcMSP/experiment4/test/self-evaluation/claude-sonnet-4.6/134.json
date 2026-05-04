@@ -1,0 +1,131 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "calcined",
+            "ground",
+            "pressed",
+            "grindings",
+            "grindings"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "intermittent",
+            "thoroughly"
+        ],
+        "values": [
+            "900 ° C",
+            "12 h",
+            "1050 ° C",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "air",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in air",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "fired"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1050 ° C",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in air",
+            "target": "fired"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermittent",
+            "target": "grindings"
+        },
+        {
+            "type": "Condition-of",
+            "source": "grindings",
+            "target": "fired"
+        }
+    ]
+}

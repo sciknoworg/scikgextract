@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu(IO3)2\u00b72/3H2O",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "\u03b1-Cu(IO3)2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "mother-liquor",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "deionized water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "isolated",
+            "filtration",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "Greenish",
+            "polycrystalline",
+            "yield"
+        ],
+        "values": [
+            "24 h",
+            "92 %"
+        ],
+        "properties": [
+            {
+                "text": "24 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "filter"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Greenish",
+            "target": "Cu(IO3)2\u00b72/3H2O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Cu(IO3)2\u00b72/3H2O"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mother-liquor",
+            "target": "isolated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu(IO3)2\u00b72/3H2O",
+            "target": "isolated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "filter",
+            "target": "filtration"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtration"
+        },
+        {
+            "type": "Participant-material",
+            "source": "deionized water",
+            "target": "washed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 h",
+            "target": "isolated"
+        },
+        {
+            "type": "Value-of",
+            "source": "92 %",
+            "target": "\u03b1-Cu(IO3)2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "yield",
+            "target": "92 %"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "sealed"
+        ],
+        "descriptors": [
+            "lumps",
+            "powder",
+            "argon-filled",
+            "evacuated",
+            "stoichiometric"
+        ],
+        "values": [
+            "1 : 1"
+        ],
+        "properties": [],
+        "devices": [
+            "alumina crucible",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "lumps",
+            "target": "Cs"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "As"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "argon-filled",
+            "target": "glove box"
+        },
+        {
+            "type": "Condition-of",
+            "source": "argon-filled",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "evacuated",
+            "target": "sealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "sealed"
+        }
+    ]
+}

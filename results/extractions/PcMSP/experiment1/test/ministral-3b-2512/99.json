@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Not Found",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "kept",
+            "followed",
+            "free cooling"
+        ],
+        "descriptors": [
+            "turned-off"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "free cooling"
+        },
+        {
+            "type": "Next-operation",
+            "source": "free cooling",
+            "target": "kept"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turned-off",
+            "target": "furnace"
+        }
+    ]
+}

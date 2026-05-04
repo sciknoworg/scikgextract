@@ -1,0 +1,102 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "S",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "direct solid state reaction",
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "5 N purity",
+            "evacuated"
+        ],
+        "values": [
+            "1 : 1 : 1 molar ratio"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "1 : 1 : 1 molar ratio"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "Si"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "S"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "Si"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "S"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "direct solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Si",
+            "target": "direct solid state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "S",
+            "target": "direct solid state reaction"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "direct solid state reaction"
+        }
+    ]
+}

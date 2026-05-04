@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tantalum foil",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al-rich eutectic13",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "put",
+            "annealed"
+        ],
+        "descriptors": [
+            "quartz",
+            "evacuated"
+        ],
+        "values": [
+            "an",
+            "∼ 40 °C below the melting point of Al"
+        ],
+        "properties": [
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "foil"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "put"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thin",
+            "target": "tantalum foil"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Value-of",
+            "source": "620 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "∼ 40 °C below the melting point of Al",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al-rich eutectic",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "an",
+            "target": "tube"
+        }
+    ]
+}

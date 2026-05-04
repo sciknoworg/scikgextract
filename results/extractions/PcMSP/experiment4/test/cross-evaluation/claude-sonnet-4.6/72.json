@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "piece",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "bar",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "sectioned"
+        ],
+        "descriptors": [
+            "powder",
+            "approximately"
+        ],
+        "values": [
+            "a"
+        ],
+        "properties": [],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "sectioned"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "piece",
+            "target": "grind"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "piece"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 mm × 3 mm × 3 mm",
+            "target": "bar"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "approximately",
+            "target": "8 mm × 3 mm × 3 mm"
+        }
+    ]
+}

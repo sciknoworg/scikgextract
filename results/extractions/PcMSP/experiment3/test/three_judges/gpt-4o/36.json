@@ -1,0 +1,52 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "kept",
+            "heated"
+        ],
+        "descriptors": [
+            "gradually"
+        ],
+        "values": [
+            "5 °C/min"
+        ],
+        "properties": [
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "aluminium / platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "in the air",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 °C/min",
+            "target": "heated"
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "CsAs",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "obtained",
+            "ground",
+            "pressed",
+            "sealed",
+            "heated",
+            "furnace cooling"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "excess"
+        ],
+        "values": [
+            "2.3 : 3 : 0.7",
+            "523 K",
+            "20 h"
+        ],
+        "properties": [
+            {
+                "text": "523 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "20 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "agate mortar",
+            "evacuated quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "ratio"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "Cs"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs",
+            "target": "obtained"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "evacuated quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "523 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "20 h",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "furnace cooling",
+            "target": "heated"
+        }
+    ]
+}

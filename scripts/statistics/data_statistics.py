@@ -253,11 +253,11 @@ if __name__ == "__main__":
     logger.info("Starting computing data statistics...")
 
     # Input directory containing JSON files
-    input_dir = args.input_dir if args.input_dir else "results/extracted-data/atomic-layer-deposition/experimental-usecase/version1/IGZO/Extra/gpt-5-mini"
+    input_dir = args.input_dir if args.input_dir else "results/extracted-data-test/ALD/version1/ZnO-IGZO-papers/experimental-usecase/ZnO"
     logger.info(f"Input directory: {input_dir}")
 
     # Output CSV file path
-    out_csv = args.output_csv if args.output_csv else "results/statistics/atomic-layer-deposition/experimental-usecase/version1/IGZO/Extra/gpt-5-mini"
+    out_csv = args.output_csv if args.output_csv else "results/extracted-data-test/ALD/version1/ZnO-IGZO-papers/experimental-usecase/ZnO"
     logger.info(f"Output CSV path: {out_csv}")
 
     # Create output directory if it doesn't exist

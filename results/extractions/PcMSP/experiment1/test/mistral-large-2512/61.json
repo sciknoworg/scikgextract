@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "\u03b2-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "used",
+            "quenched"
+        ],
+        "descriptors": [
+            "metastable",
+            "higher",
+            "immediately",
+            "ice",
+            "room"
+        ],
+        "values": [
+            "900 \u2013 1000 \u00b0C",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "900 \u2013 1000 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ice water"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "metastable",
+            "target": "\u03b2-phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "higher",
+            "target": "900 \u2013 1000 \u00b0C"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u2013 1000 \u00b0C",
+            "target": "used"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 \u2013 1000 \u00b0C",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "\u03b2-phase",
+            "target": "used"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "immediately",
+            "target": "quenched"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenched",
+            "target": "used"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ice",
+            "target": "ice water"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "room",
+            "target": "room temperature"
+        }
+    ]
+}

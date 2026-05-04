@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "metastable β-phase",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "used",
+            "quenched"
+        ],
+        "descriptors": [
+            "high-temperature",
+            "immediately"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "900–1000 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ice water"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "high-temperature",
+            "target": "metastable β-phase"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900–1000 °C",
+            "target": "used"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "immediately",
+            "target": "quenched"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ice water",
+            "target": "quenched"
+        }
+    ]
+}

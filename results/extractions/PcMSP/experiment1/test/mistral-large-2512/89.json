@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "aqueous solution",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "added",
+            "stirred"
+        ],
+        "descriptors": [
+            "aqueous"
+        ],
+        "values": [
+            "5 mmol",
+            "10 mL",
+            "80 \u00b0C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "80 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HIO3",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aqueous solution",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mmol",
+            "target": "HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 mL",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 \u00b0C",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        },
+        {
+            "type": "Next-operation",
+            "source": "stirred",
+            "target": "added"
+        }
+    ]
+}

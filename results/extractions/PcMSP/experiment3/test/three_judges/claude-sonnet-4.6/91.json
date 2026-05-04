@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "solid",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Mn ( IO3 ) 2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "dried",
+            "give"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "polycrystalline",
+            "yield"
+        ],
+        "values": [
+            "1 week",
+            "86 %"
+        ],
+        "properties": [
+            {
+                "text": "1 week",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "solid",
+            "target": "dried"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 week",
+            "target": "dried"
+        },
+        {
+            "type": "Next-operation",
+            "source": "give",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn ( IO3 ) 2",
+            "target": "give"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Value-of",
+            "source": "86 %",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "yield",
+            "target": "86 %"
+        },
+        {
+            "type": "Value-of",
+            "source": "86 %",
+            "target": "Mn"
+        }
+    ]
+}

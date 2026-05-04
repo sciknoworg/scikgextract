@@ -1,0 +1,119 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs2Mo3As3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "lumps",
+            "powder",
+            "high temperature",
+            "solid state"
+        ],
+        "values": [
+            "99.98%",
+            "99.999%",
+            "99.999%"
+        ],
+        "properties": [
+            {
+                "text": "high temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "Cs2Mo3As3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs2Mo3As3",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "lumps",
+            "target": "Cs"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.98%",
+            "target": "Cs"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Mo"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "As"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "As"
+        },
+        {
+            "type": "Condition-of",
+            "source": "high temperature",
+            "target": "synthesized"
+        },
+        {
+            "type": "Condition-of",
+            "source": "solid state",
+            "target": "synthesized"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "synthesized"
+        }
+    ]
+}

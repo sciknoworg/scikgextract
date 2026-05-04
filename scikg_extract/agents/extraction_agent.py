@@ -22,7 +22,7 @@ from scikg_extract.tools.extraction.structured_knowledge_extraction import refin
 def tool_for_extraction(state: ExtractionState) -> tuple[str, callable]:
     """
     Determines the appropriate tool function for structured knowledge extraction based on the current state. Either performs initial extraction or refines existing extraction based on feedback.
-    Args:
+    Args:   
         state (ExtractionState): The current state of the extraction process containing necessary data.
     Returns:
         tuple[str, callable]: The name and function of the tool to be used for extraction.

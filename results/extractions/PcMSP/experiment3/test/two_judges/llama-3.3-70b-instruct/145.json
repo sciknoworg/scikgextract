@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnF2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnSe2 − 𝑥F𝑥",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "stoichiometric"
+        ],
+        "values": [
+            "2 − 𝑥",
+            "𝑥",
+            "2 ( 2 − 𝑥 )"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "Sn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "Se"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed",
+            "target": "SnF2"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 − 𝑥",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "𝑥",
+            "target": "SnF2"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 ( 2 − 𝑥 )",
+            "target": "Se"
+        }
+    ]
+}

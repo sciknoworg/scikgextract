@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "fine homogenous powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "cylindrical pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "cold pressed"
+        ],
+        "descriptors": [
+            "fine",
+            "homogenous",
+            "cylindrical"
+        ],
+        "values": [
+            "12 mm",
+            "1 \u2013 2 mm",
+            "4 \u00d7 106 Pa"
+        ],
+        "properties": [
+            {
+                "text": "12 mm",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1 \u2013 2 mm",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "4 \u00d7 106 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "hydraulic press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "fine homogenous powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenous",
+            "target": "fine homogenous powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "cylindrical pellets"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fine homogenous powder",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "cylindrical pellets",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 mm",
+            "target": "cylindrical pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 \u2013 2 mm",
+            "target": "cylindrical pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 \u00d7 106 Pa",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hydraulic press",
+            "target": "cold pressed"
+        }
+    ]
+}

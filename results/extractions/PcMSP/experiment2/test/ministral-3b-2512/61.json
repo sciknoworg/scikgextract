@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "metastable \u03b2-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "used",
+            "quenched"
+        ],
+        "descriptors": [
+            "high temperature",
+            "ice water",
+            "room temperature"
+        ],
+        "values": [
+            "900\u20131000 \u00b0C",
+            "ice water"
+        ],
+        "properties": [
+            {
+                "text": "900\u20131000 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "ice water",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "ice water"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "900\u20131000 \u00b0C",
+            "target": "high temperature"
+        },
+        {
+            "type": "Condition-of",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high temperature",
+            "target": "metastable \u03b2-phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ice water",
+            "target": "quenched"
+        }
+    ]
+}

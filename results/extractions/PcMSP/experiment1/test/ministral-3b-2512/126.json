@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al pieces",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "put together"
+        ],
+        "descriptors": [
+            "water-cooled",
+            "oxygen getter"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "water-cooled copper hearth",
+            "Zr button"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Ru"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Al pieces"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "water-cooled copper hearth",
+            "target": "put together"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Zr button",
+            "target": "put together"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "put together"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al pieces",
+            "target": "put together"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr button"
+        }
+    ]
+}

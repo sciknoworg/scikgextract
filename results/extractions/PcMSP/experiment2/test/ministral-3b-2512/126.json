@@ -1,0 +1,80 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al pieces",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "put together"
+        ],
+        "descriptors": [
+            "water-cooled",
+            "oxygen getter"
+        ],
+        "values": [
+            "99.95%",
+            "99.99%"
+        ],
+        "properties": [
+            {
+                "text": "oxygen getter",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "water-cooled copper hearth",
+            "Zr button"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "put together"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al pieces",
+            "target": "put together"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Ru"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Al pieces"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "put together"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "water-cooled copper hearth",
+            "target": "put together"
+        },
+        {
+            "type": "Condition-of",
+            "source": "oxygen getter",
+            "target": "Ru"
+        },
+        {
+            "type": "Condition-of",
+            "source": "oxygen getter",
+            "target": "Al pieces"
+        }
+    ]
+}

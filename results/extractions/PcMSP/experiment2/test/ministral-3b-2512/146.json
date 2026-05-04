@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "silica",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "vacuum"
+        ],
+        "values": [
+            "vacuum"
+        ],
+        "properties": [
+            {
+                "text": "vacuum",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "precursors",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "silica",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum",
+            "target": "sealed"
+        }
+    ]
+}

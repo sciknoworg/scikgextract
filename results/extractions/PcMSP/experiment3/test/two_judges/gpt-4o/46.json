@@ -1,0 +1,52 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "compositions",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "weighed",
+            "mixed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "thoroughly"
+        ],
+        "values": [
+            "1 h",
+            "2 h"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "weighed",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "compositions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "air atmosphere"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "alcohol"
+        }
+    ]
+}

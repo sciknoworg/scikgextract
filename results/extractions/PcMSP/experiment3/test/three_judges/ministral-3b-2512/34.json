@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powders",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "platinum crucible",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sintered",
+            "ground",
+            "sintered"
+        ],
+        "descriptors": [
+            "platinum"
+        ],
+        "values": [
+            "800 °C",
+            "100 h"
+        ],
+        "properties": [
+            {
+                "text": "800 \u000e C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "100 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "sintered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "platinum crucible",
+            "target": "sintered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucible",
+            "target": "sintered"
+        },
+        {
+            "type": "Value-of",
+            "source": "800 °C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "100 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        }
+    ]
+}

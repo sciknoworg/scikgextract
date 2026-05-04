@@ -1,5 +1,7 @@
 """
-Feedback Agent for providing updated user prompt incorporated with feedback from the reflection agent on the extracted structured knowledge.
+Feedback Agent for providing updated user prompt incorporated with feedback from the reflection agent on the extracted structured knowledge. 
+
+The Feedback Agent takes in the current state of the extraction process, including the extracted structured knowledge and the reflection feedback, and generates an updated user prompt that incorporates this feedback. This updated prompt is then used to refine the extraction process in subsequent iterations.
 """
 # External Imports
 from langgraph.graph import StateGraph, START, END

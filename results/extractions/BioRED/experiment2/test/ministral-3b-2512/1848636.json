@@ -1,0 +1,185 @@
+{
+    "entities": [
+        {
+            "text": "debrisoquine",
+            "type": "ChemicalEntity",
+            "identifier": "D000749",
+            "offset": 10,
+            "length": 8
+        },
+        {
+            "text": "sparteine",
+            "type": "ChemicalEntity",
+            "identifier": "D003699",
+            "offset": 21,
+            "length": 8
+        },
+        {
+            "text": "metoprolol",
+            "type": "ChemicalEntity",
+            "identifier": "D008632",
+            "offset": 32,
+            "length": 8
+        },
+        {
+            "text": "beta-2 receptor",
+            "type": "GeneOrGeneProduct",
+            "identifier": "NCBI Gene: 795",
+            "offset": 55,
+            "length": 13
+        },
+        {
+            "text": "beta-blocker",
+            "type": "ChemicalEntity",
+            "identifier": "D000749",
+            "offset": 44,
+            "length": 8
+        },
+        {
+            "text": "terbutaline",
+            "type": "ChemicalEntity",
+            "identifier": "D003699",
+            "offset": 105,
+            "length": 8
+        },
+        {
+            "text": "hypokalemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006338",
+            "offset": 118,
+            "length": 10
+        },
+        {
+            "text": "metoprolol enantiomers",
+            "type": "ChemicalEntity",
+            "identifier": "D008632",
+            "offset": 130,
+            "length": 17
+        },
+        {
+            "text": "S-isomer",
+            "type": "ChemicalEntity",
+            "identifier": "D008632 (S-enantiomer)",
+            "offset": 145,
+            "length": 7
+        },
+        {
+            "text": "R-isomer",
+            "type": "ChemicalEntity",
+            "identifier": "D008632 (R-enantiomer)",
+            "offset": 152,
+            "length": 7
+        },
+        {
+            "text": "alpha-hydroxymetoprolol",
+            "type": "ChemicalEntity",
+            "identifier": "D008632 (metabolite)",
+            "offset": 170,
+            "length": 19
+        },
+        {
+            "text": "extensive (EM)",
+            "type": "OrganismTaxon",
+            "identifier": "Not Found",
+            "offset": 200,
+            "length": 10
+        },
+        {
+            "text": "poor metabolizers (PM)",
+            "type": "OrganismTaxon",
+            "identifier": "Not Found",
+            "offset": 210,
+            "length": 15
+        },
+        {
+            "text": "IC50 values",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 250,
+            "length": 8
+        },
+        {
+            "text": "metoprolol plasma concentrations",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 270,
+            "length": 28
+        },
+        {
+            "text": "beta-1 adrenoceptor",
+            "type": "GeneOrGeneProduct",
+            "identifier": "NCBI Gene: 109",
+            "offset": 30,
+            "length": 17
+        },
+        {
+            "text": "racemic metoprolol",
+            "type": "ChemicalEntity",
+            "identifier": "D008632 (racemate)",
+            "offset": 60,
+            "length": 15
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D008632",
+            "entity2": "D000749",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D008632",
+            "entity2": "D003699",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "NCBI Gene: 795",
+            "entity2": "D008632",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D008632",
+            "entity2": "beta-1 adrenoceptor",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D008632",
+            "entity2": "beta-2 receptor",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D008632 (EM)",
+            "entity2": "D008632 (PM)",
+            "novel": false
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D008632",
+            "entity2": "terbutaline",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "alpha-hydroxymetoprolol",
+            "entity2": "beta-2 receptor",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "IC50 values (PM)",
+            "entity2": "NCBI Gene: 795",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "metoprolol plasma concentrations (PM)",
+            "entity2": "beta-2 receptor occupancy (EM)",
+            "novel": false
+        }
+    ]
+}

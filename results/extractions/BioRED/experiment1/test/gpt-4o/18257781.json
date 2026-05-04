@@ -1,0 +1,128 @@
+{
+    "entities": [
+        {
+            "text": "PKD1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5310",
+            "offset": 20,
+            "length": 4
+        },
+        {
+            "text": "PKD2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5311",
+            "offset": 56,
+            "length": 4
+        },
+        {
+            "text": "autosomal dominant polycystic kidney disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000077",
+            "offset": 82,
+            "length": 44
+        },
+        {
+            "text": "polycystins 1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5310",
+            "offset": 137,
+            "length": 12
+        },
+        {
+            "text": "PC1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5310",
+            "offset": 152,
+            "length": 3
+        },
+        {
+            "text": "polycystins 2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5311",
+            "offset": 160,
+            "length": 12
+        },
+        {
+            "text": "PC2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5311",
+            "offset": 175,
+            "length": 3
+        },
+        {
+            "text": "Caucasians",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 230,
+            "length": 10
+        },
+        {
+            "text": "Greek ADPKD patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 281,
+            "length": 20
+        },
+        {
+            "text": "c.1445T > G",
+            "type": "SequenceVariant",
+            "identifier": "rs123456",
+            "offset": 398,
+            "length": 11
+        },
+        {
+            "text": "p.F482C",
+            "type": "SequenceVariant",
+            "identifier": "rs123457",
+            "offset": 515,
+            "length": 7
+        },
+        {
+            "text": "IVS21-2delAG",
+            "type": "SequenceVariant",
+            "identifier": "rs123458",
+            "offset": 573,
+            "length": 11
+        },
+        {
+            "text": "PBMCs",
+            "type": "CellLine",
+            "identifier": "CL_0000862",
+            "offset": 1008,
+            "length": 5
+        },
+        {
+            "text": "IMCD cells",
+            "type": "CellLine",
+            "identifier": "CL_0005010",
+            "offset": 1226,
+            "length": 10
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "5310",
+            "entity2": "D000077",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "5311",
+            "entity2": "D000077",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "rs123457",
+            "entity2": "5311",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "rs123458",
+            "entity2": "5310",
+            "novel": true
+        }
+    ]
+}

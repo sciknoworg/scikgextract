@@ -1,0 +1,49 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "utilized",
+            "melted"
+        ],
+        "descriptors": [
+            "button",
+            "oxygen getter"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "button",
+            "target": "Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "utilized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "utilized"
+        }
+    ]
+}

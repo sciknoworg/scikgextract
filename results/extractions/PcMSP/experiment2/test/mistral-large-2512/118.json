@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precipitates",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "supernatant",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "discarded",
+            "dried"
+        ],
+        "descriptors": [
+            "vacuum condition"
+        ],
+        "values": [
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "vacuum device"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "precipitates",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "supernatant",
+            "target": "discarded"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum condition",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "dried"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum condition",
+            "target": "dried"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "vacuum device",
+            "target": "dried"
+        }
+    ]
+}

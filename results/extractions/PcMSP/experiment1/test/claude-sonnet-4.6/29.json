@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "held",
+            "cool"
+        ],
+        "descriptors": [
+            "hot"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "5.8 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "hot press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "5.8 h",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 h",
+            "target": "held"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cool",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hot press",
+            "target": "cool"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "hot",
+            "target": "hot press"
+        }
+    ]
+}

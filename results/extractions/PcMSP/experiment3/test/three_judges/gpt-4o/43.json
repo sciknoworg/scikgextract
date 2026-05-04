@@ -1,0 +1,52 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "pelletized",
+            "calcinated"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "760 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "box furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "pelletized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "calcinated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "box furnace",
+            "target": "calcinated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletized",
+            "target": "calcinated"
+        }
+    ]
+}

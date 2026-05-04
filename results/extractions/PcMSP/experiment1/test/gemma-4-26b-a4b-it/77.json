@@ -1,0 +1,103 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "This material",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "fine powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "1 / 2 \u201d pellet",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired",
+            "grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "fine",
+            "intermediate"
+        ],
+        "values": [
+            "1 / 2 \u201d",
+            "1200 \u25e6 C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u25e6 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "This material",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fine powder",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 / 2 \u201d",
+            "target": "pellet"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "1 / 2 \u201d",
+            "target": "pellet"
+        },
+        {
+            "type": "Participant-material",
+            "source": "1 / 2 \u201d pellet",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 \u25e6 C",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "grinding"
+        }
+    ]
+}

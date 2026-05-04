@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "S",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "evacuated"
+        ],
+        "values": [
+            "5 N purity",
+            "1 : 1 : 1 molar ratio"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Si"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "S"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N purity",
+            "target": "Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N purity",
+            "target": "Si"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N purity",
+            "target": "S"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "Si"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "S"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Si",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "S",
+            "target": "sealed"
+        }
+    ]
+}

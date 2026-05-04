@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cu2Se",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "fabricated",
+            "milling"
+        ],
+        "descriptors": [
+            "high-energy"
+        ],
+        "values": [
+            "200 min",
+            "Cu2Se"
+        ],
+        "properties": [
+            {
+                "text": "200 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "8000 M Mixer / Mill"
+        ],
+        "brands": [
+            "SPEX"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "high-energy",
+            "target": "ball milling"
+        },
+        {
+            "type": "Brand-of",
+            "source": "SPEX",
+            "target": "8000 M Mixer / Mill"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu",
+            "target": "fabricated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "fabricated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu2Se",
+            "target": "fabricated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ball milling",
+            "target": "8000 M Mixer / Mill"
+        },
+        {
+            "type": "Value-of",
+            "source": "200 min",
+            "target": "ball milling"
+        }
+    ]
+}

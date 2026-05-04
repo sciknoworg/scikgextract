@@ -1,0 +1,45 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mixed precursors",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "Mixed",
+            "vacuum"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Mixed",
+            "target": "Mixed precursors"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mixed precursors",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum",
+            "target": "sealed"
+        }
+    ]
+}

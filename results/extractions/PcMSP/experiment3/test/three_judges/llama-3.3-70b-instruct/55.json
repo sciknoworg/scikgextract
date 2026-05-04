@@ -1,0 +1,44 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "BN crucible",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "inserted"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "high-pressure cell"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "inserted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure cell",
+            "target": "inserted"
+        }
+    ]
+}

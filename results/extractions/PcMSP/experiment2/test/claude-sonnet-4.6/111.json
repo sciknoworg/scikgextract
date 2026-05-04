@@ -1,0 +1,97 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "LiOH\ua78fH2O",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "precursor",
+            "molar ratio"
+        ],
+        "values": [
+            "1 : 1.02"
+        ],
+        "properties": [
+            {
+                "text": "480 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "730 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "precursor",
+            "target": "Ni0.88Co0.09Al0.03 ( OH ) 2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiOH\ua78fH2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1.02",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "molar ratio",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "480 \u00b0 C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "730 \u00b0 C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "12 h",
+            "target": "calcined"
+        }
+    ]
+}

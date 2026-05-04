@@ -1,0 +1,65 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "crucible",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Ta Tube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "arc welding",
+            "sealed"
+        ],
+        "descriptors": [
+            "evacuated"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "Ta Tube",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Ta Tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta Tube",
+            "target": "arc welding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "arc welding",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        }
+    ]
+}

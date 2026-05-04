@@ -1,3 +1,8 @@
+"""
+PubChem CID Mapping Service for SciKGExtract.
+
+Provides functionality to build an LMDB database mapping chemical synonyms to PubChem CIDs from a TSV file, and to perform lookups with exact, substring, and fuzzy matching. This service is used during the normalization step of the extraction process to resolve chemical entities to their corresponding PubChem CIDs based on the extracted synonyms.
+"""
 # Python imports
 import zlib
 import logging

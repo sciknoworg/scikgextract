@@ -2,17 +2,13 @@
 Structured Knowledge Extraction Tools using Large Language Models (LLMs) and process Schema.
 
 The module defines tools for extracting and refining structured knowledge from scientific documents based on provided process schema and examples. The extraction tool utilizes LLMs to generate structured data, while the refinement tool allows for updating the extracted knowledge based on feedback.
-
-Author: Sameer Sadruddin
-Created: November 21, 2025
-Last Modified: November 27, 2025
 """
 # Python imports
 import json
 from types import SimpleNamespace
 
 # Scikg_Extract Config Imports
-from scikg_extract.config.llm.llmConfig import LLM_REGISTRY
+from scikg_extract.config.llm.llmConfig import ProviderRegistry
 
 # Scikg_Extract Utility Imports
 from scikg_extract.utils.log_handler import LogHandler
@@ -37,16 +33,23 @@ def structured_knowledge_extraction(state: ExtractionState) -> ExtractionState:
     logger.info("Starting structured knowledge extraction tool...")
 
     # Initialize the model adapter
-    inference_adapter = LLM_REGISTRY.get(state.llm_model).inference_adapter
-    model_adapter = inference_adapter(model_name=state.llm_model, temperature=0.1, response_format="json_object")
+    llm_config = ProviderRegistry.resolve_from_string(state.extraction_llm)
+    model_adapter = llm_config.inference_adapter(model_name=llm_config.model_name, temperature=0.1, response_format="json_object")
     logger.debug(f"Initialized Model adapter: {model_adapter}")
 
     # Format the prompt template
     var_dict = {"process_name": state.process_name, "process_description": state.process_description, "process_property_constraints": state.process_property_constraints, "scientific_document": state.scientific_document, "schema": json.dumps(state.process_schema), "examples": state.examples}
 
-    # Extract the knowledge
-    extracted_info = model_adapter.structured_completion(structure_knowledge_extraction, var_dict, state.data_model)
-    logger.debug("Structured knowledge extraction completed.")
+    # Extract the knowledge and raise an exception if the extraction fails after retries
+    try:
+        extracted_info = model_adapter.structured_completion(structure_knowledge_extraction, var_dict, state.data_model)
+        logger.debug("Structured knowledge extraction completed.")
+    except RuntimeError as e:
+        logger.error(f"Error during structured knowledge extraction: {e}")
+        raise e
+
+    if extracted_info is None:
+        raise RuntimeError(f"Structured knowledge extraction returned no result from model: {state.extraction_llm}")
 
     # Update the state with the extracted JSON
     state.extracted_json = json.loads(extracted_info.model_dump_json())
@@ -69,8 +72,8 @@ def refine_extracted_knowledge(state: ExtractionState) -> ExtractionState:
     logger.info("Starting refinement of extracted structured knowledge...")
 
     # Initialize the model adapter
-    inference_adapter = LLM_REGISTRY.get(state.llm_model).inference_adapter
-    model_adapter = inference_adapter(model_name=state.llm_model, temperature=0.1, response_format="json_object")
+    llm_config = ProviderRegistry.resolve_from_string(state.extraction_llm)
+    model_adapter = llm_config.inference_adapter(model_name=llm_config.model_name, temperature=0.1, response_format="json_object")
     logger.debug(f"Initialized Model adapter: {model_adapter}")
 
     # Format the prompt template
@@ -85,8 +88,15 @@ def refine_extracted_knowledge(state: ExtractionState) -> ExtractionState:
     logger.debug(f"Formatted user prompt for refinement:\n{updated_user_prompt}\n")
 
     # Extract the knowledge
-    extracted_info = model_adapter.structured_completion(prompt_template, var_dict, state.data_model)
-    logger.info("Structured knowledge extraction completed.")
+    try:
+        extracted_info = model_adapter.structured_completion(prompt_template, var_dict, state.data_model)
+        logger.info("Structured knowledge extraction completed.")
+    except RuntimeError as e:
+        logger.error(f"Error during refinement of extracted knowledge: {e}")
+        raise e
+
+    if extracted_info is None:
+        raise RuntimeError(f"Refinement of extracted knowledge returned no result from model: {state.extraction_llm}")
 
     # Update the state with the extracted JSON
     state.extracted_json = json.loads(extracted_info.model_dump_json())

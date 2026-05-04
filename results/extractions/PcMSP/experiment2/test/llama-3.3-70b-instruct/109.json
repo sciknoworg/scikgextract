@@ -1,0 +1,95 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tube",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "annealed",
+            "cooled"
+        ],
+        "descriptors": [
+            "vertically",
+            "slowly",
+            "naturally"
+        ],
+        "values": [
+            "823 K",
+            "5 h",
+            "2 days"
+        ],
+        "properties": [
+            {
+                "text": "823 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "box furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "heated",
+            "target": "tube"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "box furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vertically",
+            "target": "tube"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "naturally",
+            "target": "cooled"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "823 K",
+            "target": "heated"
+        }
+    ]
+}

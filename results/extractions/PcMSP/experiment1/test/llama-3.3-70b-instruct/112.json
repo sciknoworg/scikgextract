@@ -1,0 +1,45 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "heating",
+            "cooling"
+        ],
+        "descriptors": [
+            "controlled"
+        ],
+        "values": [
+            "10 \u00b0 C / min"
+        ],
+        "properties": [
+            {
+                "text": "10 \u00b0 C / min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "controlled",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "controlled",
+            "target": "cooling"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 \u00b0 C / min",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 \u00b0 C / min",
+            "target": "cooling"
+        }
+    ]
+}

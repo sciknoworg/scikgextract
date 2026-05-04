@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "BN crucible",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "carbon heater",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "pyrophyllite cube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "high-pressure cell",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "inserted"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "BN crucible",
+            "high-pressure cell",
+            "carbon heater",
+            "crucible",
+            "electrodes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "a",
+            "target": "crucible"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "BN crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure cell",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "carbon heater",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "pyrophyllite cube",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "electrodes",
+            "target": "inserted"
+        }
+    ]
+}

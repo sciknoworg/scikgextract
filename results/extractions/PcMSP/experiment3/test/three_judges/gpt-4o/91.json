@@ -1,0 +1,59 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn(IO3)2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "solid",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "dried"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "polycrystalline"
+        ],
+        "values": [
+            "86%"
+        ],
+        "properties": [
+            {
+                "text": "1 week",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "Mn(IO3)2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn(IO3)2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "solid",
+            "target": "dried"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 week",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "86%",
+            "target": "Mn(IO3)2"
+        }
+    ]
+}

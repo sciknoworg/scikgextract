@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe2 − δF x",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "solid-state reaction",
+            "synthesized"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "Polycrystalline",
+            "sintered pellets"
+        ],
+        "values": [
+            "0.000 ≤ x ≤ 0.010"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "SnSe2 − δF x"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pellets",
+            "target": "SnSe2 − δF x"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sintered pellets",
+            "target": "SnSe2 − δF x"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.000 ≤ x ≤ 0.010",
+            "target": "SnSe2 − δF x"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnSe2 − δF x",
+            "target": "sintered"
+        },
+        {
+            "type": "Condition-of",
+            "source": "solid-state reaction",
+            "target": "synthesized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesized",
+            "target": "sintered"
+        }
+    ]
+}

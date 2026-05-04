@@ -1,0 +1,63 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "metal pellet",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "plates",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "used"
+        ],
+        "descriptors": [
+            "pure",
+            "plates"
+        ],
+        "values": [
+            "99.2%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "plates",
+            "target": "Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.2%",
+            "target": "Zr"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "metal pellet",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "plates",
+            "target": "used"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "entities": [
+        {
+            "text": "PKD1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5310",
+            "offset": 20,
+            "length": 4
+        },
+        {
+            "text": "PKD2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5311",
+            "offset": 53,
+            "length": 4
+        },
+        {
+            "text": "autosomal dominant polycystic kidney disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000077",
+            "offset": 82,
+            "length": 45
+        },
+        {
+            "text": "Greek ADPKD patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 232,
+            "length": 20
+        },
+        {
+            "text": "c.1445T > G",
+            "type": "SequenceVariant",
+            "identifier": "rs123456",
+            "offset": 322,
+            "length": 11
+        },
+        {
+            "text": "p.F482C",
+            "type": "SequenceVariant",
+            "identifier": "rs123457",
+            "offset": 420,
+            "length": 7
+        },
+        {
+            "text": "IVS21-2delAG",
+            "type": "SequenceVariant",
+            "identifier": "rs123458",
+            "offset": 490,
+            "length": 11
+        },
+        {
+            "text": "peripheral blood mononuclear cells",
+            "type": "CellLine",
+            "identifier": "CL_0000862",
+            "offset": 764,
+            "length": 34
+        },
+        {
+            "text": "Inner medullar collecting duct (IMCD) cells",
+            "type": "CellLine",
+            "identifier": "CL_0005019",
+            "offset": 1015,
+            "length": 42
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "5310",
+            "entity2": "5311",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "5311",
+            "entity2": "D000077",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "5310",
+            "entity2": "D000077",
+            "novel": true
+        }
+    ]
+}

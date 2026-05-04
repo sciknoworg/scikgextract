@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnF2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnSe2 \u2212 \ud835\udc65F\ud835\udc65",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "anhydrous",
+            "powder"
+        ],
+        "values": [
+            "( 2 \u2212 \ud835\udc65 ) Sn + \ud835\udc65SnF2 + 2 ( 2 \u2212 \ud835\udc65 ) Se"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "SnF2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnF2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnSe2 \u2212 \ud835\udc65F\ud835\udc65",
+            "target": "mixed"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [
+            "autoclave",
+            "fully"
+        ],
+        "values": [
+            "x = 0.99",
+            "1 K/min",
+            "483 K",
+            "24 h",
+            "0.1 K/min"
+        ],
+        "properties": [
+            {
+                "text": "1 K / min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "autoclave"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Zn-substituted sample",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.99",
+            "target": "Zn-substituted sample"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "autoclave",
+            "target": "heated"
+        },
+        {
+            "type": "Coreference",
+            "source": "rate",
+            "target": "0.1 K / min"
+        },
+        {
+            "type": "Value-of",
+            "source": "483 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 h",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.1 K/min",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "room temperature",
+            "target": "heated"
+        }
+    ]
+}

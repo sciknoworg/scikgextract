@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnF2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnSe₂",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "2 ( 2 − 𝑥 ) Se",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "anhydrous",
+            "powder"
+        ],
+        "values": [
+            "Stoichiometric amounts"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(2 − x) Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "x SnF₂",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2 (2 − x) Se",
+            "target": "mixed"
+        },
+        {
+            "type": "Coreference",
+            "source": "(2 − x) Sn + x SnF₂ + 2 (2 − x) Se → 2 SnSe₂₋ₓFₓ",
+            "target": "mixed"
+        }
+    ]
+}

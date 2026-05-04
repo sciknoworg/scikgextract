@@ -1,0 +1,111 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiOH\ua78fH2O",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "precursor",
+            "molar ratio"
+        ],
+        "values": [
+            "1 : 1.02",
+            "480 \u00b0 C",
+            "5 h",
+            "730 \u00b0 C",
+            "12 h"
+        ],
+        "properties": [
+            {
+                "text": "480 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "730 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "precursor",
+            "target": "Ni0.88Co0.09Al0.03 ( OH ) 2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiOH\ua78fH2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1.02",
+            "target": "LiOH\ua78fH2O"
+        },
+        {
+            "type": "Value-of",
+            "source": "molar ratio",
+            "target": "1 : 1.02"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiOH\ua78fH2O",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "480 \u00b0 C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "730 \u00b0 C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "calcined"
+        }
+    ]
+}

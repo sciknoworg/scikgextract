@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ice water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesis process",
+            "quenched"
+        ],
+        "descriptors": [
+            "high temperature",
+            "ice water",
+            "β-phase"
+        ],
+        "values": [
+            "900 – 1000 °C",
+            "ice water"
+        ],
+        "properties": [
+            {
+                "text": "900 – 1000 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "high temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ice water"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "900 – 1000 °C",
+            "target": "900 – 1000 °C"
+        },
+        {
+            "type": "Condition-of",
+            "source": "high temperature",
+            "target": "metastable β-phase"
+        },
+        {
+            "type": "Participant-material",
+            "source": "metastable β-phase",
+            "target": "used"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "quenched"
+        }
+    ]
+}

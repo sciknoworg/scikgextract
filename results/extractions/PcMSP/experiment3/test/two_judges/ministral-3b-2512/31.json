@@ -1,0 +1,103 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnClₓ",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se grains",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2SnClₓ",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2(2 − x)Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "fused silica tubes",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "→"
+        ],
+        "descriptors": [
+            "Cl-doped",
+            "fused"
+        ],
+        "values": [
+            "stoichiometric",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "600 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "600 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cl-doped SnSe₂",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se grains",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2SnClₓ",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2(2 − x)Se",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se grains"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "2SnClₓ"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "added"
+        },
+        {
+            "type": "Value-of",
+            "source": "600 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "annealed"
+        }
+    ]
+}

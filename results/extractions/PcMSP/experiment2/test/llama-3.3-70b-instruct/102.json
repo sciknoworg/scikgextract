@@ -1,0 +1,95 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingots",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mn1.4PtSn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Rh-substituted samples",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "annealed",
+            "quenching"
+        ],
+        "descriptors": [
+            "evacuated"
+        ],
+        "values": [
+            "873 K",
+            "1073 K",
+            "7 d"
+        ],
+        "properties": [
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1073 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "7 d",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sealed",
+            "target": "ingots"
+        },
+        {
+            "type": "Participant-material",
+            "source": "annealed",
+            "target": "ingots"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quenching",
+            "target": "ingots"
+        },
+        {
+            "type": "Value-of",
+            "source": "873 K",
+            "target": "Pd-substituted samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Mn1.4PtSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Rh-substituted samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "7 d",
+            "target": "annealed"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "(Sr0.95La0.05)GeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined",
+            "synthesize"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "La-doped",
+            "ambient pressure"
+        ],
+        "values": [
+            "1,200 °C",
+            "10 h"
+        ],
+        "properties": [
+            {
+                "text": "1,200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "reagents"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "La-doped",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Condition-of",
+            "source": "ambient pressure",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1,200 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "synthesize"
+        },
+        {
+            "type": "Coreference",
+            "source": "SrGeO3",
+            "target": "SrGeO3"
+        }
+    ]
+}

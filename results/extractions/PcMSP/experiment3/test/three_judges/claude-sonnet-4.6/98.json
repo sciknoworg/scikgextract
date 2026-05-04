@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "stoichiometric mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "Synthesis",
+            "heating"
+        ],
+        "descriptors": [
+            "evacuated",
+            "stoichiometric"
+        ],
+        "values": [
+            "1.7 K / min",
+            "1223 K"
+        ],
+        "properties": [
+            {
+                "text": "1.7 K / min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "1223 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz ampoules"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoules"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoules",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "stoichiometric mixture"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1.7 K / min",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1223 K",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "1.7 K / min",
+            "target": "stoichiometric mixture"
+        },
+        {
+            "type": "Value-of",
+            "source": "1223 K",
+            "target": "stoichiometric mixture"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heating",
+            "target": "Synthesis"
+        }
+    ]
+}

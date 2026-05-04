@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQA8",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "HQ",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "followed",
+            "annealed"
+        ],
+        "descriptors": [
+            "homogenized-quenched-annealed",
+            "same"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "8 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "623 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "HQA8",
+            "target": "homogenized-quenched-annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "followed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA8",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "8 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "623 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "same",
+            "target": "followed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "followed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQ",
+            "target": "followed"
+        }
+    ]
+}

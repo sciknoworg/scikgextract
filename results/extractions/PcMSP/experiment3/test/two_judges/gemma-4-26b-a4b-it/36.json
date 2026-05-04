@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "heated"
+        ],
+        "descriptors": [
+            "gradually",
+            "in the air"
+        ],
+        "values": [
+            "5 °C/min",
+            "900 °C"
+        ],
+        "properties": [
+            {
+                "text": "5 °C/min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "aluminium / platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 °C/min",
+            "target": "5 °C/min"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 °C",
+            "target": "900 °C"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "heated"
+        }
+    ]
+}

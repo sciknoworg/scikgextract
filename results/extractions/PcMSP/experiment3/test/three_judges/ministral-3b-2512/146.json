@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mixed precursors",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "silica"
+        ],
+        "values": [
+            "Not Found"
+        ],
+        "properties": [
+            {
+                "text": "vacuum",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "tubes"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "precursors",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "under vacuum",
+            "target": "precursors"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "silica",
+            "target": "tubes"
+        }
+    ]
+}

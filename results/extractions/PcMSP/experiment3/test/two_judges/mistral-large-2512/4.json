@@ -1,0 +1,109 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "(Sr0.95La0.05)GeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined",
+            "synthesize"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "AP"
+        ],
+        "values": [
+            "1,200 °C",
+            "10 h"
+        ],
+        "properties": [
+            {
+                "text": "1,200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "(Sr0.95La0.05)GeO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(Sr0.95La0.05)GeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "AP",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "1,200 °C",
+            "target": "1,200 °C"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 h",
+            "target": "10 h"
+        },
+        {
+            "type": "Coreference",
+            "source": "synthesize",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "calcined"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sr4Cr3O9",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "solid state synthesis"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "samples"
+        ],
+        "values": [
+            "\u223c 2 g"
+        ],
+        "properties": [
+            {
+                "text": "Not Found",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "samples"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "Sr4Cr3O9"
+        },
+        {
+            "type": "Coreference",
+            "source": "solid state synthesis",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sr4Cr3O9",
+            "target": "prepared"
+        },
+        {
+            "type": "Value-of",
+            "source": "\u223c 2 g",
+            "target": "samples"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "prepared"
+        }
+    ]
+}

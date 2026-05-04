@@ -1,0 +1,93 @@
+{
+    "entities": [
+        {
+            "text": "carbonyl reductase 3",
+            "type": "GeneOrGeneProduct",
+            "identifier": "1576",
+            "offset": 76,
+            "length": 20
+        },
+        {
+            "text": "NQO1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "4708",
+            "offset": 104,
+            "length": 4
+        },
+        {
+            "text": "anthracyclines",
+            "type": "ChemicalEntity",
+            "identifier": "C0087055",
+            "offset": 140,
+            "length": 12
+        },
+        {
+            "text": "congestive heart failure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0018805",
+            "offset": 173,
+            "length": 22
+        },
+        {
+            "text": "childhood cancer",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0008059",
+            "offset": 234,
+            "length": 14
+        },
+        {
+            "text": "CBR3 V244M",
+            "type": "SequenceVariant",
+            "identifier": "rs11576173",
+            "offset": 341,
+            "length": 10
+        },
+        {
+            "text": "NQO1*2",
+            "type": "SequenceVariant",
+            "identifier": "rs1800566",
+            "offset": 394,
+            "length": 6
+        },
+        {
+            "text": "doxorubicin",
+            "type": "ChemicalEntity",
+            "identifier": "C0113816",
+            "offset": 456,
+            "length": 10
+        },
+        {
+            "text": "doxorubicinol",
+            "type": "ChemicalEntity",
+            "identifier": "C0342553",
+            "offset": 512,
+            "length": 11
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C0087055",
+            "entity2": "C0018805",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs11576173",
+            "entity2": "C0342553",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "rs1800566",
+            "entity2": "C0018805",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "C0113816",
+            "entity2": "C0342553",
+            "novel": false
+        }
+    ]
+}

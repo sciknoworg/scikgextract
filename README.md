@@ -10,52 +10,48 @@
 
 </div>
 
-<h3 align="center">SciKG_Extract: An Agentic Workflow for Structured Scientific Knowledge Extraction</h3>
+<h3 align="center">SciKGExtract: An Agentic Workflow for Structured Scientific Knowledge Extraction</h3>
 
 # 📋 Overview
 
-SciKG_Extract is a comprehensive agentic framework designed to extract structured scientific knowledge from research papers based on a semantic schema representation of the target domain. The framework leverages Large Language Models (LLMs) to interpret and extract relevant information based on a schema and incorporates various tools and techniques like JSON validation, normalization using external data sources etc. to ensure accuracy and semantic consistency of the extracted data.
+SciKGExtract is an agentic framework for extracting structured scientific knowledge from research papers using Large Language Models (LLMs). Given a target domain described by a semantic schema, the system orchestrates a multi-stage LangGraph workflow that extracts, validates, normalizes, and iteratively refines structured JSON from scientific text.
 
-# 📁 SciKG_Extract Structure
+The framework is domain-agnostic and has been applied to both **materials science** (Atomic Layer Deposition, PolyIE and PcMSP) and **biomedical NLP** benchmarks (BC5CDR and BioRED). It supports four LLM providers (OpenAI, SAIA, Ollama, HuggingFace) and six progressive extraction pipeline variants — from plain schema-constrained extraction up to multi-agent debate-style self-refinement.
 
+# ✨ Key Features
+
+- **Schema-driven extraction** — structured output is constrained by a user-defined JSON Schema, ensuring results conform to a domain-specific data model
+- **Agentic pipeline with LangGraph** — modular workflow composed of extraction, reflection, feedback, and orchestration agents
+- **Multi-provider LLM support** — unified `PROVIDER:model` interface for OpenAI, SAIA, Ollama, and HuggingFace models
+- **PubChem entity normalization** — chemical compound names are resolved to PubChem CIDs via a local LMDB database for semantic consistency
+- **LLM-as-a-Judge evaluation** — extracted knowledge is scored against Correctness and Completeness rubrics by one or more judge LLMs
+
+# 🖊️ Citation
+
+If you use SciKGExtract in your research, please cite:
+
+```bibtex
+@misc{scikgextract-2026,
+  title  = {SciKGExtract: An Agentic Workflow for Structured Scientific Knowledge Extraction},
+  author = {Sadruddin, Sameer and D'Souza, Jennifer},
+  year   = {2026},
+  url    = {https://github.com/sciknoworg/scikgextract}
+}
 ```
-scikg_extract/
-├── agents/                                     # LangGraph agentic workflow components
-│   ├── extraction_agent.py                     # Main extraction agent orchestrator
-│   └── states.py                               # State definitions for agent workflow
-├── config/                                     # Configuration management
-│   ├── envConfig.py                            # Environment variables and settings
-│   ├── normalizationConfig.py                  # Chemical name normalization configuration
-│   └── processConfig.py                        # Process-specific configurations
-├── models/                                     # LLM model adapters and interfaces
-│   ├── model_adapter.py                        # Base adapter interface for LLM models
-│   ├── openai_adapter.py                       # OpenAI API adapter (GPT-4, GPT-3.5)
-├── prompts/                                    # Prompt templates for LLM interactions
-│   ├── agents/                                 # Agent-specific prompts
-│   └── tools/                                  # Tool-specific prompts
-│       └── structure_knowledge_extraction.py   # Prompts for structured extraction
-├── services/                                   # External service integrations
-│   └── pubchem_cid_mapping.py                  # PubChem API integration and CID mapping
-├── tools/                                      # Tools for agent workflow
-│   ├── json_cleaner.py                         # Clean and normalize JSON data
-│   ├── json_validator.py                       # Validate JSON against schemas
-│   ├── pubchem_normalization.py                # Normalize chemical names with PubChem
-│   └── structured_knowledge_extraction.py      # Main structured extraction tool
-└── utils/                                      # Utility functions and helpers
-    ├── dict_utils.py                           # Dictionary utilities
-    ├── evaluation_utils.py                     # Evaluation metrics and comparison tools
-    ├── file_utils.py                           # File I/O operations
-    ├── json_utils.py                           # JSON-specific utilities
-    ├── log_handler.py                          # Logging configuration and management
-    ├── rest_client.py                          # REST API client utilities
-    └── string_utils.py                         # String manipulation utilities
-```
+
+> This citation will be updated with the full reference upon publication.
 
 # 👥 Contact and Collaboration
 
 For questions, suggestions, or collaboration opportunities, please reach out to the project maintainers.
 
-- **Issues or Bug Reports**: Please use the GitHub Issues section of this repository to report bugs or request features.
+| | |
+|---|---|
+| **Jennifer D'Souza** | jennifer.dsouza@tib.eu |
+| **Sameer Sadruddin** | sameer.sadruddin@tib.eu |
+
+- **Issues & Bug Reports**: [GitHub Issues](https://github.com/sciknoworg/scikgextract/issues)
 
 # 📃 License
+
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.

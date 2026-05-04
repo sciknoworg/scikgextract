@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "held",
+            "air-quenched"
+        ],
+        "descriptors": [
+            "homogenized",
+            "H"
+        ],
+        "values": [
+            "1173 K",
+            "144 h",
+            "6 d"
+        ],
+        "properties": [
+            {
+                "text": "144 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "144 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "the sample",
+            "target": "air-quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "H",
+            "target": "sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1173 K",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "144 h",
+            "target": "held"
+        },
+        {
+            "type": "Coreference",
+            "source": "6 d",
+            "target": "144 h"
+        },
+        {
+            "type": "Next-operation",
+            "source": "air-quenched",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "air-quenched"
+        }
+    ]
+}

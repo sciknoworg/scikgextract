@@ -1,0 +1,74 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zn(IO₃)₂",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Zn ( IO3 ) 2",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "precipitated",
+            "precipitated",
+            "dried"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "collected by filtration",
+            "dried in air"
+        ],
+        "values": [
+            "65 %"
+        ],
+        "properties": [
+            {
+                "text": "after 3 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "filtration"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Zn(IO₃)₂"
+        },
+        {
+            "type": "Value-of",
+            "source": "65%",
+            "target": "Zn(IO₃)₂"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zn",
+            "target": "precipitated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "3 days",
+            "target": "precipitated"
+        },
+        {
+            "type": "Coreference",
+            "source": "filtration",
+            "target": "collected"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "filtration",
+            "target": "collected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "dried in air",
+            "target": "Zn(IO₃)₂"
+        }
+    ]
+}

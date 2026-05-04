@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "elements",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Gd",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "taken",
+            "melting"
+        ],
+        "descriptors": [
+            "starting",
+            "stoichiometric",
+            "excess",
+            "purity"
+        ],
+        "values": [
+            "99%",
+            "1%",
+            "1% excess"
+        ],
+        "properties": [
+            {
+                "text": "99%",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "starting",
+            "target": "elements"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "ratios"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "Gd"
+        },
+        {
+            "type": "Value-of",
+            "source": "99%",
+            "target": "purity"
+        },
+        {
+            "type": "Value-of",
+            "source": "1% excess",
+            "target": "Gd"
+        },
+        {
+            "type": "Participant-material",
+            "source": "elements",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Gd",
+            "target": "taken"
+        },
+        {
+            "type": "Condition-of",
+            "source": "stoichiometric",
+            "target": "taken"
+        },
+        {
+            "type": "Coreference",
+            "source": "melting",
+            "target": "taken"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "purity",
+            "target": "elements"
+        }
+    ]
+}

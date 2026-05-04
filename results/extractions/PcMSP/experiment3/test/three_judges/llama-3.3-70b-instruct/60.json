@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "2H-MoTe2",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "grown",
+            "cooling treatments"
+        ],
+        "descriptors": [
+            "crystals"
+        ],
+        "values": [
+            "700–800 °C",
+            "100 °C/h"
+        ],
+        "properties": [
+            {
+                "text": "700–800 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "100 °C/h",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "2H-MoTe2",
+            "target": "grown"
+        },
+        {
+            "type": "Condition-of",
+            "source": "700–800 °C",
+            "target": "grown"
+        },
+        {
+            "type": "Condition-of",
+            "source": "100 °C/h",
+            "target": "cooling treatments"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "crystals",
+            "target": "2H-MoTe2"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "grown"
+        }
+    ]
+}

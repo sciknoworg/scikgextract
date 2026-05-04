@@ -1,0 +1,148 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "CsAs powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "sealed",
+            "heated",
+            "furnace cooling"
+        ],
+        "descriptors": [
+            "stoichiometric ratio",
+            "excess",
+            "evacuated",
+            "quartz"
+        ],
+        "values": [
+            "2.3 : 3 : 0.7",
+            "523 K",
+            "20 h"
+        ],
+        "properties": [
+            {
+                "text": "523 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "20 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "agate mortar",
+            "quartz tube",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "CsAs"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs powder",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As powder",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "ground"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.3 : 3 : 0.7",
+            "target": "Mo"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.3 : 3 : 0.7",
+            "target": "As powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs powder",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "523 K",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "20 h",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "furnace cooling"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "furnace cooling"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "obtained",
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "obtained",
+            "residual"
+        ],
+        "values": [
+            "13 mm",
+            "∼ 10⁻⁴ Torr"
+        ],
+        "properties": [
+            {
+                "text": "13 mm",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "∼ 10⁻⁴ Torr",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "obtained",
+            "target": "powder sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Next-operation",
+            "source": "flame-sealed",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "∼ 10⁻⁴ Torr",
+            "target": "Property-pressure"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "residual",
+            "target": "∼ 10⁻⁴ Torr"
+        }
+    ]
+}

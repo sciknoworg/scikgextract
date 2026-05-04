@@ -1,0 +1,120 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sr-Cr mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "were taken",
+            "mixed",
+            "placed",
+            "reacted"
+        ],
+        "descriptors": [
+            "powder",
+            "industrial grade",
+            "about 1% air"
+        ],
+        "values": [
+            "4:3",
+            "1100 °C",
+            "24 hrs",
+            "1%"
+        ],
+        "properties": [
+            {
+                "text": "1100 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Al2O3 crucible",
+            "agate mortar"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Sr-Cr mixture"
+        },
+        {
+            "type": "Value-of",
+            "source": "4:3",
+            "target": "Sr-Cr mixture"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1100 °C",
+            "target": "reacted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 hrs",
+            "target": "reacted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "in a flow of industrial grade Ar containing about 1% air",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sr",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cr",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Al2O3 crucible",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "reacted"
+        },
+        {
+            "type": "Coreference",
+            "source": "were taken",
+            "target": "mixed"
+        }
+    ]
+}

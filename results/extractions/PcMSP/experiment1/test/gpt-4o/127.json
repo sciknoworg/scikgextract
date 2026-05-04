@@ -1,0 +1,39 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "turned",
+            "remelted"
+        ],
+        "descriptors": [
+            "several times",
+            "homogeneity"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "turned"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneity",
+            "target": "remelted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "remelted",
+            "target": "turned"
+        }
+    ]
+}

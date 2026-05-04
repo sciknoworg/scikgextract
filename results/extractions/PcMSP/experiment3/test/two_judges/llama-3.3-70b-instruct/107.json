@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "jar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "taken",
+            "subjected"
+        ],
+        "descriptors": [],
+        "values": [
+            "450 rpm",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "rotational speed",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "planetary ball mill",
+            "glove box",
+            "jar"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Value-of",
+            "source": "450 rpm",
+            "target": "rotational speed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "time"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "jar",
+            "target": "subjected"
+        }
+    ]
+}

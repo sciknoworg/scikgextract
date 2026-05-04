@@ -1,0 +1,156 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "CsAs",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "sealed",
+            "heated",
+            "furnace cooling"
+        ],
+        "descriptors": [
+            "excess",
+            "stoichiometric",
+            "powder"
+        ],
+        "values": [
+            "2.3:3:0.7"
+        ],
+        "properties": [
+            {
+                "text": "523 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "20 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "agate mortar",
+            "quartz tube",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "furnace cooling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "523 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "20 h",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "furnace cooling"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "Cs"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "2.3:3:0.7"
+        }
+    ]
+}

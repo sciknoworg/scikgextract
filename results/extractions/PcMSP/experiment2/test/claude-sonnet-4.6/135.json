@@ -1,0 +1,152 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb0.18Re0.82",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "niobium",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "rhenium",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "argon gas",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "melting"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "stoichiometric",
+            "high purity",
+            "powder",
+            "shot",
+            "ultra-high-purity",
+            "flowing"
+        ],
+        "values": [
+            "0.3 g",
+            "99.95 %",
+            "99.999 %"
+        ],
+        "properties": [],
+        "devices": [
+            "arc-melter",
+            "tungsten electrode",
+            "water-cooled copper hearth"
+        ],
+        "brands": [
+            "Alfa Aesar",
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.3 g",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Coreference",
+            "source": "melting",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb0.18Re0.82",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "niobium",
+            "target": "melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "rhenium",
+            "target": "melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "argon gas",
+            "target": "melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "niobium"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "niobium"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95 %",
+            "target": "niobium"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "niobium"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "shot",
+            "target": "rhenium"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999 %",
+            "target": "rhenium"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "rhenium"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ultra-high-purity",
+            "target": "argon gas"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "flowing",
+            "target": "argon gas"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc-melter",
+            "target": "melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "tungsten electrode",
+            "target": "melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "water-cooled copper hearth",
+            "target": "melting"
+        }
+    ]
+}

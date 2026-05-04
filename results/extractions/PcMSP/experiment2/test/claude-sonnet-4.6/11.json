@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "set"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "950 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "850 \u00b0 C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "source",
+            "sink"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "source",
+            "target": "set"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "sink",
+            "target": "set"
+        },
+        {
+            "type": "Condition-of",
+            "source": "950 \u00b0 C",
+            "target": "set"
+        },
+        {
+            "type": "Condition-of",
+            "source": "850 \u00b0 C",
+            "target": "set"
+        },
+        {
+            "type": "Value-of",
+            "source": "950 \u00b0 C",
+            "target": "source"
+        },
+        {
+            "type": "Value-of",
+            "source": "850 \u00b0 C",
+            "target": "sink"
+        }
+    ]
+}

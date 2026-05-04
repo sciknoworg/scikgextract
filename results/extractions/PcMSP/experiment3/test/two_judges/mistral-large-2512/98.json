@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "Synthesis",
+            "heating"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "evacuated"
+        ],
+        "values": [
+            "1.7 K / min",
+            "1223 K"
+        ],
+        "properties": [
+            {
+                "text": "1223 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1.7 K / min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "quartz ampoules"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoules"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoules",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "1.7 K / min",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "1223 K",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1223 K",
+            "target": "heating"
+        },
+        {
+            "type": "Coreference",
+            "source": "Synthesis",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "Synthesis"
+        }
+    ]
+}

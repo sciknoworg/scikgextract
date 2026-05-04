@@ -1,0 +1,56 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingots",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "ipped",
+            "remelted"
+        ],
+        "descriptors": [
+            "homogeneity",
+            "three"
+        ],
+        "values": [
+            "three"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneity",
+            "target": "ingots"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "ipped"
+        },
+        {
+            "type": "Next-operation",
+            "source": "remelted",
+            "target": "ipped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "remelted"
+        },
+        {
+            "type": "Value-of",
+            "source": "three",
+            "target": "remelted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "three",
+            "target": "remelted"
+        }
+    ]
+}

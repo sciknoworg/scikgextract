@@ -1,0 +1,109 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "synthesized ingots",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4PtSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Rh-substituted samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "annealed",
+            "quenching"
+        ],
+        "descriptors": [
+            "evacuated",
+            "Pd-substituted",
+            "Rh-substituted",
+            "parent compound"
+        ],
+        "values": [
+            "873 K",
+            "1073 K",
+            "7 d"
+        ],
+        "properties": [
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1073 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "7 d",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube",
+            "ice-water mixture"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "synthesized ingots",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "873 K",
+            "target": "Pd-substituted samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Mn1.4PtSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Rh-substituted samples"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ice-water mixture",
+            "target": "quenching"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pd-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4PtSn",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh-substituted samples",
+            "target": "annealed"
+        }
+    ]
+}

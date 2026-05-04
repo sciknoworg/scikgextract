@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "furnace-cooled",
+            "treated"
+        ],
+        "descriptors": [
+            "vacuum-sealed",
+            "quartz",
+            "vacuum-sealed"
+        ],
+        "values": [
+            "1100 °C",
+            "one week"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule",
+            "ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum-sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ternary mixtures",
+            "target": "treated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "treated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1100 ° C",
+            "target": "treated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "one week",
+            "target": "treated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "treated",
+            "target": "furnace-cooled"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ternary",
+            "target": "mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "room temperature",
+            "target": "furnace-cooled"
+        }
+    ]
+}

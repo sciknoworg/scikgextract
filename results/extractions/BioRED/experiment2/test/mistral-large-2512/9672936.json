@@ -1,0 +1,119 @@
+{
+    "entities": [
+        {
+            "text": "pethidine",
+            "type": "ChemicalEntity",
+            "identifier": "D010586",
+            "offset": 40,
+            "length": 8
+        },
+        {
+            "text": "postoperative pain control",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010146",
+            "offset": 95,
+            "length": 24
+        },
+        {
+            "text": "seizure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D012640",
+            "offset": 148,
+            "length": 7
+        },
+        {
+            "text": "pethidine",
+            "type": "ChemicalEntity",
+            "identifier": "D010586",
+            "offset": 203,
+            "length": 8
+        },
+        {
+            "text": "norpethidine",
+            "type": "ChemicalEntity",
+            "identifier": "C006870",
+            "offset": 217,
+            "length": 11
+        },
+        {
+            "text": "central nervous system excitation",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D002535",
+            "offset": 270,
+            "length": 32
+        },
+        {
+            "text": "CNS toxicity",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D002535",
+            "offset": 320,
+            "length": 12
+        },
+        {
+            "text": "pethidine",
+            "type": "ChemicalEntity",
+            "identifier": "D010586",
+            "offset": 380,
+            "length": 8
+        },
+        {
+            "text": "norpethidine",
+            "type": "ChemicalEntity",
+            "identifier": "C006870",
+            "offset": 394,
+            "length": 11
+        },
+        {
+            "text": "postoperative analgesia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010146",
+            "offset": 510,
+            "length": 21
+        },
+        {
+            "text": "pethidine",
+            "type": "ChemicalEntity",
+            "identifier": "D010586",
+            "offset": 550,
+            "length": 8
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D010586",
+            "entity2": "D012640",
+            "novel": true
+        },
+        {
+            "type": "Conversion",
+            "entity1": "D010586",
+            "entity2": "C006870",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D010586",
+            "entity2": "D002535",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C006870",
+            "entity2": "D002535",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D010586",
+            "entity2": "C006870",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D010586",
+            "entity2": "D010146",
+            "novel": false
+        }
+    ]
+}

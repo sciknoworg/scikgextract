@@ -1,0 +1,44 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "stirred"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "80 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 ° C",
+            "target": "stirred"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        }
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "entities": [
+        {
+            "text": "chronic kidney disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007676",
+            "offset": 148,
+            "length": 21
+        },
+        {
+            "text": "iopamidol",
+            "type": "ChemicalEntity",
+            "identifier": "D019885",
+            "offset": 108,
+            "length": 9
+        },
+        {
+            "text": "iodixanol",
+            "type": "ChemicalEntity",
+            "identifier": "D062947",
+            "offset": 136,
+            "length": 9
+        },
+        {
+            "text": "Serum creatinine",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D012701",
+            "offset": 380,
+            "length": 16
+        },
+        {
+            "text": "SCr",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D012701",
+            "offset": 397,
+            "length": 3
+        },
+        {
+            "text": "glomerular filtration rate",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005918",
+            "offset": 410,
+            "length": 25
+        },
+        {
+            "text": "estimated glomerular filtration rate",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005918",
+            "offset": 440,
+            "length": 32
+        },
+        {
+            "text": "diabetes mellitus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003920",
+            "offset": 580,
+            "length": 16
+        },
+        {
+            "text": "N-acetylcysteine",
+            "type": "ChemicalEntity",
+            "identifier": "D000112",
+            "offset": 610,
+            "length": 16
+        },
+        {
+            "text": "contrast-induced nephropathy",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D062996",
+            "offset": 800,
+            "length": 26
+        },
+        {
+            "text": "cardiac angiography",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 250,
+            "length": 19
+        },
+        {
+            "text": "percutaneous coronary interventions",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 275,
+            "length": 32
+        },
+        {
+            "text": "patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 170,
+            "length": 8
+        }
+    ],
+    "relations": [
+        {
+            "type": "Comparison",
+            "entity1": "D019885",
+            "entity2": "D062947",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D019885",
+            "entity2": "D062996",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D062947",
+            "entity2": "D062996",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D012701",
+            "entity2": "D019885",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D012701",
+            "entity2": "D062947",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D000112",
+            "entity2": "D019885",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D000112",
+            "entity2": "D062947",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D003920",
+            "entity2": "D062996",
+            "novel": false
+        }
+    ]
+}

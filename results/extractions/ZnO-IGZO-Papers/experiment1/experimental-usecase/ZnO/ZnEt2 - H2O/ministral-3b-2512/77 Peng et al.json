@@ -1,0 +1,414 @@
+{
+    "processes": [
+        {
+            "aldSystem": {
+                "aldMethod": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "method": "TALD"
+                    },
+                    {
+                        "compound": {
+                            "value": "Al\u2082O\u2083",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5359268"
+                            ]
+                        },
+                        "method": "TALD"
+                    }
+                ],
+                "materialDeposited": {
+                    "value": "ZnAl\u2082O\u2084",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/5359268"
+                    ]
+                }
+            },
+            "reactantSelection": {
+                "precursor": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "diethylzinc (DEZ)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/11185",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/101667988"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Al\u2082O\u2083",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5359268"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "trimethylaluminum (TMA)",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/7852",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/241178067",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/16682925"
+                            ]
+                        }
+                    }
+                ],
+                "coReactant": [
+                    {
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "H\u2082O",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        }
+                    },
+                    {
+                        "compound": {
+                            "value": "Al\u2082O\u2083",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/5359268"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "H\u2082O",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        }
+                    }
+                ],
+                "carrierGas": {
+                    "value": "Ar",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/23968"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "Ar",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/23968"
+                    ]
+                }
+            },
+            "processParameters": {
+                "reactor": {
+                    "name": "custom-built hotwall viscous flow tube reactor",
+                    "manufacturer": "Not Found"
+                },
+                "plasmaPower": null,
+                "substrate": {
+                    "value": "electrospun PVA microfibers",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                },
+                "deliveryMethod": "pulsed vapor delivery",
+                "temperature": {
+                    "quantityValue": {
+                        "numericValue": 45.0,
+                        "unit": {
+                            "hasQuantityKind": "Temperature",
+                            "sameAs": "DEG_C"
+                        }
+                    },
+                    "quantityKind": "Temperature"
+                },
+                "pressure": {
+                    "quantityValue": {
+                        "numericValue": 0.9,
+                        "unit": {
+                            "hasQuantityKind": "ForcePerArea",
+                            "sameAs": "MilliM_HG"
+                        }
+                    },
+                    "quantityKind": "ForcePerArea"
+                },
+                "thicknessControl": {
+                    "growthPerCycle": {
+                        "values": [
+                            {
+                                "compound": "Al\u2082O\u2083",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.08,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "NanoM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            },
+                            {
+                                "compound": "ZnO",
+                                "value": {
+                                    "quantityValue": {
+                                        "numericValue": 0.19,
+                                        "unit": {
+                                            "hasQuantityKind": "Length",
+                                            "sameAs": "NanoM"
+                                        }
+                                    },
+                                    "quantityKind": "Length"
+                                }
+                            }
+                        ],
+                        "numberofCycles": {
+                            "quantityValue": {
+                                "numericValue": null,
+                                "unit": {
+                                    "hasQuantityKind": "Count",
+                                    "sameAs": "UNITLESS"
+                                }
+                            },
+                            "quantityKind": "Count"
+                        },
+                        "filmThickness": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        }
+                    },
+                    "saturation": true,
+                    "nucleationPeriod": {
+                        "quantityValue": {
+                            "numericValue": null,
+                            "unit": {
+                                "hasQuantityKind": "Count",
+                                "sameAs": "UNITLESS"
+                            }
+                        },
+                        "quantityKind": "Count"
+                    },
+                    "dosingTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 2.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        },
+                        {
+                            "compound": "Al\u2082O\u2083",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 5.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 1.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "purgeTime": [
+                        {
+                            "compound": "ZnO",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 120.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        },
+                        {
+                            "compound": "Al\u2082O\u2083",
+                            "precursor": {
+                                "quantityValue": {
+                                    "numericValue": 20.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            },
+                            "coReactant": {
+                                "quantityValue": {
+                                    "numericValue": 60.0,
+                                    "unit": {
+                                        "hasQuantityKind": "Time",
+                                        "sameAs": "MilliSEC"
+                                    }
+                                },
+                                "quantityKind": "Time"
+                            }
+                        }
+                    ],
+                    "flowRates": [
+                        {
+                            "compound": "ZnO",
+                            "precursorFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "coReactantFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            },
+                            "purgingGasFlow": {
+                                "quantityValue": {
+                                    "numericValue": null,
+                                    "unit": {
+                                        "hasQuantityKind": "MolarFlowRate",
+                                        "sameAs": "SCM-PER-MIN"
+                                    }
+                                },
+                                "quantityKind": "MolarFlowRate"
+                            }
+                        }
+                    ],
+                    "filmThickness": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "supercycleDesign": null
+            },
+            "materialProperties": {
+                "opticalProperties": null,
+                "electricalProperties": null,
+                "uniformity": {
+                    "variation": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "conformality": {
+                    "aspectRatio": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    }
+                },
+                "filmComposition": {
+                    "elementalConcentration": {
+                        "values": {
+                            "quantityValue": null,
+                            "quantityKind": null
+                        },
+                        "characterizationMethod": "Not Found"
+                    },
+                    "atomicRatio": {
+                        "elements": [
+                            "Zn",
+                            "Al"
+                        ],
+                        "value": "1:2",
+                        "characterizationMethod": "Not Found"
+                    }
+                },
+                "chemicalComposition": "ZnAl\u2082O\u2084",
+                "crystallinity": {
+                    "phase": "polycrystalline",
+                    "characterizationMethod": "XRD"
+                },
+                "roughness": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "Not Found"
+                },
+                "filmDensity": {
+                    "value": {
+                        "quantityValue": null,
+                        "quantityKind": null
+                    },
+                    "characterizationMethod": "Not Found"
+                }
+            },
+            "deviceProperties": {
+                "fieldEffectMobility": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "thresholdVoltage": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "subthresholdSwing": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "onOffRatio": {
+                    "quantityValue": null,
+                    "quantityKind": null
+                },
+                "deviceStructure": "Not Found"
+            },
+            "otherAspects": {
+                "safety": "Handling of TMA and DEZ requires proper ventilation and safety measures due to their volatile and potentially hazardous nature.",
+                "filmStability": true,
+                "reproducibility": true
+            }
+        }
+    ]
+}

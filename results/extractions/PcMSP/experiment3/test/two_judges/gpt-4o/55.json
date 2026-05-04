@@ -1,0 +1,44 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "sealed",
+            "inserted"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "BN crucible",
+            "high-pressure cell",
+            "carbon heater",
+            "pyrophyllite cube",
+            "electrodes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "BN crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure cell",
+            "target": "inserted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "high-pressure cell"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "inserted"
+        }
+    ]
+}

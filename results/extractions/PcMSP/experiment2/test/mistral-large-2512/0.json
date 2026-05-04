@@ -1,0 +1,74 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MnSi1 \u2212 xGex",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ge",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "high-pressure"
+        ],
+        "values": [
+            "1 \u2212 x"
+        ],
+        "properties": [],
+        "devices": [
+            "high-pressure synthesis apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "MnSi1 \u2212 xGex"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Si",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ge",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MnSi1 \u2212 xGex",
+            "target": "prepared"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure synthesis apparatus",
+            "target": "prepared"
+        }
+    ]
+}

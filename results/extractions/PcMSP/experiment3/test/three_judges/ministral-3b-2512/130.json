@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "evacuated"
+        ],
+        "descriptors": [
+            "evacuated",
+            "5 N purity"
+        ],
+        "values": [
+            "an"
+        ],
+        "properties": [
+            {
+                "text": "quartz ampoule",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "5 N",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Zr:Si:S (1:1:1 molar ratio)",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr:Si:S (1:1:1 molar ratio)",
+            "target": "evacuated"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "Zr:Si:S (1:1:1 molar ratio)"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "ampoule"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "precursors"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "evacuated"
+        }
+    ]
+}

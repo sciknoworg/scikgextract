@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "text": "methamphetamine",
+            "type": "ChemicalEntity",
+            "identifier": "D007725",
+            "offset": 1,
+            "length": 10
+        },
+        {
+            "text": "alpha-tocopherol",
+            "type": "ChemicalEntity",
+            "identifier": "D001209",
+            "offset": 29,
+            "length": 13
+        },
+        {
+            "text": "deferoxamine",
+            "type": "ChemicalEntity",
+            "identifier": "D001659",
+            "offset": 47,
+            "length": 12
+        },
+        {
+            "text": "dopamine",
+            "type": "GeneOrGeneProduct",
+            "identifier": "3631",
+            "offset": 109,
+            "length": 8
+        },
+        {
+            "text": "serotonin",
+            "type": "GeneOrGeneProduct",
+            "identifier": "3632",
+            "offset": 118,
+            "length": 8
+        },
+        {
+            "text": "rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 67,
+            "length": 4
+        },
+        {
+            "text": "lipid peroxidation",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D01830",
+            "offset": 180,
+            "length": 18
+        },
+        {
+            "text": "oxidative stress",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D01830",
+            "offset": 230,
+            "length": 14
+        },
+        {
+            "text": "glucose",
+            "type": "ChemicalEntity",
+            "identifier": "D005947",
+            "offset": 1304,
+            "length": 7
+        }
+    ],
+    "relations": [
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D001209",
+            "entity2": "D007725",
+            "novel": false
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D001659",
+            "entity2": "D007725",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D007725",
+            "entity2": "D01830",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D007725",
+            "entity2": "3631",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D007725",
+            "entity2": "3632",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D001830",
+            "entity2": "D001209",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D001830",
+            "entity2": "D001659",
+            "novel": true
+        }
+    ]
+}

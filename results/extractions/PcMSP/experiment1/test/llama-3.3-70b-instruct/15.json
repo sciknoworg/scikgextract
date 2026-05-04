@@ -1,0 +1,49 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "phase",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "annealing"
+        ],
+        "descriptors": [
+            "phase homogeneity"
+        ],
+        "values": [
+            "10 days",
+            "950 \t C"
+        ],
+        "properties": [
+            {
+                "text": "10 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "950 \t C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "annealing",
+            "target": "phase homogeneity"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 days",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "950 \t C",
+            "target": "annealing"
+        }
+    ]
+}

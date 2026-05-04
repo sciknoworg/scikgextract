@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "IrO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Y2O3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sintering"
+        ],
+        "descriptors": [
+            "evaporates easily"
+        ],
+        "values": [
+            "4 – 10%",
+            "1 : 2"
+        ],
+        "properties": [
+            {
+                "text": "excess IrO2 (relative to stoichiometry)",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "evaporates easily",
+            "target": "IrO2"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 – 10%",
+            "target": "excess IrO2 (relative to stoichiometry)"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 2",
+            "target": "stoichiometric ratio"
+        },
+        {
+            "type": "Participant-material",
+            "source": "IrO2",
+            "target": "sintering"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Y2O3",
+            "target": "sintering"
+        },
+        {
+            "type": "Condition-of",
+            "source": "evaporates easily",
+            "target": "sintering"
+        }
+    ]
+}

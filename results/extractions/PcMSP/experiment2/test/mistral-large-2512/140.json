@@ -1,0 +1,137 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TrZr2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.2Co0.2Ni0.2Rh0.2Ir0.2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.3Co0.2Ni0.3Rh0.1Ir0.1",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "arc melting"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "Ar atmosphere"
+        ],
+        "values": [
+            "0.1",
+            "0.2",
+            "0.3",
+            "1:1"
+        ],
+        "properties": [
+            {
+                "text": "Ar atmosphere",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "arc melter"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "TrZr2"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "synthesized"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melter",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Ar atmosphere",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.2Co0.2Ni0.2Rh0.2Ir0.2",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.3Co0.2Ni0.3Rh0.1Ir0.1",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.1",
+            "target": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.2",
+            "target": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.3",
+            "target": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.1",
+            "target": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.2",
+            "target": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.3",
+            "target": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.2",
+            "target": "Fe0.2Co0.2Ni0.2Rh0.2Ir0.2"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.3",
+            "target": "Fe0.3Co0.2Ni0.3Rh0.1Ir0.1"
+        }
+    ]
+}

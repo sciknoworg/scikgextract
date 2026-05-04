@@ -1,0 +1,45 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "N2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "evacuated",
+            "sealed"
+        ],
+        "descriptors": [
+            "N2-filled"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "glove box"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "glove box",
+            "target": "evacuated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "glove box",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "N2-filled",
+            "target": "jar"
+        },
+        {
+            "type": "Next-operation",
+            "source": "evacuated",
+            "target": "sealed"
+        }
+    ]
+}

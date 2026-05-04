@@ -94,28 +94,55 @@ if __name__ == "__main__":
     logger.info("Starting PDF text extraction script...")
     
     # PDF file path
-    pdf_file_path = args.pdf_file_path if args.pdf_file_path else "data/research-papers/Atomic-layer-deposition/pdf/IGZO/Extra"
+    pdf_file_path = args.pdf_file_path if args.pdf_file_path else "../../../Scripts/results/atomic_limits_dataset/processed_grobid/ALE/pdf/experimental"
     logger.info(f"PDF files directory: {pdf_file_path}")
 
     # Output directory for Markdown files
-    output_dir = args.output_dir if args.output_dir else "data/research-papers/Atomic-layer-deposition/markdown/IGZO/Extra"
+    output_dir = args.output_dir if args.output_dir else "../../../Scripts/results/atomic_limits_dataset/processed_grobid/ALE/markdown/experimental"
     logger.info(f"Output Markdown directory: {output_dir}")
 
+    # Empty list to hold not processed files
+    not_processed_files = []
+
     # Process each PDF file in the specified directory
-    for filename in os.listdir(pdf_file_path):
-        # Process only PDF files
-        if not filename.lower().endswith(".pdf"): continue
+    for root, _, files in os.walk(pdf_file_path):
 
-        # Log the file being processed
-        logger.info(f"Processing file: {filename}")
-        
-        # Full path to the PDF file
-        file_path = os.path.join(pdf_file_path, filename)
-        
-        # Parse the PDF and extract content
-        base_filename, extracted_document = parse_pdf(file_path)
-        logger.debug(f"Extracted document for {filename}: {extracted_document}")
+        # Skip if no files in the directory
+        if not files: continue
 
-        # Export the extracted content to Markdown
-        export_as_markdown(extracted_document, base_filename, output_dir)
-        logger.info(f"Exported Markdown for {filename} to {output_dir}/{base_filename}.md")
+        # Get the internal directory path
+        internal_dir = root.split(pdf_file_path)[-1].lstrip(os.sep)
+        logger.info(f"Processing directory: {internal_dir}")
+
+        # Process each PDF file
+        for filename in files:
+
+            # Process only PDF files
+            if not filename.lower().endswith(".pdf"): continue
+            logger.info(f"Processing file: {filename}")
+
+            # Full path to the PDF file
+            file_path = os.path.join(root, filename)
+
+            # Create output directory preserving internal structure
+            output_full_dir = os.path.join(output_dir, internal_dir)
+
+            # Check if file already processed
+            if os.path.isfile(os.path.join(output_full_dir, f"{Path(filename).stem}.md")):
+                logger.info(f"File {filename} already processed. Skipping...")
+                continue
+
+            try:
+                # Parse the PDF and extract content
+                base_filename, extracted_document = parse_pdf(file_path)
+                logger.debug(f"Extracted document for {filename}: {extracted_document}")
+
+                # Export the extracted content to Markdown
+                export_as_markdown(extracted_document, base_filename, output_full_dir)
+                logger.info(f"Exported Markdown for {filename} to {output_full_dir}/{base_filename}.md")
+            except Exception as e:
+                logger.error(f"Error processing file {filename}: {e}")
+                not_processed_files.append(file_path)
+
+    # Log any files that were not processed
+    if not_processed_files: logger.warning(f"Files not processed: {not_processed_files}")

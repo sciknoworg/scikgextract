@@ -1,0 +1,59 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "zirconium oxide",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixing",
+            "added",
+            "homogenizing"
+        ],
+        "descriptors": [
+            "effectively"
+        ],
+        "values": [
+            "5 mm",
+            "six"
+        ],
+        "properties": [],
+        "devices": [
+            "zirconium oxide grinding balls"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "six",
+            "target": "zirconium oxide grinding balls"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 mm",
+            "target": "zirconium oxide grinding balls"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "zirconium oxide grinding balls",
+            "target": "mixing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixing",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "added",
+            "target": "homogenizing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "effectively",
+            "target": "homogenizing"
+        }
+    ]
+}

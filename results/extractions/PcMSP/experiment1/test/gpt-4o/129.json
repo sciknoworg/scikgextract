@@ -1,0 +1,31 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "annealing",
+            "quenched"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "quenched",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "quenched"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "BN",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "carbon",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pyrophyllite",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "inserted"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "crucible",
+            "cell",
+            "heater",
+            "cube",
+            "electrodes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "BN",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "inserted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "cell",
+            "target": "inserted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "cell"
+        },
+        {
+            "type": "Participant-material",
+            "source": "carbon",
+            "target": "cell"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pyrophyllite",
+            "target": "cell"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "heater",
+            "target": "cell"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "cube",
+            "target": "cell"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "electrodes",
+            "target": "cell"
+        }
+    ]
+}

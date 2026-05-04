@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "reactants",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MoAlB",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "hot-pressing",
+            "synthesized"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "vacuum"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "HP",
+            "hot press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Dense",
+            "target": "MoAlB"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoAlB"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoAlB",
+            "target": "synthesized"
+        },
+        {
+            "type": "Coreference",
+            "source": "hot-pressing",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reactants",
+            "target": "hot-pressing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "vacuum hot press",
+            "target": "hot-pressing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reactants",
+            "target": "hot-pressing"
+        }
+    ]
+}

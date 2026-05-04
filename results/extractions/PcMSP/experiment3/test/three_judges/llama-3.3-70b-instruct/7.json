@@ -1,0 +1,65 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ZnxCu4−x(OH)6FBr",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "ZnBr2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuBr2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "achieved",
+            "addition",
+            "varying"
+        ],
+        "descriptors": [
+            "Zn-substituted",
+            "excess"
+        ],
+        "values": [
+            "ZnxCu4−x"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "addition",
+            "target": "ZnBr2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "varying",
+            "target": "CuBr2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "achieved",
+            "target": "ZnxCu4−x(OH)6FBr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Zn-substituted",
+            "target": "ZnxCu4−x(OH)6FBr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "excess",
+            "target": "ZnBr2"
+        },
+        {
+            "type": "Coreference",
+            "source": "ZnxCu4−x(OH)6FBr",
+            "target": "samples"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "taken",
+            "subjected"
+        ],
+        "descriptors": [
+            "planetary",
+            "rotational",
+            "PM 100"
+        ],
+        "values": [
+            "a",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "450 rpm",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "jar",
+            "ball mill",
+            "planetary ball mill"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "outside",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "subjected",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected"
+        },
+        {
+            "type": "Value-of",
+            "source": "a",
+            "target": "ball mill"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "taken"
+        },
+        {
+            "type": "Condition-of",
+            "source": "450 rpm",
+            "target": "subjected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "rotational",
+            "target": "450 rpm"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "subjected"
+        }
+    ]
+}

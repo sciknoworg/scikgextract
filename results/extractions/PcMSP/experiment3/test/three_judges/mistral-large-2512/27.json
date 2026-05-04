@@ -1,0 +1,134 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "molybdenum boride",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MoB",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "aluminum",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "powders",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "ball milled"
+        ],
+        "descriptors": [
+            "powders",
+            "plastic",
+            "> 99%",
+            "< 38 μm",
+            "99.5%",
+            "< 44 μm"
+        ],
+        "values": [
+            "> 99%",
+            "< 38 μm",
+            "99.5%",
+            "< 44 μm",
+            "1.0 to 1.3",
+            "24 h"
+        ],
+        "properties": [
+            {
+                "text": "24 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "plastic container"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "molybdenum boride",
+            "target": "MoB"
+        },
+        {
+            "type": "Coreference",
+            "source": "aluminum",
+            "target": "Al"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "molybdenum boride"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "aluminum"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "> 99%",
+            "target": "molybdenum boride"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "< 38 μm",
+            "target": "molybdenum boride"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "MoB"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "99.5%",
+            "target": "aluminum"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "< 44 μm",
+            "target": "aluminum"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Al"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoB",
+            "target": "ball milled"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "ball milled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "plastic container",
+            "target": "ball milled"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1.0 to 1.3",
+            "target": "ball milled"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 h",
+            "target": "ball milled"
+        }
+    ]
+}

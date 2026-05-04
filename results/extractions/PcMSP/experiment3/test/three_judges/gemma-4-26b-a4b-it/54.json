@@ -1,0 +1,47 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "pellet",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "well-mixed",
+            "pressed"
+        ],
+        "descriptors": [
+            "nominal"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "well-mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellet",
+            "target": "pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "nominal",
+            "target": "mixture"
+        }
+    ]
+}

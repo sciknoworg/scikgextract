@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "silica tubes",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "residual pressure"
+        ],
+        "values": [
+            "13 mm diameter",
+            "\u223c10\u207b\u2074 Torr"
+        ],
+        "properties": [],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "residual pressure",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm diameter",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Value-of",
+            "source": "\u223c10\u207b\u2074 Torr",
+            "target": "flame-sealed"
+        }
+    ]
+}

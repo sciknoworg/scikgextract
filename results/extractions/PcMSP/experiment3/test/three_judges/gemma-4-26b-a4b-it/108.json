@@ -1,0 +1,85 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "diameter"
+        ],
+        "values": [
+            "13 mm",
+            "∼ 10 − 4 Torr"
+        ],
+        "properties": [
+            {
+                "text": "residual pressure",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "diameter"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "diameter",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "∼ 10 − 4 Torr",
+            "target": "residual pressure"
+        },
+        {
+            "type": "Condition-of",
+            "source": "residual pressure",
+            "target": "flame-sealed"
+        }
+    ]
+}

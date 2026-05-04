@@ -1,0 +1,105 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Zr button",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "put together",
+            "used"
+        ],
+        "descriptors": [
+            "pieces",
+            "water-cooled",
+            "oxygen getter"
+        ],
+        "values": [
+            "99.95%",
+            "99.99%"
+        ],
+        "properties": [],
+        "devices": [
+            "copper hearth"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Ru"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95%",
+            "target": "Ru"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Al"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Al"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pieces",
+            "target": "Al"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pieces",
+            "target": "Ru"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "put together"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "put together"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "put together"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr button",
+            "target": "put together"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr button"
+        },
+        {
+            "type": "Coreference",
+            "source": "used",
+            "target": "put together"
+        }
+    ]
+}

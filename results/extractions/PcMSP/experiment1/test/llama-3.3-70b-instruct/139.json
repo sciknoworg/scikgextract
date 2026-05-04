@@ -1,0 +1,38 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "constituent elements",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "inverted",
+            "re-melted"
+        ],
+        "descriptors": [
+            "homogeneous"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneous",
+            "target": "constituent elements"
+        },
+        {
+            "type": "Participant-material",
+            "source": "constituent elements",
+            "target": "inverted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "re-melted",
+            "target": "inverted"
+        }
+    ]
+}

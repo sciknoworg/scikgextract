@@ -1,0 +1,94 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "compositions",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "weighed",
+            "mixed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "thoroughly",
+            "air atmosphere",
+            "alcohol"
+        ],
+        "values": [
+            "stoichiometric amount",
+            "1 h",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "compositions"
+        },
+        {
+            "type": "Value-of",
+            "source": "stoichiometric amount",
+            "target": "compositions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "compositions",
+            "target": "weighed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "weighed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "air atmosphere",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air atmosphere",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "alcohol",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "alcohol",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "mixed"
+        }
+    ]
+}

@@ -41,3 +41,11 @@ class PolyIESchema(BaseModel):
     relations: List[PolyIERelation] = Field(
         ..., description='Relations linking a chemical name to a property name and its value, optionally with a condition.'
     )
+
+
+class PolyIESchemaList(BaseModel):
+    """A list of per-sentence PolyIE extraction results for a multi-sentence document."""
+
+    sentences: List[PolyIESchema] = Field(
+        ..., description='Per-sentence extraction results. Each entry contains entities and relations extracted from one sentence.'
+    )

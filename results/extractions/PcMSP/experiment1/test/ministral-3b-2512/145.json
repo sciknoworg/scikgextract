@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnF2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnSe\u2082",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SnSe\u2082\u208b\u2093F\u2093",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "anhydrous",
+            "powder"
+        ],
+        "values": [
+            "(2 \u2212 x) Sn + x SnF\u2082 + 2 (2 \u2212 x) Se \u2192 2 SnSe\u2082\u208b\u2093F\u2093"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(2 \u2212 x) Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "x SnF\u2082",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2 (2 \u2212 x) Se",
+            "target": "mixed"
+        },
+        {
+            "type": "Coreference",
+            "source": "(2 \u2212 x) Sn + x SnF\u2082 + 2 (2 \u2212 x) Se \u2192 2 SnSe\u2082\u208b\u2093F\u2093",
+            "target": "mixed"
+        }
+    ]
+}

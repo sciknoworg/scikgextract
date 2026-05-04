@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "products",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "distilled water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "dried",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "coloured turquoise to pale blue",
+            "depending on the level of Zn-substitution",
+            "coloured"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "resulting",
+            "target": "products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "coloured turquoise to pale blue",
+            "target": "products"
+        },
+        {
+            "type": "Condition-of",
+            "source": "depending on the level of Zn-substitution",
+            "target": "products"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "distilled water",
+            "target": "washed"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "water",
+            "target": "washed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "dried"
+        }
+    ]
+}

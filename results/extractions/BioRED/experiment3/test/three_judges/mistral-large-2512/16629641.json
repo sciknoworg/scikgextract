@@ -1,0 +1,178 @@
+{
+    "entities": [
+        {
+            "text": "hepatitis C virus",
+            "type": "OrganismTaxon",
+            "identifier": "11103",
+            "offset": 49,
+            "length": 18
+        },
+        {
+            "text": "HCV",
+            "type": "OrganismTaxon",
+            "identifier": "11103",
+            "offset": 69,
+            "length": 3
+        },
+        {
+            "text": "cirrhosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D008103",
+            "offset": 87,
+            "length": 8
+        },
+        {
+            "text": "hepatocellular carcinoma",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006528",
+            "offset": 100,
+            "length": 23
+        },
+        {
+            "text": "end-stage liver disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D017093",
+            "offset": 128,
+            "length": 22
+        },
+        {
+            "text": "pegylated interferon",
+            "type": "ChemicalEntity",
+            "identifier": "D018570",
+            "offset": 203,
+            "length": 20
+        },
+        {
+            "text": "ribavirin",
+            "type": "ChemicalEntity",
+            "identifier": "D012270",
+            "offset": 228,
+            "length": 9
+        },
+        {
+            "text": "hemolytic anemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000745",
+            "offset": 343,
+            "length": 15
+        },
+        {
+            "text": "anemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000740",
+            "offset": 369,
+            "length": 6
+        },
+        {
+            "text": "Hemoglobin",
+            "type": "GeneOrGeneProduct",
+            "identifier": "3043",
+            "offset": 403,
+            "length": 10
+        },
+        {
+            "text": "renal",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D012083",
+            "offset": 510,
+            "length": 5
+        },
+        {
+            "text": "cardiovascular disorders",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D002318",
+            "offset": 529,
+            "length": 22
+        },
+        {
+            "text": "Recombinant human erythropoietin",
+            "type": "GeneOrGeneProduct",
+            "identifier": "30523",
+            "offset": 706,
+            "length": 30
+        },
+        {
+            "text": "Viramidine",
+            "type": "ChemicalEntity",
+            "identifier": "C076245",
+            "offset": 768,
+            "length": 9
+        },
+        {
+            "text": "ribavirin",
+            "type": "ChemicalEntity",
+            "identifier": "D012270",
+            "offset": 820,
+            "length": 9
+        },
+        {
+            "text": "chronic hepatitis C",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D019734",
+            "offset": 870,
+            "length": 19
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "11103",
+            "entity2": "D008103",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "11103",
+            "entity2": "D006528",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "11103",
+            "entity2": "D017093",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D018570",
+            "entity2": "D012270",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D012270",
+            "entity2": "3043",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D012270",
+            "entity2": "D000745",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000745",
+            "entity2": "D012083",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000745",
+            "entity2": "D002318",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "C076245",
+            "entity2": "D012270",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C076245",
+            "entity2": "D019734",
+            "novel": false
+        }
+    ]
+}

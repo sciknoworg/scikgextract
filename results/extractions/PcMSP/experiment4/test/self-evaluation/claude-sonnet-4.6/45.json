@@ -1,0 +1,132 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Bi4V2 − xSmxO11",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sm2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sm2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "V2O5",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "solid state reaction"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "x = 0.05 , 0.10 , 0.15 and 0.20",
+            "polycrystalline",
+            "samarium doped"
+        ],
+        "values": [
+            "x = 0.05",
+            "x = 0.10",
+            "x = 0.15",
+            "suitable stoichiometry",
+            "99%",
+            "99.9%",
+            "98.5%",
+            "99.9%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Bi4V2 − xSmxO11"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "samarium doped",
+            "target": "Bi4V2 − xSmxO11"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bi4V2 − xSmxO11",
+            "target": "prepared"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "solid state reaction method",
+            "target": "prepared"
+        },
+        {
+            "type": "Next-operation",
+            "source": "taking",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bi2O3",
+            "target": "taking"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sm2O3",
+            "target": "taking"
+        },
+        {
+            "type": "Participant-material",
+            "source": "V2O5",
+            "target": "taking"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "taking"
+        },
+        {
+            "type": "Value-of",
+            "source": "99%",
+            "target": "Bi2O3"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Sm2O3"
+        },
+        {
+            "type": "Value-of",
+            "source": "98.5%",
+            "target": "V2O5"
+        },
+        {
+            "type": "Condition-of",
+            "source": "suitable stoichiometry",
+            "target": "taking"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Sm2O3"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.10",
+            "target": "Bi4V2 − xSmxO11"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.15",
+            "target": "Bi4V2 − xSmxO11"
+        },
+        {
+            "type": "Value-of",
+            "source": "99%",
+            "target": "Bi2O3"
+        }
+    ]
+}

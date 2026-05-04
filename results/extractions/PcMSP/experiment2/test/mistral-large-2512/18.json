@@ -1,0 +1,118 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cs lumps",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "argon-filled",
+            "evacuated"
+        ],
+        "values": [
+            "1 : 1"
+        ],
+        "properties": [],
+        "devices": [
+            "glove box",
+            "alumina crucible",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "1 : 1"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1",
+            "target": "mixture"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "argon-filled",
+            "target": "glove box"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cs lumps",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As powder",
+            "target": "mixed"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixture",
+            "target": "Cs lumps"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixture",
+            "target": "As powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "loaded"
+        }
+    ]
+}

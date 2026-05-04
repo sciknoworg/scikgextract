@@ -1,0 +1,52 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AsSn",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized"
+        ],
+        "descriptors": [
+            "stoichiometric"
+        ],
+        "values": [
+            "5 N"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixtures"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AsSn",
+            "target": "synthesized"
+        }
+    ]
+}

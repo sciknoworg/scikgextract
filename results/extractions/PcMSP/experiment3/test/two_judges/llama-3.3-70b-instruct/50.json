@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "surfaces",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "polished"
+        ],
+        "descriptors": [
+            "fine",
+            "sintered",
+            "smooth",
+            "parallel",
+            "Finally"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "emery paper"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "emery paper"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sintered",
+            "target": "pellets"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "smooth",
+            "target": "surfaces"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "parallel",
+            "target": "surfaces"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Finally",
+            "target": "polished"
+        },
+        {
+            "type": "Participant-material",
+            "source": "polished",
+            "target": "pellets"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "emery paper",
+            "target": "polished"
+        }
+    ]
+}

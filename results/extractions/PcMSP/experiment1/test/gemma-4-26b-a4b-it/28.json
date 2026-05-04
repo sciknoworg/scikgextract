@@ -1,0 +1,115 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "graphite foil",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "loaded",
+            "heated",
+            "pressed"
+        ],
+        "descriptors": [
+            "graphite foil lined",
+            "cylindrical",
+            "peak",
+            "last"
+        ],
+        "values": [
+            "1200 \u00b0 C",
+            "300 \u00b0 C h \u2212 1",
+            "39 MPa",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "300 \u00b0 C h \u2212 1",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "39 MPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "cylindrical graphite die"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "cylindrical graphite die",
+            "target": "loaded"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "graphite foil lined",
+            "target": "cylindrical graphite die"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "cylindrical graphite die"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 \u00b0 C",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "300 \u00b0 C h \u2212 1",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "39 MPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "peak",
+            "target": "39 MPa"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "last",
+            "target": "1 h"
+        }
+    ]
+}

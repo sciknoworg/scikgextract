@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "added",
+            "stirred"
+        ],
+        "descriptors": [
+            "aqueous solution"
+        ],
+        "values": [
+            "5 mmol",
+            "10 mL"
+        ],
+        "properties": [
+            {
+                "text": "80 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous solution",
+            "target": "HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mmol",
+            "target": "HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 mL",
+            "target": "HIO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HIO3",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "stirred",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 °C",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        }
+    ]
+}

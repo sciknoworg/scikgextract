@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "tantalum foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Al-rich eutectic",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "put",
+            "annealed"
+        ],
+        "descriptors": [
+            "thin",
+            "evacuated"
+        ],
+        "values": [
+            "620 °C",
+            "14 days",
+            "40 °C"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "put"
+        },
+        {
+            "type": "Condition-of",
+            "source": "620 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "14 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "put",
+            "target": "wrapped"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "put"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "LaO0.5F0.5BiS2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "pellet",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "pressed"
+        ],
+        "descriptors": [
+            "nominal",
+            "well"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "nominal",
+            "target": "LaO0.5F0.5BiS2"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixture",
+            "target": "LaO0.5F0.5BiS2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "well",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellet",
+            "target": "pressed"
+        }
+    ]
+}

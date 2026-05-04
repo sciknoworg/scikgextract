@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn ( IO3 ) 2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "solid",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "dried",
+            "give"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "polycrystalline",
+            "air"
+        ],
+        "values": [
+            "1 week",
+            "86 %"
+        ],
+        "properties": [
+            {
+                "text": "1 week",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "86 %",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "air",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 week",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "86 %",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "solid",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn ( IO3 ) 2",
+            "target": "give"
+        },
+        {
+            "type": "Next-operation",
+            "source": "give",
+            "target": "dried"
+        }
+    ]
+}

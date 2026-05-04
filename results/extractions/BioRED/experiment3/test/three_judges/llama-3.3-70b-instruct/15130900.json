@@ -1,0 +1,59 @@
+{
+    "entities": [
+        {
+            "text": "Urinary bladder cancer",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001749",
+            "offset": 0,
+            "length": 20
+        },
+        {
+            "text": "Wegener's granulomatosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D014805",
+            "offset": 34,
+            "length": 24
+        },
+        {
+            "text": "cyclophosphamide",
+            "type": "ChemicalEntity",
+            "identifier": "D003520",
+            "offset": 73,
+            "length": 15
+        },
+        {
+            "text": "odds ratios",
+            "type": "GeneOrGeneProduct",
+            "identifier": "-1",
+            "offset": 201,
+            "length": 11
+        },
+        {
+            "text": "confidence interval",
+            "type": "GeneOrGeneProduct",
+            "identifier": "-1",
+            "offset": 223,
+            "length": 18
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D001749",
+            "entity2": "D014805",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D003520",
+            "entity2": "D001749",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D014805",
+            "entity2": "D003520",
+            "novel": false
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "β-phase",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "ice water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesis",
+            "quenched"
+        ],
+        "descriptors": [
+            "metastable",
+            "high temperature"
+        ],
+        "values": [
+            "900–1000 °C",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "900–1000 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "high temperature",
+            "target": "synthesis"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "metastable",
+            "target": "β-phase"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Value-of",
+            "source": "900–1000 °C",
+            "target": "synthesis"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "quenched"
+        }
+    ]
+}

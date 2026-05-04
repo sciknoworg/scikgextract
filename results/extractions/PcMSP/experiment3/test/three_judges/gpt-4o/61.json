@@ -1,0 +1,60 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "β-phase",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "ice water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "used",
+            "quenched"
+        ],
+        "descriptors": [
+            "immediately",
+            "higher"
+        ],
+        "values": [
+            "900–1000 °C",
+            "room temperature"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "quenched"
+        },
+        {
+            "type": "Value-of",
+            "source": "900–1000 °C",
+            "target": "used"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "immediately",
+            "target": "quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "higher",
+            "target": "900–1000 °C"
+        }
+    ]
+}

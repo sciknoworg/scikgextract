@@ -1,15 +1,33 @@
+"""
+ProcessConfig for loading and exposing domain-specific process settings.
+
+Reads process name, description, and property constraints from environment variables or direct assignment. These values are injected into the extraction prompt to specialise the LLM for a particular scientific extraction domain (e.g. ALD, BioRED, PolyIE).
+"""
+# Python imports
+import os
+
+# External imports
+from dotenv import load_dotenv
+
+# SciKGExtract Config Imports
+from scikg_extract.config.llm.envConfig import EnvConfig
+
 class ProcessConfig:
     """
     Configuration class for defining the process details used in knowledge extraction.
     """
+
+    # Loading the environment file
+    load_dotenv()
     
     # Process Name
-    Process_name = "Atomic Layer Deposition"
+    Process_name = os.getenv("PROCESS_NAME", "Atomic Layer Deposition")
 
     # Process Description
     Process_description = """
     Atomic layer deposition (ALD) is a surface-controlled thin film deposition technique that can enable ultimate control over the film thickness, uniformity on large-area substrates and conformality on 3D (nano)structures. Each ALD cycle consists at least two half-cycles (but can be more complex), containing a precursor dose step and a co-reactant exposure step, separated by purge or pump steps. Ideally the same amount of material is deposited in each cycle, due to the self-limiting nature of the reactions of the precursor and co-reactant with the surface groups on the substrate. By carrying out a certain number of ALD cycles, the targeted film thickness can be obtained.
     """
+    Process_description = os.getenv("PROCESS_DESCRIPTION", Process_description)
 
     # Process property constraints
     Process_property_constraints = """
@@ -29,3 +47,4 @@ class ProcessConfig:
     -When identifying co-reactants, ensure they are chemically correct for the deposited material. (e.g. For ZnO, only extract oxygen-containing co-reactants (e.g. H₂O, O₂ plasma, O₃, H₂O₂, O₂, N₂O))
     -If multiple co-reactants are listed, only extract those explicitly used for the target material's ALD process.
     """
+    Process_property_constraints = os.getenv("PROCESS_PROPERTY_CONSTRAINTS", Process_property_constraints)

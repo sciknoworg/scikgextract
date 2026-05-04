@@ -1,0 +1,98 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "soluble ionic Se binder",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Se powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "ethanethiol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "ethylenediamine",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "dissolving",
+            "stirring"
+        ],
+        "descriptors": [
+            "soluble",
+            "ionic",
+            "vigorous",
+            "room temperature"
+        ],
+        "values": [
+            "0.5 g",
+            "0.5 mL",
+            "4.5 mL"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Se powder",
+            "target": "dissolving"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ethanethiol",
+            "target": "dissolving"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ethylenediamine",
+            "target": "dissolving"
+        },
+        {
+            "type": "Participant-material",
+            "source": "soluble ionic Se binder",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5 g",
+            "target": "Se powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5 mL",
+            "target": "ethanethiol"
+        },
+        {
+            "type": "Value-of",
+            "source": "4.5 mL",
+            "target": "ethylenediamine"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vigorous",
+            "target": "stirring"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "stirring"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "soluble",
+            "target": "Se binder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ionic",
+            "target": "Se binder"
+        }
+    ]
+}

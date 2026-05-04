@@ -1,0 +1,45 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ampoule",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "annealing",
+            "quenched"
+        ],
+        "descriptors": [
+            "room temperature"
+        ],
+        "values": [
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "room temperature",
+            "target": "quenched"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ampoule",
+            "target": "annealing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenched",
+            "target": "annealing"
+        }
+    ]
+}

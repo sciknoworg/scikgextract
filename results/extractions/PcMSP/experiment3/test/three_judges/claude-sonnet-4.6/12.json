@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "GdCo5 \ffffffc0 xNix",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "constituent elements",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "argon",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "arc melting"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "water cooled"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "copper hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "GdCo5 \ffffffc0 xNix"
+        },
+        {
+            "type": "Participant-material",
+            "source": "GdCo5 \ffffffc0 xNix",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "constituent elements",
+            "target": "arc melting"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesized",
+            "target": "arc melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "arc melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Condition-of",
+            "source": "argon",
+            "target": "arc melting"
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "(Sr0.95La0.05)GeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "(Sr0.95La0.05)GeO3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined",
+            "synthesize"
+        ],
+        "descriptors": [
+            "undoped",
+            "La-doped",
+            "stoichiometric"
+        ],
+        "values": [
+            "1,200 \u00b0C",
+            "10 h"
+        ],
+        "properties": [
+            {
+                "text": "1,200 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "undoped",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "La-doped",
+            "target": "(Sr0.95La0.05)GeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "amounts"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(Sr0.95La0.05)GeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesize",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1,200 \u00b0C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 h",
+            "target": "calcined"
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "jar",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "glove box",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "taken",
+            "subjected"
+        ],
+        "descriptors": [
+            "rotational",
+            "speed",
+            "outside"
+        ],
+        "values": [
+            "450 rpm",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "450 rpm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "planetary ball mill"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "subjected",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "jar",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "jar",
+            "target": "subjected"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "rotational",
+            "target": "speed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "speed",
+            "target": "450 rpm"
+        },
+        {
+            "type": "Value-of",
+            "source": "450 rpm",
+            "target": "Property-rate"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Condition-of",
+            "source": "450 rpm",
+            "target": "subjected"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "subjected"
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "AP-phase samples",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "subjected",
+            "reactions"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [
+            "5.5 GPa",
+            "1,100 °C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "5.5 GPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1,100 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "belt-type HP apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "AP-phase samples",
+            "target": "reactions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "reactions"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "belt-type HP apparatus",
+            "target": "reactions"
+        },
+        {
+            "type": "Value-of",
+            "source": "5.5 GPa",
+            "target": "5.5 GPa"
+        },
+        {
+            "type": "Value-of",
+            "source": "1,100 °C",
+            "target": "1,100 °C"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "1 h"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5.5 GPa",
+            "target": "reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1,100 °C",
+            "target": "reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "reactions"
+        },
+        {
+            "type": "Coreference",
+            "source": "subjected",
+            "target": "reactions"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AsSn",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "synthesized"
+        ],
+        "descriptors": [
+            "stoichiometric"
+        ],
+        "values": [
+            "5 N"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AsSn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "Se"
+        }
+    ]
+}

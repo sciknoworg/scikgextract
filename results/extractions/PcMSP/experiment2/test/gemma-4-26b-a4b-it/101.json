@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn1.4Pt1 \u2212 xPdxSn ( x = 0 , 0.1 \u2026 0.3 )",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4Pt1 \u2212 yRhySn ( y = 0.1 , 0.2 \u2026 0.8 )",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "constituent elements",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "arc melting"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "stoichiometric",
+            "presence of"
+        ],
+        "values": [
+            "x = 0 , 0.1 \u2026 0.3",
+            "y = 0.1 , 0.2 \u2026 0.8"
+        ],
+        "properties": [],
+        "devices": [
+            "arc melting"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "Mn1.4Pt1 \u2212 xPdxSn ( x = 0 , 0.1 \u2026 0.3 )"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "Mn1.4Pt1 \u2212 yRhySn ( y = 0.1 , 0.2 \u2026 0.8 )"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 \u2212 xPdxSn ( x = 0 , 0.1 \u2026 0.3 )",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 \u2212 yRhySn ( y = 0.1 , 0.2 \u2026 0.8 )",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "constituent elements",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ar",
+            "target": "arc melting"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0 , 0.1 \u2026 0.3",
+            "target": "Mn1.4Pt1 \u2212 xPdxSn ( x = 0 , 0.1 \u2026 0.3 )"
+        },
+        {
+            "type": "Value-of",
+            "source": "y = 0.1 , 0.2 \u2026 0.8",
+            "target": "Mn1.4Pt1 \u2212 yRhySn ( y = 0.1 , 0.2 \u2026 0.8 )"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar",
+            "target": "arc melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melting",
+            "target": "prepared"
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "platinum crucible",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "ground",
+            "sintered"
+        ],
+        "descriptors": [
+            "thoroughly"
+        ],
+        "values": [
+            "800 \u00b0C",
+            "100 h"
+        ],
+        "properties": [
+            {
+                "text": "800 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "100 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "sintered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "platinum crucible",
+            "target": "sintered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucible",
+            "target": "sintered"
+        },
+        {
+            "type": "Value-of",
+            "source": "800 \u00b0C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "100 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        }
+    ]
+}

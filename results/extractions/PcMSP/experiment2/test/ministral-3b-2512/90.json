@@ -1,0 +1,46 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pale pink solid",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "isolated",
+            "filtration",
+            "washed"
+        ],
+        "descriptors": [
+            "pale pink"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "filtration apparatus (implied by 'filtration')"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "pale pink solid",
+            "target": "isolated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pale pink solid",
+            "target": "washed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pale pink",
+            "target": "pale pink solid"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "filtration apparatus",
+            "target": "filtration"
+        }
+    ]
+}

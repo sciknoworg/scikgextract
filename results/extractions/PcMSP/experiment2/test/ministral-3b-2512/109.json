@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "box",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "placed",
+            "heated",
+            "annealed",
+            "cooled"
+        ],
+        "descriptors": [
+            "vertically",
+            "slowly",
+            "naturally"
+        ],
+        "values": [
+            "823 K",
+            "5 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "tube",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "box",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vertically",
+            "target": "tube"
+        },
+        {
+            "type": "Value-of",
+            "source": "823 K",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "naturally",
+            "target": "cooled"
+        },
+        {
+            "type": "Condition-of",
+            "source": "annealed",
+            "target": "temperature"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "cooled"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQ sample",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "brought",
+            "air-quenched"
+        ],
+        "descriptors": [
+            "homogenized-quenched"
+        ],
+        "values": [
+            "1423 K",
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "1423 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "air"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "homogenized",
+            "target": "brought"
+        },
+        {
+            "type": "Next-operation",
+            "source": "brought",
+            "target": "air-quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1423 K",
+            "target": "brought"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "brought"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQ sample",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQ sample",
+            "target": "brought"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "air",
+            "target": "air-quenched"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched",
+            "target": "air-quenched"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "La2MMnO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MnO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co(II) oxides",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiCO3 · 2Ni(OH)2 · 4H2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "firing"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "nominal",
+            "stoichiometric",
+            "intimate"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "La2MMnO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "nominal",
+            "target": "La2MMnO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "intimate mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intimate",
+            "target": "mixtures of the oxides"
+        },
+        {
+            "type": "Participant-material",
+            "source": "prepared",
+            "target": "La2MMnO6"
+        },
+        {
+            "type": "Participant-material",
+            "source": "firing",
+            "target": "intimate mixtures"
+        },
+        {
+            "type": "Coreference",
+            "source": "prepared",
+            "target": "conventional solid state reaction"
+        },
+        {
+            "type": "Next-operation",
+            "source": "firing",
+            "target": "prepared"
+        }
+    ]
+}

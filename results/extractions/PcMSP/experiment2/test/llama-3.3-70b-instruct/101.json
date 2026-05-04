@@ -1,0 +1,58 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn1.4Pt1 \u2212 xPdxSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4Pt1 \u2212 yRhySn",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "arc melting"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "stoichiometric"
+        ],
+        "values": [
+            "x = 0",
+            "x = 0.1 \u2026 0.3",
+            "y = 0.1",
+            "y = 0.2 \u2026 0.8"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn1.4Pt1 \u2212 xPdxSn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn1.4Pt1 \u2212 yRhySn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 \u2212 xPdxSn",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 \u2212 yRhySn",
+            "target": "prepared"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melting",
+            "target": "Ar atmosphere"
+        }
+    ]
+}

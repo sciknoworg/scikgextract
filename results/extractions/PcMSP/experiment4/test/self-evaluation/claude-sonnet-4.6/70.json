@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "other samples",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heat-treated",
+            "annealed"
+        ],
+        "descriptors": [
+            "homogenized-quenched-annealed - 32 h",
+            "HQA32"
+        ],
+        "values": [
+            "32 h",
+            "623 K"
+        ],
+        "properties": [
+            {
+                "text": "623 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "32 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "sample",
+            "target": "HQA32"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched-annealed",
+            "target": "sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "heat-treated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched-annealed - 32 h",
+            "target": "sample"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "other",
+            "target": "samples"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "heat-treated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "other samples",
+            "target": "heat-treated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "32 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "623 K",
+            "target": "annealed"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Not Found",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "reactions"
+        ],
+        "descriptors": [
+            "platinum",
+            "platinum"
+        ],
+        "values": [
+            "1000 °C"
+        ],
+        "properties": [
+            {
+                "text": "1000 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "crucibles"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucibles",
+            "target": "Not Found"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "reactions"
+        },
+        {
+            "type": "Value-of",
+            "source": "1000 °C",
+            "target": "Property-temperature"
+        }
+    ]
+}

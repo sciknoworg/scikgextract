@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mother-liquor",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "isolated",
+            "filtration",
+            "washed",
+            "isolated"
+        ],
+        "descriptors": [
+            "deionized",
+            "polycrystalline",
+            "mother-liquor",
+            "deionized"
+        ],
+        "values": [
+            "92 %",
+            "24 h"
+        ],
+        "properties": [
+            {
+                "text": "air",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "α-Cu(IO₃)₂·2.2/3H₂O",
+            "target": "isolated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "greenish",
+            "target": "α-Cu(IO₃)₂·2.2/3H₂O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "α-Cu(IO₃)₂·2.2/3H₂O"
+        },
+        {
+            "type": "Value-of",
+            "source": "92%",
+            "target": "α-Cu(IO₃)₂·2.2/3H₂O"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        },
+        {
+            "type": "Coreference",
+            "source": "24 h",
+            "target": "24 h"
+        }
+    ]
+}

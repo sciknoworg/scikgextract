@@ -1,3 +1,8 @@
+"""
+ExtractionConfig dataclass for configuring the structured knowledge extraction step.
+
+Specifies the LLM, output schema (Pydantic model), prompt templates, and any domain-specific parameters used by the extraction agent when invoking the LLM to produce structured knowledge from scientific text.
+"""
 # Python imports
 from dataclasses import dataclass
 

@@ -1,0 +1,232 @@
+{
+    "entities": [
+        {
+            "text": "lamivudine",
+            "type": "ChemicalEntity",
+            "identifier": "D01482",
+            "offset": 18,
+            "length": 10
+        },
+        {
+            "text": "tenofovir",
+            "type": "ChemicalEntity",
+            "identifier": "D01482",
+            "offset": 43,
+            "length": 9
+        },
+        {
+            "text": "HIV",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007630",
+            "offset": 32,
+            "length": 3
+        },
+        {
+            "text": "hepatitis B virus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006000",
+            "offset": 45,
+            "length": 16
+        },
+        {
+            "text": "HBsAg",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P04114",
+            "offset": 65,
+            "length": 5
+        },
+        {
+            "text": "genotype A",
+            "type": "OrganismTaxon",
+            "identifier": "NCBITaxon:11002",
+            "offset": 120,
+            "length": 8
+        },
+        {
+            "text": "genotype D",
+            "type": "OrganismTaxon",
+            "identifier": "NCBITaxon:11002",
+            "offset": 130,
+            "length": 8
+        },
+        {
+            "text": "genotype G",
+            "type": "OrganismTaxon",
+            "identifier": "NCBITaxon:11002",
+            "offset": 140,
+            "length": 8
+        },
+        {
+            "text": "genotype F",
+            "type": "OrganismTaxon",
+            "identifier": "NCBITaxon:11002",
+            "offset": 150,
+            "length": 8
+        },
+        {
+            "text": "rtL180M",
+            "type": "SequenceVariant",
+            "identifier": "rs17634110",
+            "offset": 230,
+            "length": 6
+        },
+        {
+            "text": "rtM204V",
+            "type": "SequenceVariant",
+            "identifier": "rs17634111",
+            "offset": 240,
+            "length": 6
+        },
+        {
+            "text": "rtV173L",
+            "type": "SequenceVariant",
+            "identifier": "rs17634112",
+            "offset": 250,
+            "length": 6
+        },
+        {
+            "text": "sE164D",
+            "type": "SequenceVariant",
+            "identifier": "rs17634113",
+            "offset": 280,
+            "length": 6
+        },
+        {
+            "text": "sI195M",
+            "type": "SequenceVariant",
+            "identifier": "rs17634114",
+            "offset": 290,
+            "length": 6
+        },
+        {
+            "text": "A1762T",
+            "type": "SequenceVariant",
+            "identifier": "HGVS:c.1762A>T",
+            "offset": 330,
+            "length": 5
+        },
+        {
+            "text": "G1764A",
+            "type": "SequenceVariant",
+            "identifier": "HGVS:c.1764G>A",
+            "offset": 340,
+            "length": 5
+        },
+        {
+            "text": "G1896A",
+            "type": "SequenceVariant",
+            "identifier": "HGVS:c.1896G>A",
+            "offset": 350,
+            "length": 5
+        },
+        {
+            "text": "G1899A",
+            "type": "SequenceVariant",
+            "identifier": "HGVS:c.1899G>A",
+            "offset": 360,
+            "length": 5
+        },
+        {
+            "text": "lamivudine (LAM)",
+            "type": "ChemicalEntity",
+            "identifier": "D01482",
+            "offset": 18,
+            "length": 14
+        },
+        {
+            "text": "tenofovir (TDF)",
+            "type": "ChemicalEntity",
+            "identifier": "D01482",
+            "offset": 43,
+            "length": 14
+        },
+        {
+            "text": "patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 100,
+            "length": 6
+        },
+        {
+            "text": "HIV and hepatitis B virus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007630, D006000",
+            "offset": 10,
+            "length": 25
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D01482",
+            "entity2": "D007630",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D01482",
+            "entity2": "D006000",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "P04114",
+            "entity2": "rs17634110",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs17634110",
+            "entity2": "rs17634111",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs17634110",
+            "entity2": "rs17634112",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D01482",
+            "entity2": "rs17634110",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D01482",
+            "entity2": "rs17634111",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D01482",
+            "entity2": "HGVS:c.1762A>T",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D01482",
+            "entity2": "D01482",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D007630",
+            "entity2": "D006000",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D006000",
+            "entity2": "P04114",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "NCBITaxon:11002",
+            "entity2": "rs17634110",
+            "novel": false
+        }
+    ]
+}

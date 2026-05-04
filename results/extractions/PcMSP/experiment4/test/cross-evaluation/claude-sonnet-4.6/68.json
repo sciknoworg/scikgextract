@@ -1,0 +1,99 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "H",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "brought",
+            "homogenized"
+        ],
+        "descriptors": [
+            "HQ",
+            "HQ",
+            "subsequently"
+        ],
+        "values": [
+            "1423 K",
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "1423 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "air"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched",
+            "target": "sample"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "HQ",
+            "target": "homogenized-quenched ( HQ ) sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "homogenized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "brought",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "brought"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1423 K",
+            "target": "brought"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "brought"
+        },
+        {
+            "type": "Next-operation",
+            "source": "air-quenched",
+            "target": "brought"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "air-quenched"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "air",
+            "target": "air-quenched"
+        }
+    ]
+}

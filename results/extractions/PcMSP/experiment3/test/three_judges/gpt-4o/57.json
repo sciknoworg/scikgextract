@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "2H-MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "β-MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Bromine",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared"
+        ],
+        "descriptors": [
+            "transport agents"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "transport agent",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "Bromine",
+            "target": "Br2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2H-MoTe2",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "β-MoTe2",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bromine",
+            "target": "prepared"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "transport agents",
+            "target": "Bromine"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "aluminium",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "platinum",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [
+            "gradually"
+        ],
+        "values": [
+            "5 \u00b0C / min",
+            "900 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "aluminium / platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aluminium",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "platinum",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 \u00b0C / min",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00b0C",
+            "target": "heated"
+        }
+    ]
+}

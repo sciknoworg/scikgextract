@@ -1,0 +1,43 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ta",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "quartz",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "arc welding"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "Ta Tube",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "Ta Tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "arc welding",
+            "target": "sealed"
+        }
+    ]
+}

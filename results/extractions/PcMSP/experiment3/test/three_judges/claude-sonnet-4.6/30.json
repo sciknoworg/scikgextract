@@ -1,0 +1,163 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cl",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnCl2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnClx",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesize",
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "doped",
+            "anhydrous",
+            "powder",
+            "stoichiometric"
+        ],
+        "values": [
+            "250 ° C",
+            "24 hrs",
+            "( 2 − x ) Sn + xSnCl2 → 2SnClx"
+        ],
+        "properties": [
+            {
+                "text": "250 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "SnSe2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "doped",
+            "target": "SnSe2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cl",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnSe2",
+            "target": "synthesize"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnCl2",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Sn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnClx",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "melted"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixtures",
+            "target": "Sn"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixtures",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "250 ° C",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 hrs",
+            "target": "melted"
+        },
+        {
+            "type": "Value-of",
+            "source": "250 ° C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "Property-time"
+        }
+    ]
+}

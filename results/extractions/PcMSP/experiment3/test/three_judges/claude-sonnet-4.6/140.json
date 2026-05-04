@@ -1,0 +1,107 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TrZr2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.2Co0.2Ni0.2Rh0.2Ir0.2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.3Co0.2Ni0.3Rh0.1Ir0.1",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "arc melting"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "TrZr2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "A",
+            "target": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "B",
+            "target": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "C",
+            "target": "Fe0.2Co0.2Ni0.2Rh0.2Ir0.2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "D",
+            "target": "Fe0.3Co0.2Ni0.3Rh0.1Ir0.1"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TrZr2",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.2Co0.2Ni0.2Rh0.2Ir0.2",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe0.3Co0.2Ni0.3Rh0.1Ir0.1",
+            "target": "synthesized"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar",
+            "target": "arc melting"
+        }
+    ]
+}

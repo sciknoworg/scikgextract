@@ -1,0 +1,97 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "obtained",
+            "residual",
+            "Figure S26"
+        ],
+        "values": [
+            "13 mm",
+            "∼ 10 − 4 Torr"
+        ],
+        "properties": [
+            {
+                "text": "∼ 10 − 4 Torr",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "obtained",
+            "target": "powder sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Next-operation",
+            "source": "flame-sealed",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "∼ 10 − 4 Torr",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "residual",
+            "target": "∼ 10 − 4 Torr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Figure S26",
+            "target": "powder sample"
+        }
+    ]
+}

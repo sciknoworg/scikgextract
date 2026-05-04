@@ -1,0 +1,107 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiOHꞏH2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined",
+            "calcined"
+        ],
+        "descriptors": [
+            "precursor"
+        ],
+        "values": [
+            "1 : 1.02",
+            "480 ° C",
+            "5 h",
+            "730 ° C",
+            "12 h"
+        ],
+        "properties": [
+            {
+                "text": "480 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "730 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "precursor",
+            "target": "Ni0.88Co0.09Al0.03 ( OH ) 2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni0.88Co0.09Al0.03 ( OH ) 2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiOHꞏH2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1.02",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "480 ° C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "calcined"
+        }
+    ]
+}

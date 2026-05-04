@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TrZr2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Fe0.1Co0.2Ni0.1Rh0.3Ir0.3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.1Co0.3Ni0.2Rh0.1Ir0.3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.2Co0.2Ni0.2Rh0.2Ir0.2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe0.3Co0.2Ni0.3Rh0.1Ir0.1",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "arc melting"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "Ar atmosphere",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "arc melting equipment"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "TrZr2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TrZr2",
+            "target": "arc melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melting equipment",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "arc melting"
+        }
+    ]
+}

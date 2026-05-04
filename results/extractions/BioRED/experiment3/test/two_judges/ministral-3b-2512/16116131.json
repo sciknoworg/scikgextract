@@ -1,0 +1,100 @@
+{
+    "entities": [
+        {
+            "text": "rTMS",
+            "type": "ChemicalEntity",
+            "identifier": "N/A (Process/Procedure)",
+            "offset": 0,
+            "length": 4
+        },
+        {
+            "text": "supplementary motor area",
+            "type": "OrganismTaxon",
+            "identifier": "N/A (AnatomicalRegion)",
+            "offset": 45,
+            "length": 23
+        },
+        {
+            "text": "levodopa",
+            "type": "ChemicalEntity",
+            "identifier": "D005947",
+            "offset": 74,
+            "length": 8
+        },
+        {
+            "text": "dyskinesia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001240",
+            "offset": 105,
+            "length": 8
+        },
+        {
+            "text": "Parkinson disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003098",
+            "offset": 125,
+            "length": 18
+        },
+        {
+            "text": "levodopa",
+            "type": "ChemicalEntity",
+            "identifier": "D007980",
+            "offset": 141,
+            "length": 8
+        },
+        {
+            "text": "continuous",
+            "type": "ChemicalEntity",
+            "identifier": "N/A (Process/Procedure)",
+            "offset": 180,
+            "length": 7
+        },
+        {
+            "text": "infusion",
+            "type": "ChemicalEntity",
+            "identifier": "N/A (Process/Procedure)",
+            "offset": 190,
+            "length": 6
+        },
+        {
+            "text": "1 Hz",
+            "type": "ChemicalEntity",
+            "identifier": "N/A (FrequencyParameter)",
+            "offset": 210,
+            "length": 3
+        },
+        {
+            "text": "5 Hz",
+            "type": "ChemicalEntity",
+            "identifier": "N/A (FrequencyParameter)",
+            "offset": 220,
+            "length": 3
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D001240",
+            "entity2": "D003098",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D007980",
+            "entity2": "D004409",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "N/A (Process/Procedure)",
+            "entity2": "D001240",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "N/A (FrequencyParameter)",
+            "entity2": "D001240",
+            "novel": true
+        }
+    ]
+}

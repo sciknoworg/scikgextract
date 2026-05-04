@@ -1,0 +1,93 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cs lumps",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CsAs (implied target)",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric ratio of 1 : 1",
+            "argon-filled",
+            "evacuated"
+        ],
+        "values": [
+            "1 : 1 stoichiometry"
+        ],
+        "properties": [
+            {
+                "text": "argon-filled",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "evacuated",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "alumina crucible",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cs lumps",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As powder",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 stoichiometry",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric ratio of 1 : 1",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "argon-filled",
+            "target": "glove box"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03(OH)\u2082",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiOH\u00b7H\u2082O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni0.88Co0.09Al0.03(OH)\u2082 (precursor)",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "1 : 1.02 molar ratio"
+        ],
+        "values": [
+            "480 \u00b0C",
+            "5 h",
+            "730 \u00b0C",
+            "12 h"
+        ],
+        "properties": [
+            {
+                "text": "480 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "730 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Ni0.88Co0.09Al0.03(OH)\u2082",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiOH\u00b7H\u2082O",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "480 \u00b0C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "1 : 1.02 molar ratio",
+            "target": "LiOH\u00b7H\u2082O"
+        },
+        {
+            "type": "Value-of",
+            "source": "730 \u00b0C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 h",
+            "target": "calcined"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "cylindrical pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "cold pressed"
+        ],
+        "descriptors": [
+            "fine",
+            "homogenous"
+        ],
+        "values": [
+            "12 mm",
+            "1 \u2013 2 mm",
+            "4 \u00d7 106 Pa"
+        ],
+        "properties": [
+            {
+                "text": "12 mm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "1 \u2013 2 mm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "4 \u00d7 106 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "hydraulic press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenous",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "cylindrical pellets",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 mm",
+            "target": "cylindrical pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 \u2013 2 mm",
+            "target": "cylindrical pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 \u00d7 106 Pa",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hydraulic press",
+            "target": "cold pressed"
+        }
+    ]
+}

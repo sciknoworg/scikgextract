@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "heated",
+            "held",
+            "cooled"
+        ],
+        "descriptors": [],
+        "values": [
+            "1123 K",
+            "50 h"
+        ],
+        "properties": [
+            {
+                "text": "1123 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "50 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "tube",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "tube",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooled"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1123 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "50 h",
+            "target": "held"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "held"
+        }
+    ]
+}

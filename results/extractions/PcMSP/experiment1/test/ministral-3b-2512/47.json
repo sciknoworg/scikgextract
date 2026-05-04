@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "alumina crucible",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "calcined"
+        ],
+        "descriptors": [
+            "high purity",
+            "optimized",
+            "air atmosphere"
+        ],
+        "values": [
+            "700 \u00b0C",
+            "3 h"
+        ],
+        "properties": [
+            {
+                "text": "700 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "3 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "high purity alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "alumina crucible",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "alumina crucible"
+        },
+        {
+            "type": "Value-of",
+            "source": "700 \u00b0C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "3 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air atmosphere",
+            "target": "calcined"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high purity alumina crucible",
+            "target": "calcined"
+        }
+    ]
+}

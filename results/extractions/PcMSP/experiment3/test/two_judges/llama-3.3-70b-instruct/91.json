@@ -1,0 +1,85 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn(IO3)2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "dried",
+            "to give"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "polycrystalline"
+        ],
+        "values": [
+            "1 week",
+            "86%"
+        ],
+        "properties": [
+            {
+                "text": "yield",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "Mn(IO3)2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn(IO3)2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn(IO3)2",
+            "target": "to give"
+        },
+        {
+            "type": "Next-operation",
+            "source": "to give",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 week",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "86%",
+            "target": "Mn(IO3)2"
+        },
+        {
+            "type": "Condition-of",
+            "source": "in air",
+            "target": "dried"
+        },
+        {
+            "type": "Coreference",
+            "source": "the solid",
+            "target": "Mn(IO3)2"
+        }
+    ]
+}

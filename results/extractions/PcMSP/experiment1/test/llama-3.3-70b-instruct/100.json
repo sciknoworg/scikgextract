@@ -1,0 +1,80 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "bulk materials",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "powdered",
+            "hot-pressed"
+        ],
+        "descriptors": [
+            "bulk",
+            "powdered",
+            "hot-pressed"
+        ],
+        "values": [
+            "713 K",
+            "80 MPa",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "713 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "80 MPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "agate mortar",
+            "graphite die"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powdered",
+            "target": "bulk materials"
+        },
+        {
+            "type": "Participant-material",
+            "source": "hot-pressed",
+            "target": "bulk materials"
+        },
+        {
+            "type": "Value-of",
+            "source": "713 K",
+            "target": "hot-pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "80 MPa",
+            "target": "hot-pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "hot-pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "powdered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "graphite die",
+            "target": "hot-pressed"
+        }
+    ]
+}

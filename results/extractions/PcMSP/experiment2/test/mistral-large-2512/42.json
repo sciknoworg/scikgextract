@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "IrO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Y2O3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sintering"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "more"
+        ],
+        "values": [
+            "4 \u2013 10%",
+            "1 : 2"
+        ],
+        "properties": [
+            {
+                "text": "Not Found",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "1 : 2"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 \u2013 10%",
+            "target": "IrO2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "more",
+            "target": "4 \u2013 10%"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 2",
+            "target": "Y2O3"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 2",
+            "target": "IrO2"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "sintering"
+        },
+        {
+            "type": "Participant-material",
+            "source": "IrO2",
+            "target": "sintering"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Y2O3",
+            "target": "sintering"
+        }
+    ]
+}

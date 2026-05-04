@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "turned",
+            "remelted"
+        ],
+        "descriptors": [
+            "homogeneity"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "turned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "remelted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "turned",
+            "target": "remelted"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "turned"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "remelted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneity",
+            "target": "remelted"
+        }
+    ]
+}

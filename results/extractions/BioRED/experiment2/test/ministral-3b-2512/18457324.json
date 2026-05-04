@@ -1,0 +1,114 @@
+{
+    "entities": [
+        {
+            "text": "carbonyl reductase 3 gene CBR3",
+            "type": "GeneOrGeneProduct",
+            "identifier": "11024",
+            "offset": 1,
+            "length": 23
+        },
+        {
+            "text": "CBR3 V244M",
+            "type": "SequenceVariant",
+            "identifier": "rs12456158",
+            "offset": 209,
+            "length": 9
+        },
+        {
+            "text": "NQO1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "11026",
+            "offset": 45,
+            "length": 4
+        },
+        {
+            "text": "NQO1*2",
+            "type": "SequenceVariant",
+            "identifier": "rs1800564",
+            "offset": 105,
+            "length": 5
+        },
+        {
+            "text": "anthracycline-related congestive heart failure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001186",
+            "offset": 1,
+            "length": 30
+        },
+        {
+            "text": "congestive heart failure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001186",
+            "offset": 74,
+            "length": 19
+        },
+        {
+            "text": "doxorubicin",
+            "type": "ChemicalEntity",
+            "identifier": "D001186_DOXOL",
+            "offset": 1380,
+            "length": 9
+        },
+        {
+            "text": "doxorubicinol",
+            "type": "ChemicalEntity",
+            "identifier": "D001186_DOXOL_MET",
+            "offset": 1450,
+            "length": 11
+        },
+        {
+            "text": "CBR3 V244",
+            "type": "SequenceVariant",
+            "identifier": "rs12456158_G",
+            "offset": 1667,
+            "length": 8
+        },
+        {
+            "text": "CBR3 M244",
+            "type": "SequenceVariant",
+            "identifier": "rs12456158_A",
+            "offset": 1675,
+            "length": 8
+        },
+        {
+            "text": "patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 1978,
+            "length": 8
+        },
+        {
+            "text": "childhood cancer survivors",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 1988,
+            "length": 22
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "rs12456158",
+            "entity2": "D001186",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs12456158",
+            "entity2": "D001186_DOXOL_MET",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "rs12456158_G",
+            "entity2": "rs12456158_A",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "11024",
+            "entity2": "D001186_DOXOL_MET",
+            "novel": true
+        }
+    ]
+}

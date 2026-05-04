@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "materials",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "hot-pressed",
+            "hot-pressed"
+        ],
+        "descriptors": [
+            "resulting"
+        ],
+        "values": [
+            "713 K",
+            "a",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "713 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "80 MPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "80 MPa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "die"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "graphite die",
+            "target": "hot-pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "graphite die",
+            "target": "hot-pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "713 K",
+            "target": "hot-pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "a",
+            "target": "die"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "hot-pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "graphite",
+            "target": "graphite die"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "AsSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "heating"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "vacuum-sealed",
+            "quartz"
+        ],
+        "values": [
+            "933 K",
+            "14 days",
+            "10 \u2212 3 Pa",
+            "5 N",
+            "three times sublimed"
+        ],
+        "properties": [
+            {
+                "text": "933 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "10 \u2212 3 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "933 K",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "14 days",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 \u2212 3 Pa",
+            "target": "vacuum-sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum-sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "quartz",
+            "target": "quartz ampoule"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MnCl2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "HNO3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "dissolved"
+        ],
+        "descriptors": [],
+        "values": [
+            "2.5 mmol",
+            "1 M",
+            "25 mL"
+        ],
+        "properties": [
+            {
+                "text": "1 M",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "25 mL",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "MnCl2",
+            "target": "dissolved"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HNO3",
+            "target": "dissolved"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.5 mmol",
+            "target": "MnCl2"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 M",
+            "target": "HNO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 M",
+            "target": "HNO3"
+        }
+    ]
+}

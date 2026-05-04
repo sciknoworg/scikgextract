@@ -1,0 +1,92 @@
+{
+    "entities": [
+        {
+            "text": "ANKH",
+            "type": "GeneOrGeneProduct",
+            "identifier": "56172",
+            "offset": 0,
+            "length": 5
+        },
+        {
+            "text": "sporadic chondrocalcinosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D046208",
+            "offset": 34,
+            "length": 20
+        },
+        {
+            "text": "inorganic pyrophosphate",
+            "type": "ChemicalEntity",
+            "identifier": "CHEBI:18361",
+            "offset": 123,
+            "length": 20
+        },
+        {
+            "text": "type X collagen",
+            "type": "GeneOrGeneProduct",
+            "identifier": "1300",
+            "offset": 246,
+            "length": 13
+        },
+        {
+            "text": "-4-bp G-to-A",
+            "type": "SequenceVariant",
+            "identifier": "rs74805019",
+            "offset": 302,
+            "length": 9
+        },
+        {
+            "text": "chondrocyte",
+            "type": "CellLine",
+            "identifier": "9606",
+            "offset": 421,
+            "length": 11
+        },
+        {
+            "text": "chondrocalcinosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D046208",
+            "offset": 541,
+            "length": 16
+        },
+        {
+            "text": "pseudogout",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003927",
+            "offset": 634,
+            "length": 10
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "56172",
+            "entity2": "D046208",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs74805019",
+            "entity2": "56172",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs74805019",
+            "entity2": "CHEBI:18361",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "56172",
+            "entity2": "1300",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D046208",
+            "entity2": "D003927",
+            "novel": false
+        }
+    ]
+}

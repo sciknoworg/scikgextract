@@ -1,0 +1,206 @@
+{
+    "entities": [
+        {
+            "text": "hepatitis C virus",
+            "type": "OrganismTaxon",
+            "identifier": "11106",
+            "offset": 18,
+            "length": 18
+        },
+        {
+            "text": "cirrhosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001886",
+            "offset": 48,
+            "length": 8
+        },
+        {
+            "text": "hepatocellular carcinoma",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 62,
+            "length": 20
+        },
+        {
+            "text": "end-stage liver disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 83,
+            "length": 22
+        },
+        {
+            "text": "pegylated interferon",
+            "type": "ChemicalEntity",
+            "identifier": "D006330",
+            "offset": 108,
+            "length": 17
+        },
+        {
+            "text": "ribavirin",
+            "type": "ChemicalEntity",
+            "identifier": "D006330",
+            "offset": 132,
+            "length": 8
+        },
+        {
+            "text": "sustained virologic response",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 157,
+            "length": 24
+        },
+        {
+            "text": "SVRs",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 175,
+            "length": 4
+        },
+        {
+            "text": "hemolytic anemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 200,
+            "length": 16
+        },
+        {
+            "text": "hemolysis",
+            "type": "ChemicalEntity",
+            "identifier": "D006330",
+            "offset": 220,
+            "length": 8
+        },
+        {
+            "text": "infected with hepatitis C virus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006526",
+            "offset": 48,
+            "length": 31
+        },
+        {
+            "text": "renal disorders",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 260,
+            "length": 14
+        },
+        {
+            "text": "cardiovascular disorders",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 280,
+            "length": 20
+        },
+        {
+            "text": "anemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 300,
+            "length": 6
+        },
+        {
+            "text": "morbidity",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 320,
+            "length": 8
+        },
+        {
+            "text": "mortality",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006330",
+            "offset": 330,
+            "length": 8
+        },
+        {
+            "text": "cerebral function",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 340,
+            "length": 14
+        },
+        {
+            "text": "ribavirin-associated anemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 360,
+            "length": 22
+        },
+        {
+            "text": "recombinant human erythropoietin",
+            "type": "GeneOrGeneProduct",
+            "identifier": "3630",
+            "offset": 390,
+            "length": 28
+        },
+        {
+            "text": "Viramidine",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 430,
+            "length": 8
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "11106",
+            "entity2": "D001886",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "11106",
+            "entity2": "D006330",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D006330",
+            "entity2": "D006330",
+            "novel": false
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D006330",
+            "entity2": "hemolytic anemia",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "2056",
+            "entity2": "D000740",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D006330",
+            "entity2": "cardiovascular disorders",
+            "novel": false
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "ribavirin",
+            "entity2": "hemolysis",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "ribavirin",
+            "entity2": "hemolytic anemia",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "ribavirin",
+            "entity2": "recombinant human erythropoietin",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "Viramidine",
+            "entity2": "ribavirin",
+            "novel": true
+        }
+    ]
+}

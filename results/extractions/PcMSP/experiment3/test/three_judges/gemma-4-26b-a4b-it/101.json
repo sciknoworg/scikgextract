@@ -1,0 +1,128 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn1.4Pt1 − xPdxSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4Pt1 − yRhySn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "constituent elements",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "arc melting"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "ingots",
+            "stoichiometric amounts",
+            "Ar atmosphere"
+        ],
+        "values": [
+            "x = 0 , 0.1 … 0.3",
+            "y = 0.1 , 0.2 … 0.8"
+        ],
+        "properties": [],
+        "devices": [
+            "arc melting"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "Mn1.4Pt1 − xPdxSn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ingots",
+            "target": "Mn1.4Pt1 − xPdxSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0 , 0.1 … 0.3",
+            "target": "Mn1.4Pt1 − xPdxSn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "Mn1.4Pt1 − yRhySn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ingots",
+            "target": "Mn1.4Pt1 − yRhySn"
+        },
+        {
+            "type": "Value-of",
+            "source": "y = 0.1 , 0.2 … 0.8",
+            "target": "Mn1.4Pt1 − yRhySn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric amounts",
+            "target": "constituent elements"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric amounts",
+            "target": "Mn1.4Pt1 − xPdxSn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric amounts",
+            "target": "Mn1.4Pt1 − yRhySn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 − xPdxSn",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 − yRhySn",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "constituent elements",
+            "target": "prepared"
+        },
+        {
+            "type": "Next-operation",
+            "source": "arc melting",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 − xPdxSn",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4Pt1 − yRhySn",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ar",
+            "target": "arc melting"
+        }
+    ]
+}

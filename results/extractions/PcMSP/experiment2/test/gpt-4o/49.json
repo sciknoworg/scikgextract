@@ -1,0 +1,47 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sintered"
+        ],
+        "descriptors": [],
+        "values": [
+            "750 \u00b0C",
+            "3 h"
+        ],
+        "properties": [
+            {
+                "text": "750 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "3 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "sintered"
+        },
+        {
+            "type": "Value-of",
+            "source": "750 \u00b0C",
+            "target": "sintered"
+        },
+        {
+            "type": "Value-of",
+            "source": "3 h",
+            "target": "sintered"
+        }
+    ]
+}

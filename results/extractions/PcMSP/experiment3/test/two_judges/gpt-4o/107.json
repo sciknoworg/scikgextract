@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "taken outside",
+            "subjected"
+        ],
+        "descriptors": [
+            "rotational"
+        ],
+        "values": [
+            "450 rpm",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "rotational speed",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "planetary ball mill",
+            "jar"
+        ],
+        "brands": [
+            "RETSCH",
+            "PM 100"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Brand-of",
+            "source": "PM 100",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Condition-of",
+            "source": "450 rpm",
+            "target": "subjected"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "subjected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "rotational",
+            "target": "rotational speed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "subjected",
+            "target": "taken outside"
+        }
+    ]
+}

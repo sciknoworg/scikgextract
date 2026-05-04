@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "obtained",
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "residual"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "residual pressure",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "residual",
+            "target": "residual pressure"
+        },
+        {
+            "type": "Condition-of",
+            "source": "residual pressure",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "taken"
+        }
+    ]
+}

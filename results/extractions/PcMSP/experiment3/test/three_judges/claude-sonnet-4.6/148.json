@@ -1,0 +1,53 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "F",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [
+            "slowly"
+        ],
+        "values": [
+            "10 °C / hour"
+        ],
+        "properties": [
+            {
+                "text": "10 °C / hour",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 °C / hour",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 °C / hour",
+            "target": "10 °C / hour"
+        }
+    ]
+}

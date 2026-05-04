@@ -1,0 +1,118 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu ( IO3 ) 2.2 / 3H2O",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Cu",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "deionized water",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "α-Cu ( IO3 ) 2",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "isolated",
+            "yield",
+            "isolated",
+            "dried"
+        ],
+        "descriptors": [
+            "polycrystal-line",
+            "Greenish",
+            "based on Cu"
+        ],
+        "values": [
+            "92 %"
+        ],
+        "properties": [
+            {
+                "text": "after 24 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "air"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Greenish",
+            "target": "Cu ( IO3 ) 2.2 / 3H2O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Cu ( IO3 ) 2.2 / 3H2O"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu ( IO3 ) 2.2 / 3H2O",
+            "target": "isolated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mother-liquor",
+            "target": "isolated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 h",
+            "target": "isolated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "filtration",
+            "target": "isolated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "filtration",
+            "target": "filtration"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtration"
+        },
+        {
+            "type": "Participant-material",
+            "source": "deionized water",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu",
+            "target": "yield"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "air",
+            "target": "dried"
+        },
+        {
+            "type": "Coreference",
+            "source": "dried",
+            "target": "isolated"
+        },
+        {
+            "type": "Value-of",
+            "source": "92 %",
+            "target": "α-Cu ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "based on Cu",
+            "target": "92 %"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "entities": [
+        {
+            "text": "isoproterenol",
+            "type": "ChemicalEntity",
+            "identifier": "D007501",
+            "offset": 135,
+            "length": 12
+        },
+        {
+            "text": "Transgenic rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 204,
+            "length": 14
+        },
+        {
+            "text": "Sprague-Dawley rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 315,
+            "length": 19
+        },
+        {
+            "text": "left ventricular hypertrophy",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006331",
+            "offset": 370,
+            "length": 26
+        },
+        {
+            "text": "beta-adrenoceptor",
+            "type": "GeneOrGeneProduct",
+            "identifier": "-1",
+            "offset": 135,
+            "length": 16
+        },
+        {
+            "text": "metoprolol",
+            "type": "ChemicalEntity",
+            "identifier": "D008693",
+            "offset": 598,
+            "length": 9
+        }
+    ],
+    "relations": [
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D007501",
+            "entity2": "D006331",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "10116",
+            "entity2": "10116",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D008693",
+            "entity2": "D007501",
+            "novel": true
+        }
+    ]
+}

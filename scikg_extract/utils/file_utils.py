@@ -1,9 +1,14 @@
-import json
-import logging
-import os
-from pathlib import Path
+"""
+File utility functions for SciKGExtract.
 
+Provides functions for reading/writing JSON and YAML files, as well as utilities for resolving text or JSON inputs that may be provided as either direct content or file paths.
+"""
+# Python Imports
+import os
+import json
 import yaml
+import logging
+from pathlib import Path
 
 def read_yaml_file(file_path: str, enc: str = "utf-8"):
     """
@@ -69,7 +74,8 @@ def save_json_file(filepath, filename, data, encoding="utf-8") -> bool:
 
         # Writing the JSON data on the file
         with open(filename, "w", encoding=encoding) as f:
-            json.dump(data, f, indent=4)
+            # Preserve non-ASCII characters (e.g., degree symbol) when writing JSON
+            json.dump(data, f, indent=4, ensure_ascii=False)
         return True
     except json.JSONDecodeError:
         logger.debug("Cannot parse JSON file: {}".format(filepath))

@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "TiNi1.1",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "melted",
+            "levitation melting"
+        ],
+        "descriptors": [
+            "levitation melting",
+            "water-cooled",
+            "Ar atmosphere"
+        ],
+        "values": [
+            "1.1:1 stoichiometry"
+        ],
+        "properties": [],
+        "devices": [
+            "Crystalox MCGS5 levitation melting system",
+            "water-cooled copper crucible"
+        ],
+        "brands": [
+            "Crystalox"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "levitation melting",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "1.1:1 stoichiometry",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Crystalox MCGS5 levitation melting system",
+            "target": "levitation melting"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Crystalox",
+            "target": "Crystalox MCGS5 levitation melting system"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "water-cooled copper crucible"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "levitation melting"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powders",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "ground",
+            "sintered",
+            "sintered"
+        ],
+        "descriptors": [
+            "platinum"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "100 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "800 \u000e C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "ground"
+        },
+        {
+            "type": "Condition-of",
+            "source": "800 \u000e C",
+            "target": "sintered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "sintered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sintered",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "sintered"
+        },
+        {
+            "type": "Condition-of",
+            "source": "800 °C",
+            "target": "sintered"
+        },
+        {
+            "type": "Condition-of",
+            "source": "100 h",
+            "target": "sintered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucible",
+            "target": "sintered"
+        }
+    ]
+}

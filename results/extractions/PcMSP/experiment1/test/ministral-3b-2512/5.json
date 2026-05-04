@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "subjected"
+        ],
+        "descriptors": [],
+        "values": [
+            "5.5 GPa",
+            "1,100 \u00b0C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "pressure",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "belt-type HP apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "5.5 GPa",
+            "target": "subjected"
+        },
+        {
+            "type": "Participant-material",
+            "source": "1,100 \u00b0C",
+            "target": "subjected"
+        },
+        {
+            "type": "Participant-material",
+            "source": "1 h",
+            "target": "subjected"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "belt-type HP apparatus",
+            "target": "subjected"
+        }
+    ]
+}

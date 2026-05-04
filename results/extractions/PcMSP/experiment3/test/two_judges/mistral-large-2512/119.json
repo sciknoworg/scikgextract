@@ -1,0 +1,137 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu2 - xSe ink",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "glycerol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cu2Se powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "mixing",
+            "ball-milled",
+            "dried",
+            "disperse"
+        ],
+        "descriptors": [
+            "all-inorganic",
+            "ball-milled",
+            "dried",
+            "planetary centrifugal",
+            "fully"
+        ],
+        "values": [
+            "2.5 g",
+            "2 g",
+            "1 g",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "planetary centrifugal mixer",
+            "ARM - 100"
+        ],
+        "brands": [
+            "Thinky"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "all-inorganic",
+            "target": "Cu2 - xSe ink"
+        },
+        {
+            "type": "Participant-material",
+            "source": "glycerol",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu2Se powder",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se ion binder",
+            "target": "prepared"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.5 g",
+            "target": "glycerol"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 g",
+            "target": "Cu2Se powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 g",
+            "target": "Se ion binder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ball-milled",
+            "target": "Cu2Se powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "dried",
+            "target": "Se ion binder"
+        },
+        {
+            "type": "Coreference",
+            "source": "mixing",
+            "target": "prepared"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary centrifugal mixer",
+            "target": "mixing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "planetary centrifugal",
+            "target": "planetary centrifugal mixer"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ARM - 100",
+            "target": "mixing"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Thinky",
+            "target": "ARM - 100"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "mixing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fully",
+            "target": "disperse"
+        }
+    ]
+}

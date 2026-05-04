@@ -1,0 +1,80 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pelletized sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated",
+            "heated",
+            "grinding"
+        ],
+        "descriptors": [],
+        "values": [
+            "400 \u00b0C",
+            "48 hours",
+            "500 \u00b0C",
+            "48 hours"
+        ],
+        "properties": [
+            {
+                "text": "400 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "500 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixed precursors",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pelletized sample",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "grinding"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heated"
+        }
+    ]
+}

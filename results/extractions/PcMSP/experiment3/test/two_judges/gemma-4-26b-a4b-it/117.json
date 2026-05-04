@@ -1,0 +1,102 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "dissolved solution",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "isopropanol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "added",
+            "centrifuged",
+            "precipitate"
+        ],
+        "descriptors": [
+            "dissolved"
+        ],
+        "values": [
+            "72 h",
+            "37.5 mL",
+            "7715 × g",
+            "10 min"
+        ],
+        "properties": [
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "10 min",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "7715 × g",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "centrifuge"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "dissolved",
+            "target": "dissolved solution"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 h",
+            "target": "dissolved solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "isopropanol",
+            "target": "added"
+        },
+        {
+            "type": "Condition-of",
+            "source": "37.5 mL",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "added",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "centrifuge",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Value-of",
+            "source": "7715 × g",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 min",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Next-operation",
+            "source": "centrifuged",
+            "target": "precipitate"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se ion binder",
+            "target": "precipitate"
+        }
+    ]
+}

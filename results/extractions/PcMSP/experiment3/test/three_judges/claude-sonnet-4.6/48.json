@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "cold pressed"
+        ],
+        "descriptors": [
+            "fine",
+            "homogenous",
+            "cylindrical"
+        ],
+        "values": [
+            "12 mm diameter",
+            "1 – 2 mm thickness",
+            "4 × 106 Pa"
+        ],
+        "properties": [
+            {
+                "text": "4 × 106 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "hydraulic press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenous",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 mm diameter",
+            "target": "pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 – 2 mm thickness",
+            "target": "pellets"
+        },
+        {
+            "type": "Condition-of",
+            "source": "4 × 106 Pa",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hydraulic press",
+            "target": "cold pressed"
+        }
+    ]
+}

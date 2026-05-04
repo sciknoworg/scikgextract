@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "compositions",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air atmosphere",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "alcohol",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "mixed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "weighed",
+            "thoroughly"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "compositions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "weighed",
+            "target": "compositions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "compositions",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air atmosphere",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "alcohol",
+            "target": "mixed"
+        }
+    ]
+}

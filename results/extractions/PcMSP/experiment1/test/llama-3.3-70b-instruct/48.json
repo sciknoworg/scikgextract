@@ -1,0 +1,74 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "cold pressed"
+        ],
+        "descriptors": [
+            "fine",
+            "homogenous",
+            "cylindrical"
+        ],
+        "values": [
+            "12 mm",
+            "1 \u2013 2 mm"
+        ],
+        "properties": [
+            {
+                "text": "4 \u00d7 10^6 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "hydraulic press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenous",
+            "target": "powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "pellets"
+        },
+        {
+            "type": "Participant-material",
+            "source": "cold pressed",
+            "target": "powder"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hydraulic press",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "4 \u00d7 10^6 Pa",
+            "target": "cold pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 mm",
+            "target": "pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 \u2013 2 mm",
+            "target": "pellets"
+        }
+    ]
+}

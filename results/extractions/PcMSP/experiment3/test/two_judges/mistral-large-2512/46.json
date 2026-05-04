@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "compositions",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "alcohol",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "weighed",
+            "mixed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "thoroughly",
+            "air",
+            "first",
+            "then"
+        ],
+        "values": [
+            "1 h",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "compositions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "weighed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "compositions",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "alcohol",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "alcohol",
+            "target": "mixed"
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "entities": [
+        {
+            "text": "phenylephrine",
+            "type": "ChemicalEntity",
+            "identifier": "C07564",
+            "offset": 0,
+            "length": 12
+        },
+        {
+            "text": "ephedrine",
+            "type": "ChemicalEntity",
+            "identifier": "D00053",
+            "offset": 24,
+            "length": 9
+        },
+        {
+            "text": "frontal lobe oxygenation",
+            "type": "ChemicalEntity",
+            "identifier": "C0333494",
+            "offset": 54,
+            "length": 22
+        },
+        {
+            "text": "S(c)O(2)",
+            "type": "ChemicalEntity",
+            "identifier": "C0333495",
+            "offset": 93,
+            "length": 7
+        },
+        {
+            "text": "anesthesia-induced hypotension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0019270",
+            "offset": 123,
+            "length": 28
+        },
+        {
+            "text": "fentanyl",
+            "type": "ChemicalEntity",
+            "identifier": "D00520",
+            "offset": 173,
+            "length": 8
+        },
+        {
+            "text": "propofol",
+            "type": "ChemicalEntity",
+            "identifier": "D011291",
+            "offset": 193,
+            "length": 8
+        },
+        {
+            "text": "mean arterial pressure",
+            "type": "ChemicalEntity",
+            "identifier": "C0333496",
+            "offset": 223,
+            "length": 20
+        },
+        {
+            "text": "heart rate",
+            "type": "ChemicalEntity",
+            "identifier": "C0333497",
+            "offset": 255,
+            "length": 10
+        },
+        {
+            "text": "stroke volume",
+            "type": "ChemicalEntity",
+            "identifier": "C0333498",
+            "offset": 277,
+            "length": 13
+        },
+        {
+            "text": "cardiac output",
+            "type": "ChemicalEntity",
+            "identifier": "C0333499",
+            "offset": 302,
+            "length": 13
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C07564",
+            "entity2": "C0333494",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C07564",
+            "entity2": "C0333495",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D00053",
+            "entity2": "C0333499",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D00053",
+            "entity2": "C0333499",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D00520",
+            "entity2": "C0019270",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D011291",
+            "entity2": "C0019270",
+            "novel": false
+        }
+    ]
+}

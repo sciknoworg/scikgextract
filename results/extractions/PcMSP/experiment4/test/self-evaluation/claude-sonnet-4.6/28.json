@@ -1,0 +1,117 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "graphite foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "graphite die",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "loaded",
+            "pressed"
+        ],
+        "descriptors": [
+            "temperature ramp",
+            "graphite foil lined",
+            "peak load",
+            "temperature ramp"
+        ],
+        "values": [
+            "a"
+        ],
+        "properties": [
+            {
+                "text": "39 MPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "last 1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "die"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "1200 ° C",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "graphite die",
+            "target": "loaded"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "graphite die"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "lined",
+            "target": "graphite foil"
+        },
+        {
+            "type": "Coreference",
+            "source": "graphite foil",
+            "target": "graphite die"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "loaded"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1200 ° C",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "300 ° C h − 1",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "39 MPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "peak load",
+            "target": "pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "temperature ramp",
+            "target": "pressed"
+        }
+    ]
+}

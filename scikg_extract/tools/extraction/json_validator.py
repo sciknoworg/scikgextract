@@ -1,7 +1,16 @@
+"""
+JSON Validator tool for SciKGExtract.
+
+This module defines the json_validator function, which serves as a tool in the SciKGExtract agent workflow to validate extracted JSON data against a predefined schema. It uses the validate_json_instance utility function to perform the validation and updates the ExtractionState with the results.
+"""
+# Python Imports
 import json
 
+# SciKGExtract Utility Imports
 from scikg_extract.utils.json_utils import validate_json_instance
 from scikg_extract.utils.log_handler import LogHandler
+
+# SciKGExtract State Imports
 from scikg_extract.agents.states import ExtractionState
 
 def json_validator(state: ExtractionState) -> ExtractionState:

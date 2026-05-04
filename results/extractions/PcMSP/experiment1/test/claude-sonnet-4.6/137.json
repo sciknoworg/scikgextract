@@ -1,0 +1,97 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "buttons",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "made",
+            "arc melting"
+        ],
+        "descriptors": [
+            "powder",
+            "alone"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "arc melting"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "made"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re",
+            "target": "made"
+        },
+        {
+            "type": "Participant-material",
+            "source": "buttons",
+            "target": "made"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "made"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melting",
+            "target": "made"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re",
+            "target": "arc melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Nb"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Re"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "alone",
+            "target": "Nb"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "alone",
+            "target": "Re"
+        }
+    ]
+}

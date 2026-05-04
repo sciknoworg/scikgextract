@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sintered pellet",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "arc-melted"
+        ],
+        "descriptors": [
+            "sintered",
+            "part of",
+            "high purity",
+            "water cooled"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "copper hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "sintered",
+            "target": "sintered pellet"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "part of",
+            "target": "sintered pellet"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "Ar"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sintered pellet",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ar",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "arc-melted"
+        }
+    ]
+}

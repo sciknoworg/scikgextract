@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Nb0.18Re0.82",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "melted",
+            "make"
+        ],
+        "descriptors": [
+            "single",
+            "button"
+        ],
+        "values": [
+            "0.18",
+            "0.82"
+        ],
+        "properties": [],
+        "devices": [
+            "button"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re",
+            "target": "melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "button",
+            "target": "Nb"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "button",
+            "target": "Re"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "button",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "make"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb0.18Re0.82",
+            "target": "make"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "single",
+            "target": "button"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.18",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.82",
+            "target": "Nb0.18Re0.82"
+        }
+    ]
+}

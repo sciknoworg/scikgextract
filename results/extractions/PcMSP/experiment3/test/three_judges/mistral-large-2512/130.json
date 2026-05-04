@@ -1,0 +1,85 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "S",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "precursors",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "5 N purity",
+            "evacuated"
+        ],
+        "values": [
+            "1 : 1 : 1 molar ratio"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "precursors"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "precursors"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "precursors"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precursors",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "precursors"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Si",
+            "target": "precursors"
+        },
+        {
+            "type": "Participant-material",
+            "source": "S",
+            "target": "precursors"
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "GdCo5-xNix",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Gd",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "arc melting"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "water cooled",
+            "argon"
+        ],
+        "values": [
+            "5-x stoichiometry",
+            "1 atm"
+        ],
+        "properties": [
+            {
+                "text": "1 atm",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "copper hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "GdCo5-xNix"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Gd",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "GdCo5-xNix",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "argon",
+            "target": "arc melting"
+        },
+        {
+            "type": "Value-of",
+            "source": "5-x stoichiometry",
+            "target": "GdCo5-xNix"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 atm",
+            "target": "arc melting"
+        }
+    ]
+}

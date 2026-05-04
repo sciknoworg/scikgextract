@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "AP-phase samples",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "subjected to high-pressure reactions"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [
+            "5.5 GPa",
+            "1,100 °C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "5.5 GPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1,100 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "belt-type HP apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "5.5 GPa",
+            "target": "subjected to high-pressure reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1,100 °C",
+            "target": "subjected to high-pressure reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "subjected to high-pressure reactions"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "belt-type HP apparatus",
+            "target": "subjected to high-pressure reactions"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AP-phase samples",
+            "target": "subjected to high-pressure reactions"
+        }
+    ]
+}

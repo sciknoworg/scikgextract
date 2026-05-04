@@ -1,0 +1,125 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cl-doped SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SnClx",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2SnSe2−xClx",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "added",
+            "synthesize",
+            "annealing"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "grains",
+            "fused",
+            "second"
+        ],
+        "values": [
+            "2",
+            "2(2−x)",
+            "600 °C",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "600 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "grains",
+            "target": "Se"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnClx",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2SnSe2−xClx",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "2",
+            "target": "SnClx"
+        },
+        {
+            "type": "Value-of",
+            "source": "2(2−x)",
+            "target": "Se"
+        },
+        {
+            "type": "Coreference",
+            "source": "Cl-doped SnSe2",
+            "target": "2SnSe2−xClx"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fused",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "600 °C",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hrs",
+            "target": "annealing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesize",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealing",
+            "target": "synthesize"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "α-Cu(IO₃)₂",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "α-Cu ( IO3 ) 2",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "heating"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [
+            "300 °C",
+            "8 hours"
+        ],
+        "properties": [
+            {
+                "text": "8 hours",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "8 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cu(IO₃)₂ · 2/3H₂O",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "α-Cu ( IO3 ) 2"
+        },
+        {
+            "type": "Value-of",
+            "source": "300 °C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 hours",
+            "target": "Property-time"
+        }
+    ]
+}

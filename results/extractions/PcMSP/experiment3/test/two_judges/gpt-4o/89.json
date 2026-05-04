@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "aqueous solution of HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "added",
+            "stirred"
+        ],
+        "descriptors": [],
+        "values": [
+            "5 mmol",
+            "10 mL"
+        ],
+        "properties": [
+            {
+                "text": "80 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "aqueous solution of HIO3",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        },
+        {
+            "type": "Next-operation",
+            "source": "added",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 °C",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mmol",
+            "target": "aqueous solution of HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 mL",
+            "target": "aqueous solution of HIO3"
+        }
+    ]
+}

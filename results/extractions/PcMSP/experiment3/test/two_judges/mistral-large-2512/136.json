@@ -1,0 +1,70 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "oxygen",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "utilized",
+            "melted",
+            "synthesis"
+        ],
+        "descriptors": [
+            "button",
+            "oxygen getter",
+            "each"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "before each synthesis",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "button",
+            "target": "Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "utilized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "utilized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesis",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "before each synthesis",
+            "target": "melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "each",
+            "target": "synthesis"
+        }
+    ]
+}

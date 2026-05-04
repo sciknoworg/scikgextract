@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "solid",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "reaction mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "deionized water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "isolated",
+            "filtration",
+            "washed"
+        ],
+        "descriptors": [
+            "pale pink"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "pale pink",
+            "target": "solid"
+        },
+        {
+            "type": "Participant-material",
+            "source": "solid",
+            "target": "isolated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reaction mixture",
+            "target": "isolated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "deionized water",
+            "target": "washed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "filtration",
+            "target": "isolated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtration"
+        }
+    ]
+}

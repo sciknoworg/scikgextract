@@ -1,0 +1,124 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "calcined",
+            "ground",
+            "pressed",
+            "fired",
+            "grindings"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "intermittent"
+        ],
+        "values": [
+            "900 °C",
+            "12 h",
+            "1050 °C",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "900 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1050 °C",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 h",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 °C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 h",
+            "target": "time"
+        },
+        {
+            "type": "Value-of",
+            "source": "1050 °C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 h",
+            "target": "time"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermittent",
+            "target": "grindings"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "pellets",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Coreference",
+            "source": "calcined",
+            "target": "fired"
+        }
+    ]
+}

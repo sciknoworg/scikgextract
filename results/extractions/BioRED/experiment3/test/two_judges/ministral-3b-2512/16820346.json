@@ -1,0 +1,169 @@
+{
+    "entities": [
+        {
+            "text": "atorvastatin",
+            "type": "ChemicalEntity",
+            "identifier": "D00076",
+            "offset": 10,
+            "length": 10
+        },
+        {
+            "text": "atorva",
+            "type": "ChemicalEntity",
+            "identifier": "D00076",
+            "offset": 25,
+            "length": 4
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "D00134",
+            "offset": 35,
+            "length": 12
+        },
+        {
+            "text": "dex",
+            "type": "ChemicalEntity",
+            "identifier": "D00134",
+            "offset": 43,
+            "length": 3
+        },
+        {
+            "text": "rat",
+            "type": "OrganismTaxon",
+            "identifier": "9685",
+            "offset": 52,
+            "length": 3
+        },
+        {
+            "text": "Sprague-Dawley rats",
+            "type": "OrganismTaxon",
+            "identifier": "9685",
+            "offset": 58,
+            "length": 18
+        },
+        {
+            "text": "systolic blood pressure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D00134",
+            "offset": 80,
+            "length": 20
+        },
+        {
+            "text": "SBP",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D00134",
+            "offset": 90,
+            "length": 3
+        },
+        {
+            "text": "superoxide",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D00583",
+            "offset": 110,
+            "length": 9
+        },
+        {
+            "text": "plasma superoxide",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D00583",
+            "offset": 120,
+            "length": 13
+        },
+        {
+            "text": "superoxide",
+            "type": "ChemicalEntity",
+            "identifier": "D013481",
+            "offset": 371,
+            "length": 10
+        },
+        {
+            "text": "NOx",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D00583",
+            "offset": 170,
+            "length": 3
+        },
+        {
+            "text": "dexamethasone-induced hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "Not Found",
+            "offset": 185,
+            "length": 30
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D00076",
+            "entity2": "D00134",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D00134",
+            "entity2": "9685",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D00583",
+            "entity2": "D00134",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D00076",
+            "entity2": "D00134",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D00134",
+            "entity2": "9685",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D00076",
+            "entity2": "D00134",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D003907",
+            "entity2": "D013481",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D00134",
+            "entity2": "D00583",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D00076",
+            "entity2": "D00583",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "D00134",
+            "entity2": "D00134",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "D00076",
+            "entity2": "Prevents_Hypertension",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "D00076",
+            "entity2": "Reverses_Hypertension",
+            "novel": false
+        }
+    ]
+}

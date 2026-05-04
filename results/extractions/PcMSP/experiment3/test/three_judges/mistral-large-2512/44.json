@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "re-grinding",
+            "re-pelletizing",
+            "annealing"
+        ],
+        "descriptors": [
+            "several"
+        ],
+        "values": [
+            "900 °C",
+            "1030 °C",
+            "48 h",
+            "between 900 °C and 1030 °C"
+        ],
+        "properties": [
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1030 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "re-pelletizing",
+            "target": "re-grinding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealing",
+            "target": "re-pelletizing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several",
+            "target": "annealing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 °C",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1030 °C",
+            "target": "annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 h",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 °C",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "1030 °C",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "annealing"
+        }
+    ]
+}

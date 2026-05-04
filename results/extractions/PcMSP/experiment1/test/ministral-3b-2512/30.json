@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe\u2082",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnCl\u2082",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "doped with Cl",
+            "stoichiometric",
+            "anhydrous",
+            "fused silica"
+        ],
+        "values": [
+            "250 \u00b0C",
+            "24 hrs"
+        ],
+        "properties": [
+            {
+                "text": "250 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnCl\u2082",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "SnSe\u2082"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "doped with Cl",
+            "target": "SnSe\u2082"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnCl\u2082"
+        },
+        {
+            "type": "Value-of",
+            "source": "250 \u00b0C",
+            "target": "250 \u00b0C"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "24 hrs"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "mixed"
+        },
+        {
+            "type": "Coreference",
+            "source": "2 \u2212 x Sn + xSnCl\u2082 \u2192 2SnClx",
+            "target": "mixed"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "arc-melted ingot",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "annealed",
+            "homogenize"
+        ],
+        "descriptors": [
+            "industrial grade"
+        ],
+        "values": [
+            "1200 ◦ C",
+            "72 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 ◦ C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "arc-melted ingot",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1200 ◦ C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ar",
+            "target": "annealed"
+        },
+        {
+            "type": "Coreference",
+            "source": "sample",
+            "target": "arc-melted ingot"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenize",
+            "target": "sample"
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "placed",
+            "heated",
+            "annealed",
+            "cooled"
+        ],
+        "descriptors": [
+            "vertically",
+            "slowly",
+            "naturally"
+        ],
+        "values": [
+            "823 K",
+            "5 h",
+            "2 days",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "tube",
+            "box furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "box furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "box furnace",
+            "target": "annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "box furnace",
+            "target": "cooled"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tube",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tube",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tube",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tube",
+            "target": "cooled"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vertically",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "naturally",
+            "target": "cooled"
+        },
+        {
+            "type": "Value-of",
+            "source": "823 K",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "time"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 days",
+            "target": "time"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "temperature"
+        }
+    ]
+}

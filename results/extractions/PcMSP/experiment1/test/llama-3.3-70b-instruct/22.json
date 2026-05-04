@@ -1,0 +1,56 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "product",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "placed"
+        ],
+        "descriptors": [
+            "in a glove box"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "placed"
+        }
+    ]
+}

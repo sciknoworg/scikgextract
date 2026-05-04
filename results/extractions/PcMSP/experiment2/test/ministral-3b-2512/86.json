@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "\u03b1-Cu(IO\u2083)\u2082\u00b72.2/3H\u2082O",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "isolated",
+            "filtration",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "greenish",
+            "polycrystalline",
+            "air"
+        ],
+        "values": [
+            "24 h",
+            "92%"
+        ],
+        "properties": [
+            {
+                "text": "24 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "92%",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "greenish",
+            "target": "\u03b1-Cu(IO\u2083)\u2082\u00b72.2/3H\u2082O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "\u03b1-Cu(IO\u2083)\u2082\u00b72.2/3H\u2082O"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 h",
+            "target": "isolated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 h",
+            "target": "filtration"
+        },
+        {
+            "type": "Value-of",
+            "source": "92%",
+            "target": "\u03b1-Cu(IO\u2083)\u2082\u00b72.2/3H\u2082O"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu(IO\u2083)\u2082\u00b72.2/3H\u2082O",
+            "target": "isolated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "deionized water",
+            "target": "washed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "air",
+            "target": "dried"
+        }
+    ]
+}

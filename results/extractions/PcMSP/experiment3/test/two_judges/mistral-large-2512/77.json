@@ -1,0 +1,114 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "material",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired",
+            "grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "fine",
+            "intermediate"
+        ],
+        "values": [
+            "1/2 \"",
+            "1200 °C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Not Found"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "material",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1/2 \"",
+            "target": "pellet"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1200 °C",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletizing",
+            "target": "grinding"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hrs",
+            "target": "grinding"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermediate",
+            "target": "grinding"
+        }
+    ]
+}

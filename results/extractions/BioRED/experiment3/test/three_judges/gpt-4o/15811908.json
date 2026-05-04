@@ -1,0 +1,86 @@
+{
+    "entities": [
+        {
+            "text": "pheochromocytoma",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010673",
+            "offset": 0,
+            "length": 16
+        },
+        {
+            "text": "amisulpride",
+            "type": "ChemicalEntity",
+            "identifier": "D019695",
+            "offset": 43,
+            "length": 10
+        },
+        {
+            "text": "tiapride",
+            "type": "ChemicalEntity",
+            "identifier": "D014101",
+            "offset": 58,
+            "length": 8
+        },
+        {
+            "text": "hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006973",
+            "offset": 108,
+            "length": 12
+        },
+        {
+            "text": "nicardipine",
+            "type": "ChemicalEntity",
+            "identifier": "D009538",
+            "offset": 278,
+            "length": 10
+        },
+        {
+            "text": "verapamil",
+            "type": "ChemicalEntity",
+            "identifier": "D014661",
+            "offset": 294,
+            "length": 9
+        },
+        {
+            "text": "adrenal mass",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "-1",
+            "offset": 331,
+            "length": 12
+        },
+        {
+            "text": "Naranjo probability scale",
+            "type": "GeneOrGeneProduct",
+            "identifier": "-1",
+            "offset": 505,
+            "length": 23
+        }
+    ],
+    "relations": [
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D019695",
+            "entity2": "D010673",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D014101",
+            "entity2": "D010673",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D009538",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D014661",
+            "entity2": "D006973",
+            "novel": false
+        }
+    ]
+}

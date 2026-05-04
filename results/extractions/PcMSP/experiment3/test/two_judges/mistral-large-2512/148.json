@@ -1,0 +1,48 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "F",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [
+            "slowly"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "10 °C/hour",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "Not Found"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 °C/hour",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "heated"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "entities": [
+        {
+            "text": "Wegener's granulomatosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009983",
+            "offset": 18,
+            "length": 24
+        },
+        {
+            "text": "cyclophosphamide",
+            "type": "ChemicalEntity",
+            "identifier": "D001093",
+            "offset": 50,
+            "length": 14
+        },
+        {
+            "text": "bladder cancer",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000966",
+            "offset": 28,
+            "length": 12
+        },
+        {
+            "text": "cyclophosphamide",
+            "type": "ChemicalEntity",
+            "identifier": "D003520",
+            "offset": 959,
+            "length": 16
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D003520",
+            "entity2": "D014890",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000966",
+            "entity2": "D009983",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D001093",
+            "entity2": "D000966",
+            "novel": false
+        }
+    ]
+}

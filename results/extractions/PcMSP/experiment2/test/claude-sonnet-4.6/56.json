@@ -1,0 +1,56 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "pressed",
+            "heated"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "2 GPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "700 \u00baC",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 hour",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "high-pressure cell"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure cell",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 GPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "700 \u00baC",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 hour",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "heated"
+        }
+    ]
+}

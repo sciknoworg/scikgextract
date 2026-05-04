@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "heated"
+        ],
+        "descriptors": [
+            "gradually"
+        ],
+        "values": [
+            "5 °C / min",
+            "900 °C"
+        ],
+        "properties": [
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 °C / min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "aluminium / platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 °C / min",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 °C",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "heated"
+        }
+    ]
+}

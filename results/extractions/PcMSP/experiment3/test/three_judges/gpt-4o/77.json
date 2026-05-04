@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "This material",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired",
+            "grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "fine",
+            "intermediate"
+        ],
+        "values": [
+            "1 / 2 ”",
+            "1200 ◦ C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "grinding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "pelletizing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1200 ◦ C",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hrs",
+            "target": "grinding"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermediate",
+            "target": "grinding"
+        }
+    ]
+}

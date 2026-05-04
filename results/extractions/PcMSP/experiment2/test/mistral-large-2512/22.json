@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "product",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "alumina",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "placed"
+        ],
+        "descriptors": [
+            "again",
+            "in a glove box"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "glove box",
+            "alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in a glove box",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "product",
+            "target": "pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in a glove box",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "again",
+            "target": "placed"
+        },
+        {
+            "type": "Coreference",
+            "source": "alumina",
+            "target": "alumina crucible"
+        }
+    ]
+}

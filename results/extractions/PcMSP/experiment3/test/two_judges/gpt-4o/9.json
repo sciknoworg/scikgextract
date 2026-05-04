@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "products",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "distilled water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "turquoise",
+            "pale blue",
+            "Zn-substitution"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "turquoise",
+            "target": "products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pale blue",
+            "target": "products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Zn-substitution",
+            "target": "products"
+        },
+        {
+            "type": "Condition-of",
+            "source": "several times",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "dried"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        }
+    ]
+}

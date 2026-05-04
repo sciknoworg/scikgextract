@@ -1,0 +1,120 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "( Sr0.95La0.05 ) GeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "reagents",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AP-phase SrGeO3",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "Stoichiometric amounts",
+            "undoped",
+            "La-doped",
+            "in air"
+        ],
+        "values": [
+            "1,200 \u00b0 C",
+            "10 h",
+            "AP"
+        ],
+        "properties": [
+            {
+                "text": "1,200 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "AP",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric amounts",
+            "target": "reagents"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "undoped",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "La-doped",
+            "target": "( Sr0.95La0.05 ) GeO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "( Sr0.95La0.05 ) GeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reagents",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reagents",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "1,200 \u00b0 C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Value-of",
+            "source": "AP",
+            "target": "Property-pressure"
+        },
+        {
+            "type": "Condition-of",
+            "source": "in air",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "AP",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AP-phase SrGeO3",
+            "target": "calcined"
+        }
+    ]
+}

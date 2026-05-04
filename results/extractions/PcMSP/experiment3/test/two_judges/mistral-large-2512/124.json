@@ -1,0 +1,59 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "reaction mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "Heating",
+            "grind"
+        ],
+        "descriptors": [
+            "several times",
+            "to facilitate the reaction progress"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "reaction mixture",
+            "target": "Heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "interrupted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "to facilitate the reaction progress",
+            "target": "grind"
+        },
+        {
+            "type": "Next-operation",
+            "source": "interrupted",
+            "target": "Heating"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "interrupted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reaction mixture",
+            "target": "grind"
+        },
+        {
+            "type": "Coreference",
+            "source": "interrupted",
+            "target": "Heating"
+        }
+    ]
+}

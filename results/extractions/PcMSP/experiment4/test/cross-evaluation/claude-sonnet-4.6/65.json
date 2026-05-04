@@ -1,0 +1,159 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ti wire",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "charges",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ti",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "sources",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "formed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "elemental",
+            "wire",
+            "foil",
+            "shot",
+            "approximately"
+        ],
+        "values": [
+            "12 g",
+            "99.7%",
+            "99.9%",
+            "12 g"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": [
+            "Sigma Aldrich"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "charges",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1Sn",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ti",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "formed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "approximately",
+            "target": "charges"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 g",
+            "target": "charges"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "elemental",
+            "target": "sources"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "wire",
+            "target": "Ti"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.7%",
+            "target": "Ti"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Ti"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "foil",
+            "target": "Ni"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Ni"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1Sn",
+            "target": "formed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "shot",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.8%",
+            "target": "Sn"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Sn"
+        },
+        {
+            "type": "Coreference",
+            "source": "sources",
+            "target": "Ti"
+        },
+        {
+            "type": "Coreference",
+            "source": "sources",
+            "target": "Ni"
+        },
+        {
+            "type": "Coreference",
+            "source": "sources",
+            "target": "Sn"
+        }
+    ]
+}

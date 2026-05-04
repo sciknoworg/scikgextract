@@ -1,0 +1,107 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "calcined",
+            "ground",
+            "pressed",
+            "fired"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "intermittent grindings"
+        ],
+        "values": [
+            "900 \u00b0 C",
+            "12 h",
+            "1050 \u00b0 C",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "1050 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 \u00b0 C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1050 \u00b0 C",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 h",
+            "target": "fired"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermittent grindings",
+            "target": "fired"
+        }
+    ]
+}

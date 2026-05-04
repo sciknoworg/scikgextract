@@ -1,0 +1,96 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AsSn",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "synthesized"
+        ],
+        "descriptors": [
+            "stoichiometric"
+        ],
+        "values": [
+            "5 N"
+        ],
+        "properties": [
+            {
+                "text": "5 N",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixtures"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AsSn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "synthesized"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "AsSn"
+        },
+        {
+            "type": "Coreference",
+            "source": "synthesized",
+            "target": "synthesized"
+        }
+    ]
+}

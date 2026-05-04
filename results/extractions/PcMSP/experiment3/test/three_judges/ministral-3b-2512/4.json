@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sr0.95La0.05GeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "reagents",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sr0.95La0.05GeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SrGeO3 (undoped)",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "(Sr0.95La0.05)GeO3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined"
+        ],
+        "descriptors": [
+            "undoped",
+            "AP-phase"
+        ],
+        "values": [
+            "Stoichiometric amounts"
+        ],
+        "properties": [
+            {
+                "text": "air",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "air",
+            "AP"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "undoped",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "La-doped",
+            "target": "(Sr0.95La0.05)GeO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(Sr0.95La0.05)GeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "(Sr0.95La0.05)GeO3",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "1,200 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "AP",
+            "target": "calcined"
+        }
+    ]
+}

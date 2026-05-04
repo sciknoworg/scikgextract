@@ -1,0 +1,118 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Te",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "heating"
+        ],
+        "descriptors": [
+            "powders",
+            "stoichiometric",
+            "sealed",
+            "evacuated"
+        ],
+        "values": [
+            "99.99%",
+            "99.999%"
+        ],
+        "properties": [
+            {
+                "text": "750 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "MoTe2",
+            "target": "synthesized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heating",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Te",
+            "target": "mixture"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Mo"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Te"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Mo"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Te"
+        },
+        {
+            "type": "Condition-of",
+            "source": "750 ° C",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        }
+    ]
+}

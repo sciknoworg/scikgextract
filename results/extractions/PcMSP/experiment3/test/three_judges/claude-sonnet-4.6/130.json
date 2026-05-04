@@ -1,0 +1,111 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "S",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "5 N purity",
+            "evacuated",
+            "direct solid state reaction"
+        ],
+        "values": [
+            "1 : 1 : 1 molar ratio"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "precursors"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "precursors"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "Si"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "S"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "Si"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 : 1 molar ratio",
+            "target": "S"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precursors",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Coreference",
+            "source": "Zr",
+            "target": "precursors"
+        },
+        {
+            "type": "Coreference",
+            "source": "Si",
+            "target": "precursors"
+        },
+        {
+            "type": "Coreference",
+            "source": "S",
+            "target": "precursors"
+        }
+    ]
+}

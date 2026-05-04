@@ -1,0 +1,119 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb0.18Re0.82",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "niobium powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "rhenium shot",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "argon gas",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "melting"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "high purity",
+            "stoichiometric",
+            "ultra-high-purity",
+            "water-cooled"
+        ],
+        "values": [
+            "0.3 g",
+            "99.95 %",
+            "99.999 %"
+        ],
+        "properties": [],
+        "devices": [
+            "arc-melter",
+            "tungsten electrode",
+            "copper hearth"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "niobium powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "rhenium shot"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "niobium powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "rhenium shot"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95 %",
+            "target": "niobium powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999 %",
+            "target": "rhenium shot"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "niobium powder"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "rhenium shot"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc-melter",
+            "target": "melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "niobium powder",
+            "target": "melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "rhenium shot",
+            "target": "melting"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melting",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb0.18Re0.82",
+            "target": "prepared"
+        }
+    ]
+}

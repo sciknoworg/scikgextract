@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "crucible",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Ta Tube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "arc welding",
+            "sealed"
+        ],
+        "descriptors": [
+            "evacuated"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "crucible",
+            "Ta Tube",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Ta Tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta Tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc welding",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "arc welding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "sealed"
+        }
+    ]
+}

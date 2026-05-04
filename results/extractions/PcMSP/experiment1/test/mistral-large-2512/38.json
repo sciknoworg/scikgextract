@@ -1,0 +1,70 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2Co2TeO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "flaky crystals",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "collected"
+        ],
+        "descriptors": [
+            "room temperature",
+            "light purple",
+            "flaky"
+        ],
+        "values": [
+            "RT"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "flaky",
+            "target": "Na2Co2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "light purple",
+            "target": "Na2Co2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "flaky",
+            "target": "flaky crystals"
+        },
+        {
+            "type": "Coreference",
+            "source": "RT",
+            "target": "room temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "RT",
+            "target": "room temperature"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2Co2TeO6",
+            "target": "collected"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "collected"
+        }
+    ]
+}

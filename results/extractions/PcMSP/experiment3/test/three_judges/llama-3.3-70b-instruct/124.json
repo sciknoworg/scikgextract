@@ -1,0 +1,45 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "reaction mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "heating",
+            "grinding"
+        ],
+        "descriptors": [
+            "interrupted",
+            "several times",
+            "to facilitate the reaction progress"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "interrupted",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "interrupted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "to facilitate the reaction progress",
+            "target": "grinding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "heating"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tube",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "placed",
+            "heated",
+            "annealed",
+            "cooled"
+        ],
+        "descriptors": [
+            "vertically",
+            "slowly",
+            "naturally"
+        ],
+        "values": [
+            "823 K",
+            "5 h",
+            "2 days",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "823 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "box furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "box furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vertically",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tube",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "823 K",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 h",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "823 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "naturally",
+            "target": "cooled"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "cooled"
+        }
+    ]
+}

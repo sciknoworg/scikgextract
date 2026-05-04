@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "obtained",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [],
+        "values": [
+            "13 mm",
+            "\u223c 10 \u2212 4 Torr"
+        ],
+        "properties": [
+            {
+                "text": "\u223c 10 \u2212 4 Torr",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "obtained"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Value-of",
+            "source": "\u223c 10 \u2212 4 Torr",
+            "target": "flame-sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "\u223c 10 \u2212 4 Torr",
+            "target": "flame-sealed"
+        }
+    ]
+}

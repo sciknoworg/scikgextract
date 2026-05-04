@@ -1,0 +1,43 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "utilized",
+            "melted"
+        ],
+        "descriptors": [
+            "oxygen getter"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "utilized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "utilized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr",
+            "target": "melted"
+        }
+    ]
+}

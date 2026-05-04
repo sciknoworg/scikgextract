@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ge",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "stoichiometric ratio",
+            "argon atmosphere"
+        ],
+        "values": [
+            "stoichiometric ratio"
+        ],
+        "properties": [
+            {
+                "text": "argon atmosphere",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "arc furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Mn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Si",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ge",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc furnace",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn, Si, Ge",
+            "target": "melted"
+        },
+        {
+            "type": "Value-of",
+            "source": "stoichiometric ratio",
+            "target": "mixed"
+        }
+    ]
+}

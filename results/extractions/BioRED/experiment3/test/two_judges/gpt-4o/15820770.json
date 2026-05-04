@@ -1,0 +1,79 @@
+{
+    "entities": [
+        {
+            "text": "Vitamin D-binding protein",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P02774",
+            "offset": 0,
+            "length": 23
+        },
+        {
+            "text": "1.25(OH)2D3",
+            "type": "ChemicalEntity",
+            "identifier": "D000701",
+            "offset": 64,
+            "length": 10
+        },
+        {
+            "text": "GAT-->GAG substitution",
+            "type": "SequenceVariant",
+            "identifier": "rs4588",
+            "offset": 176,
+            "length": 20
+        },
+        {
+            "text": "ACG-->AAG substitution",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 246,
+            "length": 20
+        },
+        {
+            "text": "type 1 diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003922",
+            "offset": 346,
+            "length": 14
+        },
+        {
+            "text": "IA-2 autoantibodies",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 451,
+            "length": 17
+        },
+        {
+            "text": "GAD65 antibodies",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 676,
+            "length": 14
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "P02774",
+            "entity2": "D003922",
+            "novel": false
+        },
+        {
+            "type": "Bind",
+            "entity1": "P02774",
+            "entity2": "D000701",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs4588",
+            "entity2": "Not Found",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs7041",
+            "entity2": "Not Found",
+            "novel": true
+        }
+    ]
+}

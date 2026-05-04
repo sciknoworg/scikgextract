@@ -1,0 +1,106 @@
+{
+    "entities": [
+        {
+            "text": "phenylephrine",
+            "type": "ChemicalEntity",
+            "identifier": "C007577",
+            "offset": 0,
+            "length": 12
+        },
+        {
+            "text": "ephedrine",
+            "type": "ChemicalEntity",
+            "identifier": "D004788",
+            "offset": 24,
+            "length": 9
+        },
+        {
+            "text": "frontal lobe oxygenation",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D013162",
+            "offset": 54,
+            "length": 22
+        },
+        {
+            "text": "anesthesia-induced hypotension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0002924",
+            "offset": 93,
+            "length": 26
+        },
+        {
+            "text": "mean arterial pressure",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D008571",
+            "offset": 140,
+            "length": 20
+        },
+        {
+            "text": "heart rate",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006325",
+            "offset": 173,
+            "length": 10
+        },
+        {
+            "text": "stroke volume",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D013162",
+            "offset": 194,
+            "length": 13
+        },
+        {
+            "text": "cardiac output",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D013162",
+            "offset": 218,
+            "length": 13
+        },
+        {
+            "text": "fentanyl",
+            "type": "ChemicalEntity",
+            "identifier": "D005253",
+            "offset": 244,
+            "length": 8
+        },
+        {
+            "text": "propofol",
+            "type": "ChemicalEntity",
+            "identifier": "D011291",
+            "offset": 264,
+            "length": 8
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C007577",
+            "entity2": "D008571",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D004788",
+            "entity2": "D008571",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C007577",
+            "entity2": "D013162",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D005253",
+            "entity2": "C0002924",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D011291",
+            "entity2": "C0002924",
+            "novel": false
+        }
+    ]
+}

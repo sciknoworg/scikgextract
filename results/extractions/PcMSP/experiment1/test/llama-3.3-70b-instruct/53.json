@@ -1,0 +1,52 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Bi2S3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Bi",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "S",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "reacting"
+        ],
+        "descriptors": [
+            "powder"
+        ],
+        "values": [
+            "99.99 %"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Bi2S3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bi",
+            "target": "reacting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "S",
+            "target": "reacting"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99 %",
+            "target": "S"
+        }
+    ]
+}

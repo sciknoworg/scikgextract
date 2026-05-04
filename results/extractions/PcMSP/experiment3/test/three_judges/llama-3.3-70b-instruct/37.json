@@ -1,0 +1,47 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "maintained",
+            "cooled"
+        ],
+        "descriptors": [
+            "slowly"
+        ],
+        "values": [
+            "30 h",
+            "500 °C",
+            "2 °C/h"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "30 h",
+            "target": "maintained"
+        },
+        {
+            "type": "Condition-of",
+            "source": "500 °C",
+            "target": "cooled"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 °C/h",
+            "target": "cooled"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "cooled"
+        }
+    ]
+}

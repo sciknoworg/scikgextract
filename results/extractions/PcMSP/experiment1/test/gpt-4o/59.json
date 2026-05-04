@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2 polycrystalline powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "placed"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [
+            "~ 5 mg cm \u2212 3"
+        ],
+        "properties": [],
+        "devices": [
+            "evacuated quartz ampoule",
+            "two-zone furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoTe2 polycrystalline powders"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2 polycrystalline powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Br2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2 polycrystalline powders",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Br2",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "evacuated quartz ampoule",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "two-zone furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "loaded"
+        }
+    ]
+}

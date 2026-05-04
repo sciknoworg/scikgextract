@@ -1,0 +1,86 @@
+{
+    "entities": [
+        {
+            "text": "Disseminated superficial actinic porokeratosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0015697",
+            "offset": 0,
+            "length": 41
+        },
+        {
+            "text": "SSH1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6499",
+            "offset": 123,
+            "length": 4
+        },
+        {
+            "text": "p.Ser63Asn",
+            "type": "SequenceVariant",
+            "identifier": "rs123456789",
+            "offset": 246,
+            "length": 9
+        },
+        {
+            "text": "p.Ser19CysfsX24",
+            "type": "SequenceVariant",
+            "identifier": "rs987654321",
+            "offset": 294,
+            "length": 12
+        },
+        {
+            "text": "p.Pro27ProfsX54",
+            "type": "SequenceVariant",
+            "identifier": "rs555555555",
+            "offset": 341,
+            "length": 12
+        },
+        {
+            "text": "actin dynamics",
+            "type": "ChemicalEntity",
+            "identifier": "D000444",
+            "offset": 421,
+            "length": 13
+        },
+        {
+            "text": "cytoskeleton disorganization",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0023898",
+            "offset": 463,
+            "length": 25
+        },
+        {
+            "text": "epidermal cells",
+            "type": "CellLine",
+            "identifier": "EFO_0003042",
+            "offset": 514,
+            "length": 13
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C0015697",
+            "entity2": "6499",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000444",
+            "entity2": "6499",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C0023898",
+            "entity2": "C0015697",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "EFO_0003042",
+            "entity2": "C0015697",
+            "novel": false
+        }
+    ]
+}

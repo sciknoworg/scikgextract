@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb and Re buttons",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Nb powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re powder",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "made",
+            "arc melting"
+        ],
+        "descriptors": [
+            "buttons",
+            "alone"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "arc melter"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Nb and Re buttons",
+            "target": "made"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb powder",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re powder",
+            "target": "arc melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "buttons",
+            "target": "Nb and Re buttons"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "alone",
+            "target": "Nb and Re powder"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melter",
+            "target": "arc melting"
+        },
+        {
+            "type": "Next-operation",
+            "source": "arc melting",
+            "target": "made"
+        }
+    ]
+}

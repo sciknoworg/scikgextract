@@ -1,0 +1,199 @@
+{
+    "entities": [
+        {
+            "text": "hepatitis C virus",
+            "type": "OrganismTaxon",
+            "identifier": "11103",
+            "offset": 47,
+            "length": 17
+        },
+        {
+            "text": "cirrhosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003480",
+            "offset": 93,
+            "length": 9
+        },
+        {
+            "text": "hepatocellular carcinoma",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006528",
+            "offset": 104,
+            "length": 23
+        },
+        {
+            "text": "end-stage liver disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D019662",
+            "offset": 133,
+            "length": 22
+        },
+        {
+            "text": "pegylated interferon",
+            "type": "ChemicalEntity",
+            "identifier": "-1",
+            "offset": 192,
+            "length": 19
+        },
+        {
+            "text": "ribavirin",
+            "type": "ChemicalEntity",
+            "identifier": "D012254",
+            "offset": 216,
+            "length": 8
+        },
+        {
+            "text": "hemolytic anemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000740",
+            "offset": 312,
+            "length": 16
+        },
+        {
+            "text": "Hemoglobin",
+            "type": "ChemicalEntity",
+            "identifier": "D006454",
+            "offset": 349,
+            "length": 9
+        },
+        {
+            "text": "ribavirin-induced hemolysis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "-1",
+            "offset": 377,
+            "length": 26
+        },
+        {
+            "text": "renal disorders",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D012213",
+            "offset": 470,
+            "length": 15
+        },
+        {
+            "text": "cardiovascular disorders",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D002318",
+            "offset": 490,
+            "length": 23
+        },
+        {
+            "text": "anemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000740",
+            "offset": 504,
+            "length": 6
+        },
+        {
+            "text": "morbidity",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D008331",
+            "offset": 537,
+            "length": 9
+        },
+        {
+            "text": "mortality",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009026",
+            "offset": 551,
+            "length": 9
+        },
+        {
+            "text": "cerebral function",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "-1",
+            "offset": 578,
+            "length": 16
+        },
+        {
+            "text": "quality of life",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D011788",
+            "offset": 599,
+            "length": 14
+        },
+        {
+            "text": "recombinant human erythropoietin",
+            "type": "ChemicalEntity",
+            "identifier": "D019468",
+            "offset": 720,
+            "length": 30
+        },
+        {
+            "text": "Viramidine",
+            "type": "ChemicalEntity",
+            "identifier": "-1",
+            "offset": 849,
+            "length": 10
+        },
+        {
+            "text": "chronic hepatitis C",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006526",
+            "offset": 889,
+            "length": 18
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "11103",
+            "entity2": "D003480",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "11103",
+            "entity2": "D006528",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "11103",
+            "entity2": "D019662",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "-1",
+            "entity2": "D012254",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D012254",
+            "entity2": "D000740",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000740",
+            "entity2": "D012213",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000740",
+            "entity2": "D002318",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D000740",
+            "entity2": "D011788",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D019468",
+            "entity2": "D000740",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "-1",
+            "entity2": "D000740",
+            "novel": true
+        }
+    ]
+}

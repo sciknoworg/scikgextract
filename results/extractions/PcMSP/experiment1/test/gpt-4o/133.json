@@ -1,0 +1,116 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrCO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "WO3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ground"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "thoroughly"
+        ],
+        "values": [
+            "99.995%"
+        ],
+        "properties": [],
+        "devices": [
+            "agate mortar"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "amounts"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrCO3",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "WO3",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "ground"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "SrCO3"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "CuO"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "TeO2"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "WO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.995%",
+            "target": "SrCO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.995%",
+            "target": "CuO"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.995%",
+            "target": "TeO2"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.995%",
+            "target": "WO3"
+        }
+    ]
+}

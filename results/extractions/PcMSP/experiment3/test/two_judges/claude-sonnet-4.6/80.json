@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingot",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "arc-melted",
+            "annealed"
+        ],
+        "descriptors": [
+            "industrial grade"
+        ],
+        "values": [
+            "1200 ◦ C",
+            "72 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 ◦ C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "ingot",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingot",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1200 ◦ C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar",
+            "target": "annealed"
+        },
+        {
+            "type": "Coreference",
+            "source": "sample",
+            "target": "ingot"
+        }
+    ]
+}

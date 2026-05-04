@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "re-grinding",
+            "re-pelletizing",
+            "performed"
+        ],
+        "descriptors": [
+            "several",
+            "annealing cycles"
+        ],
+        "values": [
+            "900 \u00b0 C",
+            "1030 \u00b0 C",
+            "48 h"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1030 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "re-pelletizing",
+            "target": "re-grinding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "performed",
+            "target": "re-pelletizing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 \u00b0 C",
+            "target": "performed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1030 \u00b0 C",
+            "target": "performed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 h",
+            "target": "performed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "annealing cycles",
+            "target": "performed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several",
+            "target": "annealing cycles"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ta Tube",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "arc welding",
+            "evacuated"
+        ],
+        "descriptors": [
+            "Ta",
+            "evacuated"
+        ],
+        "values": [
+            "Not Found"
+        ],
+        "properties": [
+            {
+                "text": "evacuated",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Ta Tube",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Ta Tube",
+            "target": "arc welding"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Ta Tube",
+            "target": "arc welding"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "evacuated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "evacuated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Ta",
+            "target": "Ta Tube"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Not Found",
+            "target": "Ta Tube"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Not Found",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Condition-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        }
+    ]
+}

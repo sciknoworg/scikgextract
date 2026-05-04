@@ -1,0 +1,65 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "turned",
+            "remelted"
+        ],
+        "descriptors": [
+            "homogeneity"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [
+            {
+                "text": "homogeneity",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneity",
+            "target": "sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "turned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "remelted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "homogeneity",
+            "target": "turned"
+        },
+        {
+            "type": "Condition-of",
+            "source": "homogeneity",
+            "target": "remelted"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "turned"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "remelted"
+        }
+    ]
+}

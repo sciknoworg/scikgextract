@@ -1,0 +1,106 @@
+{
+    "entities": [
+        {
+            "text": "Nefiracetam",
+            "type": "ChemicalEntity",
+            "identifier": "C07571",
+            "offset": 0,
+            "length": 10
+        },
+        {
+            "text": "apomorphine",
+            "type": "ChemicalEntity",
+            "identifier": "D000997",
+            "offset": 34,
+            "length": 10
+        },
+        {
+            "text": "amnesia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000674",
+            "offset": 63,
+            "length": 7
+        },
+        {
+            "text": "passive avoidance response",
+            "type": "GeneOrGeneProduct",
+            "identifier": "-1",
+            "offset": 92,
+            "length": 24
+        },
+        {
+            "text": "scopolamine",
+            "type": "ChemicalEntity",
+            "identifier": "D000161",
+            "offset": 143,
+            "length": 11
+        },
+        {
+            "text": "dopaminergic agonism",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "-1",
+            "offset": 201,
+            "length": 19
+        },
+        {
+            "text": "D1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DRD1",
+            "offset": 272,
+            "length": 2
+        },
+        {
+            "text": "D2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "DRD2",
+            "offset": 283,
+            "length": 2
+        },
+        {
+            "text": "[3H]SCH 23390",
+            "type": "ChemicalEntity",
+            "identifier": "-1",
+            "offset": 306,
+            "length": 12
+        },
+        {
+            "text": "[3H]spiperone",
+            "type": "ChemicalEntity",
+            "identifier": "-1",
+            "offset": 329,
+            "length": 13
+        }
+    ],
+    "relations": [
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000997",
+            "entity2": "D000674",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C07571",
+            "entity2": "D000674",
+            "novel": true
+        },
+        {
+            "type": "Bind",
+            "entity1": "[3H]SCH 23390",
+            "entity2": "DRD1",
+            "novel": false
+        },
+        {
+            "type": "Bind",
+            "entity1": "[3H]spiperone",
+            "entity2": "DRD2",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "C07571",
+            "entity2": "D000997",
+            "novel": true
+        }
+    ]
+}

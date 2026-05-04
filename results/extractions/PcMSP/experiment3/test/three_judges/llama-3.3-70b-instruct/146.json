@@ -1,0 +1,50 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precursors",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "sealed"
+        ],
+        "descriptors": [
+            "under vacuum"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precursors",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precursors",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "sealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "under vacuum",
+            "target": "sealed"
+        }
+    ]
+}

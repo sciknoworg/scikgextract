@@ -1,0 +1,58 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ampoules",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "free cooling"
+        ],
+        "descriptors": [
+            "this temperature"
+        ],
+        "values": [
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace",
+            "ampoules"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "free cooling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "free cooling"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ampoules",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "free cooling"
+        }
+    ]
+}

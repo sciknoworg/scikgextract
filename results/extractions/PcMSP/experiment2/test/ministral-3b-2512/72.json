@@ -1,0 +1,64 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "diamond saw-cut sample",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "bar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "cutting",
+            "grinding"
+        ],
+        "descriptors": [
+            "approximately"
+        ],
+        "values": [
+            "8 mm \u00d7 3 mm \u00d7 3 mm"
+        ],
+        "properties": [
+            {
+                "text": "8 mm \u00d7 3 mm \u00d7 3 mm",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "8 mm\u00b3",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "diamond saw",
+            "target": "diamond saw-cut sample"
+        },
+        {
+            "type": "Condition-of",
+            "source": "approximately",
+            "target": "8 mm \u00d7 3 mm \u00d7 3 mm"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "grinding"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "cutting"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "GdCo5−xNix",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Gd",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "arc melting"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "water cooled",
+            "argon"
+        ],
+        "values": [
+            "x"
+        ],
+        "properties": [],
+        "devices": [
+            "copper hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "GdCo5−xNix"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Gd",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "GdCo5−xNix",
+            "target": "synthesized"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "arc melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Condition-of",
+            "source": "argon",
+            "target": "arc melting"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "synthesized"
+        }
+    ]
+}

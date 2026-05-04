@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "alumina crucible",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "calcined"
+        ],
+        "descriptors": [
+            "high purity",
+            "optimized"
+        ],
+        "values": [
+            "700 °C",
+            "3 h"
+        ],
+        "properties": [
+            {
+                "text": "700 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "3 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "alumina crucible"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "optimized",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed powders",
+            "target": "calcined"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "700 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "3 h",
+            "target": "calcined"
+        }
+    ]
+}

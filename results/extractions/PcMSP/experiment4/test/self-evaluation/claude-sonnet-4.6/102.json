@@ -1,0 +1,176 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingots",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Mn1.4PtSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Rh-substituted samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "annealed",
+            "annealed"
+        ],
+        "descriptors": [
+            "evacuated",
+            "evacuated",
+            "quartz"
+        ],
+        "values": [
+            "873 K",
+            "an",
+            "7 d"
+        ],
+        "properties": [
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "7 d",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "synthesized",
+            "target": "ingots"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Condition-of",
+            "source": "evacuated",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "tube",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pd-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4PtSn",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "873 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1073 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "7 d",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "873 K",
+            "target": "Pd-substituted samples"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Mn1.4PtSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Rh-substituted samples"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "parent compound",
+            "target": "Mn1.4PtSn"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenching",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "quenching"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pd-substituted samples",
+            "target": "quenching"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh-substituted samples",
+            "target": "quenching"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ice-water mixture",
+            "target": "quenching"
+        }
+    ]
+}

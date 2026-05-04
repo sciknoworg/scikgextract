@@ -1,0 +1,74 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQA32",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heat-treated",
+            "annealed"
+        ],
+        "descriptors": [
+            "homogenized-quenched-annealed - 32 h"
+        ],
+        "values": [
+            "32 h",
+            "623 K"
+        ],
+        "properties": [
+            {
+                "text": "32 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "623 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched-annealed - 32 h",
+            "target": "HQA32"
+        },
+        {
+            "type": "Coreference",
+            "source": "HQA32",
+            "target": "samples"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA32",
+            "target": "heat-treated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "heat-treated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA32",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "32 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "623 K",
+            "target": "annealed"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "IrO\u2082",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Y\u2082O\u2083",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "adjusted",
+            "sintering"
+        ],
+        "descriptors": [
+            "evaporates",
+            "stoichiometric",
+            "4\u201310% excess"
+        ],
+        "values": [
+            "4\u201310% more IrO\u2082",
+            "1 : 2 stoichiometry"
+        ],
+        "properties": [
+            {
+                "text": "4\u201310% excess IrO\u2082",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "4\u201310% excess IrO\u2082",
+            "target": "IrO\u2082"
+        },
+        {
+            "type": "Value-of",
+            "source": "4\u201310% more IrO\u2082",
+            "target": "IrO\u2082"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Y\u2082O\u2083",
+            "target": "sintering"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Y\u2082O\u2083 : IrO\u2082 = 1 : 2"
+        },
+        {
+            "type": "Condition-of",
+            "source": "evaporates",
+            "target": "IrO\u2082"
+        }
+    ]
+}

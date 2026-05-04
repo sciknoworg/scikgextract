@@ -1,0 +1,93 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "final product",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired",
+            "grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "fine powder",
+            "intermediate"
+        ],
+        "values": [
+            "1/2 inch",
+            "1200 \u00b0C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Ar atmosphere"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "final product",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "1/2 inch",
+            "target": "pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fine powder",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermediate",
+            "target": "grinding"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 \u00b0C",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "grinding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "pelletizing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hrs",
+            "target": "grinding"
+        }
+    ]
+}

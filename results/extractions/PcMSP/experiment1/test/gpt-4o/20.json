@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heating",
+            "collected",
+            "ground"
+        ],
+        "descriptors": [
+            "fine"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "agate mortar",
+            "glove box"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Next-operation",
+            "source": "collected",
+            "target": "heating"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "collected"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "ground"
+        }
+    ]
+}

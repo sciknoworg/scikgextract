@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "stirred"
+        ],
+        "descriptors": [
+            "stirred at 80 \u00b0C",
+            "for 1 h"
+        ],
+        "values": [
+            "80 \u00b0C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "80 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Not Found"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "80 \u00b0C",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+{
+    "entities": [
+        {
+            "text": "Atorvastatin",
+            "type": "ChemicalEntity",
+            "identifier": "D000002554",
+            "offset": 43,
+            "length": 11
+        },
+        {
+            "text": "atorvastatin",
+            "type": "ChemicalEntity",
+            "identifier": "D000002554",
+            "offset": 70,
+            "length": 11
+        },
+        {
+            "text": "atorva",
+            "type": "ChemicalEntity",
+            "identifier": "D000002554",
+            "offset": 70,
+            "length": 5
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "D003907",
+            "offset": 88,
+            "length": 13
+        },
+        {
+            "text": "dex",
+            "type": "ChemicalEntity",
+            "identifier": "D003907",
+            "offset": 93,
+            "length": 3
+        },
+        {
+            "text": "Sprague-Dawley rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 108,
+            "length": 19
+        },
+        {
+            "text": "rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 113,
+            "length": 4
+        },
+        {
+            "text": "hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006973",
+            "offset": 150,
+            "length": 11
+        },
+        {
+            "text": "dexamethasone-induced hypertension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006973",
+            "offset": 400,
+            "length": 31
+        },
+        {
+            "text": "superoxide",
+            "type": "ChemicalEntity",
+            "identifier": "D013481",
+            "offset": 230,
+            "length": 9
+        },
+        {
+            "text": "plasma nitrate/nitrite (NOx)",
+            "type": "ChemicalEntity",
+            "identifier": "D016090",
+            "offset": 480,
+            "length": 24
+        },
+        {
+            "text": "rat",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 600,
+            "length": 3
+        }
+    ],
+    "relations": [
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D000002554",
+            "entity2": "D006973",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D000002554",
+            "entity2": "D013481",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D003907",
+            "entity2": "D006973",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D003907",
+            "entity2": "D013481",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D003907",
+            "entity2": "D016090",
+            "novel": false
+        }
+    ]
+}

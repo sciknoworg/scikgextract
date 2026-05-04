@@ -1,0 +1,85 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Not Found",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "taken outside",
+            "subjected to a planetary ball mill"
+        ],
+        "descriptors": [],
+        "values": [
+            "450 rpm",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "rotational speed",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "glove box",
+            "planetary ball mill",
+            "PM 100",
+            "jar"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "taken outside",
+            "target": "subjected to a planetary ball mill"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken outside"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected to a planetary ball mill"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "PM 100",
+            "target": "subjected to a planetary ball mill"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "PM 100"
+        },
+        {
+            "type": "Value-of",
+            "source": "450 rpm",
+            "target": "rotational speed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "2 h"
+        },
+        {
+            "type": "Participant-material",
+            "source": "jar",
+            "target": "subjected to a planetary ball mill"
+        }
+    ]
+}

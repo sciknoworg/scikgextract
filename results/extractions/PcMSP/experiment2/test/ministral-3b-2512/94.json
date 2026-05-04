@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zn(IO\u2083)\u2082",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Zn",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "precipitated",
+            "filtration",
+            "dried"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "collected",
+            "air"
+        ],
+        "values": [
+            "65%",
+            "3 days"
+        ],
+        "properties": [
+            {
+                "text": "65%",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "3 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "filtration"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Zn(IO\u2083)\u2082"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zn",
+            "target": "precipitated"
+        },
+        {
+            "type": "Value-of",
+            "source": "65%",
+            "target": "Zn(IO\u2083)\u2082"
+        },
+        {
+            "type": "Condition-of",
+            "source": "3 days",
+            "target": "precipitated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zn(IO\u2083)\u2082",
+            "target": "dried"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "filtration",
+            "target": "filtration"
+        },
+        {
+            "type": "Value-of",
+            "source": "3 days",
+            "target": "dried"
+        },
+        {
+            "type": "Coreference",
+            "source": "Zn",
+            "target": "Zn(IO\u2083)\u2082"
+        }
+    ]
+}

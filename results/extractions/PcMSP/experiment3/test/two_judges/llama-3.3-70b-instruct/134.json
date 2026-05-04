@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "calcined",
+            "ground",
+            "pressed",
+            "fired",
+            "grindings"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "intermittent"
+        ],
+        "values": [
+            "900 °C",
+            "12 h",
+            "1050 °C",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "1050 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "calcined",
+            "target": "900 °C"
+        },
+        {
+            "type": "Value-of",
+            "source": "calcined",
+            "target": "12 h"
+        },
+        {
+            "type": "Value-of",
+            "source": "fired",
+            "target": "1050 °C"
+        },
+        {
+            "type": "Value-of",
+            "source": "fired",
+            "target": "72 h"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "grindings",
+            "target": "intermittent"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ground",
+            "target": "thoroughly"
+        }
+    ]
+}

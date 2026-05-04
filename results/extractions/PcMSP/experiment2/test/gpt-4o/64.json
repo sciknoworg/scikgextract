@@ -1,0 +1,38 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "melted"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "Crystalox MCGS5 levitation melting system",
+            "water-cooled copper crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "Crystalox MCGS5 levitation melting system",
+            "target": "melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "water-cooled copper crucible",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "melted"
+        }
+    ]
+}

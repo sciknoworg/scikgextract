@@ -1,0 +1,46 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "CsAs",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "CsAs pre-cursor",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared"
+        ],
+        "descriptors": [
+            "parent"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "parent",
+            "target": "CsAs pre-cursor"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs pre-cursor",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CsAs",
+            "target": "prepared"
+        },
+        {
+            "type": "Coreference",
+            "source": "CsAs pre-cursor",
+            "target": "CsAs"
+        }
+    ]
+}

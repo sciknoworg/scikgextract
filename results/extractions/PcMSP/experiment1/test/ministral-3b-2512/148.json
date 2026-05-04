@@ -1,0 +1,44 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "F",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [
+            "slowly"
+        ],
+        "values": [
+            "10 \u00b0C/hour"
+        ],
+        "properties": [
+            {
+                "text": "10 \u00b0C/hour",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 \u00b0C/hour",
+            "target": "Property-rate"
+        },
+        {
+            "type": "Participant-material",
+            "source": "F",
+            "target": "heated"
+        }
+    ]
+}

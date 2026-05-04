@@ -1,0 +1,105 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zn ( IO3 ) 2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "solution",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Zn",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "precipitated",
+            "collected",
+            "dried"
+        ],
+        "descriptors": [
+            "Colorless",
+            "solid",
+            "polycrystalline",
+            "in air"
+        ],
+        "values": [
+            "3 days",
+            "65 %"
+        ],
+        "properties": [
+            {
+                "text": "3 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "filtration"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Colorless",
+            "target": "Zn ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "solid",
+            "target": "Zn ( IO3 ) 2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Zn ( IO3 ) 2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zn ( IO3 ) 2",
+            "target": "precipitated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "solution",
+            "target": "precipitated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "3 days",
+            "target": "precipitated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "collected",
+            "target": "precipitated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "filtration",
+            "target": "collected"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "collected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in air",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "65 %",
+            "target": "Zn ( IO3 ) 2"
+        },
+        {
+            "type": "Value-of",
+            "source": "65 %",
+            "target": "Zn"
+        }
+    ]
+}

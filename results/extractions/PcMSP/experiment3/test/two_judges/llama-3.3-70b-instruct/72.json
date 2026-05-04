@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "powder for synchrotron X-ray diffraction",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "piece for scanning electron microscopy",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "bar for physical property measurements",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind",
+            "scanning electron microscopy",
+            "synchrotron X-ray diffraction",
+            "physical property measurements"
+        ],
+        "descriptors": [
+            "approximately"
+        ],
+        "values": [
+            "8 mm × 3 mm × 3 mm"
+        ],
+        "properties": [],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "sectioned"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "piece to grind into a powder",
+            "target": "grind"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 mm × 3 mm × 3 mm",
+            "target": "bar for physical property measurements"
+        }
+    ]
+}

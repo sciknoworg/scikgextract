@@ -1,0 +1,98 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "glycerol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cu2Se powder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cu2-xSe ink",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "mixing"
+        ],
+        "descriptors": [
+            "all-inorganic"
+        ],
+        "values": [
+            "2.5 g",
+            "2 g",
+            "1 g"
+        ],
+        "properties": [
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "planetary centrifugal mixer"
+        ],
+        "brands": [
+            "Thinky"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "all-inorganic",
+            "target": "Cu2-xSe ink"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.5 g",
+            "target": "glycerol"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 g",
+            "target": "Cu2Se powder"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 g",
+            "target": "Se ion binder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "glycerol",
+            "target": "mixing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu2Se powder",
+            "target": "mixing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se ion binder",
+            "target": "mixing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary centrifugal mixer",
+            "target": "mixing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "mixing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "prepared",
+            "target": "mixing"
+        }
+    ]
+}

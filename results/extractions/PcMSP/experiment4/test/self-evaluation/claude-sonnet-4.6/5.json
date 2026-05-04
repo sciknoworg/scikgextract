@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "high-pressure reactions"
+        ],
+        "descriptors": [
+            "high-pressure",
+            "AP-phase"
+        ],
+        "values": [
+            "5.5 GPa",
+            "1,100 ° C",
+            "a"
+        ],
+        "properties": [
+            {
+                "text": "5.5 GPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1,100 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1,100 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "belt-type HP apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "AP-phase samples",
+            "target": "subjected"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "belt-type HP apparatus",
+            "target": "subjected"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5.5 GPa",
+            "target": "subjected"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5.5 GPa",
+            "target": "high-pressure reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "subjected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "subjected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "AP-phase",
+            "target": "samples"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellet",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "arc-melted"
+        ],
+        "descriptors": [
+            "high purity"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "water cooled copper hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "water cooled copper hearth",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellet",
+            "target": "arc-melted"
+        }
+    ]
+}

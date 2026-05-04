@@ -1,0 +1,59 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "resulting products",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "distilled water",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "turquoise to pale blue",
+            "depending on the level of Zn-substitution"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "turquoise to pale blue",
+            "target": "resulting products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "depending on the level of Zn-substitution",
+            "target": "resulting products"
+        },
+        {
+            "type": "Participant-material",
+            "source": "resulting products",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "distilled water",
+            "target": "washed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        }
+    ]
+}

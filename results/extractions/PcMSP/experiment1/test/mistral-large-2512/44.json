@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "re-grinding",
+            "re-pelletizing",
+            "annealing"
+        ],
+        "descriptors": [
+            "several"
+        ],
+        "values": [
+            "900 \u00b0C",
+            "1030 \u00b0C",
+            "48 h"
+        ],
+        "properties": [
+            {
+                "text": "900 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1030 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "re-pelletizing",
+            "target": "re-grinding"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealing",
+            "target": "re-pelletizing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00b0C",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "1030 \u00b0C",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "annealing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "re-grinding"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "re-pelletizing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "annealing"
+        }
+    ]
+}

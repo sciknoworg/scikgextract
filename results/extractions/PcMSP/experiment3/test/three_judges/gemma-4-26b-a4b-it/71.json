@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Ta foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "fused silica ampoule",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heat treatments",
+            "wrapping",
+            "sealing"
+        ],
+        "descriptors": [
+            "vacuum"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "heat treatments"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta foil",
+            "target": "wrapping"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "wrapping"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ta foil",
+            "target": "sealing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fused silica ampoule",
+            "target": "sealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum",
+            "target": "sealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum",
+            "target": "wrapping"
+        }
+    ]
+}

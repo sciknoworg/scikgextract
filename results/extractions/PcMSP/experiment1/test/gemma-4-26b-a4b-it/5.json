@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "AP-phase samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "reactions"
+        ],
+        "descriptors": [
+            "high-pressure",
+            "belt-type"
+        ],
+        "values": [
+            "5.5 GPa",
+            "1,100 \u00b0 C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "5.5 GPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "1,100 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "HP apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "AP-phase samples",
+            "target": "reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5.5 GPa",
+            "target": "reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1,100 \u00b0 C",
+            "target": "reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "reactions"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "HP apparatus",
+            "target": "reactions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "reactions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "belt-type",
+            "target": "HP apparatus"
+        }
+    ]
+}

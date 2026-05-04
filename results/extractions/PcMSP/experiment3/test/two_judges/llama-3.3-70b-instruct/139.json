@@ -1,0 +1,60 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "constituent elements",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "inverted",
+            "re-melted",
+            "mixing"
+        ],
+        "descriptors": [
+            "homogeneous"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [
+            {
+                "text": "homogeneous mixing",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneous",
+            "target": "mixing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixing",
+            "target": "constituent elements"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "inverted"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "re-melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneous",
+            "target": "constituent elements"
+        }
+    ]
+}

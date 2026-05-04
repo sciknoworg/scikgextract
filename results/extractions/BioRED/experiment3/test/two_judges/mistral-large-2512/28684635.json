@@ -1,0 +1,174 @@
+{
+    "entities": [
+        {
+            "text": "Type 2 Diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 30,
+            "length": 15
+        },
+        {
+            "text": "ADCY5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "111",
+            "offset": 120,
+            "length": 5
+        },
+        {
+            "text": "adenylate cyclase 5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "111",
+            "offset": 140,
+            "length": 19
+        },
+        {
+            "text": "fasting glucose",
+            "type": "ChemicalEntity",
+            "identifier": "D005947",
+            "offset": 85,
+            "length": 14
+        },
+        {
+            "text": "cyclic AMP",
+            "type": "ChemicalEntity",
+            "identifier": "C000105",
+            "offset": 220,
+            "length": 10
+        },
+        {
+            "text": "insulin",
+            "type": "GeneOrGeneProduct",
+            "identifier": "3630",
+            "offset": 265,
+            "length": 7
+        },
+        {
+            "text": "rs11708067",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 350,
+            "length": 11
+        },
+        {
+            "text": "enhancer region",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 390,
+            "length": 14
+        },
+        {
+            "text": "H3K27ac",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 450,
+            "length": 7
+        },
+        {
+            "text": "human islets",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 480,
+            "length": 12
+        },
+        {
+            "text": "rodent b-cells",
+            "type": "CellLine",
+            "identifier": "Not Found",
+            "offset": 520,
+            "length": 13
+        },
+        {
+            "text": "832/13",
+            "type": "CellLine",
+            "identifier": "CVCL_J200",
+            "offset": 540,
+            "length": 6
+        },
+        {
+            "text": "MIN6",
+            "type": "CellLine",
+            "identifier": "CVCL_0431",
+            "offset": 560,
+            "length": 4
+        },
+        {
+            "text": "Adcy5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "111",
+            "offset": 650,
+            "length": 5
+        },
+        {
+            "text": "Sec22a",
+            "type": "GeneOrGeneProduct",
+            "identifier": "23223",
+            "offset": 680,
+            "length": 6
+        },
+        {
+            "text": "Homo sapiens",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 720,
+            "length": 12
+        },
+        {
+            "text": "rat",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 750,
+            "length": 3
+        },
+        {
+            "text": "mouse",
+            "type": "OrganismTaxon",
+            "identifier": "10090",
+            "offset": 760,
+            "length": 5
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D003924",
+            "entity2": "111",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D003924",
+            "entity2": "rs11708067",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D005947",
+            "entity2": "D003924",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "111",
+            "entity2": "C000105",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "111",
+            "entity2": "3630",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs11708067",
+            "entity2": "111",
+            "novel": true
+        },
+        {
+            "type": "Bind",
+            "entity1": "rs11708067",
+            "entity2": "Not Found",
+            "novel": true
+        }
+    ]
+}

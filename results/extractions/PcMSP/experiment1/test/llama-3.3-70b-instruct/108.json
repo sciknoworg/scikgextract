@@ -1,0 +1,54 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "taken",
+            "loaded",
+            "flame-sealed"
+        ],
+        "descriptors": [
+            "silica"
+        ],
+        "values": [
+            "13 mm",
+            "\u223c 10 \u2212 4 Torr"
+        ],
+        "properties": [],
+        "devices": [
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "silica",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder sample",
+            "target": "taken"
+        },
+        {
+            "type": "Value-of",
+            "source": "13 mm",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Value-of",
+            "source": "\u223c 10 \u2212 4 Torr",
+            "target": "flame-sealed"
+        }
+    ]
+}

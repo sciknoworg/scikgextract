@@ -1,0 +1,115 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "La2MMnO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "La2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MnO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "M ( II ) oxides",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "carbonates",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co ( NO3 )",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiCO3 \u00b7 2Ni ( OH ) 2 \u00b7 4H2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "stoichiometric mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "solid state reaction",
+            "firing"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "nominal",
+            "conventional",
+            "intimate",
+            "stoichiometric"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "La2MMnO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "nominal",
+            "target": "composition"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2MMnO6",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2O3",
+            "target": "firing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MnO2",
+            "target": "firing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co ( NO3 )",
+            "target": "firing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiCO3 \u00b7 2Ni ( OH ) 2 \u00b7 4H2O",
+            "target": "firing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "firing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intimate",
+            "target": "stoichiometric mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixtures"
+        },
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixtures",
+            "target": "firing"
+        }
+    ]
+}

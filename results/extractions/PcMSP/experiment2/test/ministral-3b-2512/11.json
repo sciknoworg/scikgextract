@@ -1,0 +1,63 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Source-material",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sink-material",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "heating"
+        ],
+        "descriptors": [
+            "source",
+            "sink"
+        ],
+        "values": [
+            "950 \u00b0C",
+            "850 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "950 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "850 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "Source-material",
+            "target": "950 \u00b0C"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Sink-material",
+            "target": "850 \u00b0C"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Source-material",
+            "target": "heating"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heating"
+        }
+    ]
+}

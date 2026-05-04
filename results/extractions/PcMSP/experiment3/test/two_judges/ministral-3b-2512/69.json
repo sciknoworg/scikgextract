@@ -1,0 +1,80 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQ",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "HQ",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "heat treatment",
+            "annealed"
+        ],
+        "descriptors": [
+            "HQA8",
+            "quenched",
+            "annealed"
+        ],
+        "values": [
+            "8 h",
+            "623 K"
+        ],
+        "properties": [
+            {
+                "text": "8 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "8 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "HQA8",
+            "target": "heat treatment"
+        },
+        {
+            "type": "Condition-of",
+            "source": "623 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQ",
+            "target": "heat treatment"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "623 K",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "8 h",
+            "target": "623 K"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heat treatment",
+            "target": "annealed"
+        }
+    ]
+}

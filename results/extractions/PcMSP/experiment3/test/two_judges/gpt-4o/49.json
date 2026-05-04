@@ -1,0 +1,60 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sintered"
+        ],
+        "descriptors": [],
+        "values": [
+            "750 °C",
+            "3 h"
+        ],
+        "properties": [
+            {
+                "text": "750 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "3 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "air atmosphere",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "sintered"
+        },
+        {
+            "type": "Condition-of",
+            "source": "750 °C",
+            "target": "sintered"
+        },
+        {
+            "type": "Condition-of",
+            "source": "3 h",
+            "target": "sintered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "air atmosphere",
+            "target": "sintered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "sintered"
+        }
+    ]
+}

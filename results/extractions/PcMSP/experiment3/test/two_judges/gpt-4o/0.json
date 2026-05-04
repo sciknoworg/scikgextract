@@ -1,0 +1,50 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MnSi1−xGex",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "synthesis"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "high-pressure",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "high-pressure apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "MnSi1−xGex"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MnSi1−xGex",
+            "target": "prepared"
+        },
+        {
+            "type": "Condition-of",
+            "source": "high-pressure",
+            "target": "prepared"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure apparatus",
+            "target": "synthesis"
+        }
+    ]
+}

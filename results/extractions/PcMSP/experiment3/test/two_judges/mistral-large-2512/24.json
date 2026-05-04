@@ -1,0 +1,112 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled down"
+        ],
+        "descriptors": [],
+        "values": [
+            "1123 K",
+            "50 h",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "1123 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "50 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "tube",
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "tube",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1123 K",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "tube",
+            "target": "held"
+        },
+        {
+            "type": "Condition-of",
+            "source": "50 h",
+            "target": "held"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled down",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "cooled down"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooled down"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "cooled down"
+        },
+        {
+            "type": "Value-of",
+            "source": "1123 K",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "50 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "Property-temperature"
+        }
+    ]
+}

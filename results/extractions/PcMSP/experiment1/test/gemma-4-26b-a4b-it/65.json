@@ -1,0 +1,102 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Ti wire",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn shot",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "formed"
+        ],
+        "descriptors": [
+            "stoichiometric ratio",
+            "elemental sources"
+        ],
+        "values": [
+            "12 g",
+            "99.7%",
+            "99.9%",
+            "99.8%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": [
+            "Sigma Aldrich"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1Sn",
+            "target": "formed"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 g",
+            "target": "Charges"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric ratio",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ti wire",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni foil",
+            "target": "formed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn shot",
+            "target": "formed"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.7%",
+            "target": "Ti wire"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Ti wire"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Ni foil"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Ni foil"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.8%",
+            "target": "Sn shot"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Sigma Aldrich",
+            "target": "Sn shot"
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2 powders",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "stoichiometric mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Mo",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Te",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "heating"
+        ],
+        "descriptors": [
+            "powders",
+            "stoichiometric",
+            "sealed",
+            "evacuated"
+        ],
+        "values": [
+            "99.99%",
+            "99.999%",
+            "750 \u00b0 C"
+        ],
+        "properties": [
+            {
+                "text": "750 \u00b0 C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "MoTe2 powders"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2 powders",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "stoichiometric mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mo",
+            "target": "stoichiometric mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Te",
+            "target": "stoichiometric mixture"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Mo"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.999%",
+            "target": "Te"
+        },
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "750 \u00b0 C",
+            "target": "750 \u00b0 C"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz ampoule",
+            "target": "heating"
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2Ni2TeO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Na2Cu2TeO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "pure and poly-crystalline samples",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "solid-state reaction"
+        ],
+        "descriptors": [
+            "pure",
+            "poly-crystalline",
+            "solid-state"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Na2Ni2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "poly-crystalline",
+            "target": "Na2Ni2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Na2Cu2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "poly-crystalline",
+            "target": "Na2Cu2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "solid-state",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2Ni2TeO6",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2Cu2TeO6",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2Ni2TeO6",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2Cu2TeO6",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "prepared"
+        },
+        {
+            "type": "Next-operation",
+            "source": "solid-state reaction",
+            "target": "prepared"
+        }
+    ]
+}

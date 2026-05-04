@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Zr",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "put together"
+        ],
+        "descriptors": [
+            "pieces",
+            "copper",
+            "button"
+        ],
+        "values": [
+            "99.99%",
+            "99.95%"
+        ],
+        "properties": [],
+        "devices": [
+            "hearth"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Ru"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95%",
+            "target": "Ru"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Al"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Al"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Ru"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "put"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Al"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "put"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr button"
+        }
+    ]
+}

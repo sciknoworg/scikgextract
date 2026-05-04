@@ -1,0 +1,42 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "stirred"
+        ],
+        "descriptors": [],
+        "values": [
+            "80 \u00b0C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "80 \u00b0C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "time"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        }
+    ]
+}

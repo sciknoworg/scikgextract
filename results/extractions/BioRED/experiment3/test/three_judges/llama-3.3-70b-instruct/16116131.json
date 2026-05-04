@@ -1,0 +1,73 @@
+{
+    "entities": [
+        {
+            "text": "rTMS",
+            "type": "ChemicalEntity",
+            "identifier": "-1",
+            "offset": 0,
+            "length": 4
+        },
+        {
+            "text": "supplementary motor area",
+            "type": "OrganismTaxon",
+            "identifier": "-1",
+            "offset": 15,
+            "length": 20
+        },
+        {
+            "text": "Parkinson disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010300",
+            "offset": 43,
+            "length": 17
+        },
+        {
+            "text": "levodopa",
+            "type": "ChemicalEntity",
+            "identifier": "D007892",
+            "offset": 93,
+            "length": 8
+        },
+        {
+            "text": "dyskinesias",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D004421",
+            "offset": 123,
+            "length": 11
+        },
+        {
+            "text": "SMA",
+            "type": "OrganismTaxon",
+            "identifier": "-1",
+            "offset": 154,
+            "length": 3
+        },
+        {
+            "text": "apomorphine",
+            "type": "ChemicalEntity",
+            "identifier": "D000997",
+            "offset": 193,
+            "length": 10
+        }
+    ],
+    "relations": [
+        {
+            "type": "Negative_Correlation",
+            "entity1": "-1",
+            "entity2": "D004421",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D007892",
+            "entity2": "D004421",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D010300",
+            "entity2": "D004421",
+            "novel": false
+        }
+    ]
+}

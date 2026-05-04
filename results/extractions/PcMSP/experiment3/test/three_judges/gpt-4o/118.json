@@ -1,0 +1,43 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precipitates",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "supernatant",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "dried"
+        ],
+        "descriptors": [
+            "vacuum condition"
+        ],
+        "values": [
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "vacuum condition",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "dried"
+        }
+    ]
+}

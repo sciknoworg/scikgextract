@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ni0.88Co0.09Al0.03(OH)2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LiOH·H2O",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined",
+            "calcined"
+        ],
+        "descriptors": [
+            "precursor"
+        ],
+        "values": [
+            "1:1.02"
+        ],
+        "properties": [
+            {
+                "text": "480 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "730 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "precursor",
+            "target": "Ni0.88Co0.09Al0.03(OH)2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni0.88Co0.09Al0.03(OH)2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LiOH·H2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1:1.02",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "480 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "730 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "calcined"
+        }
+    ]
+}

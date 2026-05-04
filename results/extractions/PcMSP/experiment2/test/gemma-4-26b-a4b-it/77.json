@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "This material",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "fine powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "1 / 2 \u201d pellet",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar atmosphere",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired",
+            "intermediate grinding and pelletizing step"
+        ],
+        "descriptors": [
+            "fine",
+            "intermediate"
+        ],
+        "values": [
+            "1 / 2 \u201d",
+            "1200 \u25e6 C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u25e6 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "powder"
+        },
+        {
+            "type": "Participant-material",
+            "source": "This material",
+            "target": "ground"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 / 2 \u201d",
+            "target": "1 / 2 \u201d pellet"
+        },
+        {
+            "type": "Participant-material",
+            "source": "1 / 2 \u201d pellet",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 \u25e6 C",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "intermediate grinding and pelletizing step"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermediate",
+            "target": "intermediate grinding and pelletizing step"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "fired"
+        }
+    ]
+}

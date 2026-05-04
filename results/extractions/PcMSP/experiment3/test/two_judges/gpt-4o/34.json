@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powders",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "ground",
+            "sintered"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "in the air"
+        ],
+        "values": [
+            "800 °C",
+            "100 h"
+        ],
+        "properties": [
+            {
+                "text": "800 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "100 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "sintered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "ground",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sintered",
+            "target": "ground"
+        },
+        {
+            "type": "Condition-of",
+            "source": "800 °C",
+            "target": "sintered"
+        },
+        {
+            "type": "Condition-of",
+            "source": "100 h",
+            "target": "sintered"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "in the air",
+            "target": "sintered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucible",
+            "target": "sintered"
+        }
+    ]
+}

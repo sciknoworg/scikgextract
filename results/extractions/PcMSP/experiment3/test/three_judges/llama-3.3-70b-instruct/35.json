@@ -1,0 +1,50 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "single-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "grinding",
+            "sintering"
+        ],
+        "descriptors": [
+            "several times"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [
+            {
+                "text": "single-phase",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "several times",
+            "target": "grinding"
+        },
+        {
+            "type": "Condition-of",
+            "source": "several times",
+            "target": "sintering"
+        },
+        {
+            "type": "Participant-material",
+            "source": "single-phase",
+            "target": "grinding"
+        },
+        {
+            "type": "Participant-material",
+            "source": "single-phase",
+            "target": "sintering"
+        }
+    ]
+}

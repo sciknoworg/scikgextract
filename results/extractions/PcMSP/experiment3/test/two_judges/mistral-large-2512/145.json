@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SnSe2−xFx",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "SnF2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "powders",
+            "anhydrous"
+        ],
+        "values": [
+            "(2−x)",
+            "x",
+            "2(2−x)",
+            "2"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "SnF2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnF2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnF2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnSe2−xFx",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "(2−x)",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "x",
+            "target": "SnF2"
+        },
+        {
+            "type": "Value-of",
+            "source": "2(2−x)",
+            "target": "Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "2",
+            "target": "SnSe2−xFx"
+        }
+    ]
+}

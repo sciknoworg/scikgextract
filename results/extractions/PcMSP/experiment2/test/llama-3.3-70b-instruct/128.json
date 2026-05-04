@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tantalum foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al-rich eutectic",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "put",
+            "annealed"
+        ],
+        "descriptors": [
+            "thin",
+            "evacuated"
+        ],
+        "values": [
+            "620 \u00b0C",
+            "40 \u00b0C",
+            "14 days"
+        ],
+        "properties": [
+            {
+                "text": "melting point",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thin",
+            "target": "tantalum foil"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "620 \u00b0C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "14 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        }
+    ]
+}

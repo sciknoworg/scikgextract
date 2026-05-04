@@ -1,0 +1,102 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "ice water",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "ice water",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "quenched",
+            "synthesis process",
+            "retain"
+        ],
+        "descriptors": [
+            "metastable",
+            "immediately",
+            "metastable",
+            "higher temperature profile"
+        ],
+        "values": [
+            "900 – 1000 ° C",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "high temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "higher temperature profile",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "higher temperature profile",
+            "target": "900 – 1000 ° C"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-temperature",
+            "target": "β-phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "higher temperature profile",
+            "target": "used"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 – 1000 ° C",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "used"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenched",
+            "target": "used"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "immediately",
+            "target": "quenched"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "ice water",
+            "target": "quenched"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 – 1000 ° C",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "β-phase",
+            "target": "retain"
+        }
+    ]
+}

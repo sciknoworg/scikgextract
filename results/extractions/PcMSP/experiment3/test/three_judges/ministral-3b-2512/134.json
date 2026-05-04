@@ -1,0 +1,95 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "calcined",
+            "grindings",
+            "pressed",
+            "fired"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "intermittent"
+        ],
+        "values": [
+            "900 °C",
+            "12 h",
+            "1050 °C",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "12 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "900 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "air"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "900 °C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        },
+        {
+            "type": "Value-of",
+            "source": "1050 °C",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 h",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1050 ° C",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "fired"
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated",
+            "heated"
+        ],
+        "descriptors": [
+            "two-step",
+            "additional"
+        ],
+        "values": [
+            "400 °C",
+            "48 hours",
+            "500 °C",
+            "another 48 hours"
+        ],
+        "properties": [
+            {
+                "text": "400 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "another 48 hours",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "heated at 400 °C for 48 hours",
+            "target": "heating of the pelletized sample"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated at 500 °C for 48 hours",
+            "target": "grinding"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed precursors",
+            "target": "heated at 400 °C for 48 hours"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pelletized sample",
+            "target": "heated at 500 °C for 48 hours"
+        },
+        {
+            "type": "Value-of",
+            "source": "400 °C",
+            "target": "400 °C"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hours",
+            "target": "48 hours"
+        },
+        {
+            "type": "Condition-of",
+            "source": "another 48 hours",
+            "target": "heating"
+        }
+    ]
+}

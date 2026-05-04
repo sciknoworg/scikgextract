@@ -1,5 +1,15 @@
+"""
+JSON Cleaner Tool for SciKGExtract.
+
+This module defines a JSON cleaning tool that is used within the SciKGExtract workflow to clean the extracted JSON data by removing null values. It operates on the ExtractionState, which is threaded through the LangGraph workflow, and updates the state with the cleaned JSON data for downstream processing.
+"""
+# SciKGExtract Utility Imports
 from scikg_extract.utils.log_handler import LogHandler
+
+# SciKGExtract Agents State Imports
 from scikg_extract.agents.states import ExtractionState
+
+# SciKGExtract Utility Imports
 from scikg_extract.utils.dict_utils import remove_null_values, remove_empty_qudt_structures
 
 def json_cleaner(state: ExtractionState) -> ExtractionState:

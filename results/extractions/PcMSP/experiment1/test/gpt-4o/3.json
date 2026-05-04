@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SrCO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "GeO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "La2O3",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "using",
+            "solid-state reaction"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrCO3",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "GeO2",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "La2O3",
+            "target": "solid-state reaction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "prepared"
+        }
+    ]
+}

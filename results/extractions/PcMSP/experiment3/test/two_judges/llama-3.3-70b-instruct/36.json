@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "heated"
+        ],
+        "descriptors": [
+            "gradually"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "900 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "5 °C/min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "aluminium crucible",
+            "platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 °C",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 °C/min",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucible",
+            "target": "kept"
+        }
+    ]
+}

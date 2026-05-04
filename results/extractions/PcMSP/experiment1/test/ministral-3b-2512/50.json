@@ -1,0 +1,53 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "emerypaper",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "polished"
+        ],
+        "descriptors": [
+            "fine",
+            "smooth",
+            "parallel"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "smoothness",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "parallelism",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "emerypaper"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "smooth",
+            "target": "emerypaper"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "parallel",
+            "target": "emerypaper"
+        },
+        {
+            "type": "Participant-material",
+            "source": "emerypaper",
+            "target": "polished"
+        }
+    ]
+}

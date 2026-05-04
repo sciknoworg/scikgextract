@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "metal pellet of pure Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "plates of pure Zr",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "used"
+        ],
+        "descriptors": [
+            "pure"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "99.2%",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "metal pellet of pure Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "plates of pure Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.2%",
+            "target": "metal pellet of pure Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.2%",
+            "target": "plates of pure Zr"
+        },
+        {
+            "type": "Participant-material",
+            "source": "metal pellet of pure Zr",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "plates of pure Zr",
+            "target": "used"
+        }
+    ]
+}

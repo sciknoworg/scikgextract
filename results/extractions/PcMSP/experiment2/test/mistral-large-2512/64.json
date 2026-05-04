@@ -1,0 +1,85 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "copper",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "melted"
+        ],
+        "descriptors": [
+            "four",
+            "water-cooled",
+            "under an Ar atmosphere"
+        ],
+        "values": [
+            "1.1",
+            "1.1 stoichiometry"
+        ],
+        "properties": [],
+        "devices": [
+            "Crystalox MCGS5 levitation melting system",
+            "copper crucible"
+        ],
+        "brands": [
+            "Crystalox"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "four",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "1.1 stoichiometry",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper crucible"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Crystalox MCGS5 levitation melting system",
+            "target": "melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper crucible",
+            "target": "melted"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Crystalox",
+            "target": "Crystalox MCGS5 levitation melting system"
+        },
+        {
+            "type": "Condition-of",
+            "source": "under an Ar atmosphere",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1Sn",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ar",
+            "target": "melted"
+        }
+    ]
+}

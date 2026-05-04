@@ -1,0 +1,114 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "solution",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "colorless solution",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "stirred",
+            "stirred",
+            "added"
+        ],
+        "descriptors": [
+            "aqueous",
+            "colorless"
+        ],
+        "values": [
+            "10 mL",
+            "5 mmol"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "80 ° C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HIO3",
+            "target": "added"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mmol",
+            "target": "HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 mL",
+            "target": "aqueous solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aqueous solution",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "stirred",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "stirred"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 ° C",
+            "target": "stirred"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "solution"
+        },
+        {
+            "type": "Next-operation",
+            "source": "give",
+            "target": "stirred"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "give"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "stirred"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "colorless",
+            "target": "colorless solution"
+        }
+    ]
+}

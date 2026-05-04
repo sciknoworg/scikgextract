@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powders",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "calcined"
+        ],
+        "descriptors": [
+            "high purity"
+        ],
+        "values": [
+            "700 \u00b0 C",
+            "3 h"
+        ],
+        "properties": [
+            {
+                "text": "700 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "3 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "alumina crucible"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "700 \u00b0 C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "3 h",
+            "target": "calcined"
+        }
+    ]
+}

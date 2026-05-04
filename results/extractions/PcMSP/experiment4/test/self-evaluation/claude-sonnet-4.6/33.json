@@ -1,0 +1,166 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2Co2TeO6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co3O4",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "purchased",
+            "taking",
+            "purchased",
+            "conventional solid-state reaction method"
+        ],
+        "descriptors": [
+            "powders",
+            "stoichiometric",
+            "pure",
+            "powders",
+            "solid-state",
+            "polycrystalline"
+        ],
+        "values": [
+            "99.99%"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": [
+            "Alfa Aesar Chemicals"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Na2Co2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "conventional",
+            "target": "used"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "solid-state",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2Co2TeO6",
+            "target": "prepare"
+        },
+        {
+            "type": "Next-operation",
+            "source": "prepare",
+            "target": "used"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "taking"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "taking"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co3O4",
+            "target": "taking"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "TeO2"
+        },
+        {
+            "type": "Next-operation",
+            "source": "taking",
+            "target": "prepare"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Na2O"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "pure"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "Co3O4"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co3O4",
+            "target": "purchased"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Na2O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Co3O4"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "TeO2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "purchased"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co3O4",
+            "target": "purchased"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "purchased"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar Chemicals",
+            "target": "Na2O"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar Chemicals",
+            "target": "Co3O4"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar Chemicals",
+            "target": "TeO2"
+        },
+        {
+            "type": "Next-operation",
+            "source": "purchased",
+            "target": "taking"
+        }
+    ]
+}

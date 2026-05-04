@@ -1,0 +1,91 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4PtSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Rh-substituted samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "annealed",
+            "quenching"
+        ],
+        "descriptors": [
+            "evacuated"
+        ],
+        "values": [
+            "873 K",
+            "1073 K",
+            "7 d"
+        ],
+        "properties": [
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1073 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Pd-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "873 K",
+            "target": "Pd-substituted samples"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn1.4PtSn",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Mn1.4PtSn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh-substituted samples",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Rh-substituted samples"
+        },
+        {
+            "type": "Next-operation",
+            "source": "quenching",
+            "target": "annealed"
+        }
+    ]
+}

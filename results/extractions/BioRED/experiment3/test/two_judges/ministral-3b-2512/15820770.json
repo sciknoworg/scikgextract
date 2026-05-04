@@ -1,0 +1,168 @@
+{
+    "entities": [
+        {
+            "text": "Vitamin D-binding protein",
+            "type": "GeneOrGeneProduct",
+            "identifier": "NM_000106",
+            "offset": 0,
+            "length": 23
+        },
+        {
+            "text": "DBP",
+            "type": "GeneOrGeneProduct",
+            "identifier": "NM_000106",
+            "offset": 24,
+            "length": 3
+        },
+        {
+            "text": "1.25(OH)2D3",
+            "type": "ChemicalEntity",
+            "identifier": "D001345",
+            "offset": 28,
+            "length": 10
+        },
+        {
+            "text": "Aspartic acid",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P01005",
+            "offset": 60,
+            "length": 12
+        },
+        {
+            "text": "Glutamic acid",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P01005",
+            "offset": 78,
+            "length": 12
+        },
+        {
+            "text": "Threonine",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P00481",
+            "offset": 95,
+            "length": 9
+        },
+        {
+            "text": "Lysine",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P02741",
+            "offset": 112,
+            "length": 6
+        },
+        {
+            "text": "codon 416",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 130,
+            "length": 8
+        },
+        {
+            "text": "codon 420",
+            "type": "SequenceVariant",
+            "identifier": "rs12459446",
+            "offset": 148,
+            "length": 8
+        },
+        {
+            "text": "IA-2 autoantibodies",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005947",
+            "offset": 170,
+            "length": 16
+        },
+        {
+            "text": "GAD65 antibodies",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005947",
+            "offset": 210,
+            "length": 13
+        },
+        {
+            "text": "type 1 diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 240,
+            "length": 16
+        },
+        {
+            "text": "patients",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 260,
+            "length": 6
+        },
+        {
+            "text": "controls",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 270,
+            "length": 7
+        },
+        {
+            "text": "first-degree relatives",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 300,
+            "length": 18
+        },
+        {
+            "text": "Asp/Glu",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 330,
+            "length": 6
+        },
+        {
+            "text": "Glu/Glu",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 340,
+            "length": 6
+        },
+        {
+            "text": "type 1 diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003922",
+            "offset": 84,
+            "length": 15
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "NM_000106",
+            "entity2": "rs7041",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "NM_000106",
+            "entity2": "D005947",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "rs7041",
+            "entity2": "D003924",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "rs7041",
+            "entity2": "IA-2 autoantibodies",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "Asp/Glu",
+            "entity2": "IA-2 autoantibodies",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "5798",
+            "entity2": "D003920",
+            "novel": true
+        }
+    ]
+}

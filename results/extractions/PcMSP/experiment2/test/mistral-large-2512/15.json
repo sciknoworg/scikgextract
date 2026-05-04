@@ -1,0 +1,77 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "phase",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "Annealing"
+        ],
+        "descriptors": [
+            "phase homogeneity",
+            "improve"
+        ],
+        "values": [
+            "10 days",
+            "950 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "950 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "phase homogeneity",
+            "target": "phase"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "improve",
+            "target": "Annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 days",
+            "target": "Annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "950 \u00b0C",
+            "target": "Annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "950 \u00b0C",
+            "target": "Annealing"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 days",
+            "target": "Annealing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "Annealing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "phase",
+            "target": "Annealing"
+        }
+    ]
+}

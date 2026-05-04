@@ -1,0 +1,111 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "polycrystalline SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "anhydrous SnCl2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2SnClx",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "anhydrous",
+            "stoichiometric amount"
+        ],
+        "values": [
+            "250 °C",
+            "24 hrs"
+        ],
+        "properties": [
+            {
+                "text": "250 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "fused silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "SnSe2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "SnCl2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric amount",
+            "target": "Sn"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "anhydrous SnCl2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2SnClx",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "250 °C",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "24 hrs",
+            "target": "melted"
+        },
+        {
+            "type": "Value-of",
+            "source": "250 °C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "Property-time"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "fused silica tubes",
+            "target": "melted"
+        }
+    ]
+}

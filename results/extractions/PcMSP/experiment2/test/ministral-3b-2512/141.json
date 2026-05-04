@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Co",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Fe",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Rh",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ir",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixed composition",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "pelletized mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "pelletized"
+        ],
+        "descriptors": [
+            "certain composition"
+        ],
+        "values": [
+            "7 mm"
+        ],
+        "properties": [],
+        "devices": [
+            "mortar and pestle"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Co",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Fe",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Rh",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ir",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed composition",
+            "target": "pelletized"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "mortar and pestle",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "mortar and pestle",
+            "target": "pelletized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletized",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "7 mm",
+            "target": "pelletized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "certain composition",
+            "target": "mixed composition"
+        }
+    ]
+}

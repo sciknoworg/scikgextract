@@ -1,0 +1,102 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "tantalum foil",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al-rich eutectic",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "put",
+            "annealed"
+        ],
+        "descriptors": [
+            "thin",
+            "evacuated"
+        ],
+        "values": [
+            "620 °C",
+            "14 days",
+            "40 °C"
+        ],
+        "properties": [
+            {
+                "text": "620 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thin",
+            "target": "tantalum foil"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "wrapped"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "put"
+        },
+        {
+            "type": "Condition-of",
+            "source": "620 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "14 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "put",
+            "target": "wrapped"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "put"
+        },
+        {
+            "type": "Coreference",
+            "source": "sample",
+            "target": "annealed"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Re",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Re buttons",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Nb",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "arc melting",
+            "arc melting"
+        ],
+        "descriptors": [
+            "buttons"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "arc melter"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Nb buttons",
+            "target": "made"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "buttons",
+            "target": "Re"
+        },
+        {
+            "type": "Coreference",
+            "source": "arc melting",
+            "target": "made"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "arc melting"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Re"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "alone",
+            "target": "Re"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melter",
+            "target": "arc melting"
+        }
+    ]
+}

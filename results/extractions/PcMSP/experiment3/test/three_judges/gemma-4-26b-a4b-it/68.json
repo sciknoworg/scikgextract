@@ -1,0 +1,84 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "homogenized-quenched ( HQ ) sample",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "brought to",
+            "air-quenched"
+        ],
+        "descriptors": [
+            "subsequently"
+        ],
+        "values": [
+            "1423 K",
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "1423 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "homogenized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "subsequently",
+            "target": "brought to"
+        },
+        {
+            "type": "Participant-material",
+            "source": "homogenized-quenched ( HQ ) sample",
+            "target": "brought to"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1423 K",
+            "target": "brought to"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "brought to"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "air-quenched"
+        },
+        {
+            "type": "Next-operation",
+            "source": "brought to",
+            "target": "air-quenched"
+        }
+    ]
+}

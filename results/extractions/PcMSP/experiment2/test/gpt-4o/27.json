@@ -1,0 +1,110 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "molybdenum boride",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MoB",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "aluminum",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "ball milled"
+        ],
+        "descriptors": [
+            "powders"
+        ],
+        "values": [
+            "> 99%",
+            "< 38 \u03bcm",
+            "99.5%",
+            "< 44 \u03bcm",
+            "1.0 to 1.3",
+            "24 h"
+        ],
+        "properties": [],
+        "devices": [
+            "plastic container"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "molybdenum boride"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "aluminum"
+        },
+        {
+            "type": "Value-of",
+            "source": "> 99%",
+            "target": "molybdenum boride"
+        },
+        {
+            "type": "Value-of",
+            "source": "< 38 \u03bcm",
+            "target": "molybdenum boride"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "molybdenum boride"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.5%",
+            "target": "aluminum"
+        },
+        {
+            "type": "Value-of",
+            "source": "< 44 \u03bcm",
+            "target": "aluminum"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "aluminum"
+        },
+        {
+            "type": "Participant-material",
+            "source": "molybdenum boride",
+            "target": "ball milled"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aluminum",
+            "target": "ball milled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "plastic container",
+            "target": "ball milled"
+        },
+        {
+            "type": "Value-of",
+            "source": "1.0 to 1.3",
+            "target": "ball milled"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 h",
+            "target": "ball milled"
+        }
+    ]
+}

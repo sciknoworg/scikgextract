@@ -1,0 +1,266 @@
+Below is an example of extracting structured biomedical entity and relation information from a PubMed abstract. BioRED covers 6 entity types and 8 relation types with a novelty flag.
+
+=== Input Text ===
+
+Hepatocyte nuclear factor-6: associations between genetic variability and type II diabetes and between genetic variability and estimates of insulin secretion.
+The transcription factor hepatocyte nuclear factor (HNF)-6 is an upstream regulator of several genes involved in the pathogenesis of maturity-onset diabetes of the young. We therefore tested the hypothesis that variability in the HNF-6 gene is associated with subsets of Type II (non-insulin-dependent) diabetes mellitus and estimates of insulin secretion in glucose tolerant subjects. We cloned the coding region as well as the intron-exon boundaries of the HNF-6 gene. We then examined them on genomic DNA in six MODY probands without mutations in the MODY1, MODY3 and MODY4 genes and in 54 patients with late-onset Type II diabetes by combined single strand conformational polymorphism-heteroduplex analysis followed by direct sequencing of identified variants. An identified missense variant was examined in association studies and genotype-phenotype studies. We identified two silent and one missense (Pro75 Ala) variant. In an association study the allelic frequency of the Pro75Ala polymorphism was 3.2% (95% confidence interval, 1.9-4.5) in 330 patients with Type II diabetes mellitus compared with 4.2% (2.4-6.0) in 238 age-matched glucose tolerant control subjects. Moreover, in studies of 238 middle-aged glucose tolerant subjects, of 226 glucose tolerant offspring of Type II diabetic patients and of 367 young healthy subjects, the carriers of the polymorphism did not differ from non-carriers in glucose induced serum insulin or C-peptide responses. Mutations in the coding region of the HNF-6 gene are not associated with Type II diabetes or with changes in insulin responses to glucose among the Caucasians examined.
+
+=== Expected Output ===
+
+{
+  "entities": [
+    {
+      "text": "Hepatocyte nuclear factor-6",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3175",
+      "offset": 0,
+      "length": 27
+    },
+    {
+      "text": "type II diabetes",
+      "type": "DiseaseOrPhenotypicFeature",
+      "identifier": "D003924",
+      "offset": 74,
+      "length": 16
+    },
+    {
+      "text": "insulin",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3630",
+      "offset": 140,
+      "length": 7
+    },
+    {
+      "text": "hepatocyte nuclear factor (HNF)-6",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3175",
+      "offset": 184,
+      "length": 33
+    },
+    {
+      "text": "maturity-onset diabetes",
+      "type": "DiseaseOrPhenotypicFeature",
+      "identifier": "D003924",
+      "offset": 292,
+      "length": 23
+    },
+    {
+      "text": "HNF-6",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3175",
+      "offset": 389,
+      "length": 5
+    },
+    {
+      "text": "Type II (non-insulin-dependent) diabetes mellitus",
+      "type": "DiseaseOrPhenotypicFeature",
+      "identifier": "D003924",
+      "offset": 430,
+      "length": 49
+    },
+    {
+      "text": "insulin",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3630",
+      "offset": 497,
+      "length": 7
+    },
+    {
+      "text": "glucose",
+      "type": "ChemicalEntity",
+      "identifier": "D005947",
+      "offset": 518,
+      "length": 7
+    },
+    {
+      "text": "HNF-6",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3175",
+      "offset": 620,
+      "length": 5
+    },
+    {
+      "text": "MODY",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3172,3651,6927",
+      "offset": 676,
+      "length": 4
+    },
+    {
+      "text": "MODY1",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3172",
+      "offset": 715,
+      "length": 5
+    },
+    {
+      "text": "MODY3",
+      "type": "GeneOrGeneProduct",
+      "identifier": "6927",
+      "offset": 722,
+      "length": 5
+    },
+    {
+      "text": "MODY4",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3651",
+      "offset": 732,
+      "length": 5
+    },
+    {
+      "text": "patients",
+      "type": "OrganismTaxon",
+      "identifier": "9606",
+      "offset": 754,
+      "length": 8
+    },
+    {
+      "text": "Type II diabetes",
+      "type": "DiseaseOrPhenotypicFeature",
+      "identifier": "D003924",
+      "offset": 779,
+      "length": 16
+    },
+    {
+      "text": "Pro75 Ala",
+      "type": "SequenceVariant",
+      "identifier": "rs74805019",
+      "offset": 1070,
+      "length": 9
+    },
+    {
+      "text": "Pro75Ala",
+      "type": "SequenceVariant",
+      "identifier": "rs74805019",
+      "offset": 1143,
+      "length": 8
+    },
+    {
+      "text": "patients",
+      "type": "OrganismTaxon",
+      "identifier": "9606",
+      "offset": 1216,
+      "length": 8
+    },
+    {
+      "text": "Type II diabetes mellitus",
+      "type": "DiseaseOrPhenotypicFeature",
+      "identifier": "D003924",
+      "offset": 1230,
+      "length": 25
+    },
+    {
+      "text": "glucose",
+      "type": "ChemicalEntity",
+      "identifier": "D005947",
+      "offset": 1304,
+      "length": 7
+    },
+    {
+      "text": "glucose",
+      "type": "ChemicalEntity",
+      "identifier": "D005947",
+      "offset": 1379,
+      "length": 7
+    },
+    {
+      "text": "glucose",
+      "type": "ChemicalEntity",
+      "identifier": "D005947",
+      "offset": 1413,
+      "length": 7
+    },
+    {
+      "text": "Type II diabetic",
+      "type": "DiseaseOrPhenotypicFeature",
+      "identifier": "D003924",
+      "offset": 1443,
+      "length": 16
+    },
+    {
+      "text": "patients",
+      "type": "OrganismTaxon",
+      "identifier": "9606",
+      "offset": 1460,
+      "length": 8
+    },
+    {
+      "text": "glucose",
+      "type": "ChemicalEntity",
+      "identifier": "D005947",
+      "offset": 1573,
+      "length": 7
+    },
+    {
+      "text": "insulin",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3630",
+      "offset": 1595,
+      "length": 7
+    },
+    {
+      "text": "C-peptide",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3630",
+      "offset": 1606,
+      "length": 9
+    },
+    {
+      "text": "HNF-6",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3175",
+      "offset": 1667,
+      "length": 5
+    },
+    {
+      "text": "Type II diabetes",
+      "type": "DiseaseOrPhenotypicFeature",
+      "identifier": "D003924",
+      "offset": 1702,
+      "length": 16
+    },
+    {
+      "text": "insulin",
+      "type": "GeneOrGeneProduct",
+      "identifier": "3630",
+      "offset": 1738,
+      "length": 7
+    },
+    {
+      "text": "glucose",
+      "type": "ChemicalEntity",
+      "identifier": "D005947",
+      "offset": 1759,
+      "length": 7
+    }
+  ],
+  "relations": [
+    {
+      "type": "Association",
+      "entity1": "3175",
+      "entity2": "D003924",
+      "novel": false
+    },
+    {
+      "type": "Positive_Correlation",
+      "entity1": "D005947",
+      "entity2": "3630",
+      "novel": false
+    },
+    {
+      "type": "Association",
+      "entity1": "D005947",
+      "entity2": "D003924",
+      "novel": false
+    }
+  ]
+}
+
+=== Extraction Guidelines ===
+
+1. Entity types: GeneOrGeneProduct, DiseaseOrPhenotypicFeature, ChemicalEntity, SequenceVariant, OrganismTaxon, CellLine.
+2. Each entity must include the exact text span, character offset and length in the input text, its type, and a database identifier (e.g., MeSH ID for diseases/chemicals, NCBI Gene ID for genes, dbSNP ID for variants, NCBI Taxonomy ID for organisms). Use "-1" if no identifier is known.
+3. Extract all mentions of an entity, even if repeated (each occurrence is a separate entry).
+4. Relation types: Association, Positive_Correlation, Negative_Correlation, Bind, Comparison, Conversion, Cotreatment, Drug_Interaction.
+5. Relations reference entity database identifiers (entity1, entity2) and include a "novel" boolean flag indicating whether the relation is a novel finding reported in the article.
+6. Multiple identifiers for the same entity can be comma-separated (e.g., "3172,3651,6927").

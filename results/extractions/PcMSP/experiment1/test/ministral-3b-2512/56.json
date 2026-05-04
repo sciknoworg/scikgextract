@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "high-pressure cell",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "pressed",
+            "heated"
+        ],
+        "descriptors": [],
+        "values": [
+            "2 GPa",
+            "700 \u00b0C",
+            "1 hour"
+        ],
+        "properties": [
+            {
+                "text": "2 GPa",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "700 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 hour",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "Not Found"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure cell",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 GPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "700 \u00b0C",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 hour",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "high-pressure cell",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "high-pressure cell",
+            "target": "heated"
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "heating",
+            "prepared"
+        ],
+        "descriptors": [
+            "quartz",
+            "three times sublimed",
+            "three times sublimed"
+        ],
+        "values": [
+            "stoichiometric",
+            "∼ 10 − 3 Pa",
+            "933 K",
+            "14 days"
+        ],
+        "properties": [
+            {
+                "text": "933 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "AsSn",
+            "target": "prepared"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heating",
+            "target": "prepared"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum-sealed",
+            "target": "ampoule"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "heating"
+        },
+        {
+            "type": "Participant-material",
+            "source": "As",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "three times sublimed",
+            "target": "As"
+        },
+        {
+            "type": "Condition-of",
+            "source": "933 K",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "14 days",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum-sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "ampoule",
+            "target": "heating"
+        },
+        {
+            "type": "Value-of",
+            "source": "∼ 10 − 3 Pa",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "heating"
+        }
+    ]
+}

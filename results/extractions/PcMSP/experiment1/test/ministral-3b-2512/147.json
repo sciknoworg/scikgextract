@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pelletized sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated",
+            "grinding"
+        ],
+        "descriptors": [
+            "two-step",
+            "additional"
+        ],
+        "values": [
+            "400 \u00b0C",
+            "48 hours",
+            "500 \u00b0C",
+            "another 48 hours"
+        ],
+        "properties": [
+            {
+                "text": "400 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "500 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "heated at 400 \u00b0C for 48 hours",
+            "target": "heating of the pelletized sample"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated at 500 \u00b0C for 48 hours",
+            "target": "grinding"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed precursors",
+            "target": "heated at 400 \u00b0C for 48 hours"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pelletized sample",
+            "target": "heated at 500 \u00b0C for 48 hours"
+        },
+        {
+            "type": "Value-of",
+            "source": "400 \u00b0C",
+            "target": "400 \u00b0C"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hours",
+            "target": "48 hours"
+        },
+        {
+            "type": "Value-of",
+            "source": "500 \u00b0C",
+            "target": "500 \u00b0C"
+        }
+    ]
+}

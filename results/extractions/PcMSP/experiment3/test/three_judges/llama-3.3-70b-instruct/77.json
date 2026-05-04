@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "material",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "fired",
+            "grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "fine powder",
+            "Ar atmosphere",
+            "pellet"
+        ],
+        "values": [
+            "1/2 inch",
+            "1200 °C",
+            "72 hrs",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine powder",
+            "target": "material"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "1/2 inch",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 °C",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "fired"
+        },
+        {
+            "type": "Participant-material",
+            "source": "material",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Coreference",
+            "source": "grinding",
+            "target": "pelletizing"
+        }
+    ]
+}

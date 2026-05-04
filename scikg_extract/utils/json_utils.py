@@ -1,5 +1,12 @@
+"""
+JSON utility functions for SciKGExtract.
+
+Provides functions for validating JSON schemas and instances, as well as a fallback mechanism for handling cases where LLMs return raw JSON arrays instead of the expected wrapper objects.
+"""
+# Jsonschema Import
 from jsonschema import Draft7Validator
 
+# SciKGExtract Utility Imports
 from scikg_extract.utils.log_handler import LogHandler
 
 def json_schema_validate(schema: dict) -> bool:

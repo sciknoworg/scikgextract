@@ -1,3 +1,8 @@
+"""
+OrchestratorConfig dataclass for configuring the end-to-end SciKG-Extract pipeline.
+
+This module defines OrchestratorConfig, a dataclass that aggregates all configuration needed to run the extraction, reflection, normalization, and feedback phases. It is the single object passed to the orchestrator agent when building and running the LangGraph workflow.
+"""
 # Python imports
 from dataclasses import dataclass, field
 
@@ -15,8 +20,8 @@ class OrchestratorConfig:
     # Configurations for Extraction Agent #
     #######################################
     
-    # LLM model name to be used by extraction agent
-    llm_name: str
+    # LLM to be used by extraction agent
+    extraction_llm: str
 
     # Process Schema defining the structure of the extraction
     process_schema: dict
@@ -30,8 +35,8 @@ class OrchestratorConfig:
     # Pydantic data model for the extracted knowledge
     extraction_data_model: BaseModel
 
-    # LLM model name to be used for normalization within extraction agent
-    normalization_llm_name: str = ""
+    # LLM to be used for normalization within extraction agent
+    normalization_llm: str = ""
 
     # PubChem LMDB Path
     pubchem_lmdb_path: str = ""
@@ -43,15 +48,24 @@ class OrchestratorConfig:
     # Configurations for Reflection Agent #
     #######################################
 
-    # LLM model name to be used by reflection agent
-    reflection_llm_name: str = ""
+    # LLM to be used by reflection agent
+    reflection_llm: str = ""
+
+    # LLM to be used by summarizer in reflection agent
+    summarizer_llm: str = ""
+
+    # List of judge LLMs for multi-judge and debate modes (e.g., ["OPENAI:gpt-4o", "SAIA:llama-3.3-70b"])
+    reflection_judge_llms: list[str] = field(default_factory=list)
+
+    # List of critic LLMs for debate mode (e.g., ["OPENAI:gpt-4o"])
+    reflection_critic_llms: list[str] = field(default_factory=list)
 
     # List of rubrics to be evaluated during reflection
-    rubrics: list[Rubric] = field(default_factory=list)
+    rubrics: list[type[Rubric]] = field(default_factory=list)
 
     #####################################
     # Configurations for Feedback Agent #
     #####################################
 
-    # LLM model name to be used by feedback agent
-    feedback_llm_name: str = ""
+    # LLM to be used by feedback agent
+    feedback_llm: str = ""

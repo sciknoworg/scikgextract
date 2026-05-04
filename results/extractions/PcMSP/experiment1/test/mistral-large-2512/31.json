@@ -1,0 +1,114 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Se grains",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cl-doped SnSe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SnClx",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "added",
+            "synthesize",
+            "annealing"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "second",
+            "fused"
+        ],
+        "values": [
+            "2",
+            "2 \u2212 x",
+            "600 \u00b0 C",
+            "48 hrs"
+        ],
+        "properties": [
+            {
+                "text": "600 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "silica tubes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se grains"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se grains",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SnClx",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesize"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cl-doped SnSe2",
+            "target": "synthesize"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "second",
+            "target": "annealing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "silica tubes",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "600 \u00b0 C",
+            "target": "annealing"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hrs",
+            "target": "annealing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "fused",
+            "target": "silica tubes"
+        },
+        {
+            "type": "Coreference",
+            "source": "added",
+            "target": "synthesize"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealing",
+            "target": "synthesize"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "LaO0.5F0.5BiS2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "pressed"
+        ],
+        "descriptors": [
+            "well",
+            "nominal"
+        ],
+        "values": [
+            "0.5:0.5:1"
+        ],
+        "properties": [],
+        "devices": [
+            "pellet press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "nominal",
+            "target": "LaO0.5F0.5BiS2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "well",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LaO0.5F0.5BiS2",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5:0.5:1",
+            "target": "LaO0.5F0.5BiS2"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "pellet press",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "pressed"
+        }
+    ]
+}

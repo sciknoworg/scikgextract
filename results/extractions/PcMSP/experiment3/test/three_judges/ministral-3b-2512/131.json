@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "treated",
+            "furnace-cooled"
+        ],
+        "descriptors": [
+            "quartz",
+            "quartz ampoule"
+        ],
+        "values": [
+            "1100 °C",
+            "one week"
+        ],
+        "properties": [
+            {
+                "text": "1100 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "one week",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "ternary mixtures",
+            "target": "treated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ternary mixtures",
+            "target": "furnace-cooled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "furnace-cooled"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1100 °C",
+            "target": "treated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "one week",
+            "target": "treated"
+        },
+        {
+            "type": "Value-of",
+            "source": "one week",
+            "target": "one week"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "vacuum-sealed",
+            "target": "ternary mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "quartz ampoule",
+            "target": "ternary mixtures"
+        }
+    ]
+}

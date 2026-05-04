@@ -1,0 +1,53 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoAlB",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "hot-pressing"
+        ],
+        "descriptors": [
+            "dense",
+            "polycrystalline",
+            "vacuum"
+        ],
+        "values": [
+            "vacuum < 10^-3 Torr"
+        ],
+        "properties": [
+            {
+                "text": "hot-pressing",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "vacuum hot press (HP)"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "dense",
+            "target": "MoAlB"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoAlB"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum",
+            "target": "hot-pressing"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "vacuum hot press (HP)",
+            "target": "hot-pressing"
+        }
+    ]
+}

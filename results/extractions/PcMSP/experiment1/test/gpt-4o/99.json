@@ -1,0 +1,42 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "kept",
+            "cooling"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "cooling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooling"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "GdCo5",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Gd",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Co",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ni",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "arc melting"
+        ],
+        "descriptors": [
+            "water cooled",
+            "argon atmosphere"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "water cooled copper hearth"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Gd",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Co",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ni",
+            "target": "arc melting"
+        },
+        {
+            "type": "Participant-material",
+            "source": "GdCo5",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "argon atmosphere",
+            "target": "arc melting"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "water cooled copper hearth",
+            "target": "arc melting"
+        }
+    ]
+}

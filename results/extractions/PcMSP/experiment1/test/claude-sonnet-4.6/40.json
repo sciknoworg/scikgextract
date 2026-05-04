@@ -1,0 +1,116 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pure phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "preparation",
+            "mixed",
+            "kept",
+            "get"
+        ],
+        "descriptors": [
+            "powders",
+            "stoichiometric",
+            "thoroughly",
+            "pure"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Na2O"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "NiO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "CuO"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "TeO2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pure phase",
+            "target": "get"
+        },
+        {
+            "type": "Next-operation",
+            "source": "get",
+            "target": "kept"
+        }
+    ]
+}

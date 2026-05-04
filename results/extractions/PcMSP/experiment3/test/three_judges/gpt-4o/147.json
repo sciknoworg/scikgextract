@@ -1,0 +1,108 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pelletized sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated",
+            "heated",
+            "grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "pelletized"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "400 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "500 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "400 °C",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hours",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "500 °C",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hours",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed precursors",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pelletized sample",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pelletized sample",
+            "target": "grinding"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "pelletizing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletizing",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "grinding"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pelletized",
+            "target": "pelletized sample"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "arc-melted ingot",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "annealed"
+        ],
+        "descriptors": [
+            "industrial grade",
+            "homogenize"
+        ],
+        "values": [
+            "1200 \u00b0C",
+            "72 hrs"
+        ],
+        "properties": [
+            {
+                "text": "1200 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "industrial grade Ar atmosphere"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "1200 \u00b0C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 hrs",
+            "target": "annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "industrial grade Ar atmosphere",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "arc-melted ingot",
+            "target": "annealed"
+        }
+    ]
+}

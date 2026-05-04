@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "placed",
+            "growth"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "powders"
+        ],
+        "values": [
+            "~ 5 mg cm−3"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule",
+            "two-zone furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "loaded",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "loaded",
+            "target": "Br2"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "growth",
+            "target": "two-zone furnace"
+        },
+        {
+            "type": "Participant-material",
+            "source": "growth",
+            "target": "samples"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Value-of",
+            "source": "~ 5 mg cm−3",
+            "target": "Br2"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "taken",
+            "subjected"
+        ],
+        "descriptors": [
+            "outside",
+            "PM 100",
+            "PM 100"
+        ],
+        "values": [
+            "a",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "jar",
+            "glove box",
+            "planetary ball mill"
+        ],
+        "brands": [
+            "RETSCH"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "taken"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "outside",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "subjected",
+            "target": "taken"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary ball mill",
+            "target": "subjected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "PM 100",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "planetary ball mill"
+        },
+        {
+            "type": "Condition-of",
+            "source": "450 rpm",
+            "target": "subjected"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "rotational",
+            "target": "450 rpm"
+        },
+        {
+            "type": "Brand-of",
+            "source": "RETSCH",
+            "target": "ball mill"
+        }
+    ]
+}

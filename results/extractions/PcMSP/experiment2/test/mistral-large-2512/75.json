@@ -1,0 +1,152 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "starting materials",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Al2O3",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "placed",
+            "reacted",
+            "flow"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "industrial grade"
+        ],
+        "values": [
+            "4 : 3",
+            "1100 \u00b0C",
+            "24 hrs",
+            "1%"
+        ],
+        "properties": [
+            {
+                "text": "1100 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "agate mortar",
+            "Al2O3 crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "4 : 3",
+            "target": "starting materials"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "starting materials",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Al2O3 crucible",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "reacted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Al2O3 crucible",
+            "target": "reacted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar",
+            "target": "reacted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        },
+        {
+            "type": "Value-of",
+            "source": "1%",
+            "target": "air"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "1100 \u00b0C",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "reacted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "reacted",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Al2O3",
+            "target": "Al2O3 crucible"
+        }
+    ]
+}

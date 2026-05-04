@@ -1,0 +1,68 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "TiNi1.1Sn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "copper crucible",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "melted"
+        ],
+        "descriptors": [
+            "water-cooled",
+            "samples"
+        ],
+        "values": [
+            "four samples"
+        ],
+        "properties": [],
+        "devices": [
+            "Crystalox MCGS5 levitation melting system"
+        ],
+        "brands": [
+            "Crystalox"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper crucible"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "samples",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "melted"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Crystalox MCGS5 levitation melting system",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TiNi1.1Sn",
+            "target": "melted"
+        },
+        {
+            "type": "Value-of",
+            "source": "four samples",
+            "target": "TiNi1.1Sn"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Crystalox",
+            "target": "Crystalox MCGS5 levitation melting system"
+        }
+    ]
+}

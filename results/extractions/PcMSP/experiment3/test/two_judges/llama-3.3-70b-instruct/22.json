@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "product",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "ground",
+            "pressed",
+            "placed"
+        ],
+        "descriptors": [
+            "pellets"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "glove box",
+            "alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "ground",
+            "target": "product"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pressed",
+            "target": "product"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "placed",
+            "target": "pellets"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "glove box",
+            "target": "ground"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "alumina crucible",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pellets",
+            "target": "product"
+        }
+    ]
+}

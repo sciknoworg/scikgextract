@@ -1,0 +1,98 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AsSn",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "synthesized from"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "synthesized"
+        ],
+        "values": [
+            "5 N",
+            "1 : 1"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "synthesized",
+            "target": "AsSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "Sn"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N",
+            "target": "Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1",
+            "target": "mixtures"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "synthesized from"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesized from"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AsSn",
+            "target": "synthesized from"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "synthesized"
+        },
+        {
+            "type": "Coreference",
+            "source": "samples",
+            "target": "mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "synthesized",
+            "target": "samples"
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ge",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "melted"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "argon"
+        ],
+        "values": [
+            "stoichiometric ratio"
+        ],
+        "properties": [],
+        "devices": [
+            "arc furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Mn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Si",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ge",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "stoichiometric ratio",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "ratio"
+        },
+        {
+            "type": "Next-operation",
+            "source": "melted",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc furnace",
+            "target": "melted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "argon",
+            "target": "melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "argon",
+            "target": "atmosphere"
+        }
+    ]
+}

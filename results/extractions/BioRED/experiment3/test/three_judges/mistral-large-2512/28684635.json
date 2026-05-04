@@ -1,0 +1,201 @@
+{
+    "entities": [
+        {
+            "text": "Type 2 Diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 44,
+            "length": 15
+        },
+        {
+            "text": "fasting glucose",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D005948",
+            "offset": 80,
+            "length": 14
+        },
+        {
+            "text": "ADCY5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "111",
+            "offset": 120,
+            "length": 5
+        },
+        {
+            "text": "adenylate cyclase 5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "111",
+            "offset": 160,
+            "length": 18
+        },
+        {
+            "text": "cyclic AMP",
+            "type": "ChemicalEntity",
+            "identifier": "D000242",
+            "offset": 230,
+            "length": 10
+        },
+        {
+            "text": "pancreatic b-cell",
+            "type": "CellLine",
+            "identifier": "CVCL_J235",
+            "offset": 280,
+            "length": 16
+        },
+        {
+            "text": "insulin",
+            "type": "ChemicalEntity",
+            "identifier": "D007328",
+            "offset": 300,
+            "length": 7
+        },
+        {
+            "text": "rs11708067",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 400,
+            "length": 10
+        },
+        {
+            "text": "enhancer",
+            "type": "GeneOrGeneProduct",
+            "identifier": "Not Found",
+            "offset": 450,
+            "length": 8
+        },
+        {
+            "text": "pancreatic islets",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 480,
+            "length": 16
+        },
+        {
+            "text": "rs11708067-A",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 520,
+            "length": 11
+        },
+        {
+            "text": "H3K27ac",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 560,
+            "length": 7
+        },
+        {
+            "text": "rodent b-cells",
+            "type": "CellLine",
+            "identifier": "CVCL_J235",
+            "offset": 620,
+            "length": 13
+        },
+        {
+            "text": "rat 832/13",
+            "type": "CellLine",
+            "identifier": "CVCL_J235",
+            "offset": 640,
+            "length": 9
+        },
+        {
+            "text": "mouse MIN6",
+            "type": "CellLine",
+            "identifier": "CVCL_0431",
+            "offset": 660,
+            "length": 10
+        },
+        {
+            "text": "rs11708067-G",
+            "type": "SequenceVariant",
+            "identifier": "rs11708067",
+            "offset": 690,
+            "length": 11
+        },
+        {
+            "text": "832/13",
+            "type": "CellLine",
+            "identifier": "CVCL_J235",
+            "offset": 750,
+            "length": 6
+        },
+        {
+            "text": "Adcy5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "111",
+            "offset": 780,
+            "length": 5
+        },
+        {
+            "text": "Sec22a",
+            "type": "GeneOrGeneProduct",
+            "identifier": "23223",
+            "offset": 810,
+            "length": 6
+        },
+        {
+            "text": "insulin",
+            "type": "ChemicalEntity",
+            "identifier": "D007328",
+            "offset": 850,
+            "length": 7
+        },
+        {
+            "text": "human islets",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 900,
+            "length": 12
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D003924",
+            "entity2": "111",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D005948",
+            "entity2": "111",
+            "novel": false
+        },
+        {
+            "type": "Conversion",
+            "entity1": "111",
+            "entity2": "D000242",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000242",
+            "entity2": "D007328",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "rs11708067",
+            "entity2": "D003924",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "rs11708067",
+            "entity2": "111",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "rs11708067-A",
+            "entity2": "rs11708067-G",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "111",
+            "entity2": "D007328",
+            "novel": true
+        }
+    ]
+}

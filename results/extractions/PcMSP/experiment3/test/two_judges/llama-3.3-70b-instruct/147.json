@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pelletized sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated at 400 °C for 48 hours",
+            "heated at 500 °C for 48 hours",
+            "grinding"
+        ],
+        "descriptors": [
+            "two-step",
+            "pelletized"
+        ],
+        "values": [
+            "400 °C",
+            "48 hours",
+            "500 °C",
+            "48 hours"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "two-step",
+            "target": "process"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixed precursors",
+            "target": "heated at 400 °C for 48 hours"
+        },
+        {
+            "type": "Value-of",
+            "source": "400 °C",
+            "target": "heated at 400 °C for 48 hours"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hours",
+            "target": "heated at 400 °C for 48 hours"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated at 400 °C for 48 hours",
+            "target": "heated at 500 °C for 48 hours"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pelletized sample",
+            "target": "heated at 500 °C for 48 hours"
+        },
+        {
+            "type": "Value-of",
+            "source": "500 °C",
+            "target": "heated at 500 °C for 48 hours"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hours",
+            "target": "heated at 500 °C for 48 hours"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated at 500 °C for 48 hours",
+            "target": "grinding"
+        }
+    ]
+}

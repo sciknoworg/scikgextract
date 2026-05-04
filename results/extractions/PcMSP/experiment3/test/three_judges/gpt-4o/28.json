@@ -1,0 +1,108 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "loaded",
+            "heated",
+            "pressed"
+        ],
+        "descriptors": [
+            "graphite foil lined",
+            "cylindrical",
+            "peak load"
+        ],
+        "values": [
+            "1200 °C",
+            "300 °C h−1",
+            "39 MPa",
+            "1 h"
+        ],
+        "properties": [],
+        "devices": [
+            "graphite die"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "graphite die",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "graphite die",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "graphite die",
+            "target": "pressed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 °C",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "300 °C h−1",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "39 MPa",
+            "target": "pressed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "graphite foil lined",
+            "target": "graphite die"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "graphite die"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "peak load",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "loaded"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pressed",
+            "target": "heated"
+        }
+    ]
+}

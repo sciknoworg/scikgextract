@@ -1,0 +1,104 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu2Se powder",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cu",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cu2Se",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "fabricated",
+            "fabricated"
+        ],
+        "descriptors": [
+            "high-energy",
+            "powder",
+            "stoichiometric"
+        ],
+        "values": [
+            "stoichiometric composition"
+        ],
+        "properties": [
+            {
+                "text": "200 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "ball milling"
+        ],
+        "brands": [
+            "SPEX , 8000 M Mixer / Mill"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Brand-of",
+            "source": "SPEX , 8000 M Mixer / Mill",
+            "target": "ball milling"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "SPEX 8000 M Mixer / Mill",
+            "target": "ball milling"
+        },
+        {
+            "type": "Brand-of",
+            "source": "SPEX",
+            "target": "SPEX 8000 M Mixer / Mill"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-energy",
+            "target": "ball milling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-energy",
+            "target": "ball milling"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu",
+            "target": "ball milling"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se powder",
+            "target": "ball milling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Se powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "Cu2Se powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Cu"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Se powder"
+        },
+        {
+            "type": "Condition-of",
+            "source": "200 min",
+            "target": "ball milling"
+        }
+    ]
+}

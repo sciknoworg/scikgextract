@@ -1,0 +1,63 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "constituent elements",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "inverted",
+            "re-melted"
+        ],
+        "descriptors": [
+            "homogeneous",
+            "several times"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "inverted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "re-melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "re-melted",
+            "target": "inverted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "re-melted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "inverted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogeneous",
+            "target": "constituent elements"
+        },
+        {
+            "type": "Coreference",
+            "source": "constituent elements",
+            "target": "sample"
+        }
+    ]
+}

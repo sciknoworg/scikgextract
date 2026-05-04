@@ -1,0 +1,129 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "starting materials",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Sr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Cr",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "placed",
+            "reacted"
+        ],
+        "descriptors": [
+            "thoroughly",
+            "industrial grade"
+        ],
+        "values": [
+            "4 : 3",
+            "1100 \u00b0C",
+            "24 hrs",
+            "1%"
+        ],
+        "properties": [
+            {
+                "text": "1100 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "agate mortar",
+            "Al2O3 crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "4 : 3",
+            "target": "starting materials"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "starting materials",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "agate mortar",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "Al2O3 crucible",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "reacted",
+            "target": "placed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "1100 \u00b0C",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 hrs",
+            "target": "reacted"
+        },
+        {
+            "type": "Condition-of",
+            "source": "industrial grade Ar containing about 1% air",
+            "target": "reacted"
+        },
+        {
+            "type": "Value-of",
+            "source": "1%",
+            "target": "air"
+        },
+        {
+            "type": "Coreference",
+            "source": "Sr",
+            "target": "starting materials"
+        },
+        {
+            "type": "Coreference",
+            "source": "Cr",
+            "target": "starting materials"
+        }
+    ]
+}

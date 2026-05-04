@@ -1,0 +1,48 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precursors",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "evacuated"
+        ],
+        "values": [
+            "5 N purity",
+            "1:1:1 molar ratio"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precursors",
+            "target": "sealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1:1:1 molar ratio",
+            "target": "precursors"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 N purity",
+            "target": "precursors"
+        }
+    ]
+}

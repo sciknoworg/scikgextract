@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "La2S3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Bi2O3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "BiF3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Bi2S3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Bi",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            ""
+        ],
+        "descriptors": [
+            "grains",
+            "grains"
+        ],
+        "values": [
+            "99.9%",
+            "99.99%",
+            "99.9 %"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "La2S3",
+            "target": "powders"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bi2O3",
+            "target": "powders"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "Bi2S3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bi2S3",
+            "target": "powders"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bi",
+            "target": "grains"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "La2S3"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Bi2O3"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "BiF3"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.9%",
+            "target": "Bi"
+        }
+    ]
+}

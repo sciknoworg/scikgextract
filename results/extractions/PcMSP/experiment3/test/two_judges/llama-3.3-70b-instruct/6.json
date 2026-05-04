@@ -1,0 +1,61 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "barlowite",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cu4(OH)6FBr",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "synthesised",
+            "hydrothermal reaction"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "hydrothermal reaction"
+        ],
+        "brands": [
+            "as previously reported23"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "barlowite"
+        },
+        {
+            "type": "Coreference",
+            "source": "hydrothermal reaction",
+            "target": "synthesised"
+        },
+        {
+            "type": "Participant-material",
+            "source": "barlowite",
+            "target": "synthesised"
+        },
+        {
+            "type": "Next-operation",
+            "source": "hydrothermal reaction",
+            "target": "synthesised"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hydrothermal reaction",
+            "target": "synthesised"
+        },
+        {
+            "type": "Brand-of",
+            "source": "as previously reported23",
+            "target": "barlowite"
+        }
+    ]
+}

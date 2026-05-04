@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AsSn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "mixtures",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "synthesized"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "5 N"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "5 N",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixtures"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixtures",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "synthesized"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N",
+            "target": "Sn"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N",
+            "target": "Se"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AsSn",
+            "target": "synthesized"
+        },
+        {
+            "type": "Coreference",
+            "source": "synthesized",
+            "target": "synthesized"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "single-phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "grinding",
+            "sintering"
+        ],
+        "descriptors": [
+            "several times"
+        ],
+        "values": [
+            "Not Found"
+        ],
+        "properties": [
+            {
+                "text": "Not Found",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "several times",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "Not Found",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "Not Found"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "sintering"
+        },
+        {
+            "type": "Coreference",
+            "source": "grinding",
+            "target": "performed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "grinding"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "sintering"
+        }
+    ]
+}

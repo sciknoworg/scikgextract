@@ -1,0 +1,80 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "products",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "products",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "washed"
+        ],
+        "descriptors": [
+            "coloured",
+            "coloured",
+            "pale blue",
+            "level of Zn-substitution"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "coloured",
+            "target": "products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "turquoise",
+            "target": "products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "coloured",
+            "target": "products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "level of Zn-substitution",
+            "target": "products"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "distilled water",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "dried"
+        }
+    ]
+}

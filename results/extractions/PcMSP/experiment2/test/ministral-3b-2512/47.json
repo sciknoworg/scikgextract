@@ -1,0 +1,75 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "high purity alumina crucible",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "calcined"
+        ],
+        "descriptors": [
+            "high purity"
+        ],
+        "values": [
+            "700 \u00b0C",
+            "3 h"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "high purity alumina crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "high purity",
+            "target": "high purity alumina crucible"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high purity",
+            "target": "high purity alumina crucible"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "700 \u00b0C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "3 h",
+            "target": "time"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high purity alumina crucible",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air atmosphere",
+            "target": "calcined"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "2H-MoTe2",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "grown",
+            "cooling"
+        ],
+        "descriptors": [
+            "crystals",
+            "ambient environment"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "700 \u2013 800 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "100 \u00b0 C / h",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "crystals",
+            "target": "2H-MoTe2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2H-MoTe2",
+            "target": "grown"
+        },
+        {
+            "type": "Condition-of",
+            "source": "700 \u2013 800 \u00b0 C",
+            "target": "grown"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grown",
+            "target": "cooling"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ambient environment",
+            "target": "cooling"
+        },
+        {
+            "type": "Condition-of",
+            "source": "100 \u00b0 C / h",
+            "target": "cooling"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Nb",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Re",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Nb0.18Re0.82",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "melted",
+            "make"
+        ],
+        "descriptors": [
+            "single",
+            "button"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "button",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "single",
+            "target": "Nb0.18Re0.82"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Re",
+            "target": "melted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "make",
+            "target": "melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Nb0.18Re0.82",
+            "target": "make"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zn-substituted sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled"
+        ],
+        "descriptors": [
+            "autoclave",
+            "room temperature"
+        ],
+        "values": [
+            "0.99",
+            "1 K / min",
+            "483 K",
+            "24 h",
+            "0.1 K / min"
+        ],
+        "properties": [
+            {
+                "text": "1 K / min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "483 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "24 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "0.1 K / min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "autoclave"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "0.99",
+            "target": "Zn-substituted sample"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 K / min",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "483 K",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "24 h",
+            "target": "held"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.1 K / min",
+            "target": "cooled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "autoclave",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "cooled"
+        }
+    ]
+}

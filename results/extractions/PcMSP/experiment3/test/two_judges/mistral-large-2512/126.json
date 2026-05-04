@@ -1,0 +1,88 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al pieces",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Zr button",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "put together"
+        ],
+        "descriptors": [
+            "water-cooled",
+            "oxygen getter"
+        ],
+        "values": [
+            "99.95%",
+            "99.99%"
+        ],
+        "properties": [],
+        "devices": [
+            "copper hearth"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Ru"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95%",
+            "target": "Ru"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Al pieces"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Al pieces"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "put together"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "put together"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al pieces",
+            "target": "put together"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr button"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Zr button",
+            "target": "put together"
+        }
+    ]
+}

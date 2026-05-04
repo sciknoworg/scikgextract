@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heating",
+            "heating"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "quartz"
+        ],
+        "values": [
+            "1.7 K / min",
+            "1223 K"
+        ],
+        "properties": [
+            {
+                "text": "1.7 K / min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "1223 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "ampoules"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "Synthesis"
+        },
+        {
+            "type": "Participant-material",
+            "source": "mixture",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "mixture"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "heating"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoules"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1.7 K / min",
+            "target": "heating"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1223 K",
+            "target": "heating"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heating",
+            "target": "Synthesis"
+        }
+    ]
+}

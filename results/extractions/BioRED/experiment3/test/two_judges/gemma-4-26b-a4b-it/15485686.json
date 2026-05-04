@@ -1,0 +1,208 @@
+{
+    "entities": [
+        {
+            "text": "SCN5A",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6762",
+            "offset": 11,
+            "length": 5
+        },
+        {
+            "text": "long QT syndrome",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010169",
+            "offset": 45,
+            "length": 16
+        },
+        {
+            "text": "tachycardia/bradycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001924,D000544",
+            "offset": 75,
+            "length": 23
+        },
+        {
+            "text": "Congenital long QT syndrome",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010169",
+            "offset": 103,
+            "length": 27
+        },
+        {
+            "text": "LQTS",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D010169",
+            "offset": 131,
+            "length": 4
+        },
+        {
+            "text": "fetal bradycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001924",
+            "offset": 185,
+            "length": 17
+        },
+        {
+            "text": "2:1 atrioventricular block",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000544",
+            "offset": 203,
+            "length": 25
+        },
+        {
+            "text": "ventricular tachycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D004341",
+            "offset": 234,
+            "length": 23
+        },
+        {
+            "text": "lidocaine",
+            "type": "ChemicalEntity",
+            "identifier": "D008035",
+            "offset": 325,
+            "length": 9
+        },
+        {
+            "text": "mexiletine",
+            "type": "ChemicalEntity",
+            "identifier": "D008645",
+            "offset": 351,
+            "length": 9
+        },
+        {
+            "text": "ventricular tachycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D004341",
+            "offset": 377,
+            "length": 23
+        },
+        {
+            "text": "LQTS-3 mutation",
+            "type": "SequenceVariant",
+            "identifier": "-1",
+            "offset": 415,
+            "length": 15
+        },
+        {
+            "text": "Na(v)1.5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6762",
+            "offset": 485,
+            "length": 7
+        },
+        {
+            "text": "G-->A substitution at codon 1763",
+            "type": "SequenceVariant",
+            "identifier": "-1",
+            "offset": 517,
+            "length": 32
+        },
+        {
+            "text": "V1763M",
+            "type": "SequenceVariant",
+            "identifier": "-1",
+            "offset": 1130,
+            "length": 6
+        },
+        {
+            "text": "tsA201",
+            "type": "CellLine",
+            "identifier": "-1",
+            "offset": 675,
+            "length": 6
+        },
+        {
+            "text": "tetrodotoxin",
+            "type": "ChemicalEntity",
+            "identifier": "D013311",
+            "offset": 723,
+            "length": 12
+        },
+        {
+            "text": "lidocaine",
+            "type": "ChemicalEntity",
+            "identifier": "D008035",
+            "offset": 743,
+            "length": 9
+        },
+        {
+            "text": "V1764M",
+            "type": "SequenceVariant",
+            "identifier": "-1",
+            "offset": 895,
+            "length": 6
+        },
+        {
+            "text": "I1762A",
+            "type": "SequenceVariant",
+            "identifier": "-1",
+            "offset": 943,
+            "length": 6
+        },
+        {
+            "text": "lidocaine",
+            "type": "ChemicalEntity",
+            "identifier": "D008035",
+            "offset": 1215,
+            "length": 9
+        },
+        {
+            "text": "mexiletine",
+            "type": "ChemicalEntity",
+            "identifier": "D008645",
+            "offset": 1225,
+            "length": 9
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "6762",
+            "entity2": "D010169",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "V1763M",
+            "entity2": "D010169",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D008035",
+            "entity2": "D004341",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D008645",
+            "entity2": "D004341",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D008035",
+            "entity2": "D000544",
+            "novel": false
+        },
+        {
+            "type": "Bind",
+            "entity1": "D013311",
+            "entity2": "6762",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "V1763M",
+            "entity2": "V1764M",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "V1763M",
+            "entity2": "I1762A",
+            "novel": false
+        }
+    ]
+}

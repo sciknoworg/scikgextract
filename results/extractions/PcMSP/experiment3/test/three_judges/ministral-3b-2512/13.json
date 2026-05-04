@@ -1,0 +1,60 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "elements",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "starting elements",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "taken"
+        ],
+        "descriptors": [
+            "starting",
+            "1% excess"
+        ],
+        "values": [
+            "99%",
+            "1 : 1 stoichiometry"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "elements",
+            "target": "taken"
+        },
+        {
+            "type": "Value-of",
+            "source": "99% purity",
+            "target": "starting elements"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Gd",
+            "target": "taken"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1% excess",
+            "target": "Gd"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "starting elements"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 : 1 stoichiometry",
+            "target": "starting elements"
+        }
+    ]
+}

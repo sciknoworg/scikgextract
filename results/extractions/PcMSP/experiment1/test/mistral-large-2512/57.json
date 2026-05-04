@@ -1,0 +1,58 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "2H-MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "\u03b2-MoTe2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Bromine",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "CVT method"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "Br2",
+            "target": "Bromine"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Bromine",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2H-MoTe2",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "\u03b2-MoTe2",
+            "target": "prepared"
+        },
+        {
+            "type": "Coreference",
+            "source": "CVT method",
+            "target": "prepared"
+        }
+    ]
+}

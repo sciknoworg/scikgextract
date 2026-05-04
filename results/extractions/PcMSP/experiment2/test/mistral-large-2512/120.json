@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "zirconium oxide",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "grinding balls",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixing",
+            "added",
+            "homogenizing"
+        ],
+        "descriptors": [
+            "effectively"
+        ],
+        "values": [
+            "6",
+            "5 mm"
+        ],
+        "properties": [
+            {
+                "text": "5 mm diameter",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "grinding balls"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "effectively",
+            "target": "homogenizing"
+        },
+        {
+            "type": "Value-of",
+            "source": "6",
+            "target": "grinding balls"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mm",
+            "target": "grinding balls"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "grinding balls",
+            "target": "added"
+        },
+        {
+            "type": "Participant-material",
+            "source": "zirconium oxide",
+            "target": "mixing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "grinding balls",
+            "target": "added"
+        },
+        {
+            "type": "Next-operation",
+            "source": "added",
+            "target": "mixing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "homogenizing",
+            "target": "added"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 mm diameter",
+            "target": "grinding balls"
+        }
+    ]
+}

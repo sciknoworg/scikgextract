@@ -1,0 +1,70 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "fully Zn-substituted sample",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled"
+        ],
+        "descriptors": [],
+        "values": [
+            "x = 0.99 (1)"
+        ],
+        "properties": [
+            {
+                "text": "1 K/min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "0.1 K/min",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "autoclave"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "fully Zn-substituted sample",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fully Zn-substituted sample",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "fully Zn-substituted sample",
+            "target": "cooled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "autoclave",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "held"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.99 (1)",
+            "target": "fully Zn-substituted sample"
+        }
+    ]
+}

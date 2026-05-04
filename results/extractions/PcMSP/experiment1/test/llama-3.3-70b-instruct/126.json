@@ -1,0 +1,73 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "put"
+        ],
+        "descriptors": [
+            "water-cooled"
+        ],
+        "values": [
+            "99.95%",
+            "99.99%"
+        ],
+        "properties": [],
+        "devices": [
+            "copper hearth"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Brand-of",
+            "source": "Ru",
+            "target": "Alfa Aesar"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Al",
+            "target": "Alfa Aesar"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "put"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "put"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "put"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95%",
+            "target": "Ru"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Al"
+        }
+    ]
+}

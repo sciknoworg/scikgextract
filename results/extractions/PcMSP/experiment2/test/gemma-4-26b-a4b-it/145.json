@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "anhydrous SnF2 powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "2SnSe2-xFx",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed"
+        ],
+        "descriptors": [
+            "Stoichiometric amounts",
+            "anhydrous",
+            "powders"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Sn",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Se",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "anhydrous SnF2 powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2SnSe2-xFx",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "anhydrous SnF2 powders"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "anhydrous SnF2 powders"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Stoichiometric amounts",
+            "target": "mixed"
+        }
+    ]
+}

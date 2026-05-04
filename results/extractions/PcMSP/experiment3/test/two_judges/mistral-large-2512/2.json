@@ -1,0 +1,79 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "it",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [],
+        "values": [
+            "1073 K",
+            "1 h",
+            "5.5–6.0 GPa"
+        ],
+        "properties": [
+            {
+                "text": "1073 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "5.5–6.0 GPa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "cubic-anvil-type high-pressure apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "it",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "cubic-anvil-type high-pressure apparatus",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "1073 K",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "Property-time"
+        },
+        {
+            "type": "Value-of",
+            "source": "5.5–6.0 GPa",
+            "target": "Property-pressure"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1073 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5.5–6.0 GPa",
+            "target": "heated"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn ( IO3 ) 2",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "solid",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "dried",
+            "yield"
+        ],
+        "descriptors": [
+            "anhydrous",
+            "polycrystalline",
+            "polycrystalline"
+        ],
+        "values": [
+            "1 week",
+            "86 %"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 week",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Mn ( IO3 ) 2",
+            "target": "give"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "Mn ( IO3 ) 2"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "dried"
+        },
+        {
+            "type": "Next-operation",
+            "source": "give",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "86%",
+            "target": "give"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "based on Mn",
+            "target": "86%"
+        }
+    ]
+}

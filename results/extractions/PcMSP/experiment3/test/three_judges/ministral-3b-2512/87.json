@@ -1,0 +1,68 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn(IO₃)₂",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "MnCl₂",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "MnCl2",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "reaction"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [
+            "80 °C"
+        ],
+        "properties": [
+            {
+                "text": "ambient pressure",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Mn(IO₃)₂",
+            "target": "synthesized"
+        },
+        {
+            "type": "Coreference",
+            "source": "reaction",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HIO₃",
+            "target": "reaction"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Mn(IO₃)₂"
+        },
+        {
+            "type": "Value-of",
+            "source": "80 °C",
+            "target": "Property-temperature"
+        },
+        {
+            "type": "Condition-of",
+            "source": "80 °C",
+            "target": "Property-temperature"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2Co2TeO6",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "attaining room temperature",
+            "collected"
+        ],
+        "descriptors": [
+            "flaky",
+            "light purple colour",
+            "crystals"
+        ],
+        "values": [
+            "25°C"
+        ],
+        "properties": [
+            {
+                "text": "25°C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "flaky",
+            "target": "Na2Co2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "light purple colour",
+            "target": "Na2Co2TeO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "crystals",
+            "target": "Na2Co2TeO6"
+        },
+        {
+            "type": "Condition-of",
+            "source": "25°C",
+            "target": "collected"
+        },
+        {
+            "type": "Next-operation",
+            "source": "collected",
+            "target": "attaining room temperature"
+        }
+    ]
+}

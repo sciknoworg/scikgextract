@@ -1,0 +1,118 @@
+{
+    "entities": [
+        {
+            "text": "dexmedetomidine",
+            "type": "ChemicalEntity",
+            "identifier": "D000046900",
+            "offset": 12,
+            "length": 12
+        },
+        {
+            "text": "propofol",
+            "type": "ChemicalEntity",
+            "identifier": "D000046901",
+            "offset": 45,
+            "length": 7
+        },
+        {
+            "text": "neurocritical care",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000046902",
+            "offset": 60,
+            "length": 16
+        },
+        {
+            "text": "patients",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 100,
+            "length": 7
+        },
+        {
+            "text": "mean arterial pressure",
+            "type": "ChemicalEntity",
+            "identifier": "D000046903",
+            "offset": 250,
+            "length": 20
+        },
+        {
+            "text": "hypotension",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000046904",
+            "offset": 270,
+            "length": 9
+        },
+        {
+            "text": "bradycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000046905",
+            "offset": 280,
+            "length": 9
+        },
+        {
+            "text": "heart rate",
+            "type": "ChemicalEntity",
+            "identifier": "D000046906",
+            "offset": 290,
+            "length": 9
+        },
+        {
+            "text": "sedative",
+            "type": "ChemicalEntity",
+            "identifier": "D000046907",
+            "offset": 30,
+            "length": 7
+        },
+        {
+            "text": "neurocritical care patients",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000046908",
+            "offset": 59,
+            "length": 20
+        }
+    ],
+    "relations": [
+        {
+            "type": "Comparison",
+            "entity1": "D000046900",
+            "entity2": "D000046901",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000046904",
+            "entity2": "D000046900",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000046905",
+            "entity2": "D000046900",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000046904",
+            "entity2": "D000046901",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000046905",
+            "entity2": "D000046901",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D000046903",
+            "entity2": "D000046904",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "D000046906",
+            "entity2": "D000046905",
+            "novel": false
+        }
+    ]
+}

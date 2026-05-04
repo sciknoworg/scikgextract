@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "aluminium/platinum crucible",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "gradually heated"
+        ],
+        "descriptors": [
+            "aluminium",
+            "platinum",
+            "gradually"
+        ],
+        "values": [
+            "5 \u00b0C/min",
+            "900 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "5 \u00b0C/min",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "900 \u00b0C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "aluminium/platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium/platinum crucible",
+            "target": "gradually heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 \u00b0C/min",
+            "target": "gradually heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 \u00b0C",
+            "target": "reach"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aluminium",
+            "target": "aluminium/platinum crucible"
+        },
+        {
+            "type": "Participant-material",
+            "source": "platinum",
+            "target": "aluminium/platinum crucible"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 \u00b0C/min",
+            "target": "Property-rate"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 \u00b0C",
+            "target": "Property-temperature"
+        }
+    ]
+}

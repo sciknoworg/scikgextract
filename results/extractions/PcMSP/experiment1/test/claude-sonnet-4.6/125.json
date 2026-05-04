@@ -1,0 +1,41 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "RuAl6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "synthesized"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "samples"
+        },
+        {
+            "type": "Coreference",
+            "source": "samples",
+            "target": "RuAl6"
+        },
+        {
+            "type": "Participant-material",
+            "source": "RuAl6",
+            "target": "synthesized"
+        }
+    ]
+}

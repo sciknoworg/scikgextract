@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "platinum",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "crucible",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "ground",
+            "sintered"
+        ],
+        "descriptors": [
+            "thoroughly"
+        ],
+        "values": [
+            "800 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "platinum crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "platinum",
+            "target": "sintered"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucible",
+            "target": "sintered"
+        },
+        {
+            "type": "Value-of",
+            "source": "800 \u00b0C",
+            "target": "temperature"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "ground"
+        }
+    ]
+}

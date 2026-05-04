@@ -1,0 +1,69 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn50−xAsxSe50",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "reaction"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "high-temperature"
+        ],
+        "values": [
+            "0",
+            "0.05",
+            "0.5",
+            "2.5"
+        ],
+        "properties": [
+            {
+                "text": "x",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Sn50−xAsxSe50"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-temperature",
+            "target": "reaction"
+        },
+        {
+            "type": "Value-of",
+            "source": "0",
+            "target": "x"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.05",
+            "target": "x"
+        },
+        {
+            "type": "Value-of",
+            "source": "0.5",
+            "target": "x"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.5",
+            "target": "x"
+        },
+        {
+            "type": "Next-operation",
+            "source": "prepared",
+            "target": "reaction"
+        }
+    ]
+}

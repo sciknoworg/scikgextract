@@ -1,0 +1,112 @@
+{
+    "entities": [
+        {
+            "text": "choline acetyltransferase",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P06218",
+            "offset": 12,
+            "length": 23
+        },
+        {
+            "text": "ChAT",
+            "type": "GeneOrGeneProduct",
+            "identifier": "P06218",
+            "offset": 57,
+            "length": 4
+        },
+        {
+            "text": "daidzein",
+            "type": "ChemicalEntity",
+            "identifier": "D000040",
+            "offset": 112,
+            "length": 7
+        },
+        {
+            "text": "4',7-dihydroxy-isoflavone",
+            "type": "ChemicalEntity",
+            "identifier": "D000040",
+            "offset": 147,
+            "length": 19
+        },
+        {
+            "text": "Pueraria thunbergiana",
+            "type": "OrganismTaxon",
+            "identifier": "100643",
+            "offset": 102,
+            "length": 18
+        },
+        {
+            "text": "Alzheimer's disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D000644",
+            "offset": 68,
+            "length": 20
+        },
+        {
+            "text": "scopolamine",
+            "type": "ChemicalEntity",
+            "identifier": "D000040",
+            "offset": 205,
+            "length": 9
+        },
+        {
+            "text": "mice",
+            "type": "OrganismTaxon",
+            "identifier": "10090",
+            "offset": 230,
+            "length": 5
+        },
+        {
+            "text": "Y-maze",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 260,
+            "length": 5
+        },
+        {
+            "text": "4.5 mg/kg body weight",
+            "type": "ChemicalEntity",
+            "identifier": "Not Found",
+            "offset": 290,
+            "length": 20
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "P06218",
+            "entity2": "D000644",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D000040",
+            "entity2": "P06218",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D000040",
+            "entity2": "D000040",
+            "novel": true
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D000040",
+            "entity2": "D000040",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D000040",
+            "entity2": "10090",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "10090",
+            "entity2": "Not Found",
+            "novel": true
+        }
+    ]
+}

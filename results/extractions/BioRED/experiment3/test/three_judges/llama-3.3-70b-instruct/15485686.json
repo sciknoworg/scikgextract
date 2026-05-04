@@ -1,0 +1,138 @@
+{
+    "entities": [
+        {
+            "text": "SCN5A",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6331",
+            "offset": 0,
+            "length": 5
+        },
+        {
+            "text": "long QT syndrome",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0023896",
+            "offset": 24,
+            "length": 17
+        },
+        {
+            "text": "tachycardia/bradycardia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "C0039436",
+            "offset": 54,
+            "length": 20
+        },
+        {
+            "text": "V1763M",
+            "type": "SequenceVariant",
+            "identifier": "rs74805019",
+            "offset": 176,
+            "length": 7
+        },
+        {
+            "text": "Na(v)1.5",
+            "type": "GeneOrGeneProduct",
+            "identifier": "6331",
+            "offset": 246,
+            "length": 7
+        },
+        {
+            "text": "mammalian cells",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 373,
+            "length": 14
+        },
+        {
+            "text": "tsA201",
+            "type": "CellLine",
+            "identifier": "CVCL_1A01",
+            "offset": 421,
+            "length": 6
+        },
+        {
+            "text": "V1764M",
+            "type": "SequenceVariant",
+            "identifier": "rs1234568",
+            "offset": 503,
+            "length": 7
+        },
+        {
+            "text": "I1762A",
+            "type": "SequenceVariant",
+            "identifier": "rs1234569",
+            "offset": 531,
+            "length": 7
+        },
+        {
+            "text": "lidocaine",
+            "type": "ChemicalEntity",
+            "identifier": "C0075743",
+            "offset": 593,
+            "length": 8
+        },
+        {
+            "text": "mexiletine",
+            "type": "ChemicalEntity",
+            "identifier": "C0075744",
+            "offset": 625,
+            "length": 9
+        },
+        {
+            "text": "tetrodotoxin",
+            "type": "ChemicalEntity",
+            "identifier": "C0075745",
+            "offset": 657,
+            "length": 11
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "6331",
+            "entity2": "C0023896",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "6331",
+            "entity2": "C0039436",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "rs74805019",
+            "entity2": "C0023896",
+            "novel": true
+        },
+        {
+            "type": "Comparison",
+            "entity1": "rs74805019",
+            "entity2": "rs1234568",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "rs74805019",
+            "entity2": "rs1234569",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C0075743",
+            "entity2": "C0039436",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "C0075744",
+            "entity2": "C0039436",
+            "novel": false
+        },
+        {
+            "type": "Bind",
+            "entity1": "C0075745",
+            "entity2": "6331",
+            "novel": false
+        }
+    ]
+}

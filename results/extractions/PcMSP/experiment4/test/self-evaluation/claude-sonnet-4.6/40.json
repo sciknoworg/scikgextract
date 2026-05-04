@@ -1,0 +1,177 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "chemicals",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pure phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "used",
+            "mixed",
+            "mixed",
+            "kept",
+            "kept"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "thoroughly",
+            "pure",
+            "thoroughly"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "TeO2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "taken"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure",
+            "target": "pure phase"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "used"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2",
+            "target": "kept"
+        },
+        {
+            "type": "Coreference",
+            "source": "NiO",
+            "target": "chemicals"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Next-operation",
+            "source": "taken",
+            "target": "used"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "get",
+            "target": "kept"
+        }
+    ]
+}

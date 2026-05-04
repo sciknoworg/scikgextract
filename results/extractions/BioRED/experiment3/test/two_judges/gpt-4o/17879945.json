@@ -1,0 +1,153 @@
+{
+    "entities": [
+        {
+            "text": "ritonavir",
+            "type": "ChemicalEntity",
+            "identifier": "D019164",
+            "offset": 90,
+            "length": 9
+        },
+        {
+            "text": "cholesteryl ester",
+            "type": "ChemicalEntity",
+            "identifier": "CHEBI:17002",
+            "offset": 28,
+            "length": 16
+        },
+        {
+            "text": "HIV protease inhibitor",
+            "type": "ChemicalEntity",
+            "identifier": "D019164",
+            "offset": 81,
+            "length": 21
+        },
+        {
+            "text": "atherosclerosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001161",
+            "offset": 205,
+            "length": 14
+        },
+        {
+            "text": "mice",
+            "type": "OrganismTaxon",
+            "identifier": "10090",
+            "offset": 292,
+            "length": 4
+        },
+        {
+            "text": "monocytes",
+            "type": "CellLine",
+            "identifier": "CL:0000576",
+            "offset": 384,
+            "length": 9
+        },
+        {
+            "text": "macrophages",
+            "type": "CellLine",
+            "identifier": "CL:0000235",
+            "offset": 442,
+            "length": 11
+        },
+        {
+            "text": "THP-1",
+            "type": "CellLine",
+            "identifier": "CVCL_0006",
+            "offset": 516,
+            "length": 5
+        },
+        {
+            "text": "PMA",
+            "type": "ChemicalEntity",
+            "identifier": "CHEBI:40734",
+            "offset": 598,
+            "length": 3
+        },
+        {
+            "text": "17beta-estradiol",
+            "type": "ChemicalEntity",
+            "identifier": "D004967",
+            "offset": 678,
+            "length": 15
+        },
+        {
+            "text": "progesterone",
+            "type": "ChemicalEntity",
+            "identifier": "D011374",
+            "offset": 698,
+            "length": 11
+        },
+        {
+            "text": "ethanol",
+            "type": "ChemicalEntity",
+            "identifier": "D005947",
+            "offset": 713,
+            "length": 7
+        },
+        {
+            "text": "LDL",
+            "type": "ChemicalEntity",
+            "identifier": "D007842",
+            "offset": 788,
+            "length": 3
+        },
+        {
+            "text": "CD36",
+            "type": "GeneOrGeneProduct",
+            "identifier": "948",
+            "offset": 1017,
+            "length": 4
+        },
+        {
+            "text": "PPARgamma",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5468",
+            "offset": 1151,
+            "length": 10
+        }
+    ],
+    "relations": [
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D019164",
+            "entity2": "CHEBI:17002",
+            "novel": true
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "D004967",
+            "entity2": "CHEBI:17002",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D019164",
+            "entity2": "948",
+            "novel": true
+        },
+        {
+            "type": "Bind",
+            "entity1": "948",
+            "entity2": "D007842",
+            "novel": false
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "CL:0000576",
+            "entity2": "D004967",
+            "novel": true
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "CL:0000576",
+            "entity2": "D011374",
+            "novel": true
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "CL:0000576",
+            "entity2": "D005947",
+            "novel": true
+        }
+    ]
+}

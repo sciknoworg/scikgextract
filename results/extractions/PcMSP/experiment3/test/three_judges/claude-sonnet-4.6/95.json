@@ -1,0 +1,53 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn50 − xAsxSe50",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "prepared"
+        ],
+        "descriptors": [
+            "Polycrystalline",
+            "high-temperature",
+            "x = 0 , 0.05 , 0.5 , and 2.5"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "samples"
+        },
+        {
+            "type": "Coreference",
+            "source": "samples",
+            "target": "Sn50 − xAsxSe50"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn50 − xAsxSe50",
+            "target": "prepared"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-temperature",
+            "target": "prepared"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "x = 0 , 0.05 , 0.5 , and 2.5",
+            "target": "Sn50 − xAsxSe50"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixture",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "kept",
+            "heated"
+        ],
+        "descriptors": [
+            "gradually"
+        ],
+        "values": [
+            "5 C / min",
+            "900 C"
+        ],
+        "properties": [
+            {
+                "text": "rate",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "900 \u000e C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "crucible"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "kept"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "kept"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "aluminium / platinum crucible",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "5 C / min",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "gradually",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 C / min",
+            "target": "Property-rate"
+        },
+        {
+            "type": "Value-of",
+            "source": "900 C",
+            "target": "Property-temperature"
+        }
+    ]
+}

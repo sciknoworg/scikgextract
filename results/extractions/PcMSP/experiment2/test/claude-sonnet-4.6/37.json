@@ -1,0 +1,62 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "maintained",
+            "cooled down"
+        ],
+        "descriptors": [
+            "slowly",
+            "same temperature"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "30 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "500 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "2 C/h",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "30 h",
+            "target": "maintained"
+        },
+        {
+            "type": "Condition-of",
+            "source": "500 C",
+            "target": "cooled down"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 C/h",
+            "target": "cooled down"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "cooled down"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "same temperature",
+            "target": "maintained"
+        },
+        {
+            "type": "Next-operation",
+            "source": "maintained",
+            "target": "cooled down"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "reaction mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "interrupted",
+            "grind"
+        ],
+        "descriptors": [
+            "several times"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "interrupted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reaction mixture",
+            "target": "grind"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several times",
+            "target": "interrupted"
+        }
+    ]
+}

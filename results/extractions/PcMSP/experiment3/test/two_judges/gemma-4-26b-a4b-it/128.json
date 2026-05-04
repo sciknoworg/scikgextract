@@ -1,0 +1,124 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "tantalum foil",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Al-rich eutectic",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "put",
+            "annealed"
+        ],
+        "descriptors": [
+            "thin",
+            "evacuated",
+            "Al-rich",
+            "below the melting point"
+        ],
+        "values": [
+            "620 ° C",
+            "∼ 40 ° C",
+            "14 days"
+        ],
+        "properties": [
+            {
+                "text": "620 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "∼ 40 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "tantalum foil",
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thin",
+            "target": "tantalum foil"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Next-operation",
+            "source": "wrapped",
+            "target": "put"
+        },
+        {
+            "type": "Next-operation",
+            "source": "put",
+            "target": "annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "put"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "620 ° C",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "∼ 40 ° C",
+            "target": "620 ° C"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "below the melting point",
+            "target": "∼ 40 ° C"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Al-rich",
+            "target": "Al-rich eutectic"
+        },
+        {
+            "type": "Value-of",
+            "source": "14 days",
+            "target": "annealed"
+        }
+    ]
+}

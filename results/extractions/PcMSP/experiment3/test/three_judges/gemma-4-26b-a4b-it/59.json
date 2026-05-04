@@ -1,0 +1,127 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "MoTe2",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Br2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "loaded",
+            "placed",
+            "growth of samples"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "powders",
+            "evacuated",
+            "quartz",
+            "two-zone"
+        ],
+        "values": [
+            "5 mg/cm³"
+        ],
+        "properties": [
+            {
+                "text": "5 mg/cm³",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [
+            "quartz ampoule",
+            "two-zone furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powders",
+            "target": "MoTe2"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mg/cm³",
+            "target": "Br2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Br2",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "MoTe2",
+            "target": "loaded"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Br2",
+            "target": "loaded"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz ampoule",
+            "target": "loaded"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Next-operation",
+            "source": "loaded",
+            "target": "placed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "two-zone furnace",
+            "target": "placed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "two-zone",
+            "target": "two-zone furnace"
+        },
+        {
+            "type": "Next-operation",
+            "source": "placed",
+            "target": "growth of samples"
+        },
+        {
+            "type": "Condition-of",
+            "source": "two-zone furnace",
+            "target": "growth of samples"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "growth of samples"
+        }
+    ]
+}

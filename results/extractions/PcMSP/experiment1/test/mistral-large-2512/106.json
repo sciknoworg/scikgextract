@@ -1,0 +1,67 @@
+{
+    "entities": {
+        "materials": [],
+        "operations": [
+            "evacuated",
+            "filled",
+            "sealed"
+        ],
+        "descriptors": [
+            "Inside a glove box"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "jar",
+            "glove box"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "evacuated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "filled"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "jar",
+            "target": "sealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Inside a glove box",
+            "target": "evacuated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Inside a glove box",
+            "target": "filled"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Inside a glove box",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "filled",
+            "target": "evacuated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "filled"
+        },
+        {
+            "type": "Condition-of",
+            "source": "N2",
+            "target": "filled"
+        }
+    ]
+}

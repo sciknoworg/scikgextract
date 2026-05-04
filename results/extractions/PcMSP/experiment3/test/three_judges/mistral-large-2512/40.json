@@ -1,0 +1,146 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Na2O",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "NiO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuO",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "TeO2 powders",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pure phase",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "taken",
+            "mixed",
+            "kept",
+            "get"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "thoroughly"
+        ],
+        "values": [
+            "stoichiometric proportions"
+        ],
+        "properties": [],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "stoichiometric proportions"
+        },
+        {
+            "type": "Value-of",
+            "source": "stoichiometric proportions",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2 powders",
+            "target": "taken"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "taken"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2 powders",
+            "target": "mixed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "thoroughly",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "kept",
+            "target": "mixed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Na2O",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "NiO",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuO",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "TeO2 powders",
+            "target": "kept"
+        },
+        {
+            "type": "Next-operation",
+            "source": "get",
+            "target": "kept"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pure phase",
+            "target": "get"
+        }
+    ]
+}

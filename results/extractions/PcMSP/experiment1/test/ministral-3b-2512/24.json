@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "cooled down"
+        ],
+        "descriptors": [
+            "room temperature"
+        ],
+        "values": [
+            "1123 K",
+            "50 h"
+        ],
+        "properties": [
+            {
+                "text": "1123 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "50 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "held"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "cooled down"
+        },
+        {
+            "type": "Value-of",
+            "source": "1123 K",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "50 h",
+            "target": "held"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "cooled down"
+        },
+        {
+            "type": "Condition-of",
+            "source": "room temperature",
+            "target": "cooled down"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "piece",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "bar",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind",
+            "synchrotron X-ray diffraction",
+            "scanning electron microscopy",
+            "physical property measurements"
+        ],
+        "descriptors": [
+            "diamond"
+        ],
+        "values": [
+            "8 mm × 3 mm × 3 mm"
+        ],
+        "properties": [],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "piece",
+            "target": "sectioned"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "grind"
+        },
+        {
+            "type": "Participant-material",
+            "source": "bar",
+            "target": "sectioned"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 mm × 3 mm × 3 mm",
+            "target": "bar"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grind",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synchrotron X-ray diffraction",
+            "target": "grind"
+        },
+        {
+            "type": "Next-operation",
+            "source": "scanning electron microscopy",
+            "target": "synchrotron X-ray diffraction"
+        },
+        {
+            "type": "Next-operation",
+            "source": "physical property measurements",
+            "target": "scanning electron microscopy"
+        }
+    ]
+}

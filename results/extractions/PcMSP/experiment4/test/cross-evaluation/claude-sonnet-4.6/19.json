@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "heated",
+            "held",
+            "held"
+        ],
+        "descriptors": [
+            "quartz",
+            "room temperature"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "4 K / h",
+                "subtype": "Property-rate"
+            },
+            {
+                "text": "523 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "4 K / h",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "523 K",
+            "target": "heated"
+        },
+        {
+            "type": "Condition-of",
+            "source": "20 h",
+            "target": "held"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "room temperature",
+            "target": "cooled down"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "held",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled down",
+            "target": "held"
+        }
+    ]
+}

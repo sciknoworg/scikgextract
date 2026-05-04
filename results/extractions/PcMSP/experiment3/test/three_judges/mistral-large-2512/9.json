@@ -1,0 +1,87 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "products",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "water",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "filtered",
+            "washed",
+            "dried"
+        ],
+        "descriptors": [
+            "coloured turquoise to pale blue",
+            "Zn-substitution",
+            "several times",
+            "distilled"
+        ],
+        "values": [
+            "several times"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "coloured turquoise to pale blue",
+            "target": "products"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "Zn-substitution",
+            "target": "products"
+        },
+        {
+            "type": "Next-operation",
+            "source": "washed",
+            "target": "filtered"
+        },
+        {
+            "type": "Next-operation",
+            "source": "dried",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "products",
+            "target": "filtered"
+        },
+        {
+            "type": "Participant-material",
+            "source": "water",
+            "target": "washed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "distilled",
+            "target": "water"
+        },
+        {
+            "type": "Value-of",
+            "source": "several times",
+            "target": "washed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "air",
+            "target": "dried"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "air",
+            "target": "dried"
+        }
+    ]
+}

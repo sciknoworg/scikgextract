@@ -1,0 +1,81 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "arc-melted ingot",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "arc-melted",
+            "annealed"
+        ],
+        "descriptors": [
+            "industrial grade"
+        ],
+        "values": [
+            "1200 °C",
+            "72 h"
+        ],
+        "properties": [
+            {
+                "text": "1200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "arc-melted ingot",
+            "target": "arc-melted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "arc-melted ingot",
+            "target": "annealed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ar",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "annealed"
+        }
+    ]
+}

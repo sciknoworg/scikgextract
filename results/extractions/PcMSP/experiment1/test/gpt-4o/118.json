@@ -1,0 +1,51 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "precipitates",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "supernatant",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "dried"
+        ],
+        "descriptors": [],
+        "values": [
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "vacuum condition",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "precipitates",
+            "target": "dried"
+        },
+        {
+            "type": "Participant-material",
+            "source": "supernatant",
+            "target": "dried"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "dried"
+        },
+        {
+            "type": "Condition-of",
+            "source": "vacuum condition",
+            "target": "dried"
+        }
+    ]
+}

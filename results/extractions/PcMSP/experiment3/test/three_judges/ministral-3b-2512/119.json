@@ -1,0 +1,125 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Cu₂−ₓSe",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Cu₂Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "glycerol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "dried Se ion binder",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "dispersed"
+        ],
+        "descriptors": [
+            "dried",
+            "dried"
+        ],
+        "values": [
+            "2.5 g",
+            "2 g",
+            "a",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "2 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "mixer"
+        ],
+        "brands": [
+            "ARM - 100 , Thinky",
+            "Thinky"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Cu₂−ₓSe",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "glycerol",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Cu₂Se",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 g",
+            "target": "Cu2Se"
+        },
+        {
+            "type": "Participant-material",
+            "source": "dried Se ion binder",
+            "target": "mixed"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.5 g",
+            "target": "glycerol"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 g",
+            "target": "Cu₂Se"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 g",
+            "target": "dried Se ion binder"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 h",
+            "target": "dispersed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ball-milled",
+            "target": "Cu₂Se"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "dried",
+            "target": "Se"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "planetary centrifugal mixer",
+            "target": "mixed"
+        },
+        {
+            "type": "Brand-of",
+            "source": "ARM-100",
+            "target": "planetary centrifugal mixer"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Thinky",
+            "target": "planetary centrifugal mixer"
+        }
+    ]
+}

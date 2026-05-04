@@ -1,0 +1,42 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "air",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "carried out"
+        ],
+        "descriptors": [],
+        "values": [],
+        "properties": [
+            {
+                "text": "1000 °C",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "platinum crucibles"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "carried out"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "platinum crucibles",
+            "target": "carried out"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1000 °C",
+            "target": "carried out"
+        }
+    ]
+}

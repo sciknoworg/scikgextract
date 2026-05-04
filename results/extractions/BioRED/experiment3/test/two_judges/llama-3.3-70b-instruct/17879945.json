@@ -1,0 +1,141 @@
+{
+    "entities": [
+        {
+            "text": "Estrogen",
+            "type": "ChemicalEntity",
+            "identifier": "C009771",
+            "offset": 0,
+            "length": 7
+        },
+        {
+            "text": "cholesteryl ester",
+            "type": "ChemicalEntity",
+            "identifier": "C029497",
+            "offset": 23,
+            "length": 15
+        },
+        {
+            "text": "macrophages",
+            "type": "CellLine",
+            "identifier": "-1",
+            "offset": 43,
+            "length": 10
+        },
+        {
+            "text": "HIV",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D006678",
+            "offset": 66,
+            "length": 3
+        },
+        {
+            "text": "ritonavir",
+            "type": "ChemicalEntity",
+            "identifier": "C012383",
+            "offset": 83,
+            "length": 8
+        },
+        {
+            "text": "atherosclerosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001161",
+            "offset": 123,
+            "length": 14
+        },
+        {
+            "text": "male mice",
+            "type": "OrganismTaxon",
+            "identifier": "10090",
+            "offset": 163,
+            "length": 8
+        },
+        {
+            "text": "female mice",
+            "type": "OrganismTaxon",
+            "identifier": "10090",
+            "offset": 181,
+            "length": 10
+        },
+        {
+            "text": "THP-1",
+            "type": "CellLine",
+            "identifier": "CVCL_0006",
+            "offset": 233,
+            "length": 4
+        },
+        {
+            "text": "17beta-estradiol",
+            "type": "ChemicalEntity",
+            "identifier": "C008252",
+            "offset": 264,
+            "length": 13
+        },
+        {
+            "text": "PMA",
+            "type": "ChemicalEntity",
+            "identifier": "C030167",
+            "offset": 294,
+            "length": 3
+        },
+        {
+            "text": "progesterone",
+            "type": "ChemicalEntity",
+            "identifier": "C003385",
+            "offset": 313,
+            "length": 11
+        },
+        {
+            "text": "LDL",
+            "type": "ChemicalEntity",
+            "identifier": "C002329",
+            "offset": 346,
+            "length": 3
+        },
+        {
+            "text": "CD36",
+            "type": "GeneOrGeneProduct",
+            "identifier": "1243",
+            "offset": 373,
+            "length": 4
+        },
+        {
+            "text": "PPARG",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5468",
+            "offset": 405,
+            "length": 5
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C012383",
+            "entity2": "D001161",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "C012383",
+            "entity2": "1243",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "C012383",
+            "entity2": "5468",
+            "novel": false
+        },
+        {
+            "type": "Negative_Correlation",
+            "entity1": "C008252",
+            "entity2": "1243",
+            "novel": false
+        },
+        {
+            "type": "Comparison",
+            "entity1": "10090",
+            "entity2": "10090",
+            "novel": false
+        }
+    ]
+}

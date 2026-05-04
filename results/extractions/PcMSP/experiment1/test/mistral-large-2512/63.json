@@ -1,0 +1,83 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "stoichiometric mixtures",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "starting materials",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "LaSrNiReO6",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "reacted",
+            "resulting"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "single-phased",
+            "high"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "high temperatures",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "stoichiometric mixtures"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "single-phased",
+            "target": "LaSrNiReO6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high",
+            "target": "temperatures"
+        },
+        {
+            "type": "Participant-material",
+            "source": "stoichiometric mixtures",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "starting materials",
+            "target": "reacted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "LaSrNiReO6",
+            "target": "resulting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "high temperatures",
+            "target": "reacted"
+        },
+        {
+            "type": "Next-operation",
+            "source": "resulting",
+            "target": "reacted"
+        },
+        {
+            "type": "Coreference",
+            "source": "stoichiometric mixtures",
+            "target": "starting materials"
+        }
+    ]
+}

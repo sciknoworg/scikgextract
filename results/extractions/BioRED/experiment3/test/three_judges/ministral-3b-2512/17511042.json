@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "text": "delusional parasitosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007320",
+            "offset": 1,
+            "length": 18
+        },
+        {
+            "text": "chronic hepatitis C",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001786",
+            "offset": 28,
+            "length": 16
+        },
+        {
+            "text": "pegylated interferon alpha-2b",
+            "type": "ChemicalEntity",
+            "identifier": "D000042",
+            "offset": 60,
+            "length": 22
+        },
+        {
+            "text": "ribavirin",
+            "type": "ChemicalEntity",
+            "identifier": "D000042",
+            "offset": 85,
+            "length": 9
+        },
+        {
+            "text": "depression",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001244",
+            "offset": 115,
+            "length": 8
+        },
+        {
+            "text": "psychosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003356",
+            "offset": 130,
+            "length": 7
+        },
+        {
+            "text": "parasites",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D007320",
+            "offset": 160,
+            "length": 7
+        },
+        {
+            "text": "fleas",
+            "type": "OrganismTaxon",
+            "identifier": "7030",
+            "offset": 175,
+            "length": 5
+        },
+        {
+            "text": "ribavirin",
+            "type": "ChemicalEntity",
+            "identifier": "D012254",
+            "offset": 213,
+            "length": 9
+        }
+    ],
+    "relations": [
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D063726",
+            "entity2": "3440",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "D000042",
+            "entity2": "D003356",
+            "novel": true
+        },
+        {
+            "type": "Cotreatment",
+            "entity1": "D000042",
+            "entity2": "D000042",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000042",
+            "entity2": "D001244",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000042",
+            "entity2": "D003356",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "D001244",
+            "entity2": "D003356",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000042",
+            "entity2": "D007320",
+            "novel": true
+        }
+    ]
+}

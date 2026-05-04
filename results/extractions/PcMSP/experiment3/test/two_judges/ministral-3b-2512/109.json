@@ -1,0 +1,93 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "box",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "placed",
+            "cooled",
+            "annealed",
+            "cooled"
+        ],
+        "descriptors": [
+            "box"
+        ],
+        "values": [
+            "823 K",
+            "a",
+            "2 days",
+            "room temperature"
+        ],
+        "properties": [
+            {
+                "text": "2 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "5 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "2 days",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "room temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "823 K",
+            "target": "heated"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "slowly",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "2 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "placed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "cooled",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "room temperature",
+            "target": "cooled"
+        }
+    ]
+}

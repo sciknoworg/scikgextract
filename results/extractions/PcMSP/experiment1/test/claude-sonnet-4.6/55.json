@@ -1,0 +1,95 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "BN crucible",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "high-pressure cell",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "carbon heater",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "pyrophyllite cube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "electrodes",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "inserted",
+            "composed"
+        ],
+        "descriptors": [
+            "high-pressure"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "BN crucible",
+            "high-pressure cell",
+            "carbon heater",
+            "pyrophyllite cube",
+            "electrodes"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "BN crucible",
+            "target": "sealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "inserted",
+            "target": "sealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "high-pressure cell",
+            "target": "inserted"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "high-pressure cell"
+        },
+        {
+            "type": "Coreference",
+            "source": "composed",
+            "target": "inserted"
+        },
+        {
+            "type": "Participant-material",
+            "source": "carbon heater",
+            "target": "composed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pyrophyllite cube",
+            "target": "composed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "electrodes",
+            "target": "composed"
+        }
+    ]
+}

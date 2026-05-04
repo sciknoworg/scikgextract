@@ -1,0 +1,60 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "2H-MoTe2 crystals",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "grown",
+            "cooling treatments"
+        ],
+        "descriptors": [
+            "ambient environment"
+        ],
+        "values": [
+            "700 – 800 ° C",
+            "100 ° C / h"
+        ],
+        "properties": [
+            {
+                "text": "700 – 800 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "100 ° C / h",
+                "subtype": "Property-rate"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "2H-MoTe2 crystals",
+            "target": "grown"
+        },
+        {
+            "type": "Participant-material",
+            "source": "2H-MoTe2 crystals",
+            "target": "cooling treatments"
+        },
+        {
+            "type": "Value-of",
+            "source": "700 – 800 ° C",
+            "target": "grown"
+        },
+        {
+            "type": "Value-of",
+            "source": "100 ° C / h",
+            "target": "cooling treatments"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "ambient environment",
+            "target": "cooling treatments"
+        }
+    ]
+}

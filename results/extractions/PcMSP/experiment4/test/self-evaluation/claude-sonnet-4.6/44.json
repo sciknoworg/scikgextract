@@ -1,0 +1,98 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "annealing cycles",
+            "re-grinding",
+            "performed"
+        ],
+        "descriptors": [
+            "several"
+        ],
+        "values": [
+            "several",
+            "1030 ° C",
+            "48 h"
+        ],
+        "properties": [
+            {
+                "text": "48 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "1030 ° C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "temperatures",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Coreference",
+            "source": "temperatures",
+            "target": "between 900 ° C and 1030"
+        },
+        {
+            "type": "Next-operation",
+            "source": "performed",
+            "target": "re-pelletizing"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellets",
+            "target": "re-pelletizing"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "several",
+            "target": "performed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "900 ° C",
+            "target": "performed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1030 ° C",
+            "target": "performed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "between 900 ° C and 1030",
+            "target": "performed"
+        },
+        {
+            "type": "Value-of",
+            "source": "1030 ° C",
+            "target": "1030 ° C"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 h",
+            "target": "48 h"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 h",
+            "target": "performed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "performed"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "put together"
+        ],
+        "descriptors": [
+            "pieces",
+            "water-cooled",
+            "copper"
+        ],
+        "values": [
+            "99.95%",
+            "99.95%"
+        ],
+        "properties": [],
+        "devices": [
+            "hearth"
+        ],
+        "brands": [
+            "Alfa Aesar"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.95%",
+            "target": "Ru"
+        },
+        {
+            "type": "Brand-of",
+            "source": "Alfa Aesar",
+            "target": "Al"
+        },
+        {
+            "type": "Value-of",
+            "source": "99.99%",
+            "target": "Al"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pieces",
+            "target": "Al"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "put"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "put"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "copper hearth",
+            "target": "put"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "water-cooled",
+            "target": "copper hearth"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "oxygen getter",
+            "target": "Zr button"
+        }
+    ]
+}

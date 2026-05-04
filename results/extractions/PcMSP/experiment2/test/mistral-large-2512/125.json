@@ -1,0 +1,66 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "RuAl6",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "samples",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Ru",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "synthesized"
+        ],
+        "descriptors": [
+            "Polycrystalline"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [
+            "arc-melting method"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Polycrystalline",
+            "target": "samples"
+        },
+        {
+            "type": "Participant-material",
+            "source": "RuAl6",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "samples",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Ru",
+            "target": "synthesized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "synthesized"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc-melting method",
+            "target": "synthesized"
+        }
+    ]
+}

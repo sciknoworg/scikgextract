@@ -1,0 +1,55 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sb2Si2Te6",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "synthesized",
+            "ball milling",
+            "annealing"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "pure phase"
+        ],
+        "values": [],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "Sb2Si2Te6"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "pure phase",
+            "target": "Sb2Si2Te6"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sb2Si2Te6",
+            "target": "synthesized"
+        },
+        {
+            "type": "Coreference",
+            "source": "ball milling",
+            "target": "synthesized"
+        },
+        {
+            "type": "Coreference",
+            "source": "annealing",
+            "target": "synthesized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealing",
+            "target": "ball milling"
+        }
+    ]
+}

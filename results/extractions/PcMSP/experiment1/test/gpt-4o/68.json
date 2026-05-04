@@ -1,0 +1,75 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQ sample",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "homogenized",
+            "brought",
+            "air-quenched"
+        ],
+        "descriptors": [
+            "homogenized"
+        ],
+        "values": [
+            "1423 K",
+            "6 h"
+        ],
+        "properties": [
+            {
+                "text": "1423 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "6 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized",
+            "target": "HQ sample"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQ sample",
+            "target": "homogenized"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "homogenized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "brought",
+            "target": "homogenized"
+        },
+        {
+            "type": "Next-operation",
+            "source": "air-quenched",
+            "target": "brought"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1423 K",
+            "target": "brought"
+        },
+        {
+            "type": "Condition-of",
+            "source": "6 h",
+            "target": "brought"
+        }
+    ]
+}

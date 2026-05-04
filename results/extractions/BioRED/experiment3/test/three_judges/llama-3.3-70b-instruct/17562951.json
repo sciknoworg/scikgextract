@@ -1,0 +1,99 @@
+{
+    "entities": [
+        {
+            "text": "iopamidol",
+            "type": "ChemicalEntity",
+            "identifier": "C068446",
+            "offset": 156,
+            "length": 9
+        },
+        {
+            "text": "iodixanol",
+            "type": "ChemicalEntity",
+            "identifier": "C077272",
+            "offset": 173,
+            "length": 9
+        },
+        {
+            "text": "cardiac angiography",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D017590",
+            "offset": 44,
+            "length": 17
+        },
+        {
+            "text": "percutaneous coronary interventions",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D054058",
+            "offset": 64,
+            "length": 29
+        },
+        {
+            "text": "chronic kidney disease",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D058179",
+            "offset": 123,
+            "length": 20
+        },
+        {
+            "text": "diabetes mellitus",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003924",
+            "offset": 296,
+            "length": 16
+        },
+        {
+            "text": "serum creatinine",
+            "type": "ChemicalEntity",
+            "identifier": "C0038501",
+            "offset": 234,
+            "length": 13
+        },
+        {
+            "text": "estimated glomerular filtration rate",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "E0014488",
+            "offset": 251,
+            "length": 31
+        },
+        {
+            "text": "N-acetylcysteine",
+            "type": "ChemicalEntity",
+            "identifier": "C006257",
+            "offset": 341,
+            "length": 14
+        }
+    ],
+    "relations": [
+        {
+            "type": "Comparison",
+            "entity1": "C068446",
+            "entity2": "C077272",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D003924",
+            "entity2": "C068446",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D003924",
+            "entity2": "C077272",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "C0038501",
+            "entity2": "C068446",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "C0038501",
+            "entity2": "C077272",
+            "novel": false
+        }
+    ]
+}

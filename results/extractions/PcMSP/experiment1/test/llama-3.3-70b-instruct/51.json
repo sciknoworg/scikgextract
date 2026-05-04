@@ -1,0 +1,47 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "LaO0.5F0.5BiS2",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "synthesis"
+        ],
+        "descriptors": [
+            "polycrystalline"
+        ],
+        "values": [
+            "180 ton"
+        ],
+        "properties": [],
+        "devices": [
+            "cubic-anvil-type 180 ton press"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "polycrystalline",
+            "target": "LaO0.5F0.5BiS2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "prepared",
+            "target": "LaO0.5F0.5BiS2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "synthesis",
+            "target": "LaO0.5F0.5BiS2"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "cubic-anvil-type 180 ton press",
+            "target": "synthesis"
+        }
+    ]
+}

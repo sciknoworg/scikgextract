@@ -59,9 +59,18 @@ def read_data_category(filename: str, json_data: list[dict], category: str, skip
             row["Filename"] = filename
             row["Process Number"] = index + 1
 
+            # Check for duplicate property names and if present, combine its values into a comma-separated string
+            seen_properties = {}
+            for property, value in property_value_pairs:
+                if property in seen_properties:
+                    seen_properties[property].append(str(value))
+                else:
+                    seen_properties[property] = [str(value)]
+            property_value_pairs = [(property, ", ".join(values)) for property, values in seen_properties.items()]
+
             # Add property-value pairs
             row.update({property: value for property, value in property_value_pairs})
-            logger.debug(f"Extracted row for category {category}: {row}")
+            logger.debug(f"Extracted row for category {category}: {row}\n\n")
             
             # Append the row to the list of rows
             rows.append(row)
@@ -128,11 +137,11 @@ if __name__ == "__main__":
     logger.info("Starting JSON to Excel conversion...")
 
     # Input Path
-    input_path = args.input if args.input else "results/extracted-data/atomic-layer-deposition/experimental-usecase/version1/IGZO/AtomicLimits Database"
+    input_path = args.input if args.input else "results/extracted-data-test/ALD/version4/ZnO-IGZO-papers/experimental-usecase/IGZO/AtomicLimits Database"
     logger.info(f"Input Path: {input_path}")
 
     # Output Excel Path
-    output_path = args.output if args.output else "results/extracted-data/atomic-layer-deposition/experimental-usecase/version1/IGZO/AtomicLimits Database/extracted_data_IGZO_gpt5mini1.xlsx"
+    output_path = args.output if args.output else "results/extracted-data-test/ALD/version4/ZnO-IGZO-papers/experimental-usecase/IGZO/AtomicLimits Database/extracted_data_IGZO_gpt5mini.xlsx"
     logger.info(f"Output Excel Path: {output_path}")
 
     # LLM Model used in extraction

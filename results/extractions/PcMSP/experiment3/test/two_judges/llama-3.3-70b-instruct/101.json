@@ -1,0 +1,72 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Mn1.4Pt1−xPdxSn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "Mn1.4Pt1−yRhySn",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "constituent elements",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared",
+            "arc melting"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "stoichiometric"
+        ],
+        "values": [
+            "x = 0, 0.1…0.3",
+            "y = 0.1, 0.2…0.8"
+        ],
+        "properties": [
+            {
+                "text": "Ar atmosphere",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "arc melting"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Value-of",
+            "source": "x = 0, 0.1…0.3",
+            "target": "Mn1.4Pt1−xPdxSn"
+        },
+        {
+            "type": "Value-of",
+            "source": "y = 0.1, 0.2…0.8",
+            "target": "Mn1.4Pt1−yRhySn"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melting",
+            "target": "Mn1.4Pt1−xPdxSn"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "arc melting",
+            "target": "Mn1.4Pt1−yRhySn"
+        },
+        {
+            "type": "Next-operation",
+            "source": "prepared",
+            "target": "arc melting"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "arc melting"
+        }
+    ]
+}

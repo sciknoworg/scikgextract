@@ -1,0 +1,124 @@
+{
+    "entities": [
+        {
+            "text": "Aconitine",
+            "type": "ChemicalEntity",
+            "identifier": "D000082",
+            "offset": 0,
+            "length": 9
+        },
+        {
+            "text": "Ca2+",
+            "type": "ChemicalEntity",
+            "identifier": "D001886",
+            "offset": 24,
+            "length": 4
+        },
+        {
+            "text": "arrhythmia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001145",
+            "offset": 43,
+            "length": 9
+        },
+        {
+            "text": "apoptosis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D017209",
+            "offset": 61,
+            "length": 9
+        },
+        {
+            "text": "p38 MAPK",
+            "type": "GeneOrGeneProduct",
+            "identifier": "MAPK14",
+            "offset": 123,
+            "length": 7
+        },
+        {
+            "text": "rats",
+            "type": "OrganismTaxon",
+            "identifier": "10116",
+            "offset": 154,
+            "length": 4
+        },
+        {
+            "text": "adult rat ventricular myocytes",
+            "type": "CellLine",
+            "identifier": "-1",
+            "offset": 206,
+            "length": 24
+        },
+        {
+            "text": "NRVMs",
+            "type": "CellLine",
+            "identifier": "-1",
+            "offset": 251,
+            "length": 5
+        },
+        {
+            "text": "myocardial injury",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009205",
+            "offset": 294,
+            "length": 15
+        },
+        {
+            "text": "Na(+) channels",
+            "type": "GeneOrGeneProduct",
+            "identifier": "SCN1A,SCN2A,SCN3A,SCN4A,SCN5A,SCN8A,SCN9A,SCN10A,SCN11A",
+            "offset": 328,
+            "length": 12
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "D000082",
+            "entity2": "D001145",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000082",
+            "entity2": "D017209",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000082",
+            "entity2": "D001886",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D001886",
+            "entity2": "D017209",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "MAPK14",
+            "entity2": "D017209",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000082",
+            "entity2": "MAPK14",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D000082",
+            "entity2": "D009205",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "SCN1A,SCN2A,SCN3A,SCN4A,SCN5A,SCN8A,SCN9A,SCN10A,SCN11A",
+            "entity2": "D000082",
+            "novel": false
+        }
+    ]
+}

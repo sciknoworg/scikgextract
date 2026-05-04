@@ -1,0 +1,127 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "SrGeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "( Sr0.95La0.05 ) GeO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "reagents",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "AP-phase SrGeO3",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "calcined",
+            "synthesize"
+        ],
+        "descriptors": [
+            "Stoichiometric",
+            "undoped",
+            "La-doped",
+            "AP",
+            "air",
+            "AP-phase"
+        ],
+        "values": [
+            "1,200 \u00b0 C",
+            "10 h"
+        ],
+        "properties": [
+            {
+                "text": "1,200 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "10 h",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "Stoichiometric",
+            "target": "amounts"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "undoped",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "La-doped",
+            "target": "( Sr0.95La0.05 ) GeO3"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "AP",
+            "target": "air"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "AP-phase",
+            "target": "SrGeO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "SrGeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "( Sr0.95La0.05 ) GeO3",
+            "target": "mixed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "reagents",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "calcined",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "synthesize",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "1,200 \u00b0 C",
+            "target": "calcined"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 h",
+            "target": "calcined"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air",
+            "target": "calcined"
+        },
+        {
+            "type": "Participant-material",
+            "source": "AP-phase SrGeO3",
+            "target": "synthesize"
+        }
+    ]
+}

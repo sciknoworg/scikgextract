@@ -1,0 +1,97 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "piece",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "piece",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "bar",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sectioned",
+            "grind",
+            "synchrotron X-ray diffraction",
+            "scanning electron microscopy",
+            "physical property measurements"
+        ],
+        "descriptors": [
+            "powder",
+            "approximately"
+        ],
+        "values": [
+            "8 mm \u00d7 3 mm \u00d7 3 mm"
+        ],
+        "properties": [],
+        "devices": [
+            "diamond saw"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "Samples",
+            "target": "sectioned"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "diamond saw",
+            "target": "sectioned"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sectioned",
+            "target": "grind"
+        },
+        {
+            "type": "Participant-material",
+            "source": "piece",
+            "target": "grind"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "piece"
+        },
+        {
+            "type": "Participant-material",
+            "source": "powder",
+            "target": "synchrotron X-ray diffraction"
+        },
+        {
+            "type": "Participant-material",
+            "source": "piece",
+            "target": "scanning electron microscopy"
+        },
+        {
+            "type": "Participant-material",
+            "source": "bar",
+            "target": "physical property measurements"
+        },
+        {
+            "type": "Value-of",
+            "source": "8 mm \u00d7 3 mm \u00d7 3 mm",
+            "target": "bar"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "approximately",
+            "target": "8 mm \u00d7 3 mm \u00d7 3 mm"
+        }
+    ]
+}

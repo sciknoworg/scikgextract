@@ -1,0 +1,137 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "powder",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "pellet",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "pelletizing",
+            "pressed",
+            "ground",
+            "grinding",
+            "pelletizing"
+        ],
+        "descriptors": [
+            "fine",
+            "powder",
+            "fine",
+            "1 / 2 \""
+        ],
+        "values": [
+            "1200 ◦ C",
+            "72 hrs",
+            "1 / 2 ”"
+        ],
+        "properties": [
+            {
+                "text": "after the first 48 hrs",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "intermediate",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "48 hrs",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "fine",
+            "target": "material"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "powder",
+            "target": "material"
+        },
+        {
+            "type": "Participant-material",
+            "source": "material",
+            "target": "ground"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellet",
+            "target": "fired"
+        },
+        {
+            "type": "Participant-material",
+            "source": "material",
+            "target": "pressed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "1 / 2 \"",
+            "target": "pellet"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pellet",
+            "target": "pressed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "fired"
+        },
+        {
+            "type": "Condition-of",
+            "source": "1200 ◦ C",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "fired",
+            "target": "pressed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar atmosphere",
+            "target": "fired"
+        },
+        {
+            "type": "Next-operation",
+            "source": "grinding",
+            "target": "fired"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermediate",
+            "target": "grinding"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "intermediate",
+            "target": "pelletizing"
+        },
+        {
+            "type": "Next-operation",
+            "source": "pelletizing",
+            "target": "grinding"
+        },
+        {
+            "type": "Condition-of",
+            "source": "48 hrs",
+            "target": "grinding"
+        }
+    ]
+}

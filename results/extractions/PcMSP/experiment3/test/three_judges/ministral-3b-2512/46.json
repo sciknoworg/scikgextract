@@ -1,0 +1,70 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "stoichiometric amount",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "alcohol",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "mixed",
+            "mixed"
+        ],
+        "descriptors": [
+            "air atmosphere",
+            "thoroughly"
+        ],
+        "values": [
+            "stoichiometric amount",
+            "2 h"
+        ],
+        "properties": [
+            {
+                "text": "1 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "air atmosphere",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "1 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air atmosphere",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "air atmosphere",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "2 h",
+            "target": "mixed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "alcohol",
+            "target": "mixed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "mixed",
+            "target": "thoroughly"
+        }
+    ]
+}

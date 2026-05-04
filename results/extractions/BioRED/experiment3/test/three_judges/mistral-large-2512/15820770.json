@@ -1,0 +1,170 @@
+{
+    "entities": [
+        {
+            "text": "Vitamin D-binding protein",
+            "type": "GeneOrGeneProduct",
+            "identifier": "2638",
+            "offset": 16,
+            "length": 24
+        },
+        {
+            "text": "DBP",
+            "type": "GeneOrGeneProduct",
+            "identifier": "2638",
+            "offset": 41,
+            "length": 3
+        },
+        {
+            "text": "1.25(OH)2D3",
+            "type": "ChemicalEntity",
+            "identifier": "D002117",
+            "offset": 68,
+            "length": 11
+        },
+        {
+            "text": "GAT-->GAG",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 168,
+            "length": 9
+        },
+        {
+            "text": "Asp",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 208,
+            "length": 3
+        },
+        {
+            "text": "Glu",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 222,
+            "length": 3
+        },
+        {
+            "text": "codon 416",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 236,
+            "length": 9
+        },
+        {
+            "text": "ACG-->AAG",
+            "type": "SequenceVariant",
+            "identifier": "rs4588",
+            "offset": 275,
+            "length": 9
+        },
+        {
+            "text": "Thr",
+            "type": "SequenceVariant",
+            "identifier": "rs4588",
+            "offset": 310,
+            "length": 3
+        },
+        {
+            "text": "Lys",
+            "type": "SequenceVariant",
+            "identifier": "rs4588",
+            "offset": 329,
+            "length": 3
+        },
+        {
+            "text": "codon 420",
+            "type": "SequenceVariant",
+            "identifier": "rs4588",
+            "offset": 337,
+            "length": 9
+        },
+        {
+            "text": "DBP variants",
+            "type": "SequenceVariant",
+            "identifier": "rs7041,rs4588",
+            "offset": 365,
+            "length": 12
+        },
+        {
+            "text": "type 1 diabetes",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D003922",
+            "offset": 410,
+            "length": 15
+        },
+        {
+            "text": "IA-2 antibodies",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5798",
+            "offset": 520,
+            "length": 14
+        },
+        {
+            "text": "GAD65 antibodies",
+            "type": "GeneOrGeneProduct",
+            "identifier": "2572",
+            "offset": 650,
+            "length": 16
+        },
+        {
+            "text": "Asp/Glu",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 750,
+            "length": 7
+        },
+        {
+            "text": "Glu/Glu",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 760,
+            "length": 6
+        },
+        {
+            "text": "DBP Glu-containing genotype",
+            "type": "SequenceVariant",
+            "identifier": "rs7041",
+            "offset": 800,
+            "length": 26
+        },
+        {
+            "text": "vitamin D endocrine system",
+            "type": "ChemicalEntity",
+            "identifier": "D014808",
+            "offset": 950,
+            "length": 26
+        },
+        {
+            "text": "1.25(OH)2D3",
+            "type": "ChemicalEntity",
+            "identifier": "D002117",
+            "offset": 980,
+            "length": 11
+        }
+    ],
+    "relations": [
+        {
+            "type": "Bind",
+            "entity1": "2638",
+            "entity2": "D002117",
+            "novel": false
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs7041",
+            "entity2": "5798",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "rs7041,rs4588",
+            "entity2": "D003922",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "D014808",
+            "entity2": "D003922",
+            "novel": false
+        }
+    ]
+}

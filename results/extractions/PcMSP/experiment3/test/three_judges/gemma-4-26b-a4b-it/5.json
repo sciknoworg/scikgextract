@@ -1,0 +1,92 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "AP-phase samples",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "high-pressure reactions"
+        ],
+        "descriptors": [
+            "high-pressure",
+            "belt-type"
+        ],
+        "values": [
+            "5.5 GPa",
+            "1100 °C",
+            "1 h"
+        ],
+        "properties": [
+            {
+                "text": "pressure",
+                "subtype": "Property-pressure"
+            },
+            {
+                "text": "temperature",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "time",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "HP apparatus"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "AP-phase samples",
+            "target": "high-pressure reactions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "high-pressure",
+            "target": "high-pressure reactions"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "belt-type",
+            "target": "HP apparatus"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "HP apparatus",
+            "target": "high-pressure reactions"
+        },
+        {
+            "type": "Value-of",
+            "source": "5.5 GPa",
+            "target": "pressure"
+        },
+        {
+            "type": "Value-of",
+            "source": "1100 °C",
+            "target": "temperature"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 h",
+            "target": "time"
+        },
+        {
+            "type": "Condition-of",
+            "source": "pressure",
+            "target": "high-pressure reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "temperature",
+            "target": "high-pressure reactions"
+        },
+        {
+            "type": "Condition-of",
+            "source": "time",
+            "target": "high-pressure reactions"
+        }
+    ]
+}

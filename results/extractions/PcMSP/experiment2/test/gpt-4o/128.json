@@ -1,0 +1,107 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "tantalum foil",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "quartz tube",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Al",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Al-rich eutectic",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "wrapped",
+            "put",
+            "annealed"
+        ],
+        "descriptors": [
+            "thin",
+            "evacuated"
+        ],
+        "values": [
+            "620 \u00b0C",
+            "14 days",
+            "40 \u00b0C"
+        ],
+        "properties": [
+            {
+                "text": "620 \u00b0C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "14 days",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "thin",
+            "target": "tantalum foil"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "tantalum foil",
+            "target": "wrapped"
+        },
+        {
+            "type": "Participant-material",
+            "source": "quartz tube",
+            "target": "put"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Al-rich eutectic",
+            "target": "annealed"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "quartz tube",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "620 \u00b0C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "14 days",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "40 \u00b0C",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "put",
+            "target": "wrapped"
+        }
+    ]
+}

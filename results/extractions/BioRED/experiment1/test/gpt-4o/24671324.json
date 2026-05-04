@@ -1,0 +1,97 @@
+{
+    "entities": [
+        {
+            "text": "bortezomib",
+            "type": "ChemicalEntity",
+            "identifier": "C48346",
+            "offset": 50,
+            "length": 10
+        },
+        {
+            "text": "dexamethasone",
+            "type": "ChemicalEntity",
+            "identifier": "D003908",
+            "offset": 66,
+            "length": 12
+        },
+        {
+            "text": "Waldenstrom macroglobulinaemia",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D014867",
+            "offset": 134,
+            "length": 29
+        },
+        {
+            "text": "necrotising fasciitis",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D009303",
+            "offset": 184,
+            "length": 21
+        },
+        {
+            "text": "rituximab",
+            "type": "ChemicalEntity",
+            "identifier": "C22547",
+            "offset": 246,
+            "length": 9
+        },
+        {
+            "text": "antimicrobial therapy",
+            "type": "ChemicalEntity",
+            "identifier": "D000900",
+            "offset": 292,
+            "length": 20
+        },
+        {
+            "text": "bacterial infections",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D001424",
+            "offset": 388,
+            "length": 19
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "C48346",
+            "entity2": "D014867",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D003908",
+            "entity2": "D014867",
+            "novel": true
+        },
+        {
+            "type": "Drug_Interaction",
+            "entity1": "C48346",
+            "entity2": "D003908",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C48346",
+            "entity2": "D009303",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "D003908",
+            "entity2": "D009303",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C22547",
+            "entity2": "D014867",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "C22547",
+            "entity2": "D009303",
+            "novel": true
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Sn50−xAsxSe50",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "As",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Sn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "prepared"
+        ],
+        "descriptors": [
+            "polycrystalline",
+            "high-temperature"
+        ],
+        "values": [
+            "x = 0",
+            "x = 0.05",
+            "x = 0.5",
+            "x = 2.5"
+        ],
+        "properties": [
+            {
+                "text": "high-temperature",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Condition-of",
+            "source": "high-temperature",
+            "target": "prepared"
+        },
+        {
+            "type": "Participant-material",
+            "source": "Sn50−xAsxSe50",
+            "target": "prepared"
+        },
+        {
+            "type": "Value-of",
+            "source": "As",
+            "target": "Sn50−xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "Sn",
+            "target": "Sn50−xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "Se",
+            "target": "Sn50−xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0",
+            "target": "Sn50−xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.05",
+            "target": "Sn50−xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 0.5",
+            "target": "Sn50−xAsxSe50"
+        },
+        {
+            "type": "Value-of",
+            "source": "x = 2.5",
+            "target": "Sn50−xAsxSe50"
+        }
+    ]
+}

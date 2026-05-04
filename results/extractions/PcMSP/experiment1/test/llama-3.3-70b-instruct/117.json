@@ -1,0 +1,82 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "isopropanol",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Se ion binder",
+                "subtype": "Material-target"
+            }
+        ],
+        "operations": [
+            "added",
+            "centrifuged",
+            "precipitate"
+        ],
+        "descriptors": [
+            "dissolved"
+        ],
+        "values": [
+            "37.5 mL",
+            "7715 \u00d7 g"
+        ],
+        "properties": [
+            {
+                "text": "72 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "10 min",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "centrifuge"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "added",
+            "target": "isopropanol"
+        },
+        {
+            "type": "Participant-material",
+            "source": "centrifuged",
+            "target": "solution"
+        },
+        {
+            "type": "Participant-material",
+            "source": "precipitate",
+            "target": "Se ion binder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "dissolved",
+            "target": "solution"
+        },
+        {
+            "type": "Value-of",
+            "source": "37.5 mL",
+            "target": "isopropanol"
+        },
+        {
+            "type": "Value-of",
+            "source": "7715 \u00d7 g",
+            "target": "centrifuged"
+        },
+        {
+            "type": "Condition-of",
+            "source": "72 h",
+            "target": "solution"
+        },
+        {
+            "type": "Condition-of",
+            "source": "10 min",
+            "target": "centrifuged"
+        }
+    ]
+}

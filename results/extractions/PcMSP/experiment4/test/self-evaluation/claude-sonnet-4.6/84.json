@@ -1,0 +1,106 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HIO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "CuCl2",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "HNO3",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "solution",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "aqueous solution of HIO3",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "dissolved",
+            "added"
+        ],
+        "descriptors": [
+            "aqueous",
+            "anhydrous"
+        ],
+        "values": [
+            "2.5 mmol",
+            "1M",
+            "25 mL",
+            "2.5 mmol",
+            "25 mL"
+        ],
+        "properties": [],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "anhydrous",
+            "target": "CuCl2"
+        },
+        {
+            "type": "Participant-material",
+            "source": "CuCl2",
+            "target": "dissolved"
+        },
+        {
+            "type": "Value-of",
+            "source": "2.5 mmol",
+            "target": "CuCl2"
+        },
+        {
+            "type": "Coreference",
+            "source": "HIO3",
+            "target": "solution"
+        },
+        {
+            "type": "Value-of",
+            "source": "1M",
+            "target": "HNO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "25 mL",
+            "target": "HNO3"
+        },
+        {
+            "type": "Next-operation",
+            "source": "added",
+            "target": "dissolved"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "aqueous",
+            "target": "aqueous solution of HIO3"
+        },
+        {
+            "type": "Participant-material",
+            "source": "aqueous solution of HIO3",
+            "target": "added"
+        },
+        {
+            "type": "Value-of",
+            "source": "5 mmol",
+            "target": "HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "10 mL",
+            "target": "aqueous solution of HIO3"
+        },
+        {
+            "type": "Value-of",
+            "source": "25 mL",
+            "target": "HNO3"
+        }
+    ]
+}

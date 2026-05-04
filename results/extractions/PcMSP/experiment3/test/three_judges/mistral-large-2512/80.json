@@ -1,0 +1,91 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingot",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "sample",
+                "subtype": "Material-others"
+            },
+            {
+                "text": "Ar",
+                "subtype": "Material-others"
+            }
+        ],
+        "operations": [
+            "arc-melted",
+            "annealed",
+            "homogenize"
+        ],
+        "descriptors": [
+            "industrial grade"
+        ],
+        "values": [
+            "1200 °C",
+            "72 hours"
+        ],
+        "properties": [
+            {
+                "text": "1200 °C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "72 hours",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "furnace"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Next-operation",
+            "source": "arc-melted",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "homogenize"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "industrial grade",
+            "target": "Ar"
+        },
+        {
+            "type": "Value-of",
+            "source": "1200 °C",
+            "target": "annealed"
+        },
+        {
+            "type": "Value-of",
+            "source": "72 hours",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "Ar",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingot",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "sample",
+            "target": "homogenize"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "furnace",
+            "target": "annealed"
+        }
+    ]
+}

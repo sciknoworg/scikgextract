@@ -1,0 +1,74 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "pellets",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "cold pressed",
+            "pressed"
+        ],
+        "descriptors": [
+            "homogenous",
+            "cylindrical",
+            "12 mm diameter",
+            "cylindrical"
+        ],
+        "values": [
+            "12 mm",
+            "a",
+            "4 × 10^6 Pa"
+        ],
+        "properties": [
+            {
+                "text": "4 × 106 Pa",
+                "subtype": "Property-pressure"
+            }
+        ],
+        "devices": [
+            "press"
+        ],
+        "brands": [
+            "Not Found"
+        ]
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "1 – 2 mm of thickness",
+            "target": "pellets"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "homogenous",
+            "target": "powder"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "cylindrical",
+            "target": "pellets"
+        },
+        {
+            "type": "Value-of",
+            "source": "12 mm",
+            "target": "diameter"
+        },
+        {
+            "type": "Value-of",
+            "source": "1 – 2 mm",
+            "target": "thickness"
+        },
+        {
+            "type": "Value-of",
+            "source": "4 × 10^6 Pa",
+            "target": "pressure"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "hydraulic press",
+            "target": "pressed"
+        }
+    ]
+}

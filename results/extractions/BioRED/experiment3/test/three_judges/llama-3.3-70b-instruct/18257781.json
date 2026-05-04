@@ -1,0 +1,111 @@
+{
+    "entities": [
+        {
+            "text": "PKD1",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5310",
+            "offset": 24,
+            "length": 4
+        },
+        {
+            "text": "PKD2",
+            "type": "GeneOrGeneProduct",
+            "identifier": "5311",
+            "offset": 35,
+            "length": 4
+        },
+        {
+            "text": "ADPKD",
+            "type": "DiseaseOrPhenotypicFeature",
+            "identifier": "D015633",
+            "offset": 51,
+            "length": 5
+        },
+        {
+            "text": "c.1445T > G",
+            "type": "SequenceVariant",
+            "identifier": "rs123456789",
+            "offset": 156,
+            "length": 11
+        },
+        {
+            "text": "p.F482C",
+            "type": "SequenceVariant",
+            "identifier": "rs123456789",
+            "offset": 184,
+            "length": 7
+        },
+        {
+            "text": "Caucasians",
+            "type": "OrganismTaxon",
+            "identifier": "9606",
+            "offset": 104,
+            "length": 10
+        },
+        {
+            "text": "mouse",
+            "type": "OrganismTaxon",
+            "identifier": "10090",
+            "offset": 443,
+            "length": 5
+        },
+        {
+            "text": "IMCD cells",
+            "type": "CellLine",
+            "identifier": "CL_0000035",
+            "offset": 464,
+            "length": 9
+        },
+        {
+            "text": "PBMCs",
+            "type": "CellLine",
+            "identifier": "CL_0000231",
+            "offset": 279,
+            "length": 5
+        }
+    ],
+    "relations": [
+        {
+            "type": "Association",
+            "entity1": "5310",
+            "entity2": "D015633",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "5311",
+            "entity2": "D015633",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "5311",
+            "entity2": "rs123456789",
+            "novel": true
+        },
+        {
+            "type": "Positive_Correlation",
+            "entity1": "rs123456789",
+            "entity2": "5311",
+            "novel": true
+        },
+        {
+            "type": "Association",
+            "entity1": "10090",
+            "entity2": "5311",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "CL_0000035",
+            "entity2": "5311",
+            "novel": false
+        },
+        {
+            "type": "Association",
+            "entity1": "CL_0000231",
+            "entity2": "5311",
+            "novel": false
+        }
+    ]
+}

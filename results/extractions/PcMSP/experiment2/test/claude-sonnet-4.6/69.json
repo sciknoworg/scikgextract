@@ -1,0 +1,86 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "HQA8",
+                "subtype": "Material-target"
+            },
+            {
+                "text": "H",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "HQ",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "followed",
+            "annealed"
+        ],
+        "descriptors": [
+            "homogenized-quenched-annealed - 8 h",
+            "same"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "8 h",
+                "subtype": "Property-time"
+            },
+            {
+                "text": "623 K",
+                "subtype": "Property-temperature"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "homogenized-quenched-annealed - 8 h",
+            "target": "HQA8"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA8",
+            "target": "followed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "H",
+            "target": "followed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQ",
+            "target": "followed"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "same",
+            "target": "followed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "followed",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "HQA8",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "8 h",
+            "target": "annealed"
+        },
+        {
+            "type": "Condition-of",
+            "source": "623 K",
+            "target": "annealed"
+        }
+    ]
+}

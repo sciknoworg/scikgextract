@@ -1,5 +1,12 @@
+"""
+Dictionary utility functions for traversing and transforming nested extraction outputs.
+
+Provides helpers for deep traversal of nested dict/list structures, checking for empty QUDT-style value objects, and selectively removing empty nodes from extraction results before serialization or evaluation.
+"""
+# Python Imports
 from typing import Any, List, Tuple
 
+# SciKGExtract Utility Imports
 from scikg_extract.utils.string_utils import parse_path
 
 def is_primitive(val: Any) -> bool:
@@ -51,7 +58,7 @@ def remove_null_values(data: dict, skip_keys: list = []) -> dict:
         # Base case: return the value unchanged
         return data
 
-def is_empty_qudt_structure(obj):
+def is_empty_qudt_structure(obj: Any) -> bool:
     """
     Determines if an object only contains QUDT metadata without actual measurement values.
     
@@ -94,7 +101,7 @@ def is_empty_qudt_structure(obj):
     # Otherwise, keep the object
     return False
     
-def remove_empty_qudt_structures(data):
+def remove_empty_qudt_structures(data: Any) -> Any:
     """
     Recursively removes objects that only contain QUDT metadata without actual values.
     

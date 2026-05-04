@@ -1,0 +1,78 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "mixed precursors",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "pelletized sample",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "heated"
+        ],
+        "descriptors": [
+            "two-step"
+        ],
+        "values": [
+            "400 \u00b0 C",
+            "48 hours",
+            "500 \u00b0 C"
+        ],
+        "properties": [
+            {
+                "text": "400 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "500 \u00b0 C",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "48 hours",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Participant-material",
+            "source": "mixed precursors",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "400 \u00b0 C",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hours",
+            "target": "heated"
+        },
+        {
+            "type": "Next-operation",
+            "source": "heated",
+            "target": "heated"
+        },
+        {
+            "type": "Participant-material",
+            "source": "pelletized sample",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "500 \u00b0 C",
+            "target": "heated"
+        },
+        {
+            "type": "Value-of",
+            "source": "48 hours",
+            "target": "heated"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "Zr",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Si",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "S",
+                "subtype": "Material-recipe"
+            }
+        ],
+        "operations": [
+            "sealed"
+        ],
+        "descriptors": [
+            "stoichiometric",
+            "5 N purity",
+            "evacuated"
+        ],
+        "values": [
+            "1:1:1 molar ratio"
+        ],
+        "properties": [],
+        "devices": [
+            "quartz ampoule"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "stoichiometric",
+            "target": "Zr:Si:S"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "Zr"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "Si"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "5 N purity",
+            "target": "S"
+        },
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Device-of-operation",
+            "source": "sealed",
+            "target": "quartz ampoule"
+        },
+        {
+            "type": "Value-of",
+            "source": "1:1:1 molar ratio",
+            "target": "Zr:Si:S"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "entities": {
+        "materials": [
+            {
+                "text": "ingots",
+                "subtype": "Material-intermedium"
+            },
+            {
+                "text": "Pd-substituted samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "parent compound Mn1.4PtSn",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "Rh-substituted samples",
+                "subtype": "Material-recipe"
+            },
+            {
+                "text": "ice-water mixture",
+                "subtype": "Material-intermedium"
+            }
+        ],
+        "operations": [
+            "sealed",
+            "annealed",
+            "quenching"
+        ],
+        "descriptors": [
+            "evacuated"
+        ],
+        "values": [],
+        "properties": [
+            {
+                "text": "873 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "1073 K",
+                "subtype": "Property-temperature"
+            },
+            {
+                "text": "7 d",
+                "subtype": "Property-time"
+            }
+        ],
+        "devices": [
+            "quartz tube"
+        ],
+        "brands": []
+    },
+    "relations": [
+        {
+            "type": "Descriptor-of",
+            "source": "evacuated",
+            "target": "quartz tube"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "sealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "annealed"
+        },
+        {
+            "type": "Participant-material",
+            "source": "ingots",
+            "target": "quenching"
+        },
+        {
+            "type": "Next-operation",
+            "source": "sealed",
+            "target": "annealed"
+        },
+        {
+            "type": "Next-operation",
+            "source": "annealed",
+            "target": "quenching"
+        }
+    ]
+}
