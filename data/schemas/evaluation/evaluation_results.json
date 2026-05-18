@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evaluation Results",
+  "description": "Aggregated precision/recall/F1 evaluation results for one model-experiment run. Supports two layouts: (1) flat — top-level keys are category names ('entity', 'relation', 'precursor', …) mapping directly to category_metrics; (2) nested — top-level keys are material/group names ('ZnO', 'IGZO', …) mapping to a sub-object of category_metrics. Produced by scikg_extract.evaluation.metrics.aggregate_metrics() and saved by save_evaluation_results().",
+  "type": "object",
+  "minProperties": 1,
+  "additionalProperties": {
+    "oneOf": [
+      {
+        "$ref": "#/$defs/category_metrics",
+        "description": "Flat layout: value is directly a category_metrics block."
+      },
+      {
+        "type": "object",
+        "description": "Nested layout (ZnO/IGZO pattern): value is a group of named category_metrics blocks.",
+        "minProperties": 1,
+        "additionalProperties": { "$ref": "#/$defs/category_metrics" }
+      }
+    ]
+  },
+  "$defs": {
+    "metric_block": {
+      "description": "Basic P/R/F1 block (no counts). Used for bertscore.",
+      "type": "object",
+      "properties": {
+        "precision": { "type": "number", "minimum": 0, "maximum": 1 },
+        "recall":    { "type": "number", "minimum": 0, "maximum": 1 },
+        "f1":        { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["precision", "recall", "f1"],
+      "additionalProperties": false
+    },
+    "metric_block_with_counts": {
+      "description": "P/R/F1 block with optional TP/FP/FN counts. Used for normalized and soft sub-metrics.",
+      "type": "object",
+      "properties": {
+        "precision": { "type": "number", "minimum": 0, "maximum": 1 },
+        "recall":    { "type": "number", "minimum": 0, "maximum": 1 },
+        "f1":        { "type": "number", "minimum": 0, "maximum": 1 },
+        "tp":        { "type": "integer", "minimum": 0 },
+        "fp":        { "type": "integer", "minimum": 0 },
+        "fn":        { "type": "integer", "minimum": 0 }
+      },
+      "required": ["precision", "recall", "f1"],
+      "additionalProperties": false
+    },
+    "category_metrics": {
+      "description": "Aggregated metrics for one extraction category (entity type, relation, field name, etc.).",
+      "type": "object",
+      "properties": {
+        "precision":  { "type": "number", "minimum": 0, "maximum": 1 },
+        "recall":     { "type": "number", "minimum": 0, "maximum": 1 },
+        "f1":         { "type": "number", "minimum": 0, "maximum": 1 },
+        "tp":         { "type": "integer", "minimum": 0 },
+        "fp":         { "type": "integer", "minimum": 0 },
+        "fn":         { "type": "integer", "minimum": 0 },
+        "bertscore":  { "$ref": "#/$defs/metric_block" },
+        "normalized": { "$ref": "#/$defs/metric_block_with_counts" },
+        "soft":       { "$ref": "#/$defs/metric_block_with_counts" }
+      },
+      "required": ["precision", "recall", "f1"],
+      "additionalProperties": false
+    }
+  }
+}

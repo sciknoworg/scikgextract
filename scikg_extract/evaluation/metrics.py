@@ -3,7 +3,12 @@ Metric computation functions for entity/relation extraction evaluation. Includes
 """
 # Python Imports
 import json
+import unicodedata
+from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
+
+# Third-party Imports
+import jsonschema
 
 # SciKGExtract Utils Imports
 from scikg_extract.utils.log_handler import LogHandler
@@ -27,6 +32,39 @@ def _to_tuple(d: Dict[str, Any], keys: List[str]) -> Tuple:
         Tuple: A tuple of values corresponding to the specified keys, used for set-based metric computation.
     """
     return tuple(d.get(k, None) for k in keys)
+
+def _normalize(s: str) -> str:
+    """
+    Normalize a string for lenient matching: NFKC unicode normalization, lowercase,
+    strip leading/trailing whitespace, collapse internal whitespace.
+    Follows the normalization approach used in SQuAD evaluation (Rajpurkar et al., 2016).
+    """
+    s = unicodedata.normalize("NFKC", s)
+    s = s.lower()
+    s = " ".join(s.split())
+    return s
+
+def _to_tuple_normalized(d: Dict[str, Any], keys: List[str]) -> Tuple:
+    """
+    Like _to_tuple but applies _normalize to string values before building the tuple.
+    Used for normalized F1 computation.
+    """
+    def _norm_val(v: Any) -> Any:
+        return _normalize(v) if isinstance(v, str) else v
+    return tuple(_norm_val(d.get(k, None)) for k in keys)
+
+def _token_jaccard(a: str, b: str) -> float:
+    """
+    Token-level Jaccard similarity between two normalized strings.
+    Used for soft F1 matching (threshold >= 0.8 counts as a match).
+    """
+    ta = set(_normalize(a).split()) if a else set()
+    tb = set(_normalize(b).split()) if b else set()
+    if not ta and not tb:
+        return 1.0
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
 
 def _extract_texts(entities: Iterable, keys: List[str]) -> List[str]:
     """
@@ -108,7 +146,7 @@ def _compute_bertscore_matrix(pred_texts: List[str], gold_texts: List[str], embe
         # On any failure, return zeros and continue (do not blow up evaluation)
         return {"precision": 0.0, "recall": 0.0, "f1": 0.0}
 
-def entity_precision_recall_f1(gold_entities: List[Dict[str, Any]], pred_entities: List[Dict[str, Any]], match_keys: List[str], compute_bertscore: bool = False, bert_embedding_model: str = "bert-base-uncased", bert_embedding_model_revision: str = "main") -> Dict[str, float]:
+def entity_precision_recall_f1(gold_entities: List[Dict[str, Any]], pred_entities: List[Dict[str, Any]], match_keys: List[str], compute_bertscore: bool = False, bert_embedding_model: str = "bert-base-uncased", bert_embedding_model_revision: str = "main", compute_normalized_f1: bool = False, compute_soft_f1: bool = False) -> Dict[str, float]:
     """
     Compute precision, recall, F1 for entity sets using selected keys. Entities are considered a match if their specified keys match exactly. This allows for flexible evaluation based on different criteria (e.g., text only, text+type, etc.).
     Example:
@@ -121,8 +159,13 @@ def entity_precision_recall_f1(gold_entities: List[Dict[str, Any]], pred_entitie
         gold_entities: List of dictionaries representing the gold standard entities.
         pred_entities: List of dictionaries representing the predicted entities.
         match_keys: List of keys to use for matching entities (e.g., ["text"], ["text", "type"], etc.).
+        compute_bertscore: If True, compute BERTScore between predicted and gold entity texts.
+        bert_embedding_model: The name of the embedding model to use for BERTScore.
+        bert_embedding_model_revision: The specific revision of the embedding model to use.
+        compute_normalized_f1: If True, also compute F1 after NFKC/lowercase/whitespace normalization. Results stored under key "normalized".
+        compute_soft_f1: If True, also compute F1 using token-Jaccard soft matching (threshold >= 0.8 counts as a match). Results stored under key "soft".
     Returns:
-        Dict[str, float]: A dictionary containing precision, recall, F1 score, and counts of true positives (tp), false positives (fp), and false negatives (fn).
+        Dict[str, float]: A dictionary containing precision, recall, F1 score, and counts of true positives (tp), false positives (fp), and false negatives (fn). Optionally includes "normalized", "soft", and "bertscore" sub-dicts.
     """
     gold_set = set(_to_tuple(e, match_keys) for e in gold_entities)
     pred_set = set(_to_tuple(e, match_keys) for e in pred_entities)
@@ -134,6 +177,43 @@ def entity_precision_recall_f1(gold_entities: List[Dict[str, Any]], pred_entitie
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
     out: Dict[str, Any] = {"precision": precision, "recall": recall, "f1": f1, "tp": tp, "fp": fp, "fn": fn}
 
+    # Optionally compute Normalized F1 (NFKC + lowercase + whitespace normalization)
+    if compute_normalized_f1:
+        norm_gold_set = set(_to_tuple_normalized(e, match_keys) for e in gold_entities)
+        norm_pred_set = set(_to_tuple_normalized(e, match_keys) for e in pred_entities)
+        n_tp = len(norm_gold_set & norm_pred_set)
+        n_fp = len(norm_pred_set - norm_gold_set)
+        n_fn = len(norm_gold_set - norm_pred_set)
+        n_p = n_tp / (n_tp + n_fp) if (n_tp + n_fp) > 0 else 0.0
+        n_r = n_tp / (n_tp + n_fn) if (n_tp + n_fn) > 0 else 0.0
+        n_f1 = 2 * n_p * n_r / (n_p + n_r) if (n_p + n_r) > 0 else 0.0
+        out["normalized"] = {"precision": n_p, "recall": n_r, "f1": n_f1, "tp": n_tp, "fp": n_fp, "fn": n_fn}
+
+    # Optionally compute Soft F1 (token-Jaccard >= 0.8 counts as a match, via Hungarian assignment)
+    if compute_soft_f1:
+        pred_texts_soft = _extract_texts(pred_entities, match_keys)
+        gold_texts_soft = _extract_texts(gold_entities, match_keys)
+        n_p_soft, n_g_soft = len(pred_texts_soft), len(gold_texts_soft)
+        if n_p_soft == 0 and n_g_soft == 0:
+            s_tp, s_fp, s_fn = 0, 0, 0
+        elif n_p_soft == 0:
+            s_tp, s_fp, s_fn = 0, 0, n_g_soft
+        elif n_g_soft == 0:
+            s_tp, s_fp, s_fn = 0, n_p_soft, 0
+        else:
+            jac_matrix = _np.zeros((n_p_soft, n_g_soft))
+            for i, pt in enumerate(pred_texts_soft):
+                for j, gt in enumerate(gold_texts_soft):
+                    jac_matrix[i, j] = _token_jaccard(pt, gt)
+            row_ind, col_ind = _linear_sum_assignment(1.0 - jac_matrix)
+            s_tp = int(sum(1 for r, c in zip(row_ind, col_ind) if jac_matrix[r, c] >= 0.8))
+            s_fp = n_p_soft - s_tp
+            s_fn = n_g_soft - s_tp
+        s_p = s_tp / (s_tp + s_fp) if (s_tp + s_fp) > 0 else 0.0
+        s_r = s_tp / (s_tp + s_fn) if (s_tp + s_fn) > 0 else 0.0
+        s_f1 = 2 * s_p * s_r / (s_p + s_r) if (s_p + s_r) > 0 else 0.0
+        out["soft"] = {"precision": s_p, "recall": s_r, "f1": s_f1, "tp": s_tp, "fp": s_fp, "fn": s_fn}
+
     # Optionally compute BERTScore between predicted and gold entity texts
     if compute_bertscore:
         pred_texts = _extract_texts(pred_entities, match_keys)
@@ -143,7 +223,7 @@ def entity_precision_recall_f1(gold_entities: List[Dict[str, Any]], pred_entitie
 
     return out
 
-def relation_precision_recall_f1(gold_relations: List[Dict[str, Any]], pred_relations: List[Dict[str, Any]], match_keys: List[str], compute_bertscore: bool = False, bert_embedding_model: str = "bert-base-uncased", bert_embedding_model_revision: str = "main") -> Dict[str, float]:
+def relation_precision_recall_f1(gold_relations: List[Dict[str, Any]], pred_relations: List[Dict[str, Any]], match_keys: List[str], compute_bertscore: bool = False, bert_embedding_model: str = "bert-base-uncased", bert_embedding_model_revision: str = "main", compute_normalized_f1: bool = False, compute_soft_f1: bool = False) -> Dict[str, float]:
     """
     Compute precision, recall, F1 for relation sets using selected keys. Relations are considered a match if their specified keys match exactly. This allows for flexible evaluation based on different criteria (e.g., type+entities).
     Example:
@@ -156,10 +236,15 @@ def relation_precision_recall_f1(gold_relations: List[Dict[str, Any]], pred_rela
         gold_relations: List of dictionaries representing the gold standard relations.
         pred_relations: List of dictionaries representing the predicted relations.
         match_keys: List of keys to use for matching relations (e.g., ["type", "chemical", "disease"], etc.).
+        compute_bertscore: If True, compute BERTScore between predicted and gold relation texts.
+        bert_embedding_model: The name of the embedding model to use for BERTScore.
+        bert_embedding_model_revision: The specific revision of the embedding model to use.
+        compute_normalized_f1: If True, also compute F1 after NFKC/lowercase/whitespace normalization. Results stored under key "normalized".
+        compute_soft_f1: If True, also compute F1 using token-Jaccard soft matching (threshold >= 0.8 counts as a match). Results stored under key "soft".
     Returns:
-        Dict[str, float]: A dictionary containing precision, recall, F1 score, and counts of true positives (tp), false positives (fp), and false negatives (fn).
+        Dict[str, float]: A dictionary containing precision, recall, F1 score, and counts of true positives (tp), false positives (fp), and false negatives (fn). Optionally includes "normalized", "soft", and "bertscore" sub-dicts.
     """
-    return entity_precision_recall_f1(gold_relations, pred_relations, match_keys, compute_bertscore=compute_bertscore, bert_embedding_model=bert_embedding_model, bert_embedding_model_revision=bert_embedding_model_revision)
+    return entity_precision_recall_f1(gold_relations, pred_relations, match_keys, compute_bertscore=compute_bertscore, bert_embedding_model=bert_embedding_model, bert_embedding_model_revision=bert_embedding_model_revision, compute_normalized_f1=compute_normalized_f1, compute_soft_f1=compute_soft_f1)
 
 def span_micro_f1(gold_entities: List[Dict[str, Any]], pred_entities: List[Dict[str, Any]], span_keys: Optional[List[str]] = None, type_key: str = "type") -> Dict[str, float]:
     """
@@ -250,6 +335,26 @@ def aggregate_metrics(per_doc_metrics: List[Dict[str, float]]) -> Dict[str, floa
             "f1": sum(bs_f1s) / len(bs_f1s) if bs_f1s else 0.0,
         }
 
+    # Aggregate Normalized F1 (micro, recomputed from summed tp/fp/fn)
+    if any(isinstance(m.get("normalized"), dict) for m in per_doc_metrics):
+        norm_tps = sum(m["normalized"]["tp"] for m in per_doc_metrics if isinstance(m.get("normalized"), dict))
+        norm_fps = sum(m["normalized"]["fp"] for m in per_doc_metrics if isinstance(m.get("normalized"), dict))
+        norm_fns = sum(m["normalized"]["fn"] for m in per_doc_metrics if isinstance(m.get("normalized"), dict))
+        n_p = norm_tps / (norm_tps + norm_fps) if (norm_tps + norm_fps) > 0 else 0.0
+        n_r = norm_tps / (norm_tps + norm_fns) if (norm_tps + norm_fns) > 0 else 0.0
+        n_f = 2 * n_p * n_r / (n_p + n_r) if (n_p + n_r) > 0 else 0.0
+        result["normalized"] = {"precision": n_p, "recall": n_r, "f1": n_f, "tp": norm_tps, "fp": norm_fps, "fn": norm_fns}
+
+    # Aggregate Soft F1 (micro, recomputed from summed tp/fp/fn)
+    if any(isinstance(m.get("soft"), dict) for m in per_doc_metrics):
+        soft_tps = sum(m["soft"]["tp"] for m in per_doc_metrics if isinstance(m.get("soft"), dict))
+        soft_fps = sum(m["soft"]["fp"] for m in per_doc_metrics if isinstance(m.get("soft"), dict))
+        soft_fns = sum(m["soft"]["fn"] for m in per_doc_metrics if isinstance(m.get("soft"), dict))
+        s_p = soft_tps / (soft_tps + soft_fps) if (soft_tps + soft_fps) > 0 else 0.0
+        s_r = soft_tps / (soft_tps + soft_fns) if (soft_tps + soft_fns) > 0 else 0.0
+        s_f = 2 * s_p * s_r / (s_p + s_r) if (s_p + s_r) > 0 else 0.0
+        result["soft"] = {"precision": s_p, "recall": s_r, "f1": s_f, "tp": soft_tps, "fp": soft_fps, "fn": soft_fns}
+
     return result
 
 def save_evaluation_results(results: Dict[str, Any], output_path: str) -> None:
@@ -258,7 +363,16 @@ def save_evaluation_results(results: Dict[str, Any], output_path: str) -> None:
     Args:
         results: A dictionary containing the evaluation results, which may include precision, recall, F1 scores, and counts of true positives, false positives, and false negatives for different categories (e.g., entities, relations).
         output_path: The file path where the evaluation results should be saved as a JSON file.
+    Raises:
+        jsonschema.ValidationError: If the results dict does not conform to data/schemas/evaluation/evaluation_results.json.
     """
+    # Validate against canonical schema before saving (schema path is relative to this file)
+    _schema_path = Path(__file__).parent.parent.parent / "data" / "schemas" / "evaluation" / "evaluation_results.json"
+    if _schema_path.exists():
+        with open(_schema_path, encoding="utf-8") as _sf:
+            _schema = json.load(_sf)
+        jsonschema.Draft7Validator(_schema).validate(results)
+
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
@@ -301,3 +415,19 @@ def print_evaluation_summary(results: Dict[str, Any]) -> None:
             br = bs.get("recall", 0.0)
             bf = bs.get("f1", 0.0)
             logger.info(f"{k:20s} | BERTScore P: {bp:.4f} R: {br:.4f} F1: {bf:.4f}")
+
+        # If Normalized F1 was computed, display it as well
+        nm = v.get("normalized")
+        if isinstance(nm, dict):
+            nm_p = nm.get("precision", 0.0)
+            nm_r = nm.get("recall", 0.0)
+            nm_f = nm.get("f1", 0.0)
+            logger.info(f"{k:20s} | Normalized  P: {nm_p:.4f} R: {nm_r:.4f} F1: {nm_f:.4f}")
+
+        # If Soft F1 was computed, display it as well
+        sm = v.get("soft")
+        if isinstance(sm, dict):
+            sm_p = sm.get("precision", 0.0)
+            sm_r = sm.get("recall", 0.0)
+            sm_f = sm.get("f1", 0.0)
+            logger.info(f"{k:20s} | Soft        P: {sm_p:.4f} R: {sm_r:.4f} F1: {sm_f:.4f}")

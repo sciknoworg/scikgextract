@@ -4,27 +4,68 @@
             "aldSystem": {
                 "aldMethod": [
                     {
-                        "compound": "ZnO",
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
                         "method": "PEALD"
                     }
                 ],
-                "materialDeposited": "ZnO"
+                "materialDeposited": {
+                    "value": "ZnO",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                    ]
+                }
             },
             "reactantSelection": {
                 "precursor": [
                     {
-                        "compound": "ZnO",
-                        "precursor": "ZnEt2"
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "precursor": {
+                            "value": "ZnEt2",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/11185",
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/101667988"
+                            ]
+                        }
                     }
                 ],
                 "coReactant": [
                     {
-                        "compound": "ZnO",
-                        "coReactant": "N₂O"
+                        "compound": {
+                            "value": "ZnO",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/14806"
+                            ]
+                        },
+                        "coReactant": {
+                            "value": "N\u2082O",
+                            "sameAs": [
+                                "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                            ]
+                        }
                     }
                 ],
-                "carrierGas": "Not Found",
-                "purgingGas": "N₂O"
+                "carrierGas": {
+                    "value": "Not Found",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/11504547"
+                    ]
+                },
+                "purgingGas": {
+                    "value": "N\u2082O",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                }
             },
             "processParameters": {
                 "reactor": {
@@ -41,7 +82,12 @@
                     },
                     "quantityKind": "https://qudt.org/vocab/quantitykind/Power"
                 },
-                "substrate": "borosilicate glass",
+                "substrate": {
+                    "value": "borosilicate glass",
+                    "sameAs": [
+                        "https://pubchem.ncbi.nlm.nih.gov/compound/977"
+                    ]
+                },
                 "deliveryMethod": "pulse dosing with purge and plasma oxidation",
                 "temperature": {
                     "quantityValue": {
@@ -307,7 +353,7 @@
                 "deviceStructure": "staggered bottom-gate passivated PEALD ZnO TFT"
             },
             "otherAspects": {
-                "safety": "Weak reactant PEALD process with N₂O and CO₂ as purge and oxidant gases, ensuring controlled handling of chemicals.",
+                "safety": "Weak reactant PEALD process with N\u2082O and CO\u2082 as purge and oxidant gases, ensuring controlled handling of chemicals.",
                 "filmStability": true,
                 "reproducibility": true
             }

@@ -87,6 +87,32 @@ async def fetch_compound_by_name(name: str, properties: list[str], base_url: str
     except Exception as e:
         logger.error(f"Exception occurred while fetching compound '{name}': {e}")
 
+async def fetch_synonyms_by_cid(cid: str, base_url: str, timeout: int = 10) -> PubChemSynonymsResponse:
+    """
+    Fetches compound synonyms from PubChem by CID.
+    Args:
+        cid (str): The PubChem Compound ID.
+        base_url (str): The base URL for the PubChem API.
+        timeout (int, optional): The timeout for the request in seconds. Defaults to 10.
+    Returns:
+        PubChemSynonymsResponse: The response model containing compound synonyms.
+    Raises:
+        httpx.HTTPError: If an error occurs during the request.
+    """
+    # Initialize Logger
+    logger = LogHandler.get_logger("pubchem_api.fetch_synonyms_by_cid")
+    logger.info(f"Fetching synonyms for CID {cid} from PubChem")
+
+    try:
+        endpoint = f"compound/cid/{cid}/synonyms/JSON"
+        response_json = await pubchem_get_request(base_url, endpoint, timeout)
+        response_model = PubChemSynonymsResponse.model_validate(response_json)
+        return response_model
+    except HTTPStatusError as e:
+        logger.error(f"HTTP error occurred while fetching synonyms for CID {cid}: {e}")
+    except Exception as e:
+        logger.error(f"Exception occurred while fetching synonyms for CID {cid}: {e}")
+
 async def fetch_synonyms_by_name(name: str, base_url: str, timeout: int = 10) -> PubChemSynonymsResponse:
     """
     Fetches compound synonyms from PubChem by compound name.

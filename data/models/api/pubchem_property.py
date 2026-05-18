@@ -1,13 +1,14 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
 class PropertyItem(BaseModel):
     CID: int
-    MolecularFormula: str
-    IUPACName: str
-    ConnectivitySMILES: str
-    InChIKey: str
+    MolecularFormula: Optional[str] = None
+    IUPACName: Optional[str] = None
+    ConnectivitySMILES: Optional[str] = None
+    CanonicalSMILES: Optional[str] = None
+    InChIKey: Optional[str] = None
 
 class PropertyTable(BaseModel):
     Properties: List[PropertyItem]
